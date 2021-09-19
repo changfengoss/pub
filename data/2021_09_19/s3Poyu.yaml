@@ -1,0 +1,156 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {name: '🇨🇦 @SSRSUB-加拿大ss01-付费推荐:dlj.tf/ssrsub_1', server: ss1.ssrsub.one, port: 10443, type: ss, cipher: aes-128-gcm, password: suo.yt/ssrsub}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss02-付费推荐:dlj.tf/ssrsub_2', server: ss2.ssrsub.one, port: 3443, type: ss, cipher: aes-128-gcm, password: https}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss03-付费推荐:dlj.tf/ssrsub_3', server: ss3.ssrsub.one, port: 10443, type: ss, cipher: aes-128-gcm, password: suo.yt/ssrsub}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss04-付费推荐:dlj.tf/ssrsub_4', server: ss4.ssrsub.one, port: 3443, type: ss, cipher: aes-128-gcm, password: https}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss05-付费推荐:dlj.tf/ssrsub_5', server: ss5.ssrsub.one, port: 10443, type: ss, cipher: aes-128-gcm, password: suo.yt/ssrsub}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss06-付费推荐:dlj.tf/ssrsub_6', server: ss6.ssrsub.one, port: 3443, type: ss, cipher: aes-128-gcm, password: https}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss07-付费推荐:dlj.tf/ssrsub_7', server: ss7.ssrsub.one, port: 28139, type: ss, cipher: aes-256-cfb, password: suo.yt/ssrsub}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss08-付费推荐:dlj.tf/ssrsub_8', server: ss8.ssrsub.one, port: 22478, type: ss, cipher: aes-256-cfb, password: https}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss09-付费推荐:dlj.tf/ssrsub_9', server: ss9.ssrsub.one, port: 28139, type: ss, cipher: aes-256-cfb, password: suo.yt/ssrsub}
+  - {name: '🇨🇦 @SSRSUB-加拿大ss10-付费推荐:dlj.tf/ssrsub_10', server: ss10.ssrsub.one, port: 22478, type: ss, cipher: aes-256-cfb, password: https}
+  - {name: '付费推荐:dlj.tf/ssrsub__01', server: 217.138.219.229, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__02', server: 195.158.249.36, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__03', server: 212.102.40.68, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: '付费推荐:dlj.tf/ssrsub__04', server: 195.158.249.36, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__05', server: 37.120.207.5, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__06', server: 217.138.219.227, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__07', server: 194.150.167.28, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__08', server: 195.181.171.233, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: '付费推荐:dlj.tf/ssrsub__09', server: 5.253.205.179, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: '付费推荐:dlj.tf/ssrsub__10', server: 185.166.84.87, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__11', server: 5.187.49.189, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__12', server: 193.29.106.61, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__13', server: 185.164.34.250, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: '付费推荐:dlj.tf/ssrsub__14', server: 193.29.106.29, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__15', server: 185.153.151.85, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__16', server: 185.38.150.41, port: 38620, type: ss, cipher: aes-256-gcm, password: Kquv5UhvZXNMemAQy8DxZ7qn}
+  - {name: '付费推荐:dlj.tf/ssrsub__17', server: 185.108.106.146, port: 45746, type: ss, cipher: aes-256-gcm, password: wEsFcHCvbL4eJkL4DZQa7RgR}
+  - {name: '付费推荐:dlj.tf/ssrsub__18', server: 91.206.168.24, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
+  - {name: '付费推荐:dlj.tf/ssrsub__19', server: 193.29.107.237, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__20', server: 195.181.171.233, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: '付费推荐:dlj.tf/ssrsub__21', server: 2.58.241.29, port: 38033, type: ss, cipher: aes-256-gcm, password: xpQwyV4W5FdA6NMANJJx73US}
+  - {name: '付费推荐:dlj.tf/ssrsub__22', server: 66.115.147.89, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__23', server: 185.153.151.100, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
+  - {name: '付费推荐:dlj.tf/ssrsub__24', server: 198.8.92.84, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
+  - {name: '付费推荐:dlj.tf/ssrsub__25', server: 217.138.211.219, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
+  - {name: '付费推荐:dlj.tf/ssrsub__26', server: 2.58.241.29, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__27', server: 146.70.27.37, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__28', server: 185.102.219.6, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__29', server: 185.188.61.119, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__32', server: 152.89.160.213, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
+  - {name: '付费推荐:dlj.tf/ssrsub__33', server: 137.59.52.107, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__34', server: 85.10.50.164, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: '付费推荐:dlj.tf/ssrsub__35', server: 5.154.174.67, port: 37473, type: ss, cipher: aes-256-gcm, password: enctdKyJfSu76VqznKwTt6Ap}
+  - {name: '付费推荐:dlj.tf/ssrsub__36', server: 195.158.249.40, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__37', server: 91.205.230.160, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
+  - {name: '付费推荐:dlj.tf/ssrsub__40', server: 37.120.217.149, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
+  - {name: '付费推荐:dlj.tf/ssrsub__41', server: 91.206.168.29, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: '付费推荐:dlj.tf/ssrsub__42', server: 89.238.130.227, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: '付费推荐:dlj.tf/ssrsub__43', server: 89.238.130.253, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: '付费推荐:dlj.tf/ssrsub__44', server: 84.17.53.86, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__45', server: 84.17.35.83, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__46', server: 84.17.41.83, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__47', server: 212.102.44.86, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: '付费推荐:dlj.tf/ssrsub__48', server: 89.46.223.239, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__49', server: 193.29.107.163, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__50', server: 37.120.144.211, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__51', server: 91.90.123.115, port: 31572, type: ss, cipher: aes-256-gcm, password: n8w4StnbVD9dmXYn4Ajt87EA}
+  - {name: '付费推荐:dlj.tf/ssrsub__52', server: 86.106.136.85, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: '付费推荐:dlj.tf/ssrsub__53', server: 194.37.96.213, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: '付费推荐:dlj.tf/ssrsub__54', server: 89.46.223.214, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__55', server: 89.46.223.239, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: '付费推荐:dlj.tf/ssrsub__56', server: 185.242.5.149, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: '付费推荐:dlj.tf/ssrsub__60', server: 212.102.54.181, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
+  - {name: '付费推荐:dlj.tf/ssrsub__61', server: 212.102.54.181, port: 34815, type: ss, cipher: aes-256-gcm, password: LkFAzkzXkSCRYa2CsRdL8cGb}
+  - {name: '付费推荐:dlj.tf/ssrsub__66', server: 45.83.91.133, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
+  - {name: '付费推荐:dlj.tf/ssrsub__67', server: 212.102.54.181, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
+  - {name: '付费推荐:dlj.tf/ssrsub__72', server: 176.125.231.5, port: 34815, type: ss, cipher: aes-256-gcm, password: LkFAzkzXkSCRYa2CsRdL8cGb}
+  - {name: '付费推荐:dlj.tf/ssrsub__73', server: 195.181.171.233, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__74', server: 137.59.52.107, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
+  - {name: '付费推荐:dlj.tf/ssrsub__75', server: 137.59.52.107, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: '付费推荐:dlj.tf/ssrsub__76', server: 89.37.95.23, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__78', server: 104.244.211.141, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: '付费推荐:dlj.tf/ssrsub__80', server: 89.238.130.253, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: '付费推荐:dlj.tf/ssrsub__81', server: 89.163.212.75, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '付费推荐:dlj.tf/ssrsub__82', server: 185.212.111.6, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: '付费推荐:dlj.tf/ssrsub__83', server: 176.125.231.5, port: 49653, type: ss, cipher: aes-256-gcm, password: Y9GcTPemHMKEkrfGQPJqFDNr}
+  - {name: '付费推荐:dlj.tf/ssrsub__84', server: 176.125.231.5, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
+  - {name: '付费推荐:dlj.tf/ssrsub__85', server: 176.125.231.5, port: 45329, type: ss, cipher: aes-256-gcm, password: CXSjgD7u7Ar7GxkZ4CgTMUsj}
+  - {name: '付费推荐:dlj.tf/ssrsub__86', server: 85.10.50.164, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
+  - {name: '付费推荐:dlj.tf/ssrsub__87', server: 185.153.151.83, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: '付费推荐:dlj.tf/ssrsub__88', server: 5.154.174.189, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
+  - {name: '付费推荐:dlj.tf/ssrsub__89', server: 5.154.174.67, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
+  - {name: '🇨🇦 @SSRSUB-加拿大ssr01-付费推荐:suo.yt/ssrsub_83', server: ssr1.ssrsub.one, port: 28139, type: ss, cipher: aes-256-cfb, password: suo.yt/ssrsub}
+  - {name: '🇨🇦 @SSRSUB-加拿大ssr02-付费推荐:suo.yt/ssrsub_84', server: ssr2.ssrsub.one, port: 22478, type: ss, cipher: aes-256-cfb, password: https}
+  - {name: '🇨🇦 @SSRSUB-加拿大ssr03-付费推荐:suo.yt/ssrsub_85', server: ssr3.ssrsub.one, port: 28139, type: ss, cipher: aes-256-cfb, password: suo.yt/ssrsub}
+  - {name: '🇨🇦 @SSRSUB-加拿大ssr04-付费推荐:suo.yt/ssrsub_86', server: ssr4.ssrsub.one, port: 22478, type: ss, cipher: aes-256-cfb, password: https}
+  - {name: '@SSRSUB-ssr05-付费推荐:suo.yt/ssrsub_87', server: 117.28.243.171, port: 8333, type: ss, cipher: rc4-md5, password: passfw2xs4e!}
+  - {name: '@SSRSUB-ssr06-付费推荐:suo.yt/ssrsub_88', server: 117.28.243.187, port: 8333, type: ss, cipher: rc4-md5, password: passfw2xs4e!}
+  - {name: '@SSRSUB-ssr07-付费推荐:suo.yt/ssrsub_89', server: p5.22332e.com, port: 8333, type: ss, cipher: rc4-md5, password: passfw2xs4e!}
+  - {name: '@SSRSUB-ssr10-付费推荐:suo.yt/ssrsub_90', server: 65.49.193.120, port: 502, type: ss, cipher: aes-256-cfb, password: bwhskrskr01}
+  - {name: '🇺🇲 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub_91', server: t1.ssrsub.one, port: 8443, type: trojan, password: ed4b6594-ea16-40f6-a935-f3985c433973, sni: t1.ssrsub.one}
+  - {name: '🇺🇲 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub_92', server: t2.ssrsub.one, port: 8443, type: trojan, password: ed4b6594-ea16-40f6-a935-f3985c433973, sni: t2.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub_93', server: t3.ssrsub.one, port: 8443, type: trojan, password: ed4b6594-ea16-40f6-a935-f3985c433973, sni: t3.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub_94', server: t4.ssrsub.one, port: 8443, type: trojan, password: ed4b6594-ea16-40f6-a935-f3985c433973, sni: t4.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub_95', server: t5.ssrsub.one, port: 8443, type: trojan, password: ed4b6594-ea16-40f6-a935-f3985c433973, sni: t5.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub_96', server: t6.ssrsub.one, port: 8443, type: trojan, password: ed4b6594-ea16-40f6-a935-f3985c433973, sni: t6.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T7-付费推荐:dlj.tf/ssrsub_97', server: t7.ssrsub.one, port: 8443, type: trojan, password: ed4b6594-ea16-40f6-a935-f3985c433973, sni: t7.ssrsub.one}
+  - {name: '🇨🇦 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub_98', server: t8.ssrsub.one, port: 8443, type: trojan, password: ed4b6594-ea16-40f6-a935-f3985c433973, sni: t8.ssrsub.one}
+  - {name: '🇺🇲 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub_99', server: t1.ssrsub.one, port: 8443, type: trojan, password: 217010a3-c48d-4c42-9b99-c4dfc173ec78, sni: t1.ssrsub.one}
+  - {name: '🇺🇲 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub_100', server: t2.ssrsub.one, port: 8443, type: trojan, password: 217010a3-c48d-4c42-9b99-c4dfc173ec78, sni: t2.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub_101', server: t3.ssrsub.one, port: 8443, type: trojan, password: 217010a3-c48d-4c42-9b99-c4dfc173ec78, sni: t3.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub_102', server: t4.ssrsub.one, port: 8443, type: trojan, password: 217010a3-c48d-4c42-9b99-c4dfc173ec78, sni: t4.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub_103', server: t5.ssrsub.one, port: 8443, type: trojan, password: 217010a3-c48d-4c42-9b99-c4dfc173ec78, sni: t5.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub_104', server: t6.ssrsub.one, port: 8443, type: trojan, password: 217010a3-c48d-4c42-9b99-c4dfc173ec78, sni: t6.ssrsub.one}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯T15-付费推荐:dlj.tf/ssrsub_105', server: t7.ssrsub.one, port: 8443, type: trojan, password: 217010a3-c48d-4c42-9b99-c4dfc173ec78, sni: t7.ssrsub.one}
+  - {name: '🇨🇦 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub_106', server: t8.ssrsub.one, port: 8443, type: trojan, password: 217010a3-c48d-4c42-9b99-c4dfc173ec78, sni: t8.ssrsub.one}
+  - {name: '@SSRSUB-V01-付费推荐:suo.yt/ssrsub_107', server: 173.82.150.26, port: 443, type: vmess, uuid: 1a116d02-5fca-47fa-a2a1-6e8d0f2f71cc, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 173.82.150.26}}
+  - {name: '@SSRSUB-V02-付费推荐:suo.yt/ssrsub_108', server: 198.211.30.163, port: 443, type: vmess, uuid: 6aaa2f9f-7c91-4b51-aa77-05a83a5d6a4d, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 198.211.30.163}}
+  - {name: '@SSRSUB-V03-付费推荐:suo.yt/ssrsub_109', server: 198.211.30.163, port: 443, type: vmess, uuid: 6aaa2f9f-7c91-4b51-aa77-05a83a5d6a4d, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.93289686.xyz}}
+  - {name: '@SSRSUB-V04-付费推荐:suo.yt/ssrsub_110', server: 211.72.35.153, port: 80, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /s/c27821f.fm.icloud.com:16708, ws-headers: {Host: 211.72.35.153}}
+  - {name: '@SSRSUB-V05-付费推荐:suo.yt/ssrsub_111', server: ff5c0fb.ra.cloudflare.systems, port: 80, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /s/ff5c0fb.fm.icloud.com:30513, ws-headers: {Host: icloud.com}}
+  - {name: '@SSRSUB-V06-付费推荐:suo.yt/ssrsub_112', server: 172.67.150.130, port: 80, type: vmess, uuid: 3d31728e-064d-42b8-b945-f79c008f73fc, alterId: 233, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: free-russian01-cdn.xiaohouzi.club}}
+  - {name: '@SSRSUB-V07-付费推荐:suo.yt/ssrsub_113', server: free-russian01-cdn.xiaohouzi.club, port: 80, type: vmess, uuid: 3d31728e-064d-42b8-b945-f79c008f73fc, alterId: 233, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: free-russian01-cdn.xiaohouzi.club}}
+  - {name: '@SSRSUB-V08-付费推荐:suo.yt/ssrsub_114', server: v3.coding996.com, port: 443, type: vmess, uuid: 02929ff2-2de0-4be9-940b-fc3bf7ea3a72, alterId: 4, cipher: auto, tls: true, network: ws, ws-path: /baidu, ws-headers: {Host: v3.coding996.com}}
+  - {name: '@SSRSUB-V09-付费推荐:suo.yt/ssrsub_115', server: icajm.moox.icu, port: 34005, type: vmess, uuid: e94d3ed5-d94c-49ea-9a6c-830b247a1656, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: icajm.moox.icu}}
+  - {name: '@SSRSUB-V10-付费推荐:suo.yt/ssrsub_116', server: rxzgzq.moox.icu, port: 34000, type: vmess, uuid: e94d3ed5-d94c-49ea-9a6c-830b247a1656, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: rxzgzq.moox.icu}}
+  - {name: '@SSRSUB-V11-付费推荐:suo.yt/ssrsub_117', server: rxzgzq.moox.icu, port: 34007, type: vmess, uuid: e94d3ed5-d94c-49ea-9a6c-830b247a1656, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hkbgp.xlanfly.xyz}}
+  - {name: '@SSRSUB-V12-付费推荐:suo.yt/ssrsub_118', server: rxzgzq.moox.icu, port: 40025, type: vmess, uuid: e94d3ed5-d94c-49ea-9a6c-830b247a1656, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: rxzgzq.moox.icu}}
+  - {name: '@SSRSUB-V13-付费推荐:suo.yt/ssrsub_119', server: icajm.moox.icu, port: 40011, type: vmess, uuid: e94d3ed5-d94c-49ea-9a6c-830b247a1656, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hkbgp.xlanfly.xyz}}
+  - {name: '@SSRSUB-V14-付费推荐:suo.yt/ssrsub_120', server: azure-f4s-hk.transfer-xray.tk, port: 15136, type: vmess, uuid: d5da51af-e2ba-452c-bbb6-a2a09e076ad8, alterId: 0, cipher: auto, tls: false}
+  - {name: '@SSRSUB-V15-付费推荐:suo.yt/ssrsub_121', server: 54.249.185.158, port: 65444, type: vmess, uuid: 92a0be76-c9df-41a8-ba79-fb6310c34b6f, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /7221459a491b48f/, ws-headers: {Host: jp3.piyou.cyou}}
+  - {name: '@SSRSUB-V16-付费推荐:suo.yt/ssrsub_122', server: 157.245.194.176, port: 1111, type: vmess, uuid: 9a15287b-48e4-45ce-8f4e-c1f8f81f9674, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /videos, ws-headers: {Host: 157.245.194.176}}
+  - {name: '@SSRSUB-V17-付费推荐:suo.yt/ssrsub_123', server: www.17080100.xyz, port: 443, type: vmess, uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.17080100.xyz}}
+  - {name: '@SSRSUB-V18-付费推荐:suo.yt/ssrsub_124', server: 96.43.91.58, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.45218443.xyz}}
+  - {name: '@SSRSUB-V19-付费推荐:suo.yt/ssrsub_125', server: v4.coding996.com, port: 443, type: vmess, uuid: 4e113860-4232-45b1-ab27-27873d40fa6e, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /jd, ws-headers: {Host: v4.coding996.com}}
+  - {name: '@SSRSUB-V20-付费推荐:suo.yt/ssrsub_126', server: 107.167.9.122, port: 443, type: vmess, uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.17080100.xyz}}
+  - {name: '@SSRSUB-V21-付费推荐:suo.yt/ssrsub_127', server: 107.167.9.125, port: 443, type: vmess, uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.17080100.xyz}}
+  - {name: '@SSRSUB-V22-付费推荐:suo.yt/ssrsub_128', server: 198.211.30.163, port: 443, type: vmess, uuid: 6aaa2f9f-7c91-4b51-aa77-05a83a5d6a4d, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 198.211.30.163}}
+  - {name: '@SSRSUB-V23-付费推荐:suo.yt/ssrsub_129', server: 173.82.150.26, port: 443, type: vmess, uuid: 1a116d02-5fca-47fa-a2a1-6e8d0f2f71cc, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.75287890.xyz}}
+  - {name: '@SSRSUB-V24-付费推荐:suo.yt/ssrsub_130', server: uss111.liuwei01.tk, port: 443, type: vmess, uuid: 0fab5928-9d70-4666-b351-5debff8a15de, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /liuwei, ws-headers: {Host: uss111.liuwei01.tk}}
+  - {name: '@SSRSUB-V25-付费推荐:suo.yt/ssrsub_131', server: nn-ssr4.feiclouddd.me, port: 443, type: vmess, uuid: 79214731-7f0c-4f2d-a894-13b7df293624, alterId: 60, cipher: auto, tls: true, network: ws, ws-path: /sadfasdf, ws-headers: {Host: nn-ssr4.feiclouddd.me}}
+  - {name: '@SSRSUB-V26-付费推荐:suo.yt/ssrsub_132', server: uss222.liuwei01.tk, port: 443, type: vmess, uuid: 1b93051f-c9ad-4908-874e-ccb5e8da27ef, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /liuwei, ws-headers: {Host: uss222.liuwei01.tk}}
+  - {name: '@SSRSUB-V27-付费推荐:suo.yt/ssrsub_133', server: 132.226.169.93, port: 33254, type: vmess, uuid: 0453154b-db51-4a66-8f7c-0887878cb9a3, alterId: 0, cipher: auto, tls: false}
+  - {name: '🇺🇲 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub_134', server: v1.ssrsub.one, port: 156, type: vmess, uuid: ed4b6594-ea16-40f6-a935-f3985c433973, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.one}}
+  - {name: '🇺🇲 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub_135', server: v2.ssrsub.one, port: 153, type: vmess, uuid: ed4b6594-ea16-40f6-a935-f3985c433973, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v2.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub_136', server: v3.ssrsub.one, port: 153, type: vmess, uuid: ed4b6594-ea16-40f6-a935-f3985c433973, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v3.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub_137', server: v4.ssrsub.one, port: 153, type: vmess, uuid: ed4b6594-ea16-40f6-a935-f3985c433973, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v4.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub_138', server: v5.ssrsub.one, port: 156, type: vmess, uuid: ed4b6594-ea16-40f6-a935-f3985c433973, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v5.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub_139', server: v6.ssrsub.one, port: 156, type: vmess, uuid: ed4b6594-ea16-40f6-a935-f3985c433973, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v6.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V7-付费推荐::suo.yt/ssrsub_140', server: v7.ssrsub.one, port: 157, type: vmess, uuid: ed4b6594-ea16-40f6-a935-f3985c433973, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v7.ssrsub.one}}
+  - {name: '🇨🇦 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub_141', server: v8.ssrsub.one, port: 156, type: vmess, uuid: ed4b6594-ea16-40f6-a935-f3985c433973, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v8.ssrsub.one}}
+  - {name: '🇺🇲 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub_142', server: v1.ssrsub.one, port: 156, type: vmess, uuid: 217010a3-c48d-4c42-9b99-c4dfc173ec78, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.one}}
+  - {name: '🇺🇲 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub_143', server: v2.ssrsub.one, port: 153, type: vmess, uuid: 217010a3-c48d-4c42-9b99-c4dfc173ec78, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v2.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub_144', server: v3.ssrsub.one, port: 153, type: vmess, uuid: 217010a3-c48d-4c42-9b99-c4dfc173ec78, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v3.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub_145', server: v4.ssrsub.one, port: 153, type: vmess, uuid: 217010a3-c48d-4c42-9b99-c4dfc173ec78, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v4.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub_146', server: v5.ssrsub.one, port: 156, type: vmess, uuid: 217010a3-c48d-4c42-9b99-c4dfc173ec78, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v5.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub_147', server: v6.ssrsub.one, port: 156, type: vmess, uuid: 217010a3-c48d-4c42-9b99-c4dfc173ec78, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v6.ssrsub.one}}
+  - {name: '🇷🇺 @SSRSUB-俄罗斯V15-付费推荐::suo.yt/ssrsub_148', server: v7.ssrsub.one, port: 157, type: vmess, uuid: 217010a3-c48d-4c42-9b99-c4dfc173ec78, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v7.ssrsub.one}}
+  - {name: '🇨🇦 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub_149', server: v8.ssrsub.one, port: 156, type: vmess, uuid: 217010a3-c48d-4c42-9b99-c4dfc173ec78, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v8.ssrsub.one}}
