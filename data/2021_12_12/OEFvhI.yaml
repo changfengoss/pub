@@ -1,0 +1,539 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {name: '@Vpn_proxy66 Surfshark BE 🇧🇪 Brussels 1_1', server: 91.90.123.213, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BE 🇧🇪 Brussels 2_2', server: 91.90.123.141, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BE 🇧🇪 Brussels 3_3', server: 91.90.123.187, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BE 🇧🇪 Brussels 4_4', server: 91.90.123.211, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BE 🇧🇪 Antwerp 1_5', server: 188.95.55.115, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BE 🇧🇪 Antwerp 2_6', server: 188.95.55.125, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BE 🇧🇪 Antwerp 3_7', server: 188.95.55.123, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BE 🇧🇪 Antwerp 4_8', server: 188.95.55.108, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark LU 🇱🇺 Luxembourg 1_9', server: 185.153.151.164, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark LU 🇱🇺 Luxembourg 2_10', server: 95.85.66.40, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark LU 🇱🇺 Luxembourg 3_11', server: 95.85.66.38, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark LU 🇱🇺 Luxembourg 4_12', server: 185.153.151.179, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NO 🇳🇴 Oslo 1_13', server: 91.219.215.67, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NO 🇳🇴 Oslo 2_14', server: 91.219.215.36, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NO 🇳🇴 Oslo 3_15', server: 91.219.215.38, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NO 🇳🇴 Oslo 4_16', server: 91.219.215.83, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PL 🇵🇱 Gdansk 1_17', server: 5.133.8.117, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PL 🇵🇱 Gdansk 2_18', server: 5.187.49.148, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PL 🇵🇱 Gdansk 3_19', server: 5.133.14.198, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PL 🇵🇱 Gdansk 4_20', server: 5.187.49.147, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PL 🇵🇱 Warsaw 1_21', server: 5.253.206.67, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PL 🇵🇱 Warsaw 2_22', server: 185.246.208.106, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PL 🇵🇱 Warsaw 3_23', server: 185.246.208.108, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PL 🇵🇱 Warsaw 4_24', server: 185.246.208.107, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Paris 1_25', server: 84.17.43.183, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Paris 2_26', server: 143.244.57.81, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Paris 3_27', server: 143.244.57.118, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Paris 4_28', server: 143.244.56.228, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Marseille 1_29', server: 185.166.84.79, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Marseille 2_30', server: 185.166.84.73, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Marseille 3_31', server: 138.199.16.142, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Marseille 4_32', server: 138.199.16.130, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Bordeaux 1_33', server: 185.108.106.24, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Bordeaux 2_34', server: 185.108.106.106, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Bordeaux 3_35', server: 185.108.106.174, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FR 🇫🇷 Bordeaux 4_36', server: 185.108.106.154, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DE 🇩🇪 Berlin 1_37', server: 193.29.106.163, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DE 🇩🇪 Berlin 2_38', server: 193.29.106.165, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DE 🇩🇪 Berlin 3_39', server: 193.29.106.123, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DE 🇩🇪 Berlin 4_40', server: 193.29.106.133, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DE 🇩🇪 Frankfurt am Main 1_41', server: 138.199.19.169, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DE 🇩🇪 Frankfurt am Main 2_42', server: 156.146.33.83, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DE 🇩🇪 Frankfurt am Main 3_43', server: 138.199.19.167, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DE 🇩🇪 Frankfurt am Main 4_44', server: 138.199.19.162, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AZ 🇦🇿 Baku 1_45', server: 94.20.154.61, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AZ 🇦🇿 Baku 2_46', server: 62.212.239.51, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AZ 🇦🇿 Baku 3_47', server: 62.212.239.45, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AZ 🇦🇿 Baku 4_48', server: 62.212.239.67, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NL 🇳🇱 Amsterdam 1_49', server: 143.244.42.90, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NL 🇳🇱 Amsterdam 2_50', server: 212.102.35.204, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NL 🇳🇱 Amsterdam 3_51', server: 143.244.42.76, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NL 🇳🇱 Amsterdam 4_52', server: 143.244.42.91, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DK 🇩🇰 Copenhagen 1_53', server: 193.29.107.219, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DK 🇩🇰 Copenhagen 2_54', server: 193.29.107.195, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DK 🇩🇰 Copenhagen 3_55', server: 193.29.107.181, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DK 🇩🇰 Copenhagen 4_56', server: 89.45.7.53, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IT 🇮🇹 Rome 1_57', server: 82.102.26.117, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IT 🇮🇹 Rome 2_58', server: 82.102.26.62, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IT 🇮🇹 Rome 3_59', server: 82.102.26.115, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IT 🇮🇹 Rome 4_60', server: 37.120.207.117, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IT 🇮🇹 Milan 1_61', server: 84.17.58.190, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IT 🇮🇹 Milan 2_62', server: 212.102.54.162, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IT 🇮🇹 Milan 3_63', server: 212.102.54.181, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IT 🇮🇹 Milan 4_64', server: 212.102.54.150, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FI 🇫🇮 Helsinki 1_65', server: 196.196.203.101, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FI 🇫🇮 Helsinki 2_66', server: 196.196.203.85, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FI 🇫🇮 Helsinki 3_67', server: 196.196.203.107, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark FI 🇫🇮 Helsinki 4_68', server: 196.196.203.141, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CH 🇨🇭 Zurich 1_69', server: 156.146.62.57, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CH 🇨🇭 Zurich 2_70', server: 156.146.62.41, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CH 🇨🇭 Zurich 3_71', server: 156.146.62.51, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CH 🇨🇭 Zurich 4_72', server: 156.146.62.46, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark TR 🇹🇷 Istanbul 1_73', server: 107.150.94.43, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark TR 🇹🇷 Istanbul 2_74', server: 107.150.94.45, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark TR 🇹🇷 Istanbul 3_75', server: 107.150.94.21, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark TR 🇹🇷 Istanbul 4_76', server: 107.150.94.19, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AL 🇦🇱 Tirana 1_77', server: 31.171.155.83, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AL 🇦🇱 Tirana 2_78', server: 31.171.153.115, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AL 🇦🇱 Tirana 3_79', server: 31.171.153.117, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AL 🇦🇱 Tirana 4_80', server: 31.171.154.219, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DZ 🇩🇿 Algiers 1_81', server: 62.197.144.3, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DZ 🇩🇿 Algiers 2_82', server: 62.197.144.4, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DZ 🇩🇿 Algiers 3_83', server: 62.197.144.5, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark DZ 🇩🇿 Algiers 4_84', server: 62.197.144.6, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AT 🇦🇹 Vienna 1_85', server: 146.70.28.93, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AT 🇦🇹 Vienna 2_86', server: 146.70.28.94, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AT 🇦🇹 Vienna 3_87', server: 89.187.168.56, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AT 🇦🇹 Vienna 4_88', server: 146.70.28.91, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark HR 🇭🇷 Zagreb 1_89', server: 176.222.34.119, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark HR 🇭🇷 Zagreb 2_90', server: 89.164.99.109, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark HR 🇭🇷 Zagreb 3_91', server: 89.164.99.136, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark HR 🇭🇷 Zagreb 4_92', server: 89.164.99.111, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CY 🇨🇾 Nicosia 1_93', server: 195.47.194.99, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CY 🇨🇾 Nicosia 2_94', server: 195.47.194.98, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CY 🇨🇾 Nicosia 3_95', server: 195.47.194.97, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CY 🇨🇾 Nicosia 4_96', server: 195.47.194.96, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark EE 🇪🇪 Tallinn 1_97', server: 185.174.159.138, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark EE 🇪🇪 Tallinn 2_98', server: 185.174.159.137, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark EE 🇪🇪 Tallinn 3_99', server: 185.174.159.136, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark EE 🇪🇪 Tallinn 4_100', server: 185.174.159.139, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IE 🇮🇪 Dublin 1_101', server: 5.157.13.118, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IE 🇮🇪 Dublin 2_102', server: 5.157.13.115, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IE 🇮🇪 Dublin 3_103', server: 5.157.13.116, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IE 🇮🇪 Dublin 4_104', server: 5.157.13.117, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark LV 🇱🇻 Riga 1_105', server: 188.92.78.152, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark LV 🇱🇻 Riga 2_106', server: 188.92.78.153, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark LV 🇱🇻 Riga 3_107', server: 188.92.78.210, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark LV 🇱🇻 Riga 4_108', server: 91.203.69.178, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PT 🇵🇹 Lisbon 1_109', server: 91.250.240.148, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PT 🇵🇹 Lisbon 2_110', server: 91.205.230.134, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PT 🇵🇹 Lisbon 3_111', server: 91.205.230.132, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PT 🇵🇹 Lisbon 4_112', server: 91.205.230.131, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PT 🇵🇹 Porto 1_113', server: 194.39.127.153, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PT 🇵🇹 Porto 2_114', server: 194.39.127.154, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PT 🇵🇹 Porto 3_115', server: 194.39.127.163, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PT 🇵🇹 Porto 4_116', server: 194.39.127.181, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RO 🇷🇴 Bucharest 1_117', server: 185.102.217.194, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RO 🇷🇴 Bucharest 2_118', server: 185.102.217.195, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RO 🇷🇴 Bucharest 3_119', server: 185.102.217.196, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RO 🇷🇴 Bucharest 4_120', server: 185.102.217.197, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RU 🇷🇺 Moscow 1_121', server: 92.38.138.139, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RU 🇷🇺 Moscow 2_122', server: 92.38.138.151, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RU 🇷🇺 Moscow 3_123', server: 92.38.138.141, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RU 🇷🇺 Moscow 4_124', server: 92.38.138.150, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RS 🇷🇸 Belgrade 1_125', server: 152.89.160.147, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RS 🇷🇸 Belgrade 2_126', server: 152.89.160.211, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RS 🇷🇸 Belgrade 3_127', server: 152.89.160.148, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark RS 🇷🇸 Belgrade 4_128', server: 152.89.160.149, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SK 🇸🇰 Bratislava 1_129', server: 185.76.8.215, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SK 🇸🇰 Bratislava 2_130', server: 185.76.8.211, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SK 🇸🇰 Bratislava 3_131', server: 185.76.8.217, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SK 🇸🇰 Bratislava 4_132', server: 185.76.8.213, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SI 🇸🇮 Ljubljana 1_133', server: 195.158.249.61, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SI 🇸🇮 Ljubljana 2_134', server: 195.158.249.40, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SI 🇸🇮 Ljubljana 3_135', server: 195.158.249.42, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SI 🇸🇮 Ljubljana 4_136', server: 195.158.249.50, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Barcelona 1_137', server: 82.102.26.155, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Barcelona 2_138', server: 185.188.61.84, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Barcelona 3_139', server: 185.188.61.85, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Barcelona 4_140', server: 185.188.61.86, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Madrid 1_141', server: 89.37.95.13, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Madrid 2_142', server: 89.37.95.14, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Madrid 3_143', server: 89.37.95.15, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Madrid 4_144', server: 212.102.48.20, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Valencia 1_145', server: 185.153.150.70, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Valencia 2_146', server: 185.153.150.76, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Valencia 3_147', server: 185.153.150.52, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ES 🇪🇸 Valencia 4_148', server: 185.153.150.53, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SE 🇸🇪 Stockholm 1_149', server: 185.76.9.51, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SE 🇸🇪 Stockholm 2_150', server: 185.76.9.52, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SE 🇸🇪 Stockholm 3_151', server: 185.76.9.49, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SE 🇸🇪 Stockholm 4_152', server: 185.76.9.55, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 London 1_153', server: 185.134.22.115, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 London 2_154', server: 185.38.148.232, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 London 3_155', server: 185.16.206.69, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 London 4_156', server: 5.226.139.232, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 Glasgow 1_157', server: 185.108.105.127, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 Glasgow 2_158', server: 185.108.105.57, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 Glasgow 3_159', server: 185.108.105.33, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 Glasgow 4_160', server: 185.108.105.82, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 Manchester 1_161', server: 89.238.130.253, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 Manchester 2_162', server: 194.37.98.220, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 Manchester 3_163', server: 192.145.126.131, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GB 🇬🇧 Manchester 4_164', server: 89.238.133.123, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Latham 1_165', server: 45.43.19.92, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Latham 2_166', server: 192.154.248.179, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Latham 3_167', server: 45.43.19.68, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Latham 4_168', server: 45.43.19.82, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Boston 1_169', server: 173.237.207.54, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Boston 2_170', server: 173.237.207.30, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Boston 3_171', server: 173.237.207.44, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Boston 4_172', server: 173.237.207.32, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Buffalo 1_173', server: 172.93.153.148, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Buffalo 2_174', server: 172.93.146.82, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Buffalo 3_175', server: 64.44.42.164, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Buffalo 4_176', server: 172.93.146.210, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 New York 1_177', server: 84.17.35.111, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 New York 2_178', server: 37.19.199.196, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 New York 3_179', server: 84.17.35.103, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 New York 4_180', server: 37.19.199.224, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Seattle 1_181', server: 84.17.41.77, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Seattle 2_182', server: 212.102.46.54, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Seattle 3_183', server: 212.102.46.49, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Seattle 4_184', server: 84.17.41.83, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Chicago 1_185', server: 138.199.42.135, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Chicago 2_186', server: 185.246.209.55, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Chicago 3_187', server: 138.199.42.133, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Chicago 4_188', server: 185.246.209.57, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Detroit 1_189', server: 104.244.208.227, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Detroit 2_190', server: 104.244.211.179, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Detroit 3_191', server: 104.244.208.35, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Detroit 4_192', server: 104.244.211.181, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Denver 1_193', server: 212.102.44.87, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Denver 2_194', server: 212.102.44.91, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Denver 3_195', server: 212.102.44.71, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Denver 4_196', server: 212.102.44.81, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Bend 1_197', server: 154.16.168.186, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Bend 2_198', server: 154.16.168.184, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Bend 3_199', server: 45.43.14.73, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Bend 4_200', server: 45.43.14.75, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Kansas City 1_201', server: 198.204.230.59, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Kansas City 2_202', server: 198.204.230.61, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Kansas City 3_203', server: 198.204.230.58, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Kansas City 4_204', server: 198.204.230.60, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Salt Lake City 1_205', server: 104.200.131.7, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Salt Lake City 2_206', server: 104.200.131.245, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Salt Lake City 3_207', server: 104.200.131.233, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Salt Lake City 4_208', server: 104.200.131.5, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 St. Louis 1_209', server: 148.72.174.36, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 St. Louis 2_210', server: 148.72.174.38, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 St. Louis 3_211', server: 148.72.171.178, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 St. Louis 4_212', server: 148.72.174.51, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Tampa 1_213', server: 209.216.92.8, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Tampa 2_214', server: 209.216.85.165, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Tampa 3_215', server: 209.216.92.200, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Tampa 4_216', server: 209.216.92.215, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Miami 1_217', server: 212.102.61.148, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Miami 2_218', server: 212.102.61.136, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Miami 3_219', server: 89.38.227.173, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Miami 4_220', server: 212.102.61.138, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Charlotte 1_221', server: 155.254.29.163, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Charlotte 2_222', server: 155.254.29.165, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Charlotte 3_223', server: 154.16.171.213, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Charlotte 4_224', server: 192.154.254.135, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Dallas 1_225', server: 89.187.175.165, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Dallas 2_226', server: 66.115.177.146, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Dallas 3_227', server: 66.115.177.138, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Dallas 4_228', server: 89.187.175.167, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Phoenix 1_229', server: 199.58.187.25, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Phoenix 2_230', server: 199.58.187.18, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Phoenix 3_231', server: 172.98.87.37, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Phoenix 4_232', server: 199.58.187.67, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Atlanta 1_233', server: 45.134.140.17, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Atlanta 2_234', server: 138.199.2.135, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Atlanta 3_235', server: 45.134.140.4, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Atlanta 4_236', server: 66.115.175.50, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Orlando 1_237', server: 198.147.22.85, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Orlando 2_238', server: 198.147.22.197, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Orlando 3_239', server: 198.147.22.167, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Orlando 4_240', server: 66.115.182.74, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Las Vegas 1_241', server: 79.110.54.93, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Las Vegas 2_242', server: 79.110.54.125, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Las Vegas 3_243', server: 79.110.53.205, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Las Vegas 4_244', server: 79.110.54.123, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Los Angeles 1_245', server: 138.199.9.197, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Los Angeles 2_246', server: 138.199.9.194, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Los Angeles 3_247', server: 138.199.9.193, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Los Angeles 4_248', server: 138.199.9.195, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 San Francisco 1_249', server: 23.81.181.9, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 San Francisco 2_250', server: 185.124.240.151, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 San Francisco 3_251', server: 185.124.240.157, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 San Francisco 4_252', server: 185.124.240.155, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Ashburn 1_253', server: 37.19.220.201, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Ashburn 2_254', server: 37.19.220.199, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Ashburn 3_255', server: 37.19.220.196, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Ashburn 4_256', server: 37.19.220.194, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Houston 1_257', server: 199.10.64.165, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Houston 2_258', server: 199.10.64.163, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Houston 3_259', server: 199.10.64.149, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 Houston 4_260', server: 199.10.64.179, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 San Jose 1_261', server: 156.146.54.53, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 San Jose 2_262', server: 156.146.54.54, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 San Jose 3_263', server: 156.146.54.56, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark US 🇺🇸 San Jose 4_264', server: 156.146.54.57, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BA 🇧🇦 Sarajevo_265', server: 185.212.111.6, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BG 🇧🇬 Sofia_266', server: 217.138.202.21, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CZ 🇨🇿 Prague_267', server: 217.138.199.181, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GR 🇬🇷 Athens_268', server: 194.150.167.54, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark HU 🇭🇺 Budapest_269', server: 185.252.223.83, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IS 🇮🇸 Reykjavik_270', server: 45.133.193.219, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark MD 🇲🇩 Chisinau_271', server: 194.33.40.114, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark MK 🇲🇰 Skopje_272', server: 185.225.28.85, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark UA 🇺🇦 Kyiv_273', server: 156.146.50.102, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AR 🇦🇷 Buenos Aires_274', server: 91.206.168.64, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark BR 🇧🇷 Sao Paulo_275', server: 138.199.58.70, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CA 🇨🇦 Montreal_276', server: 91.245.254.131, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CA 🇨🇦 Toronto_277', server: 37.19.211.114, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CA 🇨🇦 Vancouver_278', server: 66.115.147.92, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CO 🇨🇴 Bogota_279', server: 45.129.32.32, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark CR 🇨🇷 San Jose_280', server: 176.227.241.35, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark MX 🇲🇽 Mexico City_281', server: 194.41.112.16, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AU 🇦🇺 Perth_282', server: 124.150.139.83, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AU 🇦🇺 Adelaide_283', server: 45.248.79.37, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AU 🇦🇺 Brisbane_284', server: 144.48.39.133, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AU 🇦🇺 Melbourne_285', server: 103.192.80.245, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AU 🇦🇺 Sydney_286', server: 180.149.228.179, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark HK 🇭🇰 Hong Kong_287', server: 212.102.42.89, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IN 🇮🇳 Indore_288', server: 103.39.132.187, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IN 🇮🇳 Mumbai_289', server: 129.227.219.24, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IN 🇮🇳 Chennai_290', server: 103.108.117.118, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ID 🇮🇩 Jakarta_291', server: 103.120.66.229, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark JP 🇯🇵 Tokyo_292', server: 89.187.160.132, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark KZ 🇰🇿 Oral_293', server: 5.189.202.11, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark My 🇲🇾 Kuala Lumpur_294', server: 111.90.140.136, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark Nz 🇳🇿 Auckland_295', server: 180.149.231.117, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PH 🇵🇭 Manila_296', server: 45.134.224.29, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark SG 🇸🇬 Singapore_297', server: 89.187.163.195, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark KR 🇰🇷 Seoul_298', server: 27.255.77.197, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark TW 🇹🇼 Taichung City_299', server: 103.152.151.85, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark TH 🇹🇭 Bangkok_300', server: 27.131.164.109, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark IL 🇮🇱 Tel Aviv_301', server: 87.239.255.109, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark NG 🇳🇬 Lagos_302', server: 102.165.23.44, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark ZA 🇿🇦 Johannesburg_303', server: 102.165.47.134, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark AE 🇦🇪 Dubai_304', server: 176.125.231.21, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PA 🇵🇦 Panama_305', server: 185.244.139.7, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark PE 🇵🇪 Lima_306', server: 193.218.35.12, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark VE 🇻🇪 Caracas_307', server: 45.149.3.5, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 Surfshark GE 🇬🇪 Tbilisi_308', server: 91.239.207.226, port: 41306, type: ss, cipher: aes-256-gcm, password: pzB5Y2twNtqFzWhEbBsPJMjj}
+  - {name: '@Vpn_proxy66 ufo Australia 🇦🇺 Sydney_309', server: 66.203.112.53, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Belgium 🇧🇪 Brussels_310', server: 193.9.114.34, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Brazil 🇧🇷 SãoPaulo_311', server: 177.54.150.39, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Canada 🇨🇦 Montreal_312', server: 142.44.135.104, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo China 🇨🇳 Beijing_313', server: 72.140.224.196, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo France 🇫🇷 Gravelines_314', server: 46.105.73.221, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo France 🇫🇷 Paris 2_315', server: 163.172.65.156, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo France 🇫🇷 Paris 3_316', server: 35.180.88.172, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo France 🇫🇷 Paris 4_317', server: 51.159.30.61, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo France 🇫🇷 Paris 5 YT_318', server: 95.85.90.181, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo France 🇫🇷 Paris 6_319', server: 135.125.248.215, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo France 🇫🇷 Paris 7_320', server: 15.236.142.139, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo France 🇫🇷 Paris_321', server: 163.172.110.54, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Germany 🇩🇪 Berlin_322', server: 196.244.72.5, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Germany 🇩🇪 Düsseldorf 2_323', server: 85.114.138.92, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Germany 🇩🇪 Düsseldorf_324', server: 93.186.201.124, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Germany 🇩🇪 FrankfurtamMain 3_325', server: 18.185.63.41, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Germany 🇩🇪 FrankfurtamMain 2_326', server: 185.104.184.78, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Germany 🇩🇪 FrankfurtamMain_327', server: 3.126.91.132, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Germany 🇩🇪 LimburganderLahn 2_328', server: 135.125.248.209, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Germany 🇩🇪 LimburganderLahn_329', server: 135.125.253.250, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Hong Kong🇭🇰Central_330', server: 148.66.56.98, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo India 🇮🇳 Bengaluru_331', server: 134.209.155.247, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo India 🇮🇳 Mumbai 2_332', server: 15.206.125.20, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo India 🇮🇳 Mumbai 3_333', server: 35.154.201.59, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo India 🇮🇳 Mumbai_334', server: 13.233.237.144, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Ireland 🇮🇪 Dublin_335', server: 34.247.174.236, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Israel 🇮🇱 TelAviv_336', server: 63.250.61.77, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Italy 🇮🇹 Milan 2_337', server: 92.223.79.31, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Italy 🇮🇹 Milan 3_338', server: 95.141.32.210, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Italy 🇮🇹 Milan 4_339', server: 95.141.37.111, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Italy 🇮🇹 Milan_340', server: 92.223.93.225, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Japan 🇯🇵 Tokyo 2_341', server: 5.183.176.114, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Japan 🇯🇵 Tokyo 3_342', server: 103.140.136.200, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Japan 🇯🇵 Tokyo 4_343', server: 89.31.125.101, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Japan 🇯🇵 Tokyo 5_344', server: 185.160.24.217, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Japan 🇯🇵 Tokyo_345', server: 194.156.231.185, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Netherlands 🇳🇱 Naaldwijk_346', server: 178.132.3.124, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo New Zealand 🇳🇿 Auckland_347', server: 103.62.49.141, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Norway 🇳🇴 Lensvik_348', server: 185.101.35.172, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Philippines 🇵🇭 MakatiCity_349', server: 116.93.120.196, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Russia 🇷🇺 Moscow_350', server: 92.38.139.136, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Singapore 🇸🇬 QueenstownEstate 2_351', server: 81.90.189.152, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Singapore 🇸🇬 QueenstownEstate_352', server: 81.90.189.229, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Singapore 🇸🇬 Singapore 2_353', server: 51.79.178.64, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Singapore 🇸🇬 Singapore 3_354', server: 196.240.126.74, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Singapore 🇸🇬 Singapore_355', server: 139.99.62.219, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo South Korea 🇰🇷 Gangnam_356', server: 211.212.237.222, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Sweden 🇸🇪 Stockholm_357', server: 196.196.156.106, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Switzerland 🇨🇭 Zurich_358', server: 188.241.120.16, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Taiwan 🇹🇼 Chang-hua_359', server: 61.224.67.42, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo Turkey 🇹🇷 Bahçelievler_360', server: 185.17.113.234, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo United Arab Emirates 🇦🇪 Dubai_361', server: 217.138.193.6, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo United Arab Emirates 🇦🇪 Sharjah 2_362', server: 109.169.72.239, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo United Arab Emirates 🇦🇪 Sharjah_363', server: 109.169.72.249, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo United Kingdom 🇬🇧 Basingstoke_364', server: 78.129.253.9, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo United Kingdom 🇬🇧 London 2_365', server: 89.35.29.96, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo United Kingdom 🇬🇧 London 3_366', server: 35.177.29.114, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo United Kingdom 🇬🇧 London 4_367', server: 89.238.165.226, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo United Kingdom 🇬🇧 London_368', server: 89.34.96.73, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Atlanta 2_369', server: 167.88.63.29, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Atlanta_370', server: 92.119.16.204, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Chicago 2_371', server: 38.64.138.103, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Chicago_372', server: 162.251.61.221, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Dallas 2_373', server: 38.68.134.135, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Dallas_374', server: 38.68.135.248, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Denver_375', server: 194.76.137.112, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 LasVegas_376', server: 37.120.147.230, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 LosAngeles 2_377', server: 185.153.180.238, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 LosAngeles 3_378', server: 172.245.218.162, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 LosAngeles 4_379', server: 193.239.87.134, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 LosAngeles_380', server: 77.247.126.153, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Miami 2_381', server: 193.37.252.210, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Miami_382', server: 38.91.107.225, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 NewYork 2_383', server: 45.83.27.130, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 NewYork 3_384', server: 5.181.234.254, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 NewYork_385', server: 45.144.112.162, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Phoenix_386', server: 37.120.219.218, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 SantaClara_387', server: 167.88.61.236, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Seattle 2_388', server: 38.143.66.125, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Seattle_389', server: 169.197.143.15, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 ufo USA 🇺🇸 Washington_390', server: 167.88.61.236, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: '@Vpn_proxy66 Aloha Argentina 🇦🇷 Buenos Aires_391', server: 131.255.4.219, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Australia 🇦🇺 Sydney_392', server: 194.14.208.110, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Austria 🇦🇹 Graz_393', server: 151.236.30.184, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Azerbaijan 🇦🇿 Baku_394', server: 94.20.154.26, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Belgium 🇧🇪 Oostkamp_395', server: 192.71.249.240, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Bosnia and Herzegovina 🇧🇦 Novi Travnik_396', server: 185.164.35.9, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Brazil 🇧🇷 Sao Paulo_397', server: 185.192.124.183, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Bulgaria 🇧🇬 Sofia_398', server: 194.68.225.28, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Canada 🇨🇦 Montreal_399', server: 192.71.227.17, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Chile 🇨🇱 Viña del Mar_400', server: 37.235.52.112, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Colombia 🇨🇴 Bogota_401', server: 181.119.30.61, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Croatia 🇭🇷 Zagreb_402', server: 46.183.184.12, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Cyprus 🇨🇾 Nicosia_403', server: 213.169.137.221, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Czechia 🇨🇿 Prague_404', server: 193.235.207.28, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Denmark 🇩🇰 Copenhagen_405', server: 192.36.27.59, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Estonia 🇪🇪 Tallinn_406', server: 37.252.5.234, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Finland 🇫🇮 Helsinki_407', server: 37.143.129.185, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha France 🇫🇷 Arcueil_408', server: 195.154.114.187, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Germany 🇩🇪 Düsseldorf_409', server: 178.18.255.190, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Germany 🇩🇪 Limburg an der Lahn_410', server: 135.125.244.103, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Germany 🇩🇪 Nuremberg_411', server: 213.136.80.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Greece 🇬🇷 Thessaloniki_412', server: 192.71.166.102, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Hong Kong 🇭🇰 Central_413', server: 91.245.255.59, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Hungary 🇭🇺 Budapest_414', server: 194.71.130.160, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Iceland 🇮🇸 Hafnarfjordur_415', server: 37.235.49.158, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha India 🇮🇳 Jaipur_416', server: 103.129.97.129, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Indonesia 🇮🇩 Jakarta_417', server: 103.84.192.228, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Ireland 🇮🇪 Tallaght_418', server: 185.108.129.158, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Isle of Man 🇮🇲 Douglas_419', server: 37.235.55.84, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Israel 🇮🇱 Tel Aviv_420', server: 31.133.102.100, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Italy 🇮🇹 Milan_421', server: 95.174.23.218, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Japan 🇯🇵 Tokyo_422', server: 176.97.70.125, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Latvia 🇱🇻 Riga_423', server: 192.36.41.28, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Luxembourg 🇱🇺 Luxembourg_424', server: 172.255.248.35, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Malaysia 🇲🇾 Bukit Bintang_425', server: 202.59.10.102, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Malta 🇲🇹 Qormi_426', server: 185.89.238.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Mexico 🇲🇽 Mexico City_427', server: 147.78.1.236, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Moldova 🇲🇩 Chisinau_428', server: 192.121.87.89, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Netherlands 🇳🇱 Amsterdam_429', server: 88.208.7.199, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Netherlands 🇳🇱 Haarlem_430', server: 51.15.0.113, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha North Macedonia 🇲🇰 Skopje_431', server: 46.183.185.15, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Poland 🇵🇱 Wroclaw_432', server: 54.37.136.249, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Portugal 🇵🇹 Lisbon_433', server: 185.113.143.189, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Romania 🇷🇴 Bucharest_434', server: 194.68.44.206, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Russia 🇷🇺 Moscow_435', server: 31.192.104.206, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Serbia 🇷🇸 Belgrade_436', server: 194.71.126.31, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Singapore 🇸🇬 Singapore_437', server: 194.233.65.67, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Slovakia 🇸🇰 Bratislava_438', server: 188.123.123.133, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Slovenia 🇸🇮 Ljubljana_439', server: 192.71.244.49, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha South Africa 🇿🇦 Pretoria_440', server: 197.189.202.25, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha South Korea 🇰🇷 Seoul_441', server: 158.247.213.230, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Spain 🇪🇸 Seville_442', server: 151.236.23.105, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Sweden 🇸🇪 Stockholm_443', server: 46.246.93.59, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Switzerland 🇨🇭 Zurich_444', server: 212.237.210.158, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Taiwan 🇹🇼 Taipei_445', server: 103.123.0.28, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Turkey 🇹🇷 Istanbul_446', server: 213.159.2.186, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Ukraine 🇺🇦 Kharkiv_447', server: 195.211.41.10, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha United Kingdom 🇬🇧 London_448', server: 176.10.80.6, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha United States 🇺🇸 Ashburn 1_449', server: 213.174.159.247, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha United States 🇺🇸 Ashburn 2_450', server: 213.174.130.130, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha United States 🇺🇸 Ashburn 3_451', server: 213.174.158.181, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha United States 🇺🇸 Ashburn 4_452', server: 213.174.130.130, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha United States 🇺🇸 Ashburn 5_453', server: 213.174.129.4, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Aloha Vietnam 🇻🇳 Ho Chi Minh City_454', server: 103.238.213.96, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Australia 🇦🇺 sydney_455', server: 139.99.135.133, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Azerbaijan 🇦🇿 Baku_456', server: 94.20.158.38, port: 50000, type: ss, cipher: aes-256-cfb, password: 3135771619}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Canada 🇨🇦 Montreal_457', server: 51.222.142.94, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Denmark 🇩🇰 Copenhagen_458', server: 5.183.101.229, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN France 🇫🇷 Paris_459', server: 5.188.93.79, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Germany 🇩🇪 FrankfurtamMain_460', server: 193.108.118.154, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Germany 🇩🇪 LimburganderLahn_461', server: 135.125.236.229, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Greece 🇬🇷 Athens_462', server: 185.243.214.55, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Hungary 🇭🇺 Budapest_463', server: 194.71.130.194, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Iceland 🇮🇸 Hafnarfjordur_464', server: 3.249.52.148, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Ireland 🇮🇪 Dublin_465', server: 3.249.52.148, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Israel 🇮🇱 Haifa 1_466', server: 83.229.73.60, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Israel 🇮🇱 Haifa 2_467', server: 185.162.126.217, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Israel 🇮🇱 Haifa 3_468', server: 185.162.125.91, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Israel 🇮🇱 Haifa 4_469', server: 83.229.73.120, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Italy 🇮🇹 Milan 1_470', server: 91.193.5.198, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Italy 🇮🇹 Milan 2_471', server: 5.188.226.125, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Italy 🇮🇹 Milan 3_472', server: 92.223.93.140, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Japan 🇯🇵 Tokyo_473', server: 185.172.113.58, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Netherland 🇳🇱 Amsterdam_474', server: 92.119.179.62, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Norway 🇳🇴 Oslo_475', server: 5.183.100.87, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Poland 🇵🇱 Gdansk_476', server: 82.118.21.21, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Romania 🇷🇴 Iasi_477', server: 185.225.19.64, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Russia 🇷🇺 Moscow 1_478', server: 92.38.139.95, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Russia 🇷🇺 Moscow 2_479', server: 92.38.152.142, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Spain 🇪🇸 Madrid_480', server: 92.38.171.101, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Sweden 🇸🇪 Stockholm_481', server: 185.243.215.187, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Turkey 🇹🇷 Istanbul 1_482', server: 141.98.119.180, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Turkey 🇹🇷 Istanbul 2_483', server: 185.219.134.52, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Turkey 🇹🇷 Istanbul 3_484', server: 185.219.133.176, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Turkey 🇹🇷 Istanbul 4_485', server: 185.219.134.182, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Turkey 🇹🇷 Istanbul 5_486', server: 141.98.119.156, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Turkey 🇹🇷 Istanbul 6_487', server: 185.219.134.161, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN UK 🇬🇧 London 1_488', server: 103.105.48.199, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN UK 🇬🇧 London 2_489', server: 51.195.217.21, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN UK 🇬🇧 London 3_490', server: 51.89.138.162, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN UK 🇬🇧 London 4_491', server: 77.247.125.27, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN Ukraine 🇺🇦 Kyiv_492', server: 77.247.125.27, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 Los Angeles 1_493', server: 104.149.129.126, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 Los Angeles 2_494', server: 104.149.149.158, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 Los Angeles 3_495', server: 185.153.180.10, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 Los Angeles 4_496', server: 155.94.196.234, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 Los Angeles 5_497', server: 104.149.134.194, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 Los Angeles 6_498', server: 2.56.178.201, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 New Jersey 1_499', server: 212.103.61.167, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 New Jersey 2_500', server: 5.188.0.184, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 New Jersey 3_501', server: 5.188.0.138, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 New Memphis 1_502', server: 104.249.173.232, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 New Memphis 2_503', server: 104.249.173.240, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 San Jose_504', server: 103.138.73.118, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 Speedy Quark VPN USA 🇺🇸 Santa Clara_505', server: 92.38.149.173, port: 50003, type: ss, cipher: aes-256-cfb, password: 8460400130}
+  - {name: '@Vpn_proxy66 XY VPN USA 🇺🇸 Dalas_506', server: 167.88.62.104, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN USA 🇺🇸 New York_507', server: 142.202.48.58, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN UK 🇬🇧 London_508', server: 172.99.190.87, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Canada 🇨🇦 Toronto_509', server: 134.195.196.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN India 🇮🇳 Mumbai_510', server: 192.46.208.153, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Canada 🇨🇦 Montreal_511', server: 134.195.198.178, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN France 🇫🇷 Roubaix_512', server: 151.80.27.161, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Germany 🇩🇪 frankfurtAMmain_513', server: 172.105.244.165, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Germany 🇩🇪 Dusseldorf 1_514', server: 146.0.36.23, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Germany 🇩🇪 Dusseldorf 2_515', server: 91.194.84.53, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Italy 🇮🇹 Milan 1_516', server: 185.213.21.5, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Italy 🇮🇹 Milan 2_517', server: 185.213.21.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Norway 🇳🇴 Kristiansad 1_518', server: 46.29.219.246, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Norway 🇳🇴 Kristiansad 2_519', server: 46.29.219.246, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Norway 🇳🇴 Kristiansad 3_520', server: 46.29.218.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Poland 🇳🇴 Warsaw 1_521', server: 194.15.196.66, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 XY VPN Poland 🇳🇴 Warsaw 2_522', server: 194.15.196.54, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: '@Vpn_proxy66 Private VPN USA 🇺🇸 New Jersey_523', server: 92.38.169.196, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563}
+  - {name: '@Vpn_proxy66 Private VPN USA 🇺🇸 California_524', server: 5.188.111.182, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563}
+  - {name: '@Vpn_proxy66 Private VPN France 🇫🇷 Paris_525', server: 141.95.0.26, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563}
+  - {name: '@Vpn_proxy66 Private VPN Singapore 🇸🇬 Singapore_526', server: 81.90.188.167, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563}
+  - {name: '@Vpn_proxy66 Private VPN UK 🇬🇧 London_527', server: 198.244.150.26, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563}
+  - {name: '@Vpn_proxy66 Time VPN  🇸🇪 stockholm_528', server: 80.67.3.120, port: 40503, type: ss, cipher: aes-256-cfb, password: XS4DBE6}
+  - {name: '@Vpn_proxy66 Time Netherlands 🇳🇱 Amsterdam_529', server: 5.45.69.49, port: 43670, type: ss, cipher: aes-256-cfb, password: R3Mq7nn}
+  - {name: '@Vpn_proxy66 Time VPN Germany 🇩🇪 FrankfurtamMain_530', server: 37.1.192.129, port: 55605, type: ss, cipher: aes-256-cfb, password: ruEvBSp}
+  - {name: '@Vpn_proxy66 Time VPN USA 🇺🇸 Chicago_531', server: 37.1.210.145, port: 13724, type: ss, cipher: aes-256-cfb, password: 5ewqSLt}
+  - {name: '@Vpn_proxy66 Time VPN Russia 🇷🇺 Moscow_532', server: 185.4.65.6, port: 21247, type: ss, cipher: aes-256-cfb, password: vDS9G2p}
