@@ -1,0 +1,49 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {name: '香港🇭🇰_1', server: hk1.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: gd.189.cn}}
+  - {name: '香港🇭🇰_2', server: hk2.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: gd.189.cn}}
+  - {name: '香港🇭🇰_3', server: hk3.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: gd.189.cn}}
+  - {name: '香港🇭🇰_4', server: hk4.mlsao.dynv6.net, port: 443, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: a.189.cn}}
+  - {name: '香港🇭🇰_5', server: hk5.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: gd.189.cn}}
+  - {name: '香港🇭🇰_6', server: hk6.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: a.189.cn}}
+  - {name: '香港🇭🇰_7', server: hk7.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: gd.189.cn}}
+  - {name: '中国🇨🇳_1', server: cs.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /802, ws-headers: {Host: a.189.cn}}
+  - {name: '中国🇨🇳_2', server: cd1.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: gd.189.cn}}
+  - {name: '中国🇨🇳_3', server: bj1.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: gd.189.cn}}
+  - {name: '中国🇨🇳_4', server: gz1.mlsao.dynv6.net, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: gd.189.cn}}
+  - {name: '中国🇨🇳_5', server: 103.163.46.174, port: 80, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /wangwang, ws-headers: {Host: a.189.cn}}
+  - {name: '中国🇨🇳_6', server: 120.232.192.142, port: 443, type: vmess, uuid: 2d919aa8-4660-498e-b4b3-7fc443adb98d, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: gd.189.cn}}
+proxy-groups:
+  - name: 中国🇨🇳
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 中国🇨🇳_1
+      - 中国🇨🇳_2
+      - 中国🇨🇳_3
+      - 中国🇨🇳_4
+      - 中国🇨🇳_5
+      - 中国🇨🇳_6
+  - name: 香港🇭🇰
+    type: select
+    proxies:
+      - 香港🇭🇰_1
+      - 香港🇭🇰_2
+      - 香港🇭🇰_3
+      - 香港🇭🇰_4
+      - 香港🇭🇰_5
+      - 香港🇭🇰_6
+      - 香港🇭🇰_7
+      
+rules:
+#回环
+  - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+  - GEOIP,CN,中国🇨🇳
+  - MATCH,香港🇭🇰
