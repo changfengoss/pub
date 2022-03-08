@@ -1,0 +1,22 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"name":"测试2_1","server":"183.240.69.38","port":3939,"type":"vmess","uuid":"6c2e6b02-a47e-4cba-9fe0-504c7daf1647","alterId":0,"cipher":"auto","tls":false,"network":"tcp","ws-opts":{"path":"/","headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+  - {"name":"浙江g_2","server":"zj1.quick-connect.top","port":80,"type":"vmess","uuid":"03adf07d-d396-40eb-831e-7c238e2b8451","alterId":0,"cipher":"auto","tls":false,"network":"ws","ws-opts":{"path":"/","headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+  - {"name":"长沙_3","server":"cs1.ftnodes1.xyz","port":80,"type":"vmess","uuid":"e4fb1a56-8b94-4ab7-832e-fa077a024145","alterId":0,"cipher":"auto","tls":false,"network":"ws","ws-opts":{"path":"/","headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+  - {"name":"北京_4","server":"bj.ftnodes1.xyz","port":80,"type":"vmess","uuid":"e4fb1a56-8b94-4ab7-832e-fa077a024145","alterId":0,"cipher":"auto","tls":false,"network":"ws","ws-opts":{"path":"/","headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+  - {"name":"proxy_5","server":"146.56.108.207","port":80,"type":"vless","uuid":"2da9626b-2784-5e23-a85f-718aefdd95c0","cipher":"auto","skip-cert-verify":true,"path":"/0739c1791a9?ed=2048","host":"cdn-sh-down.dingtalk.com","network":"http"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    proxies:
+      - 测试2_1
+      - 浙江g_2
+      - 长沙_3
+      - 北京_4
+      - proxy_5
