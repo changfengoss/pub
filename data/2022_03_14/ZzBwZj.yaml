@@ -1,0 +1,802 @@
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+hosts:
+  localhost: 127.0.0.1
+dns:
+  enable: true
+  listen: 0.0.0.0:10053
+  default-nameserver:
+    - 119.29.29.29
+    - 8.8.8.8
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 119.29.29.29
+    - tls://8.8.8.8:853
+    - https://doh.pub/dns-query
+    - https://1.1.1.1/dns-query
+proxies:
+  - name: 官网：https://jetstream.vip, https://jetstream.surf
+    username: username
+    password: password
+    type: http
+    server: localhost
+    port: 80
+    tls: true
+    skip-cert-verify: yes
+  - name: 服务：已用252%，2023-03-11过期
+    username: username
+    password: password
+    type: http
+    server: localhost
+    port: 80
+    tls: true
+    skip-cert-verify: yes
+  - name: CTVIP-DE-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h961359.droplet.today
+    port: 11745
+    tls: true
+    skip-cert-verify: yes
+  - name: CTVIP-HK-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h961359.droplet.today
+    port: 11545
+    tls: true
+    skip-cert-verify: yes
+  - name: CTVIP-JP-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h961359.droplet.today
+    port: 11445
+    tls: true
+    skip-cert-verify: yes
+  - name: CTVIP-US-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h961359.droplet.today
+    port: 11245
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-DE-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h961684.droplet.today
+    port: 11745
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-DE-7[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h755658.droplet.today
+    port: 11745
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-HK-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h890361.droplet.today
+    port: 11545
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-HK-7[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h63956.droplet.today
+    port: 11543
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-JP-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h890361.droplet.today
+    port: 11445
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-JP-7[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h63956.droplet.today
+    port: 11443
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-RU-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h961684.droplet.today
+    port: 11645
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-RU-7[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h755658.droplet.today
+    port: 11645
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-TW-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h7520tw.droplet.today
+    port: 20443
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-TW-7[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h3816tw.droplet.today
+    port: 20443
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-US-3[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h961684.droplet.today
+    port: 11245
+    tls: true
+    skip-cert-verify: yes
+  - name: HOP-US-7[ran-out](https)
+    username: dcf12c7e7d
+    password: 26bae9b023
+    type: http
+    server: h755658.droplet.today
+    port: 11245
+    tls: true
+    skip-cert-verify: yes
+  - name: CTVIP-DE-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h961359.droplet.today
+    port: 12745
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h961359.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h961359.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: CTVIP-HK-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h961359.droplet.today
+    port: 12545
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h961359.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h961359.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: CTVIP-JP-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h961359.droplet.today
+    port: 12445
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h961359.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h961359.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: CTVIP-US-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h961359.droplet.today
+    port: 12245
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h961359.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h961359.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-DE-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h961684.droplet.today
+    port: 12745
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h961684.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h961684.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-DE-7[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h755658.droplet.today
+    port: 12745
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h755658.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h755658.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-HK-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h890361.droplet.today
+    port: 12545
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h890361.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h890361.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-HK-7[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h63956.droplet.today
+    port: 12543
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h63956.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h63956.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-JP-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h890361.droplet.today
+    port: 12445
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h890361.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h890361.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-JP-7[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h63956.droplet.today
+    port: 12443
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h63956.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h63956.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-RU-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h961684.droplet.today
+    port: 12645
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h961684.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h961684.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-RU-7[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h755658.droplet.today
+    port: 12645
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h755658.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h755658.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-TW-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h7520tw.droplet.today
+    port: 28443
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h7520tw.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h7520tw.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-TW-7[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h3816tw.droplet.today
+    port: 28443
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h3816tw.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h3816tw.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-US-3[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h961684.droplet.today
+    port: 12245
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h961684.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h961684.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: HOP-US-7[ran-out](v2ray)
+    uuid: a611f6db-6bcd-11eb-baa0-0ae09aa79902
+    type: vmess
+    server: h755658.droplet.today
+    port: 12245
+    alterId: 0
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: lzu4t6t5j7qp72ebep0c
+    ws-headers:
+      host: h755658.droplet.today
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    ws-opts:
+      path: lzu4t6t5j7qp72ebep0c
+      headers:
+        host: h755658.droplet.today
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
+          (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+  - name: CTVIP-DE-3[ran-out](trojan)
+    type: trojan
+    server: h961359.droplet.today
+    port: 13745
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: CTVIP-HK-3[ran-out](trojan)
+    type: trojan
+    server: h961359.droplet.today
+    port: 13545
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: CTVIP-JP-3[ran-out](trojan)
+    type: trojan
+    server: h961359.droplet.today
+    port: 13445
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: CTVIP-US-3[ran-out](trojan)
+    type: trojan
+    server: h961359.droplet.today
+    port: 13245
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-DE-3[ran-out](trojan)
+    type: trojan
+    server: h961684.droplet.today
+    port: 13745
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-DE-7[ran-out](trojan)
+    type: trojan
+    server: h755658.droplet.today
+    port: 13745
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-HK-3[ran-out](trojan)
+    type: trojan
+    server: h890361.droplet.today
+    port: 13545
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-HK-7[ran-out](trojan)
+    type: trojan
+    server: h63956.droplet.today
+    port: 13543
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-JP-3[ran-out](trojan)
+    type: trojan
+    server: h890361.droplet.today
+    port: 13445
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-JP-7[ran-out](trojan)
+    type: trojan
+    server: h63956.droplet.today
+    port: 13443
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-RU-3[ran-out](trojan)
+    type: trojan
+    server: h961684.droplet.today
+    port: 13645
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-RU-7[ran-out](trojan)
+    type: trojan
+    server: h755658.droplet.today
+    port: 13645
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-TW-3[ran-out](trojan)
+    type: trojan
+    server: h7520tw.droplet.today
+    port: 29443
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-TW-7[ran-out](trojan)
+    type: trojan
+    server: h3816tw.droplet.today
+    port: 29443
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-US-3[ran-out](trojan)
+    type: trojan
+    server: h961684.droplet.today
+    port: 13245
+    password: 26bae9b023
+    skip-cert-verify: true
+  - name: HOP-US-7[ran-out](trojan)
+    type: trojan
+    server: h755658.droplet.today
+    port: 13245
+    password: 26bae9b023
+    skip-cert-verify: true
+proxy-groups:
+  - name: 🔰 節點選擇
+    type: select
+    proxies:
+      - 官网：https://jetstream.vip, https://jetstream.surf
+      - 服务：已用252%，2023-03-11过期
+      - CTVIP-DE-3[ran-out](https)
+      - CTVIP-HK-3[ran-out](https)
+      - CTVIP-JP-3[ran-out](https)
+      - CTVIP-US-3[ran-out](https)
+      - HOP-DE-3[ran-out](https)
+      - HOP-DE-7[ran-out](https)
+      - HOP-HK-3[ran-out](https)
+      - HOP-HK-7[ran-out](https)
+      - HOP-JP-3[ran-out](https)
+      - HOP-JP-7[ran-out](https)
+      - HOP-RU-3[ran-out](https)
+      - HOP-RU-7[ran-out](https)
+      - HOP-TW-3[ran-out](https)
+      - HOP-TW-7[ran-out](https)
+      - HOP-US-3[ran-out](https)
+      - HOP-US-7[ran-out](https)
+      - CTVIP-DE-3[ran-out](v2ray)
+      - CTVIP-HK-3[ran-out](v2ray)
+      - CTVIP-JP-3[ran-out](v2ray)
+      - CTVIP-US-3[ran-out](v2ray)
+      - HOP-DE-3[ran-out](v2ray)
+      - HOP-DE-7[ran-out](v2ray)
+      - HOP-HK-3[ran-out](v2ray)
+      - HOP-HK-7[ran-out](v2ray)
+      - HOP-JP-3[ran-out](v2ray)
+      - HOP-JP-7[ran-out](v2ray)
+      - HOP-RU-3[ran-out](v2ray)
+      - HOP-RU-7[ran-out](v2ray)
+      - HOP-TW-3[ran-out](v2ray)
+      - HOP-TW-7[ran-out](v2ray)
+      - HOP-US-3[ran-out](v2ray)
+      - HOP-US-7[ran-out](v2ray)
+      - CTVIP-DE-3[ran-out](trojan)
+      - CTVIP-HK-3[ran-out](trojan)
+      - CTVIP-JP-3[ran-out](trojan)
+      - CTVIP-US-3[ran-out](trojan)
+      - HOP-DE-3[ran-out](trojan)
+      - HOP-DE-7[ran-out](trojan)
+      - HOP-HK-3[ran-out](trojan)
+      - HOP-HK-7[ran-out](trojan)
+      - HOP-JP-3[ran-out](trojan)
+      - HOP-JP-7[ran-out](trojan)
+      - HOP-RU-3[ran-out](trojan)
+      - HOP-RU-7[ran-out](trojan)
+      - HOP-TW-3[ran-out](trojan)
+      - HOP-TW-7[ran-out](trojan)
+      - HOP-US-3[ran-out](trojan)
+      - HOP-US-7[ran-out](trojan)
+rules:
+  - DOMAIN-SUFFIX,jetstream.xyz,🔰 節點選擇
+  - DOMAIN-SUFFIX,jetstream.surf,🔰 節點選擇
+  - DOMAIN-SUFFIX,jetstream.vip,DIRECT
+  - DOMAIN-SUFFIX,flashvpn.io,DIRECT
+  - DOMAIN-SUFFIX,lightning.cool,DIRECT
+  - DOMAIN-SUFFIX,jet163.com,DIRECT
+  - DOMAIN-SUFFIX,tuite555.com,DIRECT
+  - DOMAIN-SUFFIX,tui222.xyz,DIRECT
+  - DOMAIN-SUFFIX,tui333.xyz,DIRECT
+  - DOMAIN-SUFFIX,appspot.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,blogger.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,getoutline.org,🔰 節點選擇
+  - DOMAIN-SUFFIX,gvt0.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,gvt3.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🔰 節點選擇
+  - DOMAIN-KEYWORD,google,🔰 節點選擇
+  - DOMAIN-KEYWORD,.blogspot.,🔰 節點選擇
+  - DOMAIN-SUFFIX,onedrive.live.com,🔰 節點選擇
+  - DOMAIN,az416426.vo.msecnd.net,🔰 節點選擇
+  - DOMAIN,az668014.vo.msecnd.net,🔰 節點選擇
+  - DOMAIN-KEYWORD,1drv,🔰 節點選擇
+  - DOMAIN-KEYWORD,microsoft,🔰 節點選擇
+  - DOMAIN-SUFFIX,aadrm.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,acompli.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,acompli.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,aka.ms,🔰 節點選擇
+  - DOMAIN-SUFFIX,akadns.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,aspnetcdn.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,assets-yammer.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,azure.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,azure.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,azureedge.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,azurerms.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,bing.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,cloudapp.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,cloudappsecurity.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,edgesuite.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,gfx.ms,🔰 節點選擇
+  - DOMAIN-SUFFIX,hotmail.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,live.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,live.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,lync.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,msappproxy.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,msauth.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,msauthimages.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,msecnd.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,msedge.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,msft.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,msftauth.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,msftauthimages.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,msftidentity.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,msidentity.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,msn.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,msocdn.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,msocsp.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,mstea.ms,🔰 節點選擇
+  - DOMAIN-SUFFIX,o365weve.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,oaspapps.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,office.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,office.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,office365.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,officeppe.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,omniroot.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,onedrive.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,onenote.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,onenote.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,onestore.ms,🔰 節點選擇
+  - DOMAIN-SUFFIX,outlook.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,outlookmobile.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,phonefactor.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,public-trust.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,sfbassets.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,sfx.ms,🔰 節點選擇
+  - DOMAIN-SUFFIX,sharepoint.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,sharepointonline.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,skype.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,skypeassets.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,skypeforbusiness.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,staffhub.ms,🔰 節點選擇
+  - DOMAIN-SUFFIX,svc.ms,🔰 節點選擇
+  - DOMAIN-SUFFIX,sway-cdn.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,sway-extensions.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,sway.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,trafficmanager.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,uservoice.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,virtualearth.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,visualstudio.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,windows-ppe.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,windows.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,windows.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,windowsazure.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,windowsupdate.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,wunderlist.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,yammer.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,yammerusercontent.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,cdninstagram.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebook.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebook.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,fb.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,fb.me,🔰 節點選擇
+  - DOMAIN-SUFFIX,fbaddins.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,fbcdn.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,fbsbx.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,fbworkmail.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,instagram.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,m.me,🔰 節點選擇
+  - DOMAIN-SUFFIX,messenger.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,oculus.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,oculuscdn.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,rocksdb.org,🔰 節點選擇
+  - DOMAIN-SUFFIX,whatsapp.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,whatsapp.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebook.br,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebook.design,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebook.hu,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebook.in,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebook.nl,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebook.se,🔰 節點選擇
+  - DOMAIN-SUFFIX,facebookmail.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,pscp.tv,🔰 節點選擇
+  - DOMAIN-SUFFIX,periscope.tv,🔰 節點選擇
+  - DOMAIN-SUFFIX,t.co,🔰 節點選擇
+  - DOMAIN-SUFFIX,twimg.co,🔰 節點選擇
+  - DOMAIN-SUFFIX,twimg.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,twitpic.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,twitter.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,vine.co,🔰 節點選擇
+  - DOMAIN-SUFFIX,t.me,🔰 節點選擇
+  - DOMAIN-SUFFIX,tdesktop.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,telegra.ph,🔰 節點選擇
+  - DOMAIN-SUFFIX,telegram.me,🔰 節點選擇
+  - DOMAIN-SUFFIX,telegram.org,🔰 節點選擇
+  - DOMAIN-SUFFIX,telesco.pe,🔰 節點選擇
+  - DOMAIN-SUFFIX,telegra.ph,🔰 節點選擇
+  - DOMAIN-SUFFIX,telegram.org,🔰 節點選擇
+  - IP-CIDR,91.108.4.0/22,🔰 節點選擇
+  - IP-CIDR,91.108.8.0/22,🔰 節點選擇
+  - IP-CIDR,91.108.12.0/22,🔰 節點選擇
+  - IP-CIDR,91.108.16.0/22,🔰 節點選擇
+  - IP-CIDR,91.108.56.0/22,🔰 節點選擇
+  - IP-CIDR,149.154.160.0/20,🔰 節點選擇
+  - IP-CIDR,2001:b28:f23d::/48,🔰 節點選擇
+  - IP-CIDR,2001:b28:f23f::/48,🔰 節點選擇
+  - IP-CIDR,2001:67c:4e8::/48,🔰 節點選擇
+  - DOMAIN-SUFFIX,line.me,🔰 節點選擇
+  - DOMAIN-SUFFIX,line-apps.com,🔰 節點選擇
+  - DOMAIN-SUFFIX,line-scdn.net,🔰 節點選擇
+  - DOMAIN-SUFFIX,naver.jp,🔰 節點選擇
+  - IP-CIDR,103.2.30.0/23,🔰 節點選擇
+  - IP-CIDR,125.209.208.0/20,🔰 節點選擇
+  - IP-CIDR,147.92.128.0/17,🔰 節點選擇
+  - IP-CIDR,203.104.144.0/21,🔰 節點選擇
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,appsto.re, DIRECT
+  - DOMAIN,books.itunes.apple.com,DIRECT
+  - DOMAIN,apps.apple.com,DIRECT
+  - DOMAIN,itunes.apple.com,DIRECT
+  - DOMAIN,api-glb-sea.smoot.apple.com,DIRECT
+  - DOMAIN-SUFFIX,smoot.apple.com,DIRECT
+  - DOMAIN,lookup-api.apple.com,DIRECT
+  - DOMAIN,beta.music.apple.com,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🔰 節點選擇
