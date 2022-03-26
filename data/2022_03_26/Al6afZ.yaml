@@ -1,0 +1,31 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"name":"⌈TCP⌋华北01_1","server":"bj.ftnodes1.xyz","port":1089,"type":"vmess","uuid":"fe57ea83-7b07-4c8e-9937-2f2eadb725d2","alterId":0,"cipher":"auto","country":"⌈TCP⌋华北01_1","skip-cert-verify":true,"tls":false,"network":"tcp","ws-opts":{"path":"/","headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+  - {"name":"⌈TCP⌋华中01_2","server":"cs.ftnodes1.xyz","port":1089,"type":"vmess","uuid":"fe57ea83-7b07-4c8e-9937-2f2eadb725d2","alterId":0,"cipher":"auto","country":"⌈TCP⌋华中01_2","skip-cert-verify":true,"tls":false,"network":"tcp","ws-opts":{"path":"/","headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+  - {"name":"⌈TCP⌋香港01_3","server":"hz1.ftnodes1.xyz","port":1089,"type":"vmess","uuid":"fe57ea83-7b07-4c8e-9937-2f2eadb725d2","alterId":0,"cipher":"auto","country":"⌈TCP⌋香港01_3","skip-cert-verify":true,"tls":false,"network":"tcp","ws-opts":{"path":"/","headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+  - {"name":"⌈TCP⌋华南01_4","server":"fz2.ftnodes1.xyz","port":1089,"type":"vmess","uuid":"fe57ea83-7b07-4c8e-9937-2f2eadb725d2","alterId":0,"cipher":"auto","country":"⌈TCP⌋华南01_4","skip-cert-verify":true,"tls":false,"network":"tcp","ws-opts":{"path":"/","headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - ⌈TCP⌋华北01_1
+      - ⌈TCP⌋华中01_2
+      - ⌈TCP⌋香港01_3
+      - ⌈TCP⌋华南01_4
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - ⌈TCP⌋华北01_1
+      - ⌈TCP⌋华中01_2
+      - ⌈TCP⌋香港01_3
+      - ⌈TCP⌋华南01_4
