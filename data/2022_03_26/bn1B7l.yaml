@@ -1,0 +1,13 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"name":"日本_1","server":"20.210.88.8","port":80,"type":"vmess","uuid":"550351b2-9fe4-4465-adaa-9c6800fa1324","alterId":0,"cipher":"auto","country":"日本_1","skip-cert-verify":true,"tls":false,"network":"tcp","ws-opts":{"headers":{"host":"cdn-sh-down.dingtalk.com"}}}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 日本_1
