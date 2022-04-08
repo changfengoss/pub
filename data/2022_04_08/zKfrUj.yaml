@@ -1,0 +1,49 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"name":"github_com/freefq+-+美国惠普公司+24_1","server":"tj-sg02.yiyodns.xyz","port":443,"type":"trojan","country":"github_com/freefq+-+美国惠普公司+24_1","skip-cert-verify":true,"udp":true,"password":"7dafe71e-2be6-302f-bdfc-e6319a3299bc"}
+  - {"name":"🇬🇧_GB_英国_2","server":"172.99.190.149","port":7307,"type":"ss","country":"🇬🇧_GB_英国_2","cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"name":"🇫🇷_FR_法国_3","server":"149.202.82.172","port":8882,"type":"ss","country":"🇫🇷_FR_法国_3","cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"name":"0000🇧_GB_英国_4","server":"172.99.190.39","port":2375,"type":"ss","country":"0000🇧_GB_英国_4","cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"name":"YouTube*阿阳AYANG*科技大师_5","server":"cloudflare.xrenblog.com","port":443,"type":"vmess","uuid":"6c175d1a-a57f-4881-a471-173eb139694b","alterId":0,"cipher":"auto","country":"YouTube*阿阳AYANG*科技大师_5","skip-cert-verify":true,"tls":true,"network":"ws","ws-opts":{"path":"/xrenblog/","headers":{"host":"ipv6.xrenblog.com"}}}
+  - {"name":"default_name_6","server":"198.41.212.18","port":443,"type":"vmess","uuid":"a8910831-f56b-4ac4-c68f-e4dd83f71e60","alterId":0,"cipher":"auto","country":"default_name_6","skip-cert-verify":true,"tls":true,"network":"ws","ws-opts":{"path":"/sakura/","headers":{"host":"zero1.a-yu.xyz"}}}
+  - {"name":"🇰🇷_KR_韩国_7","server":"158.247.203.40","port":2376,"type":"ss","country":"🇰🇷_KR_韩国_7","cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"name":"github_com/freefq+-+上海市电信+43_8","server":"101.91.121.247","port":50004,"type":"ss","country":"github_com/freefq+-+上海市电信+43_8","cipher":"aes-256-cfb","password":"4415934295"}
+  - {"name":"default_name_9","server":"niaop.tk","port":443,"type":"vmess","uuid":"a0b0df87-bda2-440e-830f-347da6cc7760","alterId":0,"cipher":"auto","country":"default_name_9","skip-cert-verify":true,"tls":true,"network":"ws","ws-opts":{"path":"/wsssdr1","headers":{"host":"niaop.tk"}}}
+  - {"name":"🇺🇸_US_美国_10","server":"38.107.226.48","port":2375,"type":"ss","country":"🇺🇸_US_美国_10","cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - github_com/freefq+-+美国惠普公司+24_1
+      - 🇬🇧_GB_英国_2
+      - 🇫🇷_FR_法国_3
+      - 0000🇧_GB_英国_4
+      - YouTube*阿阳AYANG*科技大师_5
+      - default_name_6
+      - 🇰🇷_KR_韩国_7
+      - github_com/freefq+-+上海市电信+43_8
+      - default_name_9
+      - 🇺🇸_US_美国_10
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - github_com/freefq+-+美国惠普公司+24_1
+      - 🇬🇧_GB_英国_2
+      - 🇫🇷_FR_法国_3
+      - 0000🇧_GB_英国_4
+      - YouTube*阿阳AYANG*科技大师_5
+      - default_name_6
+      - 🇰🇷_KR_韩国_7
+      - github_com/freefq+-+上海市电信+43_8
+      - default_name_9
+      - 🇺🇸_US_美国_10
