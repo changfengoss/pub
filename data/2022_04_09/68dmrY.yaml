@@ -1,0 +1,19 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"name":"^🇭🇰香港HK1403*hi-moon_pw_20","server":"hk03.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":443,"type":"trojan","country":"^🇭🇰香港HK1403*hi-moon_pw_20","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇭🇰香港HK1413*hi-moon_pw_22","server":"hk02.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":443,"type":"trojan","country":"^🇭🇰香港HK1413*hi-moon_pw_22","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇭🇰香港HK963*hi-moon_pw_29","server":"zz01.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":10713,"type":"trojan","country":"^🇭🇰香港HK963*hi-moon_pw_29","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇭🇰香港HK970*hi-moon_pw_30","server":"zz01.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":10712,"type":"trojan","country":"^🇭🇰香港HK970*hi-moon_pw_30","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇯🇵日本JP1539*hi-moon_pw_34","server":"jp01.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":443,"type":"trojan","country":"^🇯🇵日本JP1539*hi-moon_pw_34","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇯🇵日本JP1543*hi-moon_pw_35","server":"jp03.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":443,"type":"trojan","country":"^🇯🇵日本JP1543*hi-moon_pw_35","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇯🇵日本JP1554*hi-moon_pw_36","server":"jp02.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":443,"type":"trojan","country":"^🇯🇵日本JP1554*hi-moon_pw_36","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇯🇵日本JP962*hi-moon_pw_40","server":"zz02.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":10722,"type":"trojan","country":"^🇯🇵日本JP962*hi-moon_pw_40","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇯🇵日本JP965*hi-moon_pw_41","server":"zz02.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":10721,"type":"trojan","country":"^🇯🇵日本JP965*hi-moon_pw_41","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇸🇬新加坡SG964*hi-moon_pw_55","server":"zz02.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":10731,"type":"trojan","country":"^🇸🇬新加坡SG964*hi-moon_pw_55","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇺🇸美国US2972*hi-moon_pw_66","server":"kr01.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":443,"type":"trojan","country":"^🇺🇸美国US2972*hi-moon_pw_66","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
+  - {"name":"^🇺🇸美国US973*hi-moon_pw_67","server":"zz02.00000000-0000-0000-0000-000000000000.00000000-0000-0000-0000-000000000000.yiyuan.cyou","port":10741,"type":"trojan","country":"^🇺🇸美国US973*hi-moon_pw_67","skip-cert-verify":true,"udp":true,"password":"95227a2f-946d-4a38-9f2a-74e4c41ddeb8"}
