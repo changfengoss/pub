@@ -1,0 +1,8 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"name":"wulabing_mafiaasabcccdef_xyz_1","server":"mafiaasabcccdef.xyz","port":443,"type":"vmess","uuid":"53cca7eb-6743-4a84-942d-bb4d8b654c49","alterId":0,"cipher":"auto","country":"wulabing_mafiaasabcccdef_xyz_1","skip-cert-verify":true,"tls":true,"network":"ws","ws-opts":{"path":"/371bb379d574f35/","headers":{"host":"mafiaasabcccdef.xyz"}}}
