@@ -1,0 +1,388 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"type":"trojan","name":"「🇸🇬」女娲石「中转」★\r\r_1\r","server":"dk.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"52022","udp":true,"skip-cert-verify":true,"sni":"qt2.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」崆峒印「直连」✡\r\r_1\r","server":"qt6.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"8443","udp":true,"skip-cert-verify":true,"sni":"qt6.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」冥王剑「中转」★\r\r_1\r","server":"kb.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"12096","udp":true,"skip-cert-verify":true,"sni":"qt22.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」素王剑「直连」✡\r\r_1\r","server":"qt29.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2022","udp":true,"skip-cert-verify":true,"sni":"qt29.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」紫月鞭「直连」★\r\r_1\r","server":"qt36.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2022","udp":true,"skip-cert-verify":true,"sni":"qt36.shenseven.xyz"}
+  - {"type":"vmess","ws-opts":{"path":"/","headers":{"host":"shoutingtoutiao1.10010.com"}},"server":"qv39.shenseven.xyz","name":"「🇸🇬」备用四「免流」★_1","port":"80","uuid":"a54f233e-fac9-4f2f-8061-d001a9ecc154","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"「🇸🇬」女娲石「中转」★\r\r_2\r","server":"dk.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"52022","udp":true,"skip-cert-verify":true,"sni":"qt2.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」崆峒印「直连」✡\r\r_2\r","server":"qt6.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"8443","udp":true,"skip-cert-verify":true,"sni":"qt6.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」盘古斧「直连」✰\r\r_1\r","server":"qt9.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"8443","udp":true,"skip-cert-verify":true,"sni":"qt9.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」冥王剑「中转」★\r\r_2\r","server":"kb.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"12096","udp":true,"skip-cert-verify":true,"sni":"qt22.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」鬼雕刀「直连」✡\r\r_1\r","server":"qt24.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2083","udp":true,"skip-cert-verify":true,"sni":"qt24.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」神之戒「直连」★\r\r_1\r","server":"qt27.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt27.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」木马牛「直连」✡\r\r_1\r","server":"qt28.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"1314","udp":true,"skip-cert-verify":true,"sni":"qt28.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」素王剑「直连」✡\r\r_2\r","server":"qt29.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2022","udp":true,"skip-cert-verify":true,"sni":"qt29.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」满甲雪「解锁」★\r\r_1\r","server":"qt32.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt32.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」过河卒「解锁」✡\r\r_1\r","server":"qt35.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2053","udp":true,"skip-cert-verify":true,"sni":"qt35.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」紫月鞭「直连」★\r\r_2\r","server":"qt36.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2022","udp":true,"skip-cert-verify":true,"sni":"qt36.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」太极图「解锁」★\r\r_1\r","server":"aj.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"52096","udp":true,"skip-cert-verify":true,"sni":"qt42.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」专属三「解锁」✰\r\r_1\r","server":"qt48.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt48.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」专属九「直连」✡\r\r_1\r","server":"qt59.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"443","udp":true,"skip-cert-verify":true,"sni":"qt59.shenseven.xyz"}
+  - {"type":"vmess","ws-opts":{"path":"/","headers":{"host":"shoutingtoutiao1.10010.com"}},"server":"qv39.shenseven.xyz","name":"「🇸🇬」备用四「免流」★_2","port":"80","uuid":"a54f233e-fac9-4f2f-8061-d001a9ecc154","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"「🇸🇬」女娲石「中转」★\r\r_3\r","server":"dk.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"52022","udp":true,"skip-cert-verify":true,"sni":"qt2.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」崆峒印「直连」✡\r\r_3\r","server":"qt6.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"8443","udp":true,"skip-cert-verify":true,"sni":"qt6.shenseven.xyz"}
+  - {"type":"vmess","ws-opts":{"path":"/","headers":{"host":"shoutingtoutiao3.10010.com"}},"server":"kr.mayiyun.vip","name":"80丨联通手厅丨韩国1Gbps丨1_3","port":"80","uuid":"9e1691df-0661-4ac7-bc58-37bf08f8bb7f","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"「🇺🇸」打神石「中转」✰\r\r\r","server":"qt8.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2096","udp":true,"skip-cert-verify":true,"sni":"qt8.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」盘古斧「直连」✰\r\r_2\r","server":"qt9.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"8443","udp":true,"skip-cert-verify":true,"sni":"qt9.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」冥王剑「中转」★\r\r_3\r","server":"kb.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"12096","udp":true,"skip-cert-verify":true,"sni":"qt22.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」鬼雕刀「直连」✡\r\r_2\r","server":"qt24.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2083","udp":true,"skip-cert-verify":true,"sni":"qt24.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」神之戒「直连」★\r\r_2\r","server":"qt27.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt27.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」木马牛「直连」✡\r\r_2\r","server":"qt28.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"1314","udp":true,"skip-cert-verify":true,"sni":"qt28.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」素王剑「直连」✡\r\r_3\r","server":"qt29.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2022","udp":true,"skip-cert-verify":true,"sni":"qt29.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」满甲雪「解锁」★\r\r_2\r","server":"qt32.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt32.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」过河卒「解锁」✡\r\r_2\r","server":"qt35.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2053","udp":true,"skip-cert-verify":true,"sni":"qt35.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇸🇬」紫月鞭「直连」★\r\r_3\r","server":"qt36.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2022","udp":true,"skip-cert-verify":true,"sni":"qt36.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」太极图「解锁」★\r\r_2\r","server":"aj.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"52096","udp":true,"skip-cert-verify":true,"sni":"qt42.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇺🇸」专属一「解锁」✰\r\r\r","server":"qt46.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt46.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」专属三「解锁」✰\r\r_2\r","server":"qt48.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt48.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇺🇸」专属七「直连」✡\r\r\r","server":"qt57.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"443","udp":true,"skip-cert-verify":true,"sni":"qt57.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」专属九「直连」✡\r\r_2\r","server":"qt59.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"443","udp":true,"skip-cert-verify":true,"sni":"qt59.shenseven.xyz"}
+  - {"type":"vmess","ws-opts":{"path":"/","headers":{"host":"shoutingtoutiao1.10010.com"}},"server":"qv39.shenseven.xyz","name":"「🇸🇬」备用四「免流」★_3","port":"80","uuid":"a54f233e-fac9-4f2f-8061-d001a9ecc154","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"「🇯🇵」专属三「解锁」✰\r\r","server":"qt48.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt48.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇺🇸」专属七「直连」✡\r\r","server":"qt57.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"443","udp":true,"skip-cert-verify":true,"sni":"qt57.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」专属九「直连」✡\r\r","server":"qt59.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"443","udp":true,"skip-cert-verify":true,"sni":"qt59.shenseven.xyz"}
+  - {"type":"vmess","ws-opts":{"path":"/","headers":{"host":"shoutingtoutiao1.10010.com"}},"server":"qv39.shenseven.xyz","name":"「🇸🇬」备用四「免流」★_1","port":"80","uuid":"a54f233e-fac9-4f2f-8061-d001a9ecc154","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"「🇯🇵」专属三「解锁」✰\r","server":"qt48.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"2087","udp":true,"skip-cert-verify":true,"sni":"qt48.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇺🇸」专属七「直连」✡\r","server":"qt57.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"443","udp":true,"skip-cert-verify":true,"sni":"qt57.shenseven.xyz"}
+  - {"type":"trojan","name":"「🇯🇵」专属九「直连」✡\r","server":"qt59.shenseven.xyz","password":"a54f233e-fac9-4f2f-8061-d001a9ecc154","port":"443","udp":true,"skip-cert-verify":true,"sni":"qt59.shenseven.xyz"}
+  - {"type":"vmess","ws-opts":{"path":"/","headers":{"host":"shoutingtoutiao1.10010.com"}},"server":"qv39.shenseven.xyz","name":"「🇸🇬」备用四「免流」★_2","port":"80","uuid":"a54f233e-fac9-4f2f-8061-d001a9ecc154","alterId":"0","cipher":"auto","network":"ws"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🔮 负载均衡
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    proxies:
+      - "「🇸🇬」女娲石「中转」★\r\r_1\r"
+      - "「🇸🇬」崆峒印「直连」✡\r\r_1\r"
+      - "「🇸🇬」冥王剑「中转」★\r\r_1\r"
+      - "「🇸🇬」素王剑「直连」✡\r\r_1\r"
+      - "「🇸🇬」紫月鞭「直连」★\r\r_1\r"
+      - 「🇸🇬」备用四「免流」★_1
+      - "「🇸🇬」女娲石「中转」★\r\r_2\r"
+      - "「🇸🇬」崆峒印「直连」✡\r\r_2\r"
+      - "「🇯🇵」盘古斧「直连」✰\r\r_1\r"
+      - "「🇸🇬」冥王剑「中转」★\r\r_2\r"
+      - "「🇯🇵」鬼雕刀「直连」✡\r\r_1\r"
+      - "「🇯🇵」神之戒「直连」★\r\r_1\r"
+      - "「🇯🇵」木马牛「直连」✡\r\r_1\r"
+      - "「🇸🇬」素王剑「直连」✡\r\r_2\r"
+      - "「🇯🇵」满甲雪「解锁」★\r\r_1\r"
+      - "「🇯🇵」过河卒「解锁」✡\r\r_1\r"
+      - "「🇸🇬」紫月鞭「直连」★\r\r_2\r"
+      - "「🇯🇵」太极图「解锁」★\r\r_1\r"
+      - "「🇯🇵」专属三「解锁」✰\r\r_1\r"
+      - "「🇯🇵」专属九「直连」✡\r\r_1\r"
+      - 「🇸🇬」备用四「免流」★_2
+      - "「🇸🇬」女娲石「中转」★\r\r_3\r"
+      - "「🇸🇬」崆峒印「直连」✡\r\r_3\r"
+      - 80丨联通手厅丨韩国1Gbps丨1_3
+      - "「🇺🇸」打神石「中转」✰\r\r\r"
+      - "「🇯🇵」盘古斧「直连」✰\r\r_2\r"
+      - "「🇸🇬」冥王剑「中转」★\r\r_3\r"
+      - "「🇯🇵」鬼雕刀「直连」✡\r\r_2\r"
+      - "「🇯🇵」神之戒「直连」★\r\r_2\r"
+      - "「🇯🇵」木马牛「直连」✡\r\r_2\r"
+      - "「🇸🇬」素王剑「直连」✡\r\r_3\r"
+      - "「🇯🇵」满甲雪「解锁」★\r\r_2\r"
+      - "「🇯🇵」过河卒「解锁」✡\r\r_2\r"
+      - "「🇸🇬」紫月鞭「直连」★\r\r_3\r"
+      - "「🇯🇵」太极图「解锁」★\r\r_2\r"
+      - "「🇺🇸」专属一「解锁」✰\r\r\r"
+      - "「🇯🇵」专属三「解锁」✰\r\r_2\r"
+      - "「🇺🇸」专属七「直连」✡\r\r\r"
+      - "「🇯🇵」专属九「直连」✡\r\r_2\r"
+      - 「🇸🇬」备用四「免流」★_3
+      - "「🇯🇵」专属三「解锁」✰\r\r"
+      - "「🇺🇸」专属七「直连」✡\r\r"
+      - "「🇯🇵」专属九「直连」✡\r\r"
+      - 「🇸🇬」备用四「免流」★_1
+      - "「🇯🇵」专属三「解锁」✰\r"
+      - "「🇺🇸」专属七「直连」✡\r"
+      - "「🇯🇵」专属九「直连」✡\r"
+      - 「🇸🇬」备用四「免流」★_2
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "「🇸🇬」女娲石「中转」★\r\r_1\r"
+      - "「🇸🇬」崆峒印「直连」✡\r\r_1\r"
+      - "「🇸🇬」冥王剑「中转」★\r\r_1\r"
+      - "「🇸🇬」素王剑「直连」✡\r\r_1\r"
+      - "「🇸🇬」紫月鞭「直连」★\r\r_1\r"
+      - 「🇸🇬」备用四「免流」★_1
+      - "「🇸🇬」女娲石「中转」★\r\r_2\r"
+      - "「🇸🇬」崆峒印「直连」✡\r\r_2\r"
+      - "「🇯🇵」盘古斧「直连」✰\r\r_1\r"
+      - "「🇸🇬」冥王剑「中转」★\r\r_2\r"
+      - "「🇯🇵」鬼雕刀「直连」✡\r\r_1\r"
+      - "「🇯🇵」神之戒「直连」★\r\r_1\r"
+      - "「🇯🇵」木马牛「直连」✡\r\r_1\r"
+      - "「🇸🇬」素王剑「直连」✡\r\r_2\r"
+      - "「🇯🇵」满甲雪「解锁」★\r\r_1\r"
+      - "「🇯🇵」过河卒「解锁」✡\r\r_1\r"
+      - "「🇸🇬」紫月鞭「直连」★\r\r_2\r"
+      - "「🇯🇵」太极图「解锁」★\r\r_1\r"
+      - "「🇯🇵」专属三「解锁」✰\r\r_1\r"
+      - "「🇯🇵」专属九「直连」✡\r\r_1\r"
+      - 「🇸🇬」备用四「免流」★_2
+      - "「🇸🇬」女娲石「中转」★\r\r_3\r"
+      - "「🇸🇬」崆峒印「直连」✡\r\r_3\r"
+      - 80丨联通手厅丨韩国1Gbps丨1_3
+      - "「🇺🇸」打神石「中转」✰\r\r\r"
+      - "「🇯🇵」盘古斧「直连」✰\r\r_2\r"
+      - "「🇸🇬」冥王剑「中转」★\r\r_3\r"
+      - "「🇯🇵」鬼雕刀「直连」✡\r\r_2\r"
+      - "「🇯🇵」神之戒「直连」★\r\r_2\r"
+      - "「🇯🇵」木马牛「直连」✡\r\r_2\r"
+      - "「🇸🇬」素王剑「直连」✡\r\r_3\r"
+      - "「🇯🇵」满甲雪「解锁」★\r\r_2\r"
+      - "「🇯🇵」过河卒「解锁」✡\r\r_2\r"
+      - "「🇸🇬」紫月鞭「直连」★\r\r_3\r"
+      - "「🇯🇵」太极图「解锁」★\r\r_2\r"
+      - "「🇺🇸」专属一「解锁」✰\r\r\r"
+      - "「🇯🇵」专属三「解锁」✰\r\r_2\r"
+      - "「🇺🇸」专属七「直连」✡\r\r\r"
+      - "「🇯🇵」专属九「直连」✡\r\r_2\r"
+      - 「🇸🇬」备用四「免流」★_3
+      - "「🇯🇵」专属三「解锁」✰\r\r"
+      - "「🇺🇸」专属七「直连」✡\r\r"
+      - "「🇯🇵」专属九「直连」✡\r\r"
+      - 「🇸🇬」备用四「免流」★_1
+      - "「🇯🇵」专属三「解锁」✰\r"
+      - "「🇺🇸」专属七「直连」✡\r"
+      - "「🇯🇵」专属九「直连」✡\r"
+      - 「🇸🇬」备用四「免流」★_2
+  - name: 🔯 故障转移
+  - name: 🔮 负载均衡
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🎥 奈飞视频
+    type: select
+    proxies:
+      - 🎥 奈飞节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📺 巴哈姆特
+    type: select
+    proxies:
+      - 🇨🇳 台湾节点
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇨🇳 台湾节点
+      - 🇭🇰 香港节点
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🚀 手动切换
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软云盘
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🎶 网易音乐
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🇺🇲 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150
+    proxies: []
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🎥 奈飞节点
+    type: select
+    proxies: []
+rules:
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
