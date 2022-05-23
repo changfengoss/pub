@@ -1,0 +1,1036 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"type":"ssr","name":"🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|12","server":"cmrelay01.yiyorelay.xyz","port":6700,"protocol":"auth_aes128_sha1","cipher":"chacha20-ietf","obfs":"plain","password":"jFa4F1","obfs-param":"V1d4a2MyRnRUblJQV0hCcFRXeHZkMVJITVU5a2JVcFM="}
+  - {"type":"ss","name":"🇹🇼_CN_中国->🇹🇼_TW_台湾_3_4@39\r","server":"bb01.nfeng6.pp.ua","port":16040,"cipher":"aes-128-gcm","password":"bzUdYJ4JzjGfIwhG"}
+  - {"type":"vmess","name":"🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_4@9","ws-opts":{"path":"/zhs","headers":{"host":"umhn5r.zhs.company"}},"server":"umhn5r.zhs.company","port":"60009","uuid":"67caeeac-e80d-3188-8822-8339eebca085","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇹🇼_CN_中国->🇹🇼_TW_台湾_1_4@22\r","server":"cn1.relay.iepl.pw","port":50200,"cipher":"aes-128-gcm","password":"b6040656-96c5-4748-a73c-5a8f15ed7531"}
+  - {"type":"ss","name":"🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_4@18\r","server":"163.177.158.215","port":16030,"cipher":"aes-128-gcm","password":"bzUdYJ4JzjGfIwhG"}
+  - {"type":"vmess","name":"🇯🇵_CN_中国->🇯🇵_JP_日本_6@0","server":"aga130.bieqiangwo.xyz","port":"62333","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇯🇵_CN_中国->🇯🇵_JP_日本_5@3","ws-opts":{"path":"/mugua","headers":{"host":"in01.dns2333.xyz"}},"server":"in01.dns2333.xyz","port":"63086","uuid":"901226b6-4659-301e-bb16-dd428542bea4","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_2_2@2","ws-opts":{"path":"/54f634fs","headers":{"host":"v2-2.godlight.xyz"}},"server":"v2-2.godlight.xyz","port":"26944","uuid":"43308d27-94ec-408e-a8f6-d682cfb99ca9","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵_JP_日本_2_2@18","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"jp2.trojan.tel"}},"server":"jp2.trojan.tel","port":"48443","uuid":"f736834f-1fc8-4738-9884-9afe0eb0d818","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇭🇰_HK_香港_6@10","server":"103.117.101.215","port":"1013","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇯🇵_JP_日本_1_2@1","ws-opts":{"path":"/dajdklw231f","headers":{"host":"v2.godlight.xyz"}},"server":"v2.godlight.xyz","port":"26944","uuid":"1a059eff-ad8a-42ad-921c-465c5b31f183","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_1_2@0","ws-opts":{"path":"/f45361465j175","headers":{"host":"v2-3.godlight.xyz"}},"server":"v2-3.godlight.xyz","port":"26944","uuid":"6a52f259-4367-468c-a828-7b8283c2f059","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵_JP_日本_4@3","ws-opts":{"path":"/j75g1461x","headers":{"host":"v2-1.godlight.xyz"}},"server":"v2-1.godlight.xyz","port":"26944","uuid":"719d4cec-82a8-4a65-ad01-32cf08f2c988","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇯🇵_CN_中国->🇯🇵_JP_日本_3@3\r","server":"120.233.10.230","port":50300,"cipher":"aes-128-gcm","password":"b6040656-96c5-4748-a73c-5a8f15ed7531"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-217.197.161.244:801-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r","server":"217.197.161.244","port":801,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇹🇼_CN_中国->🇹🇼_TW_台湾_2_4@29\r","server":"120.233.10.230","port":50200,"cipher":"aes-128-gcm","password":"b6040656-96c5-4748-a73c-5a8f15ed7531"}
+  - {"type":"ss","name":"🇸🇬_SG_新加坡_1@20\r","server":"139.99.123.156","port":7002,"cipher":"aes-256-gcm","password":"RexnBgU7EV5ADxG"}
+  - {"type":"ss","name":"🇯🇵_CN_中国->🇯🇵_JP_日本_7@15\r","server":"cn1.relay.iepl.pw","port":50300,"cipher":"aes-128-gcm","password":"40825843-2e84-4433-a4c0-829948eb620b"}
+  - {"type":"vmess","name":"🇹🇼_CN_中国->🇹🇼_TW_台湾_3_6@3","server":"116.129.253.39","port":"27019","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇭🇰_CN_中国->🇭🇰_HK_香港_1_6@18","server":"aga130.bieqiangwo.xyz","port":"10016","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"trojan","name":"🇯🇵_JP_日本->🇺🇸_US_美国_1_6@15\r","server":"s2.upyun.online","port":12340,"password":"316b40c0-0dab-4ea1-9666-ac1658b033b2","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_7@14","ws-opts":{"path":"/YouTube-bai-piao-wang-zhe_vws","headers":{"host":"bai-piao-wang-zhe-iplc2.98848.xyz"}},"server":"bai-piao-wang-zhe-iplc2.98848.xyz","port":"443","uuid":"b23ecb07-1cd3-4490-b4eb-4d32cd0b9249","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_1_8@7","server":"45.118.133.251","port":"1080","uuid":"3d6fa91a-6186-4d7f-e0b3-a6d2a23f575e","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇹🇼_CN_中国->🇹🇼_TW_台湾_1_6@1","server":"aga135.bieqiangwo.xyz","port":"62110","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇹🇼_TW_台湾_2_6@7","server":"hinet1261.gfwisbest.xyz","port":"224","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_6@5","server":"18.140.65.224","port":"3224","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_2_6@13\r","server":"ty2-6.nigirocloud.com","port":443,"password":"ruWkGdbUKT4RN7kZ8t","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_1_6@11\r","server":"ty2-1.nigirocloud.com","port":443,"password":"ruWkGdbUKT4RN7kZ8t","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇹🇼_TW_台湾_1_6@6","server":"hinet1261.gfwisbest.xyz","port":"21234","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_3_6@14\r","server":"ty2-8.nigirocloud.com","port":443,"password":"ruWkGdbUKT4RN7kZ8t","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇭🇰_CN_中国->🇭🇰_HK_香港_2_6@19","server":"aga136.bieqiangwo.xyz","port":"40017","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"ssr","name":"🇭🇰香港_R_160","server":"iepl-gz.safetelescope.cc","port":64112,"protocol":"auth_aes128_md5","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"hGkQ6915tD","obfs-param":"WVdwaGVDNXRhV055YjNOdlpuUXVZMjl0"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-217.197.161.244:802-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r","server":"217.197.161.244","port":802,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"vmess","name":"🇸🇬新加坡9-电信专享-强加密","ws-opts":{"path":"/ray","headers":{"host":"428sg2.fans8.xyz"}},"server":"428sg2.fans8.xyz","port":"443","uuid":"7f4ff2e1-c08f-35bd-afe7-4a6a386907aa","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ssr","name":"🇭🇰香港HongkongHKBGP(VIP)●","server":"gz1.52168.org","port":11106,"protocol":"auth_aes128_sha1","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"epChJS35fV","obfs-param":"WldVNE1qRXhORGt1WW1GcFpIVXVZMjl0"}
+  - {"type":"vmess","name":"🇹🇼台湾2-三网优化-强加密","ws-opts":{"path":"/ray","headers":{"host":"330tw.fans8.xyz"}},"server":"330tw.fans8.xyz","port":"443","uuid":"7f4ff2e1-c08f-35bd-afe7-4a6a386907aa","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇸🇬新加坡8-电信专享-强加密","ws-opts":{"path":"/ray","headers":{"host":"429hk429.fans8.xyz"}},"server":"429hk429.fans8.xyz","port":"443","uuid":"7f4ff2e1-c08f-35bd-afe7-4a6a386907aa","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-172.107.233.234:2376-可用-直连-仅支持西班牙地区NF自制剧\r","server":"172.107.233.234","port":2376,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-81.90.189.18:805-可用-直连-仅支持新加坡地区NF自制剧\r","server":"81.90.189.18","port":805,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇹🇼:中国-ss-59.125.11.158:8158-可用-中转:59.125.11.159-仅支持台湾地区NF自制剧\r","server":"59.125.11.158","port":8158,"cipher":"rc4-md5","password":"passinfo123"}
+  - {"type":"ssr","name":"🇹🇼台湾_R_314","server":"ieplszhk-sz.cctelescope.xyz","port":10802,"protocol":"auth_aes128_md5","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"hGkQ6915tD","obfs-param":"WVdwaGVDNXRhV055YjNOdlpuUXVZMjl0"}
+  - {"type":"ssr","name":"🇭🇰香港_R_133","server":"gzyd-01.cctelescope.xyz","port":20001,"protocol":"auth_aes128_md5","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"hGkQ6915tD","obfs-param":"WVdwaGVDNXRhV055YjNOdlpuUXVZMjl0"}
+  - {"type":"ss","name":"🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_41\r","server":"158.247.205.87","port":443,"cipher":"aes-256-gcm","password":"pKEW8JPByTVTLtM"}
+  - {"type":"ssr","name":"🇭🇰香港_R_450","server":"iepl-hn.cctelescope.xyz","port":64112,"protocol":"auth_aes128_md5","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"hGkQ6915tD","obfs-param":"WVdwaGVDNXRhV055YjNOdlpuUXVZMjl0"}
+  - {"type":"ssr","name":"🇭🇰香港Hongkong(AZ)●","server":"gz1.52168.org","port":11114,"protocol":"auth_aes128_sha1","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"epChJS35fV","obfs-param":"WldVNE1qRXhORGt1WW1GcFpIVXVZMjl0"}
+  - {"type":"ssr","name":"🇹🇼台湾Taiwan★","server":"gz2.52168.org","port":12105,"protocol":"auth_aes128_sha1","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"epChJS35fV","obfs-param":"WldVNE1qRXhORGt1WW1GcFpIVXVZMjl0"}
+  - {"type":"ss","name":"🇭🇰:中国-ss-118.107.244.112:7307-可用-中转:118.107.244.111-仅支持香港地区NF自制剧\r","server":"118.107.244.112","port":7307,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"vmess","name":"🇹🇼台湾1-三网优化-强加密","ws-opts":{"path":"/ray","headers":{"host":"331tw.fans8.xyz"}},"server":"331tw.fans8.xyz","port":"80","uuid":"7f4ff2e1-c08f-35bd-afe7-4a6a386907aa","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-172.107.233.234:7306-可用-直连-仅支持西班牙地区NF自制剧\r","server":"172.107.233.234","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"ss","name":"🇭🇰:中国-ss-118.107.244.112:3306-可用-中转:118.107.244.111-仅支持香港地区NF自制剧\r","server":"118.107.244.112","port":3306,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-172.107.233.234:8090-可用-直连-仅支持西班牙地区NF自制剧\r","server":"172.107.233.234","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  - {"type":"ss","name":"🇯🇵:日本-ss-84.17.34.8:8389-可用-直连-仅支持日本地区NF自制剧\r","server":"84.17.34.8","port":8389,"cipher":"chacha20-ietf-poly1305","password":"FuynHKjkzhBnmcLpaLKm"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-217.197.161.244:808-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r","server":"217.197.161.244","port":808,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-81.90.189.18:801-可用-直连-仅支持新加坡地区NF自制剧\r","server":"81.90.189.18","port":801,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-217.197.161.244:806-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r","server":"217.197.161.244","port":806,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-81.90.189.18:812-可用-直连-仅支持新加坡地区NF自制剧\r","server":"81.90.189.18","port":812,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-172.107.233.234:2375-可用-直连-仅支持西班牙地区NF自制剧\r","server":"172.107.233.234","port":2375,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-217.197.161.244:800-可用-中转:81.90.188.38-不支持Netflix\r","server":"217.197.161.244","port":800,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-81.90.189.18:802-可用-直连-仅支持新加坡地区NF自制剧\r","server":"81.90.189.18","port":802,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-81.90.189.18:800-可用-直连-仅支持新加坡地区NF自制剧\r","server":"81.90.189.18","port":800,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"🇸🇬:新加坡-ss-217.197.161.244:805-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r","server":"217.197.161.244","port":805,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"vmess","name":"🇸🇬SG-高速节点购买：v1.mk/vip_1","ws-opts":{"path":"/","headers":{"host":"sgp02.sharecentre.xyz"}},"server":"sgp02.sharecentre.xyz","port":"58309","uuid":"4e245edd-629d-4cb3-afca-321dea87aad5","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰香港7-三网优化-强加密","ws-opts":{"path":"/","headers":{"host":"426hk.fans8.xyz"}},"server":"426hk.fans8.xyz","port":"80","uuid":"7f4ff2e1-c08f-35bd-afe7-4a6a386907aa","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵日本003","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"d85bb25696.laowanxiang.com"}},"server":"jp2.trojan.tel","port":"18443","uuid":"f736834f-1fc8-4738-9884-9afe0eb0d818","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇯🇵日本002","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"d85bb25696.laowanxiang.com"}},"server":"jp1.trojan.tel","port":"18443","uuid":"f736834f-1fc8-4738-9884-9afe0eb0d818","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇯🇵日本009","ws-opts":{"path":"/index","headers":{"host":"www.baidu.com"}},"server":"jpaz2.xmrth-node.xyz","port":"13240","uuid":"ff51ca4a-6050-3e26-a037-88b0dd62d138","alterId":2,"cipher":"auto","network":"ws"}
+  - {"type":"ss","name":"🇯🇵日本001\r","server":"52.196.186.234","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
+  - {"type":"trojan","name":"🇯🇵日本006\r","server":"jp1.trojan.tel","port":443,"password":"f736834f-1fc8-4738-9884-9afe0eb0d818","udp":true,"skip-cert-verify":true,"sni":"douyincdn.com"}
+  - {"type":"vmess","name":"🇯🇵日本004","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"jp1.trojan.tel"}},"server":"jp1.trojan.tel","port":"48443","uuid":"f736834f-1fc8-4738-9884-9afe0eb0d818","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵日本008","server":"146.56.99.245","port":"25135","uuid":"5893f7e5-9695-45af-f65e-bd2958ba93fa","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇸🇬新加坡010","ws-opts":{"path":"/"},"server":"159.27.115.21","port":"63028","uuid":"ba22a02b-4178-39a7-b748-4d0c03b9a674","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇸🇬新加坡009","ws-opts":{"path":"/mg"},"server":"159.27.115.21","port":"63041","uuid":"ba22a02b-4178-39a7-b748-4d0c03b9a674","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇸🇬新加坡011","ws-opts":{"path":"/"},"server":"159.27.115.21","port":"63004","uuid":"ba22a02b-4178-39a7-b748-4d0c03b9a674","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇸🇬新加坡005","ws-opts":{"path":"/mugua"},"server":"159.27.115.21","port":"63087","uuid":"257cc716-01ac-3d2b-afe6-b6d5e94fb1c4","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇸🇬新加坡006","ws-opts":{"path":"/"},"server":"159.27.115.21","port":"63069","uuid":"257cc716-01ac-3d2b-afe6-b6d5e94fb1c4","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇸🇬新加坡008","ws-opts":{"path":"/mugua"},"server":"159.27.115.21","port":"63088","uuid":"ba22a02b-4178-39a7-b748-4d0c03b9a674","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇸🇬新加坡007","ws-opts":{"path":"/"},"server":"159.27.115.21","port":"63078","uuid":"ba22a02b-4178-39a7-b748-4d0c03b9a674","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_8@11\r","server":"116.129.254.47","port":3389,"password":"e37c6d7efa845d60","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬新加坡004","ws-opts":{"path":"/54f634fs","headers":{"host":"v2-2.godlight.xyz"}},"server":"v2-2.godlight.xyz","port":"27000","uuid":"43308d27-94ec-408e-a8f6-d682cfb99ca9","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_25\r","server":"cn.speedabc.xyz","port":32002,"password":"cfbabf31-2cf6-40ca-9688-abbb682370aa","udp":true,"skip-cert-verify":true,"sni":"jp-bgp.speedaccelerate.com"}
+  - {"type":"ss","name":"🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_37\r","server":"x.gotout.work","port":30041,"cipher":"aes-256-gcm","password":"e0uyakendg7"}
+  - {"type":"vmess","name":"🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Beijing/小东的程序未能精准识别(可能是中转节点)_20","server":"V309.bgpnet.top","port":"26309","uuid":"ef361c83-8b89-3950-9c9b-6ccc177e6285","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_23","server":"V203.bgpnet.top","port":"26203","uuid":"ef361c83-8b89-3950-9c9b-6ccc177e6285","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇯🇵mattkaydiary.com|日本(JP)Japan/Tokyo_29","server":"140.238.48.194","port":"8888","uuid":"24f1dfad-1267-4297-8e88-0e9b8ef47e47","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇺🇸Relay_🇺🇸US-🇭🇰HK_3060","server":"jupiter.hk.v4.e1dns.com","port":"443","uuid":"4a9e6b6e-ec2c-4b89-9df6-5118fa07f1d7","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇯🇵日本010","ws-opts":{"path":"/ws","headers":{"host":"202.61.141.130"}},"server":"202.61.141.130","port":"443","uuid":"aba50dd4-5484-3b05-b14a-4661caf862d5","alterId":4,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_3","ws-opts":{"path":"/admin","headers":{"host":"V104.bgpnet.top"}},"server":"V104.bgpnet.top","port":"26104","uuid":"ef361c83-8b89-3950-9c9b-6ccc177e6285","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇸🇬mattkaydiary.com|新加坡(SG)Singapore/Singapore_7","ws-opts":{"path":"/54f634fs","headers":{"host":"v2-2.godlight.xyz"}},"server":"v2-2.godlight.xyz","port":"30526","uuid":"43308d27-94ec-408e-a8f6-d682cfb99ca9","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_4\r","server":"x.gotout.work","port":30031,"cipher":"aes-256-gcm","password":"e0uyakendg7"}
+  - {"type":"ss","name":"🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_5\r","server":"x.gotout.work","port":30012,"cipher":"aes-256-gcm","password":"e0uyakendg7"}
+  - {"type":"trojan","name":"🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_9\r","server":"jgwdb2.gaox.ml","port":443,"password":"c19d1432-8b3e-4818-8837-3d160cf65908","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇭🇰mattkaydiary.com|中国香港特别行政区(HK)HongkongSARChina/HongKong_19","ws-opts":{"path":"/ray","headers":{"host":"426hk.fans8.xyz"}},"server":"426hk.fans8.xyz","port":"443","uuid":"93bdaed5-13c5-3927-93d7-a6877c5ac8d2","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_1_8@10\r","server":"ty2-5.nigirocloud.com","port":443,"password":"ruWkGdbUKT4RN7kZ8t","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇯🇵JP-150.230.217.213-77\r","server":"jgwdj4.gaox.ml","port":443,"password":"c09eb137-bf68-4658-84e0-102d94b74168","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇯🇵Relay_🇯🇵JP-🇯🇵JP_29\r","server":"jgwdb4.gaox.ml","port":443,"password":"d06a3f01-1ff0-4792-9b8e-a5a604bc74a2","udp":true,"skip-cert-verify":true}
+  - {"type":"ss","name":"🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_9@4\r","server":"183.240.124.200","port":44817,"cipher":"aes-128-gcm","password":"fcae85b5-baf0-4c5a-ba80-5f513e70512a"}
+  - {"type":"ss","name":"🇭🇰_HK_香港_2_9@19\r","server":"148.66.56.99","port":810,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ssr","name":"🇭🇰_CN_中国->🇭🇰_HK_香港_2_8@31","server":"nm6.boom.party","port":16000,"protocol":"auth_aes128_sha1","cipher":"aes-256-cfb","obfs":"http_simple","password":"Uk92CS","obfs-param":"VjJ0ak5VMHlTblJsU0ZwYVZqRkdNVnBFU25Oa1ZuQklUMVJPYWsweFdqTlhhMlJIVFVad1ZFNVhjR2xOYWtFNQ=="}
+  - {"type":"ss","name":"🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_9@15\r","server":"sssg03.wangyiyunniubi.com","port":12011,"cipher":"aes-128-gcm","password":"015c28b8-13ba-4b69-a068-0d81139fe794"}
+  - {"type":"ss","name":"🇹🇼_CN_中国->🇹🇼_TW_台湾_2_9@6\r","server":"183.240.124.200","port":25600,"cipher":"aes-128-gcm","password":"fcae85b5-baf0-4c5a-ba80-5f513e70512a"}
+  - {"type":"ss","name":"🇭🇰_CN_中国->🇭🇰_HK_香港_9@16\r","server":"183.240.124.200","port":44812,"cipher":"aes-128-gcm","password":"fcae85b5-baf0-4c5a-ba80-5f513e70512a"}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_6_8@21\r","server":"ty2-4.nigirocloud.com","port":443,"password":"ruWkGdbUKT4RN7kZ8t","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_4_8@19\r","server":"ty2-3.nigirocloud.com","port":443,"password":"ruWkGdbUKT4RN7kZ8t","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇸🇬_SG_新加坡_2_8@26\r","server":"5.44.249.43","port":3389,"password":"6f0a9d0fa39d65fa","udp":true,"skip-cert-verify":true}
+  - {"type":"ss","name":"🇭🇰_HK_香港_3_9@20\r","server":"148.66.56.99","port":804,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"trojan","name":"🇸🇬_CN_中国->🇸🇬_SG_新加坡_3_8@13\r","server":"116.129.253.130","port":3389,"password":"f6f2072a2e4cfc91","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬新加坡001","ws-opts":{"path":"/","headers":{"host":"down.dingtalk.com"}},"server":"18.138.255.0","port":"80","uuid":"f778539f-5954-4b0e-987b-94a6081c1af7","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_3_8@18\r","server":"ty2-7.nigirocloud.com","port":443,"password":"ruWkGdbUKT4RN7kZ8t","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_8@12\r","server":"116.129.254.29","port":3389,"password":"a170b44c2dfac9e6","udp":true,"skip-cert-verify":true}
+  - {"type":"ss","name":"🇹🇼_CN_中国->🇹🇼_TW_台湾_1_9@5\r","server":"183.240.124.200","port":44811,"cipher":"aes-128-gcm","password":"fcae85b5-baf0-4c5a-ba80-5f513e70512a"}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_12@3","ws-opts":{"path":"/54f634fs","headers":{"host":"v2-2.godlight.xyz"}},"server":"v2-2.godlight.xyz","port":"30540","uuid":"43308d27-94ec-408e-a8f6-d682cfb99ca9","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵_JP_日本_10@1","ws-opts":{"path":"/dajdklw231f","headers":{"host":"v2.godlight.xyz"}},"server":"v2.godlight.xyz","port":"26941","uuid":"1a059eff-ad8a-42ad-921c-465c5b31f183","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇭🇰_HK_香港_2_11@10","ws-opts":{"path":"/oioav","headers":{"host":"an011.oioav.com"}},"server":"an011.oioav.com","port":"11011","uuid":"55af954a-7634-4f28-8acf-8a64ca9fc4cd","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇨🇳Relay_🇨🇳CN-🇭🇰HK_19","ws-opts":{"path":"/zhs","headers":{"host":"hktkj9.zhs.company"}},"server":"cmbe3-vdn.zhs.company","port":"35055","uuid":"236ca3b1-897e-32b0-8c94-c5284d3bfd9b","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"trojan","name":"🇯🇵JP-150.230.96.103-61\r","server":"jgwdj3.gaox.ml","port":443,"password":"da777aae-defb-41d0-a183-2c27da2b4677","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇯🇵_JP_日本_12@2","ws-opts":{"path":"/dajdklw231f","headers":{"host":"v2.godlight.xyz"}},"server":"v2.godlight.xyz","port":"26940","uuid":"1a059eff-ad8a-42ad-921c-465c5b31f183","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_1_10@2","ws-opts":{"path":"/54f634fs","headers":{"host":"v2-2.godlight.xyz"}},"server":"v2-2.godlight.xyz","port":"30541","uuid":"43308d27-94ec-408e-a8f6-d682cfb99ca9","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇸🇬_US_美国->🇸🇬_SG_新加坡_13@41","ws-opts":{"path":"/vmess-ws","headers":{"host":"sg-cf.clown1i.cf"}},"server":"sg-cf.clown1i.cf","port":"443","uuid":"ba2bd5e1-3cd6-4ac5-8234-803b2ca4d4f7","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ssr","name":"🇹🇼台湾_R_318","server":"iepl-gz.safetelescope.cc","port":10802,"protocol":"auth_aes128_md5","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"hGkQ6915tD","obfs-param":"WVdwaGVDNXRhV055YjNOdlpuUXVZMjl0"}
+  - {"type":"vmess","name":"🇭🇰_US_美国->🇭🇰_HK_香港_12@0","ws-opts":{"path":"/ny","headers":{"host":"5.vip341.xyz"}},"server":"5.vip341.xyz","port":"443","uuid":"79c82b92-bc4c-382c-8042-b50d27b9c564","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇭🇰_HK_香港_1_11@1\r","server":"azhk1.mayiyun.vip","port":10014,"cipher":"aes-256-gcm","password":"9e1691df-0661-4ac7-bc58-37bf08f8bb7f"}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_2_10@4","ws-opts":{"path":"/f45361465j175","headers":{"host":"v2-3.godlight.xyz"}},"server":"v2-3.godlight.xyz","port":"39241","uuid":"6a52f259-4367-468c-a828-7b8283c2f059","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇭🇰_CN_中国->🇭🇰_HK_香港_11@0\r","server":"gz.bgp.rx.naiun.pw","port":45251,"cipher":"chacha20-ietf-poly1305","password":"f2fa64af-619b-4b09-9e6c-3f9ff6de077c"}
+  - {"type":"ss","name":"🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_40\r","server":"158.247.205.87","port":5601,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"TW_24096\r","server":"14.29.124.168","port":24096,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24006_ssr\r","server":"14.29.124.168","port":24006,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"trojan","name":"🇯🇵github.com/v2rayfree-日本44\r","server":"hy.hsichu.xyz","port":443,"password":"HsCOkje2HH2PuRFb","udp":true,"skip-cert-verify":true}
+  - {"type":"ss","name":"TW_24039\r","server":"14.29.124.168","port":24039,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"vmess","name":"🇹🇼_TW_台湾","ws-opts":{"path":"/zhs","headers":{"host":"twzh6v.zhs.company"}},"server":"twzh6v.zhs.company","port":"2053","uuid":"f4c677da-ef1c-30e2-a4d0-5b07f9375b2b","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵长沙联通-JP-nf","server":"211.91.243.240","port":"31206","uuid":"b8aaa6e1-f0b3-b9ec-3dfc-bb226c167b33","alterId":0,"cipher":"auto","network":"tcp","tls":true}
+  - {"type":"ss","name":"TW_24098\r","server":"14.29.124.168","port":24098,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"vmess","name":"🇯🇵日本-tg频道:@ripaojiedian","server":"20.222.89.209","port":"364","uuid":"fe54fd31-1291-4c79-bb5b-06febd30ca15","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇯🇵日本高速-L","ws-opts":{"path":"/","headers":{"host":"crus2.gzfxd.xyz"}},"server":"crus2.gzfxd.xyz","port":"16616","uuid":"da094b71-44ed-4525-92c2-16edb494475a","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇨🇳Relay_🇨🇳CN-🇹🇼TW_09","ws-opts":{"path":"/hls/cctv5phd.m3u8","headers":{"host":"aweikeji-YouTube"}},"server":"zzcm09.bdate.xyz","port":"1510","uuid":"b9ecdb44-236b-30a7-94f2-f464993d84cf","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰香港HKT","ws-opts":{"path":"/","headers":{"host":"hkt1.ddns-pop.cyou"}},"server":"hkt1.ddns-pop.cyou","port":"10020","uuid":"da094b71-44ed-4525-92c2-16edb494475a","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇯🇵日本(yudou66.com玉豆分享)_1","server":"gy.cwcsrsyby.xyz","port":"47522","uuid":"2a30f24e-c164-3f34-a99d-e9107655cf49","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇺🇸Relay_🇺🇸US-🇭🇰HK_39","ws-opts":{"path":"/sometimesnaive","headers":{"host":"aws.gkddd.buzz"}},"server":"aws.gkddd.buzz","port":"32566","uuid":"a6f34df0-6e9e-4522-80ff-a41517803f17","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵日本1-三网优化-强加密","ws-opts":{"path":"/","headers":{"host":"51jp1.fans8.xyz"}},"server":"51jp1.fans8.xyz","port":"80","uuid":"7f4ff2e1-c08f-35bd-afe7-4a6a386907aa","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇭🇰_CN_中国->🇭🇰_HK_香港","server":"gy.cwcsrsyby.xyz","port":"47515","uuid":"2a30f24e-c164-3f34-a99d-e9107655cf49","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇸🇬github.com/mianfeifq|github.com/mianfeifq|SG-168.138.177.112-050","server":"168.138.177.112","port":"41239","uuid":"f962092f-a5b7-4011-eaaa-ae52200a3740","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"trojan","name":"🇯🇵+🇯🇵_JP_日本->🇺🇸_US_美国_3\r_1\r\r\r\r","server":"s3.upyun.online","port":12340,"password":"c0276440-f163-4f40-a08c-78b158ce6c4f","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇭🇰香港(TG频道:@kxswa)_1","server":"awshk.yeem.cc","port":"21210","uuid":"44b9d6a2-58e5-46ea-b717-8c40c0c01752","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"ssr","name":"🇭🇰香港_R_334","server":"iepl-hn.cctelescope.xyz","port":44702,"protocol":"auth_aes128_md5","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"hGkQ6915tD","obfs-param":"WVdwaGVDNXRhV055YjNOdlpuUXVZMjl0"}
+  - {"type":"vmess","name":"🇸🇬新加坡2","ws-opts":{"path":"/","headers":{"host":"crus9.gzfxd.xyz"}},"server":"crus9.gzfxd.xyz","port":"16616","uuid":"da094b71-44ed-4525-92c2-16edb494475a","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇹🇼台湾(youtube阿伟科技)","ws-opts":{"path":"/","headers":{"host":"aweikeji-YouTube"}},"server":"cdn-cn.nekocloud.cn","port":"19046","uuid":"115c9ec8-681b-3e5c-9144-da0043d9cc69","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰香港(欢迎订阅Youtube破解资源君)_2","ws-opts":{"path":"/"},"server":"43.128.66.36","port":"8080","uuid":"5bb4d785-4933-44cb-a162-d9a74625d2ee","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰github.com/v2rayfree-香港光联网络8","server":"43.229.115.134","port":"47950","uuid":"7c6cd216-0f93-44e8-dabc-fed1308a9bcc","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"TW_24032\r","server":"14.29.124.168","port":24032,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"vmess","name":"github.com/mianfeifq|_TW_51","ws-opts":{"path":"/"},"server":"61.222.202.140","port":"33792","uuid":"e55cd182-01b0-4fb7-a510-363701a491c5","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"ss","name":"🇯🇵日本(TG频道:@kxswa)\r","server":"20.89.128.199","port":8313,"cipher":"chacha20-ietf-poly1305","password":"ljqdalu13.."}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_1","ws-opts":{"path":"/ws","headers":{"host":"eeh7iewe.com"}},"server":"103.253.26.134","port":443,"uuid":"aba50dd4-5484-3b05-b14a-4661caf862d5","alterId":4,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇹🇼台湾(欢迎订阅Youtube破解资源君)","server":"x.mceee.xyz","port":"26021","uuid":"bca2b267-61ac-3152-9525-ea1757f8d9f2","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇹🇼github.com/mianfeifq|TW-61.222.202.140-039","server":"61.222.202.140","port":"15789","uuid":"4535e708-5988-4377-a083-755ed60d8068","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇭🇰香港(欢迎订阅Youtube破解资源君)_1","server":"x.mceee.xyz","port":"26011","uuid":"bca2b267-61ac-3152-9525-ea1757f8d9f2","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇸🇬新加坡(youtube阿伟科技)2","ws-opts":{"path":"/","headers":{"host":"aweikeji-YouTube"}},"server":"cdn-cn.nekocloud.cn","port":"19057","uuid":"115c9ec8-681b-3e5c-9144-da0043d9cc69","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇨🇳Relay_🇨🇳CN-🇸🇬SG_12","ws-opts":{"path":"/hls/cctv5phd.m3u8","headers":{"host":"%7B%22HOST%22:%22nas5.travelerv2.xyz%22,%22Host%22:%22nas5.travelerv2.xyz%22%7D"}},"server":"nas5.travelerv2.xyz","port":"21871","uuid":"b69f3735-a1a1-3dbf-889b-4594d140752f","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵日本(youtube阿伟科技)4","ws-opts":{"path":"/","headers":{"host":"aweikeji-YouTube"}},"server":"cdn-cn.nekocloud.cn","port":"19050","uuid":"115c9ec8-681b-3e5c-9144-da0043d9cc69","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"SG_36\r","server":"sgp.sharecentre.xyz","port":443,"password":"sharecentre","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇭🇰香港(TG频道:@poduvjd)","ws-opts":{"path":"/","headers":{"host":"hkt2.xcv2r.com"}},"server":"hkt2.xcv2r.com","port":"33232","uuid":"b195963c-2631-442d-ab3a-6e78df25d904","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰香港-V3.5G80ws","ws-opts":{"path":"/ws","headers":{"host":"hk-v.sserver.top"}},"server":"hk-v.sserver.top","port":"80","uuid":"8cb5bcba-8b7f-3141-a400-351a83c80f09","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"🇯🇵github.com/freefq-日本东京Oracle云计算数据中心2\r","server":"jp2.trojan.tel","port":443,"password":"f736834f-1fc8-4738-9884-9afe0eb0d818","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬github.com/mianfeifq|github.com/mianfeifq|🇸🇬SG-81.90.188.59-032","server":"81.90.188.59","port":"41657","uuid":"930a425e-2fc8-4930-8735-141f6b237755","alterId":64,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇸🇬新加坡高速-L","ws-opts":{"path":"/","headers":{"host":"crus5.gzfxd.xyz"}},"server":"crus5.gzfxd.xyz","port":"16616","uuid":"da094b71-44ed-4525-92c2-16edb494475a","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰github.com/mianfeifq|钉钉|80|香港DOG|02_2","ws-opts":{"path":"/"},"server":"45.82.78.151","port":"80","uuid":"61dab065-7fc7-4d57-a952-58b41250d766","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰香港(youtube阿伟科技)2","ws-opts":{"path":"/","headers":{"host":"aweikeji-YouTube"}},"server":"cdn-cn.nekocloud.cn","port":"19094","uuid":"115c9ec8-681b-3e5c-9144-da0043d9cc69","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇹🇼台湾(yudou66.com玉豆分享)_1","server":"gy.cwcsrsyby.xyz","port":"47518","uuid":"2a30f24e-c164-3f34-a99d-e9107655cf49","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"trojan","name":"🇯🇵日本低延时-tg频道:@ripaojiedian\r","server":"jp04.vproxy.us","port":56565,"password":"acf34fb3-6fed-40c6-b6ab-b5bedf5827a2","udp":true,"skip-cert-verify":true,"sni":"jp04.vproxy.us"}
+  - {"type":"vmess","name":"🇯🇵日本Az高速","ws-opts":{"path":"/","headers":{"host":"crus7.gzfxd.xyz"}},"server":"crus7.gzfxd.xyz","port":"10106","uuid":"da094b71-44ed-4525-92c2-16edb494475a","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰香港(yudou66.com玉豆分享)","server":"gy.cwcsrsyby.xyz","port":"47517","uuid":"2a30f24e-c164-3f34-a99d-e9107655cf49","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇯🇵日本(yudou66.com玉豆分享)_2","ws-opts":{"path":"/j75g1461x","headers":{"host":"v2-1.godlight.xyz"}},"server":"v2-1.godlight.xyz","port":"27000","uuid":"719d4cec-82a8-4a65-ad01-32cf08f2c988","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"trojan","name":"🇯🇵+Relay_🇯🇵JP-🇯🇵JP_874\r\r\r\r\r","server":"jgwdb3.gaox.ml","port":443,"password":"8d2d5953-d649-4034-94f2-72f2df2623da","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇯🇵日本(欢迎订阅Youtube破解资源君)_3","server":"x.mceee.xyz","port":"26031","uuid":"bca2b267-61ac-3152-9525-ea1757f8d9f2","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_2","ws-opts":{"path":"/ws","headers":{"host":"eeh7iewe.com"}},"server":"eeh7iewe.com","port":"443","uuid":"aba50dd4-5484-3b05-b14a-4661caf862d5","alterId":4,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇹🇼台湾11\r","server":"60.251.66.118","port":443,"cipher":"aes-256-gcm","password":"46c027d028b4"}
+  - {"type":"vmess","name":"🇯🇵github.com/v2rayfree-日本51","server":"146.56.112.141","port":17776,"uuid":"aa990962-a99b-4aa7-fdb8-bdbd19f61a79","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"🇹🇼台湾\r","server":"61.220.179.25","port":443,"cipher":"aes-256-gcm","password":"7e8cf62e17ca"}
+  - {"type":"ss","name":"TW_24008_ssr\r","server":"14.29.124.168","port":24008,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"vmess","name":"github.com/mianfeifq|github.com/mianfeifq|_HK_42_1","server":"8.210.127.214","port":"443","uuid":"5b00bd34-a2a7-4471-8b17-3f4768ac0330","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"TW_24081\r","server":"14.29.124.168","port":24081,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24099\r","server":"14.29.124.168","port":24099,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24089_ssr\r","server":"14.29.124.168","port":24089,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ssr","name":"🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|23","server":"cmrelay01.yiyorelay.xyz","port":6704,"protocol":"auth_aes128_sha1","cipher":"chacha20-ietf","obfs":"plain","password":"jFa4F1","obfs-param":"V1d4a2MyRnRUblJQV0hCcFRXeHZkMVJITVU5a2JVcFM="}
+  - {"type":"ss","name":"TW_24062_ssr\r","server":"14.29.124.168","port":24062,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24025_ssr\r","server":"14.29.124.168","port":24025,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24028\r","server":"14.29.124.168","port":24028,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24097\r","server":"14.29.124.168","port":24097,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24018\r","server":"14.29.124.168","port":24018,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24070_ssr\r","server":"14.29.124.168","port":24070,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"🇹🇼台湾04\r","server":"210.71.190.104","port":443,"cipher":"aes-256-gcm","password":"4618413f9a07"}
+  - {"type":"ss","name":"TW_24022_ssr\r","server":"14.29.124.168","port":24022,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24040_ssr\r","server":"14.29.124.168","port":24040,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24049_ssr\r","server":"14.29.124.168","port":24049,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ssr","name":"🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|26","server":"cmrelay01.yiyorelay.xyz","port":6709,"protocol":"auth_aes128_sha1","cipher":"chacha20-ietf","obfs":"plain","password":"jFa4F1","obfs-param":"V1d4a2MyRnRUblJQV0hCcFRXeHZkMVJITVU5a2JVcFM="}
+  - {"type":"ss","name":"TW_24016_ssr\r","server":"14.29.124.168","port":24016,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24055\r","server":"14.29.124.168","port":24055,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ssr","name":"🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|29","server":"cmrelay01.yiyorelay.xyz","port":6706,"protocol":"auth_aes128_sha1","cipher":"chacha20-ietf","obfs":"plain","password":"jFa4F1","obfs-param":"V1d4a2MyRnRUblJQV0hCcFRXeHZkMVJITVU5a2JVcFM="}
+  - {"type":"ss","name":"TW_24086_ssr\r","server":"14.29.124.168","port":24086,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24065\r","server":"14.29.124.168","port":24065,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"vmess","name":"🇯🇵github.com/v2rayfree-日本东京Amazon数据中心6","ws-opts":{"path":"/dajdklw231f","headers":{"host":"v2.godlight.xyz"}},"server":"v2.godlight.xyz","port":"27000","uuid":"1a059eff-ad8a-42ad-921c-465c5b31f183","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"TW_24042\r","server":"14.29.124.168","port":24042,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ssr","name":"🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|34","server":"cmrelay01.yiyorelay.xyz","port":6702,"protocol":"auth_aes128_sha1","cipher":"chacha20-ietf","obfs":"plain","password":"jFa4F1","obfs-param":"V1d4a2MyRnRUblJQV0hCcFRXeHZkMVJITVU5a2JVcFM="}
+  - {"type":"ss","name":"🇹🇼台湾01\r","server":"103.177.32.66","port":443,"cipher":"chacha20-ietf-poly1305","password":"53873d1e6161"}
+  - {"type":"ss","name":"🇹🇼台湾05\r","server":"118.163.91.78","port":443,"cipher":"chacha20-ietf-poly1305","password":"299eaaada2f2"}
+  - {"type":"ss","name":"🇹🇼台湾06\r","server":"59.125.98.30","port":443,"cipher":"aes-256-gcm","password":"be0c0bd0c146"}
+  - {"type":"ss","name":"TW_24057\r","server":"14.29.124.168","port":24057,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"🇹🇼台湾07\r","server":"210.71.190.103","port":443,"cipher":"aes-256-gcm","password":"b5f28639cd68"}
+  - {"type":"ss","name":"TW_24088\r","server":"14.29.124.168","port":24088,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"🇹🇼台湾03\r","server":"59.125.98.29","port":443,"cipher":"aes-256-gcm","password":"301c9d6c6e14"}
+  - {"type":"ss","name":"TW_24053_ssr\r","server":"14.29.124.168","port":24053,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"🇭🇰香港04\r","server":"210.56.62.183","port":443,"cipher":"chacha20-ietf-poly1305","password":"82a162db0ea8"}
+  - {"type":"ss","name":"🇹🇼台湾08\r","server":"61.220.179.26","port":4433,"cipher":"aes-256-gcm","password":"03378e208106"}
+  - {"type":"ss","name":"🇯🇵日本01\r","server":"137.220.244.204","port":1443,"cipher":"aes-256-gcm","password":"d11f468ac5ca"}
+  - {"type":"ssr","name":"🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|31","server":"cmrelay01.yiyorelay.xyz","port":6707,"protocol":"auth_aes128_sha1","cipher":"chacha20-ietf","obfs":"plain","password":"jFa4F1","obfs-param":"V1d4a2MyRnRUblJQV0hCcFRXeHZkMVJITVU5a2JVcFM="}
+  - {"type":"vmess","name":"🇯🇵免费-日本","ws-opts":{"path":"/","headers":{"host":"ocrb2.moonfree.top"}},"server":"ocrb2.moonfree.top","port":"443","uuid":"6e9eeae6-c3d1-439e-9f7a-213fe09b2dbe","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇹🇼台湾10\r","server":"61.220.191.237","port":443,"cipher":"aes-256-gcm","password":"45f98047b87c"}
+  - {"type":"ss","name":"TW_24052_ssr\r","server":"14.29.124.168","port":24052,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24002\r","server":"14.29.124.168","port":24002,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"vmess","name":"🇸🇬ID32新加坡CDN172.64.81.27","ws-opts":{"path":"/xxX6","headers":{"host":"sg.wweblog.pw"}},"server":"172.64.81.27","port":"443","uuid":"80e098a1-f768-3dfb-b97f-6c3a5d34bcd8","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇹🇼台湾09\r","server":"118.163.91.77","port":443,"cipher":"chacha20-ietf-poly1305","password":"8770be4e722a"}
+  - {"type":"vmess","name":"🇸🇬Relay_🇸🇬SG-🇸🇬SG_35","ws-opts":{"path":"/sometimesnaive","headers":{"host":"node.gkddd.buzz"}},"server":"node.gkddd.buzz","port":"23312","uuid":"a6f34df0-6e9e-4522-80ff-a41517803f17","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ssr","name":"🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|15","server":"cmrelay01.yiyorelay.xyz","port":6708,"protocol":"auth_aes128_sha1","cipher":"chacha20-ietf","obfs":"plain","password":"jFa4F1","obfs-param":"V1d4a2MyRnRUblJQV0hCcFRXeHZkMVJITVU5a2JVcFM="}
+  - {"type":"vmess","name":"🇸🇬ID24新加坡CDN172.64.93.136","ws-opts":{"path":"/xxX4","headers":{"host":"sg.wweblog.pw"}},"server":"172.64.93.136","port":"443","uuid":"80e098a1-f768-3dfb-b97f-6c3a5d34bcd8","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"trojan","name":"🇸🇬mattkaydiary.com|新加坡(SG)Singapore/Singapore_28\r","server":"sg-sr-116.mitoption.com","port":443,"password":"e5d46365e25e31d94279c2bcf93390a2","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇭🇰香港(TG频道:@kxswa)_2","ws-opts":{"path":"/ray","headers":{"host":"511hk.fans8.xyz"}},"server":"511hk.fans8.xyz","port":"80","uuid":"7f4ff2e1-c08f-35bd-afe7-4a6a386907aa","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇨🇳Relay_🇨🇳CN-🇭🇰HK_04\r","server":"fkgfw-prod.i.sxl.cn","port":443,"cipher":"aes-256-cfb","password":"E4DNMf73kHPrd8Qq7aqGPf7f"}
+  - {"type":"trojan","name":"JP_70TG@peekfun|2.17Mb\r","server":"s1.upyun.online","port":12340,"password":"316b40c0-0dab-4ea1-9666-ac1658b033b2","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"github.com/mianfeifq|github.com/mianfeifq|🇹🇼_TW_52_1","ws-opts":{"path":"/","headers":{"host":"a33.v2.gay"}},"server":"a33.v2.gay","port":"33792","uuid":"e55cd182-01b0-4fb7-a510-363701a491c5","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"ssr","name":"🇭🇰香港_R_316","server":"iepl-gz.safetelescope.cc","port":10804,"protocol":"auth_aes128_md5","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"hGkQ6915tD","obfs-param":"WVdwaGVDNXRhV055YjNOdlpuUXVZMjl0"}
+  - {"type":"vmess","name":"🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Beijing/小东的程序未能精准识别(可能是中转节点)_10","server":"shcu.forgebukkit.com","port":"47389","uuid":"f680dfd8-3b59-48af-aea8-1d4bc09a1705","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇭🇰香港1-三网优化-强加密","ws-opts":{"path":"/","headers":{"host":"521hk.fans8.xyz"}},"server":"521hk.fans8.xyz","port":"80","uuid":"7f4ff2e1-c08f-35bd-afe7-4a6a386907aa","alterId":2,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"trojan","name":"🇸🇬新加坡(SG)Singapore/Singapore_2\r\r\r","server":"cp-asus.ml","port":50275,"password":"7Z29DRr1ts","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬_SG_新加坡_2_4@5","ws-opts":{"path":"/zhs","headers":{"host":"sglyc6.zhs.company"}},"server":"sglyc6.zhs.company","port":"2087","uuid":"67caeeac-e80d-3188-8822-8339eebca085","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇹🇼_CN_中国->🇹🇼_TW_台湾_2_6@2","server":"aga135.bieqiangwo.xyz","port":"63200","uuid":"6d896dd9-21ff-3844-a72a-332507486049","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇨🇳Relay_🇨🇳CN-🇭🇰HK_11","ws-opts":{"path":"/hls/cctv5phd.m3u8","headers":{"host":"zzcm09.bdate.xyz"}},"server":"zzcm09.bdate.xyz","port":"1280","uuid":"b9ecdb44-236b-30a7-94f2-f464993d84cf","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"🇭🇰mattkaydiary.com|中国香港特别行政区(HK)Hongkong+SAR+China/Hong+Kong_42\r","server":"ssl.tcpbbr.net","port":443,"password":"7b4066ae-accc-11eb-a8bf-f23c91cfbbc9","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬SG-202.61.141.130-034","ws-opts":{"path":"/ws","headers":{"host":"ycgyg.com"}},"server":"ycgyg.com","port":"443","uuid":"aba50dd4-5484-3b05-b14a-4661caf862d5","alterId":4,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰香港-tg频道:@ripaojiedian","ws-opts":{"path":"/","headers":{"host":"hk-c1.myuuusss.com"}},"server":"hk-c1.myuuusss.com","port":"80","uuid":"b195963c-2631-442d-ab3a-6e78df25d904","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇭🇰_HK_香港_1_9@0","ws-opts":{"path":"/ny","headers":{"host":"3.vip341.xyz"}},"server":"3.vip341.xyz","port":"443","uuid":"79c82b92-bc4c-382c-8042-b50d27b9c564","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇯🇵JP-192.243.120.132-128","ws-opts":{"path":"/34fgryhbgv/","headers":{"host":"hilink.vp2p.online"}},"server":"hilink.vp2p.online","port":"57942","uuid":"ef8ac6e8-128f-440d-db1e-5de33f79576e","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"ss","name":"TW_24061\r","server":"14.29.124.168","port":24061,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"vmess","name":"🇸🇬新加坡-180.215.196.10-226","ws-opts":{"path":"/"},"server":"180.215.196.10","port":39043,"uuid":"1b2f44e4-a810-48a8-b620-a4567b46c9b7","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇭🇰:中国-ss-84.17.37.55:8389-可用-直连-仅支持香港地区NF自制剧\r","server":"84.17.37.55","port":8389,"cipher":"chacha20-ietf-poly1305","password":"tjwRqQvteAjt3xFmbZTA"}
+  - {"type":"ss","name":"TW_24036\r","server":"14.29.124.168","port":24036,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"ss","name":"TW_24077_ssr\r","server":"14.29.124.168","port":24077,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
+  - {"type":"vmess","name":"🇭🇰github.com/v2rayfree-香港华为云47","server":"182.160.12.239","port":45524,"uuid":"a265dcb2-04a3-48c0-a703-fad0e008d474","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"🇹🇼台湾02\r","server":"60.251.66.117","port":443,"cipher":"aes-256-gcm","password":"ce565b1fe125"}
+  - {"type":"vmess","name":"🇸🇬ID31新加坡CDN172.64.147.71","ws-opts":{"path":"/xxX8","headers":{"host":"sg.wweblog.pw"}},"server":"172.64.147.71","port":443,"uuid":"80e098a1-f768-3dfb-b97f-6c3a5d34bcd8","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇭🇰香港01","server":"182.237.0.3","port":443,"cipher":"aes-256-gcm","password":"f1cfcd3cda46"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🔮 负载均衡
+      - DIRECT
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|12
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_3_4@39\r"
+      - 🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_4@9
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_1_4@22\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_4@18\r"
+      - 🇯🇵_CN_中国->🇯🇵_JP_日本_6@0
+      - 🇯🇵_CN_中国->🇯🇵_JP_日本_5@3
+      - 🇸🇬_SG_新加坡_2_2@2
+      - 🇯🇵_JP_日本_2_2@18
+      - 🇭🇰_HK_香港_6@10
+      - 🇯🇵_JP_日本_1_2@1
+      - 🇸🇬_SG_新加坡_1_2@0
+      - 🇯🇵_JP_日本_4@3
+      - "🇯🇵_CN_中国->🇯🇵_JP_日本_3@3\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:801-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_2_4@29\r"
+      - "🇸🇬_SG_新加坡_1@20\r"
+      - "🇯🇵_CN_中国->🇯🇵_JP_日本_7@15\r"
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_3_6@3
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_1_6@18
+      - "🇯🇵_JP_日本->🇺🇸_US_美国_1_6@15\r"
+      - 🇸🇬_SG_新加坡_7@14
+      - 🇸🇬_SG_新加坡_1_8@7
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_1_6@1
+      - 🇹🇼_TW_台湾_2_6@7
+      - 🇸🇬_SG_新加坡_6@5
+      - "🇯🇵_JP_日本_2_6@13\r"
+      - "🇯🇵_JP_日本_1_6@11\r"
+      - 🇹🇼_TW_台湾_1_6@6
+      - "🇯🇵_JP_日本_3_6@14\r"
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_2_6@19
+      - 🇭🇰香港_R_160
+      - "🇸🇬:新加坡-ss-217.197.161.244:802-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - 🇸🇬新加坡9-电信专享-强加密
+      - 🇭🇰香港HongkongHKBGP(VIP)●
+      - 🇹🇼台湾2-三网优化-强加密
+      - 🇸🇬新加坡8-电信专享-强加密
+      - "🇸🇬:新加坡-ss-172.107.233.234:2376-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:805-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇹🇼:中国-ss-59.125.11.158:8158-可用-中转:59.125.11.159-仅支持台湾地区NF自制剧\r"
+      - 🇹🇼台湾_R_314
+      - 🇭🇰香港_R_133
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_41\r"
+      - 🇭🇰香港_R_450
+      - 🇭🇰香港Hongkong(AZ)●
+      - 🇹🇼台湾Taiwan★
+      - "🇭🇰:中国-ss-118.107.244.112:7307-可用-中转:118.107.244.111-仅支持香港地区NF自制剧\r"
+      - 🇹🇼台湾1-三网优化-强加密
+      - "🇸🇬:新加坡-ss-172.107.233.234:7306-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇭🇰:中国-ss-118.107.244.112:3306-可用-中转:118.107.244.111-仅支持香港地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-172.107.233.234:8090-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇯🇵:日本-ss-84.17.34.8:8389-可用-直连-仅支持日本地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:808-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:801-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:806-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:812-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-172.107.233.234:2375-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:800-可用-中转:81.90.188.38-不支持Netflix\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:802-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:800-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:805-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - 🇸🇬SG-高速节点购买：v1.mk/vip_1
+      - 🇭🇰香港7-三网优化-强加密
+      - 🇯🇵日本003
+      - 🇯🇵日本002
+      - 🇯🇵日本009
+      - "🇯🇵日本001\r"
+      - "🇯🇵日本006\r"
+      - 🇯🇵日本004
+      - 🇯🇵日本008
+      - 🇸🇬新加坡010
+      - 🇸🇬新加坡009
+      - 🇸🇬新加坡011
+      - 🇸🇬新加坡005
+      - 🇸🇬新加坡006
+      - 🇸🇬新加坡008
+      - 🇸🇬新加坡007
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_8@11\r"
+      - 🇸🇬新加坡004
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_25\r"
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_37\r"
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Beijing/小东的程序未能精准识别(可能是中转节点)_20
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_23
+      - 🇯🇵mattkaydiary.com|日本(JP)Japan/Tokyo_29
+      - 🇺🇸Relay_🇺🇸US-🇭🇰HK_3060
+      - 🇯🇵日本010
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_3
+      - 🇸🇬mattkaydiary.com|新加坡(SG)Singapore/Singapore_7
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_4\r"
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_5\r"
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_9\r"
+      - 🇭🇰mattkaydiary.com|中国香港特别行政区(HK)HongkongSARChina/HongKong_19
+      - "🇯🇵_JP_日本_1_8@10\r"
+      - "🇯🇵JP-150.230.217.213-77\r"
+      - "🇯🇵Relay_🇯🇵JP-🇯🇵JP_29\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_9@4\r"
+      - "🇭🇰_HK_香港_2_9@19\r"
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_2_8@31
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_9@15\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_2_9@6\r"
+      - "🇭🇰_CN_中国->🇭🇰_HK_香港_9@16\r"
+      - "🇯🇵_JP_日本_6_8@21\r"
+      - "🇯🇵_JP_日本_4_8@19\r"
+      - "🇸🇬_SG_新加坡_2_8@26\r"
+      - "🇭🇰_HK_香港_3_9@20\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_3_8@13\r"
+      - 🇸🇬新加坡001
+      - "🇯🇵_JP_日本_3_8@18\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_8@12\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_1_9@5\r"
+      - 🇸🇬_SG_新加坡_12@3
+      - 🇯🇵_JP_日本_10@1
+      - 🇭🇰_HK_香港_2_11@10
+      - 🇨🇳Relay_🇨🇳CN-🇭🇰HK_19
+      - "🇯🇵JP-150.230.96.103-61\r"
+      - 🇯🇵_JP_日本_12@2
+      - 🇸🇬_SG_新加坡_1_10@2
+      - 🇸🇬_US_美国->🇸🇬_SG_新加坡_13@41
+      - 🇹🇼台湾_R_318
+      - 🇭🇰_US_美国->🇭🇰_HK_香港_12@0
+      - "🇭🇰_HK_香港_1_11@1\r"
+      - 🇸🇬_SG_新加坡_2_10@4
+      - "🇭🇰_CN_中国->🇭🇰_HK_香港_11@0\r"
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_40\r"
+      - "TW_24096\r"
+      - "TW_24006_ssr\r"
+      - "🇯🇵github.com/v2rayfree-日本44\r"
+      - "TW_24039\r"
+      - 🇹🇼_TW_台湾
+      - 🇯🇵长沙联通-JP-nf
+      - "TW_24098\r"
+      - 🇯🇵日本-tg频道:@ripaojiedian
+      - 🇯🇵日本高速-L
+      - 🇨🇳Relay_🇨🇳CN-🇹🇼TW_09
+      - 🇭🇰香港HKT
+      - 🇯🇵日本(yudou66.com玉豆分享)_1
+      - 🇺🇸Relay_🇺🇸US-🇭🇰HK_39
+      - 🇯🇵日本1-三网优化-强加密
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港
+      - 🇸🇬github.com/mianfeifq|github.com/mianfeifq|SG-168.138.177.112-050
+      - "🇯🇵+🇯🇵_JP_日本->🇺🇸_US_美国_3\r_1\r\r\r\r"
+      - 🇭🇰香港(TG频道:@kxswa)_1
+      - 🇭🇰香港_R_334
+      - 🇸🇬新加坡2
+      - 🇹🇼台湾(youtube阿伟科技)
+      - 🇭🇰香港(欢迎订阅Youtube破解资源君)_2
+      - 🇭🇰github.com/v2rayfree-香港光联网络8
+      - "TW_24032\r"
+      - github.com/mianfeifq|_TW_51
+      - "🇯🇵日本(TG频道:@kxswa)\r"
+      - 🇸🇬_SG_新加坡_1
+      - 🇹🇼台湾(欢迎订阅Youtube破解资源君)
+      - 🇹🇼github.com/mianfeifq|TW-61.222.202.140-039
+      - 🇭🇰香港(欢迎订阅Youtube破解资源君)_1
+      - 🇸🇬新加坡(youtube阿伟科技)2
+      - 🇨🇳Relay_🇨🇳CN-🇸🇬SG_12
+      - 🇯🇵日本(youtube阿伟科技)4
+      - "SG_36\r"
+      - 🇭🇰香港(TG频道:@poduvjd)
+      - 🇭🇰香港-V3.5G80ws
+      - "🇯🇵github.com/freefq-日本东京Oracle云计算数据中心2\r"
+      - 🇸🇬github.com/mianfeifq|github.com/mianfeifq|🇸🇬SG-81.90.188.59-032
+      - 🇸🇬新加坡高速-L
+      - 🇭🇰github.com/mianfeifq|钉钉|80|香港DOG|02_2
+      - 🇭🇰香港(youtube阿伟科技)2
+      - 🇹🇼台湾(yudou66.com玉豆分享)_1
+      - "🇯🇵日本低延时-tg频道:@ripaojiedian\r"
+      - 🇯🇵日本Az高速
+      - 🇭🇰香港(yudou66.com玉豆分享)
+      - 🇯🇵日本(yudou66.com玉豆分享)_2
+      - "🇯🇵+Relay_🇯🇵JP-🇯🇵JP_874\r\r\r\r\r"
+      - 🇯🇵日本(欢迎订阅Youtube破解资源君)_3
+      - 🇸🇬_SG_新加坡_2
+      - "🇹🇼台湾11\r"
+      - 🇯🇵github.com/v2rayfree-日本51
+      - "🇹🇼台湾\r"
+      - "TW_24008_ssr\r"
+      - github.com/mianfeifq|github.com/mianfeifq|_HK_42_1
+      - "TW_24081\r"
+      - "TW_24099\r"
+      - "TW_24089_ssr\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|23
+      - "TW_24062_ssr\r"
+      - "TW_24025_ssr\r"
+      - "TW_24028\r"
+      - "TW_24097\r"
+      - "TW_24018\r"
+      - "TW_24070_ssr\r"
+      - "🇹🇼台湾04\r"
+      - "TW_24022_ssr\r"
+      - "TW_24040_ssr\r"
+      - "TW_24049_ssr\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|26
+      - "TW_24016_ssr\r"
+      - "TW_24055\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|29
+      - "TW_24086_ssr\r"
+      - "TW_24065\r"
+      - 🇯🇵github.com/v2rayfree-日本东京Amazon数据中心6
+      - "TW_24042\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|34
+      - "🇹🇼台湾01\r"
+      - "🇹🇼台湾05\r"
+      - "🇹🇼台湾06\r"
+      - "TW_24057\r"
+      - "🇹🇼台湾07\r"
+      - "TW_24088\r"
+      - "🇹🇼台湾03\r"
+      - "TW_24053_ssr\r"
+      - "🇭🇰香港04\r"
+      - "🇹🇼台湾08\r"
+      - "🇯🇵日本01\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|31
+      - 🇯🇵免费-日本
+      - "🇹🇼台湾10\r"
+      - "TW_24052_ssr\r"
+      - "TW_24002\r"
+      - 🇸🇬ID32新加坡CDN172.64.81.27
+      - "🇹🇼台湾09\r"
+      - 🇸🇬Relay_🇸🇬SG-🇸🇬SG_35
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|15
+      - 🇸🇬ID24新加坡CDN172.64.93.136
+      - "🇸🇬mattkaydiary.com|新加坡(SG)Singapore/Singapore_28\r"
+      - 🇭🇰香港(TG频道:@kxswa)_2
+      - "🇨🇳Relay_🇨🇳CN-🇭🇰HK_04\r"
+      - "JP_70TG@peekfun|2.17Mb\r"
+      - github.com/mianfeifq|github.com/mianfeifq|🇹🇼_TW_52_1
+      - 🇭🇰香港_R_316
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Beijing/小东的程序未能精准识别(可能是中转节点)_10
+      - 🇭🇰香港1-三网优化-强加密
+      - "🇸🇬新加坡(SG)Singapore/Singapore_2\r\r\r"
+      - 🇸🇬_SG_新加坡_2_4@5
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_2_6@2
+      - 🇨🇳Relay_🇨🇳CN-🇭🇰HK_11
+      - "🇭🇰mattkaydiary.com|中国香港特别行政区(HK)Hongkong+SAR+China/Hong+Kong_42\r"
+      - 🇸🇬SG-202.61.141.130-034
+      - 🇭🇰香港-tg频道:@ripaojiedian
+      - 🇭🇰_HK_香港_1_9@0
+      - 🇯🇵JP-192.243.120.132-128
+      - "TW_24061\r"
+      - 🇸🇬新加坡-180.215.196.10-226
+      - "🇭🇰:中国-ss-84.17.37.55:8389-可用-直连-仅支持香港地区NF自制剧\r"
+      - "TW_24036\r"
+      - "TW_24077_ssr\r"
+      - 🇭🇰github.com/v2rayfree-香港华为云47
+      - "🇹🇼台湾02\r"
+      - 🇸🇬ID31新加坡CDN172.64.147.71
+      - 🇭🇰香港01
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|12
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_3_4@39\r"
+      - 🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_4@9
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_1_4@22\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_4@18\r"
+      - 🇯🇵_CN_中国->🇯🇵_JP_日本_6@0
+      - 🇯🇵_CN_中国->🇯🇵_JP_日本_5@3
+      - 🇸🇬_SG_新加坡_2_2@2
+      - 🇯🇵_JP_日本_2_2@18
+      - 🇭🇰_HK_香港_6@10
+      - 🇯🇵_JP_日本_1_2@1
+      - 🇸🇬_SG_新加坡_1_2@0
+      - 🇯🇵_JP_日本_4@3
+      - "🇯🇵_CN_中国->🇯🇵_JP_日本_3@3\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:801-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_2_4@29\r"
+      - "🇸🇬_SG_新加坡_1@20\r"
+      - "🇯🇵_CN_中国->🇯🇵_JP_日本_7@15\r"
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_3_6@3
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_1_6@18
+      - "🇯🇵_JP_日本->🇺🇸_US_美国_1_6@15\r"
+      - 🇸🇬_SG_新加坡_7@14
+      - 🇸🇬_SG_新加坡_1_8@7
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_1_6@1
+      - 🇹🇼_TW_台湾_2_6@7
+      - 🇸🇬_SG_新加坡_6@5
+      - "🇯🇵_JP_日本_2_6@13\r"
+      - "🇯🇵_JP_日本_1_6@11\r"
+      - 🇹🇼_TW_台湾_1_6@6
+      - "🇯🇵_JP_日本_3_6@14\r"
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_2_6@19
+      - 🇭🇰香港_R_160
+      - "🇸🇬:新加坡-ss-217.197.161.244:802-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - 🇸🇬新加坡9-电信专享-强加密
+      - 🇭🇰香港HongkongHKBGP(VIP)●
+      - 🇹🇼台湾2-三网优化-强加密
+      - 🇸🇬新加坡8-电信专享-强加密
+      - "🇸🇬:新加坡-ss-172.107.233.234:2376-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:805-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇹🇼:中国-ss-59.125.11.158:8158-可用-中转:59.125.11.159-仅支持台湾地区NF自制剧\r"
+      - 🇹🇼台湾_R_314
+      - 🇭🇰香港_R_133
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_41\r"
+      - 🇭🇰香港_R_450
+      - 🇭🇰香港Hongkong(AZ)●
+      - 🇹🇼台湾Taiwan★
+      - "🇭🇰:中国-ss-118.107.244.112:7307-可用-中转:118.107.244.111-仅支持香港地区NF自制剧\r"
+      - 🇹🇼台湾1-三网优化-强加密
+      - "🇸🇬:新加坡-ss-172.107.233.234:7306-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇭🇰:中国-ss-118.107.244.112:3306-可用-中转:118.107.244.111-仅支持香港地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-172.107.233.234:8090-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇯🇵:日本-ss-84.17.34.8:8389-可用-直连-仅支持日本地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:808-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:801-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:806-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:812-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-172.107.233.234:2375-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:800-可用-中转:81.90.188.38-不支持Netflix\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:802-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:800-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:805-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - 🇸🇬SG-高速节点购买：v1.mk/vip_1
+      - 🇭🇰香港7-三网优化-强加密
+      - 🇯🇵日本003
+      - 🇯🇵日本002
+      - 🇯🇵日本009
+      - "🇯🇵日本001\r"
+      - "🇯🇵日本006\r"
+      - 🇯🇵日本004
+      - 🇯🇵日本008
+      - 🇸🇬新加坡010
+      - 🇸🇬新加坡009
+      - 🇸🇬新加坡011
+      - 🇸🇬新加坡005
+      - 🇸🇬新加坡006
+      - 🇸🇬新加坡008
+      - 🇸🇬新加坡007
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_8@11\r"
+      - 🇸🇬新加坡004
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_25\r"
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_37\r"
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Beijing/小东的程序未能精准识别(可能是中转节点)_20
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_23
+      - 🇯🇵mattkaydiary.com|日本(JP)Japan/Tokyo_29
+      - 🇺🇸Relay_🇺🇸US-🇭🇰HK_3060
+      - 🇯🇵日本010
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_3
+      - 🇸🇬mattkaydiary.com|新加坡(SG)Singapore/Singapore_7
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_4\r"
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_5\r"
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_9\r"
+      - 🇭🇰mattkaydiary.com|中国香港特别行政区(HK)HongkongSARChina/HongKong_19
+      - "🇯🇵_JP_日本_1_8@10\r"
+      - "🇯🇵JP-150.230.217.213-77\r"
+      - "🇯🇵Relay_🇯🇵JP-🇯🇵JP_29\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_9@4\r"
+      - "🇭🇰_HK_香港_2_9@19\r"
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_2_8@31
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_9@15\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_2_9@6\r"
+      - "🇭🇰_CN_中国->🇭🇰_HK_香港_9@16\r"
+      - "🇯🇵_JP_日本_6_8@21\r"
+      - "🇯🇵_JP_日本_4_8@19\r"
+      - "🇸🇬_SG_新加坡_2_8@26\r"
+      - "🇭🇰_HK_香港_3_9@20\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_3_8@13\r"
+      - 🇸🇬新加坡001
+      - "🇯🇵_JP_日本_3_8@18\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_8@12\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_1_9@5\r"
+      - 🇸🇬_SG_新加坡_12@3
+      - 🇯🇵_JP_日本_10@1
+      - 🇭🇰_HK_香港_2_11@10
+      - 🇨🇳Relay_🇨🇳CN-🇭🇰HK_19
+      - "🇯🇵JP-150.230.96.103-61\r"
+      - 🇯🇵_JP_日本_12@2
+      - 🇸🇬_SG_新加坡_1_10@2
+      - 🇸🇬_US_美国->🇸🇬_SG_新加坡_13@41
+      - 🇹🇼台湾_R_318
+      - 🇭🇰_US_美国->🇭🇰_HK_香港_12@0
+      - "🇭🇰_HK_香港_1_11@1\r"
+      - 🇸🇬_SG_新加坡_2_10@4
+      - "🇭🇰_CN_中国->🇭🇰_HK_香港_11@0\r"
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_40\r"
+      - "TW_24096\r"
+      - "TW_24006_ssr\r"
+      - "🇯🇵github.com/v2rayfree-日本44\r"
+      - "TW_24039\r"
+      - 🇹🇼_TW_台湾
+      - 🇯🇵长沙联通-JP-nf
+      - "TW_24098\r"
+      - 🇯🇵日本-tg频道:@ripaojiedian
+      - 🇯🇵日本高速-L
+      - 🇨🇳Relay_🇨🇳CN-🇹🇼TW_09
+      - 🇭🇰香港HKT
+      - 🇯🇵日本(yudou66.com玉豆分享)_1
+      - 🇺🇸Relay_🇺🇸US-🇭🇰HK_39
+      - 🇯🇵日本1-三网优化-强加密
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港
+      - 🇸🇬github.com/mianfeifq|github.com/mianfeifq|SG-168.138.177.112-050
+      - "🇯🇵+🇯🇵_JP_日本->🇺🇸_US_美国_3\r_1\r\r\r\r"
+      - 🇭🇰香港(TG频道:@kxswa)_1
+      - 🇭🇰香港_R_334
+      - 🇸🇬新加坡2
+      - 🇹🇼台湾(youtube阿伟科技)
+      - 🇭🇰香港(欢迎订阅Youtube破解资源君)_2
+      - 🇭🇰github.com/v2rayfree-香港光联网络8
+      - "TW_24032\r"
+      - github.com/mianfeifq|_TW_51
+      - "🇯🇵日本(TG频道:@kxswa)\r"
+      - 🇸🇬_SG_新加坡_1
+      - 🇹🇼台湾(欢迎订阅Youtube破解资源君)
+      - 🇹🇼github.com/mianfeifq|TW-61.222.202.140-039
+      - 🇭🇰香港(欢迎订阅Youtube破解资源君)_1
+      - 🇸🇬新加坡(youtube阿伟科技)2
+      - 🇨🇳Relay_🇨🇳CN-🇸🇬SG_12
+      - 🇯🇵日本(youtube阿伟科技)4
+      - "SG_36\r"
+      - 🇭🇰香港(TG频道:@poduvjd)
+      - 🇭🇰香港-V3.5G80ws
+      - "🇯🇵github.com/freefq-日本东京Oracle云计算数据中心2\r"
+      - 🇸🇬github.com/mianfeifq|github.com/mianfeifq|🇸🇬SG-81.90.188.59-032
+      - 🇸🇬新加坡高速-L
+      - 🇭🇰github.com/mianfeifq|钉钉|80|香港DOG|02_2
+      - 🇭🇰香港(youtube阿伟科技)2
+      - 🇹🇼台湾(yudou66.com玉豆分享)_1
+      - "🇯🇵日本低延时-tg频道:@ripaojiedian\r"
+      - 🇯🇵日本Az高速
+      - 🇭🇰香港(yudou66.com玉豆分享)
+      - 🇯🇵日本(yudou66.com玉豆分享)_2
+      - "🇯🇵+Relay_🇯🇵JP-🇯🇵JP_874\r\r\r\r\r"
+      - 🇯🇵日本(欢迎订阅Youtube破解资源君)_3
+      - 🇸🇬_SG_新加坡_2
+      - "🇹🇼台湾11\r"
+      - 🇯🇵github.com/v2rayfree-日本51
+      - "🇹🇼台湾\r"
+      - "TW_24008_ssr\r"
+      - github.com/mianfeifq|github.com/mianfeifq|_HK_42_1
+      - "TW_24081\r"
+      - "TW_24099\r"
+      - "TW_24089_ssr\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|23
+      - "TW_24062_ssr\r"
+      - "TW_24025_ssr\r"
+      - "TW_24028\r"
+      - "TW_24097\r"
+      - "TW_24018\r"
+      - "TW_24070_ssr\r"
+      - "🇹🇼台湾04\r"
+      - "TW_24022_ssr\r"
+      - "TW_24040_ssr\r"
+      - "TW_24049_ssr\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|26
+      - "TW_24016_ssr\r"
+      - "TW_24055\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|29
+      - "TW_24086_ssr\r"
+      - "TW_24065\r"
+      - 🇯🇵github.com/v2rayfree-日本东京Amazon数据中心6
+      - "TW_24042\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|34
+      - "🇹🇼台湾01\r"
+      - "🇹🇼台湾05\r"
+      - "🇹🇼台湾06\r"
+      - "TW_24057\r"
+      - "🇹🇼台湾07\r"
+      - "TW_24088\r"
+      - "🇹🇼台湾03\r"
+      - "TW_24053_ssr\r"
+      - "🇭🇰香港04\r"
+      - "🇹🇼台湾08\r"
+      - "🇯🇵日本01\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|31
+      - 🇯🇵免费-日本
+      - "🇹🇼台湾10\r"
+      - "TW_24052_ssr\r"
+      - "TW_24002\r"
+      - 🇸🇬ID32新加坡CDN172.64.81.27
+      - "🇹🇼台湾09\r"
+      - 🇸🇬Relay_🇸🇬SG-🇸🇬SG_35
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|15
+      - 🇸🇬ID24新加坡CDN172.64.93.136
+      - "🇸🇬mattkaydiary.com|新加坡(SG)Singapore/Singapore_28\r"
+      - 🇭🇰香港(TG频道:@kxswa)_2
+      - "🇨🇳Relay_🇨🇳CN-🇭🇰HK_04\r"
+      - "JP_70TG@peekfun|2.17Mb\r"
+      - github.com/mianfeifq|github.com/mianfeifq|🇹🇼_TW_52_1
+      - 🇭🇰香港_R_316
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Beijing/小东的程序未能精准识别(可能是中转节点)_10
+      - 🇭🇰香港1-三网优化-强加密
+      - "🇸🇬新加坡(SG)Singapore/Singapore_2\r\r\r"
+      - 🇸🇬_SG_新加坡_2_4@5
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_2_6@2
+      - 🇨🇳Relay_🇨🇳CN-🇭🇰HK_11
+      - "🇭🇰mattkaydiary.com|中国香港特别行政区(HK)Hongkong+SAR+China/Hong+Kong_42\r"
+      - 🇸🇬SG-202.61.141.130-034
+      - 🇭🇰香港-tg频道:@ripaojiedian
+      - 🇭🇰_HK_香港_1_9@0
+      - 🇯🇵JP-192.243.120.132-128
+      - "TW_24061\r"
+      - 🇸🇬新加坡-180.215.196.10-226
+      - "🇭🇰:中国-ss-84.17.37.55:8389-可用-直连-仅支持香港地区NF自制剧\r"
+      - "TW_24036\r"
+      - "TW_24077_ssr\r"
+      - 🇭🇰github.com/v2rayfree-香港华为云47
+      - "🇹🇼台湾02\r"
+      - 🇸🇬ID31新加坡CDN172.64.147.71
+      - 🇭🇰香港01
+  - name: 🔯 故障转移
+  - name: 🔮 负载均衡
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🔮 负载均衡
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|12
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_3_4@39\r"
+      - 🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_4@9
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_1_4@22\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_4@18\r"
+      - 🇯🇵_CN_中国->🇯🇵_JP_日本_6@0
+      - 🇯🇵_CN_中国->🇯🇵_JP_日本_5@3
+      - 🇸🇬_SG_新加坡_2_2@2
+      - 🇯🇵_JP_日本_2_2@18
+      - 🇭🇰_HK_香港_6@10
+      - 🇯🇵_JP_日本_1_2@1
+      - 🇸🇬_SG_新加坡_1_2@0
+      - 🇯🇵_JP_日本_4@3
+      - "🇯🇵_CN_中国->🇯🇵_JP_日本_3@3\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:801-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_2_4@29\r"
+      - "🇸🇬_SG_新加坡_1@20\r"
+      - "🇯🇵_CN_中国->🇯🇵_JP_日本_7@15\r"
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_3_6@3
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_1_6@18
+      - "🇯🇵_JP_日本->🇺🇸_US_美国_1_6@15\r"
+      - 🇸🇬_SG_新加坡_7@14
+      - 🇸🇬_SG_新加坡_1_8@7
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_1_6@1
+      - 🇹🇼_TW_台湾_2_6@7
+      - 🇸🇬_SG_新加坡_6@5
+      - "🇯🇵_JP_日本_2_6@13\r"
+      - "🇯🇵_JP_日本_1_6@11\r"
+      - 🇹🇼_TW_台湾_1_6@6
+      - "🇯🇵_JP_日本_3_6@14\r"
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_2_6@19
+      - 🇭🇰香港_R_160
+      - "🇸🇬:新加坡-ss-217.197.161.244:802-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - 🇸🇬新加坡9-电信专享-强加密
+      - 🇭🇰香港HongkongHKBGP(VIP)●
+      - 🇹🇼台湾2-三网优化-强加密
+      - 🇸🇬新加坡8-电信专享-强加密
+      - "🇸🇬:新加坡-ss-172.107.233.234:2376-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:805-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇹🇼:中国-ss-59.125.11.158:8158-可用-中转:59.125.11.159-仅支持台湾地区NF自制剧\r"
+      - 🇹🇼台湾_R_314
+      - 🇭🇰香港_R_133
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_41\r"
+      - 🇭🇰香港_R_450
+      - 🇭🇰香港Hongkong(AZ)●
+      - 🇹🇼台湾Taiwan★
+      - "🇭🇰:中国-ss-118.107.244.112:7307-可用-中转:118.107.244.111-仅支持香港地区NF自制剧\r"
+      - 🇹🇼台湾1-三网优化-强加密
+      - "🇸🇬:新加坡-ss-172.107.233.234:7306-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇭🇰:中国-ss-118.107.244.112:3306-可用-中转:118.107.244.111-仅支持香港地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-172.107.233.234:8090-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇯🇵:日本-ss-84.17.34.8:8389-可用-直连-仅支持日本地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:808-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:801-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:806-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:812-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-172.107.233.234:2375-可用-直连-仅支持西班牙地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:800-可用-中转:81.90.188.38-不支持Netflix\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:802-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-81.90.189.18:800-可用-直连-仅支持新加坡地区NF自制剧\r"
+      - "🇸🇬:新加坡-ss-217.197.161.244:805-可用-中转:81.90.188.38-仅支持新加坡地区NF自制剧\r"
+      - 🇸🇬SG-高速节点购买：v1.mk/vip_1
+      - 🇭🇰香港7-三网优化-强加密
+      - 🇯🇵日本003
+      - 🇯🇵日本002
+      - 🇯🇵日本009
+      - "🇯🇵日本001\r"
+      - "🇯🇵日本006\r"
+      - 🇯🇵日本004
+      - 🇯🇵日本008
+      - 🇸🇬新加坡010
+      - 🇸🇬新加坡009
+      - 🇸🇬新加坡011
+      - 🇸🇬新加坡005
+      - 🇸🇬新加坡006
+      - 🇸🇬新加坡008
+      - 🇸🇬新加坡007
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_8@11\r"
+      - 🇸🇬新加坡004
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_25\r"
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_37\r"
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Beijing/小东的程序未能精准识别(可能是中转节点)_20
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_23
+      - 🇯🇵mattkaydiary.com|日本(JP)Japan/Tokyo_29
+      - 🇺🇸Relay_🇺🇸US-🇭🇰HK_3060
+      - 🇯🇵日本010
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_3
+      - 🇸🇬mattkaydiary.com|新加坡(SG)Singapore/Singapore_7
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_4\r"
+      - "🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Shenzhen/小东的程序未能精准识别(可能是中转节点)_5\r"
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_9\r"
+      - 🇭🇰mattkaydiary.com|中国香港特别行政区(HK)HongkongSARChina/HongKong_19
+      - "🇯🇵_JP_日本_1_8@10\r"
+      - "🇯🇵JP-150.230.217.213-77\r"
+      - "🇯🇵Relay_🇯🇵JP-🇯🇵JP_29\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_1_9@4\r"
+      - "🇭🇰_HK_香港_2_9@19\r"
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港_2_8@31
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_9@15\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_2_9@6\r"
+      - "🇭🇰_CN_中国->🇭🇰_HK_香港_9@16\r"
+      - "🇯🇵_JP_日本_6_8@21\r"
+      - "🇯🇵_JP_日本_4_8@19\r"
+      - "🇸🇬_SG_新加坡_2_8@26\r"
+      - "🇭🇰_HK_香港_3_9@20\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_3_8@13\r"
+      - 🇸🇬新加坡001
+      - "🇯🇵_JP_日本_3_8@18\r"
+      - "🇸🇬_CN_中国->🇸🇬_SG_新加坡_2_8@12\r"
+      - "🇹🇼_CN_中国->🇹🇼_TW_台湾_1_9@5\r"
+      - 🇸🇬_SG_新加坡_12@3
+      - 🇯🇵_JP_日本_10@1
+      - 🇭🇰_HK_香港_2_11@10
+      - 🇨🇳Relay_🇨🇳CN-🇭🇰HK_19
+      - "🇯🇵JP-150.230.96.103-61\r"
+      - 🇯🇵_JP_日本_12@2
+      - 🇸🇬_SG_新加坡_1_10@2
+      - 🇸🇬_US_美国->🇸🇬_SG_新加坡_13@41
+      - 🇹🇼台湾_R_318
+      - 🇭🇰_US_美国->🇭🇰_HK_香港_12@0
+      - "🇭🇰_HK_香港_1_11@1\r"
+      - 🇸🇬_SG_新加坡_2_10@4
+      - "🇭🇰_CN_中国->🇭🇰_HK_香港_11@0\r"
+      - "🇯🇵mattkaydiary.com|日本(JP)Japan/Osaka_40\r"
+      - "TW_24096\r"
+      - "TW_24006_ssr\r"
+      - "🇯🇵github.com/v2rayfree-日本44\r"
+      - "TW_24039\r"
+      - 🇹🇼_TW_台湾
+      - 🇯🇵长沙联通-JP-nf
+      - "TW_24098\r"
+      - 🇯🇵日本-tg频道:@ripaojiedian
+      - 🇯🇵日本高速-L
+      - 🇨🇳Relay_🇨🇳CN-🇹🇼TW_09
+      - 🇭🇰香港HKT
+      - 🇯🇵日本(yudou66.com玉豆分享)_1
+      - 🇺🇸Relay_🇺🇸US-🇭🇰HK_39
+      - 🇯🇵日本1-三网优化-强加密
+      - 🇭🇰_CN_中国->🇭🇰_HK_香港
+      - 🇸🇬github.com/mianfeifq|github.com/mianfeifq|SG-168.138.177.112-050
+      - "🇯🇵+🇯🇵_JP_日本->🇺🇸_US_美国_3\r_1\r\r\r\r"
+      - 🇭🇰香港(TG频道:@kxswa)_1
+      - 🇭🇰香港_R_334
+      - 🇸🇬新加坡2
+      - 🇹🇼台湾(youtube阿伟科技)
+      - 🇭🇰香港(欢迎订阅Youtube破解资源君)_2
+      - 🇭🇰github.com/v2rayfree-香港光联网络8
+      - "TW_24032\r"
+      - github.com/mianfeifq|_TW_51
+      - "🇯🇵日本(TG频道:@kxswa)\r"
+      - 🇸🇬_SG_新加坡_1
+      - 🇹🇼台湾(欢迎订阅Youtube破解资源君)
+      - 🇹🇼github.com/mianfeifq|TW-61.222.202.140-039
+      - 🇭🇰香港(欢迎订阅Youtube破解资源君)_1
+      - 🇸🇬新加坡(youtube阿伟科技)2
+      - 🇨🇳Relay_🇨🇳CN-🇸🇬SG_12
+      - 🇯🇵日本(youtube阿伟科技)4
+      - "SG_36\r"
+      - 🇭🇰香港(TG频道:@poduvjd)
+      - 🇭🇰香港-V3.5G80ws
+      - "🇯🇵github.com/freefq-日本东京Oracle云计算数据中心2\r"
+      - 🇸🇬github.com/mianfeifq|github.com/mianfeifq|🇸🇬SG-81.90.188.59-032
+      - 🇸🇬新加坡高速-L
+      - 🇭🇰github.com/mianfeifq|钉钉|80|香港DOG|02_2
+      - 🇭🇰香港(youtube阿伟科技)2
+      - 🇹🇼台湾(yudou66.com玉豆分享)_1
+      - "🇯🇵日本低延时-tg频道:@ripaojiedian\r"
+      - 🇯🇵日本Az高速
+      - 🇭🇰香港(yudou66.com玉豆分享)
+      - 🇯🇵日本(yudou66.com玉豆分享)_2
+      - "🇯🇵+Relay_🇯🇵JP-🇯🇵JP_874\r\r\r\r\r"
+      - 🇯🇵日本(欢迎订阅Youtube破解资源君)_3
+      - 🇸🇬_SG_新加坡_2
+      - "🇹🇼台湾11\r"
+      - 🇯🇵github.com/v2rayfree-日本51
+      - "🇹🇼台湾\r"
+      - "TW_24008_ssr\r"
+      - github.com/mianfeifq|github.com/mianfeifq|_HK_42_1
+      - "TW_24081\r"
+      - "TW_24099\r"
+      - "TW_24089_ssr\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|23
+      - "TW_24062_ssr\r"
+      - "TW_24025_ssr\r"
+      - "TW_24028\r"
+      - "TW_24097\r"
+      - "TW_24018\r"
+      - "TW_24070_ssr\r"
+      - "🇹🇼台湾04\r"
+      - "TW_24022_ssr\r"
+      - "TW_24040_ssr\r"
+      - "TW_24049_ssr\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|26
+      - "TW_24016_ssr\r"
+      - "TW_24055\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|29
+      - "TW_24086_ssr\r"
+      - "TW_24065\r"
+      - 🇯🇵github.com/v2rayfree-日本东京Amazon数据中心6
+      - "TW_24042\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|34
+      - "🇹🇼台湾01\r"
+      - "🇹🇼台湾05\r"
+      - "🇹🇼台湾06\r"
+      - "TW_24057\r"
+      - "🇹🇼台湾07\r"
+      - "TW_24088\r"
+      - "🇹🇼台湾03\r"
+      - "TW_24053_ssr\r"
+      - "🇭🇰香港04\r"
+      - "🇹🇼台湾08\r"
+      - "🇯🇵日本01\r"
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|31
+      - 🇯🇵免费-日本
+      - "🇹🇼台湾10\r"
+      - "TW_24052_ssr\r"
+      - "TW_24002\r"
+      - 🇸🇬ID32新加坡CDN172.64.81.27
+      - "🇹🇼台湾09\r"
+      - 🇸🇬Relay_🇸🇬SG-🇸🇬SG_35
+      - 🇸🇬Relay|🇸🇬SG|中速|TG频道FProxies整理|513发布|15
+      - 🇸🇬ID24新加坡CDN172.64.93.136
+      - "🇸🇬mattkaydiary.com|新加坡(SG)Singapore/Singapore_28\r"
+      - 🇭🇰香港(TG频道:@kxswa)_2
+      - "🇨🇳Relay_🇨🇳CN-🇭🇰HK_04\r"
+      - "JP_70TG@peekfun|2.17Mb\r"
+      - github.com/mianfeifq|github.com/mianfeifq|🇹🇼_TW_52_1
+      - 🇭🇰香港_R_316
+      - 🇭🇰mattkaydiary.com|中国香港/中国台湾(CN)China/Beijing/小东的程序未能精准识别(可能是中转节点)_10
+      - 🇭🇰香港1-三网优化-强加密
+      - "🇸🇬新加坡(SG)Singapore/Singapore_2\r\r\r"
+      - 🇸🇬_SG_新加坡_2_4@5
+      - 🇹🇼_CN_中国->🇹🇼_TW_台湾_2_6@2
+      - 🇨🇳Relay_🇨🇳CN-🇭🇰HK_11
+      - "🇭🇰mattkaydiary.com|中国香港特别行政区(HK)Hongkong+SAR+China/Hong+Kong_42\r"
+      - 🇸🇬SG-202.61.141.130-034
+      - 🇭🇰香港-tg频道:@ripaojiedian
+      - 🇭🇰_HK_香港_1_9@0
+      - 🇯🇵JP-192.243.120.132-128
+      - "TW_24061\r"
+      - 🇸🇬新加坡-180.215.196.10-226
+      - "🇭🇰:中国-ss-84.17.37.55:8389-可用-直连-仅支持香港地区NF自制剧\r"
+      - "TW_24036\r"
+      - "TW_24077_ssr\r"
+      - 🇭🇰github.com/v2rayfree-香港华为云47
+      - "🇹🇼台湾02\r"
+      - 🇸🇬ID31新加坡CDN172.64.147.71
+      - 🇭🇰香港01
+rules:
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
