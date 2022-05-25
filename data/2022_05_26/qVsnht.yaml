@@ -1,0 +1,88 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"type":"trojan","name":"🇨🇳_CN_中国->🇸🇬_SG_新加坡","server":"116.129.253.191","port":3389,"password":"a170b44c2dfac9e6","udp":true,"skip-cert-verify":true}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_1","server":"213.183.59.206","port":9084,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_2","server":"213.183.59.206","port":9053,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"SBM7R883jBmnqe6C"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_3","server":"213.183.59.206","port":9003,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"JdmRK9gMEqFgs8nP"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_4","server":"213.183.59.206","port":9033,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"UTJA57ypk2XKQpnm"}
+  - {"type":"vmess","name":"🇨🇳_CN_中国","http-opts":{"path":["/"],"headers":{"Host":["43.154.77.196"]}},"server":"43.154.77.196","port":38539,"uuid":"a379bd7f-9d0d-4fb5-90c2-9b302782c4d6","alterId":0,"cipher":"auto","network":"http"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_5","server":"213.183.59.214","port":9070,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"bf7v334KKDV3YDhH"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_6","server":"213.183.59.214","port":9032,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"UWZQeLRWnkqgkseq"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_7","server":"213.183.59.214","port":9042,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"S7KwUu7yBy58S3Ga"}
+  - {"type":"ss","name":"🇳🇱_NL_荷兰_8","server":"213.183.59.214","port":9070,"cipher":"aes-256-cfb","password":"bf7v334KKDV3YDhH"}
+  - {"type":"ssr","name":"🇷🇺_RU_俄罗斯联邦_1","server":"213.183.53.177","port":9084,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ssr","name":"🇷🇺_RU_俄罗斯联邦_2","server":"213.183.53.177","port":9046,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"NvS8N4Vf8qAGPSCL"}
+  - {"type":"ssr","name":"🇷🇺_RU_俄罗斯联邦_3","server":"213.183.53.177","port":9043,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ssr","name":"🇷🇺_RU_俄罗斯联邦_4","server":"213.183.53.177","port":9098,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_9","server":"213.183.59.214","port":9007,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"kSPmvwdFzGMMW5pY"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_10","server":"213.183.59.211","port":9008,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"y9VURyNzJWNRYEGQ"}
+  - {"type":"ssr","name":"🇳🇱_NL_荷兰_11","server":"213.183.59.211","port":9079,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"TPqX8edgbAURcAMb"}
+  - {"type":"trojan","name":"🇮🇳_IN_印度","server":"jgwhdlb3.gaox.ml","port":443,"password":"006baa3f-4bc3-4915-b60d-c8c5dae11a11","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇺🇸_US_美国","server":"s162.s2022.xyz","port":23802,"password":"d724e4d0-841b-3b92-ac0d-70fcbbb7e934","udp":true,"skip-cert-verify":true}
+proxy-groups:
+  - name: 谷歌
+    type: url-test
+    url: http://www.google.com.hk/
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰_1
+      - 🇳🇱_NL_荷兰_2
+      - 🇳🇱_NL_荷兰_3
+      - 🇳🇱_NL_荷兰_4
+      - 🇨🇳_CN_中国
+      - 🇳🇱_NL_荷兰_5
+      - 🇳🇱_NL_荷兰_6
+      - 🇳🇱_NL_荷兰_7
+      - 🇳🇱_NL_荷兰_8
+      - 🇷🇺_RU_俄罗斯联邦_1
+      - 🇷🇺_RU_俄罗斯联邦_2
+      - 🇷🇺_RU_俄罗斯联邦_3
+      - 🇷🇺_RU_俄罗斯联邦_4
+      - 🇳🇱_NL_荷兰_9
+      - 🇳🇱_NL_荷兰_10
+      - 🇳🇱_NL_荷兰_11
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国
+  - name: youtube
+    type: url-test
+    url: https://www.youtube.com/
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰_1
+      - 🇳🇱_NL_荷兰_2
+      - 🇳🇱_NL_荷兰_3
+      - 🇳🇱_NL_荷兰_4
+      - 🇨🇳_CN_中国
+      - 🇳🇱_NL_荷兰_5
+      - 🇳🇱_NL_荷兰_6
+      - 🇳🇱_NL_荷兰_7
+      - 🇳🇱_NL_荷兰_8
+      - 🇷🇺_RU_俄罗斯联邦_1
+      - 🇷🇺_RU_俄罗斯联邦_2
+      - 🇷🇺_RU_俄罗斯联邦_3
+      - 🇷🇺_RU_俄罗斯联邦_4
+      - 🇳🇱_NL_荷兰_9
+      - 🇳🇱_NL_荷兰_10
+      - 🇳🇱_NL_荷兰_11
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国
+rules:
+  - DOMAIN-SUFFIX,google.com,谷歌
+  - DOMAIN-SUFFIX,google.cn,谷歌
+  - DOMAIN-SUFFIX,google.com.hk,谷歌
+  - DOMAIN-SUFFIX,youtube.com,youtube
+  - DOMAIN-SUFFIX,youtu.be,youtube
+  - DOMAIN-SUFFIX,ytimg.com,youtube
+  - DOMAIN-SUFFIX,doubleclick.net,youtube
+  - DOMAIN-SUFFIX,ggpht.com,youtube
+  - DOMAIN-SUFFIX,googleapis.com,youtube
+  - DOMAIN-SUFFIX,googlevideo.com,youtube
+  - MATCH,DIRECT
