@@ -1,0 +1,826 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxies:
+  - {name: 🇷🇺 其他RURelay A, server: in01.node2022.biz, port: 7582, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇩🇪 其他DERelay A, server: in02.node2022.biz, port: 7587, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇦🇺 其他AURelay A, server: in03.node2022.biz, port: 7584, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇰🇷 其他UKRelay A, server: in01.node2022.biz, port: 7583, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇹🇼 TWRelay A, server: in03.node2022.biz, port: 7551, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇹🇼 TWRelay B, server: in01.node2022.biz, port: 7552, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇸🇬 SGIEPL A, server: iepl03.node2022.biz, port: 7541, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇸🇬 SGRelay A, server: in02.node2022.biz, port: 7541, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇸🇬 SGRelay B, server: in03.node2022.biz, port: 7541, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇸🇬 SGRelay C, server: in03.node2022.biz, port: 7541, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇸🇬 SGRelay D, server: in02.node2022.biz, port: 7542, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇸🇬 SGRelay E, server: in03.node2022.biz, port: 7542, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇸🇬 SGRelay F, server: in02.node2022.biz, port: 7542, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇯🇵 JPIEPL A, server: iepl03.node2022.biz, port: 7521, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇯🇵 JPRelay A, server: in01.node2022.biz, port: 7521, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇯🇵 JPRelay B, server: in03.node2022.biz, port: 7521, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇯🇵 JPRelay C, server: in01.node2022.biz, port: 7522, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇯🇵 JPRelay D, server: in02.node2022.biz, port: 7522, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇯🇵 JPRelay E, server: in03.node2022.biz, port: 7523, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇯🇵 JPRelay F, server: in01.node2022.biz, port: 7523, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇺🇸 USIEPL A, server: iepl02.node2022.biz, port: 7531, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇺🇸 USIEPL C, server: iepl02.node2022.biz, port: 7532, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇺🇸 USRelay A, server: in02.node2022.biz, port: 7531, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇺🇸 USRelay B, server: in03.node2022.biz, port: 7531, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇺🇸 USRelay C, server: in01.node2022.biz, port: 7532, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇺🇸 USRelay D, server: in02.node2022.biz, port: 7532, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇰🇷 KRRelay A, server: in03.node2022.biz, port: 7561, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇰🇷 KRRelay B, server: in01.node2022.biz, port: 7561, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇭🇰 HKIEPL A, server: iepl03.node2022.biz, port: 7511, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇭🇰 HKRelay A, server: in01.node2022.biz, port: 7511, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇭🇰 HKRelay B, server: in02.node2022.biz, port: 7511, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇭🇰 HKRelay C, server: in03.node2022.biz, port: 7512, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇭🇰 HKRelay D, server: in01.node2022.biz, port: 7512, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇭🇰 HKRelay E, server: in02.node2022.biz, port: 7513, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇭🇰 HKRelay F, server: in03.node2022.biz, port: 7513, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇲🇾 MYRelay A, server: in01.node2022.biz, port: 7551, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+  - {name: 🇲🇾 MYRelay B, server: in02.node2022.biz, port: 7551, type: ss, cipher: aes-128-gcm, password: wDnKZU, plugin: obfs, plugin-opts: {mode: http, host: 41d4386253.apple.com}}
+proxy-groups:
+  - name: 🍃 Proxies
+    type: select
+    proxies:
+      - ⭐️ Auto
+      - 🇷🇺 其他RURelay A
+      - 🇩🇪 其他DERelay A
+      - 🇦🇺 其他AURelay A
+      - 🇰🇷 其他UKRelay A
+      - 🇹🇼 TWRelay A
+      - 🇹🇼 TWRelay B
+      - 🇸🇬 SGIEPL A
+      - 🇸🇬 SGRelay A
+      - 🇸🇬 SGRelay B
+      - 🇸🇬 SGRelay C
+      - 🇸🇬 SGRelay D
+      - 🇸🇬 SGRelay E
+      - 🇸🇬 SGRelay F
+      - 🇯🇵 JPIEPL A
+      - 🇯🇵 JPRelay A
+      - 🇯🇵 JPRelay B
+      - 🇯🇵 JPRelay C
+      - 🇯🇵 JPRelay D
+      - 🇯🇵 JPRelay E
+      - 🇯🇵 JPRelay F
+      - 🇺🇸 USIEPL A
+      - 🇺🇸 USIEPL C
+      - 🇺🇸 USRelay A
+      - 🇺🇸 USRelay B
+      - 🇺🇸 USRelay C
+      - 🇺🇸 USRelay D
+      - 🇰🇷 KRRelay A
+      - 🇰🇷 KRRelay B
+      - 🇭🇰 HKIEPL A
+      - 🇭🇰 HKRelay A
+      - 🇭🇰 HKRelay B
+      - 🇭🇰 HKRelay C
+      - 🇭🇰 HKRelay D
+      - 🇭🇰 HKRelay E
+      - 🇭🇰 HKRelay F
+      - 🇲🇾 MYRelay A
+      - 🇲🇾 MYRelay B
+  - name: 🍂 Domestic
+    type: select
+    proxies:
+      - DIRECT
+      - 🍃 Proxies
+  - name: ☁️ Others
+    type: select
+    proxies:
+      - 🍃 Proxies
+      - 🍂 Domestic
+  - name: ⭐️ Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 28800
+    proxies:
+      - 🇷🇺 其他RURelay A
+      - 🇩🇪 其他DERelay A
+      - 🇦🇺 其他AURelay A
+      - 🇰🇷 其他UKRelay A
+      - 🇹🇼 TWRelay A
+      - 🇹🇼 TWRelay B
+      - 🇸🇬 SGIEPL A
+      - 🇸🇬 SGRelay A
+      - 🇸🇬 SGRelay B
+      - 🇸🇬 SGRelay C
+      - 🇸🇬 SGRelay D
+      - 🇸🇬 SGRelay E
+      - 🇸🇬 SGRelay F
+      - 🇯🇵 JPIEPL A
+      - 🇯🇵 JPRelay A
+      - 🇯🇵 JPRelay B
+      - 🇯🇵 JPRelay C
+      - 🇯🇵 JPRelay D
+      - 🇯🇵 JPRelay E
+      - 🇯🇵 JPRelay F
+      - 🇺🇸 USIEPL A
+      - 🇺🇸 USIEPL C
+      - 🇺🇸 USRelay A
+      - 🇺🇸 USRelay B
+      - 🇺🇸 USRelay C
+      - 🇺🇸 USRelay D
+      - 🇰🇷 KRRelay A
+      - 🇰🇷 KRRelay B
+      - 🇭🇰 HKIEPL A
+      - 🇭🇰 HKRelay A
+      - 🇭🇰 HKRelay B
+      - 🇭🇰 HKRelay C
+      - 🇭🇰 HKRelay D
+      - 🇭🇰 HKRelay E
+      - 🇭🇰 HKRelay F
+      - 🇲🇾 MYRelay A
+      - 🇲🇾 MYRelay B
+rules:
+ - DOMAIN-SUFFIX,4gtv.tv,🍃 Proxies
+ - DOMAIN,4gtvfreepcvod-cds.cdn.hinet.net,🍃 Proxies
+ - DOMAIN,abematv.akamaized.net,🍃 Proxies
+ - DOMAIN,ds-linear-abematv.akamaized.net,🍃 Proxies
+ - DOMAIN,ds-vod-abematv.akamaized.net,🍃 Proxies
+ - DOMAIN,linear-abematv.akamaized.net,🍃 Proxies
+ - DOMAIN-SUFFIX,abema.io,🍃 Proxies
+ - DOMAIN-SUFFIX,abema.tv,🍃 Proxies
+ - DOMAIN-SUFFIX,ameba.jp,🍃 Proxies
+ - DOMAIN-SUFFIX,hayabusa.io,🍃 Proxies
+ - DOMAIN-SUFFIX,c4assets.com,🍃 Proxies
+ - DOMAIN-SUFFIX,channel4.com,🍃 Proxies
+ - DOMAIN,avodmp4s3ww-a.akamaihd.net,🍃 Proxies
+ - DOMAIN,d1v5ir2lpwr8os.cloudfront.net,🍃 Proxies
+ - DOMAIN,d22qjgkvxw22r6.cloudfront.net,🍃 Proxies
+ - DOMAIN,d25xi40x97liuc.cloudfront.net,🍃 Proxies
+ - DOMAIN,dmqdd6hw24ucf.cloudfront.net,🍃 Proxies
+ - DOMAIN-KEYWORD,avoddashs,🍃 Proxies
+ - DOMAIN-SUFFIX,aiv-cdn.net,🍃 Proxies
+ - DOMAIN-SUFFIX,aiv-delivery.net,🍃 Proxies
+ - DOMAIN-SUFFIX,amazonvideo.com,🍃 Proxies
+ - DOMAIN-SUFFIX,media-amazon.com,🍃 Proxies
+ - DOMAIN-SUFFIX,primevideo.com,🍃 Proxies
+ - DOMAIN,ocvideo.apple.com,🍃 Proxies
+ - DOMAIN,gamer-cds.cdn.hinet.net,🍃 Proxies
+ - DOMAIN,gamer2-cds.cdn.hinet.net,🍃 Proxies
+ - DOMAIN-SUFFIX,bahamut.com.tw,🍃 Proxies
+ - DOMAIN-SUFFIX,gamer.com.tw,🍃 Proxies
+ - DOMAIN-KEYWORD,bbcfmt,🍃 Proxies
+ - DOMAIN-KEYWORD,uk-live,🍃 Proxies
+ - DOMAIN-SUFFIX,bbc.co.uk,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,bbci.co.uk,🍃 Proxies,force-remote-dns
+ - DOMAIN,d151l6v8er5bdm.cloudfront.net,🍃 Proxies
+ - DOMAIN-KEYWORD,voddazn,🍃 Proxies
+ - DOMAIN-SUFFIX,dazn-api.com,🍃 Proxies
+ - DOMAIN-SUFFIX,dazn.com,🍃 Proxies
+ - DOMAIN-SUFFIX,deezer.com,🍃 Proxies
+ - DOMAIN-SUFFIX,dzcdn.net,🍃 Proxies
+ - DOMAIN,cdn.registerdisney.go.com,🍃 Proxies
+ - DOMAIN-SUFFIX,bamgrid.com,🍃 Proxies
+ - DOMAIN-SUFFIX,disney-plus.net,🍃 Proxies
+ - DOMAIN-SUFFIX,disneyplus.com,🍃 Proxies
+ - DOMAIN-SUFFIX,dssott.com,🍃 Proxies
+ - DOMAIN,bcbolt446c5271-a.akamaihd.net,🍃 Proxies
+ - DOMAIN,content.jwplatform.com,🍃 Proxies
+ - DOMAIN,edge.api.brightcove.com,🍃 Proxies
+ - DOMAIN,videos-f.jwpsrv.com,🍃 Proxies
+ - DOMAIN-SUFFIX,encoretvb.com,🍃 Proxies
+ - DOMAIN-SUFFIX,fox.com,🍃 Proxies
+ - DOMAIN-SUFFIX,foxdcg.com,🍃 Proxies
+ - DOMAIN-SUFFIX,uplynk.com,🍃 Proxies
+ - DOMAIN,dashasiafox.akamaized.netflix,🍃 Proxies
+ - DOMAIN,staticasiafox.akamaized.net,🍃 Proxies
+ - DOMAIN-SUFFIX,foxplus.com,🍃 Proxies
+ - DOMAIN-SUFFIX,theplatform.com,🍃 Proxies
+ - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🍃 Proxies
+ - DOMAIN,bcbolthboa-a.akamaihd.net,🍃 Proxies
+ - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,🍃 Proxies
+ - DOMAIN,dai3fd1oh325y.cloudfront.net,🍃 Proxies
+ - DOMAIN,hboasia1-i.akamaihd.net,🍃 Proxies
+ - DOMAIN,hboasia2-i.akamaihd.net,🍃 Proxies
+ - DOMAIN,hboasia3-i.akamaihd.net,🍃 Proxies
+ - DOMAIN,hboasia4-i.akamaihd.net,🍃 Proxies
+ - DOMAIN,hboasia5-i.akamaihd.net,🍃 Proxies
+ - DOMAIN,manifest.prod.boltdns.net,🍃 Proxies
+ - DOMAIN,players.brightcove.net,🍃 Proxies
+ - DOMAIN,s3-ap-southeast-1.amazonaws.com,🍃 Proxies
+ - DOMAIN-SUFFIX,hbo.com,🍃 Proxies
+ - DOMAIN-SUFFIX,hboasia.com,🍃 Proxies
+ - DOMAIN-SUFFIX,hbogo.com,🍃 Proxies
+ - DOMAIN-SUFFIX,hbogoasia.com,🍃 Proxies
+ - DOMAIN-SUFFIX,hbogoasia.hk,🍃 Proxies
+ - DOMAIN-SUFFIX,hbonow.com,🍃 Proxies
+ - DOMAIN-SUFFIX,happyon.jp,🍃 Proxies
+ - DOMAIN-SUFFIX,hulu.com,🍃 Proxies
+ - DOMAIN-SUFFIX,hulu.jp,🍃 Proxies
+ - DOMAIN-SUFFIX,huluim.com,🍃 Proxies
+ - DOMAIN-SUFFIX,hulustream.com,🍃 Proxies
+ - DOMAIN-SUFFIX,5itv.tv,🍃 Proxies
+ - DOMAIN-SUFFIX,ocnttv.com,🍃 Proxies
+ - DOMAIN,itvpnpmobile-a.akamaihd.net,🍃 Proxies
+ - DOMAIN-SUFFIX,itv.com,🍃 Proxies
+ - DOMAIN-SUFFIX,itvstatic.com,🍃 Proxies
+ - DOMAIN-SUFFIX,joox.com,🍃 Proxies
+ - DOMAIN,content.jwplatform.com,🍃 Proxies
+ - DOMAIN,videos-f.jwpsrv.com,🍃 Proxies
+ - DOMAIN-SUFFIX,kfs.io,🍃 Proxies
+ - DOMAIN-SUFFIX,kkbox.com,🍃 Proxies
+ - DOMAIN-SUFFIX,kkbox.com.tw,🍃 Proxies
+ - DOMAIN,kktv-theater.kk.stream,🍃 Proxies
+ - DOMAIN-SUFFIX,kktv.com.tw,🍃 Proxies
+ - DOMAIN-SUFFIX,kktv.me,🍃 Proxies
+ - DOMAIN,d3c7rimkq79yfu.cloudfront.net,🍃 Proxies
+ - DOMAIN-SUFFIX,linetv.tw,🍃 Proxies
+ - DOMAIN,litvfreemobile-hichannel.cdn.hinet.net,🍃 Proxies
+ - DOMAIN-SUFFIX,litv.tv,🍃 Proxies
+ - DOMAIN,d349g9zuie06uo.cloudfront.net,🍃 Proxies
+ - DOMAIN-SUFFIX,channel5.com,🍃 Proxies
+ - DOMAIN-SUFFIX,my5.tv,🍃 Proxies
+ - DOMAIN-SUFFIX,mytvsuper.com,🍃 Proxies
+ - DOMAIN-SUFFIX,tvb.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflix.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflix.net,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest0.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest1.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest2.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest3.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest4.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest5.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest6.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest7.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest8.com,🍃 Proxies
+ - DOMAIN-SUFFIX,netflixdnstest9.com,🍃 Proxies
+ - DOMAIN-SUFFIX,nflxext.com,🍃 Proxies
+ - DOMAIN-SUFFIX,nflximg.com,🍃 Proxies
+ - DOMAIN-SUFFIX,nflximg.net,🍃 Proxies
+ - DOMAIN-SUFFIX,nflxsearch.net,🍃 Proxies
+ - DOMAIN-SUFFIX,nflxso.net,🍃 Proxies
+ - DOMAIN-SUFFIX,nflxvideo.net,🍃 Proxies
+ - IP-CIDR,23.246.0.0/18,🍃 Proxies,no-resolve
+ - IP-CIDR,37.77.184.0/21,🍃 Proxies,no-resolve
+ - IP-CIDR,45.57.0.0/17,🍃 Proxies,no-resolve
+ - IP-CIDR,64.120.128.0/17,🍃 Proxies,no-resolve
+ - IP-CIDR,66.197.128.0/17,🍃 Proxies,no-resolve
+ - IP-CIDR,108.175.32.0/20,🍃 Proxies,no-resolve
+ - IP-CIDR,192.173.64.0/18,🍃 Proxies,no-resolve
+ - IP-CIDR,198.38.96.0/19,🍃 Proxies,no-resolve
+ - IP-CIDR,198.45.48.0/20,🍃 Proxies,no-resolve
+ - DOMAIN-SUFFIX,dmc.nico,🍃 Proxies
+ - DOMAIN-SUFFIX,nicovideo.jp,🍃 Proxies
+ - DOMAIN-SUFFIX,nimg.jp,🍃 Proxies
+ - DOMAIN-SUFFIX,socdm.com,🍃 Proxies
+ - DOMAIN-SUFFIX,pandora.com,🍃 Proxies
+ - DOMAIN-SUFFIX,pbs.org,🍃 Proxies
+ - DOMAIN-SUFFIX,phncdn.com,🍃 Proxies
+ - DOMAIN-SUFFIX,pornhub.com,🍃 Proxies
+ - DOMAIN-SUFFIX,pornhubpremium.com,🍃 Proxies
+ - DOMAIN-SUFFIX,p-cdn.us,🍃 Proxies
+ - DOMAIN-SUFFIX,sndcdn.com,🍃 Proxies
+ - DOMAIN-SUFFIX,soundcloud.com,🍃 Proxies
+ - DOMAIN-KEYWORD,-spotify-com,🍃 Proxies
+ - DOMAIN-SUFFIX,pscdn.co,🍃 Proxies
+ - DOMAIN-SUFFIX,scdn.co,🍃 Proxies
+ - DOMAIN-SUFFIX,spoti.fi,🍃 Proxies
+ - DOMAIN-SUFFIX,spotify.com,🍃 Proxies
+ - IP-CIDR,35.186.224.47/32,🍃 Proxies,no-resolve
+ - DOMAIN,hamifans.emome.net,🍃 Proxies
+ - DOMAIN-SUFFIX,skyking.com.tw,🍃 Proxies
+ - DOMAIN-SUFFIX,tidal.com,🍃 Proxies
+ - DOMAIN,api-h2.tiktokv.com,🍃 Proxies
+ - DOMAIN,api2-19-h2.musical.ly,🍃 Proxies
+ - DOMAIN-KEYWORD,-tiktokcdn-com,🍃 Proxies
+ - DOMAIN-SUFFIX,muscdn.com,🍃 Proxies
+ - DOMAIN-SUFFIX,musical.ly,🍃 Proxies
+ - DOMAIN-SUFFIX,tiktokcdn.com,🍃 Proxies
+ - DOMAIN-SUFFIX,jtvnw.net,🍃 Proxies
+ - DOMAIN-SUFFIX,ttvnw.net,🍃 Proxies
+ - DOMAIN-SUFFIX,twitch.tv,🍃 Proxies
+ - DOMAIN-SUFFIX,twitchcdn.net,🍃 Proxies
+ - DOMAIN,api.viu.now.com,🍃 Proxies
+ - DOMAIN,d1k2us671qcoau.cloudfront.net,🍃 Proxies
+ - DOMAIN,d2anahhhmp1ffz.cloudfront.net,🍃 Proxies
+ - DOMAIN,dfp6rglgjqszk.cloudfront.net,🍃 Proxies
+ - DOMAIN-SUFFIX,viu.com,🍃 Proxies
+ - DOMAIN-SUFFIX,viu.tv,🍃 Proxies
+ - DOMAIN,youtubei.googleapis.com,🍃 Proxies
+ - DOMAIN-SUFFIX,googlevideo.com,🍃 Proxies
+ - DOMAIN-SUFFIX,youtube.com,🍃 Proxies
+ - DOMAIN-SUFFIX,sho.com,🍃 Proxies
+ - DOMAIN-SUFFIX,showtime.com,🍃 Proxies
+ - DOMAIN-SUFFIX,cloudflareresolve.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,rix.ee,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,rixcloud.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,rixcloud.us,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,rixcloud.io,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,rixcloud.app,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,rixcloud.ee,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,appspot.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,blogger.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,getoutline.org,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,gvt0.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,gvt1.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,gvt3.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-KEYWORD,google,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,gmail.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-KEYWORD,blogspot,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,googleapis.cn,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,cdninstagram.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,fb.me,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,fbcdn.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,instagram.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,messenger.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,whatsapp.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,whatsapp.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,oculus.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,oculuscdn.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-KEYWORD,facebook,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,t.co,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,twimg.co,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,twimg.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,twitpic.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,twitter.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,line.me,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,line-apps.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,line-scdn.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,naver.jp,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,abc.net.au,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,amazon.co.jp,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,apk-dl.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,apkpure.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,ask.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,avgle.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,bandwagonhost.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,bbc.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,behance.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,bibox.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,binance.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,bitfinex.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,booklive.jp,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,bwh1.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,cbc.ca,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,dailymotion.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,deezer.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,discordapp.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,dropbox.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,dropboxusercontent.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,duckduckgo.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,feedly.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,flickr.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,gate.io,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,goodreads.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,hbg.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,huobi.pro,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,ifixit.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,initiummall.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,issuu.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,jkforum.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,kakao.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,live.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,medium.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,mega.nz,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,naver.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,nyt.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,nytco.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,nytimes.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,nytstyle.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,ok.ru,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,okex.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,pinimg.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,pixiv.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,pornhub.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,quora.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,reddit.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,redditmedia.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,reuters.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,scribd.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,shadowsocks.org,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,slideshare.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,soundcloud.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,steamcommunity.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,telegram.org,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,theinitium.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,tineye.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,tumblr.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,turbobit.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,twitch.tv,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,uptodown.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,v2ray.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,vimeo.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,vine.co,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,voachinese.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,whoer.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,wikipedia.org,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,wsj.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,wsj.net,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,xvideos.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,yahoo.com,🍃 Proxies,force-remote-dns
+ - DOMAIN,onedrive.live.com,🍃 Proxies,force-remote-dns
+ - DOMAIN-KEYWORD,jav,🍃 Proxies,force-remote-dns
+ - DOMAIN-KEYWORD,pinterest,🍃 Proxies,force-remote-dns
+ - DOMAIN-KEYWORD,porn,🍃 Proxies,force-remote-dns
+ - DOMAIN-SUFFIX,appsto.re,🍃 Proxies
+ - DOMAIN,api-glb-sea.smoot.apple.com,🍃 Proxies
+ - DOMAIN,audiocontentdownload.apple.com,🍃 Proxies
+ - DOMAIN,beta.itunes.apple.com,🍃 Proxies
+ - DOMAIN,books.itunes.apple.com,🍃 Proxies
+ - DOMAIN,embed.music.apple.com,🍃 Proxies
+ - DOMAIN,hls.itunes.apple.com,🍃 Proxies
+ - DOMAIN,itunes.apple.com,🍃 Proxies
+ - DOMAIN,lookup-api.apple.com,🍃 Proxies
+ - DOMAIN,news-client.apple.com,🍃 Proxies
+ - DOMAIN,news-edge.apple.com,🍃 Proxies
+ - DOMAIN-SUFFIX,abc.xyz,🍃 Proxies
+ - DOMAIN-SUFFIX,admin.recaptcha.net,🍃 Proxies
+ - DOMAIN-SUFFIX,ampproject.org,🍃 Proxies
+ - DOMAIN-SUFFIX,android.com,🍃 Proxies
+ - DOMAIN-SUFFIX,androidify.com,🍃 Proxies
+ - DOMAIN-SUFFIX,autodraw.com,🍃 Proxies
+ - DOMAIN-SUFFIX,capitalg.com,🍃 Proxies
+ - DOMAIN-SUFFIX,certificate-transparency.org,🍃 Proxies
+ - DOMAIN-SUFFIX,chrome.com,🍃 Proxies
+ - DOMAIN-SUFFIX,chromeexperiments.com,🍃 Proxies
+ - DOMAIN-SUFFIX,chromestatus.com,🍃 Proxies
+ - DOMAIN-SUFFIX,chromium.org,🍃 Proxies
+ - DOMAIN-SUFFIX,creativelab5.com,🍃 Proxies
+ - DOMAIN-SUFFIX,debug.com,🍃 Proxies
+ - DOMAIN-SUFFIX,deepmind.com,🍃 Proxies
+ - DOMAIN-SUFFIX,dialogflow.com,🍃 Proxies
+ - DOMAIN-SUFFIX,firebaseio.com,🍃 Proxies
+ - DOMAIN-SUFFIX,getmdl.io,🍃 Proxies
+ - DOMAIN-SUFFIX,ggpht.com,🍃 Proxies
+ - DOMAIN-SUFFIX,gmail.com,🍃 Proxies
+ - DOMAIN-SUFFIX,gmodules.com,🍃 Proxies
+ - DOMAIN-SUFFIX,godoc.org,🍃 Proxies
+ - DOMAIN-SUFFIX,golang.org,🍃 Proxies
+ - DOMAIN-SUFFIX,gstatic.com,🍃 Proxies
+ - DOMAIN-SUFFIX,gv.com,🍃 Proxies
+ - DOMAIN-SUFFIX,gwtproject.org,🍃 Proxies
+ - DOMAIN-SUFFIX,itasoftware.com,🍃 Proxies
+ - DOMAIN-SUFFIX,madewithcode.com,🍃 Proxies
+ - DOMAIN-SUFFIX,material.io,🍃 Proxies
+ - DOMAIN-SUFFIX,polymer-project.org,🍃 Proxies
+ - DOMAIN-SUFFIX,recaptcha.net,🍃 Proxies
+ - DOMAIN-SUFFIX,shattered.io,🍃 Proxies
+ - DOMAIN-SUFFIX,synergyse.com,🍃 Proxies
+ - DOMAIN-SUFFIX,tensorflow.org,🍃 Proxies
+ - DOMAIN-SUFFIX,tiltbrush.com,🍃 Proxies
+ - DOMAIN-SUFFIX,waveprotocol.org,🍃 Proxies
+ - DOMAIN-SUFFIX,waymo.com,🍃 Proxies
+ - DOMAIN-SUFFIX,webmproject.org,🍃 Proxies
+ - DOMAIN-SUFFIX,webrtc.org,🍃 Proxies
+ - DOMAIN-SUFFIX,whatbrowser.org,🍃 Proxies
+ - DOMAIN-SUFFIX,widevine.com,🍃 Proxies
+ - DOMAIN-SUFFIX,x.company,🍃 Proxies
+ - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🍃 Proxies
+ - DOMAIN-SUFFIX,youtu.be,🍃 Proxies
+ - DOMAIN-SUFFIX,yt.be,🍃 Proxies
+ - DOMAIN-SUFFIX,ytimg.com,🍃 Proxies
+ - DOMAIN-SUFFIX,office365.com,🍃 Proxies
+ - DOMAIN-SUFFIX,windows.net,🍃 Proxies
+ - DOMAIN-SUFFIX,oracle.com,🍃 Proxies
+ - DOMAIN,ccmdl.adobe.com,🍃 Proxies
+ - DOMAIN,media.steampowered.com,🍃 Proxies
+ - DOMAIN,wego.here.com,🍃 Proxies
+ - DOMAIN-SUFFIX,gameloft.com,🍃 Proxies
+ - DOMAIN-SUFFIX,majsoul.union-game.com,🍃 Proxies
+ - DOMAIN-SUFFIX,520cc.cc,🍃 Proxies
+ - DOMAIN-SUFFIX,bing.com,🍃 Proxies
+ - DOMAIN-SUFFIX,cloudfront.net,🍃 Proxies
+ - DOMAIN-SUFFIX,fb.com,🍃 Proxies
+ - DOMAIN-SUFFIX,majsoul.union-game.com,🍃 Proxies
+ - DOMAIN-SUFFIX,newsblur.com,🍃 Proxies
+ - DOMAIN-KEYWORD,github,🍃 Proxies
+ - DOMAIN-SUFFIX,telegra.ph,🍃 Proxies
+ - IP-CIDR,91.108.4.0/22,🍃 Proxies,no-resolve
+ - IP-CIDR,91.108.8.0/22,🍃 Proxies,no-resolve
+ - IP-CIDR,91.108.56.0/22,🍃 Proxies,no-resolve
+ - IP-CIDR,109.239.140.0/24,🍃 Proxies,no-resolve
+ - IP-CIDR,149.154.160.0/20,🍃 Proxies,no-resolve
+ - DOMAIN-SUFFIX,acfun.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,aixifan.com,🍂 Domestic
+ - DOMAIN-SUFFIX,biliapi.net,🍂 Domestic
+ - DOMAIN-SUFFIX,bilibili.com,🍂 Domestic
+ - DOMAIN-SUFFIX,bilivideo.com,🍂 Domestic
+ - DOMAIN-SUFFIX,hdslb.com,🍂 Domestic
+ - DOMAIN-SUFFIX,video.qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,i.qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,v.qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,iqiyi.com,🍂 Domestic
+ - DOMAIN-SUFFIX,71edge.com,🍂 Domestic
+ - DOMAIN-SUFFIX,soku.com,🍂 Domestic
+ - DOMAIN-SUFFIX,youku.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ykimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ixigua.com,🍂 Domestic
+ - DOMAIN-SUFFIX,snssdk.com,🍂 Domestic
+ - DOMAIN-SUFFIX,hitv.com,🍂 Domestic
+ - DOMAIN-SUFFIX,hunantv.com,🍂 Domestic
+ - DOMAIN-SUFFIX,mgtv.com,🍂 Domestic
+ - DOMAIN-SUFFIX,le.com,🍂 Domestic
+ - DOMAIN-SUFFIX,pplive.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,pptv.com,🍂 Domestic
+ - DOMAIN-SUFFIX,itc.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,sohu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,cmvideo.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,miguvideo.com,🍂 Domestic
+ - DOMAIN-SUFFIX,music.qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,music.tc.qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,qqmusic.qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,tencentmusic.com,🍂 Domestic
+ - DOMAIN-SUFFIX,y.qq.com,🍂 Domestic
+ - DOMAIN,aqqmusic.tc.qq.com,🍂 Domestic
+ - DOMAIN,moo.qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,kuwo.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,kugou.com,🍂 Domestic
+ - DOMAIN-SUFFIX,music.163.com,🍂 Domestic
+ - DOMAIN-SUFFIX,music.126.net,🍂 Domestic
+ - DOMAIN,mam.netease.com,🍂 Domestic
+ - DOMAIN,api.iplay.163.com,🍂 Domestic
+ - DOMAIN-SUFFIX,qianqian.com,🍂 Domestic
+ - DOMAIN-SUFFIX,taihe.com,🍂 Domestic
+ - DOMAIN-SUFFIX,migu.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,ai.xiaomi.com,🍂 Domestic
+ - DOMAIN-SUFFIX,music.xiaomi.com,🍂 Domestic
+ - DOMAIN-SUFFIX,dmhmusic.com,🍂 Domestic
+ - DOMAIN,doh.rixcloud.dev,🍂 Domestic
+ - DOMAIN-SUFFIX,rixcloudstatus.com,🍂 Domestic
+ - DOMAIN-SUFFIX,rixcloudstatus.io,🍂 Domestic
+ - DOMAIN-SUFFIX,rixcloud.fail,🍂 Domestic
+ - DOMAIN-SUFFIX,qhimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,qhres.com,🍂 Domestic
+ - DOMAIN-SUFFIX,akadns.net,🍂 Domestic
+ - DOMAIN-SUFFIX,alibaba.com,🍂 Domestic
+ - DOMAIN-SUFFIX,alicdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,alikunlun.com,🍂 Domestic
+ - DOMAIN-SUFFIX,alipay.com,🍂 Domestic
+ - DOMAIN-SUFFIX,amap.com,🍂 Domestic
+ - DOMAIN-SUFFIX,autonavi.com,🍂 Domestic
+ - DOMAIN-SUFFIX,dingtalk.com,🍂 Domestic
+ - DOMAIN-SUFFIX,mxhichina.com,🍂 Domestic
+ - DOMAIN-SUFFIX,soku.com,🍂 Domestic
+ - DOMAIN-SUFFIX,taobao.com,🍂 Domestic
+ - DOMAIN-SUFFIX,tmall.com,🍂 Domestic
+ - DOMAIN-SUFFIX,tmall.hk,🍂 Domestic
+ - DOMAIN-SUFFIX,xiami.com,🍂 Domestic
+ - DOMAIN-SUFFIX,xiami.net,🍂 Domestic
+ - DOMAIN-SUFFIX,ykimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,youku.com,🍂 Domestic
+ - DOMAIN-SUFFIX,icloud.com.cn,🍂 Domestic
+ - DOMAIN,gs-loc-cn.apple.com,🍂 Domestic
+ - DOMAIN-SUFFIX,baidu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,baidubcr.com,🍂 Domestic
+ - DOMAIN-SUFFIX,bdstatic.com,🍂 Domestic
+ - DOMAIN-SUFFIX,yunjiasu-cdn.net,🍂 Domestic
+ - DOMAIN-SUFFIX,acg.tv,🍂 Domestic
+ - DOMAIN-SUFFIX,acgvideo.com,🍂 Domestic
+ - DOMAIN-SUFFIX,bilibili.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,bilibili.com,🍂 Domestic
+ - DOMAIN-SUFFIX,bilibili.tv,🍂 Domestic
+ - DOMAIN-SUFFIX,bilivideo.com,🍂 Domestic
+ - DOMAIN-SUFFIX,hdslb.com,🍂 Domestic
+ - DOMAIN-SUFFIX,battle.net,🍂 Domestic
+ - DOMAIN-SUFFIX,blizzard.com,🍂 Domestic
+ - DOMAIN,blzddist1-a.akamaihd.net,🍂 Domestic
+ - DOMAIN-SUFFIX,bytecdn.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,feiliao.com,🍂 Domestic
+ - DOMAIN-SUFFIX,iesdouyin.com,🍂 Domestic
+ - DOMAIN-SUFFIX,pstatp.com,🍂 Domestic
+ - DOMAIN-SUFFIX,snssdk.com,🍂 Domestic
+ - DOMAIN-SUFFIX,toutiao.com,🍂 Domestic
+ - DOMAIN-SUFFIX,cctv.com,🍂 Domestic
+ - DOMAIN-SUFFIX,cctvpic.com,🍂 Domestic
+ - DOMAIN-SUFFIX,livechina.com,🍂 Domestic
+ - DOMAIN-SUFFIX,189.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,21cn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,343480.com,🍂 Domestic
+ - DOMAIN-SUFFIX,baduziyuan.com,🍂 Domestic
+ - DOMAIN-SUFFIX,com-hs-hkdy.com,🍂 Domestic
+ - DOMAIN-SUFFIX,czybjz.com,🍂 Domestic
+ - DOMAIN-SUFFIX,dandanzan.com,🍂 Domestic
+ - DOMAIN-SUFFIX,fjhps.com,🍂 Domestic
+ - DOMAIN-SUFFIX,kuyunbo.club,🍂 Domestic
+ - DOMAIN-SUFFIX,didialift.com,🍂 Domestic
+ - DOMAIN-SUFFIX,didiglobal.com,🍂 Domestic
+ - DOMAIN-SUFFIX,udache.com,🍂 Domestic
+ - DOMAIN-SUFFIX,hitv.com,🍂 Domestic
+ - DOMAIN-SUFFIX,mgtv.com,🍂 Domestic
+ - DOMAIN,ip.bjango.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ip-cdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ip.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,ip.la,🍂 Domestic
+ - DOMAIN-SUFFIX,ipip.net,🍂 Domestic
+ - DOMAIN-SUFFIX,ipv6-test.com,🍂 Domestic
+ - DOMAIN-SUFFIX,test-ipv6.com,🍂 Domestic
+ - DOMAIN-SUFFIX,whatismyip.com,🍂 Domestic
+ - DOMAIN-SUFFIX,71.am.com,🍂 Domestic
+ - DOMAIN-SUFFIX,iqiyi.com,🍂 Domestic
+ - DOMAIN-SUFFIX,iqiyipic.com,🍂 Domestic
+ - DOMAIN-SUFFIX,360buyimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,jd.com,🍂 Domestic
+ - DOMAIN-SUFFIX,jd.hk,🍂 Domestic
+ - DOMAIN-SUFFIX,jdpay.com,🍂 Domestic
+ - DOMAIN-SUFFIX,iciba.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ksosoft.com,🍂 Domestic
+ - DOMAIN-SUFFIX,meipai.com,🍂 Domestic
+ - DOMAIN-SUFFIX,meitu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,meitudata.com,🍂 Domestic
+ - DOMAIN-SUFFIX,meitustat.com,🍂 Domestic
+ - DOMAIN-SUFFIX,duokan.com,🍂 Domestic
+ - DOMAIN-SUFFIX,mi-img.com,🍂 Domestic
+ - DOMAIN-SUFFIX,mifile.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,miui.com,🍂 Domestic
+ - DOMAIN-SUFFIX,miwifi.com,🍂 Domestic
+ - DOMAIN-SUFFIX,xiaomi.com,🍂 Domestic
+ - DOMAIN,cya.gg,🍂 Domestic
+ - DOMAIN,ipv4.rainway.com,🍂 Domestic
+ - DOMAIN,ipv6.rainway.com,🍂 Domestic
+ - DOMAIN-SUFFIX,126.net,🍂 Domestic
+ - DOMAIN-SUFFIX,127.net,🍂 Domestic
+ - DOMAIN-SUFFIX,163.com,🍂 Domestic
+ - DOMAIN-SUFFIX,163yun.com,🍂 Domestic
+ - DOMAIN-SUFFIX,lofter.com,🍂 Domestic
+ - DOMAIN-SUFFIX,netease.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ydstatic.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sina.com,🍂 Domestic
+ - DOMAIN-SUFFIX,weibo.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,weibo.com,🍂 Domestic
+ - DOMAIN-SUFFIX,weibocdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,itc.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,sohu-inc.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sohu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sohu.com.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,sohucs.com,🍂 Domestic
+ - DOMAIN-SUFFIX,v-56.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sogo.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sogou.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sogoucdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,jstarkan.com,🍂 Domestic
+ - DOMAIN,vi.l.qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,dns.pub,🍂 Domestic
+ - DOMAIN-SUFFIX,doh.pub,🍂 Domestic
+ - DOMAIN-SUFFIX,qcloud.com,🍂 Domestic
+ - DOMAIN-SUFFIX,52tesla.com,🍂 Domestic
+ - DOMAIN-SUFFIX,xiaote.net,🍂 Domestic
+ - DOMAIN-SUFFIX,gtimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,idqqimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,igamecj.com,🍂 Domestic
+ - DOMAIN-SUFFIX,myapp.com,🍂 Domestic
+ - DOMAIN-SUFFIX,myqcloud.com,🍂 Domestic
+ - DOMAIN-SUFFIX,qpic.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,qq.com,🍂 Domestic
+ - DOMAIN-SUFFIX,tencent-cloud.net,🍂 Domestic
+ - DOMAIN-SUFFIX,tencent.com,🍂 Domestic
+ - DOMAIN-SUFFIX,jstucdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,zimuzu.io,🍂 Domestic
+ - DOMAIN-SUFFIX,zimuzu.tv,🍂 Domestic
+ - DOMAIN-SUFFIX,zmz2019.com,🍂 Domestic
+ - DOMAIN-SUFFIX,zmzapi.com,🍂 Domestic
+ - DOMAIN-SUFFIX,zmzapi.net,🍂 Domestic
+ - DOMAIN-SUFFIX,zmzfile.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ccgslb.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ccgslb.net,🍂 Domestic
+ - DOMAIN-SUFFIX,chinanetcenter.com,🍂 Domestic
+ - DOMAIN-SUFFIX,meixincdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ourdvs.com,🍂 Domestic
+ - DOMAIN-SUFFIX,staticdn.net,🍂 Domestic
+ - DOMAIN-SUFFIX,wangsu.com,🍂 Domestic
+ - DOMAIN,cn.download.nvidia.com,🍂 Domestic
+ - DOMAIN-KEYWORD,amplifi,🍂 Domestic
+ - DOMAIN-SUFFIX,12306.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,360in.com,🍂 Domestic
+ - DOMAIN-SUFFIX,40017.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,51ym.me,🍂 Domestic
+ - DOMAIN-SUFFIX,8686c.com,🍂 Domestic
+ - DOMAIN-SUFFIX,abchina.com,🍂 Domestic
+ - DOMAIN-SUFFIX,accuweather.com,🍂 Domestic
+ - DOMAIN-SUFFIX,aicoinstorge.com,🍂 Domestic
+ - DOMAIN-SUFFIX,air-matters.com,🍂 Domestic
+ - DOMAIN-SUFFIX,air-matters.io,🍂 Domestic
+ - DOMAIN-SUFFIX,aixifan.com,🍂 Domestic
+ - DOMAIN-SUFFIX,amd.com,🍂 Domestic
+ - DOMAIN-SUFFIX,b612.net,🍂 Domestic
+ - DOMAIN-SUFFIX,bdatu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,beitaichufang.com,🍂 Domestic
+ - DOMAIN-SUFFIX,bemanicn.cc,🍂 Domestic
+ - DOMAIN-SUFFIX,bjango.com,🍂 Domestic
+ - DOMAIN-SUFFIX,booking.com,🍂 Domestic
+ - DOMAIN-SUFFIX,bstatic.com,🍂 Domestic
+ - DOMAIN-SUFFIX,cailianpress.com,🍂 Domestic
+ - DOMAIN-SUFFIX,camera360.com,🍂 Domestic
+ - DOMAIN-SUFFIX,chinaso.com,🍂 Domestic
+ - DOMAIN-SUFFIX,chua.pro,🍂 Domestic
+ - DOMAIN-SUFFIX,chuimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,chunyu.mobi,🍂 Domestic
+ - DOMAIN-SUFFIX,chushou.tv,🍂 Domestic
+ - DOMAIN-SUFFIX,cmbchina.com,🍂 Domestic
+ - DOMAIN-SUFFIX,cmbimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,cmvideo.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,ctrip.com,🍂 Domestic
+ - DOMAIN-SUFFIX,dfcfw.com,🍂 Domestic
+ - DOMAIN-SUFFIX,dida365.com,🍂 Domestic
+ - DOMAIN-SUFFIX,docschina.org,🍂 Domestic
+ - DOMAIN-SUFFIX,douban.com,🍂 Domestic
+ - DOMAIN-SUFFIX,doubanio.com,🍂 Domestic
+ - DOMAIN-SUFFIX,douyu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,douyucdn.cn,🍂 Domestic
+ - DOMAIN-SUFFIX,dxycdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,dytt8.net,🍂 Domestic
+ - DOMAIN-SUFFIX,eastmoney.com,🍂 Domestic
+ - DOMAIN-SUFFIX,eudic.net,🍂 Domestic
+ - DOMAIN-SUFFIX,feng.com,🍂 Domestic
+ - DOMAIN-SUFFIX,fengkongcloud.com,🍂 Domestic
+ - DOMAIN-SUFFIX,frdic.com,🍂 Domestic
+ - DOMAIN-SUFFIX,futu5.com,🍂 Domestic
+ - DOMAIN-SUFFIX,futunn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,geilicdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,getpricetag.com,🍂 Domestic
+ - DOMAIN-SUFFIX,gifshow.com,🍂 Domestic
+ - DOMAIN-SUFFIX,godic.net,🍂 Domestic
+ - DOMAIN-SUFFIX,hicloud.com,🍂 Domestic
+ - DOMAIN-SUFFIX,hongxiu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,hostbuf.com,🍂 Domestic
+ - DOMAIN-SUFFIX,huxiucdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,huya.com,🍂 Domestic
+ - DOMAIN-SUFFIX,infinitynewtab.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ithome.com,🍂 Domestic
+ - DOMAIN-SUFFIX,java.com,🍂 Domestic
+ - DOMAIN-SUFFIX,jidian.im,🍂 Domestic
+ - DOMAIN-SUFFIX,kaiyanapp.com,🍂 Domestic
+ - DOMAIN-SUFFIX,kaspersky-labs.com,🍂 Domestic
+ - DOMAIN-SUFFIX,keepcdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,kkmh.com,🍂 Domestic
+ - DOMAIN-SUFFIX,licdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,linkedin.com,🍂 Domestic
+ - DOMAIN-SUFFIX,loli.net,🍂 Domestic
+ - DOMAIN-SUFFIX,luojilab.com,🍂 Domestic
+ - DOMAIN-SUFFIX,maoyan.com,🍂 Domestic
+ - DOMAIN-SUFFIX,maoyun.tv,🍂 Domestic
+ - DOMAIN-SUFFIX,meituan.com,🍂 Domestic
+ - DOMAIN-SUFFIX,meituan.net,🍂 Domestic
+ - DOMAIN-SUFFIX,mobike.com,🍂 Domestic
+ - DOMAIN-SUFFIX,mubu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,myzaker.com,🍂 Domestic
+ - DOMAIN-SUFFIX,nim-lang-cn.org,🍂 Domestic
+ - DOMAIN-SUFFIX,nvidia.com,🍂 Domestic
+ - DOMAIN-SUFFIX,paypal.com,🍂 Domestic
+ - DOMAIN-SUFFIX,paypalobjects.com,🍂 Domestic
+ - DOMAIN-SUFFIX,qdaily.com,🍂 Domestic
+ - DOMAIN-SUFFIX,qidian.com,🍂 Domestic
+ - DOMAIN-SUFFIX,qyer.com,🍂 Domestic
+ - DOMAIN-SUFFIX,qyerstatic.com,🍂 Domestic
+ - DOMAIN-SUFFIX,raychase.net,🍂 Domestic
+ - DOMAIN-SUFFIX,ronghub.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ruguoapp.com,🍂 Domestic
+ - DOMAIN-SUFFIX,s-reader.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sankuai.com,🍂 Domestic
+ - DOMAIN-SUFFIX,scomper.me,🍂 Domestic
+ - DOMAIN-SUFFIX,seafile.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sm.ms,🍂 Domestic
+ - DOMAIN-SUFFIX,smzdm.com,🍂 Domestic
+ - DOMAIN-SUFFIX,snapdrop.net,🍂 Domestic
+ - DOMAIN-SUFFIX,snwx.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sogou.com,🍂 Domestic
+ - DOMAIN-SUFFIX,sspai.com,🍂 Domestic
+ - DOMAIN-SUFFIX,takungpao.com,🍂 Domestic
+ - DOMAIN-SUFFIX,teamviewer.com,🍂 Domestic
+ - DOMAIN-SUFFIX,tianyancha.com,🍂 Domestic
+ - DOMAIN-SUFFIX,udacity.com,🍂 Domestic
+ - DOMAIN-SUFFIX,uning.com,🍂 Domestic
+ - DOMAIN-SUFFIX,vmware.com,🍂 Domestic
+ - DOMAIN-SUFFIX,weather.com,🍂 Domestic
+ - DOMAIN-SUFFIX,weico.cc,🍂 Domestic
+ - DOMAIN-SUFFIX,weidian.com,🍂 Domestic
+ - DOMAIN-SUFFIX,xiachufang.com,🍂 Domestic
+ - DOMAIN-SUFFIX,ximalaya.com,🍂 Domestic
+ - DOMAIN-SUFFIX,xinhuanet.com,🍂 Domestic
+ - DOMAIN-SUFFIX,xmcdn.com,🍂 Domestic
+ - DOMAIN-SUFFIX,yangkeduo.com,🍂 Domestic
+ - DOMAIN-SUFFIX,yinxiang.com,🍂 Domestic
+ - DOMAIN-SUFFIX,zhangzishi.cc,🍂 Domestic
+ - DOMAIN-SUFFIX,zhihu.com,🍂 Domestic
+ - DOMAIN-SUFFIX,zhimg.com,🍂 Domestic
+ - DOMAIN-SUFFIX,zhuihd.com,🍂 Domestic
+ - PROCESS-NAME,v2ray,🍂 Domestic
+ - PROCESS-NAME,ss-local,🍂 Domestic
+ - PROCESS-NAME,aria2c,🍂 Domestic
+ - PROCESS-NAME,fdm,🍂 Domestic
+ - PROCESS-NAME,Folx,🍂 Domestic
+ - PROCESS-NAME,NetTransport,🍂 Domestic
+ - PROCESS-NAME,Thunder,🍂 Domestic
+ - PROCESS-NAME,Transmission,🍂 Domestic
+ - PROCESS-NAME,uTorrent,🍂 Domestic
+ - PROCESS-NAME,WebTorrent,🍂 Domestic
+ - PROCESS-NAME,WebTorrent Helper,🍂 Domestic
+ - IP-CIDR,162.14.0.0/18,🍂 Domestic,no-resolve
+ - GEOIP,CN,🍂 Domestic
+ - DOMAIN-KEYWORD,subcon,DIRECT
+ - DOMAIN,api.wcc.best,DIRECT
+ - DOMAIN-SUFFIX,local,DIRECT
+ - IP-CIDR,192.168.0.0/16,DIRECT
+ - IP-CIDR,10.0.0.0/8,DIRECT
+ - IP-CIDR,172.16.0.0/12,DIRECT
+ - IP-CIDR,127.0.0.0/8,DIRECT
+ - IP-CIDR,100.64.0.0/10,DIRECT
+ - IP-CIDR6,::1/128,DIRECT
+ - IP-CIDR6,fc00::/7,DIRECT
+ - IP-CIDR6,fe80::/10,DIRECT
+ - IP-CIDR6,fd00::/8,DIRECT
+ - MATCH,☁️ Others
