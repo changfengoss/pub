@@ -1,0 +1,606 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - tls://1.0.0.1:853
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+proxies:
+  - {"type":"ss","name":"[IEPL]香港+03+*","server":"120.232.240.58","port":45251,"cipher":"chacha20-ietf-poly1305","password":"373b4b4f-0acd-4a29-8eb2-78388a0b2de0"}
+  - {"type":"ss","name":"[IEPL]香港+01+*","server":"iepl-api.1.xxxyyyzzzyyyxxx.xyz","port":35001,"cipher":"chacha20-ietf-poly1305","password":"1d88a43d-2f4e-4aba-a146-bf2325549314"}
+  - {"type":"ss","name":"[IEPL]新加坡+01+*","server":"iepl-api.4.xxxyyyzzzyyyxxx.xyz","port":35004,"cipher":"chacha20-ietf-poly1305","password":"1d88a43d-2f4e-4aba-a146-bf2325549314"}
+  - {"type":"ss","name":"[IEPL]香港+02+*","server":"iepl-api.2.xxxyyyzzzyyyxxx.xyz","port":35002,"cipher":"chacha20-ietf-poly1305","password":"1d88a43d-2f4e-4aba-a146-bf2325549314"}
+  - {"type":"trojan","name":"[IEPL]美国+01+*","server":"107.167.24.6","port":17001,"password":"d4e9e6bb-daa4-44ed-aa29-d1b8d00ba7d6","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"[IEPL]美国+02+*","server":"45.137.97.205","port":58000,"password":"f2e42655-93af-4191-96cd-0b726490c0e9","udp":true,"skip-cert-verify":true}
+  - {"type":"ss","name":"[IEPL]美国+03+*","server":"iepl-api.8.xxxyyyzzzyyyxxx.xyz","port":35009,"cipher":"chacha20-ietf-poly1305","password":"1d88a43d-2f4e-4aba-a146-bf2325549314"}
+  - {"type":"vmess","name":"[IEPL]香港+04+*","ws-opts":{"path":"/szGxn","headers":{"host":"47.243.87.171"}},"server":"47.243.87.171","port":"443","uuid":"4af38112-0854-48d8-9387-5ece4078a599","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"[IEPL]新加坡+02+*","server":"157.230.41.220","port":29596,"cipher":"aes-256-cfb","password":"e6c1cf51375c407d92d110881a825acb"}
+  - {"type":"ss","name":"[IEPL]美国+04+*","server":"20.239.77.179","port":8313,"cipher":"chacha20-ietf-poly1305","password":"ljqdalu13.."}
+  - {"type":"vmess","name":"[IEPL]新加坡+03+*","server":"146.19.196.125","port":"31244","uuid":"b8aaa6e1-f0b3-b9ec-3dfc-bb226c167b33","alterId":"0","cipher":"auto","network":"tcp","tls":true}
+  - {"type":"vmess","name":"👉🏻关注丨频道丨t.me/yzcloud","server":"bgpv2.ktyjsq.com","port":"12223","uuid":"9ea70d57-9cb6-3bd0-ae41-5601e516dcc6","alterId":"0","cipher":"auto","network":"tcp"}
+proxy-groups:
+  - name: 欢迎关注TG频道＠yzcloud
+    type: select
+    proxies:
+      - 自动选择
+      - 故障转移
+      - '[IEPL]香港+03+*'
+      - '[IEPL]香港+01+*'
+      - '[IEPL]新加坡+01+*'
+      - '[IEPL]香港+02+*'
+      - '[IEPL]美国+01+*'
+      - '[IEPL]美国+02+*'
+      - '[IEPL]美国+03+*'
+      - '[IEPL]香港+04+*'
+      - '[IEPL]新加坡+02+*'
+      - '[IEPL]美国+04+*'
+      - '[IEPL]新加坡+03+*'
+      - 👉🏻关注丨频道丨t.me/yzcloud
+  - name: 自动选择
+    type: url-test
+    proxies:
+      - '[IEPL]香港+03+*'
+      - '[IEPL]香港+01+*'
+      - '[IEPL]新加坡+01+*'
+      - '[IEPL]香港+02+*'
+      - '[IEPL]美国+01+*'
+      - '[IEPL]美国+02+*'
+      - '[IEPL]美国+03+*'
+      - '[IEPL]香港+04+*'
+      - '[IEPL]新加坡+02+*'
+      - '[IEPL]美国+04+*'
+      - '[IEPL]新加坡+03+*'
+      - 👉🏻关注丨频道丨t.me/yzcloud
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+  - name: 故障转移
+    type: fallback
+    proxies:
+      - '[IEPL]香港+03+*'
+      - '[IEPL]香港+01+*'
+      - '[IEPL]新加坡+01+*'
+      - '[IEPL]香港+02+*'
+      - '[IEPL]美国+01+*'
+      - '[IEPL]美国+02+*'
+      - '[IEPL]美国+03+*'
+      - '[IEPL]香港+04+*'
+      - '[IEPL]新加坡+02+*'
+      - '[IEPL]美国+04+*'
+      - '[IEPL]新加坡+03+*'
+      - 👉🏻关注丨频道丨t.me/yzcloud
+    url: http://www.gstatic.com/generate_204
+    interval: 7200
+rules:
+  - DOMAIN,*.21t.co,DIRECT
+  - DOMAIN-SUFFIX,services.googleapis.cn,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+  - DOMAIN,safebrowsing.googleapis.com,DIRECT
+  - DOMAIN,developer.apple.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,digicert.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,ocsp.apple.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,ocsp.comodoca.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,ocsp.usertrust.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,ocsp.sectigo.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,ocsp.verisign.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,apple-dns.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN,testflight.apple.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,sandbox.itunes.apple.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,itunes.apple.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,apps.apple.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,blobstore.apple.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN,cvws.icloud-content.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+  - DOMAIN-SUFFIX,me.com,DIRECT
+  - DOMAIN-SUFFIX,aaplimg.com,DIRECT
+  - DOMAIN-SUFFIX,cdn20.com,DIRECT
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+  - DOMAIN-SUFFIX,akadns.net,DIRECT
+  - DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+  - DOMAIN-SUFFIX,edgekey.net,DIRECT
+  - DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+  - DOMAIN-SUFFIX,mwcname.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+  - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - DOMAIN-SUFFIX,126.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
+  - DOMAIN-SUFFIX,127.net,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+  - DOMAIN-SUFFIX,36kr.com,DIRECT
+  - DOMAIN-SUFFIX,acfun.tv,DIRECT
+  - DOMAIN-SUFFIX,air-matters.com,DIRECT
+  - DOMAIN-SUFFIX,aixifan.com,DIRECT
+  - DOMAIN-KEYWORD,alicdn,DIRECT
+  - DOMAIN-KEYWORD,alipay,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-SUFFIX,amap.com,DIRECT
+  - DOMAIN-SUFFIX,autonavi.com,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-SUFFIX,bdimg.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+  - DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+  - DOMAIN-SUFFIX,clouddn.com,DIRECT
+  - DOMAIN-SUFFIX,cnbeta.com,DIRECT
+  - DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+  - DOMAIN-SUFFIX,cootekservice.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,ctrip.com,DIRECT
+  - DOMAIN-SUFFIX,dgtle.com,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,douban.com,DIRECT
+  - DOMAIN-SUFFIX,doubanio.com,DIRECT
+  - DOMAIN-SUFFIX,duokan.com,DIRECT
+  - DOMAIN-SUFFIX,easou.com,DIRECT
+  - DOMAIN-SUFFIX,ele.me,DIRECT
+  - DOMAIN-SUFFIX,feng.com,DIRECT
+  - DOMAIN-SUFFIX,fir.im,DIRECT
+  - DOMAIN-SUFFIX,frdic.com,DIRECT
+  - DOMAIN-SUFFIX,g-cores.com,DIRECT
+  - DOMAIN-SUFFIX,godic.net,DIRECT
+  - DOMAIN-SUFFIX,gtimg.com,DIRECT
+  - DOMAIN,cdn.hockeyapp.net,DIRECT
+  - DOMAIN-SUFFIX,hongxiu.com,DIRECT
+  - DOMAIN-SUFFIX,hxcdn.net,DIRECT
+  - DOMAIN-SUFFIX,iciba.com,DIRECT
+  - DOMAIN-SUFFIX,ifeng.com,DIRECT
+  - DOMAIN-SUFFIX,ifengimg.com,DIRECT
+  - DOMAIN-SUFFIX,ipip.net,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,jianshu.com,DIRECT
+  - DOMAIN-SUFFIX,knewone.com,DIRECT
+  - DOMAIN-SUFFIX,le.com,DIRECT
+  - DOMAIN-SUFFIX,lecloud.com,DIRECT
+  - DOMAIN-SUFFIX,lemicp.com,DIRECT
+  - DOMAIN-SUFFIX,licdn.com,DIRECT
+  - DOMAIN-SUFFIX,luoo.net,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,mi.com,DIRECT
+  - DOMAIN-SUFFIX,miaopai.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+  - DOMAIN-SUFFIX,miui.com,DIRECT
+  - DOMAIN-SUFFIX,miwifi.com,DIRECT
+  - DOMAIN-SUFFIX,mob.com,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,office365.com,DIRECT
+  - DOMAIN-KEYWORD,officecdn,DIRECT
+  - DOMAIN-SUFFIX,oschina.net,DIRECT
+  - DOMAIN-SUFFIX,ppsimg.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,qcloud.com,DIRECT
+  - DOMAIN-SUFFIX,qdaily.com,DIRECT
+  - DOMAIN-SUFFIX,qdmm.com,DIRECT
+  - DOMAIN-SUFFIX,qhimg.com,DIRECT
+  - DOMAIN-SUFFIX,qhres.com,DIRECT
+  - DOMAIN-SUFFIX,qidian.com,DIRECT
+  - DOMAIN-SUFFIX,qihucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiniu.com,DIRECT
+  - DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiyipic.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,qqurl.com,DIRECT
+  - DOMAIN-SUFFIX,rarbg.to,DIRECT
+  - DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+  - DOMAIN-SUFFIX,segmentfault.com,DIRECT
+  - DOMAIN-SUFFIX,sinaapp.com,DIRECT
+  - DOMAIN-SUFFIX,smzdm.com,DIRECT
+  - DOMAIN-SUFFIX,snapdrop.net,DIRECT
+  - DOMAIN-SUFFIX,sogou.com,DIRECT
+  - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,soku.com,DIRECT
+  - DOMAIN-SUFFIX,speedtest.net,DIRECT
+  - DOMAIN-SUFFIX,sspai.com,DIRECT
+  - DOMAIN-SUFFIX,suning.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,tenpay.com,DIRECT
+  - DOMAIN-SUFFIX,tianyancha.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,tudou.com,DIRECT
+  - DOMAIN-SUFFIX,umetrip.com,DIRECT
+  - DOMAIN-SUFFIX,upaiyun.com,DIRECT
+  - DOMAIN-SUFFIX,upyun.com,DIRECT
+  - DOMAIN-SUFFIX,veryzhun.com,DIRECT
+  - DOMAIN-SUFFIX,weather.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.net,DIRECT
+  - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+  - DOMAIN-SUFFIX,ximalaya.com,DIRECT
+  - DOMAIN-SUFFIX,xmcdn.com,DIRECT
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - DOMAIN-SUFFIX,yhd.com,DIRECT
+  - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+  - DOMAIN-SUFFIX,yinxiang.com,DIRECT
+  - DOMAIN-SUFFIX,ykimg.com,DIRECT
+  - DOMAIN-SUFFIX,youdao.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,zealer.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,zhimg.com,DIRECT
+  - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+  - DOMAIN-SUFFIX,zoho.com,DIRECT
+  - DOMAIN-KEYWORD,amazon,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,google,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,gmail,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,youtube,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,facebook,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,fb.me,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,fbcdn.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,twitter,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,instagram,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,dropbox,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,twimg.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,blogspot,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,youtu.be,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,whatsapp,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,admarvel,REJECT
+  - DOMAIN-KEYWORD,admaster,REJECT
+  - DOMAIN-KEYWORD,adsage,REJECT
+  - DOMAIN-KEYWORD,adsmogo,REJECT
+  - DOMAIN-KEYWORD,adsrvmedia,REJECT
+  - DOMAIN-KEYWORD,adwords,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,appsflyer.com,REJECT
+  - DOMAIN-KEYWORD,domob,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-KEYWORD,duomeng,REJECT
+  - DOMAIN-KEYWORD,dwtrack,REJECT
+  - DOMAIN-KEYWORD,guanggao,REJECT
+  - DOMAIN-KEYWORD,lianmeng,REJECT
+  - DOMAIN-SUFFIX,mmstat.com,REJECT
+  - DOMAIN-KEYWORD,mopub,REJECT
+  - DOMAIN-KEYWORD,omgmta,REJECT
+  - DOMAIN-KEYWORD,openx,REJECT
+  - DOMAIN-KEYWORD,partnerad,REJECT
+  - DOMAIN-KEYWORD,pingfore,REJECT
+  - DOMAIN-KEYWORD,supersonicads,REJECT
+  - DOMAIN-KEYWORD,uedas,REJECT
+  - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-KEYWORD,usage,REJECT
+  - DOMAIN-SUFFIX,vungle.com,REJECT
+  - DOMAIN-KEYWORD,wlmonitor,REJECT
+  - DOMAIN-KEYWORD,zjtoolbar,REJECT
+  - DOMAIN-SUFFIX,9to5mac.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,abpchina.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,adblockplus.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,adobe.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,akamaized.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,alfredapp.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,amplitude.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ampproject.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,android.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,angularjs.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,aolcdn.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,apkpure.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,appledaily.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,appshopper.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,appspot.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,arcgis.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,archive.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,armorgames.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,aspnetcdn.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,att.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,awsstatic.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,azureedge.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,azurewebsites.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,bing.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,bintray.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,bit.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,bit.ly,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,bitbucket.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,bjango.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,bkrtx.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,blog.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,blogcdn.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,blogger.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,blogsmithmedia.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,blogspot.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,blogspot.hk,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,bloomberg.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,box.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,box.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,cachefly.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,chromium.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,cl.ly,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudflare.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudfront.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudmagic.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,cmail19.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,cnet.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,cocoapods.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,comodoca.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,crashlytics.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,culturedcode.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,d.pr,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,danilo.to,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,dayone.me,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,db.tt,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,deskconnect.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,disq.us,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,disqus.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,disquscdn.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,dnsimple.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,docker.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,dribbble.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,droplr.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,duckduckgo.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,dueapp.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,dytt8.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,edgecastcdn.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,edgekey.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,edgesuite.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,engadget.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,entrust.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,eurekavpt.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,evernote.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,fabric.io,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,fast.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,fastly.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,fc2.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,feedburner.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,feedly.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,feedsportal.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,fiftythree.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,firebaseio.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,flexibits.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,flickr.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,flipboard.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,g.co,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,gabia.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,geni.us,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,gfx.ms,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ggpht.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ghostnoteapp.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,git.io,欢迎关注TG频道＠yzcloud
+  - DOMAIN-KEYWORD,github,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,globalsign.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,gmodules.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,godaddy.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,golang.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,gongm.in,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,goo.gl,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,goodreaders.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,goodreads.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,gravatar.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,gstatic.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,gvt0.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,hockeyapp.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,hotmail.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,icons8.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ifixit.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ift.tt,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ifttt.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,iherb.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,imageshack.us,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,img.ly,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,imgur.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,imore.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,instapaper.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ipn.li,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,is.gd,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,issuu.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,itgonglun.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,itun.es,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ixquick.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,j.mp,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,js.revsci.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,jshint.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,jtvnw.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,justgetflux.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,kat.cr,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,klip.me,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,libsyn.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,linkedin.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,linode.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,lithium.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,littlehj.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,live.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,live.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,livefilestore.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,llnwd.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,macid.co,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,macromedia.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,macrumors.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,mashable.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,mathjax.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,medium.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,mega.co.nz,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,mega.nz,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,megaupload.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,microsofttranslator.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,mindnode.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,mobile01.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,modmyi.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,msedge.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,myfontastic.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,name.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,nextmedia.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,nsstatic.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,nssurge.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,nyt.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,nytimes.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,omnigroup.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,onedrive.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,onenote.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ooyala.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,openvpn.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,openwrt.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,orkut.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,osxdaily.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,outlook.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ow.ly,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,paddleapi.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,parallels.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,parse.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,pdfexpert.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,periscope.tv,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,pinboard.in,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,pinterest.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,pixelmator.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,pixiv.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,playpcesor.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.com.hk,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,playstationnetwork.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,pushwoosh.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,rime.im,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,servebom.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,sfx.ms,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,shadowsocks.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,sharethis.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,shazam.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,skype.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,smartdns欢迎关注TG频道＠yzcloud.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,smartmailcloud.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,sndcdn.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,sony.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,soundcloud.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,sourceforge.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,spotify.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,squarespace.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,sstatic.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,st.luluku.pw,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,stackoverflow.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,startpage.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,staticflickr.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,steamcommunity.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,symauth.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,symcb.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,symcd.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tapbots.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tapbots.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tdesktop.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,techcrunch.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,techsmith.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,thepiratebay.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,theverge.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,time.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,timeinc.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tiny.cc,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tinypic.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tmblr.co,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,todoist.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,trello.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,trustasiassl.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tumblr.co,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tumblr.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tweetdeck.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,tweetmarker.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,twitch.tv,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,txmblr.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,typekit.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ubertags.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ublock.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ubnt.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ulyssesapp.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,urchin.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,usertrust.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,v.gd,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,v2ex.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,vimeo.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,vimeocdn.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,vine.co,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,vivaldi.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,vox-cdn.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,vsco.co,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,vultr.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,w.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,w3schools.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,webtype.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wikiwand.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wikileaks.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wikimedia.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wikipedia.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wikipedia.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,windows.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,windows.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wire.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wordpress.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,workflowy.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wp.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wsj.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,wsj.net,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,xda-developers.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,xeeno.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,xiti.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,yahoo.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,yimg.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ying.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,yoyo.org,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,ytimg.com,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,telegra.ph,欢迎关注TG频道＠yzcloud
+  - DOMAIN-SUFFIX,telegram.org,欢迎关注TG频道＠yzcloud
+  - IP-CIDR,91.108.4.0/22,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.8.0/21,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.16.0/22,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.56.0/22,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,149.154.160.0/20,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:67c:4e8::/48,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:b28:f23d::/48,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:b28:f23f::/48,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,120.232.181.162/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,120.241.147.226/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.253.226/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.162/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.34/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.98/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.150.162/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.150.34/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.151.162/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.151.34/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.39.0/24,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.40.0/24,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.41.0/24,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.43.0/24,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.50.0/24,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.162/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.226/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.34/32,欢迎关注TG频道＠yzcloud,no-resolve
+  - DOMAIN,injections.adguard.org,DIRECT
+  - DOMAIN,local.adguard.org,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,欢迎关注TG频道＠yzcloud
