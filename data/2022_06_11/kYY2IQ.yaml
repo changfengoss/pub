@@ -1,0 +1,36 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"type":"ss","name":"v2rayse_test_1","server":"198.57.27.218","port":5004,"cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+  - {"type":"vmess","name":"v2rayse_test_2","server":"154.23.190.162","port":443,"uuid":"b9984674-f771-4e67-a198-c7e60720ba2c","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"ssr","name":"v2rayse_test_3","server":"20.239.49.44","port":59814,"protocol":"origin","cipher":"dummy","obfs":"plain","password":"3df57276-03ef-45cf-bdd4-4edb6dfaa0ef"}
+  - {"type":"trojan","name":"v2rayse_test_4","server":"ca-trojan.bonds.id","port":443,"password":"bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272","udp":true,"skip-cert-verify":true}
+proxy-groups:
+  - name: 自定义分组
+    type: select
+    proxies:
+    - { name: 请更新APP(官网教程内有最新版)，否则只有两个节点, type: ss, server: 1.1.1.1, port: 22, cipher: chacha20-ietf-poly1305, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true }
+    - { name: '请定期更新订阅，以免无法访问 | 官网okss.us./okjiasu.xyz 有问题点官网右下角找客服', type: ss, server: 1.2.3.4, port: 55, cipher: chacha20-ietf-poly1305, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true }
+    - { name: '香港A | 三网★★★ | 1X | NETFLIX', type: trojan, server: cn-hk-az-2.okss.us, port: 37680, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '香港B | 三网★★☆ | 2X | NETFLIX', type: trojan, server: cn-hk-rc-pf.okss.us, port: 10622, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, sni: cn-hk-rc.okss.us, skip-cert-verify: true }
+    - { name: '越南A | 三网★★★ | 1X |', type: trojan, server: vn-hn-hg.okss.us, port: 41820, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '越南B | 三网★★★ | 1X |', type: trojan, server: vn-hn-hg-pf.okss.us, port: 41820, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, sni: vn-hn-hg.okss.us, skip-cert-verify: true }
+    - { name: '台湾A | 三网★★☆ | 1X | NETFLIX', type: trojan, server: cn-tw-hn.okss.us, port: 46010, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '台湾B | 三网★★☆ | 1X | NETFLIX', type: trojan, server: cn-tw-hn-pf.okss.us, port: 46010, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, sni: cn-tw-hn.okss.us, skip-cert-verify: true }
+    - { name: '日本A | 电信★★★ | 1X | NETFLIX', type: trojan, server: jp-osa-osa.okss.us, port: 58250, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '日本B | 电信★★★ | 1X | NETFLIX', type: trojan, server: jp-osa-osa-pf.okss.us, port: 58250, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, sni: jp-osa-osa.okss.us, skip-cert-verify: true }
+    - { name: '日本C | 联通★★★ | 1X |', type: trojan, server: jp-tky-lin.okss.us, port: 48250, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '日本D | 联通★★★ | 1X |', type: trojan, server: jp-tky-lin-pf.okss.us, port: 48250, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, sni: jp-tky-lin.okss.us, skip-cert-verify: true }
+    - { name: '韩国A | 三网★★☆ | 2X | NETFLIX', type: trojan, server: kr-cc-arm1.okss.us, port: 48270, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '韩国B | 联通★★☆ | 2X | NETFLIX', type: trojan, server: kr-cc-arm1-pf.okss.us, port: 48270, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, sni: kr-cc-arm1.okss.us, skip-cert-verify: true }
+    - { name: '韩国C | 三网★★☆ | 2X | NETFLIX', type: trojan, server: kr-sl-amd1.okss.us, port: 48200, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '美国A | 三网★★☆ | 1X |', type: trojan, server: us-la-6c.okss.us, port: 48290, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '美国B | 三网★★☆ | 1X |', type: trojan, server: us-lv-ho.okss.us, port: 33710, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '美国C | 三网★★☆ | 1X |', type: trojan, server: us-lv-ho-pf.okss.us, port: 33710, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, sni: us-lv-ho.okss.us, skip-cert-verify: true }
+    - { name: '荷兰A | 三网★★☆ | 1X | NETFLIX', type: trojan, server: nl-lb-us.okss.us, port: 32510, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, skip-cert-verify: true }
+    - { name: '荷兰B | 三网★★☆ | 1X | NETFLIX', type: trojan, server: nl-lb-us-pf.okss.us, port: 32510, password: f1fc6161-5699-4bc9-9fc9-eddb1dfcb783, udp: true, sni: nl-lb-us.okss.us, skip-cert-verify: true }
+rules:
+  - MATCH,自定义分组
