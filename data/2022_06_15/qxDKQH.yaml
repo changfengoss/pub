@@ -1,0 +1,1922 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - tls://1.0.0.1:853
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+proxies:
+  - {"type":"ss","name":"TG＠yzcloud美国1","server":"167.88.61.2","port":802,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"TG＠yzcloud美国2","server":"167.88.61.2","port":807,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"TG＠yzcloud美国3","server":"167.88.61.2","port":801,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"TG＠yzcloud美国4","server":"167.88.61.2","port":803,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"TG＠yzcloud美国5","server":"167.88.61.2","port":812,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"type":"ss","name":"TG＠yzcloud美国6","server":"167.88.61.50","port":5003,"cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+  - {"type":"ss","name":"TG＠yzcloud美国7","server":"167.88.61.50","port":3306,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"TG＠yzcloud美国8","server":"167.88.61.50","port":8119,"cipher":"aes-256-gcm","password":"cdBIDV42DCwnfIN"}
+  - {"type":"ss","name":"TG＠yzcloud美国9","server":"167.88.61.50","port":2375,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"TG＠yzcloud美国10","server":"167.88.61.50","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"ss","name":"TG＠yzcloud美国11","server":"167.88.61.50","port":8091,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  - {"type":"ss","name":"TG＠yzcloud美国12","server":"167.88.61.50","port":2376,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"TG＠yzcloud美国13","server":"167.88.61.50","port":5004,"cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+  - {"type":"ss","name":"TG＠yzcloud美国14","server":"167.88.61.50","port":8882,"cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"type":"ss","name":"TG＠yzcloud美国15","server":"169.197.141.187","port":8091,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  - {"type":"ss","name":"TG＠yzcloud美国16","server":"169.197.141.187","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"ss","name":"TG＠yzcloud美国17","server":"169.197.141.187","port":7002,"cipher":"aes-256-gcm","password":"RexnBgU7EV5ADxG"}
+  - {"type":"ss","name":"TG＠yzcloud美国18","server":"169.197.141.187","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"ss","name":"TG＠yzcloud美国19","server":"169.197.141.187","port":8000,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"ss","name":"TG＠yzcloud美国20","server":"169.197.141.187","port":5003,"cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+  - {"type":"ss","name":"TG＠yzcloud卢森堡21","server":"172.255.248.35","port":989,"cipher":"aes-256-cfb","password":"f8f7aCzcPKbsF8p3"}
+  - {"type":"ss","name":"TG＠yzcloud瑞士23","server":"185.126.116.119","port":9060,"cipher":"aes-256-cfb","password":"ueLXVkvh4hckhErQ"}
+  - {"type":"ss","name":"TG＠yzcloud瑞士24","server":"185.126.116.119","port":9015,"cipher":"aes-256-cfb","password":"ZpNDDKRu9MagNvaf"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚25","server":"185.167.116.24","port":9046,"cipher":"aes-256-cfb","password":"NvS8N4Vf8qAGPSCL"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚26","server":"185.167.116.24","port":9025,"cipher":"aes-256-cfb","password":"XPtzA9sCug3SPR4c"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚27","server":"185.167.116.24","port":9045,"cipher":"aes-256-cfb","password":"Lp27rqyJq72bZsqX"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚28","server":"185.167.116.24","port":9032,"cipher":"aes-256-cfb","password":"UWZQeLRWnkqgkseq"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚29","server":"185.167.116.24","port":9084,"cipher":"aes-256-cfb","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚30","server":"185.167.116.24","port":9037,"cipher":"aes-256-cfb","password":"TN2YqghxeFDKZfLU"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚31","server":"185.167.116.24","port":9059,"cipher":"aes-256-cfb","password":"9XwYyZsK8SNzQDtY"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚32","server":"185.167.116.24","port":9043,"cipher":"aes-256-cfb","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚33","server":"185.167.116.24","port":9007,"cipher":"aes-256-cfb","password":"kSPmvwdFzGMMW5pY"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚34","server":"185.167.116.250","port":9084,"cipher":"aes-256-cfb","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚35","server":"185.167.116.250","port":9014,"cipher":"aes-256-cfb","password":"KnJGad3FqTvjqbaX"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚36","server":"185.167.116.250","port":9027,"cipher":"aes-256-cfb","password":"EXN3S3eQpjE7EJu8"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚37","server":"185.167.116.250","port":9001,"cipher":"aes-256-cfb","password":"UkXRsXvR6buDMG2Y"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚38","server":"185.167.116.250","port":9093,"cipher":"aes-256-cfb","password":"wfLC2y7rzZyCmuyt"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚39","server":"185.167.116.250","port":9003,"cipher":"aes-256-cfb","password":"JdmRK9gMEqFgs8nP"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚40","server":"185.167.116.250","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚41","server":"185.167.116.252","port":9005,"cipher":"aes-256-cfb","password":"ZET59LF6DvCC8KVt"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚42","server":"185.167.116.252","port":9003,"cipher":"aes-256-cfb","password":"JdmRK9gMEqFgs8nP"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚43","server":"185.167.116.252","port":9015,"cipher":"aes-256-cfb","password":"ZpNDDKRu9MagNvaf"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚44","server":"185.167.116.252","port":9050,"cipher":"aes-256-cfb","password":"FG5ddLsMPbV5CutE"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚45","server":"185.167.116.252","port":9097,"cipher":"aes-256-cfb","password":"Sn5B7jTqr76aCJT8"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚46","server":"185.167.116.252","port":9006,"cipher":"aes-256-cfb","password":"FAdUvMJUq5vDgKEq"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚47","server":"185.167.116.252","port":9019,"cipher":"aes-256-cfb","password":"GA9KzeEgvfxNrgmM"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚48","server":"185.167.116.252","port":9080,"cipher":"aes-256-cfb","password":"VP8ZPxQpJtZRCjfZ"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚49","server":"185.167.116.252","port":9011,"cipher":"aes-256-cfb","password":"M3t2ZEQcMGRWBjRa"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚50","server":"185.167.116.253","port":9040,"cipher":"aes-256-cfb","password":"p9z5BVADH2YFs3MN"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚51","server":"185.167.116.253","port":9027,"cipher":"aes-256-cfb","password":"EXN3S3eQpjE7EJu8"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚52","server":"185.167.116.253","port":9080,"cipher":"aes-256-cfb","password":"VP8ZPxQpJtZRCjfZ"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚53","server":"185.167.116.253","port":9064,"cipher":"aes-256-cfb","password":"cp8pRSUAyLhTfVWH"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚54","server":"185.167.116.253","port":9056,"cipher":"aes-256-cfb","password":"rNBfNuuANFCAk7KB"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚55","server":"185.167.116.253","port":9031,"cipher":"aes-256-cfb","password":"BwcAUZk8hUFAkDGN"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚56","server":"185.167.116.253","port":9050,"cipher":"aes-256-cfb","password":"FG5ddLsMPbV5CutE"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚57","server":"185.167.116.253","port":9014,"cipher":"aes-256-cfb","password":"KnJGad3FqTvjqbaX"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚58","server":"185.167.116.253","port":9097,"cipher":"aes-256-cfb","password":"Sn5B7jTqr76aCJT8"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚59","server":"185.167.116.38","port":9046,"cipher":"aes-256-cfb","password":"NvS8N4Vf8qAGPSCL"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚60","server":"185.167.116.38","port":9050,"cipher":"aes-256-cfb","password":"FG5ddLsMPbV5CutE"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚61","server":"185.167.116.38","port":9037,"cipher":"aes-256-cfb","password":"TN2YqghxeFDKZfLU"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚62","server":"185.167.116.38","port":9038,"cipher":"aes-256-cfb","password":"gYCYXfkUQEs2TaJQ"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚63","server":"185.167.116.38","port":9006,"cipher":"aes-256-cfb","password":"FAdUvMJUq5vDgKEq"}
+  - {"type":"ss","name":"TG＠yzcloud澳大利亚64","server":"185.167.116.38","port":9093,"cipher":"aes-256-cfb","password":"wfLC2y7rzZyCmuyt"}
+  - {"type":"vmess","name":"TG＠yzcloud美国83","server":"20.123.187.212","port":"27931","uuid":"256eae41-0b8f-4faa-bce8-6366011dc19f","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国84","server":"20.123.187.212","port":"27931","uuid":"256eae41-0b8f-4faa-bce8-6366011dc19f","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国85","server":"20.123.187.212","port":"27931","uuid":"256eae41-0b8f-4faa-bce8-6366011dc19f","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"TG＠yzcloud塞浦路斯86","server":"213.169.137.221","port":989,"cipher":"aes-256-cfb","password":"f8f7aCzcPKbsF8p3"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦94","server":"213.183.53.177","port":9059,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"9XwYyZsK8SNzQDtY"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦95","server":"213.183.53.177","port":9043,"cipher":"aes-256-cfb","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦96","server":"213.183.53.177","port":9033,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"UTJA57ypk2XKQpnm"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦97","server":"213.183.53.177","port":9003,"cipher":"aes-256-cfb","password":"JdmRK9gMEqFgs8nP"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦98","server":"213.183.53.177","port":9008,"cipher":"aes-256-cfb","password":"y9VURyNzJWNRYEGQ"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦99","server":"213.183.53.177","port":9084,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦100","server":"213.183.53.177","port":9059,"cipher":"aes-256-cfb","password":"9XwYyZsK8SNzQDtY"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦101","server":"213.183.53.177","port":9094,"cipher":"aes-256-cfb","password":"rpgbNnU9rDDU4aWZ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦102","server":"213.183.53.177","port":9018,"cipher":"aes-256-cfb","password":"fG2artUmHfNT2cX7"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦103","server":"213.183.53.177","port":9084,"cipher":"aes-256-cfb","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦104","server":"213.183.53.177","port":9008,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"y9VURyNzJWNRYEGQ"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦105","server":"213.183.53.177","port":9010,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"f63gg8EruDnUrmz4"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦106","server":"213.183.53.177","port":9005,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"ZET59LF6DvCC8KVt"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦107","server":"213.183.53.177","port":9003,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"JdmRK9gMEqFgs8nP"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦108","server":"213.183.53.177","port":9064,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"cp8pRSUAyLhTfVWH"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦109","server":"213.183.53.177","port":9098,"cipher":"aes-256-cfb","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦110","server":"213.183.53.177","port":9010,"cipher":"aes-256-cfb","password":"f63gg8EruDnUrmz4"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦111","server":"213.183.53.177","port":9060,"cipher":"aes-256-cfb","password":"ueLXVkvh4hckhErQ"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦112","server":"213.183.53.177","port":9057,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"wjTugX3ZtHMB9c3Z"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦113","server":"213.183.53.177","port":9093,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"wfLC2y7rzZyCmuyt"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦114","server":"213.183.53.177","port":9041,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"U6qnYRhfyDmn8sgn"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦115","server":"213.183.53.177","port":9005,"cipher":"aes-256-cfb","password":"ZET59LF6DvCC8KVt"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦116","server":"213.183.53.200","port":9038,"cipher":"aes-256-cfb","password":"gYCYXfkUQEs2TaJQ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦117","server":"213.183.53.200","port":9020,"cipher":"aes-256-cfb","password":"BNmAXXxAHYpTRdzu"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦118","server":"213.183.53.200","port":9032,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"UWZQeLRWnkqgkseq"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦119","server":"213.183.53.200","port":9060,"cipher":"aes-256-cfb","password":"ueLXVkvh4hckhErQ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦120","server":"213.183.53.200","port":9018,"cipher":"aes-256-cfb","password":"fG2artUmHfNT2cX7"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦121","server":"213.183.53.200","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦122","server":"213.183.53.200","port":9043,"cipher":"aes-256-cfb","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦123","server":"213.183.53.200","port":9088,"cipher":"aes-256-cfb","password":"f8npKgNzdkss2ytn"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦124","server":"213.183.53.200","port":9094,"cipher":"aes-256-cfb","password":"rpgbNnU9rDDU4aWZ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦125","server":"213.183.53.200","port":9084,"cipher":"aes-256-cfb","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦126","server":"213.183.53.200","port":9001,"cipher":"aes-256-cfb","password":"UkXRsXvR6buDMG2Y"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦127","server":"213.183.53.200","port":9005,"cipher":"aes-256-cfb","password":"ZET59LF6DvCC8KVt"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦128","server":"213.183.53.200","port":9027,"cipher":"aes-256-cfb","password":"EXN3S3eQpjE7EJu8"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦129","server":"213.183.53.200","port":9073,"cipher":"aes-256-cfb","password":"daFYagqDdBdA6VTX"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦130","server":"213.183.53.200","port":9041,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"U6qnYRhfyDmn8sgn"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦131","server":"213.183.53.200","port":9003,"cipher":"aes-256-cfb","password":"JdmRK9gMEqFgs8nP"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦132","server":"213.183.53.200","port":9064,"cipher":"aes-256-cfb","password":"cp8pRSUAyLhTfVWH"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦133","server":"213.183.53.200","port":9015,"cipher":"aes-256-cfb","password":"ZpNDDKRu9MagNvaf"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦134","server":"213.183.53.200","port":9098,"cipher":"aes-256-cfb","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦135","server":"213.183.53.200","port":9031,"cipher":"aes-256-cfb","password":"BwcAUZk8hUFAkDGN"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦136","server":"213.183.53.200","port":9008,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"y9VURyNzJWNRYEGQ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦137","server":"213.183.53.200","port":9025,"cipher":"aes-256-cfb","password":"XPtzA9sCug3SPR4c"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦138","server":"213.183.53.200","port":9040,"cipher":"aes-256-cfb","password":"p9z5BVADH2YFs3MN"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦139","server":"213.183.53.200","port":9053,"cipher":"aes-256-cfb","password":"SBM7R883jBmnqe6C"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦140","server":"213.183.53.200","port":9014,"cipher":"aes-256-cfb","password":"KnJGad3FqTvjqbaX"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦141","server":"213.183.53.200","port":9042,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"S7KwUu7yBy58S3Ga"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦142","server":"213.183.53.202","port":9060,"cipher":"aes-256-cfb","password":"ueLXVkvh4hckhErQ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦143","server":"213.183.53.202","port":9008,"cipher":"aes-256-cfb","password":"y9VURyNzJWNRYEGQ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦144","server":"213.183.53.202","port":9032,"cipher":"aes-256-cfb","password":"UWZQeLRWnkqgkseq"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦145","server":"213.183.53.202","port":9084,"cipher":"aes-256-cfb","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦146","server":"213.183.53.202","port":9046,"cipher":"aes-256-cfb","password":"NvS8N4Vf8qAGPSCL"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦147","server":"213.183.53.202","port":9000,"cipher":"aes-256-cfb","password":"a3GFYt36Sm82Vys9"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦148","server":"213.183.53.202","port":9097,"cipher":"aes-256-cfb","password":"Sn5B7jTqr76aCJT8"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦149","server":"213.183.53.202","port":9014,"cipher":"aes-256-cfb","password":"KnJGad3FqTvjqbaX"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦150","server":"213.183.53.202","port":9001,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"UkXRsXvR6buDMG2Y"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦151","server":"213.183.53.202","port":9018,"cipher":"aes-256-cfb","password":"fG2artUmHfNT2cX7"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦152","server":"213.183.53.202","port":9064,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"cp8pRSUAyLhTfVWH"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦153","server":"213.183.53.202","port":9006,"cipher":"aes-256-cfb","password":"FAdUvMJUq5vDgKEq"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦154","server":"213.183.53.202","port":9018,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"fG2artUmHfNT2cX7"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦155","server":"213.183.53.202","port":9040,"cipher":"aes-256-cfb","password":"p9z5BVADH2YFs3MN"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦156","server":"213.183.53.202","port":9042,"cipher":"aes-256-cfb","password":"S7KwUu7yBy58S3Ga"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦157","server":"213.183.53.207","port":9019,"cipher":"aes-256-cfb","password":"GA9KzeEgvfxNrgmM"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦158","server":"213.183.53.207","port":9000,"cipher":"aes-256-cfb","password":"a3GFYt36Sm82Vys9"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦159","server":"213.183.53.208","port":9070,"cipher":"aes-256-cfb","password":"bf7v334KKDV3YDhH"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦160","server":"213.183.53.208","port":9050,"cipher":"aes-256-cfb","password":"FG5ddLsMPbV5CutE"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦161","server":"213.183.53.208","port":9000,"cipher":"aes-256-cfb","password":"a3GFYt36Sm82Vys9"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦162","server":"213.183.53.208","port":9059,"cipher":"aes-256-cfb","password":"9XwYyZsK8SNzQDtY"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦163","server":"213.183.53.208","port":9015,"cipher":"aes-256-cfb","password":"ZpNDDKRu9MagNvaf"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦164","server":"213.183.53.208","port":9088,"cipher":"aes-256-cfb","password":"f8npKgNzdkss2ytn"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦165","server":"213.183.53.208","port":9098,"cipher":"aes-256-cfb","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦166","server":"213.183.53.208","port":9018,"cipher":"aes-256-cfb","password":"fG2artUmHfNT2cX7"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦167","server":"213.183.53.208","port":9040,"cipher":"aes-256-cfb","password":"p9z5BVADH2YFs3MN"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦168","server":"213.183.53.208","port":9097,"cipher":"aes-256-cfb","password":"Sn5B7jTqr76aCJT8"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦169","server":"213.183.53.208","port":9060,"cipher":"aes-256-cfb","password":"ueLXVkvh4hckhErQ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦170","server":"213.183.53.208","port":9025,"cipher":"aes-256-cfb","password":"XPtzA9sCug3SPR4c"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦171","server":"213.183.53.208","port":9058,"cipher":"aes-256-cfb","password":"dML2sfhbVwvtfNPe"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦172","server":"213.183.53.208","port":9079,"cipher":"aes-256-cfb","password":"TPqX8edgbAURcAMb"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦173","server":"213.183.53.208","port":9046,"cipher":"aes-256-cfb","password":"NvS8N4Vf8qAGPSCL"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦174","server":"213.183.53.212","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦175","server":"213.183.53.212","port":9058,"cipher":"aes-256-cfb","password":"dML2sfhbVwvtfNPe"}
+  - {"type":"ssr","name":"TG＠yzcloud俄罗斯联邦176","server":"213.183.53.214","port":9045,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"Lp27rqyJq72bZsqX"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦177","server":"213.183.53.221","port":9006,"cipher":"aes-256-cfb","password":"FAdUvMJUq5vDgKEq"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦178","server":"213.183.53.221","port":9025,"cipher":"aes-256-cfb","password":"XPtzA9sCug3SPR4c"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦179","server":"213.183.53.221","port":9058,"cipher":"aes-256-cfb","password":"dML2sfhbVwvtfNPe"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦180","server":"213.183.53.221","port":9031,"cipher":"aes-256-cfb","password":"BwcAUZk8hUFAkDGN"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦181","server":"213.183.53.221","port":9010,"cipher":"aes-256-cfb","password":"f63gg8EruDnUrmz4"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦182","server":"213.183.53.221","port":9079,"cipher":"aes-256-cfb","password":"TPqX8edgbAURcAMb"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦183","server":"213.183.53.221","port":9073,"cipher":"aes-256-cfb","password":"daFYagqDdBdA6VTX"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦184","server":"213.183.53.221","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦185","server":"213.183.53.221","port":9038,"cipher":"aes-256-cfb","password":"gYCYXfkUQEs2TaJQ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦186","server":"213.183.53.221","port":9041,"cipher":"aes-256-cfb","password":"U6qnYRhfyDmn8sgn"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦187","server":"213.183.53.221","port":9007,"cipher":"aes-256-cfb","password":"kSPmvwdFzGMMW5pY"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦188","server":"213.183.53.221","port":9061,"cipher":"aes-256-cfb","password":"4R3hUfZ2FHhDmNcP"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦189","server":"213.183.53.221","port":9097,"cipher":"aes-256-cfb","password":"Sn5B7jTqr76aCJT8"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦190","server":"213.183.53.221","port":9064,"cipher":"aes-256-cfb","password":"cp8pRSUAyLhTfVWH"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦191","server":"213.183.53.221","port":9043,"cipher":"aes-256-cfb","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦192","server":"213.183.53.221","port":9084,"cipher":"aes-256-cfb","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦193","server":"213.183.53.221","port":9000,"cipher":"aes-256-cfb","password":"a3GFYt36Sm82Vys9"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦194","server":"213.183.53.221","port":9027,"cipher":"aes-256-cfb","password":"EXN3S3eQpjE7EJu8"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦195","server":"213.183.53.221","port":9003,"cipher":"aes-256-cfb","password":"JdmRK9gMEqFgs8nP"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦196","server":"213.183.53.221","port":9030,"cipher":"aes-256-cfb","password":"GeregetR8cvQHzYr"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦197","server":"213.183.53.221","port":9005,"cipher":"aes-256-cfb","password":"ZET59LF6DvCC8KVt"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦198","server":"213.183.53.221","port":9094,"cipher":"aes-256-cfb","password":"rpgbNnU9rDDU4aWZ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦199","server":"213.183.53.221","port":9042,"cipher":"aes-256-cfb","password":"S7KwUu7yBy58S3Ga"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦200","server":"213.183.53.221","port":9018,"cipher":"aes-256-cfb","password":"fG2artUmHfNT2cX7"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦201","server":"213.183.53.221","port":9019,"cipher":"aes-256-cfb","password":"GA9KzeEgvfxNrgmM"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦202","server":"213.183.53.221","port":9014,"cipher":"aes-256-cfb","password":"KnJGad3FqTvjqbaX"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦203","server":"213.183.53.221","port":9024,"cipher":"aes-256-cfb","password":"BejrQvtu9sqUeNuZ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦204","server":"213.183.53.221","port":9053,"cipher":"aes-256-cfb","password":"SBM7R883jBmnqe6C"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦205","server":"213.183.53.221","port":9070,"cipher":"aes-256-cfb","password":"bf7v334KKDV3YDhH"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦206","server":"213.183.53.221","port":9056,"cipher":"aes-256-cfb","password":"rNBfNuuANFCAk7KB"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦207","server":"213.183.53.221","port":9098,"cipher":"aes-256-cfb","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦208","server":"213.183.53.221","port":9032,"cipher":"aes-256-cfb","password":"UWZQeLRWnkqgkseq"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦209","server":"213.183.53.221","port":9037,"cipher":"aes-256-cfb","password":"TN2YqghxeFDKZfLU"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦210","server":"213.183.53.221","port":9033,"cipher":"aes-256-cfb","password":"UTJA57ypk2XKQpnm"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦211","server":"213.183.53.221","port":9057,"cipher":"aes-256-cfb","password":"wjTugX3ZtHMB9c3Z"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦212","server":"213.183.53.221","port":9050,"cipher":"aes-256-cfb","password":"FG5ddLsMPbV5CutE"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦213","server":"213.183.53.222","port":9080,"cipher":"aes-256-cfb","password":"VP8ZPxQpJtZRCjfZ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦214","server":"213.183.53.222","port":9005,"cipher":"aes-256-cfb","password":"ZET59LF6DvCC8KVt"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦215","server":"213.183.53.222","port":9043,"cipher":"aes-256-cfb","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦216","server":"213.183.53.222","port":9098,"cipher":"aes-256-cfb","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦217","server":"213.183.53.222","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦218","server":"213.183.53.222","port":9056,"cipher":"aes-256-cfb","password":"rNBfNuuANFCAk7KB"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦219","server":"213.183.53.222","port":9059,"cipher":"aes-256-cfb","password":"9XwYyZsK8SNzQDtY"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦220","server":"213.183.53.222","port":9000,"cipher":"aes-256-cfb","password":"a3GFYt36Sm82Vys9"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦221","server":"213.183.53.222","port":9094,"cipher":"aes-256-cfb","password":"rpgbNnU9rDDU4aWZ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦222","server":"213.183.53.222","port":9084,"cipher":"aes-256-cfb","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦223","server":"213.183.53.222","port":9073,"cipher":"aes-256-cfb","password":"daFYagqDdBdA6VTX"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦224","server":"213.183.53.222","port":9070,"cipher":"aes-256-cfb","password":"bf7v334KKDV3YDhH"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦225","server":"213.183.53.222","port":9064,"cipher":"aes-256-cfb","password":"cp8pRSUAyLhTfVWH"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦226","server":"213.183.53.222","port":9050,"cipher":"aes-256-cfb","password":"FG5ddLsMPbV5CutE"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦227","server":"213.183.53.222","port":9037,"cipher":"aes-256-cfb","password":"TN2YqghxeFDKZfLU"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦228","server":"213.183.53.222","port":9032,"cipher":"aes-256-cfb","password":"UWZQeLRWnkqgkseq"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦229","server":"213.183.53.222","port":9030,"cipher":"aes-256-cfb","password":"GeregetR8cvQHzYr"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦230","server":"213.183.53.222","port":9027,"cipher":"aes-256-cfb","password":"EXN3S3eQpjE7EJu8"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦231","server":"213.183.53.222","port":9024,"cipher":"aes-256-cfb","password":"BejrQvtu9sqUeNuZ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦232","server":"213.183.53.222","port":9019,"cipher":"aes-256-cfb","password":"GA9KzeEgvfxNrgmM"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦233","server":"213.183.53.222","port":9015,"cipher":"aes-256-cfb","password":"ZpNDDKRu9MagNvaf"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦234","server":"213.183.53.222","port":9010,"cipher":"aes-256-cfb","password":"f63gg8EruDnUrmz4"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦235","server":"213.183.53.222","port":9045,"cipher":"aes-256-cfb","password":"Lp27rqyJq72bZsqX"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦236","server":"213.183.53.222","port":9097,"cipher":"aes-256-cfb","password":"Sn5B7jTqr76aCJT8"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦237","server":"213.183.53.222","port":9042,"cipher":"aes-256-cfb","password":"S7KwUu7yBy58S3Ga"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦238","server":"213.183.53.222","port":9033,"cipher":"aes-256-cfb","password":"UTJA57ypk2XKQpnm"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦239","server":"213.183.53.222","port":9025,"cipher":"aes-256-cfb","password":"XPtzA9sCug3SPR4c"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦240","server":"213.183.53.222","port":9093,"cipher":"aes-256-cfb","password":"wfLC2y7rzZyCmuyt"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦241","server":"213.183.53.222","port":9079,"cipher":"aes-256-cfb","password":"TPqX8edgbAURcAMb"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦242","server":"213.183.53.222","port":9088,"cipher":"aes-256-cfb","password":"f8npKgNzdkss2ytn"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦243","server":"213.183.53.222","port":9038,"cipher":"aes-256-cfb","password":"gYCYXfkUQEs2TaJQ"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦244","server":"213.183.53.222","port":9031,"cipher":"aes-256-cfb","password":"BwcAUZk8hUFAkDGN"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦245","server":"213.183.53.222","port":9007,"cipher":"aes-256-cfb","password":"kSPmvwdFzGMMW5pY"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦246","server":"213.183.53.222","port":9006,"cipher":"aes-256-cfb","password":"FAdUvMJUq5vDgKEq"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦247","server":"213.183.53.222","port":9011,"cipher":"aes-256-cfb","password":"M3t2ZEQcMGRWBjRa"}
+  - {"type":"ss","name":"TG＠yzcloud俄罗斯联邦248","server":"213.183.53.222","port":9053,"cipher":"aes-256-cfb","password":"SBM7R883jBmnqe6C"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚344","server":"213.183.63.221","port":9038,"cipher":"aes-256-cfb","password":"gYCYXfkUQEs2TaJQ"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚345","server":"213.183.63.221","port":9043,"cipher":"aes-256-cfb","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚346","server":"213.183.63.221","port":9018,"cipher":"aes-256-cfb","password":"fG2artUmHfNT2cX7"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚347","server":"213.183.63.221","port":9050,"cipher":"aes-256-cfb","password":"FG5ddLsMPbV5CutE"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚348","server":"213.183.63.221","port":9032,"cipher":"aes-256-cfb","password":"UWZQeLRWnkqgkseq"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚349","server":"213.183.63.221","port":9060,"cipher":"aes-256-cfb","password":"ueLXVkvh4hckhErQ"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚350","server":"213.183.63.221","port":9073,"cipher":"aes-256-cfb","password":"daFYagqDdBdA6VTX"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚351","server":"213.183.63.221","port":9027,"cipher":"aes-256-cfb","password":"EXN3S3eQpjE7EJu8"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚352","server":"213.183.63.221","port":9020,"cipher":"aes-256-cfb","password":"BNmAXXxAHYpTRdzu"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚353","server":"213.183.63.221","port":9088,"cipher":"aes-256-cfb","password":"f8npKgNzdkss2ytn"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚354","server":"213.183.63.221","port":9040,"cipher":"aes-256-cfb","password":"p9z5BVADH2YFs3MN"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚355","server":"213.183.63.221","port":9079,"cipher":"aes-256-cfb","password":"TPqX8edgbAURcAMb"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚356","server":"213.183.63.221","port":9014,"cipher":"aes-256-cfb","password":"KnJGad3FqTvjqbaX"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚357","server":"213.183.63.221","port":9064,"cipher":"aes-256-cfb","password":"cp8pRSUAyLhTfVWH"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚358","server":"213.183.63.221","port":9059,"cipher":"aes-256-cfb","password":"9XwYyZsK8SNzQDtY"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚359","server":"213.183.63.221","port":9053,"cipher":"aes-256-cfb","password":"SBM7R883jBmnqe6C"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚360","server":"213.183.63.221","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚361","server":"213.183.63.221","port":9046,"cipher":"aes-256-cfb","password":"NvS8N4Vf8qAGPSCL"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚362","server":"213.183.63.221","port":9024,"cipher":"aes-256-cfb","password":"BejrQvtu9sqUeNuZ"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚363","server":"213.183.63.221","port":9015,"cipher":"aes-256-cfb","password":"ZpNDDKRu9MagNvaf"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚364","server":"213.183.63.221","port":9008,"cipher":"aes-256-cfb","password":"y9VURyNzJWNRYEGQ"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚365","server":"213.183.63.221","port":9098,"cipher":"aes-256-cfb","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚366","server":"213.183.63.221","port":9070,"cipher":"aes-256-cfb","password":"bf7v334KKDV3YDhH"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚367","server":"213.183.63.221","port":9093,"cipher":"aes-256-cfb","password":"wfLC2y7rzZyCmuyt"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚368","server":"213.183.63.221","port":9045,"cipher":"aes-256-cfb","password":"Lp27rqyJq72bZsqX"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚369","server":"213.183.63.221","port":9000,"cipher":"aes-256-cfb","password":"a3GFYt36Sm82Vys9"}
+  - {"type":"ss","name":"TG＠yzcloud保加利亚370","server":"213.183.63.221","port":9031,"cipher":"aes-256-cfb","password":"BwcAUZk8hUFAkDGN"}
+  - {"type":"ss","name":"TG＠yzcloud波兰371","server":"217.30.10.63","port":9043,"cipher":"aes-256-cfb","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ss","name":"TG＠yzcloud波兰372","server":"217.30.10.63","port":9031,"cipher":"aes-256-cfb","password":"BwcAUZk8hUFAkDGN"}
+  - {"type":"ss","name":"TG＠yzcloud波兰373","server":"217.30.10.63","port":9088,"cipher":"aes-256-cfb","password":"f8npKgNzdkss2ytn"}
+  - {"type":"ss","name":"TG＠yzcloud波兰374","server":"217.30.10.63","port":9056,"cipher":"aes-256-cfb","password":"rNBfNuuANFCAk7KB"}
+  - {"type":"ss","name":"TG＠yzcloud波兰375","server":"217.30.10.63","port":9014,"cipher":"aes-256-cfb","password":"KnJGad3FqTvjqbaX"}
+  - {"type":"ss","name":"TG＠yzcloud波兰376","server":"217.30.10.63","port":9064,"cipher":"aes-256-cfb","password":"cp8pRSUAyLhTfVWH"}
+  - {"type":"ss","name":"TG＠yzcloud波兰377","server":"217.30.10.63","port":9057,"cipher":"aes-256-cfb","password":"wjTugX3ZtHMB9c3Z"}
+  - {"type":"ss","name":"TG＠yzcloud波兰378","server":"217.30.10.63","port":9001,"cipher":"aes-256-cfb","password":"UkXRsXvR6buDMG2Y"}
+  - {"type":"ss","name":"TG＠yzcloud波兰379","server":"217.30.10.63","port":9060,"cipher":"aes-256-cfb","password":"ueLXVkvh4hckhErQ"}
+  - {"type":"ss","name":"TG＠yzcloud波兰380","server":"217.30.10.63","port":9003,"cipher":"aes-256-cfb","password":"JdmRK9gMEqFgs8nP"}
+  - {"type":"ss","name":"TG＠yzcloud波兰381","server":"217.30.10.63","port":9007,"cipher":"aes-256-cfb","password":"kSPmvwdFzGMMW5pY"}
+  - {"type":"ss","name":"TG＠yzcloud波兰382","server":"217.30.10.63","port":9000,"cipher":"aes-256-cfb","password":"a3GFYt36Sm82Vys9"}
+  - {"type":"ss","name":"TG＠yzcloud波兰383","server":"217.30.10.63","port":9098,"cipher":"aes-256-cfb","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ss","name":"TG＠yzcloud波兰384","server":"217.30.10.63","port":9045,"cipher":"aes-256-cfb","password":"Lp27rqyJq72bZsqX"}
+  - {"type":"ss","name":"TG＠yzcloud波兰385","server":"217.30.10.63","port":9094,"cipher":"aes-256-cfb","password":"rpgbNnU9rDDU4aWZ"}
+  - {"type":"ss","name":"TG＠yzcloud波兰386","server":"217.30.10.63","port":9079,"cipher":"aes-256-cfb","password":"TPqX8edgbAURcAMb"}
+  - {"type":"ss","name":"TG＠yzcloud波兰387","server":"217.30.10.63","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ss","name":"TG＠yzcloud波兰388","server":"217.30.10.63","port":9042,"cipher":"aes-256-cfb","password":"S7KwUu7yBy58S3Ga"}
+  - {"type":"ss","name":"TG＠yzcloud波兰389","server":"217.30.10.63","port":9041,"cipher":"aes-256-cfb","password":"U6qnYRhfyDmn8sgn"}
+  - {"type":"ss","name":"TG＠yzcloud波兰390","server":"217.30.10.63","port":9093,"cipher":"aes-256-cfb","password":"wfLC2y7rzZyCmuyt"}
+  - {"type":"ss","name":"TG＠yzcloud波兰391","server":"217.30.10.63","port":9037,"cipher":"aes-256-cfb","password":"TN2YqghxeFDKZfLU"}
+  - {"type":"ss","name":"TG＠yzcloud波兰392","server":"217.30.10.63","port":9050,"cipher":"aes-256-cfb","password":"FG5ddLsMPbV5CutE"}
+  - {"type":"ss","name":"TG＠yzcloud波兰393","server":"217.30.10.63","port":9011,"cipher":"aes-256-cfb","password":"M3t2ZEQcMGRWBjRa"}
+  - {"type":"ss","name":"TG＠yzcloud波兰394","server":"217.30.10.63","port":9005,"cipher":"aes-256-cfb","password":"ZET59LF6DvCC8KVt"}
+  - {"type":"ss","name":"TG＠yzcloud波兰395","server":"217.30.10.63","port":9053,"cipher":"aes-256-cfb","password":"SBM7R883jBmnqe6C"}
+  - {"type":"ss","name":"TG＠yzcloud波兰396","server":"217.30.10.63","port":9006,"cipher":"aes-256-cfb","password":"FAdUvMJUq5vDgKEq"}
+  - {"type":"ss","name":"TG＠yzcloud波兰397","server":"217.30.10.63","port":9070,"cipher":"aes-256-cfb","password":"bf7v334KKDV3YDhH"}
+  - {"type":"ss","name":"TG＠yzcloud波兰398","server":"217.30.10.63","port":9046,"cipher":"aes-256-cfb","password":"NvS8N4Vf8qAGPSCL"}
+  - {"type":"ss","name":"TG＠yzcloud波兰399","server":"217.30.10.64","port":9006,"cipher":"aes-256-cfb","password":"FAdUvMJUq5vDgKEq"}
+  - {"type":"ss","name":"TG＠yzcloud波兰400","server":"217.30.10.64","port":9024,"cipher":"aes-256-cfb","password":"BejrQvtu9sqUeNuZ"}
+  - {"type":"ss","name":"TG＠yzcloud波兰401","server":"217.30.10.64","port":9094,"cipher":"aes-256-cfb","password":"rpgbNnU9rDDU4aWZ"}
+  - {"type":"ss","name":"TG＠yzcloud波兰402","server":"217.30.10.64","port":9070,"cipher":"aes-256-cfb","password":"bf7v334KKDV3YDhH"}
+  - {"type":"ss","name":"TG＠yzcloud波兰403","server":"217.30.10.64","port":9084,"cipher":"aes-256-cfb","password":"c3NtHJ5ujV2tGDfj"}
+  - {"type":"ss","name":"TG＠yzcloud波兰404","server":"217.30.10.64","port":9040,"cipher":"aes-256-cfb","password":"p9z5BVADH2YFs3MN"}
+  - {"type":"ss","name":"TG＠yzcloud波兰405","server":"217.30.10.64","port":9041,"cipher":"aes-256-cfb","password":"U6qnYRhfyDmn8sgn"}
+  - {"type":"ss","name":"TG＠yzcloud波兰406","server":"217.30.10.64","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ssr","name":"TG＠yzcloud波兰407","server":"217.30.10.64","port":9053,"protocol":"origin","cipher":"aes-256-cfb","obfs":"plain","password":"SBM7R883jBmnqe6C"}
+  - {"type":"ss","name":"TG＠yzcloud波兰408","server":"217.30.10.67","port":9079,"cipher":"aes-256-cfb","password":"TPqX8edgbAURcAMb"}
+  - {"type":"ss","name":"TG＠yzcloud波兰409","server":"217.30.10.67","port":9093,"cipher":"aes-256-cfb","password":"wfLC2y7rzZyCmuyt"}
+  - {"type":"ss","name":"TG＠yzcloud波兰410","server":"217.30.10.67","port":9015,"cipher":"aes-256-cfb","password":"ZpNDDKRu9MagNvaf"}
+  - {"type":"ss","name":"TG＠yzcloud波兰411","server":"217.30.10.67","port":9032,"cipher":"aes-256-cfb","password":"UWZQeLRWnkqgkseq"}
+  - {"type":"ss","name":"TG＠yzcloud波兰412","server":"217.30.10.67","port":9000,"cipher":"aes-256-cfb","password":"a3GFYt36Sm82Vys9"}
+  - {"type":"ss","name":"TG＠yzcloud波兰413","server":"217.30.10.67","port":9020,"cipher":"aes-256-cfb","password":"BNmAXXxAHYpTRdzu"}
+  - {"type":"ss","name":"TG＠yzcloud波兰414","server":"217.30.10.67","port":9026,"cipher":"aes-256-cfb","password":"QWDDvVE9npNurQfA"}
+  - {"type":"ss","name":"TG＠yzcloud波兰415","server":"217.30.10.67","port":9097,"cipher":"aes-256-cfb","password":"Sn5B7jTqr76aCJT8"}
+  - {"type":"ss","name":"TG＠yzcloud波兰416","server":"217.30.10.67","port":9059,"cipher":"aes-256-cfb","password":"9XwYyZsK8SNzQDtY"}
+  - {"type":"ss","name":"TG＠yzcloud波兰417","server":"217.30.10.67","port":9031,"cipher":"aes-256-cfb","password":"BwcAUZk8hUFAkDGN"}
+  - {"type":"ss","name":"TG＠yzcloud波兰418","server":"217.30.10.67","port":9011,"cipher":"aes-256-cfb","password":"M3t2ZEQcMGRWBjRa"}
+  - {"type":"ss","name":"TG＠yzcloud波兰419","server":"217.30.10.67","port":9008,"cipher":"aes-256-cfb","password":"y9VURyNzJWNRYEGQ"}
+  - {"type":"ss","name":"TG＠yzcloud波兰420","server":"217.30.10.67","port":9043,"cipher":"aes-256-cfb","password":"HSZuyJQcWe8dxNdF"}
+  - {"type":"ss","name":"TG＠yzcloud波兰421","server":"217.30.10.67","port":9080,"cipher":"aes-256-cfb","password":"VP8ZPxQpJtZRCjfZ"}
+  - {"type":"ss","name":"TG＠yzcloud波兰422","server":"217.30.10.67","port":9098,"cipher":"aes-256-cfb","password":"aLpQtfEZe445QyHk"}
+  - {"type":"ss","name":"TG＠yzcloud波兰423","server":"217.30.10.67","port":9094,"cipher":"aes-256-cfb","password":"rpgbNnU9rDDU4aWZ"}
+  - {"type":"ss","name":"TG＠yzcloud波兰424","server":"217.30.10.67","port":9041,"cipher":"aes-256-cfb","password":"U6qnYRhfyDmn8sgn"}
+  - {"type":"ss","name":"TG＠yzcloud罗马尼亚435","server":"5.183.100.87","port":50003,"cipher":"aes-256-cfb","password":"8460400130"}
+  - {"type":"ssr","name":"TG＠yzcloud法国436","server":"51.210.51.88","port":443,"protocol":"auth_chain_a","cipher":"aes-192-ctr","obfs":"tls1.2_ticket_auth","password":"sEscPBiAD9K$&@79"}
+  - {"type":"vmess","name":"TG＠yzcloud美国437","server":"51.81.223.0","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国438","server":"51.81.223.0","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国439","server":"51.81.223.0","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国440","server":"51.81.223.12","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国441","server":"51.81.223.13","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国442","server":"51.81.223.14","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国443","server":"51.81.223.16","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国444","server":"51.81.223.18","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国445","server":"51.81.223.19","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国446","server":"51.81.223.19","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国447","server":"51.81.223.19","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国448","server":"51.81.223.19","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国449","server":"51.81.223.20","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国450","server":"51.81.223.20","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国451","server":"51.81.223.22","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国452","server":"51.81.223.23","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国453","server":"51.81.223.23","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国454","server":"51.81.223.25","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国455","server":"51.81.223.25","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国456","server":"51.81.223.26","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国457","server":"51.81.223.28","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国458","server":"51.81.223.29","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国459","server":"51.81.223.29","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国460","server":"51.81.223.29","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国461","server":"51.81.223.30","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国462","server":"51.81.223.31","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国463","server":"51.81.223.31","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国464","server":"51.81.223.31","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国465","server":"51.81.223.32","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国466","server":"51.81.223.35","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国467","server":"51.81.223.36","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国468","server":"51.81.223.4","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国469","server":"51.81.223.4","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国470","server":"51.81.223.6","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国471","server":"51.81.223.8","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"TG＠yzcloud美国472","server":"51.81.223.9","port":"443","uuid":"c0156451-4efb-45e2-84fc-8d315c4650db","alterId":"32","cipher":"auto","network":"tcp"}
+proxy-groups:
+  - name: 💙 电报频道＠yzcloud
+    type: select
+    proxies:
+      - 🔯 自动选择
+      - 🔰 故障转移
+      - TG＠yzcloud美国1
+      - TG＠yzcloud美国2
+      - TG＠yzcloud美国3
+      - TG＠yzcloud美国4
+      - TG＠yzcloud美国5
+      - TG＠yzcloud美国6
+      - TG＠yzcloud美国7
+      - TG＠yzcloud美国8
+      - TG＠yzcloud美国9
+      - TG＠yzcloud美国10
+      - TG＠yzcloud美国11
+      - TG＠yzcloud美国12
+      - TG＠yzcloud美国13
+      - TG＠yzcloud美国14
+      - TG＠yzcloud美国15
+      - TG＠yzcloud美国16
+      - TG＠yzcloud美国17
+      - TG＠yzcloud美国18
+      - TG＠yzcloud美国19
+      - TG＠yzcloud美国20
+      - TG＠yzcloud卢森堡21
+      - TG＠yzcloud瑞士23
+      - TG＠yzcloud瑞士24
+      - TG＠yzcloud澳大利亚25
+      - TG＠yzcloud澳大利亚26
+      - TG＠yzcloud澳大利亚27
+      - TG＠yzcloud澳大利亚28
+      - TG＠yzcloud澳大利亚29
+      - TG＠yzcloud澳大利亚30
+      - TG＠yzcloud澳大利亚31
+      - TG＠yzcloud澳大利亚32
+      - TG＠yzcloud澳大利亚33
+      - TG＠yzcloud澳大利亚34
+      - TG＠yzcloud澳大利亚35
+      - TG＠yzcloud澳大利亚36
+      - TG＠yzcloud澳大利亚37
+      - TG＠yzcloud澳大利亚38
+      - TG＠yzcloud澳大利亚39
+      - TG＠yzcloud澳大利亚40
+      - TG＠yzcloud澳大利亚41
+      - TG＠yzcloud澳大利亚42
+      - TG＠yzcloud澳大利亚43
+      - TG＠yzcloud澳大利亚44
+      - TG＠yzcloud澳大利亚45
+      - TG＠yzcloud澳大利亚46
+      - TG＠yzcloud澳大利亚47
+      - TG＠yzcloud澳大利亚48
+      - TG＠yzcloud澳大利亚49
+      - TG＠yzcloud澳大利亚50
+      - TG＠yzcloud澳大利亚51
+      - TG＠yzcloud澳大利亚52
+      - TG＠yzcloud澳大利亚53
+      - TG＠yzcloud澳大利亚54
+      - TG＠yzcloud澳大利亚55
+      - TG＠yzcloud澳大利亚56
+      - TG＠yzcloud澳大利亚57
+      - TG＠yzcloud澳大利亚58
+      - TG＠yzcloud澳大利亚59
+      - TG＠yzcloud澳大利亚60
+      - TG＠yzcloud澳大利亚61
+      - TG＠yzcloud澳大利亚62
+      - TG＠yzcloud澳大利亚63
+      - TG＠yzcloud澳大利亚64
+      - TG＠yzcloud美国83
+      - TG＠yzcloud美国84
+      - TG＠yzcloud美国85
+      - TG＠yzcloud塞浦路斯86
+      - TG＠yzcloud俄罗斯联邦94
+      - TG＠yzcloud俄罗斯联邦95
+      - TG＠yzcloud俄罗斯联邦96
+      - TG＠yzcloud俄罗斯联邦97
+      - TG＠yzcloud俄罗斯联邦98
+      - TG＠yzcloud俄罗斯联邦99
+      - TG＠yzcloud俄罗斯联邦100
+      - TG＠yzcloud俄罗斯联邦101
+      - TG＠yzcloud俄罗斯联邦102
+      - TG＠yzcloud俄罗斯联邦103
+      - TG＠yzcloud俄罗斯联邦104
+      - TG＠yzcloud俄罗斯联邦105
+      - TG＠yzcloud俄罗斯联邦106
+      - TG＠yzcloud俄罗斯联邦107
+      - TG＠yzcloud俄罗斯联邦108
+      - TG＠yzcloud俄罗斯联邦109
+      - TG＠yzcloud俄罗斯联邦110
+      - TG＠yzcloud俄罗斯联邦111
+      - TG＠yzcloud俄罗斯联邦112
+      - TG＠yzcloud俄罗斯联邦113
+      - TG＠yzcloud俄罗斯联邦114
+      - TG＠yzcloud俄罗斯联邦115
+      - TG＠yzcloud俄罗斯联邦116
+      - TG＠yzcloud俄罗斯联邦117
+      - TG＠yzcloud俄罗斯联邦118
+      - TG＠yzcloud俄罗斯联邦119
+      - TG＠yzcloud俄罗斯联邦120
+      - TG＠yzcloud俄罗斯联邦121
+      - TG＠yzcloud俄罗斯联邦122
+      - TG＠yzcloud俄罗斯联邦123
+      - TG＠yzcloud俄罗斯联邦124
+      - TG＠yzcloud俄罗斯联邦125
+      - TG＠yzcloud俄罗斯联邦126
+      - TG＠yzcloud俄罗斯联邦127
+      - TG＠yzcloud俄罗斯联邦128
+      - TG＠yzcloud俄罗斯联邦129
+      - TG＠yzcloud俄罗斯联邦130
+      - TG＠yzcloud俄罗斯联邦131
+      - TG＠yzcloud俄罗斯联邦132
+      - TG＠yzcloud俄罗斯联邦133
+      - TG＠yzcloud俄罗斯联邦134
+      - TG＠yzcloud俄罗斯联邦135
+      - TG＠yzcloud俄罗斯联邦136
+      - TG＠yzcloud俄罗斯联邦137
+      - TG＠yzcloud俄罗斯联邦138
+      - TG＠yzcloud俄罗斯联邦139
+      - TG＠yzcloud俄罗斯联邦140
+      - TG＠yzcloud俄罗斯联邦141
+      - TG＠yzcloud俄罗斯联邦142
+      - TG＠yzcloud俄罗斯联邦143
+      - TG＠yzcloud俄罗斯联邦144
+      - TG＠yzcloud俄罗斯联邦145
+      - TG＠yzcloud俄罗斯联邦146
+      - TG＠yzcloud俄罗斯联邦147
+      - TG＠yzcloud俄罗斯联邦148
+      - TG＠yzcloud俄罗斯联邦149
+      - TG＠yzcloud俄罗斯联邦150
+      - TG＠yzcloud俄罗斯联邦151
+      - TG＠yzcloud俄罗斯联邦152
+      - TG＠yzcloud俄罗斯联邦153
+      - TG＠yzcloud俄罗斯联邦154
+      - TG＠yzcloud俄罗斯联邦155
+      - TG＠yzcloud俄罗斯联邦156
+      - TG＠yzcloud俄罗斯联邦157
+      - TG＠yzcloud俄罗斯联邦158
+      - TG＠yzcloud俄罗斯联邦159
+      - TG＠yzcloud俄罗斯联邦160
+      - TG＠yzcloud俄罗斯联邦161
+      - TG＠yzcloud俄罗斯联邦162
+      - TG＠yzcloud俄罗斯联邦163
+      - TG＠yzcloud俄罗斯联邦164
+      - TG＠yzcloud俄罗斯联邦165
+      - TG＠yzcloud俄罗斯联邦166
+      - TG＠yzcloud俄罗斯联邦167
+      - TG＠yzcloud俄罗斯联邦168
+      - TG＠yzcloud俄罗斯联邦169
+      - TG＠yzcloud俄罗斯联邦170
+      - TG＠yzcloud俄罗斯联邦171
+      - TG＠yzcloud俄罗斯联邦172
+      - TG＠yzcloud俄罗斯联邦173
+      - TG＠yzcloud俄罗斯联邦174
+      - TG＠yzcloud俄罗斯联邦175
+      - TG＠yzcloud俄罗斯联邦176
+      - TG＠yzcloud俄罗斯联邦177
+      - TG＠yzcloud俄罗斯联邦178
+      - TG＠yzcloud俄罗斯联邦179
+      - TG＠yzcloud俄罗斯联邦180
+      - TG＠yzcloud俄罗斯联邦181
+      - TG＠yzcloud俄罗斯联邦182
+      - TG＠yzcloud俄罗斯联邦183
+      - TG＠yzcloud俄罗斯联邦184
+      - TG＠yzcloud俄罗斯联邦185
+      - TG＠yzcloud俄罗斯联邦186
+      - TG＠yzcloud俄罗斯联邦187
+      - TG＠yzcloud俄罗斯联邦188
+      - TG＠yzcloud俄罗斯联邦189
+      - TG＠yzcloud俄罗斯联邦190
+      - TG＠yzcloud俄罗斯联邦191
+      - TG＠yzcloud俄罗斯联邦192
+      - TG＠yzcloud俄罗斯联邦193
+      - TG＠yzcloud俄罗斯联邦194
+      - TG＠yzcloud俄罗斯联邦195
+      - TG＠yzcloud俄罗斯联邦196
+      - TG＠yzcloud俄罗斯联邦197
+      - TG＠yzcloud俄罗斯联邦198
+      - TG＠yzcloud俄罗斯联邦199
+      - TG＠yzcloud俄罗斯联邦200
+      - TG＠yzcloud俄罗斯联邦201
+      - TG＠yzcloud俄罗斯联邦202
+      - TG＠yzcloud俄罗斯联邦203
+      - TG＠yzcloud俄罗斯联邦204
+      - TG＠yzcloud俄罗斯联邦205
+      - TG＠yzcloud俄罗斯联邦206
+      - TG＠yzcloud俄罗斯联邦207
+      - TG＠yzcloud俄罗斯联邦208
+      - TG＠yzcloud俄罗斯联邦209
+      - TG＠yzcloud俄罗斯联邦210
+      - TG＠yzcloud俄罗斯联邦211
+      - TG＠yzcloud俄罗斯联邦212
+      - TG＠yzcloud俄罗斯联邦213
+      - TG＠yzcloud俄罗斯联邦214
+      - TG＠yzcloud俄罗斯联邦215
+      - TG＠yzcloud俄罗斯联邦216
+      - TG＠yzcloud俄罗斯联邦217
+      - TG＠yzcloud俄罗斯联邦218
+      - TG＠yzcloud俄罗斯联邦219
+      - TG＠yzcloud俄罗斯联邦220
+      - TG＠yzcloud俄罗斯联邦221
+      - TG＠yzcloud俄罗斯联邦222
+      - TG＠yzcloud俄罗斯联邦223
+      - TG＠yzcloud俄罗斯联邦224
+      - TG＠yzcloud俄罗斯联邦225
+      - TG＠yzcloud俄罗斯联邦226
+      - TG＠yzcloud俄罗斯联邦227
+      - TG＠yzcloud俄罗斯联邦228
+      - TG＠yzcloud俄罗斯联邦229
+      - TG＠yzcloud俄罗斯联邦230
+      - TG＠yzcloud俄罗斯联邦231
+      - TG＠yzcloud俄罗斯联邦232
+      - TG＠yzcloud俄罗斯联邦233
+      - TG＠yzcloud俄罗斯联邦234
+      - TG＠yzcloud俄罗斯联邦235
+      - TG＠yzcloud俄罗斯联邦236
+      - TG＠yzcloud俄罗斯联邦237
+      - TG＠yzcloud俄罗斯联邦238
+      - TG＠yzcloud俄罗斯联邦239
+      - TG＠yzcloud俄罗斯联邦240
+      - TG＠yzcloud俄罗斯联邦241
+      - TG＠yzcloud俄罗斯联邦242
+      - TG＠yzcloud俄罗斯联邦243
+      - TG＠yzcloud俄罗斯联邦244
+      - TG＠yzcloud俄罗斯联邦245
+      - TG＠yzcloud俄罗斯联邦246
+      - TG＠yzcloud俄罗斯联邦247
+      - TG＠yzcloud俄罗斯联邦248
+      - TG＠yzcloud保加利亚344
+      - TG＠yzcloud保加利亚345
+      - TG＠yzcloud保加利亚346
+      - TG＠yzcloud保加利亚347
+      - TG＠yzcloud保加利亚348
+      - TG＠yzcloud保加利亚349
+      - TG＠yzcloud保加利亚350
+      - TG＠yzcloud保加利亚351
+      - TG＠yzcloud保加利亚352
+      - TG＠yzcloud保加利亚353
+      - TG＠yzcloud保加利亚354
+      - TG＠yzcloud保加利亚355
+      - TG＠yzcloud保加利亚356
+      - TG＠yzcloud保加利亚357
+      - TG＠yzcloud保加利亚358
+      - TG＠yzcloud保加利亚359
+      - TG＠yzcloud保加利亚360
+      - TG＠yzcloud保加利亚361
+      - TG＠yzcloud保加利亚362
+      - TG＠yzcloud保加利亚363
+      - TG＠yzcloud保加利亚364
+      - TG＠yzcloud保加利亚365
+      - TG＠yzcloud保加利亚366
+      - TG＠yzcloud保加利亚367
+      - TG＠yzcloud保加利亚368
+      - TG＠yzcloud保加利亚369
+      - TG＠yzcloud保加利亚370
+      - TG＠yzcloud波兰371
+      - TG＠yzcloud波兰372
+      - TG＠yzcloud波兰373
+      - TG＠yzcloud波兰374
+      - TG＠yzcloud波兰375
+      - TG＠yzcloud波兰376
+      - TG＠yzcloud波兰377
+      - TG＠yzcloud波兰378
+      - TG＠yzcloud波兰379
+      - TG＠yzcloud波兰380
+      - TG＠yzcloud波兰381
+      - TG＠yzcloud波兰382
+      - TG＠yzcloud波兰383
+      - TG＠yzcloud波兰384
+      - TG＠yzcloud波兰385
+      - TG＠yzcloud波兰386
+      - TG＠yzcloud波兰387
+      - TG＠yzcloud波兰388
+      - TG＠yzcloud波兰389
+      - TG＠yzcloud波兰390
+      - TG＠yzcloud波兰391
+      - TG＠yzcloud波兰392
+      - TG＠yzcloud波兰393
+      - TG＠yzcloud波兰394
+      - TG＠yzcloud波兰395
+      - TG＠yzcloud波兰396
+      - TG＠yzcloud波兰397
+      - TG＠yzcloud波兰398
+      - TG＠yzcloud波兰399
+      - TG＠yzcloud波兰400
+      - TG＠yzcloud波兰401
+      - TG＠yzcloud波兰402
+      - TG＠yzcloud波兰403
+      - TG＠yzcloud波兰404
+      - TG＠yzcloud波兰405
+      - TG＠yzcloud波兰406
+      - TG＠yzcloud波兰407
+      - TG＠yzcloud波兰408
+      - TG＠yzcloud波兰409
+      - TG＠yzcloud波兰410
+      - TG＠yzcloud波兰411
+      - TG＠yzcloud波兰412
+      - TG＠yzcloud波兰413
+      - TG＠yzcloud波兰414
+      - TG＠yzcloud波兰415
+      - TG＠yzcloud波兰416
+      - TG＠yzcloud波兰417
+      - TG＠yzcloud波兰418
+      - TG＠yzcloud波兰419
+      - TG＠yzcloud波兰420
+      - TG＠yzcloud波兰421
+      - TG＠yzcloud波兰422
+      - TG＠yzcloud波兰423
+      - TG＠yzcloud波兰424
+      - TG＠yzcloud罗马尼亚435
+      - TG＠yzcloud法国436
+      - TG＠yzcloud美国437
+      - TG＠yzcloud美国438
+      - TG＠yzcloud美国439
+      - TG＠yzcloud美国440
+      - TG＠yzcloud美国441
+      - TG＠yzcloud美国442
+      - TG＠yzcloud美国443
+      - TG＠yzcloud美国444
+      - TG＠yzcloud美国445
+      - TG＠yzcloud美国446
+      - TG＠yzcloud美国447
+      - TG＠yzcloud美国448
+      - TG＠yzcloud美国449
+      - TG＠yzcloud美国450
+      - TG＠yzcloud美国451
+      - TG＠yzcloud美国452
+      - TG＠yzcloud美国453
+      - TG＠yzcloud美国454
+      - TG＠yzcloud美国455
+      - TG＠yzcloud美国456
+      - TG＠yzcloud美国457
+      - TG＠yzcloud美国458
+      - TG＠yzcloud美国459
+      - TG＠yzcloud美国460
+      - TG＠yzcloud美国461
+      - TG＠yzcloud美国462
+      - TG＠yzcloud美国463
+      - TG＠yzcloud美国464
+      - TG＠yzcloud美国465
+      - TG＠yzcloud美国466
+      - TG＠yzcloud美国467
+      - TG＠yzcloud美国468
+      - TG＠yzcloud美国469
+      - TG＠yzcloud美国470
+      - TG＠yzcloud美国471
+      - TG＠yzcloud美国472
+  - name: 🔯 自动选择
+    type: url-test
+    proxies:
+      - TG＠yzcloud美国1
+      - TG＠yzcloud美国2
+      - TG＠yzcloud美国3
+      - TG＠yzcloud美国4
+      - TG＠yzcloud美国5
+      - TG＠yzcloud美国6
+      - TG＠yzcloud美国7
+      - TG＠yzcloud美国8
+      - TG＠yzcloud美国9
+      - TG＠yzcloud美国10
+      - TG＠yzcloud美国11
+      - TG＠yzcloud美国12
+      - TG＠yzcloud美国13
+      - TG＠yzcloud美国14
+      - TG＠yzcloud美国15
+      - TG＠yzcloud美国16
+      - TG＠yzcloud美国17
+      - TG＠yzcloud美国18
+      - TG＠yzcloud美国19
+      - TG＠yzcloud美国20
+      - TG＠yzcloud卢森堡21
+      - TG＠yzcloud瑞士23
+      - TG＠yzcloud瑞士24
+      - TG＠yzcloud澳大利亚25
+      - TG＠yzcloud澳大利亚26
+      - TG＠yzcloud澳大利亚27
+      - TG＠yzcloud澳大利亚28
+      - TG＠yzcloud澳大利亚29
+      - TG＠yzcloud澳大利亚30
+      - TG＠yzcloud澳大利亚31
+      - TG＠yzcloud澳大利亚32
+      - TG＠yzcloud澳大利亚33
+      - TG＠yzcloud澳大利亚34
+      - TG＠yzcloud澳大利亚35
+      - TG＠yzcloud澳大利亚36
+      - TG＠yzcloud澳大利亚37
+      - TG＠yzcloud澳大利亚38
+      - TG＠yzcloud澳大利亚39
+      - TG＠yzcloud澳大利亚40
+      - TG＠yzcloud澳大利亚41
+      - TG＠yzcloud澳大利亚42
+      - TG＠yzcloud澳大利亚43
+      - TG＠yzcloud澳大利亚44
+      - TG＠yzcloud澳大利亚45
+      - TG＠yzcloud澳大利亚46
+      - TG＠yzcloud澳大利亚47
+      - TG＠yzcloud澳大利亚48
+      - TG＠yzcloud澳大利亚49
+      - TG＠yzcloud澳大利亚50
+      - TG＠yzcloud澳大利亚51
+      - TG＠yzcloud澳大利亚52
+      - TG＠yzcloud澳大利亚53
+      - TG＠yzcloud澳大利亚54
+      - TG＠yzcloud澳大利亚55
+      - TG＠yzcloud澳大利亚56
+      - TG＠yzcloud澳大利亚57
+      - TG＠yzcloud澳大利亚58
+      - TG＠yzcloud澳大利亚59
+      - TG＠yzcloud澳大利亚60
+      - TG＠yzcloud澳大利亚61
+      - TG＠yzcloud澳大利亚62
+      - TG＠yzcloud澳大利亚63
+      - TG＠yzcloud澳大利亚64
+      - TG＠yzcloud美国83
+      - TG＠yzcloud美国84
+      - TG＠yzcloud美国85
+      - TG＠yzcloud塞浦路斯86
+      - TG＠yzcloud俄罗斯联邦94
+      - TG＠yzcloud俄罗斯联邦95
+      - TG＠yzcloud俄罗斯联邦96
+      - TG＠yzcloud俄罗斯联邦97
+      - TG＠yzcloud俄罗斯联邦98
+      - TG＠yzcloud俄罗斯联邦99
+      - TG＠yzcloud俄罗斯联邦100
+      - TG＠yzcloud俄罗斯联邦101
+      - TG＠yzcloud俄罗斯联邦102
+      - TG＠yzcloud俄罗斯联邦103
+      - TG＠yzcloud俄罗斯联邦104
+      - TG＠yzcloud俄罗斯联邦105
+      - TG＠yzcloud俄罗斯联邦106
+      - TG＠yzcloud俄罗斯联邦107
+      - TG＠yzcloud俄罗斯联邦108
+      - TG＠yzcloud俄罗斯联邦109
+      - TG＠yzcloud俄罗斯联邦110
+      - TG＠yzcloud俄罗斯联邦111
+      - TG＠yzcloud俄罗斯联邦112
+      - TG＠yzcloud俄罗斯联邦113
+      - TG＠yzcloud俄罗斯联邦114
+      - TG＠yzcloud俄罗斯联邦115
+      - TG＠yzcloud俄罗斯联邦116
+      - TG＠yzcloud俄罗斯联邦117
+      - TG＠yzcloud俄罗斯联邦118
+      - TG＠yzcloud俄罗斯联邦119
+      - TG＠yzcloud俄罗斯联邦120
+      - TG＠yzcloud俄罗斯联邦121
+      - TG＠yzcloud俄罗斯联邦122
+      - TG＠yzcloud俄罗斯联邦123
+      - TG＠yzcloud俄罗斯联邦124
+      - TG＠yzcloud俄罗斯联邦125
+      - TG＠yzcloud俄罗斯联邦126
+      - TG＠yzcloud俄罗斯联邦127
+      - TG＠yzcloud俄罗斯联邦128
+      - TG＠yzcloud俄罗斯联邦129
+      - TG＠yzcloud俄罗斯联邦130
+      - TG＠yzcloud俄罗斯联邦131
+      - TG＠yzcloud俄罗斯联邦132
+      - TG＠yzcloud俄罗斯联邦133
+      - TG＠yzcloud俄罗斯联邦134
+      - TG＠yzcloud俄罗斯联邦135
+      - TG＠yzcloud俄罗斯联邦136
+      - TG＠yzcloud俄罗斯联邦137
+      - TG＠yzcloud俄罗斯联邦138
+      - TG＠yzcloud俄罗斯联邦139
+      - TG＠yzcloud俄罗斯联邦140
+      - TG＠yzcloud俄罗斯联邦141
+      - TG＠yzcloud俄罗斯联邦142
+      - TG＠yzcloud俄罗斯联邦143
+      - TG＠yzcloud俄罗斯联邦144
+      - TG＠yzcloud俄罗斯联邦145
+      - TG＠yzcloud俄罗斯联邦146
+      - TG＠yzcloud俄罗斯联邦147
+      - TG＠yzcloud俄罗斯联邦148
+      - TG＠yzcloud俄罗斯联邦149
+      - TG＠yzcloud俄罗斯联邦150
+      - TG＠yzcloud俄罗斯联邦151
+      - TG＠yzcloud俄罗斯联邦152
+      - TG＠yzcloud俄罗斯联邦153
+      - TG＠yzcloud俄罗斯联邦154
+      - TG＠yzcloud俄罗斯联邦155
+      - TG＠yzcloud俄罗斯联邦156
+      - TG＠yzcloud俄罗斯联邦157
+      - TG＠yzcloud俄罗斯联邦158
+      - TG＠yzcloud俄罗斯联邦159
+      - TG＠yzcloud俄罗斯联邦160
+      - TG＠yzcloud俄罗斯联邦161
+      - TG＠yzcloud俄罗斯联邦162
+      - TG＠yzcloud俄罗斯联邦163
+      - TG＠yzcloud俄罗斯联邦164
+      - TG＠yzcloud俄罗斯联邦165
+      - TG＠yzcloud俄罗斯联邦166
+      - TG＠yzcloud俄罗斯联邦167
+      - TG＠yzcloud俄罗斯联邦168
+      - TG＠yzcloud俄罗斯联邦169
+      - TG＠yzcloud俄罗斯联邦170
+      - TG＠yzcloud俄罗斯联邦171
+      - TG＠yzcloud俄罗斯联邦172
+      - TG＠yzcloud俄罗斯联邦173
+      - TG＠yzcloud俄罗斯联邦174
+      - TG＠yzcloud俄罗斯联邦175
+      - TG＠yzcloud俄罗斯联邦176
+      - TG＠yzcloud俄罗斯联邦177
+      - TG＠yzcloud俄罗斯联邦178
+      - TG＠yzcloud俄罗斯联邦179
+      - TG＠yzcloud俄罗斯联邦180
+      - TG＠yzcloud俄罗斯联邦181
+      - TG＠yzcloud俄罗斯联邦182
+      - TG＠yzcloud俄罗斯联邦183
+      - TG＠yzcloud俄罗斯联邦184
+      - TG＠yzcloud俄罗斯联邦185
+      - TG＠yzcloud俄罗斯联邦186
+      - TG＠yzcloud俄罗斯联邦187
+      - TG＠yzcloud俄罗斯联邦188
+      - TG＠yzcloud俄罗斯联邦189
+      - TG＠yzcloud俄罗斯联邦190
+      - TG＠yzcloud俄罗斯联邦191
+      - TG＠yzcloud俄罗斯联邦192
+      - TG＠yzcloud俄罗斯联邦193
+      - TG＠yzcloud俄罗斯联邦194
+      - TG＠yzcloud俄罗斯联邦195
+      - TG＠yzcloud俄罗斯联邦196
+      - TG＠yzcloud俄罗斯联邦197
+      - TG＠yzcloud俄罗斯联邦198
+      - TG＠yzcloud俄罗斯联邦199
+      - TG＠yzcloud俄罗斯联邦200
+      - TG＠yzcloud俄罗斯联邦201
+      - TG＠yzcloud俄罗斯联邦202
+      - TG＠yzcloud俄罗斯联邦203
+      - TG＠yzcloud俄罗斯联邦204
+      - TG＠yzcloud俄罗斯联邦205
+      - TG＠yzcloud俄罗斯联邦206
+      - TG＠yzcloud俄罗斯联邦207
+      - TG＠yzcloud俄罗斯联邦208
+      - TG＠yzcloud俄罗斯联邦209
+      - TG＠yzcloud俄罗斯联邦210
+      - TG＠yzcloud俄罗斯联邦211
+      - TG＠yzcloud俄罗斯联邦212
+      - TG＠yzcloud俄罗斯联邦213
+      - TG＠yzcloud俄罗斯联邦214
+      - TG＠yzcloud俄罗斯联邦215
+      - TG＠yzcloud俄罗斯联邦216
+      - TG＠yzcloud俄罗斯联邦217
+      - TG＠yzcloud俄罗斯联邦218
+      - TG＠yzcloud俄罗斯联邦219
+      - TG＠yzcloud俄罗斯联邦220
+      - TG＠yzcloud俄罗斯联邦221
+      - TG＠yzcloud俄罗斯联邦222
+      - TG＠yzcloud俄罗斯联邦223
+      - TG＠yzcloud俄罗斯联邦224
+      - TG＠yzcloud俄罗斯联邦225
+      - TG＠yzcloud俄罗斯联邦226
+      - TG＠yzcloud俄罗斯联邦227
+      - TG＠yzcloud俄罗斯联邦228
+      - TG＠yzcloud俄罗斯联邦229
+      - TG＠yzcloud俄罗斯联邦230
+      - TG＠yzcloud俄罗斯联邦231
+      - TG＠yzcloud俄罗斯联邦232
+      - TG＠yzcloud俄罗斯联邦233
+      - TG＠yzcloud俄罗斯联邦234
+      - TG＠yzcloud俄罗斯联邦235
+      - TG＠yzcloud俄罗斯联邦236
+      - TG＠yzcloud俄罗斯联邦237
+      - TG＠yzcloud俄罗斯联邦238
+      - TG＠yzcloud俄罗斯联邦239
+      - TG＠yzcloud俄罗斯联邦240
+      - TG＠yzcloud俄罗斯联邦241
+      - TG＠yzcloud俄罗斯联邦242
+      - TG＠yzcloud俄罗斯联邦243
+      - TG＠yzcloud俄罗斯联邦244
+      - TG＠yzcloud俄罗斯联邦245
+      - TG＠yzcloud俄罗斯联邦246
+      - TG＠yzcloud俄罗斯联邦247
+      - TG＠yzcloud俄罗斯联邦248
+      - TG＠yzcloud保加利亚344
+      - TG＠yzcloud保加利亚345
+      - TG＠yzcloud保加利亚346
+      - TG＠yzcloud保加利亚347
+      - TG＠yzcloud保加利亚348
+      - TG＠yzcloud保加利亚349
+      - TG＠yzcloud保加利亚350
+      - TG＠yzcloud保加利亚351
+      - TG＠yzcloud保加利亚352
+      - TG＠yzcloud保加利亚353
+      - TG＠yzcloud保加利亚354
+      - TG＠yzcloud保加利亚355
+      - TG＠yzcloud保加利亚356
+      - TG＠yzcloud保加利亚357
+      - TG＠yzcloud保加利亚358
+      - TG＠yzcloud保加利亚359
+      - TG＠yzcloud保加利亚360
+      - TG＠yzcloud保加利亚361
+      - TG＠yzcloud保加利亚362
+      - TG＠yzcloud保加利亚363
+      - TG＠yzcloud保加利亚364
+      - TG＠yzcloud保加利亚365
+      - TG＠yzcloud保加利亚366
+      - TG＠yzcloud保加利亚367
+      - TG＠yzcloud保加利亚368
+      - TG＠yzcloud保加利亚369
+      - TG＠yzcloud保加利亚370
+      - TG＠yzcloud波兰371
+      - TG＠yzcloud波兰372
+      - TG＠yzcloud波兰373
+      - TG＠yzcloud波兰374
+      - TG＠yzcloud波兰375
+      - TG＠yzcloud波兰376
+      - TG＠yzcloud波兰377
+      - TG＠yzcloud波兰378
+      - TG＠yzcloud波兰379
+      - TG＠yzcloud波兰380
+      - TG＠yzcloud波兰381
+      - TG＠yzcloud波兰382
+      - TG＠yzcloud波兰383
+      - TG＠yzcloud波兰384
+      - TG＠yzcloud波兰385
+      - TG＠yzcloud波兰386
+      - TG＠yzcloud波兰387
+      - TG＠yzcloud波兰388
+      - TG＠yzcloud波兰389
+      - TG＠yzcloud波兰390
+      - TG＠yzcloud波兰391
+      - TG＠yzcloud波兰392
+      - TG＠yzcloud波兰393
+      - TG＠yzcloud波兰394
+      - TG＠yzcloud波兰395
+      - TG＠yzcloud波兰396
+      - TG＠yzcloud波兰397
+      - TG＠yzcloud波兰398
+      - TG＠yzcloud波兰399
+      - TG＠yzcloud波兰400
+      - TG＠yzcloud波兰401
+      - TG＠yzcloud波兰402
+      - TG＠yzcloud波兰403
+      - TG＠yzcloud波兰404
+      - TG＠yzcloud波兰405
+      - TG＠yzcloud波兰406
+      - TG＠yzcloud波兰407
+      - TG＠yzcloud波兰408
+      - TG＠yzcloud波兰409
+      - TG＠yzcloud波兰410
+      - TG＠yzcloud波兰411
+      - TG＠yzcloud波兰412
+      - TG＠yzcloud波兰413
+      - TG＠yzcloud波兰414
+      - TG＠yzcloud波兰415
+      - TG＠yzcloud波兰416
+      - TG＠yzcloud波兰417
+      - TG＠yzcloud波兰418
+      - TG＠yzcloud波兰419
+      - TG＠yzcloud波兰420
+      - TG＠yzcloud波兰421
+      - TG＠yzcloud波兰422
+      - TG＠yzcloud波兰423
+      - TG＠yzcloud波兰424
+      - TG＠yzcloud罗马尼亚435
+      - TG＠yzcloud法国436
+      - TG＠yzcloud美国437
+      - TG＠yzcloud美国438
+      - TG＠yzcloud美国439
+      - TG＠yzcloud美国440
+      - TG＠yzcloud美国441
+      - TG＠yzcloud美国442
+      - TG＠yzcloud美国443
+      - TG＠yzcloud美国444
+      - TG＠yzcloud美国445
+      - TG＠yzcloud美国446
+      - TG＠yzcloud美国447
+      - TG＠yzcloud美国448
+      - TG＠yzcloud美国449
+      - TG＠yzcloud美国450
+      - TG＠yzcloud美国451
+      - TG＠yzcloud美国452
+      - TG＠yzcloud美国453
+      - TG＠yzcloud美国454
+      - TG＠yzcloud美国455
+      - TG＠yzcloud美国456
+      - TG＠yzcloud美国457
+      - TG＠yzcloud美国458
+      - TG＠yzcloud美国459
+      - TG＠yzcloud美国460
+      - TG＠yzcloud美国461
+      - TG＠yzcloud美国462
+      - TG＠yzcloud美国463
+      - TG＠yzcloud美国464
+      - TG＠yzcloud美国465
+      - TG＠yzcloud美国466
+      - TG＠yzcloud美国467
+      - TG＠yzcloud美国468
+      - TG＠yzcloud美国469
+      - TG＠yzcloud美国470
+      - TG＠yzcloud美国471
+      - TG＠yzcloud美国472
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+  - name: 🔰 故障转移
+    type: fallback
+    proxies:
+      - TG＠yzcloud美国1
+      - TG＠yzcloud美国2
+      - TG＠yzcloud美国3
+      - TG＠yzcloud美国4
+      - TG＠yzcloud美国5
+      - TG＠yzcloud美国6
+      - TG＠yzcloud美国7
+      - TG＠yzcloud美国8
+      - TG＠yzcloud美国9
+      - TG＠yzcloud美国10
+      - TG＠yzcloud美国11
+      - TG＠yzcloud美国12
+      - TG＠yzcloud美国13
+      - TG＠yzcloud美国14
+      - TG＠yzcloud美国15
+      - TG＠yzcloud美国16
+      - TG＠yzcloud美国17
+      - TG＠yzcloud美国18
+      - TG＠yzcloud美国19
+      - TG＠yzcloud美国20
+      - TG＠yzcloud卢森堡21
+      - TG＠yzcloud瑞士23
+      - TG＠yzcloud瑞士24
+      - TG＠yzcloud澳大利亚25
+      - TG＠yzcloud澳大利亚26
+      - TG＠yzcloud澳大利亚27
+      - TG＠yzcloud澳大利亚28
+      - TG＠yzcloud澳大利亚29
+      - TG＠yzcloud澳大利亚30
+      - TG＠yzcloud澳大利亚31
+      - TG＠yzcloud澳大利亚32
+      - TG＠yzcloud澳大利亚33
+      - TG＠yzcloud澳大利亚34
+      - TG＠yzcloud澳大利亚35
+      - TG＠yzcloud澳大利亚36
+      - TG＠yzcloud澳大利亚37
+      - TG＠yzcloud澳大利亚38
+      - TG＠yzcloud澳大利亚39
+      - TG＠yzcloud澳大利亚40
+      - TG＠yzcloud澳大利亚41
+      - TG＠yzcloud澳大利亚42
+      - TG＠yzcloud澳大利亚43
+      - TG＠yzcloud澳大利亚44
+      - TG＠yzcloud澳大利亚45
+      - TG＠yzcloud澳大利亚46
+      - TG＠yzcloud澳大利亚47
+      - TG＠yzcloud澳大利亚48
+      - TG＠yzcloud澳大利亚49
+      - TG＠yzcloud澳大利亚50
+      - TG＠yzcloud澳大利亚51
+      - TG＠yzcloud澳大利亚52
+      - TG＠yzcloud澳大利亚53
+      - TG＠yzcloud澳大利亚54
+      - TG＠yzcloud澳大利亚55
+      - TG＠yzcloud澳大利亚56
+      - TG＠yzcloud澳大利亚57
+      - TG＠yzcloud澳大利亚58
+      - TG＠yzcloud澳大利亚59
+      - TG＠yzcloud澳大利亚60
+      - TG＠yzcloud澳大利亚61
+      - TG＠yzcloud澳大利亚62
+      - TG＠yzcloud澳大利亚63
+      - TG＠yzcloud澳大利亚64
+      - TG＠yzcloud美国83
+      - TG＠yzcloud美国84
+      - TG＠yzcloud美国85
+      - TG＠yzcloud塞浦路斯86
+      - TG＠yzcloud俄罗斯联邦94
+      - TG＠yzcloud俄罗斯联邦95
+      - TG＠yzcloud俄罗斯联邦96
+      - TG＠yzcloud俄罗斯联邦97
+      - TG＠yzcloud俄罗斯联邦98
+      - TG＠yzcloud俄罗斯联邦99
+      - TG＠yzcloud俄罗斯联邦100
+      - TG＠yzcloud俄罗斯联邦101
+      - TG＠yzcloud俄罗斯联邦102
+      - TG＠yzcloud俄罗斯联邦103
+      - TG＠yzcloud俄罗斯联邦104
+      - TG＠yzcloud俄罗斯联邦105
+      - TG＠yzcloud俄罗斯联邦106
+      - TG＠yzcloud俄罗斯联邦107
+      - TG＠yzcloud俄罗斯联邦108
+      - TG＠yzcloud俄罗斯联邦109
+      - TG＠yzcloud俄罗斯联邦110
+      - TG＠yzcloud俄罗斯联邦111
+      - TG＠yzcloud俄罗斯联邦112
+      - TG＠yzcloud俄罗斯联邦113
+      - TG＠yzcloud俄罗斯联邦114
+      - TG＠yzcloud俄罗斯联邦115
+      - TG＠yzcloud俄罗斯联邦116
+      - TG＠yzcloud俄罗斯联邦117
+      - TG＠yzcloud俄罗斯联邦118
+      - TG＠yzcloud俄罗斯联邦119
+      - TG＠yzcloud俄罗斯联邦120
+      - TG＠yzcloud俄罗斯联邦121
+      - TG＠yzcloud俄罗斯联邦122
+      - TG＠yzcloud俄罗斯联邦123
+      - TG＠yzcloud俄罗斯联邦124
+      - TG＠yzcloud俄罗斯联邦125
+      - TG＠yzcloud俄罗斯联邦126
+      - TG＠yzcloud俄罗斯联邦127
+      - TG＠yzcloud俄罗斯联邦128
+      - TG＠yzcloud俄罗斯联邦129
+      - TG＠yzcloud俄罗斯联邦130
+      - TG＠yzcloud俄罗斯联邦131
+      - TG＠yzcloud俄罗斯联邦132
+      - TG＠yzcloud俄罗斯联邦133
+      - TG＠yzcloud俄罗斯联邦134
+      - TG＠yzcloud俄罗斯联邦135
+      - TG＠yzcloud俄罗斯联邦136
+      - TG＠yzcloud俄罗斯联邦137
+      - TG＠yzcloud俄罗斯联邦138
+      - TG＠yzcloud俄罗斯联邦139
+      - TG＠yzcloud俄罗斯联邦140
+      - TG＠yzcloud俄罗斯联邦141
+      - TG＠yzcloud俄罗斯联邦142
+      - TG＠yzcloud俄罗斯联邦143
+      - TG＠yzcloud俄罗斯联邦144
+      - TG＠yzcloud俄罗斯联邦145
+      - TG＠yzcloud俄罗斯联邦146
+      - TG＠yzcloud俄罗斯联邦147
+      - TG＠yzcloud俄罗斯联邦148
+      - TG＠yzcloud俄罗斯联邦149
+      - TG＠yzcloud俄罗斯联邦150
+      - TG＠yzcloud俄罗斯联邦151
+      - TG＠yzcloud俄罗斯联邦152
+      - TG＠yzcloud俄罗斯联邦153
+      - TG＠yzcloud俄罗斯联邦154
+      - TG＠yzcloud俄罗斯联邦155
+      - TG＠yzcloud俄罗斯联邦156
+      - TG＠yzcloud俄罗斯联邦157
+      - TG＠yzcloud俄罗斯联邦158
+      - TG＠yzcloud俄罗斯联邦159
+      - TG＠yzcloud俄罗斯联邦160
+      - TG＠yzcloud俄罗斯联邦161
+      - TG＠yzcloud俄罗斯联邦162
+      - TG＠yzcloud俄罗斯联邦163
+      - TG＠yzcloud俄罗斯联邦164
+      - TG＠yzcloud俄罗斯联邦165
+      - TG＠yzcloud俄罗斯联邦166
+      - TG＠yzcloud俄罗斯联邦167
+      - TG＠yzcloud俄罗斯联邦168
+      - TG＠yzcloud俄罗斯联邦169
+      - TG＠yzcloud俄罗斯联邦170
+      - TG＠yzcloud俄罗斯联邦171
+      - TG＠yzcloud俄罗斯联邦172
+      - TG＠yzcloud俄罗斯联邦173
+      - TG＠yzcloud俄罗斯联邦174
+      - TG＠yzcloud俄罗斯联邦175
+      - TG＠yzcloud俄罗斯联邦176
+      - TG＠yzcloud俄罗斯联邦177
+      - TG＠yzcloud俄罗斯联邦178
+      - TG＠yzcloud俄罗斯联邦179
+      - TG＠yzcloud俄罗斯联邦180
+      - TG＠yzcloud俄罗斯联邦181
+      - TG＠yzcloud俄罗斯联邦182
+      - TG＠yzcloud俄罗斯联邦183
+      - TG＠yzcloud俄罗斯联邦184
+      - TG＠yzcloud俄罗斯联邦185
+      - TG＠yzcloud俄罗斯联邦186
+      - TG＠yzcloud俄罗斯联邦187
+      - TG＠yzcloud俄罗斯联邦188
+      - TG＠yzcloud俄罗斯联邦189
+      - TG＠yzcloud俄罗斯联邦190
+      - TG＠yzcloud俄罗斯联邦191
+      - TG＠yzcloud俄罗斯联邦192
+      - TG＠yzcloud俄罗斯联邦193
+      - TG＠yzcloud俄罗斯联邦194
+      - TG＠yzcloud俄罗斯联邦195
+      - TG＠yzcloud俄罗斯联邦196
+      - TG＠yzcloud俄罗斯联邦197
+      - TG＠yzcloud俄罗斯联邦198
+      - TG＠yzcloud俄罗斯联邦199
+      - TG＠yzcloud俄罗斯联邦200
+      - TG＠yzcloud俄罗斯联邦201
+      - TG＠yzcloud俄罗斯联邦202
+      - TG＠yzcloud俄罗斯联邦203
+      - TG＠yzcloud俄罗斯联邦204
+      - TG＠yzcloud俄罗斯联邦205
+      - TG＠yzcloud俄罗斯联邦206
+      - TG＠yzcloud俄罗斯联邦207
+      - TG＠yzcloud俄罗斯联邦208
+      - TG＠yzcloud俄罗斯联邦209
+      - TG＠yzcloud俄罗斯联邦210
+      - TG＠yzcloud俄罗斯联邦211
+      - TG＠yzcloud俄罗斯联邦212
+      - TG＠yzcloud俄罗斯联邦213
+      - TG＠yzcloud俄罗斯联邦214
+      - TG＠yzcloud俄罗斯联邦215
+      - TG＠yzcloud俄罗斯联邦216
+      - TG＠yzcloud俄罗斯联邦217
+      - TG＠yzcloud俄罗斯联邦218
+      - TG＠yzcloud俄罗斯联邦219
+      - TG＠yzcloud俄罗斯联邦220
+      - TG＠yzcloud俄罗斯联邦221
+      - TG＠yzcloud俄罗斯联邦222
+      - TG＠yzcloud俄罗斯联邦223
+      - TG＠yzcloud俄罗斯联邦224
+      - TG＠yzcloud俄罗斯联邦225
+      - TG＠yzcloud俄罗斯联邦226
+      - TG＠yzcloud俄罗斯联邦227
+      - TG＠yzcloud俄罗斯联邦228
+      - TG＠yzcloud俄罗斯联邦229
+      - TG＠yzcloud俄罗斯联邦230
+      - TG＠yzcloud俄罗斯联邦231
+      - TG＠yzcloud俄罗斯联邦232
+      - TG＠yzcloud俄罗斯联邦233
+      - TG＠yzcloud俄罗斯联邦234
+      - TG＠yzcloud俄罗斯联邦235
+      - TG＠yzcloud俄罗斯联邦236
+      - TG＠yzcloud俄罗斯联邦237
+      - TG＠yzcloud俄罗斯联邦238
+      - TG＠yzcloud俄罗斯联邦239
+      - TG＠yzcloud俄罗斯联邦240
+      - TG＠yzcloud俄罗斯联邦241
+      - TG＠yzcloud俄罗斯联邦242
+      - TG＠yzcloud俄罗斯联邦243
+      - TG＠yzcloud俄罗斯联邦244
+      - TG＠yzcloud俄罗斯联邦245
+      - TG＠yzcloud俄罗斯联邦246
+      - TG＠yzcloud俄罗斯联邦247
+      - TG＠yzcloud俄罗斯联邦248
+      - TG＠yzcloud保加利亚344
+      - TG＠yzcloud保加利亚345
+      - TG＠yzcloud保加利亚346
+      - TG＠yzcloud保加利亚347
+      - TG＠yzcloud保加利亚348
+      - TG＠yzcloud保加利亚349
+      - TG＠yzcloud保加利亚350
+      - TG＠yzcloud保加利亚351
+      - TG＠yzcloud保加利亚352
+      - TG＠yzcloud保加利亚353
+      - TG＠yzcloud保加利亚354
+      - TG＠yzcloud保加利亚355
+      - TG＠yzcloud保加利亚356
+      - TG＠yzcloud保加利亚357
+      - TG＠yzcloud保加利亚358
+      - TG＠yzcloud保加利亚359
+      - TG＠yzcloud保加利亚360
+      - TG＠yzcloud保加利亚361
+      - TG＠yzcloud保加利亚362
+      - TG＠yzcloud保加利亚363
+      - TG＠yzcloud保加利亚364
+      - TG＠yzcloud保加利亚365
+      - TG＠yzcloud保加利亚366
+      - TG＠yzcloud保加利亚367
+      - TG＠yzcloud保加利亚368
+      - TG＠yzcloud保加利亚369
+      - TG＠yzcloud保加利亚370
+      - TG＠yzcloud波兰371
+      - TG＠yzcloud波兰372
+      - TG＠yzcloud波兰373
+      - TG＠yzcloud波兰374
+      - TG＠yzcloud波兰375
+      - TG＠yzcloud波兰376
+      - TG＠yzcloud波兰377
+      - TG＠yzcloud波兰378
+      - TG＠yzcloud波兰379
+      - TG＠yzcloud波兰380
+      - TG＠yzcloud波兰381
+      - TG＠yzcloud波兰382
+      - TG＠yzcloud波兰383
+      - TG＠yzcloud波兰384
+      - TG＠yzcloud波兰385
+      - TG＠yzcloud波兰386
+      - TG＠yzcloud波兰387
+      - TG＠yzcloud波兰388
+      - TG＠yzcloud波兰389
+      - TG＠yzcloud波兰390
+      - TG＠yzcloud波兰391
+      - TG＠yzcloud波兰392
+      - TG＠yzcloud波兰393
+      - TG＠yzcloud波兰394
+      - TG＠yzcloud波兰395
+      - TG＠yzcloud波兰396
+      - TG＠yzcloud波兰397
+      - TG＠yzcloud波兰398
+      - TG＠yzcloud波兰399
+      - TG＠yzcloud波兰400
+      - TG＠yzcloud波兰401
+      - TG＠yzcloud波兰402
+      - TG＠yzcloud波兰403
+      - TG＠yzcloud波兰404
+      - TG＠yzcloud波兰405
+      - TG＠yzcloud波兰406
+      - TG＠yzcloud波兰407
+      - TG＠yzcloud波兰408
+      - TG＠yzcloud波兰409
+      - TG＠yzcloud波兰410
+      - TG＠yzcloud波兰411
+      - TG＠yzcloud波兰412
+      - TG＠yzcloud波兰413
+      - TG＠yzcloud波兰414
+      - TG＠yzcloud波兰415
+      - TG＠yzcloud波兰416
+      - TG＠yzcloud波兰417
+      - TG＠yzcloud波兰418
+      - TG＠yzcloud波兰419
+      - TG＠yzcloud波兰420
+      - TG＠yzcloud波兰421
+      - TG＠yzcloud波兰422
+      - TG＠yzcloud波兰423
+      - TG＠yzcloud波兰424
+      - TG＠yzcloud罗马尼亚435
+      - TG＠yzcloud法国436
+      - TG＠yzcloud美国437
+      - TG＠yzcloud美国438
+      - TG＠yzcloud美国439
+      - TG＠yzcloud美国440
+      - TG＠yzcloud美国441
+      - TG＠yzcloud美国442
+      - TG＠yzcloud美国443
+      - TG＠yzcloud美国444
+      - TG＠yzcloud美国445
+      - TG＠yzcloud美国446
+      - TG＠yzcloud美国447
+      - TG＠yzcloud美国448
+      - TG＠yzcloud美国449
+      - TG＠yzcloud美国450
+      - TG＠yzcloud美国451
+      - TG＠yzcloud美国452
+      - TG＠yzcloud美国453
+      - TG＠yzcloud美国454
+      - TG＠yzcloud美国455
+      - TG＠yzcloud美国456
+      - TG＠yzcloud美国457
+      - TG＠yzcloud美国458
+      - TG＠yzcloud美国459
+      - TG＠yzcloud美国460
+      - TG＠yzcloud美国461
+      - TG＠yzcloud美国462
+      - TG＠yzcloud美国463
+      - TG＠yzcloud美国464
+      - TG＠yzcloud美国465
+      - TG＠yzcloud美国466
+      - TG＠yzcloud美国467
+      - TG＠yzcloud美国468
+      - TG＠yzcloud美国469
+      - TG＠yzcloud美国470
+      - TG＠yzcloud美国471
+      - TG＠yzcloud美国472
+    url: http://www.gstatic.com/generate_204
+    interval: 7200
+rules:
+  - DOMAIN,*.21t.co,DIRECT
+  - DOMAIN-SUFFIX,services.googleapis.cn,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,💙 电报频道＠yzcloud
+  - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+  - DOMAIN,safebrowsing.googleapis.com,DIRECT
+  - DOMAIN,developer.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,digicert.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.comodoca.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.usertrust.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.sectigo.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.verisign.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,apple-dns.net,💙 电报频道＠yzcloud
+  - DOMAIN,testflight.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN,sandbox.itunes.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN,itunes.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,apps.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blobstore.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN,cvws.icloud-content.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+  - DOMAIN-SUFFIX,me.com,DIRECT
+  - DOMAIN-SUFFIX,aaplimg.com,DIRECT
+  - DOMAIN-SUFFIX,cdn20.com,DIRECT
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+  - DOMAIN-SUFFIX,akadns.net,DIRECT
+  - DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+  - DOMAIN-SUFFIX,edgekey.net,DIRECT
+  - DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+  - DOMAIN-SUFFIX,mwcname.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+  - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - DOMAIN-SUFFIX,126.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
+  - DOMAIN-SUFFIX,127.net,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+  - DOMAIN-SUFFIX,36kr.com,DIRECT
+  - DOMAIN-SUFFIX,acfun.tv,DIRECT
+  - DOMAIN-SUFFIX,air-matters.com,DIRECT
+  - DOMAIN-SUFFIX,aixifan.com,DIRECT
+  - DOMAIN-KEYWORD,alicdn,DIRECT
+  - DOMAIN-KEYWORD,alipay,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-SUFFIX,amap.com,DIRECT
+  - DOMAIN-SUFFIX,autonavi.com,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-SUFFIX,bdimg.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+  - DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+  - DOMAIN-SUFFIX,clouddn.com,DIRECT
+  - DOMAIN-SUFFIX,cnbeta.com,DIRECT
+  - DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+  - DOMAIN-SUFFIX,cootekservice.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,ctrip.com,DIRECT
+  - DOMAIN-SUFFIX,dgtle.com,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,douban.com,DIRECT
+  - DOMAIN-SUFFIX,doubanio.com,DIRECT
+  - DOMAIN-SUFFIX,duokan.com,DIRECT
+  - DOMAIN-SUFFIX,easou.com,DIRECT
+  - DOMAIN-SUFFIX,ele.me,DIRECT
+  - DOMAIN-SUFFIX,feng.com,DIRECT
+  - DOMAIN-SUFFIX,fir.im,DIRECT
+  - DOMAIN-SUFFIX,frdic.com,DIRECT
+  - DOMAIN-SUFFIX,g-cores.com,DIRECT
+  - DOMAIN-SUFFIX,godic.net,DIRECT
+  - DOMAIN-SUFFIX,gtimg.com,DIRECT
+  - DOMAIN,cdn.hockeyapp.net,DIRECT
+  - DOMAIN-SUFFIX,hongxiu.com,DIRECT
+  - DOMAIN-SUFFIX,hxcdn.net,DIRECT
+  - DOMAIN-SUFFIX,iciba.com,DIRECT
+  - DOMAIN-SUFFIX,ifeng.com,DIRECT
+  - DOMAIN-SUFFIX,ifengimg.com,DIRECT
+  - DOMAIN-SUFFIX,ipip.net,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,jianshu.com,DIRECT
+  - DOMAIN-SUFFIX,knewone.com,DIRECT
+  - DOMAIN-SUFFIX,le.com,DIRECT
+  - DOMAIN-SUFFIX,lecloud.com,DIRECT
+  - DOMAIN-SUFFIX,lemicp.com,DIRECT
+  - DOMAIN-SUFFIX,licdn.com,DIRECT
+  - DOMAIN-SUFFIX,luoo.net,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,mi.com,DIRECT
+  - DOMAIN-SUFFIX,miaopai.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+  - DOMAIN-SUFFIX,miui.com,DIRECT
+  - DOMAIN-SUFFIX,miwifi.com,DIRECT
+  - DOMAIN-SUFFIX,mob.com,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,office365.com,DIRECT
+  - DOMAIN-KEYWORD,officecdn,DIRECT
+  - DOMAIN-SUFFIX,oschina.net,DIRECT
+  - DOMAIN-SUFFIX,ppsimg.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,qcloud.com,DIRECT
+  - DOMAIN-SUFFIX,qdaily.com,DIRECT
+  - DOMAIN-SUFFIX,qdmm.com,DIRECT
+  - DOMAIN-SUFFIX,qhimg.com,DIRECT
+  - DOMAIN-SUFFIX,qhres.com,DIRECT
+  - DOMAIN-SUFFIX,qidian.com,DIRECT
+  - DOMAIN-SUFFIX,qihucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiniu.com,DIRECT
+  - DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiyipic.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,qqurl.com,DIRECT
+  - DOMAIN-SUFFIX,rarbg.to,DIRECT
+  - DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+  - DOMAIN-SUFFIX,segmentfault.com,DIRECT
+  - DOMAIN-SUFFIX,sinaapp.com,DIRECT
+  - DOMAIN-SUFFIX,smzdm.com,DIRECT
+  - DOMAIN-SUFFIX,snapdrop.net,DIRECT
+  - DOMAIN-SUFFIX,sogou.com,DIRECT
+  - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,soku.com,DIRECT
+  - DOMAIN-SUFFIX,speedtest.net,DIRECT
+  - DOMAIN-SUFFIX,sspai.com,DIRECT
+  - DOMAIN-SUFFIX,suning.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,tenpay.com,DIRECT
+  - DOMAIN-SUFFIX,tianyancha.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,tudou.com,DIRECT
+  - DOMAIN-SUFFIX,umetrip.com,DIRECT
+  - DOMAIN-SUFFIX,upaiyun.com,DIRECT
+  - DOMAIN-SUFFIX,upyun.com,DIRECT
+  - DOMAIN-SUFFIX,veryzhun.com,DIRECT
+  - DOMAIN-SUFFIX,weather.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.net,DIRECT
+  - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+  - DOMAIN-SUFFIX,ximalaya.com,DIRECT
+  - DOMAIN-SUFFIX,xmcdn.com,DIRECT
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - DOMAIN-SUFFIX,yhd.com,DIRECT
+  - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+  - DOMAIN-SUFFIX,yinxiang.com,DIRECT
+  - DOMAIN-SUFFIX,ykimg.com,DIRECT
+  - DOMAIN-SUFFIX,youdao.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,zealer.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,zhimg.com,DIRECT
+  - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+  - DOMAIN-SUFFIX,zoho.com,DIRECT
+  - DOMAIN-KEYWORD,amazon,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,google,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,gmail,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,youtube,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,facebook,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fb.me,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fbcdn.net,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,twitter,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,instagram,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,dropbox,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,twimg.com,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,blogspot,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,youtu.be,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,whatsapp,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,admarvel,REJECT
+  - DOMAIN-KEYWORD,admaster,REJECT
+  - DOMAIN-KEYWORD,adsage,REJECT
+  - DOMAIN-KEYWORD,adsmogo,REJECT
+  - DOMAIN-KEYWORD,adsrvmedia,REJECT
+  - DOMAIN-KEYWORD,adwords,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,appsflyer.com,REJECT
+  - DOMAIN-KEYWORD,domob,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-KEYWORD,duomeng,REJECT
+  - DOMAIN-KEYWORD,dwtrack,REJECT
+  - DOMAIN-KEYWORD,guanggao,REJECT
+  - DOMAIN-KEYWORD,lianmeng,REJECT
+  - DOMAIN-SUFFIX,mmstat.com,REJECT
+  - DOMAIN-KEYWORD,mopub,REJECT
+  - DOMAIN-KEYWORD,omgmta,REJECT
+  - DOMAIN-KEYWORD,openx,REJECT
+  - DOMAIN-KEYWORD,partnerad,REJECT
+  - DOMAIN-KEYWORD,pingfore,REJECT
+  - DOMAIN-KEYWORD,supersonicads,REJECT
+  - DOMAIN-KEYWORD,uedas,REJECT
+  - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-KEYWORD,usage,REJECT
+  - DOMAIN-SUFFIX,vungle.com,REJECT
+  - DOMAIN-KEYWORD,wlmonitor,REJECT
+  - DOMAIN-KEYWORD,zjtoolbar,REJECT
+  - DOMAIN-SUFFIX,9to5mac.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,abpchina.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,adblockplus.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,adobe.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,akamaized.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,alfredapp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,amplitude.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ampproject.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,android.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,angularjs.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,aolcdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,apkpure.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,appledaily.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,appshopper.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,appspot.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,arcgis.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,archive.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,armorgames.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,aspnetcdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,att.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,awsstatic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,azureedge.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,azurewebsites.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bing.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bintray.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bit.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bit.ly,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bitbucket.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bjango.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bkrtx.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blog.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogcdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogger.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogsmithmedia.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogspot.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogspot.hk,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bloomberg.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,box.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,box.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cachefly.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,chromium.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cl.ly,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudflare.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudfront.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudmagic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cmail19.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cnet.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cocoapods.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,comodoca.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,crashlytics.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,culturedcode.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,d.pr,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,danilo.to,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dayone.me,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,db.tt,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,deskconnect.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,disq.us,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,disqus.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,disquscdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dnsimple.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,docker.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dribbble.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,droplr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,duckduckgo.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dueapp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dytt8.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,edgecastcdn.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,edgekey.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,edgesuite.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,engadget.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,entrust.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,eurekavpt.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,evernote.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fabric.io,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fast.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fastly.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fc2.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,feedburner.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,feedly.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,feedsportal.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fiftythree.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,firebaseio.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,flexibits.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,flickr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,flipboard.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,g.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gabia.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,geni.us,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gfx.ms,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ggpht.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ghostnoteapp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,git.io,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,github,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,globalsign.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gmodules.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,godaddy.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,golang.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gongm.in,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,goo.gl,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,goodreaders.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,goodreads.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gravatar.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gstatic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gvt0.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,hockeyapp.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,hotmail.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,icons8.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ifixit.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ift.tt,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ifttt.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,iherb.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,imageshack.us,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,img.ly,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,imgur.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,imore.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,instapaper.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ipn.li,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,is.gd,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,issuu.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,itgonglun.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,itun.es,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ixquick.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,j.mp,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,js.revsci.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,jshint.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,jtvnw.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,justgetflux.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,kat.cr,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,klip.me,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,libsyn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,linkedin.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,linode.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,lithium.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,littlehj.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,live.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,live.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,livefilestore.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,llnwd.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,macid.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,macromedia.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,macrumors.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mashable.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mathjax.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,medium.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mega.co.nz,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mega.nz,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,megaupload.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,microsofttranslator.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mindnode.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mobile01.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,modmyi.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,msedge.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,myfontastic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,name.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nextmedia.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nsstatic.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nssurge.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nyt.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nytimes.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,omnigroup.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,onedrive.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,onenote.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ooyala.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,openvpn.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,openwrt.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,orkut.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,osxdaily.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,outlook.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ow.ly,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,paddleapi.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,parallels.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,parse.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pdfexpert.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,periscope.tv,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pinboard.in,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pinterest.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pixelmator.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pixiv.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playpcesor.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.com.hk,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playstationnetwork.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pushwoosh.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,rime.im,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,servebom.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sfx.ms,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,shadowsocks.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sharethis.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,shazam.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,skype.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,smartdns💙 电报频道＠yzcloud.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,smartmailcloud.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sndcdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sony.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,soundcloud.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sourceforge.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,spotify.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,squarespace.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sstatic.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,st.luluku.pw,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,stackoverflow.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,startpage.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,staticflickr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,steamcommunity.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,symauth.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,symcb.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,symcd.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tapbots.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tapbots.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tdesktop.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,techcrunch.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,techsmith.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,thepiratebay.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,theverge.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,time.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,timeinc.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tiny.cc,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tinypic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tmblr.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,todoist.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,trello.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,trustasiassl.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tumblr.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tumblr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tweetdeck.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tweetmarker.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,twitch.tv,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,txmblr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,typekit.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ubertags.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ublock.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ubnt.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ulyssesapp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,urchin.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,usertrust.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,v.gd,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,v2ex.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vimeo.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vimeocdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vine.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vivaldi.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vox-cdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vsco.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vultr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,w.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,w3schools.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,webtype.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikiwand.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikileaks.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikimedia.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikipedia.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikipedia.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,windows.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,windows.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wire.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wordpress.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,workflowy.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wsj.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wsj.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,xda-developers.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,xeeno.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,xiti.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,yahoo.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,yimg.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ying.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,yoyo.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ytimg.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,telegra.ph,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,telegram.org,💙 电报频道＠yzcloud
+  - IP-CIDR,91.108.4.0/22,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.8.0/21,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.16.0/22,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.56.0/22,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,149.154.160.0/20,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:67c:4e8::/48,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:b28:f23d::/48,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:b28:f23f::/48,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.232.181.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.241.147.226/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.253.226/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.34/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.98/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.150.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.150.34/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.151.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.151.34/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.39.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.40.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.41.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.43.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.50.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.226/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.34/32,💙 电报频道＠yzcloud,no-resolve
+  - DOMAIN,injections.adguard.org,DIRECT
+  - DOMAIN,local.adguard.org,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,💙 电报频道＠yzcloud
