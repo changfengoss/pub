@@ -1,0 +1,587 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - tls://1.0.0.1:853
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+proxies:
+  - {"type":"trojan","name":"美国丨TG＠yzcloud丨","server":"us-01.licom.ml","port":8443,"password":"ce433528-39fa-4711-bc0d-25a5b1579574","udp":true,"skip-cert-verify":true,"sni":"us-01.licom.ml"}
+  - {"type":"trojan","name":"日本丨TG＠yzcloud丨","server":"jp-03.licom.ml","port":8443,"password":"ce433528-39fa-4711-bc0d-25a5b1579574","udp":true,"skip-cert-verify":true,"sni":"jp-03.licom.ml"}
+  - {"type":"trojan","name":"新加坡丨TG＠yzcloud丨","server":"sg-01.licom.ml","port":8443,"password":"ce433528-39fa-4711-bc0d-25a5b1579574","udp":true,"skip-cert-verify":true,"sni":"sg-01.licom.ml"}
+  - {"type":"trojan","name":"新加坡丨TG＠yzcloud丨","server":"sg-03.licom.ml","port":8443,"password":"ce433528-39fa-4711-bc0d-25a5b1579574","udp":true,"skip-cert-verify":true,"sni":"sg-03.licom.ml"}
+  - {"type":"trojan","name":"新加坡丨TG＠yzcloud丨","server":"sg-04.licom.ml","port":8443,"password":"ce433528-39fa-4711-bc0d-25a5b1579574","udp":true,"skip-cert-verify":true,"sni":"sg-04.licom.ml"}
+  - {"type":"trojan","name":"新加坡丨TG＠yzcloud丨","server":"sg-02.licom.ml","port":8443,"password":"ce433528-39fa-4711-bc0d-25a5b1579574","udp":true,"skip-cert-verify":true,"sni":"sg-02.licom.ml"}
+  - {"type":"trojan","name":"土耳其丨TG＠yzcloud丨","server":"213.156.152.38","port":17095,"password":"ce433528-39fa-4711-bc0d-25a5b1579574","udp":true,"skip-cert-verify":true,"sni":"fr-01.licom.ml"}
+proxy-groups:
+  - name: 💙 电报频道＠yzcloud
+    type: select
+    proxies:
+      - 🔯 自动选择
+      - 🔰 故障转移
+      - 美国丨TG＠yzcloud丨
+      - 日本丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 土耳其丨TG＠yzcloud丨
+  - name: 🔯 自动选择
+    type: url-test
+    proxies:
+      - 美国丨TG＠yzcloud丨
+      - 日本丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 土耳其丨TG＠yzcloud丨
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+  - name: 🔰 故障转移
+    type: fallback
+    proxies:
+      - 美国丨TG＠yzcloud丨
+      - 日本丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 新加坡丨TG＠yzcloud丨
+      - 土耳其丨TG＠yzcloud丨
+    url: http://www.gstatic.com/generate_204
+    interval: 7200
+rules:
+  - DOMAIN,*.21t.co,DIRECT
+  - DOMAIN-SUFFIX,services.googleapis.cn,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,💙 电报频道＠yzcloud
+  - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+  - DOMAIN,safebrowsing.googleapis.com,DIRECT
+  - DOMAIN,developer.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,digicert.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.comodoca.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.usertrust.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.sectigo.com,💙 电报频道＠yzcloud
+  - DOMAIN,ocsp.verisign.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,apple-dns.net,💙 电报频道＠yzcloud
+  - DOMAIN,testflight.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN,sandbox.itunes.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN,itunes.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,apps.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blobstore.apple.com,💙 电报频道＠yzcloud
+  - DOMAIN,cvws.icloud-content.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+  - DOMAIN-SUFFIX,me.com,DIRECT
+  - DOMAIN-SUFFIX,aaplimg.com,DIRECT
+  - DOMAIN-SUFFIX,cdn20.com,DIRECT
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+  - DOMAIN-SUFFIX,akadns.net,DIRECT
+  - DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+  - DOMAIN-SUFFIX,edgekey.net,DIRECT
+  - DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+  - DOMAIN-SUFFIX,mwcname.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+  - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - DOMAIN-SUFFIX,126.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
+  - DOMAIN-SUFFIX,127.net,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+  - DOMAIN-SUFFIX,36kr.com,DIRECT
+  - DOMAIN-SUFFIX,acfun.tv,DIRECT
+  - DOMAIN-SUFFIX,air-matters.com,DIRECT
+  - DOMAIN-SUFFIX,aixifan.com,DIRECT
+  - DOMAIN-KEYWORD,alicdn,DIRECT
+  - DOMAIN-KEYWORD,alipay,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-SUFFIX,amap.com,DIRECT
+  - DOMAIN-SUFFIX,autonavi.com,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-SUFFIX,bdimg.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+  - DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+  - DOMAIN-SUFFIX,clouddn.com,DIRECT
+  - DOMAIN-SUFFIX,cnbeta.com,DIRECT
+  - DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+  - DOMAIN-SUFFIX,cootekservice.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,ctrip.com,DIRECT
+  - DOMAIN-SUFFIX,dgtle.com,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,douban.com,DIRECT
+  - DOMAIN-SUFFIX,doubanio.com,DIRECT
+  - DOMAIN-SUFFIX,duokan.com,DIRECT
+  - DOMAIN-SUFFIX,easou.com,DIRECT
+  - DOMAIN-SUFFIX,ele.me,DIRECT
+  - DOMAIN-SUFFIX,feng.com,DIRECT
+  - DOMAIN-SUFFIX,fir.im,DIRECT
+  - DOMAIN-SUFFIX,frdic.com,DIRECT
+  - DOMAIN-SUFFIX,g-cores.com,DIRECT
+  - DOMAIN-SUFFIX,godic.net,DIRECT
+  - DOMAIN-SUFFIX,gtimg.com,DIRECT
+  - DOMAIN,cdn.hockeyapp.net,DIRECT
+  - DOMAIN-SUFFIX,hongxiu.com,DIRECT
+  - DOMAIN-SUFFIX,hxcdn.net,DIRECT
+  - DOMAIN-SUFFIX,iciba.com,DIRECT
+  - DOMAIN-SUFFIX,ifeng.com,DIRECT
+  - DOMAIN-SUFFIX,ifengimg.com,DIRECT
+  - DOMAIN-SUFFIX,ipip.net,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,jianshu.com,DIRECT
+  - DOMAIN-SUFFIX,knewone.com,DIRECT
+  - DOMAIN-SUFFIX,le.com,DIRECT
+  - DOMAIN-SUFFIX,lecloud.com,DIRECT
+  - DOMAIN-SUFFIX,lemicp.com,DIRECT
+  - DOMAIN-SUFFIX,licdn.com,DIRECT
+  - DOMAIN-SUFFIX,luoo.net,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,mi.com,DIRECT
+  - DOMAIN-SUFFIX,miaopai.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+  - DOMAIN-SUFFIX,miui.com,DIRECT
+  - DOMAIN-SUFFIX,miwifi.com,DIRECT
+  - DOMAIN-SUFFIX,mob.com,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,office365.com,DIRECT
+  - DOMAIN-KEYWORD,officecdn,DIRECT
+  - DOMAIN-SUFFIX,oschina.net,DIRECT
+  - DOMAIN-SUFFIX,ppsimg.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,qcloud.com,DIRECT
+  - DOMAIN-SUFFIX,qdaily.com,DIRECT
+  - DOMAIN-SUFFIX,qdmm.com,DIRECT
+  - DOMAIN-SUFFIX,qhimg.com,DIRECT
+  - DOMAIN-SUFFIX,qhres.com,DIRECT
+  - DOMAIN-SUFFIX,qidian.com,DIRECT
+  - DOMAIN-SUFFIX,qihucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiniu.com,DIRECT
+  - DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiyipic.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,qqurl.com,DIRECT
+  - DOMAIN-SUFFIX,rarbg.to,DIRECT
+  - DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+  - DOMAIN-SUFFIX,segmentfault.com,DIRECT
+  - DOMAIN-SUFFIX,sinaapp.com,DIRECT
+  - DOMAIN-SUFFIX,smzdm.com,DIRECT
+  - DOMAIN-SUFFIX,snapdrop.net,DIRECT
+  - DOMAIN-SUFFIX,sogou.com,DIRECT
+  - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,soku.com,DIRECT
+  - DOMAIN-SUFFIX,speedtest.net,DIRECT
+  - DOMAIN-SUFFIX,sspai.com,DIRECT
+  - DOMAIN-SUFFIX,suning.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,tenpay.com,DIRECT
+  - DOMAIN-SUFFIX,tianyancha.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,tudou.com,DIRECT
+  - DOMAIN-SUFFIX,umetrip.com,DIRECT
+  - DOMAIN-SUFFIX,upaiyun.com,DIRECT
+  - DOMAIN-SUFFIX,upyun.com,DIRECT
+  - DOMAIN-SUFFIX,veryzhun.com,DIRECT
+  - DOMAIN-SUFFIX,weather.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.net,DIRECT
+  - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+  - DOMAIN-SUFFIX,ximalaya.com,DIRECT
+  - DOMAIN-SUFFIX,xmcdn.com,DIRECT
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - DOMAIN-SUFFIX,yhd.com,DIRECT
+  - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+  - DOMAIN-SUFFIX,yinxiang.com,DIRECT
+  - DOMAIN-SUFFIX,ykimg.com,DIRECT
+  - DOMAIN-SUFFIX,youdao.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,zealer.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,zhimg.com,DIRECT
+  - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+  - DOMAIN-SUFFIX,zoho.com,DIRECT
+  - DOMAIN-KEYWORD,amazon,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,google,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,gmail,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,youtube,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,facebook,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fb.me,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fbcdn.net,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,twitter,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,instagram,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,dropbox,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,twimg.com,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,blogspot,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,youtu.be,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,whatsapp,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,admarvel,REJECT
+  - DOMAIN-KEYWORD,admaster,REJECT
+  - DOMAIN-KEYWORD,adsage,REJECT
+  - DOMAIN-KEYWORD,adsmogo,REJECT
+  - DOMAIN-KEYWORD,adsrvmedia,REJECT
+  - DOMAIN-KEYWORD,adwords,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,appsflyer.com,REJECT
+  - DOMAIN-KEYWORD,domob,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-KEYWORD,duomeng,REJECT
+  - DOMAIN-KEYWORD,dwtrack,REJECT
+  - DOMAIN-KEYWORD,guanggao,REJECT
+  - DOMAIN-KEYWORD,lianmeng,REJECT
+  - DOMAIN-SUFFIX,mmstat.com,REJECT
+  - DOMAIN-KEYWORD,mopub,REJECT
+  - DOMAIN-KEYWORD,omgmta,REJECT
+  - DOMAIN-KEYWORD,openx,REJECT
+  - DOMAIN-KEYWORD,partnerad,REJECT
+  - DOMAIN-KEYWORD,pingfore,REJECT
+  - DOMAIN-KEYWORD,supersonicads,REJECT
+  - DOMAIN-KEYWORD,uedas,REJECT
+  - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-KEYWORD,usage,REJECT
+  - DOMAIN-SUFFIX,vungle.com,REJECT
+  - DOMAIN-KEYWORD,wlmonitor,REJECT
+  - DOMAIN-KEYWORD,zjtoolbar,REJECT
+  - DOMAIN-SUFFIX,9to5mac.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,abpchina.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,adblockplus.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,adobe.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,akamaized.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,alfredapp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,amplitude.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ampproject.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,android.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,angularjs.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,aolcdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,apkpure.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,appledaily.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,appshopper.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,appspot.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,arcgis.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,archive.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,armorgames.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,aspnetcdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,att.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,awsstatic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,azureedge.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,azurewebsites.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bing.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bintray.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bit.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bit.ly,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bitbucket.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bjango.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bkrtx.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blog.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogcdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogger.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogsmithmedia.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogspot.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,blogspot.hk,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,bloomberg.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,box.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,box.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cachefly.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,chromium.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cl.ly,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudflare.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudfront.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cloudmagic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cmail19.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cnet.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,cocoapods.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,comodoca.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,crashlytics.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,culturedcode.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,d.pr,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,danilo.to,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dayone.me,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,db.tt,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,deskconnect.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,disq.us,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,disqus.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,disquscdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dnsimple.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,docker.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dribbble.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,droplr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,duckduckgo.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dueapp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,dytt8.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,edgecastcdn.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,edgekey.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,edgesuite.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,engadget.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,entrust.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,eurekavpt.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,evernote.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fabric.io,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fast.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fastly.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fc2.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,feedburner.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,feedly.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,feedsportal.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,fiftythree.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,firebaseio.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,flexibits.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,flickr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,flipboard.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,g.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gabia.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,geni.us,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gfx.ms,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ggpht.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ghostnoteapp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,git.io,💙 电报频道＠yzcloud
+  - DOMAIN-KEYWORD,github,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,globalsign.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gmodules.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,godaddy.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,golang.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gongm.in,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,goo.gl,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,goodreaders.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,goodreads.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gravatar.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gstatic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,gvt0.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,hockeyapp.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,hotmail.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,icons8.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ifixit.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ift.tt,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ifttt.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,iherb.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,imageshack.us,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,img.ly,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,imgur.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,imore.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,instapaper.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ipn.li,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,is.gd,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,issuu.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,itgonglun.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,itun.es,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ixquick.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,j.mp,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,js.revsci.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,jshint.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,jtvnw.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,justgetflux.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,kat.cr,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,klip.me,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,libsyn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,linkedin.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,linode.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,lithium.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,littlehj.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,live.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,live.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,livefilestore.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,llnwd.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,macid.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,macromedia.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,macrumors.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mashable.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mathjax.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,medium.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mega.co.nz,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mega.nz,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,megaupload.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,microsofttranslator.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mindnode.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,mobile01.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,modmyi.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,msedge.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,myfontastic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,name.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nextmedia.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nsstatic.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nssurge.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nyt.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,nytimes.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,omnigroup.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,onedrive.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,onenote.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ooyala.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,openvpn.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,openwrt.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,orkut.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,osxdaily.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,outlook.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ow.ly,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,paddleapi.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,parallels.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,parse.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pdfexpert.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,periscope.tv,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pinboard.in,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pinterest.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pixelmator.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pixiv.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playpcesor.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.com.hk,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playstation.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,playstationnetwork.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,pushwoosh.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,rime.im,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,servebom.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sfx.ms,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,shadowsocks.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sharethis.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,shazam.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,skype.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,smartdns💙 电报频道＠yzcloud.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,smartmailcloud.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sndcdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sony.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,soundcloud.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sourceforge.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,spotify.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,squarespace.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,sstatic.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,st.luluku.pw,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,stackoverflow.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,startpage.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,staticflickr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,steamcommunity.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,symauth.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,symcb.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,symcd.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tapbots.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tapbots.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tdesktop.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,techcrunch.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,techsmith.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,thepiratebay.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,theverge.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,time.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,timeinc.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tiny.cc,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tinypic.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tmblr.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,todoist.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,trello.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,trustasiassl.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tumblr.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tumblr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tweetdeck.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,tweetmarker.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,twitch.tv,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,txmblr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,typekit.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ubertags.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ublock.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ubnt.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ulyssesapp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,urchin.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,usertrust.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,v.gd,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,v2ex.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vimeo.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vimeocdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vine.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vivaldi.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vox-cdn.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vsco.co,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,vultr.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,w.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,w3schools.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,webtype.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikiwand.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikileaks.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikimedia.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikipedia.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wikipedia.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,windows.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,windows.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wire.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wordpress.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,workflowy.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wp.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wsj.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,wsj.net,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,xda-developers.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,xeeno.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,xiti.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,yahoo.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,yimg.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ying.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,yoyo.org,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,ytimg.com,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,telegra.ph,💙 电报频道＠yzcloud
+  - DOMAIN-SUFFIX,telegram.org,💙 电报频道＠yzcloud
+  - IP-CIDR,91.108.4.0/22,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.8.0/21,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.16.0/22,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,91.108.56.0/22,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,149.154.160.0/20,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:67c:4e8::/48,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:b28:f23d::/48,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR6,2001:b28:f23f::/48,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.232.181.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.241.147.226/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.253.226/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.34/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,120.253.255.98/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.150.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.150.34/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.151.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,180.163.151.34/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.39.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.40.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.41.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.43.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,203.208.50.0/24,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.162/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.226/32,💙 电报频道＠yzcloud,no-resolve
+  - IP-CIDR,220.181.174.34/32,💙 电报频道＠yzcloud,no-resolve
+  - DOMAIN,injections.adguard.org,DIRECT
+  - DOMAIN,local.adguard.org,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,💙 电报频道＠yzcloud
