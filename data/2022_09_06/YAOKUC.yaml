@@ -1,0 +1,168 @@
+#
+#-------------------------------------------------------------#
+#  创建者：https://v2rayse.com
+#  创建时间：2022-09-06 10:30:56
+#  模版：ACL4SSR_Online
+#  节点数量：10
+#-------------------------------------------------------------#
+#
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - {"type":"trojan","name":"🇭🇰_HK_香港_1","server":"103.103.245.125","port":50418,"password":"a70b39d1-62ea-4d9e-b681-9c5408352234","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇭🇰_HK_香港_2","server":"18.167.20.169","port":8080,"uuid":"e1f97064-adcd-40d3-91a0-3f0bea035fca","alterId":0,"cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"🇸🇬_SG_新加坡","server":"simpang.freetrade.link","port":443,"password":"XEyN0OZ28xxCDO7C83DeAa3YcSjYKTgFA5n9IRpFwuB3qSz4aZClSapy3eRl6D","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_1","server":"musashino.freetrade.link","port":443,"password":"ZDqCRlxB8uFj9pxNEeanya3DIpDlOYR7K0wOYX3eScA36gTAazCyZ5SC3FS428","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇺🇸_US_美国_1","server":"s3.hazz.win","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇩🇪_DE_德国_1","server":"ty1-1.nigirocloud.com","port":443,"password":"4V4kxVXmcg5Yn2DqF2","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇯🇵_JP_日本_2","server":"18.179.205.215","port":443,"password":"iyinglong","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇩🇪_DE_德国_2","server":"ty1-2.nigirocloud.com","port":443,"password":"4V4kxVXmcg5Yn2DqF2","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇦🇺_AU_澳大利亚","server":"ttt1.swiftfalcon.app","port":8443,"password":"coldwar2","udp":true,"skip-cert-verify":true}
+  - {"type":"ssr","name":"🇺🇸_US_美国_2","server":"us-am32-5.eqnode.net","port":8081,"protocol":"origin","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","password":"YFVrXZgRo"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇸🇬_SG_新加坡
+      - 🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国_1
+      - 🇯🇵_JP_日本_2
+      - 🇩🇪_DE_德国_2
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇸🇬_SG_新加坡
+      - 🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国_1
+      - 🇯🇵_JP_日本_2
+      - 🇩🇪_DE_德国_2
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇸🇬_SG_新加坡
+      - 🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国_1
+      - 🇯🇵_JP_日本_2
+      - 🇩🇪_DE_德国_2
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇸🇬_SG_新加坡
+      - 🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国_1
+      - 🇯🇵_JP_日本_2
+      - 🇩🇪_DE_德国_2
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇸🇬_SG_新加坡
+      - 🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国_1
+      - 🇯🇵_JP_日本_2
+      - 🇩🇪_DE_德国_2
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇸🇬_SG_新加坡
+      - 🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国_1
+      - 🇯🇵_JP_日本_2
+      - 🇩🇪_DE_德国_2
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇸🇬_SG_新加坡
+      - 🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国_1
+      - 🇯🇵_JP_日本_2
+      - 🇩🇪_DE_德国_2
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇭🇰_HK_香港_1
+      - 🇭🇰_HK_香港_2
+      - 🇸🇬_SG_新加坡
+      - 🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国_1
+      - 🇩🇪_DE_德国_1
+      - 🇯🇵_JP_日本_2
+      - 🇩🇪_DE_德国_2
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+rules:
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
