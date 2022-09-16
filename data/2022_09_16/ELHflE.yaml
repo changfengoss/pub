@@ -1,0 +1,93 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+log-level: info
+external-controller: :9090
+proxies:
+  - {name: tg+univstar-hk100, server: fnhk1glines002re.fnline.club, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: edbe138e9e7d, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fnhk1glines002re.fnline.club, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw11, server: fn600mliness011.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 2d59efdde6c9, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness011.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw32, server: fn600mliness013.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1b584982dbdc, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness013.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw73, server: fn600mliness016.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: bd04a7b470fb, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness016.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw254, server: fndx600mtwline010tr.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: d0760c7c21f8, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fndx600mtwline010tr.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-hk25, server: fndxshk1000mline003.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: c3d44eb5b92f, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fndxshk1000mline003.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-hk86, server: fndxshk1000mline001.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 50db7fd78cdc, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fndxshk1000mline001.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw247, server: fn600mliness017.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 8812c0e4e2b0, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness017.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-hk68, server: fndxshk1000mline007.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 2fbf6ae5c0de, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fndxshk1000mline007.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-hk99, server: fnhk1gline001.fnline.xyz, port: 443, type: ss, cipher: xchacha20-ietf-poly1305, password: 35b13f9dd755, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fnhk1gline001.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw2110, server: fn600mliness019.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 61f301daaf4e, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness019.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw2611, server: fn600mlines020.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 5dac918f6134, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mlines020.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-hk412, server: fnhk1gline002.fnline.me, port: 443, type: ss, cipher: xchacha20-ietf-poly1305, password: 957abf07c5a6, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fnhk1gline002.fnline.me, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw513, server: fn600mliness015.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 696744f948f3, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness015.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw2914, server: fn600mlines023.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 4a386af7970a, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mlines023.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw1115, server: fn600mlines008.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: fc568c325d09, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mlines008.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw616, server: fn600mliness010.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ee3dfbbe3dca, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness010.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw2317, server: fn600mliness018.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 55011c8548ff, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness018.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw2718, server: fn600mlines021.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 0ac84efef442, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mlines021.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw2819, server: fn600mlines022.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: a57a10279872, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mlines022.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw220, server: fn600mliness012.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: a7f2fb3db93c, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness012.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-hk521, server: fndxshk1000mline006.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: db83a372671f, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fndxshk1000mline006.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw1322, server: fn600mliness009.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: cafd390e3444, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mliness009.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-hk1123, server: fndxshk1000mline002re.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 16c5fe596bfb, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fndxshk1000mline002re.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-us124, server: fndxus1000mline001.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 563b1dc7d669, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fndxus1000mline001.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-tw2225, server: fn600mlines008re.fnline.vip, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: cc05a17e6195, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn600mlines008re.fnline.vip, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-us326, server: fnbg1gline001.fnline.xyz, port: 443, type: ss, cipher: xchacha20-ietf-poly1305, password: 6fce24dde8c5, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fnbg1gline001.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-us827, server: bjus1glines007.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: f7b2af773c6e, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: bjus1glines007.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-us128, server: fnbg1gline003.fnline.xyz, port: 443, type: ss, cipher: xchacha20-ietf-poly1305, password: cf533d2acaa3, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fnbg1gline003.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: tg+univstar-us229, server: fnbg1gline002.fnline.xyz, port: 443, type: ss, cipher: xchacha20-ietf-poly1305, password: 33d0b611860f, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fnbg1gline002.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（kr4）30, server: fn50mjckrline001.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: dc638ac923b0, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn50mjckrline001.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（eur）31, server: fn100mltvline001.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 8525fd2e202b, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn100mltvline001.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（sg）32, server: fn100mnmsgpline001.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 0391ed69a1b5, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn100mnmsgpline001.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（jp3）33, server: fn50mxwjpline002.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 4138ea5f87df, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn50mxwjpline002.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（hk1）34, server: fnhk1glines004.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 7ebf987cedac, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fnhk1glines004.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（us3）35, server: bjus1glines011.feisujiasu.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: a82fbbd272e6, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: bjus1glines011.feisujiasu.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（us4）36, server: bjus1glines005.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 37242aed6a99, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: bjus1glines005.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（us1）37, server: fnbg1glines004.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 772183321102, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fnbg1glines004.fnline.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（us2）38, server: bjus1glines010.feisujiasu.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: b98227c85ab5, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: bjus1glines010.feisujiasu.xyz, path: "", tls: true, mux: true, skip-cert-verify: false}}
+  - {name: 优质线路（jp2）39, server: fn50mxwjpline001.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 8777fef1dd40, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn50mxwjpline001.fnline.info, path: "", tls: true, mux: true, skip-cert-verify: false}}
+proxy-groups:
+  - name: 飞鸟
+    type: select
+    proxies:
+      - tg+univstar-hk100
+      - tg+univstar-tw11
+      - tg+univstar-tw32
+      - tg+univstar-tw73
+      - tg+univstar-tw254
+      - tg+univstar-hk25
+      - tg+univstar-hk86
+      - tg+univstar-tw247
+      - tg+univstar-hk68
+      - tg+univstar-hk99
+      - tg+univstar-tw2110
+      - tg+univstar-tw2611
+      - tg+univstar-hk412
+      - tg+univstar-tw513
+      - tg+univstar-tw2914
+      - tg+univstar-tw1115
+      - tg+univstar-tw616
+      - tg+univstar-tw2317
+      - tg+univstar-tw2718
+      - tg+univstar-tw2819
+      - tg+univstar-tw220
+      - tg+univstar-hk521
+      - tg+univstar-tw1322
+      - tg+univstar-hk1123
+      - tg+univstar-us124
+      - tg+univstar-tw2225
+      - tg+univstar-us326
+      - tg+univstar-us827
+      - tg+univstar-us128
+      - tg+univstar-us229
+      - 优质线路（kr4）30
+      - 优质线路（eur）31
+      - 优质线路（sg）32
+      - 优质线路（jp3）33
+      - 优质线路（hk1）34
+      - 优质线路（us3）35
+      - 优质线路（us4）36
+      - 优质线路（us1）37
+      - 优质线路（us2）38
+      - 优质线路（jp2）39
+rules:
+  - GEOIP,CN,DIRECT
+  - MATCH,飞鸟
