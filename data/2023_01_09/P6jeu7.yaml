@@ -1,0 +1,96 @@
+#
+#-------------------------------------------------------------#
+#  创建者：https://v2rayse.com
+#  创建时间：2023-01-09 00:11:35
+#  模版：ACL4SSR_Online_Mini_AdblockPlus
+#  节点数量：10
+#-------------------------------------------------------------#
+#
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+proxies:
+  - {"type":"vmess","name":"🇺🇸_US_美国->🇫🇷_FR_法国_1","ws-opts":{"path":"/A2DJOPFT","headers":{"host":"lg10.cfcdn1.xyz"}},"server":"162.159.135.42","port":443,"uuid":"17b2a313-37a0-4945-a8e4-e63375506b4a","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇺🇸_US_美国->🇫🇷_FR_法国_2","ws-opts":{"path":"/IYKLD53M","headers":{"host":"opfr1.v2rayfree1.xyz"}},"server":"141.193.213.20","port":443,"uuid":"4612618c-24cd-4379-9924-cfdf3d61fa5a","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇨🇷_CR_哥斯达黎加","ws-opts":{"path":"/ECTCJ0DF","headers":{"host":"lg1.trump2023.us"}},"server":"190.93.245.2","port":443,"uuid":"40d496a6-ceeb-4096-baeb-4cc52b205621","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇨🇦_CA_加拿大->🇫🇷_FR_法国","ws-opts":{"path":"/UMW36262","headers":{"host":"v2ray1.zhujicn2.org"}},"server":"23.227.38.100","port":443,"uuid":"7b1b2fa3-e361-48cc-b73d-2c9636c76f4b","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇨🇳_CN_中国->🇺🇸_US_美国","server":"vj5uk1zh9lf5ldxwoh.ziir.cn","port":15464,"cipher":"aes-128-gcm","password":"2ae07b64-5579-40d4-b344-020f76f3c7e2"}
+  - {"type":"vmess","name":"🇺🇸_US_美国","ws-opts":{"path":"/chcara","headers":{"host":"v2fly.samrt.website"}},"server":"172.67.153.33","port":443,"uuid":"152b56fd-7561-38e5-90ab-785fcb2aa86e","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇺🇸_US_美国->🇫🇷_FR_法国_3","ws-opts":{"path":"/IYKLD53M","headers":{"host":"opfr1.v2rayfree1.xyz"}},"server":"198.41.203.5","port":443,"uuid":"4612618c-24cd-4379-9924-cfdf3d61fa5a","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇧🇿_BZ_伯利兹","ws-opts":{"path":"/ECTCJ0DF","headers":{"host":"lg1.trump2023.us"}},"server":"203.30.190.190","port":443,"uuid":"40d496a6-ceeb-4096-baeb-4cc52b205621","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇳🇱_NL_荷兰","ws-opts":{"path":"/A2DJOPFT","headers":{"host":"lg10.cfcdn1.xyz"}},"server":"188.114.99.11","port":443,"uuid":"17b2a313-37a0-4945-a8e4-e63375506b4a","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇺🇸_US_美国->🇫🇷_FR_法国_4","ws-opts":{"path":"/IYKLD53M","headers":{"host":"opfr1.v2rayfree1.xyz"}},"server":"main.millionaireaisle.com","port":443,"uuid":"4612618c-24cd-4379-9924-cfdf3d61fa5a","alterId":"0","cipher":"auto","network":"ws","tls":true}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_2
+      - 🇨🇷_CR_哥斯达黎加
+      - 🇨🇦_CA_加拿大->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
+      - 🇧🇿_BZ_伯利兹
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_4
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_2
+      - 🇨🇷_CR_哥斯达黎加
+      - 🇨🇦_CA_加拿大->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
+      - 🇧🇿_BZ_伯利兹
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_4
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_2
+      - 🇨🇷_CR_哥斯达黎加
+      - 🇨🇦_CA_加拿大->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_3
+      - 🇧🇿_BZ_伯利兹
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国->🇫🇷_FR_法国_4
+rules:
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
