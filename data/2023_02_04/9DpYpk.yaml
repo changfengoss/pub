@@ -1,0 +1,255 @@
+#-------------------------------------------------------------#
+# Telegram Channel:@LONUP_M
+#-------------------------------------------------------------#
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: debug
+external-controller: 0.0.0.0:9090
+ipv6: true
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: redir-host
+  nameserver:
+    - https://basic.rethinkdns.com/dns-query
+    - https://NoTMIKE.dev/dns.php
+    - tls://one.one.one.one:853
+    - tls://dns.google:853
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://dns.adguard-dns.com/dns-query
+    - https://1.1.1.1/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://basic.rethinkdns.com/dns-query
+    - https://azure.cloudflare-dns.com/dns-query
+    - https://dns64.cloudflare-dns.com/dns-query
+    - https://dns1.ryan-palmer.com/dns-query
+    - https://odvr.nic.cz/dns-query
+    - https://doh.crypto.sx/dns-query
+    - https://puredns.org/dns-query
+    - https://dns.dnshome.de/dns-query
+    - https://doh.seby.io:8443/dns-query
+    - https://ibksturm.synology.me/dns-query
+    - https://dns.hostux.net/dns-query
+    - https://doh.libredns.gr/dns-query
+    - https://NoTMIKE.dev/dns.php
+    - https://doh.42l.fr/dns-query
+    - https://DNS.HeN.ee/dns-query
+    - https://doh.dnswarden.com/uncensored
+    - tls://one.one.one.one:853
+    - tls://dns.google:853
+    - https://dns.google/dns-query
+    - https://dns64.dns.google/dns-query
+    - https://8888.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://mozilla.cloudflare-dns.com/dns-query
+    - https://EU2.DNS.LAVATE.CH/dns-query
+    - https://DANDELIONSPROUT.Asuscomm.com:2501/dns-query
+    - https://dns.switch.ch/dns-query
+    - https://dnsforge.de/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://doh.dns.sb/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.twnic.tw/dns-query
+fallback-filter:
+    geoip: true
+    geoip-code: IR
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.youtube.com
+      - +.gvt1.com
+      - '+.facebook.com'
+      - '+.twitter.com'
+      - '+.youtube.com'
+      - '+.bing.com'
+fake-ip-filter:
+    - "*.lan"
+    - stun.*.*.*
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.openwrt.pool.ntp.org"
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - api.joox.com
+    - joox.com
+    - "*.xiami.com"
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.ipv6.microsoft.com"
+    - speedtest.cros.wr.pvp.net
+    - 'dns.msftncsi.com'
+    - 'www.msftncsi.com'
+    - 'www.msftconnecttest.com'
+proxies:
+  - {"type":"vmess","name":"🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1","http-opts":{"path":["/"],"headers":{"Host":["snapp.ir"]}},"server":"79.132.134.56","port":"16998","uuid":"19c9e411-8707-4c01-fac0-8a60d9b19154","alterId":"0","cipher":"auto","network":"http"}
+proxy-groups:
+  - name: 🌐ALL @LonUp_M
+    type: select
+    proxies:
+      - ⚓Direct
+      - ⛔BLOCK
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 👑TestGroups
+    type: select
+    proxies:
+      - ⚡test⊶1
+      - ⚡test⊶2
+      - ⚡test⊶3
+      - ⚡test⊶4
+      - ⚡test⊶5
+      - 🔹fallback◈1
+      - 🔹fallback◈2
+      - 🔹fallback◈3
+      - 🔹fallback◈4
+      - 🔹fallback◈5
+      - 🧠load-balance⇋1
+      - 🧠load-balance⇋2
+      - 🧠load-balance⇋3
+      - 🧠load-balance⇋4
+      - 🧠load-balance⇋5
+      - 💦T.me/FireVPNTeam
+  - name: 💦T.me/FireVPNTeam
+    type: relay
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: ⚡test⊶1
+    type: url-test
+    url: 'http://cp.cloudflare.com/'
+    interval: 222
+    tolerance: 66
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: ⚡test⊶2
+    type: url-test
+    url: 'https://www.example.com'
+    interval: 222
+    tolerance: 66
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: ⚡test⊶3
+    type: url-test
+    url: 'http://www.google.com/generate_204'
+    interval: 222
+    tolerance: 66
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: ⚡test⊶4
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 222
+    tolerance: 66
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: ⚡test⊶5
+    type: url-test
+    url: 'http://t.me/'
+    interval: 222
+    tolerance: 66
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🔹fallback◈1
+    type: fallback
+    url: 'http://cp.cloudflare.com/'
+    interval: 222
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🔹fallback◈2
+    type: fallback
+    url: 'https://www.example.com'
+    interval: 222
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🔹fallback◈3
+    type: fallback
+    url: 'http://www.google.com/generate_204'
+    interval: 222
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🔹fallback◈4
+    type: fallback
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 222
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🔹fallback◈5
+    type: fallback
+    url: 'http://t.me/'
+    interval: 222
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🧠load-balance⇋1
+    type: load-balance
+    url: 'http://cp.cloudflare.com/'
+    interval: 222
+    strategy: round-robin
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🧠load-balance⇋2
+    type: load-balance
+    url: 'https://www.example.com'
+    interval: 222
+    strategy: consistent-hashing
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🧠load-balance⇋3
+    type: load-balance
+    url: 'http://www.google.com/generate_204'
+    interval: 222
+    strategy: round-robin
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🧠load-balance⇋4
+    type: load-balance
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 222
+    strategy: consistent-hashing
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: 🧠load-balance⇋5
+    type: load-balance
+    url: 'http://t.me/'
+    interval: 222
+    strategy: round-robin
+    proxies:
+      - 🇩🇪⫶DE⫶Ꮮᝪᑎᑌᑭ𖡺لوناپ⫶1
+  - name: ⚓Direct
+    type: select
+    proxies:
+      - DIRECT
+  - name: ⛔BLOCK
+    type: select
+    proxies:
+      - REJECT
+rules:
+ - GEOIP,IR,⚓Direct
+ - DOMAIN-SUFFIX,ir,⚓Direct
+ - MATCH ,⚡test⊶1, ⚡test⊶2, ⚡test⊶3, ⚡test⊶4, ⚡test⊶5, 🧠load-balance⇋1, 🧠load-balance⇋2, 🧠load-balance⇋3, 🧠load-balance⇋4, 🧠load-balance⇋5, 🔹fallback◈1, 🔹fallback◈2, 🔹fallback◈3, 🔹fallback◈4, 🔹fallback◈5,
