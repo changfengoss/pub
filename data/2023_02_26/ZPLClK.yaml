@@ -1,0 +1,13 @@
+{
+  "v": "2",
+  "ps": "xg",
+  "add": "ssr.aeccg.cn",
+  "port": 45000,
+  "id": "a1b182e6-f933-4227-bbe3-7ef1c71992b7",
+  "aid": 0,
+  "net": "tcp",
+  "type": "http",
+  "host": "",
+  "path": '/',
+  "tls": "none"
+}
