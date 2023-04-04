@@ -1,0 +1,1290 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: silent
+proxies:
+  - name: "@DeamNet_🇩🇪Frankfurt am Main-1279-1"
+    type: trojan
+    server: b.dg.cat77.cloud
+    port: 5678
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: hostiran.net
+    skip-cert-verify: true
+  - name: "@DeamNet_🇩🇪Nuremberg-1825-2"
+    type: trojan
+    server: stonebreak.online
+    port: 443
+    password: "xl87654321"
+    udp: true
+    sni: mardomsalari.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇩🇪Frankfurt am Main-2890-3"
+    type: trojan
+    server: 159.100.30.64
+    port: 9100
+    password: "56733cf9f08d43d9"
+    udp: true
+    sni: time.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇩🇪Frankfurt am Main-1670-4"
+    type: trojan
+    server: 3.76.42.69
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: filmnet.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Strasbourg-1373-5"
+    type: trojan
+    server: 51.91.11.29
+    port: 80
+    password: "e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad"
+    udp: true
+    sni: softsaaz.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Strasbourg-3324-6"
+    type: trojan
+    server: 51.91.11.29
+    port: 80
+    password: "e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad"
+    udp: true
+    sni: mardomsalari.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Strasbourg-1055-7"
+    type: trojan
+    server: 51.91.11.29
+    port: 80
+    password: "e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad"
+    udp: true
+    sni: asriran.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇩🇪Nuremberg-1871-8"
+    type: trojan
+    server: 78.47.92.139
+    port: 443
+    password: "xl87654321"
+    udp: true
+    sni: varzesh3.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇩🇪Frankfurt am Main-3168-9"
+    type: trojan
+    server: 130.61.186.122
+    port: 5678
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: mci.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Strasbourg-2458-10"
+    type: trojan
+    server: 51.91.11.29
+    port: 80
+    password: "e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad"
+    udp: true
+    sni: akharinkhabar.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇩🇪Frankfurt am Main-1753-11"
+    type: trojan
+    server: 3.125.211.216
+    port: 2255
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: ifilmtv.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧City of London-2188-12"
+    type: trojan
+    server: 185.16.206.212
+    port: 443
+    password: "shefelnak"
+    udp: true
+    sni: marzfun.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧London-1863-13"
+    type: trojan
+    server: 51.38.71.175
+    port: 80
+    password: "b640d791-ff83-4300-b509-c2a02f97f167"
+    udp: true
+    sni: time.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Gravelines-1417-14"
+    type: trojan
+    server: 54.37.185.148
+    port: 32894
+    password: "HchlVCfnXB"
+    udp: true
+    sni: fararu.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧London-2619-15"
+    type: trojan
+    server: uk1.trojanvh.xyz
+    port: 80
+    password: "b640d791-ff83-4300-b509-c2a02f97f167"
+    udp: true
+    sni: entekhab.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇩🇪Frankfurt am Main-1051-16"
+    type: trojan
+    server: 3.76.226.130
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: rajanews.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧London-2590-17"
+    type: trojan
+    server: uk1.trojanvh.xyz
+    port: 80
+    password: "b640d791-ff83-4300-b509-c2a02f97f167"
+    udp: true
+    sni: bmi.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇩🇪Frankfurt am Main-2703-18"
+    type: trojan
+    server: 4.dg.cat77.cloud
+    port: 2255
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: time.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧Coventry-2085-19"
+    type: trojan
+    server: 146.19.230.241
+    port: 443
+    password: "xxoo"
+    udp: true
+    sni: bmi.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧City of London-1194-20"
+    type: trojan
+    server: 185.16.206.211
+    port: 443
+    password: "shefelnak"
+    udp: true
+    sni: sena.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧City of London-2906-21"
+    type: trojan
+    server: 185.16.206.212
+    port: 443
+    password: "shefelnak"
+    udp: true
+    sni: snapp.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧City of London-2676-22"
+    type: trojan
+    server: 185.16.206.212
+    port: 443
+    password: "shefelnak"
+    udp: true
+    sni: varzesh3.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧City of London-1869-23"
+    type: trojan
+    server: 185.16.206.211
+    port: 443
+    password: "shefelnak"
+    udp: true
+    sni: tabnakjavan.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧London-2412-24"
+    type: trojan
+    server: 51.38.71.175
+    port: 80
+    password: "b640d791-ff83-4300-b509-c2a02f97f167"
+    udp: true
+    sni: filmnet.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧City of London-2396-25"
+    type: trojan
+    server: 185.16.206.211
+    port: 443
+    password: "shefelnak"
+    udp: true
+    sni: didestan.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇪Dublin-1449-26"
+    type: trojan
+    server: 3.249.129.98
+    port: 8443
+    password: "cf4295378e209e70d12c5bdd017144dfd1c772d3"
+    udp: true
+    sni: peyvandha.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇪Dublin-2623-27"
+    type: trojan
+    server: 3.249.129.98
+    port: 8443
+    password: "cf4295378e209e70d12c5bdd017144dfd1c772d3"
+    udp: true
+    sni: sena.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧City of London-2888-28"
+    type: trojan
+    server: 185.16.206.211
+    port: 443
+    password: "shefelnak"
+    udp: true
+    sni: anten.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇹Siziano-2292-29"
+    type: trojan
+    server: 204.216.214.102
+    port: 44386
+    password: "C931CWacy8"
+    udp: true
+    sni: ifilmtv.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Reston-2328-30"
+    type: trojan
+    server: us2.trojanvh.xyz
+    port: 80
+    password: "aa6eb272-1d8d-4461-9687-85ddbab1adb0"
+    udp: true
+    sni: asriran.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Reston-1270-31"
+    type: trojan
+    server: 135.148.149.209
+    port: 80
+    password: "011eb011-c68e-4f92-80eb-f9bbef707bef"
+    udp: true
+    sni: irancode.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Reston-1775-32"
+    type: trojan
+    server: us2.trojanvh.xyz
+    port: 80
+    password: "011eb011-c68e-4f92-80eb-f9bbef707bef"
+    udp: true
+    sni: varzesh3.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Reston-1573-33"
+    type: trojan
+    server: us2.trojanvh.xyz
+    port: 80
+    password: "255c924c-1314-4084-9a9e-1d1a82a5cf49"
+    udp: true
+    sni: uptvs.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Reston-2208-34"
+    type: trojan
+    server: 135.148.149.209
+    port: 80
+    password: "011eb011-c68e-4f92-80eb-f9bbef707bef"
+    udp: true
+    sni: khabaronline.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Secaucus-1204-35"
+    type: trojan
+    server: 138.124.183.222
+    port: 443
+    password: "xxoo"
+    udp: true
+    sni: fardanews.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Clifton-1672-36"
+    type: trojan
+    server: us.blazeppn.info
+    port: 443
+    password: "xxoo"
+    udp: true
+    sni: marzfun.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Atlanta-1312-37"
+    type: trojan
+    server: 170.187.134.190
+    port: 8443
+    password: "cf4295378e209e70d12c5bdd017144dfd1c772d3"
+    udp: true
+    sni: asriran.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Atlanta-1916-38"
+    type: trojan
+    server: 170.187.134.190
+    port: 8443
+    password: "cf4295378e209e70d12c5bdd017144dfd1c772d3"
+    udp: true
+    sni: salamcinama.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Los Angeles-2445-39"
+    type: trojan
+    server: 64.190.90.29
+    port: 443
+    password: "b8ec1401-e5c1-4299-b315-9694cca0c2f8"
+    udp: true
+    sni: bama.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Secaucus-2443-40"
+    type: trojan
+    server: 138.124.183.222
+    port: 443
+    password: "xxoo"
+    udp: true
+    sni: adsima.net
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-2880-41"
+    type: trojan
+    server: 152.67.160.174
+    port: 443
+    password: "54080134-2cba-4535-8599-95650bd9aa54"
+    udp: true
+    sni: namava.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸San Jose-1260-42"
+    type: trojan
+    server: zzus01.gutingting.com
+    port: 20220
+    password: "347de7da-0671-4bcb-8955-0cc0aead95df"
+    udp: true
+    sni: irancode.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-1629-43"
+    type: trojan
+    server: 152.67.162.166
+    port: 443
+    password: "e05c749b-7c6b-41b8-9c71-9dcf685edf4a"
+    udp: true
+    sni: defapress.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-1851-44"
+    type: trojan
+    server: 152.67.160.174
+    port: 443
+    password: "54080134-2cba-4535-8599-95650bd9aa54"
+    udp: true
+    sni: entekhab.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-1959-45"
+    type: trojan
+    server: 152.70.74.66
+    port: 443
+    password: "d906afe5-7c3c-4ddc-aaa4-61c154a82e5e"
+    udp: true
+    sni: khabaronline.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-3301-46"
+    type: trojan
+    server: 152.67.162.166
+    port: 443
+    password: "e05c749b-7c6b-41b8-9c71-9dcf685edf4a"
+    udp: true
+    sni: isna.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸San Jose-1377-47"
+    type: trojan
+    server: c.mg.us.cat77.cloud
+    port: 2222
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: yjc.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸San Jose-2030-48"
+    type: trojan
+    server: 192.9.130.66
+    port: 443
+    password: "7c7e0edb-c45a-4c07-b66a-69b191179349"
+    udp: true
+    sni: sheypoor.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Reston-2263-49"
+    type: trojan
+    server: ayus6.mysvip.online
+    port: 443
+    password: "128d4b58-6713-4051-831e-fe79a67ccee2"
+    udp: true
+    sni: namava.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-1039-50"
+    type: trojan
+    server: 5.sg.cat77.cloud
+    port: 5678
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: tamashakhoneh.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Reston-1760-51"
+    type: trojan
+    server: 77.83.254.18
+    port: 443
+    password: "128d4b58-6713-4051-831e-fe79a67ccee2"
+    udp: true
+    sni: jamnews.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸San Jose-2960-52"
+    type: trojan
+    server: 129.159.39.177
+    port: 2222
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: tamasha.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸San Jose-1467-53"
+    type: trojan
+    server: b.mg.us.cat77.cloud
+    port: 2222
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: mashreghnews.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-2266-54"
+    type: trojan
+    server: sgp-3.fuckjdieng.uk
+    port: 50190
+    password: "fa7868f2-a691-4871-890e-5ad4c0feb937"
+    udp: true
+    sni: namayesh.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Santa Clara-1960-55"
+    type: trojan
+    server: 43.153.34.170
+    port: 8443
+    password: "cf4295378e209e70d12c5bdd017144dfd1c772d3"
+    udp: true
+    sni: jamaran.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-2638-56"
+    type: trojan
+    server: 150.230.96.103
+    port: 443
+    password: "da777aae-defb-41d0-a183-2c27da2b4677"
+    udp: true
+    sni: tamasha.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Reston-2641-57"
+    type: trojan
+    server: 77.83.254.18
+    port: 443
+    password: "128d4b58-6713-4051-831e-fe79a67ccee2"
+    udp: true
+    sni: ifilmtv.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-2206-58"
+    type: trojan
+    server: jp-tk-31.fuckjdieng.uk
+    port: 50126
+    password: "db75cc15-17fc-480c-af6f-773169fc93f4"
+    udp: true
+    sni: mashreghnews.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸San Jose-3038-59"
+    type: trojan
+    server: 192.9.130.66
+    port: 443
+    password: "7c7e0edb-c45a-4c07-b66a-69b191179349"
+    udp: true
+    sni: tabnak.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-1020-60"
+    type: trojan
+    server: sgp-2.fuckjdieng.uk
+    port: 50132
+    password: "14dfcbc3-fb69-43f4-a1a1-d06124eb3d03"
+    udp: true
+    sni: timecity.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-1060-61"
+    type: trojan
+    server: 18.141.182.189
+    port: 8443
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: anetwork.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇭🇰Central-3077-62"
+    type: trojan
+    server: 194.156.99.39
+    port: 443
+    password: "xxoo"
+    udp: true
+    sni: jamnews.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-1520-63"
+    type: trojan
+    server: 18.142.125.35
+    port: 5678
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: tala.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-1017-64"
+    type: trojan
+    server: jp-tk-32.fuckjdieng.uk
+    port: 50152
+    password: "4e9a8a73-a97b-4e19-8240-0115109418c8"
+    udp: true
+    sni: tnews.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-2543-65"
+    type: trojan
+    server: jp-tk-32.fuckjdieng.uk
+    port: 50152
+    password: "4e9a8a73-a97b-4e19-8240-0115109418c8"
+    udp: true
+    sni: gap.im
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Seoul-2059-66"
+    type: trojan
+    server: ssrsub.t04.trojan.tel
+    port: 80
+    password: "6ba745ca-823a-4643-8f4e-22997ca67a2f"
+    udp: true
+    sni: irpopup.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-2076-67"
+    type: trojan
+    server: 152.67.190.183
+    port: 443
+    password: "006baa3f-4bc3-4915-b60d-c8c5dae11a11"
+    udp: true
+    sni: timecity.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-2155-68"
+    type: trojan
+    server: 15.235.197.4
+    port: 80
+    password: "16bcc187-a1a0-4b8a-8b69-627f38b7cc0d"
+    udp: true
+    sni: bama.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-2199-69"
+    type: trojan
+    server: 15.235.197.4
+    port: 80
+    password: "16bcc187-a1a0-4b8a-8b69-627f38b7cc0d"
+    udp: true
+    sni: anetwork.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-1761-70"
+    type: trojan
+    server: 150.230.96.103
+    port: 443
+    password: "da777aae-defb-41d0-a183-2c27da2b4677"
+    udp: true
+    sni: fararu.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇭🇰Hong Kong-1721-71"
+    type: trojan
+    server: sky998dmit3.xyz
+    port: 443
+    password: "RRy34GGwsPt47SuC"
+    udp: true
+    sni: enamad.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇭🇰Hong Kong-3169-72"
+    type: trojan
+    server: 154.3.32.164
+    port: 443
+    password: "RRy34GGwsPt47SuC"
+    udp: true
+    sni: asriran.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-2852-73"
+    type: trojan
+    server: zzjp01.gutingting.com
+    port: 20221
+    password: "347de7da-0671-4bcb-8955-0cc0aead95df"
+    udp: true
+    sni: mardomsalari.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-2302-74"
+    type: trojan
+    server: 2.hg.kr.cat77.cloud
+    port: 8443
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: rajanews.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇨🇳Changzhou-1714-75"
+    type: trojan
+    server: oss-cn-shanghai.westdatacloud.top
+    port: 20048
+    password: "626351FA-3CA6-8118-FADF-CCDBCD620871"
+    udp: true
+    sni: digiato.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-1124-76"
+    type: trojan
+    server: 152.67.212.239
+    port: 8443
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: entekhab.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-2692-77"
+    type: trojan
+    server: 138.2.113.84
+    port: 443
+    password: "b291d129-ee55-4801-a9b8-b5316e5c37b7"
+    udp: true
+    sni: bama.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-1864-78"
+    type: trojan
+    server: 152.67.212.239
+    port: 8443
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: irancode.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-2201-79"
+    type: trojan
+    server: 2.hg.kr.cat77.cloud
+    port: 8443
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: softsaaz.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-2941-80"
+    type: trojan
+    server: 1.hg.kr.cat77.cloud
+    port: 8443
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: salamcinama.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-1180-81"
+    type: trojan
+    server: 138.2.115.240
+    port: 3052
+    password: "3a2c0c6c-9ee5-c05f-c951-fcd73831983e"
+    udp: true
+    sni: mehrnews.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-1439-82"
+    type: trojan
+    server: 129.154.48.187
+    port: 8443
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: tabnak.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇹🇼Taipei-1303-83"
+    type: trojan
+    server: azgy001.xibai6.top
+    port: 20711
+    password: "78af6d6d-6de7-3a1f-a969-c39077fb47bf"
+    udp: true
+    sni: uptvs.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇹🇼Taipei-1056-84"
+    type: trojan
+    server: azgy001.xibai6.top
+    port: 20712
+    password: "78af6d6d-6de7-3a1f-a969-c39077fb47bf"
+    udp: true
+    sni: fararu.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇭🇰Cheung Sha Wan-2546-85"
+    type: trojan
+    server: 103.103.245.125
+    port: 50350
+    password: "006bca8c-4e1f-44e0-9399-1cd4ff480a40"
+    udp: true
+    sni: softsaaz.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇭🇰Cheung Sha Wan-1319-86"
+    type: trojan
+    server: 103.103.245.125
+    port: 50206
+    password: "789d73af-b985-4778-9872-211047c28015"
+    udp: true
+    sni: tamashakhoneh.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇦🇺Sydney-1249-87"
+    type: trojan
+    server: 152.67.98.30
+    port: 443
+    password: "e8c1ab3c-89b3-4933-92df-682e6dce7819"
+    udp: true
+    sni: akharinkhabar.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇹🇼Taipei-2490-88"
+    type: trojan
+    server: azgy001.xibai6.top
+    port: 20710
+    password: "f23a8308-7cf3-3e69-976a-de7246b02a2d"
+    udp: true
+    sni: ghatreh.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇦🇺Sydney-2089-89"
+    type: trojan
+    server: 152.67.98.30
+    port: 443
+    password: "e8c1ab3c-89b3-4933-92df-682e6dce7819"
+    udp: true
+    sni: lenz.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇦🇺Sydney-1407-90"
+    type: trojan
+    server: 152.67.98.30
+    port: 443
+    password: "e8c1ab3c-89b3-4933-92df-682e6dce7819"
+    udp: true
+    sni: gap.im
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-1130-91"
+    type: trojan
+    server: 138.2.115.240
+    port: 443
+    password: "3a2c0c6c-9ee5-c05f-c951-fcd73831983e"
+    udp: true
+    sni: mardomsalari.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Seoul-2544-92"
+    type: vmess
+    server: m4.40010010.xyz
+    port: 37121
+    uuid: 575e4d92-1056-44c2-8cac-75ef1c859ad5
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: aparat.com
+  - name: "@DeamNet_🇰🇷Chuncheon-2756-93"
+    type: trojan
+    server: 138.2.115.240
+    port: 443
+    password: "3a2c0c6c-9ee5-c05f-c951-fcd73831983e"
+    udp: true
+    sni: mci.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-2260-94"
+    type: trojan
+    server: 138.2.113.84
+    port: 443
+    password: "b291d129-ee55-4801-a9b8-b5316e5c37b7"
+    udp: true
+    sni: iran-tejarat.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-2358-95"
+    type: trojan
+    server: 144.24.72.126
+    port: 443
+    password: "7118b5f4-0ea4-4c11-be7f-11471cb91e4a"
+    udp: true
+    sni: irancell.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇹🇼Taipei-3184-96"
+    type: trojan
+    server: azgy001.xibai6.top
+    port: 20710
+    password: "78af6d6d-6de7-3a1f-a969-c39077fb47bf"
+    udp: true
+    sni: irib.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇹🇼Taipei-2179-97"
+    type: trojan
+    server: azgy001.xibai6.top
+    port: 20713
+    password: "78af6d6d-6de7-3a1f-a969-c39077fb47bf"
+    udp: true
+    sni: anetwork.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇪Dublin-1043-98"
+    type: trojan
+    server: 3-249-129-98.ipv4.rush.ml
+    port: 8443
+    password: "cf4295378e209e70d12c5bdd017144dfd1c772d3"
+    udp: true
+    sni: persianblog.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Santa Clara-2154-99"
+    type: trojan
+    server: 43-153-34-170.ipv4.rush.ml
+    port: 8443
+    password: "cf4295378e209e70d12c5bdd017144dfd1c772d3"
+    udp: true
+    sni: rajanews.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Portland-2082-100"
+    type: trojan
+    server: 54.189.230.6
+    port: 22222
+    password: "telegram-id-directvpn"
+    udp: true
+    sni: defapress.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇪Dublin-2295-101"
+    type: trojan
+    server: 54.216.171.65
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: aparat.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Gravelines-1282-102"
+    type: trojan
+    server: a1.veryfastnet1.tk
+    port: 32894
+    password: "HchlVCfnXB"
+    udp: true
+    sni: khabaronline.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Gravelines-1623-103"
+    type: trojan
+    server: a1.veryfastnet1.tk
+    port: 32894
+    password: "HchlVCfnXB"
+    udp: true
+    sni: yjc.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-1600-104"
+    type: trojan
+    server: jgwcc1.gaox.ml
+    port: 443
+    password: "7118b5f4-0ea4-4c11-be7f-11471cb91e4a"
+    udp: true
+    sni: irpopup.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇰🇷Chuncheon-2021-105"
+    type: trojan
+    server: jgwcc3.gaox.ml
+    port: 443
+    password: "b291d129-ee55-4801-a9b8-b5316e5c37b7"
+    udp: true
+    sni: blog.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-2491-106"
+    type: trojan
+    server: jgwdj3.gaox.ml
+    port: 443
+    password: "da777aae-defb-41d0-a183-2c27da2b4677"
+    udp: true
+    sni: rahnama.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-2844-107"
+    type: trojan
+    server: jgwdj3.gaox.ml
+    port: 443
+    password: "da777aae-defb-41d0-a183-2c27da2b4677"
+    udp: true
+    sni: iqna.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇯🇵Tokyo-3147-108"
+    type: trojan
+    server: jgwdj4.gaox.ml
+    port: 443
+    password: "c09eb137-bf68-4658-84e0-102d94b74168"
+    udp: true
+    sni: rrk.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-2258-109"
+    type: trojan
+    server: jgwhdlb1.gaox.ml
+    port: 443
+    password: "e05c749b-7c6b-41b8-9c71-9dcf685edf4a"
+    udp: true
+    sni: nic.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-2479-110"
+    type: trojan
+    server: jgwhdlb2.gaox.ml
+    port: 443
+    password: "54080134-2cba-4535-8599-95650bd9aa54"
+    udp: true
+    sni: enamad.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇳Hyderabad-1605-111"
+    type: trojan
+    server: jgwhdlb3.gaox.ml
+    port: 443
+    password: "006baa3f-4bc3-4915-b60d-c8c5dae11a11"
+    udp: true
+    sni: irancode.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇦🇺Sydney-3079-112"
+    type: trojan
+    server: jgwxn4.gaox.ml
+    port: 443
+    password: "e8c1ab3c-89b3-4933-92df-682e6dce7819"
+    udp: true
+    sni: divar.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-1718-113"
+    type: trojan
+    server: sg5.acyun.me
+    port: 37549
+    password: "645a4174-09a4-4ca0-a2fe-9f22b958546d"
+    udp: true
+    sni: sena.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Paris-1594-114"
+    type: trojan
+    server: 13.37.190.35
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: filmnet.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇪Stockholm-1922-115"
+    type: trojan
+    server: 13.50.193.35
+    port: 22222
+    password: "telegram-id-directvpn"
+    udp: true
+    sni: aparat.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇪Stockholm-2273-116"
+    type: trojan
+    server: 13.51.156.213
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: rrk.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇫🇷Paris-1609-117"
+    type: trojan
+    server: 15.236.226.33
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: fardanews.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇪Stockholm-2631-118"
+    type: trojan
+    server: 16.16.84.175
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: yjc.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Atlanta-3128-119"
+    type: trojan
+    server: 170-187-134-190.ipv4.rush.ml
+    port: 8443
+    password: "cf4295378e209e70d12c5bdd017144dfd1c772d3"
+    udp: true
+    sni: rrk.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇬🇧London-2947-120"
+    type: trojan
+    server: 18.130.72.183
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: rahnama.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇸🇬Singapore-2650-121"
+    type: trojan
+    server: 2.sg.cat77.cloud
+    port: 8443
+    password: "cd27884b-c5af-34ec-b75f-8248077818fe"
+    udp: true
+    sni: uptvs.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Dublin-3191-122"
+    type: trojan
+    server: 3.143.0.44
+    port: 22222
+    password: "telegram-id-directvpn"
+    udp: true
+    sni: shahrekhabar.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇮🇪Dublin-2531-123"
+    type: trojan
+    server: 34.240.196.39
+    port: 22222
+    password: "telegram-id-privatevpns"
+    udp: true
+    sni: irpopup.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Portland-1076-124"
+    type: trojan
+    server: 35.92.235.158
+    port: 22222
+    password: "telegram-id-directvpn"
+    udp: true
+    sni: bama.ir
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸Ashburn-2152-125"
+    type: trojan
+    server: 44.201.50.16
+    port: 22222
+    password: "telegram-id-directvpn"
+    udp: true
+    sni: rahnama.com
+    skip-cert-verify: true
+  - name: "@DeamNet_🇵🇱Warsaw-2143-126"
+    type: trojan
+    server: t2.teslacdn2.live
+    port: 443
+    password: "f23e9db3-65bf-42a6-9cea-1f95d38fd9c0"
+    udp: true
+    sni: gap.im
+    skip-cert-verify: true
+  - name: "@DeamNet_🇺🇸San Jose-1500-127"
+    type: trojan
+    server: us.disnet.gq
+    port: 443
+    password: "7c7e0edb-c45a-4c07-b66a-69b191179349"
+    udp: true
+    sni: shahrekhabar.com
+    skip-cert-verify: true
+proxy-groups:
+  - name: "MANUAL_@DeamNet"
+    type: select
+    proxies:
+      - "AUTO_@DeamNet"
+      - "@DeamNet_🇩🇪Frankfurt am Main-1279-1"
+      - "@DeamNet_🇩🇪Nuremberg-1825-2"
+      - "@DeamNet_🇩🇪Frankfurt am Main-2890-3"
+      - "@DeamNet_🇩🇪Frankfurt am Main-1670-4"
+      - "@DeamNet_🇫🇷Strasbourg-1373-5"
+      - "@DeamNet_🇫🇷Strasbourg-3324-6"
+      - "@DeamNet_🇫🇷Strasbourg-1055-7"
+      - "@DeamNet_🇩🇪Nuremberg-1871-8"
+      - "@DeamNet_🇩🇪Frankfurt am Main-3168-9"
+      - "@DeamNet_🇫🇷Strasbourg-2458-10"
+      - "@DeamNet_🇩🇪Frankfurt am Main-1753-11"
+      - "@DeamNet_🇬🇧City of London-2188-12"
+      - "@DeamNet_🇬🇧London-1863-13"
+      - "@DeamNet_🇫🇷Gravelines-1417-14"
+      - "@DeamNet_🇬🇧London-2619-15"
+      - "@DeamNet_🇩🇪Frankfurt am Main-1051-16"
+      - "@DeamNet_🇬🇧London-2590-17"
+      - "@DeamNet_🇩🇪Frankfurt am Main-2703-18"
+      - "@DeamNet_🇬🇧Coventry-2085-19"
+      - "@DeamNet_🇬🇧City of London-1194-20"
+      - "@DeamNet_🇬🇧City of London-2906-21"
+      - "@DeamNet_🇬🇧City of London-2676-22"
+      - "@DeamNet_🇬🇧City of London-1869-23"
+      - "@DeamNet_🇬🇧London-2412-24"
+      - "@DeamNet_🇬🇧City of London-2396-25"
+      - "@DeamNet_🇮🇪Dublin-1449-26"
+      - "@DeamNet_🇮🇪Dublin-2623-27"
+      - "@DeamNet_🇬🇧City of London-2888-28"
+      - "@DeamNet_🇮🇹Siziano-2292-29"
+      - "@DeamNet_🇺🇸Reston-2328-30"
+      - "@DeamNet_🇺🇸Reston-1270-31"
+      - "@DeamNet_🇺🇸Reston-1775-32"
+      - "@DeamNet_🇺🇸Reston-1573-33"
+      - "@DeamNet_🇺🇸Reston-2208-34"
+      - "@DeamNet_🇺🇸Secaucus-1204-35"
+      - "@DeamNet_🇺🇸Clifton-1672-36"
+      - "@DeamNet_🇺🇸Atlanta-1312-37"
+      - "@DeamNet_🇺🇸Atlanta-1916-38"
+      - "@DeamNet_🇺🇸Los Angeles-2445-39"
+      - "@DeamNet_🇺🇸Secaucus-2443-40"
+      - "@DeamNet_🇮🇳Hyderabad-2880-41"
+      - "@DeamNet_🇺🇸San Jose-1260-42"
+      - "@DeamNet_🇮🇳Hyderabad-1629-43"
+      - "@DeamNet_🇮🇳Hyderabad-1851-44"
+      - "@DeamNet_🇮🇳Hyderabad-1959-45"
+      - "@DeamNet_🇮🇳Hyderabad-3301-46"
+      - "@DeamNet_🇺🇸San Jose-1377-47"
+      - "@DeamNet_🇺🇸San Jose-2030-48"
+      - "@DeamNet_🇺🇸Reston-2263-49"
+      - "@DeamNet_🇸🇬Singapore-1039-50"
+      - "@DeamNet_🇺🇸Reston-1760-51"
+      - "@DeamNet_🇺🇸San Jose-2960-52"
+      - "@DeamNet_🇺🇸San Jose-1467-53"
+      - "@DeamNet_🇸🇬Singapore-2266-54"
+      - "@DeamNet_🇺🇸Santa Clara-1960-55"
+      - "@DeamNet_🇯🇵Tokyo-2638-56"
+      - "@DeamNet_🇺🇸Reston-2641-57"
+      - "@DeamNet_🇯🇵Tokyo-2206-58"
+      - "@DeamNet_🇺🇸San Jose-3038-59"
+      - "@DeamNet_🇸🇬Singapore-1020-60"
+      - "@DeamNet_🇸🇬Singapore-1060-61"
+      - "@DeamNet_🇭🇰Central-3077-62"
+      - "@DeamNet_🇸🇬Singapore-1520-63"
+      - "@DeamNet_🇯🇵Tokyo-1017-64"
+      - "@DeamNet_🇯🇵Tokyo-2543-65"
+      - "@DeamNet_🇰🇷Seoul-2059-66"
+      - "@DeamNet_🇮🇳Hyderabad-2076-67"
+      - "@DeamNet_🇸🇬Singapore-2155-68"
+      - "@DeamNet_🇸🇬Singapore-2199-69"
+      - "@DeamNet_🇯🇵Tokyo-1761-70"
+      - "@DeamNet_🇭🇰Hong Kong-1721-71"
+      - "@DeamNet_🇭🇰Hong Kong-3169-72"
+      - "@DeamNet_🇯🇵Tokyo-2852-73"
+      - "@DeamNet_🇰🇷Chuncheon-2302-74"
+      - "@DeamNet_🇨🇳Changzhou-1714-75"
+      - "@DeamNet_🇰🇷Chuncheon-1124-76"
+      - "@DeamNet_🇰🇷Chuncheon-2692-77"
+      - "@DeamNet_🇰🇷Chuncheon-1864-78"
+      - "@DeamNet_🇰🇷Chuncheon-2201-79"
+      - "@DeamNet_🇰🇷Chuncheon-2941-80"
+      - "@DeamNet_🇰🇷Chuncheon-1180-81"
+      - "@DeamNet_🇰🇷Chuncheon-1439-82"
+      - "@DeamNet_🇹🇼Taipei-1303-83"
+      - "@DeamNet_🇹🇼Taipei-1056-84"
+      - "@DeamNet_🇭🇰Cheung Sha Wan-2546-85"
+      - "@DeamNet_🇭🇰Cheung Sha Wan-1319-86"
+      - "@DeamNet_🇦🇺Sydney-1249-87"
+      - "@DeamNet_🇹🇼Taipei-2490-88"
+      - "@DeamNet_🇦🇺Sydney-2089-89"
+      - "@DeamNet_🇦🇺Sydney-1407-90"
+      - "@DeamNet_🇰🇷Chuncheon-1130-91"
+      - "@DeamNet_🇰🇷Seoul-2544-92"
+      - "@DeamNet_🇰🇷Chuncheon-2756-93"
+      - "@DeamNet_🇰🇷Chuncheon-2260-94"
+      - "@DeamNet_🇰🇷Chuncheon-2358-95"
+      - "@DeamNet_🇹🇼Taipei-3184-96"
+      - "@DeamNet_🇹🇼Taipei-2179-97"
+      - "@DeamNet_🇮🇪Dublin-1043-98"
+      - "@DeamNet_🇺🇸Santa Clara-2154-99"
+      - "@DeamNet_🇺🇸Portland-2082-100"
+      - "@DeamNet_🇮🇪Dublin-2295-101"
+      - "@DeamNet_🇫🇷Gravelines-1282-102"
+      - "@DeamNet_🇫🇷Gravelines-1623-103"
+      - "@DeamNet_🇰🇷Chuncheon-1600-104"
+      - "@DeamNet_🇰🇷Chuncheon-2021-105"
+      - "@DeamNet_🇯🇵Tokyo-2491-106"
+      - "@DeamNet_🇯🇵Tokyo-2844-107"
+      - "@DeamNet_🇯🇵Tokyo-3147-108"
+      - "@DeamNet_🇮🇳Hyderabad-2258-109"
+      - "@DeamNet_🇮🇳Hyderabad-2479-110"
+      - "@DeamNet_🇮🇳Hyderabad-1605-111"
+      - "@DeamNet_🇦🇺Sydney-3079-112"
+      - "@DeamNet_🇸🇬Singapore-1718-113"
+      - "@DeamNet_🇫🇷Paris-1594-114"
+      - "@DeamNet_🇸🇪Stockholm-1922-115"
+      - "@DeamNet_🇸🇪Stockholm-2273-116"
+      - "@DeamNet_🇫🇷Paris-1609-117"
+      - "@DeamNet_🇸🇪Stockholm-2631-118"
+      - "@DeamNet_🇺🇸Atlanta-3128-119"
+      - "@DeamNet_🇬🇧London-2947-120"
+      - "@DeamNet_🇸🇬Singapore-2650-121"
+      - "@DeamNet_🇺🇸Dublin-3191-122"
+      - "@DeamNet_🇮🇪Dublin-2531-123"
+      - "@DeamNet_🇺🇸Portland-1076-124"
+      - "@DeamNet_🇺🇸Ashburn-2152-125"
+      - "@DeamNet_🇵🇱Warsaw-2143-126"
+      - "@DeamNet_🇺🇸San Jose-1500-127"
+  - name: "AUTO_@DeamNet"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - "@DeamNet_🇩🇪Frankfurt am Main-1279-1"
+      - "@DeamNet_🇩🇪Nuremberg-1825-2"
+      - "@DeamNet_🇩🇪Frankfurt am Main-2890-3"
+      - "@DeamNet_🇩🇪Frankfurt am Main-1670-4"
+      - "@DeamNet_🇫🇷Strasbourg-1373-5"
+      - "@DeamNet_🇫🇷Strasbourg-3324-6"
+      - "@DeamNet_🇫🇷Strasbourg-1055-7"
+      - "@DeamNet_🇩🇪Nuremberg-1871-8"
+      - "@DeamNet_🇩🇪Frankfurt am Main-3168-9"
+      - "@DeamNet_🇫🇷Strasbourg-2458-10"
+      - "@DeamNet_🇩🇪Frankfurt am Main-1753-11"
+      - "@DeamNet_🇬🇧City of London-2188-12"
+      - "@DeamNet_🇬🇧London-1863-13"
+      - "@DeamNet_🇫🇷Gravelines-1417-14"
+      - "@DeamNet_🇬🇧London-2619-15"
+      - "@DeamNet_🇩🇪Frankfurt am Main-1051-16"
+      - "@DeamNet_🇬🇧London-2590-17"
+      - "@DeamNet_🇩🇪Frankfurt am Main-2703-18"
+      - "@DeamNet_🇬🇧Coventry-2085-19"
+      - "@DeamNet_🇬🇧City of London-1194-20"
+      - "@DeamNet_🇬🇧City of London-2906-21"
+      - "@DeamNet_🇬🇧City of London-2676-22"
+      - "@DeamNet_🇬🇧City of London-1869-23"
+      - "@DeamNet_🇬🇧London-2412-24"
+      - "@DeamNet_🇬🇧City of London-2396-25"
+      - "@DeamNet_🇮🇪Dublin-1449-26"
+      - "@DeamNet_🇮🇪Dublin-2623-27"
+      - "@DeamNet_🇬🇧City of London-2888-28"
+      - "@DeamNet_🇮🇹Siziano-2292-29"
+      - "@DeamNet_🇺🇸Reston-2328-30"
+      - "@DeamNet_🇺🇸Reston-1270-31"
+      - "@DeamNet_🇺🇸Reston-1775-32"
+      - "@DeamNet_🇺🇸Reston-1573-33"
+      - "@DeamNet_🇺🇸Reston-2208-34"
+      - "@DeamNet_🇺🇸Secaucus-1204-35"
+      - "@DeamNet_🇺🇸Clifton-1672-36"
+      - "@DeamNet_🇺🇸Atlanta-1312-37"
+      - "@DeamNet_🇺🇸Atlanta-1916-38"
+      - "@DeamNet_🇺🇸Los Angeles-2445-39"
+      - "@DeamNet_🇺🇸Secaucus-2443-40"
+      - "@DeamNet_🇮🇳Hyderabad-2880-41"
+      - "@DeamNet_🇺🇸San Jose-1260-42"
+      - "@DeamNet_🇮🇳Hyderabad-1629-43"
+      - "@DeamNet_🇮🇳Hyderabad-1851-44"
+      - "@DeamNet_🇮🇳Hyderabad-1959-45"
+      - "@DeamNet_🇮🇳Hyderabad-3301-46"
+      - "@DeamNet_🇺🇸San Jose-1377-47"
+      - "@DeamNet_🇺🇸San Jose-2030-48"
+      - "@DeamNet_🇺🇸Reston-2263-49"
+      - "@DeamNet_🇸🇬Singapore-1039-50"
+      - "@DeamNet_🇺🇸Reston-1760-51"
+      - "@DeamNet_🇺🇸San Jose-2960-52"
+      - "@DeamNet_🇺🇸San Jose-1467-53"
+      - "@DeamNet_🇸🇬Singapore-2266-54"
+      - "@DeamNet_🇺🇸Santa Clara-1960-55"
+      - "@DeamNet_🇯🇵Tokyo-2638-56"
+      - "@DeamNet_🇺🇸Reston-2641-57"
+      - "@DeamNet_🇯🇵Tokyo-2206-58"
+      - "@DeamNet_🇺🇸San Jose-3038-59"
+      - "@DeamNet_🇸🇬Singapore-1020-60"
+      - "@DeamNet_🇸🇬Singapore-1060-61"
+      - "@DeamNet_🇭🇰Central-3077-62"
+      - "@DeamNet_🇸🇬Singapore-1520-63"
+      - "@DeamNet_🇯🇵Tokyo-1017-64"
+      - "@DeamNet_🇯🇵Tokyo-2543-65"
+      - "@DeamNet_🇰🇷Seoul-2059-66"
+      - "@DeamNet_🇮🇳Hyderabad-2076-67"
+      - "@DeamNet_🇸🇬Singapore-2155-68"
+      - "@DeamNet_🇸🇬Singapore-2199-69"
+      - "@DeamNet_🇯🇵Tokyo-1761-70"
+      - "@DeamNet_🇭🇰Hong Kong-1721-71"
+      - "@DeamNet_🇭🇰Hong Kong-3169-72"
+      - "@DeamNet_🇯🇵Tokyo-2852-73"
+      - "@DeamNet_🇰🇷Chuncheon-2302-74"
+      - "@DeamNet_🇨🇳Changzhou-1714-75"
+      - "@DeamNet_🇰🇷Chuncheon-1124-76"
+      - "@DeamNet_🇰🇷Chuncheon-2692-77"
+      - "@DeamNet_🇰🇷Chuncheon-1864-78"
+      - "@DeamNet_🇰🇷Chuncheon-2201-79"
+      - "@DeamNet_🇰🇷Chuncheon-2941-80"
+      - "@DeamNet_🇰🇷Chuncheon-1180-81"
+      - "@DeamNet_🇰🇷Chuncheon-1439-82"
+      - "@DeamNet_🇹🇼Taipei-1303-83"
+      - "@DeamNet_🇹🇼Taipei-1056-84"
+      - "@DeamNet_🇭🇰Cheung Sha Wan-2546-85"
+      - "@DeamNet_🇭🇰Cheung Sha Wan-1319-86"
+      - "@DeamNet_🇦🇺Sydney-1249-87"
+      - "@DeamNet_🇹🇼Taipei-2490-88"
+      - "@DeamNet_🇦🇺Sydney-2089-89"
+      - "@DeamNet_🇦🇺Sydney-1407-90"
+      - "@DeamNet_🇰🇷Chuncheon-1130-91"
+      - "@DeamNet_🇰🇷Seoul-2544-92"
+      - "@DeamNet_🇰🇷Chuncheon-2756-93"
+      - "@DeamNet_🇰🇷Chuncheon-2260-94"
+      - "@DeamNet_🇰🇷Chuncheon-2358-95"
+      - "@DeamNet_🇹🇼Taipei-3184-96"
+      - "@DeamNet_🇹🇼Taipei-2179-97"
+      - "@DeamNet_🇮🇪Dublin-1043-98"
+      - "@DeamNet_🇺🇸Santa Clara-2154-99"
+      - "@DeamNet_🇺🇸Portland-2082-100"
+      - "@DeamNet_🇮🇪Dublin-2295-101"
+      - "@DeamNet_🇫🇷Gravelines-1282-102"
+      - "@DeamNet_🇫🇷Gravelines-1623-103"
+      - "@DeamNet_🇰🇷Chuncheon-1600-104"
+      - "@DeamNet_🇰🇷Chuncheon-2021-105"
+      - "@DeamNet_🇯🇵Tokyo-2491-106"
+      - "@DeamNet_🇯🇵Tokyo-2844-107"
+      - "@DeamNet_🇯🇵Tokyo-3147-108"
+      - "@DeamNet_🇮🇳Hyderabad-2258-109"
+      - "@DeamNet_🇮🇳Hyderabad-2479-110"
+      - "@DeamNet_🇮🇳Hyderabad-1605-111"
+      - "@DeamNet_🇦🇺Sydney-3079-112"
+      - "@DeamNet_🇸🇬Singapore-1718-113"
+      - "@DeamNet_🇫🇷Paris-1594-114"
+      - "@DeamNet_🇸🇪Stockholm-1922-115"
+      - "@DeamNet_🇸🇪Stockholm-2273-116"
+      - "@DeamNet_🇫🇷Paris-1609-117"
+      - "@DeamNet_🇸🇪Stockholm-2631-118"
+      - "@DeamNet_🇺🇸Atlanta-3128-119"
+      - "@DeamNet_🇬🇧London-2947-120"
+      - "@DeamNet_🇸🇬Singapore-2650-121"
+      - "@DeamNet_🇺🇸Dublin-3191-122"
+      - "@DeamNet_🇮🇪Dublin-2531-123"
+      - "@DeamNet_🇺🇸Portland-1076-124"
+      - "@DeamNet_🇺🇸Ashburn-2152-125"
+      - "@DeamNet_🇵🇱Warsaw-2143-126"
+      - "@DeamNet_🇺🇸San Jose-1500-127"
+rules:
+ - MATCH,MANUAL_@DeamNet,AUTO_@DeamNet
