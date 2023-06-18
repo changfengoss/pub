@@ -1,0 +1,746 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxies:
+  - {name: "@DeamNet_-2238", server: 149.50.75.76, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1017", server: 149.50.66.80, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1065", server: 149.50.83.120, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1816", server: au3.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2298", server: au.free.yangon.club, port: 443, type: vmess, uuid: 491ad8ed-6d09-4453-de90-51f0373c809c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2348", server: 149.50.66.127, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2350", server: 149.50.66.81, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2404", server: 149.50.66.99, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2418", server: au1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2770", server: 149.50.66.75, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2829", server: 149.50.83.63, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3219", server: 149.50.66.70, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3487", server: 149.50.83.50, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3507", server: 149.50.66.74, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3561", server: au.free.yangon.club, port: 443, type: vmess, uuid: 491ad8ed-6d09-4453-de90-51f0373c809c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4323", server: 149.50.83.66, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4810", server: 149.50.83.49, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4943", server: 149.50.83.40, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5026", server: 149.50.83.43, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5054", server: 149.50.83.60, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5057", server: 149.50.83.42, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5153", server: 149.50.66.124, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1006", server: official.taipeicitygovernment.kiev.ua, port: 8443, type: trojan, password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f, sni: up.video-learn.net, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1212", server: zf.heigouyunzf.xyz, port: 38806, type: trojan, password: e958b47d-3510-445a-99cb-dc98d227e29e, sni: entekhab.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1823", server: zf.heigouyunzf.xyz, port: 38801, type: trojan, password: e958b47d-3510-445a-99cb-dc98d227e29e, sni: ads.rade.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-2331", server: zf.heigouyunzf.xyz, port: 38803, type: trojan, password: e958b47d-3510-445a-99cb-dc98d227e29e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-2677", server: zf.heigouyunzf.xyz, port: 38805, type: trojan, password: e958b47d-3510-445a-99cb-dc98d227e29e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-3837", server: official.taipeicitygovernment.kiev.ua, port: 8443, type: trojan, password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f, sni: click.baburnadir.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-3868", server: official.taipeicitygovernment.kiev.ua, port: 8443, type: trojan, password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-1325", server: de2.nigirocloud.com, port: 4003, type: trojan, password: PlF471nxneY0YevI, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-1802", server: 217.79.184.22, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: mashreghnews.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-3568", server: 217.79.184.76, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: ads.rade.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡©ðŸ‡ªFrankfurt am Main-1651", server: de1.nigirocloud.com, port: 4003, type: trojan, password: PlF471nxneY0YevI, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡©ðŸ‡ªFrankfurt am Main-4159", server: de3.nigirocloud.com, port: 4003, type: trojan, password: PlF471nxneY0YevI, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡©ðŸ‡ªHersbruck-3614", server: 84.252.121.218, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: nfetch.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-1908", server: 149.50.92.74, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-2135", server: ee1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-3068", server: 149.50.92.75, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-5094", server: 149.50.92.76, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-2920", server: 146.19.230.241, port: 443, type: trojan, password: xxoo, sni: ad.utop.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-3606", server: 146.19.230.241, port: 443, type: trojan, password: xxoo, sni: match-cdn.varzesh3.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-4073", server: 146.19.230.241, port: 443, type: trojan, password: xxoo, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-4428", server: 146.19.230.241, port: 443, type: trojan, password: xxoo, sni: metrix.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-1115", server: 149.50.77.129, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, sni: , skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-1162", server: 149.50.77.108, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-1711", server: 149.50.77.87, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-2087", server: uk1.nigirocloud.com, port: 4003, type: trojan, password: PlF471nxneY0YevI, sni: p30rank.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-2266", server: uk1.barbecuepie.com, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-2373", server: 149.50.77.97, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-2683", server: 149.50.77.102, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-3569", server: uk1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-3695", server: uk1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, sni: magnetadservices.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-4131", server: 149.50.77.95, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-4389", server: 149.50.77.109, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-4560", server: 149.50.77.125, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-4784", server: uk1.barbecuepie.com, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, sni: s2.mediaad.org, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¬ðŸ‡§London-5197", server: 149.50.77.90, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Central-3161", server: 194.156.99.39, port: 443, type: trojan, password: xxoo, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Central-5259", server: hgchk.457843.xyz, port: 9998, type: trojan, password: 88fa7209-5ce8-4fc4-a379-c02b546cf3f2, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1010", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: e015d739-1656-4e9a-b0cc-5d8f11b0db5b, sni: dl2.soft98.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1267", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: 33114904-dfa7-4267-9996-2c5bb47b7b50, sni: app.clickyab.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1280", server: hk1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1323", server: 16.163.29.222, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1420", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: ada7768c-df91-4d75-8425-92a46e6db312, sni: push.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2231", server: hk3.kuimanei.xyz, port: 10021, type: trojan, password: ccd818ea-da5d-48e8-b1c4-c295d4a1ab4d, sni: img5.downloadha.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2376", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: 3e7ad819-03dd-46e1-8292-116fd2cea1c2, sni: magnetadservices.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2455", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: a7d5f659-6ad2-4288-b63a-3d42bdf5b122, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2463", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: b31eb45e-7f95-465f-8229-716058f6dc49, sni: tala.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2605", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: bc2a1eb1-a706-4ee5-95a6-732a6c324142, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2676", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: 5f9a5d8c-a57b-4da6-baff-490fe4cf8d60, sni: newspaper-cdn.varzesh3.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2821", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: 4658738d-c3f1-4ebf-ad7a-ee603e3f9690, sni: adplaces.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2913", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: 6cc96992-cfab-48ca-9e16-963c4a0aa585, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3256", server: sky998dmit3.xyz, port: 443, type: trojan, password: RRy34GGwsPt47SuC, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3643", server: hk1.kuimanei.xyz, port: 10021, type: trojan, password: ccd818ea-da5d-48e8-b1c4-c295d4a1ab4d, sni: static.jaaar.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3651", server: sky998dmit3.xyz, port: 443, type: trojan, password: RRy34GGwsPt47SuC, sni: kaprila.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3790", server: awshk5-tg-data.amazonwebservicess.com, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, sni: analytics.hostiran.net, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4128", server: awshk5-tg-data.amazonwebservicess.com, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4239", server: 154.3.32.164, port: 443, type: trojan, password: RRy34GGwsPt47SuC, sni: ads.rzb.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4315", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: fe455c1d-33ab-439d-acdb-449bba167fb1, sni: c.clickyab.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4845", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: fe455c1d-33ab-439d-acdb-449bba167fb1, sni: zarpop.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-5253", server: hk5.cnamazon.sbs, port: 443, type: trojan, password: 606ddeaa-34c2-4fca-83d1-6c63c7ef419f, sni: timecity.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡­ðŸ‡°Tsuen Wan-3905", server: 38.150.13.140, port: 57063, type: trojan, password: Hu4CFM0wJ3, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡®ðŸ‡³Hyderabad-1737", server: 152.70.74.66, port: 443, type: trojan, password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡®ðŸ‡¹Milan-2741", server: 18.102.72.200, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µChiyoda-4030", server: trs22.bolab.net, port: 443, type: trojan, password: 7a73f1dc97a70905870c0c0484b12145, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µIshikari-2704", server: trs19.bolab.net, port: 443, type: trojan, password: 7a73f1dc97a70905870c0c0484b12145, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µIshikari-3292", server: trs19.bolab.net, port: 443, type: trojan, password: 7a73f1dc97a70905870c0c0484b12145, sni: irjo.ga, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µNagawa-3649", server: trs21.bolab.net, port: 443, type: trojan, password: 7a73f1dc97a70905870c0c0484b12145, sni: weclick.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-1381", server: w2.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 443, type: trojan, password: 4b526505-3de3-4cb4-8f99-70b65adea09f, sni: adtube.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-2128", server: 149.50.70.72, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-2250", server: jp3.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3467", server: 149.50.70.87, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3578", server: 149.50.70.107, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3688", server: 149.50.70.71, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3696", server: 149.50.70.76, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-4109", server: 149.50.70.83, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1045", server: jp4.cnamazon.sbs, port: 443, type: trojan, password: a5117e42-e7e2-4de1-aea8-c41e2b3bc545, sni: dserver.adad.ir;, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1062", server: pqawsjp1.gsjc.cfd, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: aparat.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1330", server: jp5.cnamazon.sbs, port: 443, type: trojan, password: 3e7ad819-03dd-46e1-8292-116fd2cea1c2, sni: stats.g.doubleclick.net, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1346", server: us1.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 443, type: trojan, password: 4b526505-3de3-4cb4-8f99-70b65adea09f, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1439", server: jp5.cnamazon.sbs, port: 443, type: trojan, password: b31eb45e-7f95-465f-8229-716058f6dc49, sni: media.mehrnews.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1449", server: 149.50.71.164, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1507", server: 149.50.71.124, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1609", server: jp.stablize.top, port: 443, type: trojan, password: 40297165-0545-4f8f-abc4-3ee25e6cfb87, sni: te1.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1696", server: awsjp10-tg-data.amazonwebservicess.com, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, sni: media.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1829", server: jp.stablize.top, port: 443, type: trojan, password: 40297165-0545-4f8f-abc4-3ee25e6cfb87, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1977", server: jp4.cnamazon.sbs, port: 443, type: trojan, password: 3e7ad819-03dd-46e1-8292-116fd2cea1c2, sni: adsima.net, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1993", server: 43.206.152.124, port: 443, type: trojan, password: 794d739c-89a0-444c-b2e7-acce12af3042, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1995", server: jp4.cnamazon.sbs, port: 443, type: trojan, password: 5f9a5d8c-a57b-4da6-baff-490fe4cf8d60, sni: yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2043", server: 149.50.71.117, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2075", server: 149.50.71.114, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2174", server: pqawsjp2.gsjc.cfd, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: c3.gostats.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2188", server: ovotw.ovogreat.com, port: 443, type: trojan, password: 749a1003-2dd6-4ea5-b964-2382b0ae99f7, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2204", server: jp5.cnamazon.sbs, port: 443, type: trojan, password: a7d5f659-6ad2-4288-b63a-3d42bdf5b122, sni: ads2.tweetna.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2485", server: awsjp18-data.amazon-azure.com, port: 443, type: trojan, password: 794d739c-89a0-444c-b2e7-acce12af3042, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2545", server: 149.50.71.155, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3323", server: awsjp14-data.amazon-azure.com, port: 443, type: trojan, password: 794d739c-89a0-444c-b2e7-acce12af3042, sni: filmnet.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3387", server: kr.stablize.top, port: 443, type: trojan, password: c8ad75e9-b071-446e-b2e3-ea93b8dd0324, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3426", server: pqawsjp3.gsjc.cfd, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: irancell.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3453", server: awsjp14-data.amazon-azure.com, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3519", server: ap.stablize.top, port: 443, type: trojan, password: 2b2d6a27-6e72-4090-bb53-26f45558a0bc, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3599", server: awsjp9-tg-data.amazonwebservicess.com, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3652", server: 43.206.152.124, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, sni: iran-tejarat.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3704", server: jp4.cnamazon.sbs, port: 443, type: trojan, password: fe455c1d-33ab-439d-acdb-449bba167fb1, sni: mostatil.cdn.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3733", server: jp4.cnamazon.sbs, port: 443, type: trojan, password: bc2a1eb1-a706-4ee5-95a6-732a6c324142, sni: divar.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3767", server: jp5.cnamazon.sbs, port: 443, type: trojan, password: 606ddeaa-34c2-4fca-83d1-6c63c7ef419f, sni: cdn.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4077", server: jp5.cnamazon.sbs, port: 443, type: trojan, password: 5f9a5d8c-a57b-4da6-baff-490fe4cf8d60, sni: fararu.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4092", server: jp4.cnamazon.sbs, port: 443, type: trojan, password: a7d5f659-6ad2-4288-b63a-3d42bdf5b122, sni: ad.cafebazaar.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4111", server: fschk.fscloud123456789.com, port: 443, type: trojan, password: f428337f-eb21-4aa1-8eb3-f817999b4086, sni: blog.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4113", server: jp5.cnamazon.sbs, port: 443, type: trojan, password: a7d5f659-6ad2-4288-b63a-3d42bdf5b122, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4393", server: pqawsjp4.gsjc.cfd, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: cdn.hostdl.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4628", server: jp4.cnamazon.sbs, port: 443, type: trojan, password: 606ddeaa-34c2-4fca-83d1-6c63c7ef419f, sni: persianstat.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4977", server: ap.stablize.top, port: 443, type: trojan, password: 1e8db890-68da-4dff-8a16-ded8fabcb3c3, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5102", server: jp4.cnamazon.sbs, port: 443, type: trojan, password: 6cc96992-cfab-48ca-9e16-963c4a0aa585, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5146", server: awsjp18-data.amazon-azure.com, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, sni: apm.bama.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5160", server: jp5.cnamazon.sbs, port: 443, type: trojan, password: a5117e42-e7e2-4de1-aea8-c41e2b3bc545, sni: cloudirs.cf, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5179", server: awsjp18-data.amazon-azure.com, port: 443, type: trojan, password: 794d739c-89a0-444c-b2e7-acce12af3042, sni: newspaper-cdn.varzesh3.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5211", server: jp2.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡°ðŸ‡·Seoul-1775", server: jieyucv.top, port: 22727, type: vmess, uuid: 675e1432-6a1e-45b7-a591-2f06cc265b1a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡°ðŸ‡·Seoul-2196", server: jieyucv.top, port: 22727, type: vmess, uuid: 675e1432-6a1e-45b7-a591-2f06cc265b1a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡°ðŸ‡·Seoul-3425", server: jieyucv.top, port: 22727, type: vmess, uuid: 675e1432-6a1e-45b7-a591-2f06cc265b1a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1783", server: 149.50.75.62, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1813", server: 149.50.75.66, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1915", server: 149.50.89.78, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-2192", server: 149.50.75.81, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-2245", server: 149.50.75.89, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3269", server: 149.50.75.100, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3544", server: 149.50.75.197, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, sni: rajanews.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3597", server: nl2.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3629", server: nl1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3987", server: nl3.barbecuepie.com, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4031", server: nl3.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4450", server: 149.50.75.105, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4583", server: 149.50.75.90, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4675", server: 149.50.75.197, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4907", server: 149.50.75.57, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4973", server: 149.50.89.108, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4991", server: 149.50.75.104, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-5021", server: 149.50.89.108, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, sni: time.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-5203", server: nl3.nigirocloud.com, port: 4003, type: trojan, password: PlF471nxneY0YevI, sni: persianblog.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1134", server: 13.215.159.193, port: 443, type: trojan, password: 794d739c-89a0-444c-b2e7-acce12af3042, sni: static.lenz.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1402", server: sg1.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 12025, type: trojan, password: 4b526505-3de3-4cb4-8f99-70b65adea09f, sni: rfetch.yektanet.net, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1850", server: sg.stablize.top, port: 443, type: trojan, password: 5b51e0af-08af-4208-b834-6d6ac5721837, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1870", server: 13.215.194.103, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1894", server: awssg18-data.amazon-azure.com, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, sni: jamaran.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1898", server: sg2.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 8443, type: trojan, password: 47d8b086-6c2c-4ab4-8334-1d7ec08aa198, sni: popbox.skinak.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2015", server: sg1.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 12025, type: trojan, password: 47d8b086-6c2c-4ab4-8334-1d7ec08aa198, sni: defapress.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2034", server: awssg20-data.amazon-azure.com, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2139", server: awssg20-data.amazon-azure.com, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, sni: c.clickyab.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2205", server: awssg18-data.amazon-azure.com, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2626", server: 13.215.252.181, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2788", server: 13.215.194.103, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, sni: media.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3510", server: sg1.downloadvip.cfd, port: 443, type: trojan, password: db2d1b78-6038-4c0c-871b-0a08dc9a08d7, sni: wikiforosh.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3554", server: awssg18-data.amazon-azure.com, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3907", server: awssg17-data.amazon-azure.com, port: 443, type: trojan, password: 794d739c-89a0-444c-b2e7-acce12af3042, sni: up.video-learn.net, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4037", server: ap.stablize.top, port: 443, type: trojan, password: 4d23cf0e-5ceb-43e7-90d3-63982bfa6940, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4510", server: sg5.cnamazon.sbs, port: 443, type: trojan, password: 5f9a5d8c-a57b-4da6-baff-490fe4cf8d60, sni: adtube.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4598", server: hk2.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 12025, type: trojan, password: 4b526505-3de3-4cb4-8f99-70b65adea09f, sni: ad.nowaroos.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-5027", server: 13.215.194.103, port: 443, type: trojan, password: 4aeda200-44c9-4168-8f2a-a00a72176d35, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-5111", server: 13.215.200.63, port: 443, type: trojan, password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¹ðŸ‡¼Chang-hua-2784", server: tw1.kuimanei.xyz, port: 10021, type: trojan, password: ccd818ea-da5d-48e8-b1c4-c295d4a1ab4d, sni: media.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¹ðŸ‡¼New Taipei-1916", server: pq-hinet2.gsjc.cfd, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: mostatil.cdn.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¹ðŸ‡¼New Taipei-2202", server: pq-hinet.gsjc.cfd, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: mesearch.xyz, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡¹ðŸ‡¼Taipei-2559", server: hnm.xiaohouzi.club, port: 23330, type: trojan, password: c32c56fb-64d9-33c4-b42a-af81b7a33fe7, sni: defapress.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-1830", server: 170-187-134-190.ipv4.rush.ml, port: 8443, type: trojan, password: cf4295378e209e70d12c5bdd017144dfd1c772d3, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-2295", server: 170.187.134.190, port: 8443, type: trojan, password: cf4295378e209e70d12c5bdd017144dfd1c772d3, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-2326", server: 170.187.134.190, port: 8443, type: trojan, password: cf4295378e209e70d12c5bdd017144dfd1c772d3, sni: static.varzesh3.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-3645", server: us.blazeppn.info, port: 443, type: trojan, password: xxoo, sni: native.yektanet.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-4201", server: us.blazeppn.info, port: 443, type: trojan, password: xxoo, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-5145", server: us.blazeppn.info, port: 443, type: trojan, password: xxoo, sni: js.foxpush.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-5266", server: 138.197.5.103, port: 443, type: trojan, password: xxoo, sni: dserver.adad.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Glendora-1938", server: 74.217.179.36, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: blog.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Hillsboro-1076", server: ust-2.opensvr.net, port: 443, type: trojan, password: opentunnel.net-nicesmell, sni: tnews.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1339", server: 141.193.68.93, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: r.hitplus.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1460", server: 148.59.74.52, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: biz-cdn.varzesh3.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1760", server: 148.59.74.52, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, sni: nfetch.yektanet.net, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1951", server: 141.193.68.19, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: netbina.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-3659", server: 141.193.68.19, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1172", server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, sni: iranjo.cf, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1370", server: us2.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1480", server: 149.50.69.127, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1494", server: 149.50.68.125, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1561", server: us2.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, sni: persianblog.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1649", server: 149.50.69.78, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1684", server: 192.9.130.66, port: 443, type: trojan, password: 7c7e0edb-c45a-4c07-b66a-69b191179349, sni: androidads.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1953", server: 149.50.68.87, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2098", server: 149.50.69.77, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2108", server: 149.50.68.120, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2190", server: 149.50.68.125, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, sni: loader.tapsell.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2380", server: us.disnet.gq, port: 443, type: trojan, password: 7c7e0edb-c45a-4c07-b66a-69b191179349, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2578", server: 149.50.67.122, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2781", server: 149.50.69.80, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2875", server: 149.50.67.114, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2897", server: 149.50.69.87, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3419", server: 149.50.68.107, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3515", server: 192.9.130.66, port: 443, type: trojan, password: 7c7e0edb-c45a-4c07-b66a-69b191179349, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3552", server: us1.nigirocloud.com, port: 4003, type: trojan, password: PlF471nxneY0YevI, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3760", server: 149.50.68.96, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3806", server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3841", server: 149.50.68.102, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4038", server: 149.50.69.131, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4153", server: 149.50.69.109, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4431", server: 149.50.67.111, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4494", server: 149.50.68.90, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4703", server: us3.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-5125", server: 149.50.67.117, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1550", server: 163.123.192.58, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1746", server: 163.123.192.57, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1819", server: 163.123.192.60, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, sni: r.hitplus.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1955", server: 163.123.192.57, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: telewebion.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-2672", server: 163.123.192.60, port: 443, type: trojan, password: 39116b0d-e810-402b-b194-8084bebb6da7, sni: toppopup.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3008", server: 163.123.192.59, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3634", server: 163.123.192.60, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3975", server: 163.123.192.57, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, sni: adziran.gq, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-4107", server: 163.123.192.58, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, sni: adserver.adad.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-5163", server: 163.123.192.59, port: 443, type: trojan, password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca, sni: metrix.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-1580", server: 138.124.183.226, port: 443, type: trojan, password: xxoo, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-1961", server: 138.124.183.226, port: 443, type: trojan, password: xxoo, sni: popupplus.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-3288", server: 138.124.183.226, port: 443, type: trojan, password: xxoo, sni: bmi.ir, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-3897", server: 138.124.183.226, port: 443, type: trojan, password: xxoo, sni: tamasha.com, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-4740", server: 138.124.183.226, port: 443, type: trojan, password: xxoo, sni: nfetch.yektanet.net, skip-cert-verify: true, udp: true}
+  - {name: "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-5168", server: 138.124.183.216, port: 443, type: trojan, password: xxoo, skip-cert-verify: true, udp: true}
+proxy-groups:
+  - name: "@DeamNet_SELECTOR"
+    type: select
+    proxies:
+      - "@DeamNet_AUTOPING"
+      - "@DeamNet_-2238"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1017"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1065"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1816"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2298"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2348"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2350"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2404"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2418"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2770"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2829"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3219"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3487"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3507"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3561"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4323"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4810"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4943"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5026"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5054"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5057"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5153"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1006"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1212"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1823"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-2331"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-2677"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-3837"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-3868"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-1325"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-1802"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-3568"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªFrankfurt am Main-1651"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªFrankfurt am Main-4159"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªHersbruck-3614"
+      - "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-1908"
+      - "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-2135"
+      - "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-3068"
+      - "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-5094"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-2920"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-3606"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-4073"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-4428"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-1115"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-1162"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-1711"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-2087"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-2266"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-2373"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-2683"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-3569"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-3695"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-4131"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-4389"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-4560"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-4784"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-5197"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Central-3161"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Central-5259"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1010"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1267"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1280"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1323"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1420"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2231"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2376"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2455"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2463"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2605"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2676"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2821"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2913"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3256"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3643"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3651"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3790"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4128"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4239"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4315"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4845"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-5253"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Tsuen Wan-3905"
+      - "@DeamNet_ðŸ‡®ðŸ‡³Hyderabad-1737"
+      - "@DeamNet_ðŸ‡®ðŸ‡¹Milan-2741"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µChiyoda-4030"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µIshikari-2704"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µIshikari-3292"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µNagawa-3649"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-1381"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-2128"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-2250"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3467"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3578"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3688"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3696"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-4109"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1045"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1062"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1330"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1346"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1439"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1449"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1507"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1609"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1696"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1829"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1977"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1993"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1995"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2043"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2075"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2174"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2188"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2204"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2485"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2545"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3323"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3387"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3426"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3453"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3519"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3599"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3652"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3704"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3733"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3767"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4077"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4092"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4111"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4113"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4393"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4628"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4977"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5102"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5146"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5160"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5179"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5211"
+      - "@DeamNet_ðŸ‡°ðŸ‡·Seoul-1775"
+      - "@DeamNet_ðŸ‡°ðŸ‡·Seoul-2196"
+      - "@DeamNet_ðŸ‡°ðŸ‡·Seoul-3425"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1783"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1813"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1915"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-2192"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-2245"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3269"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3544"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3597"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3629"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3987"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4031"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4450"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4583"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4675"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4907"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4973"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4991"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-5021"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-5203"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1134"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1402"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1850"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1870"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1894"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1898"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2015"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2034"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2139"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2205"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2626"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2788"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3510"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3554"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3907"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4037"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4510"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4598"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-5027"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-5111"
+      - "@DeamNet_ðŸ‡¹ðŸ‡¼Chang-hua-2784"
+      - "@DeamNet_ðŸ‡¹ðŸ‡¼New Taipei-1916"
+      - "@DeamNet_ðŸ‡¹ðŸ‡¼New Taipei-2202"
+      - "@DeamNet_ðŸ‡¹ðŸ‡¼Taipei-2559"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-1830"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-2295"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-2326"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-3645"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-4201"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-5145"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-5266"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Glendora-1938"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Hillsboro-1076"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1339"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1460"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1760"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1951"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-3659"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1172"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1370"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1480"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1494"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1561"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1649"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1684"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1953"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2098"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2108"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2190"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2380"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2578"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2781"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2875"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2897"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3419"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3515"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3552"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3760"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3806"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3841"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4038"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4153"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4431"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4494"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4703"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-5125"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1550"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1746"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1819"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1955"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-2672"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3008"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3634"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3975"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-4107"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-5163"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-1580"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-1961"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-3288"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-3897"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-4740"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-5168"
+  - name: "@DeamNet_AUTOPING"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - "@DeamNet_-2238"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1017"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1065"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-1816"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2298"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2348"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2350"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2404"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2418"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2770"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-2829"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3219"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3487"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3507"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-3561"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4323"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4810"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-4943"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5026"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5054"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5057"
+      - "@DeamNet_ðŸ‡¦ðŸ‡ºSydney-5153"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1006"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1212"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-1823"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-2331"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-2677"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-3837"
+      - "@DeamNet_ðŸ‡¨ðŸ‡³Chongqing-3868"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-1325"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-1802"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªDÃ¼sseldorf-3568"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªFrankfurt am Main-1651"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªFrankfurt am Main-4159"
+      - "@DeamNet_ðŸ‡©ðŸ‡ªHersbruck-3614"
+      - "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-1908"
+      - "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-2135"
+      - "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-3068"
+      - "@DeamNet_ðŸ‡ªðŸ‡ªTallinn-5094"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-2920"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-3606"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-4073"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§Coventry-4428"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-1115"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-1162"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-1711"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-2087"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-2266"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-2373"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-2683"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-3569"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-3695"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-4131"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-4389"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-4560"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-4784"
+      - "@DeamNet_ðŸ‡¬ðŸ‡§London-5197"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Central-3161"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Central-5259"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1010"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1267"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1280"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1323"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-1420"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2231"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2376"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2455"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2463"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2605"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2676"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2821"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-2913"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3256"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3643"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3651"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-3790"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4128"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4239"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4315"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-4845"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Hong Kong-5253"
+      - "@DeamNet_ðŸ‡­ðŸ‡°Tsuen Wan-3905"
+      - "@DeamNet_ðŸ‡®ðŸ‡³Hyderabad-1737"
+      - "@DeamNet_ðŸ‡®ðŸ‡¹Milan-2741"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µChiyoda-4030"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µIshikari-2704"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µIshikari-3292"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µNagawa-3649"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-1381"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-2128"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-2250"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3467"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3578"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3688"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-3696"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µOsaka-4109"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1045"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1062"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1330"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1346"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1439"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1449"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1507"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1609"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1696"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1829"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1977"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1993"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-1995"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2043"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2075"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2174"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2188"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2204"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2485"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-2545"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3323"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3387"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3426"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3453"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3519"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3599"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3652"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3704"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3733"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-3767"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4077"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4092"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4111"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4113"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4393"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4628"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-4977"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5102"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5146"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5160"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5179"
+      - "@DeamNet_ðŸ‡¯ðŸ‡µTokyo-5211"
+      - "@DeamNet_ðŸ‡°ðŸ‡·Seoul-1775"
+      - "@DeamNet_ðŸ‡°ðŸ‡·Seoul-2196"
+      - "@DeamNet_ðŸ‡°ðŸ‡·Seoul-3425"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1783"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1813"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-1915"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-2192"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-2245"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3269"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3544"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3597"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3629"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-3987"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4031"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4450"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4583"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4675"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4907"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4973"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-4991"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-5021"
+      - "@DeamNet_ðŸ‡³ðŸ‡±Amsterdam-5203"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1134"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1402"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1850"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1870"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1894"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-1898"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2015"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2034"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2139"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2205"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2626"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-2788"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3510"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3554"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-3907"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4037"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4510"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-4598"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-5027"
+      - "@DeamNet_ðŸ‡¸ðŸ‡¬Singapore-5111"
+      - "@DeamNet_ðŸ‡¹ðŸ‡¼Chang-hua-2784"
+      - "@DeamNet_ðŸ‡¹ðŸ‡¼New Taipei-1916"
+      - "@DeamNet_ðŸ‡¹ðŸ‡¼New Taipei-2202"
+      - "@DeamNet_ðŸ‡¹ðŸ‡¼Taipei-2559"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-1830"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-2295"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Atlanta-2326"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-3645"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-4201"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-5145"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Clifton-5266"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Glendora-1938"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Hillsboro-1076"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1339"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1460"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1760"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-1951"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Phoenix-3659"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1172"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1370"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1480"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1494"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1561"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1649"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1684"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-1953"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2098"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2108"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2190"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2380"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2578"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2781"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2875"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-2897"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3419"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3515"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3552"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3760"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3806"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-3841"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4038"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4153"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4431"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4494"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-4703"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸San Jose-5125"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1550"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1746"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1819"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-1955"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-2672"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3008"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3634"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-3975"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-4107"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Scottsdale-5163"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-1580"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-1961"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-3288"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-3897"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-4740"
+      - "@DeamNet_ðŸ‡ºðŸ‡¸Secaucus-5168"
+rules:
+ - MATCH,@DeamNet_SELECTOR
+ - MATCH,@DeamNet_AUTOPING
