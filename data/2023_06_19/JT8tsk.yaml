@@ -1,0 +1,377 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: silent
+proxies:
+  - {name: "@DeamNet_🇦🇱Tirana-1087", server: 31.171.153.178, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇦🇲Yerevan-1114", server: 146.185.248.22, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇦🇷Buenos Aires-1080", server: 190.103.176.29, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇦🇹Vienna-1037", server: 185.180.12.81, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇦🇺Sydney-1086", server: 143.244.62.106, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇦🇿Ucar-1011", server: 180.149.44.120, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇧🇦Novi Travnik-1058", server: 185.164.35.9, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇧🇩Dhaka-1016", server: 38.54.42.7, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇧🇪Brussels-1061", server: 192.71.249.108, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇧🇪Brussels-1073", server: 192.71.249.78, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇧🇪Brussels-1077", server: 192.71.249.71, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇧🇬Sofia-1066", server: 89.44.197.156, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇧🇷São Paulo-1042", server: 129.227.121.14, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇨🇦Beauharnois-1092", server: 198.245.49.22, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇨🇭Zurich-1004", server: 156.146.62.160, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
+  - {name: "@DeamNet_🇨🇭Zurich-1032", server: 84.17.53.160, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇨🇱Santiago-1028", server: 190.120.230.9, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇨🇴Bogotá-1010", server: 190.120.231.45, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇨🇷Escazu-1113", server: 138.59.16.146, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇨🇾Nicosia-1111", server: 213.169.137.221, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇩🇪Düsseldorf-1120", server: 89.163.140.153, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇩🇪Limburg an der Lahn-1064", server: 135.125.244.103, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇩🇪Saarbrücken-1098", server: 54.36.115.241, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇩🇰Ballerup Municipality-1088", server: 192.36.27.94, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇩🇰Ballerup Municipality-1089", server: 192.36.27.116, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇪🇨Quito-1008", server: 179.49.5.114, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇪🇬Cairo-1096", server: 38.54.59.99, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇪🇸Madrid-1046", server: 92.38.171.89, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇫🇮Helsinki-1044", server: 37.143.129.230, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇫🇷Paris-1030", server: 195.154.169.198, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇫🇷Paris-1095", server: 51.159.111.208, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇫🇷Vitry-sur-Seine-1025", server: 195.154.185.174, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇬🇧City of Westminster-1014", server: 77.72.5.113, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇬🇧City of Westminster-1026", server: 77.72.5.150, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇬🇧London-1001", server: 139.162.236.79, port: 8099, type: ss, cipher: aes-256-cfb, password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D, udp: true}
+  - {name: "@DeamNet_🇬🇧London-1022", server: 51.89.138.162, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: "@DeamNet_🇬🇧London-1094", server: 51.195.136.209, port: 50004, type: ss, cipher: aes-256-cfb, password: !<str> 4415934295, udp: true}
+  - {name: "@DeamNet_🇬🇷Thessaloniki-1097", server: 192.71.166.102, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇬🇹Guatemala City-1009", server: 170.80.111.5, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇬🇹Guatemala City-1035", server: 170.80.111.6, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇭🇰Central-1018", server: 203.23.128.33, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇭🇷Zagreb-1060", server: 46.183.184.61, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇭🇷Zagreb-1090", server: 46.183.184.60, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇭🇺Budapest-1036", server: 194.71.130.194, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: "@DeamNet_🇭🇺Budapest-1045", server: 5.181.77.86, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇩Jakarta-1099", server: 156.59.160.17, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇪Dublin-1040", server: 23.92.127.133, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇱Tel Aviv-1083", server: 193.182.144.183, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇱Tel Aviv-1084", server: 192.71.27.87, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇱Tel Aviv-1117", server: 193.182.144.240, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇲Douglas-1043", server: 192.71.211.161, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇲Douglas-1052", server: 37.235.55.42, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇲Douglas-1081", server: 37.235.55.21, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇳Bengaluru-1039", server: 134.209.147.198, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇸Hafnarfjordur-1103", server: 37.235.49.162, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇸Hafnarfjordur-1106", server: 37.235.49.152, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇮🇹Milan-1041", server: 5.188.226.187, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇯🇵Tokyo-1067", server: 185.172.113.58, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: "@DeamNet_🇯🇵Tokyo-1070", server: 103.75.118.27, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇰🇪Nairobi-1013", server: 62.12.116.66, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇰🇷Seoul-1019", server: 158.247.213.230, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇰🇷Seoul-1024", server: 158.247.197.228, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇰🇿Almaty-1048", server: 213.156.137.67, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇱🇹Vilnius-1069", server: 192.36.61.59, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇱🇺Luxembourg-1062", server: 92.38.163.53, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇱🇻Riga-1101", server: 192.36.41.28, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇱🇾Tripoli-1082", server: 41.208.71.4, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇲🇩Chisinau-1112", server: 192.121.87.147, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇲🇰Skopje-1021", server: 46.183.185.15, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇲🇰Skopje-1115", server: 46.183.185.37, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇲🇹Valletta-1105", server: 171.22.254.17, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇲🇽Ciudad Juárez-1119", server: 190.103.179.23, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇳🇬Lagos-1003", server: 185.255.123.90, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇳🇱Amsterdam-1017", server: 51.15.25.187, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇳🇱Amsterdam-1023", server: 51.15.27.48, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇳🇱Amsterdam-1027", server: 51.15.17.230, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇳🇱Amsterdam-1029", server: 51.15.4.103, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇳🇱Amsterdam-1093", server: 51.15.6.159, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇳🇴Oslo-1038", server: 185.90.61.153, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇵🇦Panama City-1109", server: 138.186.142.4, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇵🇪Lima-1108", server: 190.120.229.28, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇵🇭Manila-1034", server: 129.227.117.152, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇵🇱Warsaw-1005", server: 217.30.10.68, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
+  - {name: "@DeamNet_🇵🇱Warsaw-1050", server: 5.188.108.10, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇵🇷San Juan-1049", server: 185.47.255.219, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇵🇹Lisbon-1063", server: 185.113.140.22, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇷🇴Bucharest-1076", server: 194.14.217.115, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇷🇴Iasi-1075", server: 185.225.19.64, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: "@DeamNet_🇷🇸Belgrade-1107", server: 194.71.126.31, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇷🇺Moscow-1002", server: 23.90.128.82, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇸🇪Stockholm-1047", server: 121.127.46.147, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇸🇬Singapore-1033", server: 139.162.41.174, port: 8099, type: ss, cipher: aes-256-cfb, password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D, udp: true}
+  - {name: "@DeamNet_🇸🇬Singapore-1104", server: 156.59.179.9, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇸🇬Singapore-1116", server: 176.97.64.186, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇸🇬Singapore-1118", server: 139.162.5.19, port: 8099, type: ss, cipher: aes-256-cfb, password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D, udp: true}
+  - {name: "@DeamNet_🇸🇮Ljubljana-1091", server: 192.71.244.150, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇸🇰Bratislava-1056", server: 196.245.151.50, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇹🇭Samphanthawong-1110", server: 119.59.127.144, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇹🇳Tunis-1072", server: 102.219.177.35, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇹🇷Istanbul-1079", server: 103.215.218.32, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇹🇼Taipei-1006", server: 223.165.4.173, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇺🇦Kyiv-1055", server: 5.188.6.8, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇺🇸Chicago-1012", server: 74.121.191.98, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇺🇸Chicago-1053", server: 216.244.76.226, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇺🇸Dallas-1059", server: 156.146.38.163, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1015", server: 104.243.30.252, port: 246, type: ss, cipher: aes-256-cfb, password: bwhskrskr03, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1051", server: 93.179.112.70, port: 253, type: ss, cipher: aes-256-cfb, password: bwhskrskr06, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1057", server: 104.243.25.95, port: 253, type: ss, cipher: aes-256-cfb, password: bwhskrskr03, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1065", server: 144.168.58.170, port: 254, type: ss, cipher: aes-256-cfb, password: bwhskrskr05, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1068", server: 97.64.31.80, port: 247, type: ss, cipher: aes-256-cfb, password: bwhskrskr03, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1071", server: 172.96.192.100, port: 246, type: ss, cipher: aes-256-cfb, password: bwhskrskr05, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1078", server: 172.96.192.58, port: 254, type: ss, cipher: aes-256-cfb, password: bwhskrskr03, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1100", server: 2.56.178.201, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: "@DeamNet_🇺🇸Los Angeles-1102", server: 64.42.182.226, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇺🇸North Bend-1007", server: 74.121.191.170, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇺🇸Phoenix-1085", server: 184.170.241.194, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
+  - {name: "@DeamNet_🇺🇸Seattle-1074", server: 212.102.47.198, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
+  - {name: "@DeamNet_🇺🇾Montevideo-1020", server: 179.27.200.28, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇻🇳Quan Bay-1054", server: 103.163.218.2, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "@DeamNet_🇿🇦Cape Town-1031", server: 41.203.4.34, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+proxy-groups:
+  - name: SELECTOR
+    type: select
+    proxies:
+      - AUTOPING
+      - "@DeamNet_🇦🇱Tirana-1087"
+      - "@DeamNet_🇦🇲Yerevan-1114"
+      - "@DeamNet_🇦🇷Buenos Aires-1080"
+      - "@DeamNet_🇦🇹Vienna-1037"
+      - "@DeamNet_🇦🇺Sydney-1086"
+      - "@DeamNet_🇦🇿Ucar-1011"
+      - "@DeamNet_🇧🇦Novi Travnik-1058"
+      - "@DeamNet_🇧🇩Dhaka-1016"
+      - "@DeamNet_🇧🇪Brussels-1061"
+      - "@DeamNet_🇧🇪Brussels-1073"
+      - "@DeamNet_🇧🇪Brussels-1077"
+      - "@DeamNet_🇧🇬Sofia-1066"
+      - "@DeamNet_🇧🇷São Paulo-1042"
+      - "@DeamNet_🇨🇦Beauharnois-1092"
+      - "@DeamNet_🇨🇭Zurich-1004"
+      - "@DeamNet_🇨🇭Zurich-1032"
+      - "@DeamNet_🇨🇱Santiago-1028"
+      - "@DeamNet_🇨🇴Bogotá-1010"
+      - "@DeamNet_🇨🇷Escazu-1113"
+      - "@DeamNet_🇨🇾Nicosia-1111"
+      - "@DeamNet_🇩🇪Düsseldorf-1120"
+      - "@DeamNet_🇩🇪Limburg an der Lahn-1064"
+      - "@DeamNet_🇩🇪Saarbrücken-1098"
+      - "@DeamNet_🇩🇰Ballerup Municipality-1088"
+      - "@DeamNet_🇩🇰Ballerup Municipality-1089"
+      - "@DeamNet_🇪🇨Quito-1008"
+      - "@DeamNet_🇪🇬Cairo-1096"
+      - "@DeamNet_🇪🇸Madrid-1046"
+      - "@DeamNet_🇫🇮Helsinki-1044"
+      - "@DeamNet_🇫🇷Paris-1030"
+      - "@DeamNet_🇫🇷Paris-1095"
+      - "@DeamNet_🇫🇷Vitry-sur-Seine-1025"
+      - "@DeamNet_🇬🇧City of Westminster-1014"
+      - "@DeamNet_🇬🇧City of Westminster-1026"
+      - "@DeamNet_🇬🇧London-1001"
+      - "@DeamNet_🇬🇧London-1022"
+      - "@DeamNet_🇬🇧London-1094"
+      - "@DeamNet_🇬🇷Thessaloniki-1097"
+      - "@DeamNet_🇬🇹Guatemala City-1009"
+      - "@DeamNet_🇬🇹Guatemala City-1035"
+      - "@DeamNet_🇭🇰Central-1018"
+      - "@DeamNet_🇭🇷Zagreb-1060"
+      - "@DeamNet_🇭🇷Zagreb-1090"
+      - "@DeamNet_🇭🇺Budapest-1036"
+      - "@DeamNet_🇭🇺Budapest-1045"
+      - "@DeamNet_🇮🇩Jakarta-1099"
+      - "@DeamNet_🇮🇪Dublin-1040"
+      - "@DeamNet_🇮🇱Tel Aviv-1083"
+      - "@DeamNet_🇮🇱Tel Aviv-1084"
+      - "@DeamNet_🇮🇱Tel Aviv-1117"
+      - "@DeamNet_🇮🇲Douglas-1043"
+      - "@DeamNet_🇮🇲Douglas-1052"
+      - "@DeamNet_🇮🇲Douglas-1081"
+      - "@DeamNet_🇮🇳Bengaluru-1039"
+      - "@DeamNet_🇮🇸Hafnarfjordur-1103"
+      - "@DeamNet_🇮🇸Hafnarfjordur-1106"
+      - "@DeamNet_🇮🇹Milan-1041"
+      - "@DeamNet_🇯🇵Tokyo-1067"
+      - "@DeamNet_🇯🇵Tokyo-1070"
+      - "@DeamNet_🇰🇪Nairobi-1013"
+      - "@DeamNet_🇰🇷Seoul-1019"
+      - "@DeamNet_🇰🇷Seoul-1024"
+      - "@DeamNet_🇰🇿Almaty-1048"
+      - "@DeamNet_🇱🇹Vilnius-1069"
+      - "@DeamNet_🇱🇺Luxembourg-1062"
+      - "@DeamNet_🇱🇻Riga-1101"
+      - "@DeamNet_🇱🇾Tripoli-1082"
+      - "@DeamNet_🇲🇩Chisinau-1112"
+      - "@DeamNet_🇲🇰Skopje-1021"
+      - "@DeamNet_🇲🇰Skopje-1115"
+      - "@DeamNet_🇲🇹Valletta-1105"
+      - "@DeamNet_🇲🇽Ciudad Juárez-1119"
+      - "@DeamNet_🇳🇬Lagos-1003"
+      - "@DeamNet_🇳🇱Amsterdam-1017"
+      - "@DeamNet_🇳🇱Amsterdam-1023"
+      - "@DeamNet_🇳🇱Amsterdam-1027"
+      - "@DeamNet_🇳🇱Amsterdam-1029"
+      - "@DeamNet_🇳🇱Amsterdam-1093"
+      - "@DeamNet_🇳🇴Oslo-1038"
+      - "@DeamNet_🇵🇦Panama City-1109"
+      - "@DeamNet_🇵🇪Lima-1108"
+      - "@DeamNet_🇵🇭Manila-1034"
+      - "@DeamNet_🇵🇱Warsaw-1005"
+      - "@DeamNet_🇵🇱Warsaw-1050"
+      - "@DeamNet_🇵🇷San Juan-1049"
+      - "@DeamNet_🇵🇹Lisbon-1063"
+      - "@DeamNet_🇷🇴Bucharest-1076"
+      - "@DeamNet_🇷🇴Iasi-1075"
+      - "@DeamNet_🇷🇸Belgrade-1107"
+      - "@DeamNet_🇷🇺Moscow-1002"
+      - "@DeamNet_🇸🇪Stockholm-1047"
+      - "@DeamNet_🇸🇬Singapore-1033"
+      - "@DeamNet_🇸🇬Singapore-1104"
+      - "@DeamNet_🇸🇬Singapore-1116"
+      - "@DeamNet_🇸🇬Singapore-1118"
+      - "@DeamNet_🇸🇮Ljubljana-1091"
+      - "@DeamNet_🇸🇰Bratislava-1056"
+      - "@DeamNet_🇹🇭Samphanthawong-1110"
+      - "@DeamNet_🇹🇳Tunis-1072"
+      - "@DeamNet_🇹🇷Istanbul-1079"
+      - "@DeamNet_🇹🇼Taipei-1006"
+      - "@DeamNet_🇺🇦Kyiv-1055"
+      - "@DeamNet_🇺🇸Chicago-1012"
+      - "@DeamNet_🇺🇸Chicago-1053"
+      - "@DeamNet_🇺🇸Dallas-1059"
+      - "@DeamNet_🇺🇸Los Angeles-1015"
+      - "@DeamNet_🇺🇸Los Angeles-1051"
+      - "@DeamNet_🇺🇸Los Angeles-1057"
+      - "@DeamNet_🇺🇸Los Angeles-1065"
+      - "@DeamNet_🇺🇸Los Angeles-1068"
+      - "@DeamNet_🇺🇸Los Angeles-1071"
+      - "@DeamNet_🇺🇸Los Angeles-1078"
+      - "@DeamNet_🇺🇸Los Angeles-1100"
+      - "@DeamNet_🇺🇸Los Angeles-1102"
+      - "@DeamNet_🇺🇸North Bend-1007"
+      - "@DeamNet_🇺🇸Phoenix-1085"
+      - "@DeamNet_🇺🇸Seattle-1074"
+      - "@DeamNet_🇺🇾Montevideo-1020"
+      - "@DeamNet_🇻🇳Quan Bay-1054"
+      - "@DeamNet_🇿🇦Cape Town-1031"
+  - name: AUTOPING
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - "@DeamNet_🇦🇱Tirana-1087"
+      - "@DeamNet_🇦🇲Yerevan-1114"
+      - "@DeamNet_🇦🇷Buenos Aires-1080"
+      - "@DeamNet_🇦🇹Vienna-1037"
+      - "@DeamNet_🇦🇺Sydney-1086"
+      - "@DeamNet_🇦🇿Ucar-1011"
+      - "@DeamNet_🇧🇦Novi Travnik-1058"
+      - "@DeamNet_🇧🇩Dhaka-1016"
+      - "@DeamNet_🇧🇪Brussels-1061"
+      - "@DeamNet_🇧🇪Brussels-1073"
+      - "@DeamNet_🇧🇪Brussels-1077"
+      - "@DeamNet_🇧🇬Sofia-1066"
+      - "@DeamNet_🇧🇷São Paulo-1042"
+      - "@DeamNet_🇨🇦Beauharnois-1092"
+      - "@DeamNet_🇨🇭Zurich-1004"
+      - "@DeamNet_🇨🇭Zurich-1032"
+      - "@DeamNet_🇨🇱Santiago-1028"
+      - "@DeamNet_🇨🇴Bogotá-1010"
+      - "@DeamNet_🇨🇷Escazu-1113"
+      - "@DeamNet_🇨🇾Nicosia-1111"
+      - "@DeamNet_🇩🇪Düsseldorf-1120"
+      - "@DeamNet_🇩🇪Limburg an der Lahn-1064"
+      - "@DeamNet_🇩🇪Saarbrücken-1098"
+      - "@DeamNet_🇩🇰Ballerup Municipality-1088"
+      - "@DeamNet_🇩🇰Ballerup Municipality-1089"
+      - "@DeamNet_🇪🇨Quito-1008"
+      - "@DeamNet_🇪🇬Cairo-1096"
+      - "@DeamNet_🇪🇸Madrid-1046"
+      - "@DeamNet_🇫🇮Helsinki-1044"
+      - "@DeamNet_🇫🇷Paris-1030"
+      - "@DeamNet_🇫🇷Paris-1095"
+      - "@DeamNet_🇫🇷Vitry-sur-Seine-1025"
+      - "@DeamNet_🇬🇧City of Westminster-1014"
+      - "@DeamNet_🇬🇧City of Westminster-1026"
+      - "@DeamNet_🇬🇧London-1001"
+      - "@DeamNet_🇬🇧London-1022"
+      - "@DeamNet_🇬🇧London-1094"
+      - "@DeamNet_🇬🇷Thessaloniki-1097"
+      - "@DeamNet_🇬🇹Guatemala City-1009"
+      - "@DeamNet_🇬🇹Guatemala City-1035"
+      - "@DeamNet_🇭🇰Central-1018"
+      - "@DeamNet_🇭🇷Zagreb-1060"
+      - "@DeamNet_🇭🇷Zagreb-1090"
+      - "@DeamNet_🇭🇺Budapest-1036"
+      - "@DeamNet_🇭🇺Budapest-1045"
+      - "@DeamNet_🇮🇩Jakarta-1099"
+      - "@DeamNet_🇮🇪Dublin-1040"
+      - "@DeamNet_🇮🇱Tel Aviv-1083"
+      - "@DeamNet_🇮🇱Tel Aviv-1084"
+      - "@DeamNet_🇮🇱Tel Aviv-1117"
+      - "@DeamNet_🇮🇲Douglas-1043"
+      - "@DeamNet_🇮🇲Douglas-1052"
+      - "@DeamNet_🇮🇲Douglas-1081"
+      - "@DeamNet_🇮🇳Bengaluru-1039"
+      - "@DeamNet_🇮🇸Hafnarfjordur-1103"
+      - "@DeamNet_🇮🇸Hafnarfjordur-1106"
+      - "@DeamNet_🇮🇹Milan-1041"
+      - "@DeamNet_🇯🇵Tokyo-1067"
+      - "@DeamNet_🇯🇵Tokyo-1070"
+      - "@DeamNet_🇰🇪Nairobi-1013"
+      - "@DeamNet_🇰🇷Seoul-1019"
+      - "@DeamNet_🇰🇷Seoul-1024"
+      - "@DeamNet_🇰🇿Almaty-1048"
+      - "@DeamNet_🇱🇹Vilnius-1069"
+      - "@DeamNet_🇱🇺Luxembourg-1062"
+      - "@DeamNet_🇱🇻Riga-1101"
+      - "@DeamNet_🇱🇾Tripoli-1082"
+      - "@DeamNet_🇲🇩Chisinau-1112"
+      - "@DeamNet_🇲🇰Skopje-1021"
+      - "@DeamNet_🇲🇰Skopje-1115"
+      - "@DeamNet_🇲🇹Valletta-1105"
+      - "@DeamNet_🇲🇽Ciudad Juárez-1119"
+      - "@DeamNet_🇳🇬Lagos-1003"
+      - "@DeamNet_🇳🇱Amsterdam-1017"
+      - "@DeamNet_🇳🇱Amsterdam-1023"
+      - "@DeamNet_🇳🇱Amsterdam-1027"
+      - "@DeamNet_🇳🇱Amsterdam-1029"
+      - "@DeamNet_🇳🇱Amsterdam-1093"
+      - "@DeamNet_🇳🇴Oslo-1038"
+      - "@DeamNet_🇵🇦Panama City-1109"
+      - "@DeamNet_🇵🇪Lima-1108"
+      - "@DeamNet_🇵🇭Manila-1034"
+      - "@DeamNet_🇵🇱Warsaw-1005"
+      - "@DeamNet_🇵🇱Warsaw-1050"
+      - "@DeamNet_🇵🇷San Juan-1049"
+      - "@DeamNet_🇵🇹Lisbon-1063"
+      - "@DeamNet_🇷🇴Bucharest-1076"
+      - "@DeamNet_🇷🇴Iasi-1075"
+      - "@DeamNet_🇷🇸Belgrade-1107"
+      - "@DeamNet_🇷🇺Moscow-1002"
+      - "@DeamNet_🇸🇪Stockholm-1047"
+      - "@DeamNet_🇸🇬Singapore-1033"
+      - "@DeamNet_🇸🇬Singapore-1104"
+      - "@DeamNet_🇸🇬Singapore-1116"
+      - "@DeamNet_🇸🇬Singapore-1118"
+      - "@DeamNet_🇸🇮Ljubljana-1091"
+      - "@DeamNet_🇸🇰Bratislava-1056"
+      - "@DeamNet_🇹🇭Samphanthawong-1110"
+      - "@DeamNet_🇹🇳Tunis-1072"
+      - "@DeamNet_🇹🇷Istanbul-1079"
+      - "@DeamNet_🇹🇼Taipei-1006"
+      - "@DeamNet_🇺🇦Kyiv-1055"
+      - "@DeamNet_🇺🇸Chicago-1012"
+      - "@DeamNet_🇺🇸Chicago-1053"
+      - "@DeamNet_🇺🇸Dallas-1059"
+      - "@DeamNet_🇺🇸Los Angeles-1015"
+      - "@DeamNet_🇺🇸Los Angeles-1051"
+      - "@DeamNet_🇺🇸Los Angeles-1057"
+      - "@DeamNet_🇺🇸Los Angeles-1065"
+      - "@DeamNet_🇺🇸Los Angeles-1068"
+      - "@DeamNet_🇺🇸Los Angeles-1071"
+      - "@DeamNet_🇺🇸Los Angeles-1078"
+      - "@DeamNet_🇺🇸Los Angeles-1100"
+      - "@DeamNet_🇺🇸Los Angeles-1102"
+      - "@DeamNet_🇺🇸North Bend-1007"
+      - "@DeamNet_🇺🇸Phoenix-1085"
+      - "@DeamNet_🇺🇸Seattle-1074"
+      - "@DeamNet_🇺🇾Montevideo-1020"
+      - "@DeamNet_🇻🇳Quan Bay-1054"
+      - "@DeamNet_🇿🇦Cape Town-1031"
+rules:
+ - MATCH,SELECTOR,AUTOPING
