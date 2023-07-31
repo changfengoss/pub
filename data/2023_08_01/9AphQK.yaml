@@ -1,0 +1,562 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash.Meta
+# 创建时间：2023-08-01 06:07:43
+# 使用模版：ACL4SSR.ini
+# 节点数量：47
+# 节点类型：ss, vmess, ssr, trojan, http, socks5, hysteria, vless
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+####################################
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+
+proxies:
+  - {"name":"v2rayse_test_1","type":"ss","server":"198.57.27.218","port":5004,"password":"g5MeD6Ft3CWlJId","cipher":"aes-256-gcm"}
+  - {"name":"v2rayse_test_2","type":"vmess","server":"154.23.190.162","port":443,"cipher":"auto","uuid":"b9984674-f771-4e67-a198-c7e60720ba2c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
+  - {"name":"v2rayse_test_3","type":"vmess","server":"154.23.190.162","port":443,"cipher":"auto","uuid":"b9984674-f771-4e67-a198-c7e60720ba2c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
+  - {"name":"defaultName_1","type":"ssr","server":"20.239.49.44","port":59814,"password":"3df57276-03ef-45cf-bdd4-4edb6dfaa0ef","cipher":"dummy","obfs":"plain","protocol":"origin","group":"https://v2rayse.com"}
+  - {"name":"v2rayse_test_4","type":"trojan","server":"ca-trojan.bonds.id","port":443,"udp":true,"password":"bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272","skip-cert-verify":true}
+  - {"name":"defaultName_2","type":"http","server":"124.15.12.24","port":251,"username":"username","password":"password"}
+  - {"name":"defaultName_3","type":"socks5","server":"124.15.12.24","port":2312}
+  - {"name":"Hys-1.2.3.4","type":"hysteria","server":"1.2.3.4","port":12854,"sni":"wechat.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"pekopeko","up":50,"down":250}
+  - {"name":"test","type":"vless","server":"1.2.3.4","port":7777,"uuid":"abc-def-ghi-fge-zsx","tls":true,"network":"tcp"}
+  - {"name":"defaultName_4","type":"socks5","server":"1.2.3.4","port":123,"username":"username","password":"password"}
+  - {"name":"英国+v2rayfree.eu.org","type":"ss","server":"alb.jiediandajie.link","port":1425,"password":"b3e0ce5d-5c57-410e-a52d-629ef1de75b2","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"美国加利福尼亚州洛杉矶 MULTACOM数据中心","type":"vmess","server":"23.234.198.83","port":34888,"cipher":"auto","uuid":"a9abf3e7-87f4-473d-8d03-2f26ca4b3583","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"香港 v2rayfree.eu.org","type":"vmess","server":"156.245.8.235","port":443,"cipher":"auto","uuid":"6193116d-96f9-4d7a-9be5-5bb06a69af0b","alterId":64,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/path/1690595080008","headers":{"host":"www.92873889.xyz"}}}
+  - {"name":"美国 CloudFlare节点_1","type":"vmess","server":"bobbykotick.rip","port":443,"cipher":"auto","uuid":"2F094845-E2BD-EBF7-DEB7-995992436FAF","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Lille.bobbykotick.rip"}}}
+  - {"name":"欧盟 v2rayfree.eu.org","type":"vmess","server":"45.92.160.19","port":41098,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"亚太地区 v2rayfree.eu.org","type":"vmess","server":"103.184.44.202","port":443,"cipher":"auto","uuid":"62433eb1-131f-4d3c-877c-192914a2d45c","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/qwer","headers":{"host":"uxx.vtcss.top"}}}
+  - {"name":"新加坡+Choopa数据中心","type":"trojan","server":"sp1.2344599.xyz","port":47663,"udp":true,"password":"f954efd3-a638-41be-bf20-5e4748fecf77","skip-cert-verify":true}
+  - {"name":"美国 加利福尼亚州洛杉矶Sharktech数据中心","type":"vmess","server":"64.32.21.246","port":44313,"cipher":"auto","uuid":"57f93e92-ebb9-4f16-9bdc-8225d2010995","alterId":64,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  - {"name":"美国 加利福尼亚州圣何塞PEG TECH数据中心","type":"vmess","server":"192.74.243.60","port":50246,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点_2","type":"vmess","server":"speedip.eu.org","port":8080,"cipher":"auto","uuid":"44c48fbe-cfbf-40ee-b0e4-12a1cec4da69","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"ssrsub.v01.ssrsub.com"}}}
+  - {"name":"美国加利福尼亚州洛杉矶Sharktech数据中心 1","type":"vmess","server":"64.32.21.246","port":44313,"cipher":"auto","uuid":"57f93e92-ebb9-4f16-9bdc-8225d2010995","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国加利福尼亚州洛杉矶市SharkTech数据中心 2","type":"vmess","server":"107.167.29.93","port":45585,"cipher":"auto","uuid":"465dec1a-e09b-4bb6-9905-70f75d6035c8","alterId":64,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  - {"name":"美国加利福尼亚州洛杉矶MULTACOM数据中心 3","type":"vmess","server":"173.82.55.92","port":34412,"cipher":"auto","uuid":"82620a6e-dbfd-4d57-8a59-9004a4bb9e92","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"南非  4","type":"vmess","server":"156.225.67.230","port":57881,"cipher":"auto","uuid":"515bcb4d-0ba1-4cae-87cf-a047007eec54","alterId":64,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  - {"name":"美国加利福尼亚州洛杉矶SharkTech数据中心 5","type":"vmess","server":"67.21.84.216","port":47088,"cipher":"auto","uuid":"b9a305a9-1ff2-4ec1-b338-933555833baa","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国加利福尼亚州洛杉矶MULTACOM数据中心 6","type":"vmess","server":"23.234.198.86","port":34888,"cipher":"auto","uuid":"a9abf3e7-87f4-473d-8d03-2f26ca4b3583","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国加利福尼亚州圣何塞MULTACOM机房 7","type":"vmess","server":"45.199.138.138","port":44862,"cipher":"auto","uuid":"fe5f69e7-e183-439b-950b-9661ef0651f2","alterId":64,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  - {"name":"美国CloudFlare节点 8","type":"vmess","server":"cf-lt.sharecentre.online","port":80,"cipher":"auto","uuid":"5f751c6e-50b1-4797-ba8e-6ffe324a0bce","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/shirker","headers":{"host":"dp3.scproxy.top"}}}
+  - {"name":"美国CloudFlare公司CDN节点(shopify) 9","type":"vmess","server":"dongtaiwang3.com","port":443,"cipher":"auto","uuid":"6deddb7f-e557-42db-bfa0-cf40b36b27e2","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dongtaiwang.com","headers":{"host":"d.freeh1.xyz"}}}
+  - {"name":"美国加利福尼亚州洛杉矶MULTACOM数据中心 10","type":"vmess","server":"23.234.198.83","port":34888,"cipher":"auto","uuid":"a9abf3e7-87f4-473d-8d03-2f26ca4b3583","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国Amazon EC2服务器 11","type":"vmess","server":"a25.2e5bf271.win","port":80,"cipher":"auto","uuid":"62dbc003-3f16-434c-92af-e3a14377609d","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/","headers":{"host":"a25.2e5bf271.win"}}}
+  - {"name":"美国CloudFlare节点 12","type":"vmess","server":"bobbykotick.rip","port":443,"cipher":"auto","uuid":"2F094845-E2BD-EBF7-DEB7-995992436FAF","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Lille.bobbykotick.rip"}}}
+  - {"name":"美国CloudFlare节点 13","type":"vmess","server":"cf-lt.sharecentre.online","port":80,"cipher":"auto","uuid":"4a47e680-d860-4e63-9fa6-813857fb0f42","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"4a47e680","headers":{"host":"ddp2.1808.cf"}}}
+  - {"name":"美国CloudFlare节点 14","type":"vmess","server":"cf1.992688.xyz","port":8080,"cipher":"auto","uuid":"e6e14e13-359d-4f07-d60a-92533c5c025a","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/","headers":{"host":"vcus1.vpn66.eu.org"}}}
+  - {"name":"巴西圣保罗CloudFlare节点 15","type":"vmess","server":"188.114.97.96","port":8880,"cipher":"auto","uuid":"006023f6-6d17-4ec6-af24-bcc5f7c44e35","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/qwer01","headers":{"host":"ecc.vtcss.top"}}}
+  - {"name":"美国CloudFlare公司CDN节点 16","type":"vmess","server":"xjp.shabijichang.com","port":80,"cipher":"auto","uuid":"77e02fea-35f7-46f1-a5c7-c8fdcbba1421","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/","headers":{"host":"xjp.shabijichang.com"}}}
+  - {"name":"美国CloudFlare节点 17","type":"vmess","server":"198.41.218.144","port":8080,"cipher":"auto","uuid":"54d4a5e9-6441-442c-cab7-05620cbe4f7d","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/qwer01","headers":{"host":"ecc.vtcss.top"}}}
+  - {"name":"美国  18","type":"vmess","server":"mci.ircf.space","port":80,"cipher":"auto","uuid":"c88c576d-6ec8-48e9-ad0c-120a761c7eb5","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/","headers":{"host":"amstd.shabijichang.com"}}}
+  - {"name":"美国CloudFlare公司CDN节点 19","type":"vmess","server":"cfcdn5.sanfencdn.net","port":2052,"cipher":"auto","uuid":"300bf142-9833-4dfc-b9c0-0dc5d9c140e9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"jp5.sanfencdn2.com"}}}
+  - {"name":"美国CloudFlare公司CDN节点 20","type":"vmess","server":"104.31.16.46","port":2082,"cipher":"auto","uuid":"58fe1542-5290-40ad-815a-77707a81afe5","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/IOebhLMhl1CTbFHbL95myfRX2","headers":{"host":"ca5.tehme100.fun"}}}
+  - {"name":"美国CloudFlare公司CDN节点 21","type":"vmess","server":"104.24.242.157","port":2082,"cipher":"auto","uuid":"0afb8b2c-149a-49a8-e90f-d77884ac922f","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/blue","headers":{"host":"ecc.vtcss.top"}}}
+  - {"name":"丹麦  22","type":"vmess","server":"mci.saintink.eu.org","port":443,"cipher":"auto","uuid":"c226d9fa-b5a7-4f6e-9532-50137c89311d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"nl1.v2rayserv.com/vmess","headers":{"host":"4.saintink.eu.org"}}}
+  - {"name":"美国CloudFlare公司CDN节点 23","type":"vmess","server":"dbamwvb.76898102.xyz","port":2082,"cipher":"auto","uuid":"5f9c7bda-33f9-3dd0-bcf5-aca324418e31","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"dbamwvb.76898102.xyz","network":"ws","ws-opts":{"path":"/tadabfw","headers":{"host":"dbamwvb.76898102.xyz"}}}
+  - {"name":"美国加利福尼亚州洛杉矶市SharkTech数据中心 24","type":"vmess","server":"107.167.29.229","port":46321,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
+  - {"name":"日本东京阿里云 25","type":"vmess","server":"cdn.anycast.eu.org","port":80,"cipher":"auto","uuid":"4a47e680-d860-4e63-9fa6-813857fb0f42","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"4a47e680","headers":{"host":"ddp2.1808.cf"}}}
+  - {"name":"美国CloudFlare公司CDN节点 26","type":"vmess","server":"cdn.narutos.top","port":8880,"cipher":"auto","uuid":"4b5e4565-322f-4223-a891-78a84f189726","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/RpT6kZjkw45EenmTcDYWs","headers":{"host":"eu.jh.yj2022.gq"}}}
+  - {"name":"美国CloudFlare节点 27","type":"vmess","server":"cf1.992688.xyz","port":8080,"cipher":"auto","uuid":"d3ded505-f89d-4070-dafa-8288ffbabd32","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"vceu3.vpn66.eu.org"}}}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+      - 英国+v2rayfree.eu.org
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
+      - 香港 v2rayfree.eu.org
+      - 美国 CloudFlare节点_1
+      - 欧盟 v2rayfree.eu.org
+      - 亚太地区 v2rayfree.eu.org
+      - 新加坡+Choopa数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 CloudFlare节点_2
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心 1
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 2
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 3
+      - 南非  4
+      - 美国加利福尼亚州洛杉矶SharkTech数据中心 5
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 6
+      - 美国加利福尼亚州圣何塞MULTACOM机房 7
+      - 美国CloudFlare节点 8
+      - 美国CloudFlare公司CDN节点(shopify) 9
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 10
+      - 美国Amazon EC2服务器 11
+      - 美国CloudFlare节点 12
+      - 美国CloudFlare节点 13
+      - 美国CloudFlare节点 14
+      - 巴西圣保罗CloudFlare节点 15
+      - 美国CloudFlare公司CDN节点 16
+      - 美国CloudFlare节点 17
+      - 美国  18
+      - 美国CloudFlare公司CDN节点 19
+      - 美国CloudFlare公司CDN节点 20
+      - 美国CloudFlare公司CDN节点 21
+      - 丹麦  22
+      - 美国CloudFlare公司CDN节点 23
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 24
+      - 日本东京阿里云 25
+      - 美国CloudFlare公司CDN节点 26
+      - 美国CloudFlare节点 27
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+      - 英国+v2rayfree.eu.org
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
+      - 香港 v2rayfree.eu.org
+      - 美国 CloudFlare节点_1
+      - 欧盟 v2rayfree.eu.org
+      - 亚太地区 v2rayfree.eu.org
+      - 新加坡+Choopa数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 CloudFlare节点_2
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心 1
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 2
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 3
+      - 南非  4
+      - 美国加利福尼亚州洛杉矶SharkTech数据中心 5
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 6
+      - 美国加利福尼亚州圣何塞MULTACOM机房 7
+      - 美国CloudFlare节点 8
+      - 美国CloudFlare公司CDN节点(shopify) 9
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 10
+      - 美国Amazon EC2服务器 11
+      - 美国CloudFlare节点 12
+      - 美国CloudFlare节点 13
+      - 美国CloudFlare节点 14
+      - 巴西圣保罗CloudFlare节点 15
+      - 美国CloudFlare公司CDN节点 16
+      - 美国CloudFlare节点 17
+      - 美国  18
+      - 美国CloudFlare公司CDN节点 19
+      - 美国CloudFlare公司CDN节点 20
+      - 美国CloudFlare公司CDN节点 21
+      - 丹麦  22
+      - 美国CloudFlare公司CDN节点 23
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 24
+      - 日本东京阿里云 25
+      - 美国CloudFlare公司CDN节点 26
+      - 美国CloudFlare节点 27
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+      - 英国+v2rayfree.eu.org
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
+      - 香港 v2rayfree.eu.org
+      - 美国 CloudFlare节点_1
+      - 欧盟 v2rayfree.eu.org
+      - 亚太地区 v2rayfree.eu.org
+      - 新加坡+Choopa数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 CloudFlare节点_2
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心 1
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 2
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 3
+      - 南非  4
+      - 美国加利福尼亚州洛杉矶SharkTech数据中心 5
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 6
+      - 美国加利福尼亚州圣何塞MULTACOM机房 7
+      - 美国CloudFlare节点 8
+      - 美国CloudFlare公司CDN节点(shopify) 9
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 10
+      - 美国Amazon EC2服务器 11
+      - 美国CloudFlare节点 12
+      - 美国CloudFlare节点 13
+      - 美国CloudFlare节点 14
+      - 巴西圣保罗CloudFlare节点 15
+      - 美国CloudFlare公司CDN节点 16
+      - 美国CloudFlare节点 17
+      - 美国  18
+      - 美国CloudFlare公司CDN节点 19
+      - 美国CloudFlare公司CDN节点 20
+      - 美国CloudFlare公司CDN节点 21
+      - 丹麦  22
+      - 美国CloudFlare公司CDN节点 23
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 24
+      - 日本东京阿里云 25
+      - 美国CloudFlare公司CDN节点 26
+      - 美国CloudFlare节点 27
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+      - 英国+v2rayfree.eu.org
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
+      - 香港 v2rayfree.eu.org
+      - 美国 CloudFlare节点_1
+      - 欧盟 v2rayfree.eu.org
+      - 亚太地区 v2rayfree.eu.org
+      - 新加坡+Choopa数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 CloudFlare节点_2
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心 1
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 2
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 3
+      - 南非  4
+      - 美国加利福尼亚州洛杉矶SharkTech数据中心 5
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 6
+      - 美国加利福尼亚州圣何塞MULTACOM机房 7
+      - 美国CloudFlare节点 8
+      - 美国CloudFlare公司CDN节点(shopify) 9
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 10
+      - 美国Amazon EC2服务器 11
+      - 美国CloudFlare节点 12
+      - 美国CloudFlare节点 13
+      - 美国CloudFlare节点 14
+      - 巴西圣保罗CloudFlare节点 15
+      - 美国CloudFlare公司CDN节点 16
+      - 美国CloudFlare节点 17
+      - 美国  18
+      - 美国CloudFlare公司CDN节点 19
+      - 美国CloudFlare公司CDN节点 20
+      - 美国CloudFlare公司CDN节点 21
+      - 丹麦  22
+      - 美国CloudFlare公司CDN节点 23
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 24
+      - 日本东京阿里云 25
+      - 美国CloudFlare公司CDN节点 26
+      - 美国CloudFlare节点 27
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+      - 英国+v2rayfree.eu.org
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
+      - 香港 v2rayfree.eu.org
+      - 美国 CloudFlare节点_1
+      - 欧盟 v2rayfree.eu.org
+      - 亚太地区 v2rayfree.eu.org
+      - 新加坡+Choopa数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 CloudFlare节点_2
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心 1
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 2
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 3
+      - 南非  4
+      - 美国加利福尼亚州洛杉矶SharkTech数据中心 5
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 6
+      - 美国加利福尼亚州圣何塞MULTACOM机房 7
+      - 美国CloudFlare节点 8
+      - 美国CloudFlare公司CDN节点(shopify) 9
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 10
+      - 美国Amazon EC2服务器 11
+      - 美国CloudFlare节点 12
+      - 美国CloudFlare节点 13
+      - 美国CloudFlare节点 14
+      - 巴西圣保罗CloudFlare节点 15
+      - 美国CloudFlare公司CDN节点 16
+      - 美国CloudFlare节点 17
+      - 美国  18
+      - 美国CloudFlare公司CDN节点 19
+      - 美国CloudFlare公司CDN节点 20
+      - 美国CloudFlare公司CDN节点 21
+      - 丹麦  22
+      - 美国CloudFlare公司CDN节点 23
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 24
+      - 日本东京阿里云 25
+      - 美国CloudFlare公司CDN节点 26
+      - 美国CloudFlare节点 27
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+      - 英国+v2rayfree.eu.org
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
+      - 香港 v2rayfree.eu.org
+      - 美国 CloudFlare节点_1
+      - 欧盟 v2rayfree.eu.org
+      - 亚太地区 v2rayfree.eu.org
+      - 新加坡+Choopa数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 CloudFlare节点_2
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心 1
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 2
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 3
+      - 南非  4
+      - 美国加利福尼亚州洛杉矶SharkTech数据中心 5
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 6
+      - 美国加利福尼亚州圣何塞MULTACOM机房 7
+      - 美国CloudFlare节点 8
+      - 美国CloudFlare公司CDN节点(shopify) 9
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 10
+      - 美国Amazon EC2服务器 11
+      - 美国CloudFlare节点 12
+      - 美国CloudFlare节点 13
+      - 美国CloudFlare节点 14
+      - 巴西圣保罗CloudFlare节点 15
+      - 美国CloudFlare公司CDN节点 16
+      - 美国CloudFlare节点 17
+      - 美国  18
+      - 美国CloudFlare公司CDN节点 19
+      - 美国CloudFlare公司CDN节点 20
+      - 美国CloudFlare公司CDN节点 21
+      - 丹麦  22
+      - 美国CloudFlare公司CDN节点 23
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 24
+      - 日本东京阿里云 25
+      - 美国CloudFlare公司CDN节点 26
+      - 美国CloudFlare节点 27
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+      - 英国+v2rayfree.eu.org
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
+      - 香港 v2rayfree.eu.org
+      - 美国 CloudFlare节点_1
+      - 欧盟 v2rayfree.eu.org
+      - 亚太地区 v2rayfree.eu.org
+      - 新加坡+Choopa数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 CloudFlare节点_2
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心 1
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 2
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 3
+      - 南非  4
+      - 美国加利福尼亚州洛杉矶SharkTech数据中心 5
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 6
+      - 美国加利福尼亚州圣何塞MULTACOM机房 7
+      - 美国CloudFlare节点 8
+      - 美国CloudFlare公司CDN节点(shopify) 9
+      - 美国加利福尼亚州洛杉矶MULTACOM数据中心 10
+      - 美国Amazon EC2服务器 11
+      - 美国CloudFlare节点 12
+      - 美国CloudFlare节点 13
+      - 美国CloudFlare节点 14
+      - 巴西圣保罗CloudFlare节点 15
+      - 美国CloudFlare公司CDN节点 16
+      - 美国CloudFlare节点 17
+      - 美国  18
+      - 美国CloudFlare公司CDN节点 19
+      - 美国CloudFlare公司CDN节点 20
+      - 美国CloudFlare公司CDN节点 21
+      - 丹麦  22
+      - 美国CloudFlare公司CDN节点 23
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心 24
+      - 日本东京阿里云 25
+      - 美国CloudFlare公司CDN节点 26
+      - 美国CloudFlare节点 27
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/LocalAreaNetwork.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanProgramAD.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleCN.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/SteamCN.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Microsoft.list
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Apple.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyMedia.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Telegram.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaCompanyIp.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
