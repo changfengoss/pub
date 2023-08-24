@@ -1,0 +1,235 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：2023-08-24 15:55:48
+# 使用模版：ACL4SSR_Online_Mini_Ai.ini
+# 节点数量：14
+# 节点类型：ss
+####################################
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+
+proxies:
+  - {"name":"剩余流量：475.33 GB\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":48003,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"套餐到期：长期有效\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":48003,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"美国do1\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":48003,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"美国do2\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":48004,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"新加坡1\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":42213,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"新加坡2\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":40063,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"日本aws\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":40102,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"法国2\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":36698,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"英国\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":36521,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"德国2\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":40172,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"印度\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":15474,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"澳大利亚\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":42142,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"香港2\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":28039,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"台湾\r","type":"ss","server":"cnmbdcm01.kczz2038.online","port":45379,"password":"34d61dd8-c3dc-455c-9be2-c31f86b1bc27","cipher":"chacha20-ietf-poly1305"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - "剩余流量：475.33 GB\r"
+      - "套餐到期：长期有效\r"
+      - "美国do1\r"
+      - "美国do2\r"
+      - "新加坡1\r"
+      - "新加坡2\r"
+      - "日本aws\r"
+      - "法国2\r"
+      - "英国\r"
+      - "德国2\r"
+      - "印度\r"
+      - "澳大利亚\r"
+      - "香港2\r"
+      - "台湾\r"
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "剩余流量：475.33 GB\r"
+      - "套餐到期：长期有效\r"
+      - "美国do1\r"
+      - "美国do2\r"
+      - "新加坡1\r"
+      - "新加坡2\r"
+      - "日本aws\r"
+      - "法国2\r"
+      - "英国\r"
+      - "德国2\r"
+      - "印度\r"
+      - "澳大利亚\r"
+      - "香港2\r"
+      - "台湾\r"
+  - name: 💬 OpenAi
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - "剩余流量：475.33 GB\r"
+      - "套餐到期：长期有效\r"
+      - "美国do1\r"
+      - "美国do2\r"
+      - "新加坡1\r"
+      - "新加坡2\r"
+      - "日本aws\r"
+      - "法国2\r"
+      - "英国\r"
+      - "德国2\r"
+      - "印度\r"
+      - "澳大利亚\r"
+      - "香港2\r"
+      - "台湾\r"
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - "剩余流量：475.33 GB\r"
+      - "套餐到期：长期有效\r"
+      - "美国do1\r"
+      - "美国do2\r"
+      - "新加坡1\r"
+      - "新加坡2\r"
+      - "日本aws\r"
+      - "法国2\r"
+      - "英国\r"
+      - "德国2\r"
+      - "印度\r"
+      - "澳大利亚\r"
+      - "香港2\r"
+      - "台湾\r"
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/LocalAreaNetwork.list
+  UnBan:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/UnBan.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanProgramAD.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleCN.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/SteamCN.list
+  OpenAi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/OpenAi.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Telegram.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyMedia.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaCompanyIp.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,UnBan,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,OpenAi,💬 OpenAi
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
