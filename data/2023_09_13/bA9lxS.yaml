@@ -1,0 +1,845 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：13-09-2023 21:09:20
+# 使用模版：تست
+# 节点数量：57
+# 节点类型：ss, vmess
+####################################
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+log-level: info
+cfw-latency-timeout: 8000
+cfw-latency-url: https://api.v2fly.org/checkConnection.svgz
+cfw-proxies-order: latency
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://1.1.1.1/dns-query#en0
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.nextdns.io
+    - https://doh.opendns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dns.surfshark.com/dns-query
+    - https://8.8.8.8/dns-query
+    - https://9.9.9.9/dns-query
+    - https://doh.cleanbrowsing.org/doh/security-filter/
+    - https://resolver2.dns.watch/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://freedns.controld.com/p2
+    - https://dns.dnswarden.com/adblock
+    - https://adblock.doh.mullvad.net/dns-query
+    - https://basic.rethinkdns.com/dns-query
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tls://dns.google:853
+    - 162.159.36.1
+    - 162.159.46.1
+    - https://dns.aa.net.uk/dns-query
+    - https://rubyfish.cn/dns-query
+    - https://nsc.torgues.net/dns-query
+    - https://xmission-slc-1.edge.nextdns.io/dns-query
+    - https://Doh1.B-Cdn.net/dns-query
+    - https://dns.melalandia.tk/dns-query
+    - https://jp-kix2.doh.sb/
+    - https://dns.gi.co.id/dns-query
+    - https://dns.controld.com/
+    - https://xtom-osa-1.edge.nextdns.io/dns-query
+    - https://170.176.145.150/
+    - https://ipv4-zepto-mci-1.edge.nextdns.io/dns-query
+    - https://res-acst3.absolight.net/
+    - https://zepto-sto-1.edge.nextdns.io
+    - https://doh.dns.sb/dns-query
+    - tls://dns.rubyfish.cn:853
+    - tls://8.8.8.8#en0
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
+    - +.media.dssott.com
+
+proxies:
+  - {"name":"چک 🇨🇿","type":"ss","server":"143.244.58.102","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"سوئیس 🇨🇭_1","type":"ss","server":"156.146.62.160","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"سوئد 🇸🇪 ۱","type":"ss","server":"37.19.222.212","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵 ژاپن _1","type":"ss","server":"54.199.83.239","port":2333,"password":"doub.io","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸 تگزاس ","type":"ss","server":"156.146.38.163","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇺🇸 آریزونا ","type":"ss","server":"184.170.241.194","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"هلند 🇳🇱 ","type":"ss","server":"109.201.152.181","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇰🇷 کره جنوبی  ۱","type":"ss","server":"43.202.49.222","port":2333,"password":"doub.io","cipher":"aes-256-cfb"}
+  - {"name":"آلمان 🇩🇪 ۴","type":"vmess","server":"172.64.162.23","port":443,"cipher":"auto","uuid":"91a4ed1f-f693-4685-a6be-f0981d6f2613","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss28885","headers":{"host":"tree.blanku.me"}}}
+  - {"name":"آلمان 🇩🇪 ۲","type":"vmess","server":"alvvin.click","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":1,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"alvvin.click"}}}
+  - {"name":"آلمان 🇩🇪 ۱","type":"ss","server":"162.19.170.209","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۱","type":"ss","server":"162.19.83.11","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۲","type":"ss","server":"162.19.83.14","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۳","type":"ss","server":"57.128.74.169","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪 سوئد ","type":"ss","server":"121.127.46.147","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇷🇸 صربستان ","type":"ss","server":"194.71.126.31","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇴 نروژ ","type":"ss","server":"185.90.61.153","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇰 دانمارک ۱","type":"ss","server":"192.36.27.94","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇱🇺 لوگزامبورگ ","type":"ss","server":"92.38.163.53","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇦🇿 آذربایجان ","type":"ss","server":"180.149.44.120","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"دانمارک 🇩🇰 ۲","type":"ss","server":"192.36.27.116","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇴 کلمبیا ","type":"ss","server":"190.120.231.45","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇭🇷 کرواسی ","type":"ss","server":"46.183.184.61","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇲🇽 مکزیک ","type":"ss","server":"190.103.179.23","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇪 پرو","type":"ss","server":"190.120.229.28","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇲🇰 مقدونیه ","type":"ss","server":"46.183.185.37","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇻🇳 ویتنام ","type":"ss","server":"103.163.218.2","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇦🇱 آلبانی ","type":"ss","server":"31.171.153.181","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"کرواسی 🇭🇷 ","type":"ss","server":"46.183.184.64","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"بلژیک 🇧🇪 ","type":"ss","server":"192.71.249.146","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇷🇴 رومانی ","type":"ss","server":"194.14.217.115","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"ترکیه 🇹🇷","type":"ss","server":"103.215.218.32","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸 اسپانیا ","type":"ss","server":"92.38.171.89","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"لندن 🇬🇧 ۱","type":"ss","server":"77.72.5.150","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇪 ایرلند ","type":"ss","server":"23.92.127.134","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"اکوادور 🇪🇨","type":"ss","server":"179.49.5.114","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"امریکا 🇺🇲","type":"ss","server":"74.121.191.98","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"بوسنی 🇧🇦","type":"ss","server":"185.164.35.9","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇾 قبرس","type":"ss","server":"213.169.137.221","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱 لهستان ","type":"ss","server":"5.188.108.10","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"کنیا 🇰🇪","type":"ss","server":"62.12.116.66","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇮 اسلوونی","type":"ss","server":"192.71.244.150","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇷 یونان ","type":"ss","server":"192.71.166.100","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇸 ایسلند ۲","type":"ss","server":"37.235.49.152","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇰🇿 قزاقستان ","type":"ss","server":"213.156.137.67","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵 ژاپن _2","type":"ss","server":"103.75.118.27","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇷 پورتوریکو","type":"ss","server":"185.47.255.219","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇿🇦 آفریقای جنوبی ","type":"ss","server":"41.203.4.34","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇸 ایسلند ۱","type":"ss","server":"37.235.49.162","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇦 پاناما ","type":"ss","server":"138.186.142.4","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه ۱ 🇨🇵","type":"ss","server":"51.158.145.178","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"لندن 🇬🇧 ۲","type":"ss","server":"77.72.5.113","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"جزیره من 🇮🇲","type":"ss","server":"37.235.55.21","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"ایتالیا 🇮🇹","type":"ss","server":"5.188.226.187","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"اوکراین 🇺🇦","type":"ss","server":"5.188.6.8","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷 فرانسه ۲","type":"ss","server":"51.159.111.208","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"سوئیس 🇨🇭_2","type":"ss","server":"84.17.53.160","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+proxy-groups:
+  - name: 🔀 نوع انتخاب پروکسی
+    type: select
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (بهترین پینگ) ➡️
+      - توزیع بار (هش سازگار) ♻️
+      - توزیع بار (یکنواخت) ⏳
+      - ⛔ قطع اینترنت
+      - 🛡️ بدون فیلترشکن
+  - name: 📶 انتخاب نوع اتصال
+    type: select
+    proxies:
+      - 🌐 همه سایتا
+      - 🔐 فقط سایتای فیلتر شده
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_1
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _1
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۲
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _2
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - ایتالیا 🇮🇹
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_2
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_1
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _1
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۲
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _2
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - ایتالیا 🇮🇹
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_2
+  - name: پشتیبان (بهترین پینگ) ➡️
+    type: fallback
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_1
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _1
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۲
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _2
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - ایتالیا 🇮🇹
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_2
+  - name: توزیع بار (هش سازگار) ♻️
+    type: load-balance
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_1
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _1
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۲
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _2
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - ایتالیا 🇮🇹
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_2
+    strategy: consistent-hashing
+  - name: توزیع بار (یکنواخت) ⏳
+    type: load-balance
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_1
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _1
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۲
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _2
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - ایتالیا 🇮🇹
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_2
+    strategy: round-robin
+  - name: 🇮🇷 سایتای ایرانی
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🏴‍☠️ سایتای تحریمی
+    type: select
+    proxies:
+      - 🔀 نوع انتخاب پروکسی
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+  - name: 🤬 سایتای سانسوری
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🔀 نوع انتخاب پروکسی
+      - 🛡️ بدون فیلترشکن
+  - name: 🆎 تبلیغات
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🍃 تصفیه برنامه
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛑 رهگیری جهانی
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🎮 استیم
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛡️ بدون فیلترشکن
+    type: select
+    proxies:
+      - DIRECT
+  - name: ⛔ قطع اینترنت
+    type: select
+    proxies:
+      - REJECT
+  - name: 🚫 اجازه ندادن
+    type: select
+    proxies:
+      - REJECT
+  - name: 🔐 فقط سایتای فیلتر شده
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🌐 همه سایتا
+    type: select
+    proxies:
+      - 🔀 نوع انتخاب پروکسی
+
+rule-providers:
+  blocked:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/blocked-sites.yml
+    interval: 432000
+    path: ./ruleset/blocked.yaml
+  category_porn:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-porn.yaml
+    interval: 432000
+    path: ./ruleset/category_porn.yaml
+  facebook:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/facebook.yaml
+    interval: 432000
+    path: ./ruleset/facebook.yaml
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 432000
+    path: ./ruleset/youtube.yaml
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/instagram.yaml
+    interval: 432000
+    path: ./ruleset/instagram.yaml
+  spotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/spotify.yaml
+    interval: 432000
+    path: ./ruleset/spotify.yaml
+  twitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/twitter.yaml
+    interval: 432000
+    path: ./ruleset/twitter.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 432000
+    path: ./ruleset/telegram.yaml
+  openai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/openai.yaml
+    interval: 432000
+    path: ./ruleset/openai.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 432000
+    path: ./ruleset/whatsapp.yaml
+  tiktok:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/tiktok.yaml
+    interval: 432000
+    path: ./ruleset/tiktok.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 432000
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/censor.yaml
+    interval: 432000
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 432000
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/private.yaml
+    interval: 432000
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 432000
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/iran.yaml
+    interval: 432000
+    path: ./ruleset/iran.yaml
+  iran_other:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_other.yaml
+    interval: 432000
+    path: ./ruleset/iran_other.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/steam.yaml
+    interval: 432000
+    path: ./ruleset/steam.yaml
+  Purification_ip:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app%20ip.yaml
+    interval: 432000
+    path: ./ruleset/Purificationip.yaml
+  ads_ip:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/ads%20ip.yaml
+    interval: 432000
+    path: ./ruleset/adsip.yaml
+  Purification:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app.yaml
+    interval: 432000
+    path: ./ruleset/Purification.yaml
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 432000
+    path: ./ruleset/category_public_tracker.yaml
+  Global:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Global%20tracking.yaml
+    interval: 432000
+    path: ./ruleset/Global.yaml
+  category_ads_all:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-ads-all.yaml
+    interval: 432000
+    path: ./ruleset/category_ads_all.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 432000
+    path: ./ruleset/iran_ads.yaml
+  add:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/add.yaml
+    interval: 432000
+    path: ./ruleset/add.yaml
+  MoreAd:
+    type: http
+    behavior: domain
+    url: https://howdy.id/download/rules/clash.txt
+    interval: 86400
+    path: ./providers/rule-provider_clash.yaml
+  AntiAd:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    interval: 432000
+    path: ./ruleset/AntiAd.yaml
+  GoodbyeAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/GoodbyeAds.yaml
+    interval: 432000
+    path: ./ruleset/add.yaml
+  tahrim:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/tahrim.yaml
+    interval: 432000
+    path: ./ruleset/tahrim.yaml
+rules:
+  - RULE-SET,blocked,🔀 نوع انتخاب پروکسی
+  - RULE-SET,category_porn,🔀 نوع انتخاب پروکسی
+  - RULE-SET,facebook,🔀 نوع انتخاب پروکسی
+  - RULE-SET,youtube,🔀 نوع انتخاب پروکسی
+  - RULE-SET,instagram,🔀 نوع انتخاب پروکسی
+  - RULE-SET,spotify,🔀 نوع انتخاب پروکسی
+  - RULE-SET,twitter,🔀 نوع انتخاب پروکسی
+  - RULE-SET,telegram,🔀 نوع انتخاب پروکسی
+  - RULE-SET,openai,🔀 نوع انتخاب پروکسی
+  - RULE-SET,whatsapp,🔀 نوع انتخاب پروکسی
+  - RULE-SET,tiktok,🔀 نوع انتخاب پروکسی
+  - RULE-SET,twitch,🔀 نوع انتخاب پروکسی
+  - RULE-SET,censor,🤬 سایتای سانسوری
+  - RULE-SET,local_ips,🛡️ بدون فیلترشکن
+  - RULE-SET,private,🛡️ بدون فیلترشکن
+  - RULE-SET,category_ir,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran_other,🇮🇷 سایتای ایرانی
+  - RULE-SET,steam,🎮 استیم
+  - RULE-SET,Purification_ip,no-resolve
+  - RULE-SET,ads_ip,no-resolve
+  - RULE-SET,Purification,🍃 تصفیه برنامه
+  - RULE-SET,category_public_tracker,🛑 رهگیری جهانی
+  - RULE-SET,Global,🛑 رهگیری جهانی
+  - RULE-SET,category_ads_all,🆎 تبلیغات
+  - RULE-SET,iran_ads,🆎 تبلیغات
+  - RULE-SET,add,🆎 تبلیغات
+  - RULE-SET,MoreAd,🆎 تبلیغات
+  - RULE-SET,AntiAd,🆎 تبلیغات
+  - RULE-SET,GoodbyeAds,🆎 تبلیغات
+  - RULE-SET,tahrim,🏴‍☠️ سایتای تحریمی
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,cff.pw,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,vpnse.org,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,cfmem.com,🔀 نوع انتخاب پروکسی
+  - GEOIP,IR,🇮🇷 سایتای ایرانی
+  - MATCH,📶 انتخاب نوع اتصال
