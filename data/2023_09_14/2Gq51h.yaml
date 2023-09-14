@@ -1,0 +1,1523 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：14-09-2023 11:56:12
+# 使用模版：تست
+# 节点数量：170
+# 节点类型：vmess, ss, trojan
+####################################
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+log-level: info
+cfw-latency-timeout: 8000
+cfw-latency-url: https://api.v2fly.org/checkConnection.svgz
+cfw-proxies-order: latency
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://1.1.1.1/dns-query#en0
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.nextdns.io
+    - https://doh.opendns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dns.surfshark.com/dns-query
+    - https://8.8.8.8/dns-query
+    - https://9.9.9.9/dns-query
+    - https://doh.cleanbrowsing.org/doh/security-filter/
+    - https://resolver2.dns.watch/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://freedns.controld.com/p2
+    - https://dns.dnswarden.com/adblock
+    - https://adblock.doh.mullvad.net/dns-query
+    - https://basic.rethinkdns.com/dns-query
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tls://dns.google:853
+    - 162.159.36.1
+    - 162.159.46.1
+    - https://dns.aa.net.uk/dns-query
+    - https://rubyfish.cn/dns-query
+    - https://nsc.torgues.net/dns-query
+    - https://xmission-slc-1.edge.nextdns.io/dns-query
+    - https://Doh1.B-Cdn.net/dns-query
+    - https://dns.melalandia.tk/dns-query
+    - https://jp-kix2.doh.sb/
+    - https://dns.gi.co.id/dns-query
+    - https://dns.controld.com/
+    - https://xtom-osa-1.edge.nextdns.io/dns-query
+    - https://170.176.145.150/
+    - https://ipv4-zepto-mci-1.edge.nextdns.io/dns-query
+    - https://res-acst3.absolight.net/
+    - https://zepto-sto-1.edge.nextdns.io
+    - https://doh.dns.sb/dns-query
+    - tls://dns.rubyfish.cn:853
+    - tls://8.8.8.8#en0
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
+    - +.media.dssott.com
+
+proxies:
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States","type":"vmess","server":"66.81.247.222","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada","type":"vmess","server":"941.outline-vpn.cloud","port":80,"cipher":"auto","uuid":"a1a676e4-016e-4bf0-96fe-4b6aaf53abc2","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"bl.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 3","type":"vmess","server":"dx1.992688.xyz","port":8880,"cipher":"auto","uuid":"67a341a7-5ae7-4d92-edad-9e8db87ce165","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"vcus1.vpn66.eu.org"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 4","type":"vmess","server":"ming2.kiwireich.com","port":443,"cipher":"auto","uuid":"18e5f40f-bda6-4c15-9334-e87cda6047af","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ray","headers":{"host":"ming2.kiwireich.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 5","type":"vmess","server":"lt1.992688.xyz","port":8880,"cipher":"auto","uuid":"67a341a7-5ae7-4d92-edad-9e8db87ce165","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"vcus1.vpn66.eu.org"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 49","type":"vmess","server":"104.21.19.124","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 8","type":"vmess","server":"172.67.63.75","port":80,"cipher":"auto","uuid":"2e495227-58e3-4bea-a273-7a17bd8a804b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"jdf.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 10","type":"vmess","server":"ophelia.mom","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":1,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"ophelia.mom"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 6 2","type":"vmess","server":"fd.shabijichang.com","port":80,"cipher":"auto","uuid":"392053a2-c18f-4914-890c-fd326ee27b4f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"sdyg.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 12","type":"vmess","server":"172.67.78.109","port":80,"cipher":"auto","uuid":"23ee5ec7-ba2e-4967-bf4f-10ff3b7ba989","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"asb3.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 13","type":"vmess","server":"172.67.221.18","port":8880,"cipher":"auto","uuid":"67a341a7-5ae7-4d92-edad-9e8db87ce165","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"vcus1.vpn66.eu.org"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 14","type":"vmess","server":"172.67.53.250","port":80,"cipher":"auto","uuid":"dc42deba-1458-450e-938d-4d5ff4ab0f92","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"mm4.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇩🇪Germany 2","type":"vmess","server":"vde2.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vde2.0bad.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇩🇪Germany 3","type":"ss","server":"beeconf.xyz","port":8080,"password":"ezesBXesf3RKBCp1vqKuIx","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 2 2","type":"vmess","server":"odelia.autos","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"odelia.autos"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 89","type":"vmess","server":"104.21.36.26","port":8443,"cipher":"auto","uuid":"aa0c4744-9568-4bee-a08b-73668a9b2a42","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/cloudconebbb","headers":{"host":"cloudconebbb.gorgorchicken.one"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 22","type":"vmess","server":"172.67.146.22","port":80,"cipher":"auto","uuid":"2e495227-58e3-4bea-a273-7a17bd8a804b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"ml.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇩🇪Germany 4","type":"vmess","server":"23.158.56.89","port":22324,"cipher":"auto","uuid":"04621bae-ab36-11ec-b909-0242ac120002","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 27","type":"vmess","server":"104.31.16.30","port":443,"cipher":"auto","uuid":"F5A0B71E-85AA-48FF-99D1-9F3B8459DA49","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Amsterdam.bobbykotick.rip"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 28","type":"vmess","server":"104.23.123.239","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 41","type":"vmess","server":"104.18.14.229","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 30","type":"vmess","server":"shs.shabijichang.com","port":80,"cipher":"auto","uuid":"6567eb30-6982-4484-bb9a-97232b229f2f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"shs.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 32","type":"vmess","server":"172.67.27.154","port":80,"cipher":"auto","uuid":"2e495227-58e3-4bea-a273-7a17bd8a804b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"ld.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 34","type":"vmess","server":"cloudconeaaa.gorgorchicken.one","port":8443,"cipher":"auto","uuid":"1cec1ebc-b489-4769-f2d9-e079b5832a60","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/cloudconeaaa","headers":{"host":"cloudconeaaa.gorgorchicken.one"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 35","type":"vmess","server":"104.21.55.49","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 76","type":"vmess","server":"cloudconebbb.gorgorchicken.one","port":8443,"cipher":"auto","uuid":"aa0c4744-9568-4bee-a08b-73668a9b2a42","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/cloudconebbb","headers":{"host":"cloudconebbb.gorgorchicken.one"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 39","type":"vmess","server":"waynn.makeup","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"waynn.makeup"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 6","type":"vmess","server":"172.64.101.98","port":80,"cipher":"auto","uuid":"272b3891-e103-45e0-8b09-f4d770bf5ba4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"mm4.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 33 2","type":"vmess","server":"104.22.11.129","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 42","type":"vmess","server":"franc.digires.shop","port":443,"cipher":"auto","uuid":"1af4ba3d-e60f-4f83-b38b-23fc181f676d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/11201","headers":{"host":"franc.digires.shop"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 46","type":"vmess","server":"104.19.180.169","port":443,"cipher":"auto","uuid":"795CAC68-4CF8-42D6-BCF6-EDAA8EDCC435","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Amsterdam.kotick.site","headers":{"host":"aged-wildflower-24f6.bangolan105285.workers.dev"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 48","type":"vmess","server":"104.25.193.8","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 52","type":"vmess","server":"172.67.128.217","port":80,"cipher":"auto","uuid":"2e495227-58e3-4bea-a273-7a17bd8a804b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"ylsl.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 53","type":"vmess","server":"172.67.32.82","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 59","type":"vmess","server":"104.27.6.126","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 91","type":"vmess","server":"104.24.208.25","port":2053,"cipher":"auto","uuid":"72f76c36-3e3c-45b3-a61f-d8f017345958","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"b5.iraniancp.click"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 61","type":"vmess","server":"alvvin.click","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":1,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"alvvin.click"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇳🇱Netherlands 4","type":"vmess","server":"51.15.105.39","port":443,"cipher":"auto","uuid":"6388bd92-6cbc-4b72-a9a6-931f071d0ffa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/nimvws","headers":{"host":"phosphorylative.aurorainiceland.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 62","type":"vmess","server":"162.159.62.69","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 68","type":"vmess","server":"nestle.ir","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 71","type":"vmess","server":"172.67.133.117","port":80,"cipher":"auto","uuid":"392053a2-c18f-4914-890c-fd326ee27b4f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"mm4.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 25 2","type":"vmess","server":"162.159.58.164","port":80,"cipher":"auto","uuid":"cd0c570f-757c-48d2-a1b6-c0940431cc47","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"nl10gbps.6577617.xyz"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 72","type":"vmess","server":"172.67.117.77","port":80,"cipher":"auto","uuid":"2e495227-58e3-4bea-a273-7a17bd8a804b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"bl.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 81","type":"vmess","server":"312.outline-vpn.cloud","port":80,"cipher":"auto","uuid":"a1a676e4-016e-4bf0-96fe-4b6aaf53abc2","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"ld.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 81 2","type":"vmess","server":"discord.com","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 86","type":"vmess","server":"104.18.234.77","port":443,"cipher":"auto","uuid":"795CAC68-4CF8-42D6-BCF6-EDAA8EDCC435","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Amsterdam.kotick.site","headers":{"host":"restless-glitter-c0e4.walidfree7.workers.dev"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 94","type":"vmess","server":"104.25.134.44","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 96","type":"vmess","server":"octavi.cfd","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":1,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"octavi.cfd"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 14","type":"vmess","server":"156.225.67.38","port":443,"cipher":"auto","uuid":"de491802-233e-47f2-8c6c-d19bcf5bd56b","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/1692256902430","headers":{"host":"www.86139317.xyz"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 65 2","type":"vmess","server":"yd1.992688.xyz","port":8880,"cipher":"auto","uuid":"67a341a7-5ae7-4d92-edad-9e8db87ce165","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"vcus1.vpn66.eu.org"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 67 2","type":"vmess","server":"edeen.makeup","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":1,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"edeen.makeup"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 97","type":"vmess","server":"104.24.185.137","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 100","type":"vmess","server":"b2n.ir","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇦🇹Austria 2","type":"ss","server":"212.113.106.243","port":12949,"password":"P2zxXPewlV3BlfqqYiSthvtLc","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 103","type":"vmess","server":"ns1.v2-vip.fun","port":8880,"cipher":"auto","uuid":"617c9bc4-4116-41c6-99e0-ace49a38fcdb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/Jnv8ViZOUVgijjOh0p5uGjHnXIiY","headers":{"host":"fr7.tehme100.fun"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇦🇹Austria 3","type":"ss","server":"212.113.106.243","port":13022,"password":"w5drAL7PfCIwQ2ycUuoDsV2Ls","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 104","type":"vmess","server":"172.67.135.195","port":443,"cipher":"auto","uuid":"F5A0B71E-85AA-48FF-99D1-9F3B8459DA49","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.bobbykotick.rip"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 105","type":"vmess","server":"104.31.16.120","port":443,"cipher":"auto","uuid":"7522A28C-F9A1-40A0-BD92-67CF39AB5D5B","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.bobbykotick.rip"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇬🇧United Kingdom 8","type":"ss","server":"51.68.206.229","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 16 2","type":"vmess","server":"104.17.4.149","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 111","type":"vmess","server":"172.67.242.38","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 16","type":"vmess","server":"172.64.199.158","port":80,"cipher":"auto","uuid":"6567eb30-6982-4484-bb9a-97232b229f2f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"wnd.shabijichang.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 114","type":"vmess","server":"173.245.59.219","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vus3.0bad.com/chat","headers":{"host":"steep-bread-ef2e.labegob718911.workers.dev"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 115","type":"vmess","server":"104.31.16.65","port":443,"cipher":"auto","uuid":"4C73AF78-54D4-44E2-A060-E11D3E461876","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Amsterdam.bobbykotick.rip"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 118","type":"vmess","server":"172.67.69.247","port":8880,"cipher":"auto","uuid":"67a341a7-5ae7-4d92-edad-9e8db87ce165","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"vcus1.vpn66.eu.org"}}}
+  - {"name":"⚡️@DeamNet_🔻 ...","type":"ss","server":"ak1720.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":4444,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"⚡️@DeamNet_🔻 🇳🇱Netherlands 11","type":"vmess","server":"phosphorylative.aurorainiceland.com","port":443,"cipher":"auto","uuid":"6388bd92-6cbc-4b72-a9a6-931f071d0ffa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/nimvws","headers":{"host":"phosphorylative.aurorainiceland.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 121","type":"vmess","server":"104.31.16.27","port":80,"cipher":"auto","uuid":"58fe1542-5290-40ad-815a-77707a81afe5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/IOebhLMhl1CTbFHbL95myfRX2","headers":{"host":"ca5.tehme2.fun"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 126","type":"vmess","server":"104.16.183.101","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 127","type":"vmess","server":"104.27.203.169","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 128","type":"vmess","server":"104.24.194.105","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 135","type":"vmess","server":"104.31.16.46","port":2082,"cipher":"auto","uuid":"58fe1542-5290-40ad-815a-77707a81afe5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/IOebhLMhl1CTbFHbL95myfRX2","headers":{"host":"ca5.tehme100.fun"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 142","type":"vmess","server":"zfc.windowsupdate1.com","port":443,"cipher":"auto","uuid":"6abfe33a-1894-4f62-8879-83b71a35e5fd","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"us-1.acyun.tk"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇬🇧United Kingdom 26","type":"ss","server":"ak1749.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":4444,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"⚡️@DeamNet_🔻 🇬🇧United Kingdom 27","type":"ss","server":"212.102.53.198","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 26","type":"ss","server":"205.134.180.143","port":443,"password":"R9Xc4dHXGv3c","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 27","type":"vmess","server":"45.63.106.86","port":37869,"cipher":"auto","uuid":"4c90d167-e65b-4419-d455-eb635724d2ed","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 29","type":"ss","server":"45.63.106.86","port":54253,"password":"MdADCcEjqI","cipher":"aes-256-gcm"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 30","type":"ss","server":"205.134.180.141","port":443,"password":"vMJXK15zOa8K","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 34","type":"ss","server":"205.134.180.147","port":443,"password":"9Bvkw5aupNy8","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 38","type":"ss","server":"69.50.95.251","port":9098,"password":"ksjfuw!sop#","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 42","type":"ss","server":"169.197.141.186","port":801,"password":"tvX1v#NSFP_LG_bJ","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 44","type":"vmess","server":"107.167.16.34","port":45592,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 49","type":"vmess","server":"107.167.16.202","port":443,"cipher":"auto","uuid":"8c679b81-84fc-43ce-9553-ddca575a6949","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/080822272914","headers":{"host":"www.87135530.xyz"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 56","type":"vmess","server":"ci.outline-vpn.cloud","port":43123,"cipher":"auto","uuid":"2566d00f-218c-48f7-9a36-13d3d6f1a724","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 57","type":"vmess","server":"23.108.100.101","port":443,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/footers","headers":{"host":"www.40587333.xyz"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 58","type":"vmess","server":"67.21.64.84","port":43123,"cipher":"auto","uuid":"2566d00f-218c-48f7-9a36-13d3d6f1a724","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 60","type":"vmess","server":"108.166.203.181","port":44945,"cipher":"auto","uuid":"268a491b-764c-44d1-81a4-30de16130867","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 63","type":"vmess","server":"107.167.20.183","port":443,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/243535322906","headers":{"host":"www.22666564.xyz"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 64","type":"vmess","server":"23.108.100.103","port":443,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/footers","headers":{"host":"www.40587333.xyz"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 83","type":"vmess","server":"107.167.30.132","port":43900,"cipher":"auto","uuid":"58e560b4-bba6-4843-be5f-83321022fa0d","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 90","type":"vmess","server":"1496join.outline-vpn.cloud","port":44945,"cipher":"auto","uuid":"268a491b-764c-44d1-81a4-30de16130867","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇸🇬Singapore 3","type":"vmess","server":"8.222.138.164","port":80,"cipher":"auto","uuid":"7e7f8398-bd39-49d8-9ce6-e48ffef463dd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/2TokGE9A/","headers":{"host":"us6.cachexy.cf"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇰🇷South Korea","type":"ss","server":"xiongda006.daxiongda.top","port":23333,"password":"70a93fcb-f8c0-4916-96b5-8c54f3394708","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 ... 2","type":"vmess","server":"vin1.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vin1.0bad.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 119","type":"vmess","server":"vus5.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vus5.0bad.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇦🇪United Arab Emirates 2","type":"ss","server":"series-a2-mec.samanehha.co","port":443,"password":"Sy3uxg2OmtZEvzlv","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇬🇧United Kingdom 31","type":"ss","server":"series-a2.samanehha.co","port":443,"password":"mps3FwmDjLrWaOVg","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇯🇵Japan 2 2","type":"vmess","server":"jp6.lianpi.xyz","port":23234,"cipher":"auto","uuid":"1f3d67b4-6929-4598-90ca-84a841bf02e4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇦Canada 39 2","type":"vmess","server":"0000:0000:0000:0000:0000:ffff:6811:495","port":443,"cipher":"auto","uuid":"b3a21def-5fcc-47a8-a6a0-a34e29d5288a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss51068","headers":{"host":"sand.blanku.me"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 88 2","type":"vmess","server":"37.1.211.52","port":3000,"cipher":"auto","uuid":"b97ad283-287e-4e20-a741-f16f7d074590","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 129","type":"vmess","server":"108.166.203.183","port":44945,"cipher":"auto","uuid":"268a491b-764c-44d1-81a4-30de16130867","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇬🇧United Kingdom 33","type":"ss","server":"series-a1.samanehha.co","port":443,"password":"W74XFALLLuw6m5IA","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇹🇼Taiwan","type":"ss","server":"23.248.176.96","port":44444,"password":"123456","cipher":"aes-128-gcm"}
+  - {"name":"⚡️@DeamNet_🔻 🇬🇧United Kingdom 35","type":"vmess","server":"vuk1.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vuk1.0bad.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇧🇭Bahrain","type":"ss","server":"series-a2-me.samanehha.co","port":443,"password":"gZNBuS7vSPJeWb54","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 2 2","type":"vmess","server":"vus3.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vus3.0bad.com"}}}
+  - {"name":"⚡️@DeamNet_🔻 🇨🇳China 5","type":"vmess","server":"137.175.58.132","port":53999,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇯🇵Japan 15","type":"vmess","server":"152.69.197.60","port":1069,"cipher":"auto","uuid":"ac8e26fe-8150-4b60-ae64-82fc77eba2cf","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"⚡️@DeamNet_🔻 🇺🇸United States 182","type":"ss","server":"205.134.180.145","port":443,"password":"hgLCgfLRgB6d","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇪 سوئد ","type":"ss","server":"121.127.46.147","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇷🇸 صربستان ","type":"ss","server":"194.71.126.31","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇴 نروژ ","type":"ss","server":"185.90.61.153","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇰 دانمارک ۱","type":"ss","server":"192.36.27.94","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇱🇺 لوگزامبورگ ","type":"ss","server":"92.38.163.53","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇦🇿 آذربایجان ","type":"ss","server":"180.149.44.120","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"دانمارک 🇩🇰 ۲","type":"ss","server":"192.36.27.116","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇴 کلمبیا ","type":"ss","server":"190.120.231.45","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇭🇷 کرواسی ","type":"ss","server":"46.183.184.61","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇲🇽 مکزیک ","type":"ss","server":"190.103.179.23","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇪 پرو","type":"ss","server":"190.120.229.28","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇲🇰 مقدونیه ","type":"ss","server":"46.183.185.37","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇻🇳 ویتنام ","type":"ss","server":"103.163.218.2","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇦🇱 آلبانی ","type":"ss","server":"31.171.153.181","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"کرواسی 🇭🇷 ","type":"ss","server":"46.183.184.64","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"بلژیک 🇧🇪 ","type":"ss","server":"192.71.249.146","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇷🇴 رومانی ","type":"ss","server":"194.14.217.115","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"ترکیه 🇹🇷","type":"ss","server":"103.215.218.32","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸 اسپانیا ","type":"ss","server":"92.38.171.89","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"لندن 🇬🇧 ۱","type":"ss","server":"77.72.5.150","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇪 ایرلند ","type":"ss","server":"23.92.127.134","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"اکوادور 🇪🇨","type":"ss","server":"179.49.5.114","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"امریکا 🇺🇲","type":"ss","server":"74.121.191.98","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"بوسنی 🇧🇦","type":"ss","server":"185.164.35.9","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇾 قبرس","type":"ss","server":"213.169.137.221","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱 لهستان ","type":"ss","server":"5.188.108.10","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"کنیا 🇰🇪","type":"ss","server":"62.12.116.66","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇮 اسلوونی","type":"ss","server":"192.71.244.150","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇷 یونان ","type":"ss","server":"192.71.166.100","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇸 ایسلند ۲","type":"ss","server":"37.235.49.152","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇰🇿 قزاقستان ","type":"ss","server":"213.156.137.67","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵 ژاپن _1","type":"ss","server":"103.75.118.27","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇷 پورتوریکو","type":"ss","server":"185.47.255.219","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇿🇦 آفریقای جنوبی ","type":"ss","server":"41.203.4.34","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇸 ایسلند ۱","type":"ss","server":"37.235.49.162","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇦 پاناما ","type":"ss","server":"138.186.142.4","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه ۱ 🇨🇵","type":"ss","server":"51.158.145.178","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"لندن 🇬🇧 ۲","type":"ss","server":"77.72.5.113","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"جزیره من 🇮🇲","type":"ss","server":"37.235.55.21","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"اوکراین 🇺🇦","type":"ss","server":"5.188.6.8","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷 فرانسه ۲","type":"ss","server":"51.159.111.208","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"سوئیس 🇨🇭_1","type":"ss","server":"84.17.53.160","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"چک 🇨🇿","type":"ss","server":"143.244.58.102","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"سوئیس 🇨🇭_2","type":"ss","server":"156.146.62.160","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"سوئد 🇸🇪 ۱","type":"ss","server":"37.19.222.212","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵 ژاپن _2","type":"ss","server":"54.199.83.239","port":2333,"password":"doub.io","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸 تگزاس ","type":"ss","server":"156.146.38.163","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇺🇸 آریزونا ","type":"ss","server":"184.170.241.194","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"هلند 🇳🇱 ","type":"ss","server":"109.201.152.181","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇰🇷 کره جنوبی  ۱","type":"ss","server":"43.202.49.222","port":2333,"password":"doub.io","cipher":"aes-256-cfb"}
+  - {"name":"آلمان 🇩🇪 ۴","type":"vmess","server":"172.64.162.23","port":443,"cipher":"auto","uuid":"91a4ed1f-f693-4685-a6be-f0981d6f2613","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss28885","headers":{"host":"tree.blanku.me"}}}
+  - {"name":"آلمان 🇩🇪 ۱","type":"ss","server":"162.19.170.209","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۱","type":"ss","server":"162.19.83.11","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۲","type":"ss","server":"162.19.83.14","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۳","type":"ss","server":"57.128.74.169","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"لهستان 🇵🇱","type":"ss","server":"217.30.10.68","port":9005,"password":"ZET59LF6DvCC8KVt","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪_💻 Channel 🆔 : @AlienVPN402 ���\r_27_489","type":"ss","server":"5.9.198.45","port":3135,"password":"YxGXa1EG3Yf6TuyGtDFalM","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇳🇱_BlueDiamondGroup_tls_grpc_CDN_trojan\r_2_353","type":"trojan","server":"45.131.4.102","port":443,"udp":true,"password":"5b000ca0-89fd-4f62-bd1a-a10c0b5dc026","sni":"ku8.vsaripn.com","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"kTqz28iTRrc3MPmiK"}}
+  - {"name":"🇺🇸_15.204.209.50\r_350","type":"trojan","server":"15.204.209.50","port":80,"udp":true,"password":"7ea37e4f-325b-416f-901a-67012367307f","sni":"telewebion.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇳🇱_🛑  @v2raying_3_280","type":"vmess","server":"188.114.99.0","port":8443,"cipher":"auto","uuid":"aa0c4744-9568-4bee-a08b-73668a9b2a42","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/cloudconebbb","headers":{"host":"cloudconebbb.gorgorchicken.one"}}}
+proxy-groups:
+  - name: 🔀 نوع انتخاب پروکسی
+    type: select
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (بهترین پینگ) ➡️
+      - توزیع بار (هش سازگار) ♻️
+      - توزیع بار (یکنواخت) ⏳
+      - ⛔ قطع اینترنت
+      - 🛡️ بدون فیلترشکن
+  - name: 📶 انتخاب نوع اتصال
+    type: select
+    proxies:
+      - 🌐 همه سایتا
+      - 🔐 فقط سایتای فیلتر شده
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - ⚡️@DeamNet_🔻 🇺🇸United States
+      - ⚡️@DeamNet_🔻 🇨🇦Canada
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 5
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 49
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 10
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 6 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 12
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 13
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 14
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 2
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 89
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 22
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 27
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 28
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 41
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 30
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 32
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 34
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 35
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 76
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39
+      - ⚡️@DeamNet_🔻 🇺🇸United States 6
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 33 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 42
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 46
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 48
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 52
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 53
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 59
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 91
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 61
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 62
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 68
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 71
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 25 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 72
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 86
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 94
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 96
+      - ⚡️@DeamNet_🔻 🇺🇸United States 14
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 65 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 67 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 97
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 100
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 103
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 104
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 105
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 16 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 111
+      - ⚡️@DeamNet_🔻 🇺🇸United States 16
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 114
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 115
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 118
+      - ⚡️@DeamNet_🔻 ...
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 11
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 121
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 126
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 127
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 128
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 135
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 142
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 26
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 26
+      - ⚡️@DeamNet_🔻 🇺🇸United States 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 29
+      - ⚡️@DeamNet_🔻 🇺🇸United States 30
+      - ⚡️@DeamNet_🔻 🇺🇸United States 34
+      - ⚡️@DeamNet_🔻 🇺🇸United States 38
+      - ⚡️@DeamNet_🔻 🇺🇸United States 42
+      - ⚡️@DeamNet_🔻 🇺🇸United States 44
+      - ⚡️@DeamNet_🔻 🇺🇸United States 49
+      - ⚡️@DeamNet_🔻 🇺🇸United States 56
+      - ⚡️@DeamNet_🔻 🇺🇸United States 57
+      - ⚡️@DeamNet_🔻 🇺🇸United States 58
+      - ⚡️@DeamNet_🔻 🇺🇸United States 60
+      - ⚡️@DeamNet_🔻 🇺🇸United States 63
+      - ⚡️@DeamNet_🔻 🇺🇸United States 64
+      - ⚡️@DeamNet_🔻 🇺🇸United States 83
+      - ⚡️@DeamNet_🔻 🇺🇸United States 90
+      - ⚡️@DeamNet_🔻 🇸🇬Singapore 3
+      - ⚡️@DeamNet_🔻 🇰🇷South Korea
+      - ⚡️@DeamNet_🔻 ... 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 119
+      - ⚡️@DeamNet_🔻 🇦🇪United Arab Emirates 2
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 31
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 88 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 129
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 33
+      - ⚡️@DeamNet_🔻 🇹🇼Taiwan
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 35
+      - ⚡️@DeamNet_🔻 🇧🇭Bahrain
+      - ⚡️@DeamNet_🔻 🇺🇸United States 2 2
+      - ⚡️@DeamNet_🔻 🇨🇳China 5
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 15
+      - ⚡️@DeamNet_🔻 🇺🇸United States 182
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _1
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_1
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_2
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _2
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - لهستان 🇵🇱
+      - "🇩🇪_💻 Channel 🆔 : @AlienVPN402 ���\r_27_489"
+      - "🇳🇱_BlueDiamondGroup_tls_grpc_CDN_trojan\r_2_353"
+      - "🇺🇸_15.204.209.50\r_350"
+      - 🇳🇱_🛑  @v2raying_3_280
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - ⚡️@DeamNet_🔻 🇺🇸United States
+      - ⚡️@DeamNet_🔻 🇨🇦Canada
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 5
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 49
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 10
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 6 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 12
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 13
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 14
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 2
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 89
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 22
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 27
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 28
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 41
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 30
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 32
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 34
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 35
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 76
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39
+      - ⚡️@DeamNet_🔻 🇺🇸United States 6
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 33 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 42
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 46
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 48
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 52
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 53
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 59
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 91
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 61
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 62
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 68
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 71
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 25 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 72
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 86
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 94
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 96
+      - ⚡️@DeamNet_🔻 🇺🇸United States 14
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 65 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 67 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 97
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 100
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 103
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 104
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 105
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 16 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 111
+      - ⚡️@DeamNet_🔻 🇺🇸United States 16
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 114
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 115
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 118
+      - ⚡️@DeamNet_🔻 ...
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 11
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 121
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 126
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 127
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 128
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 135
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 142
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 26
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 26
+      - ⚡️@DeamNet_🔻 🇺🇸United States 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 29
+      - ⚡️@DeamNet_🔻 🇺🇸United States 30
+      - ⚡️@DeamNet_🔻 🇺🇸United States 34
+      - ⚡️@DeamNet_🔻 🇺🇸United States 38
+      - ⚡️@DeamNet_🔻 🇺🇸United States 42
+      - ⚡️@DeamNet_🔻 🇺🇸United States 44
+      - ⚡️@DeamNet_🔻 🇺🇸United States 49
+      - ⚡️@DeamNet_🔻 🇺🇸United States 56
+      - ⚡️@DeamNet_🔻 🇺🇸United States 57
+      - ⚡️@DeamNet_🔻 🇺🇸United States 58
+      - ⚡️@DeamNet_🔻 🇺🇸United States 60
+      - ⚡️@DeamNet_🔻 🇺🇸United States 63
+      - ⚡️@DeamNet_🔻 🇺🇸United States 64
+      - ⚡️@DeamNet_🔻 🇺🇸United States 83
+      - ⚡️@DeamNet_🔻 🇺🇸United States 90
+      - ⚡️@DeamNet_🔻 🇸🇬Singapore 3
+      - ⚡️@DeamNet_🔻 🇰🇷South Korea
+      - ⚡️@DeamNet_🔻 ... 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 119
+      - ⚡️@DeamNet_🔻 🇦🇪United Arab Emirates 2
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 31
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 88 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 129
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 33
+      - ⚡️@DeamNet_🔻 🇹🇼Taiwan
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 35
+      - ⚡️@DeamNet_🔻 🇧🇭Bahrain
+      - ⚡️@DeamNet_🔻 🇺🇸United States 2 2
+      - ⚡️@DeamNet_🔻 🇨🇳China 5
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 15
+      - ⚡️@DeamNet_🔻 🇺🇸United States 182
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _1
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_1
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_2
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _2
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - لهستان 🇵🇱
+      - "🇩🇪_💻 Channel 🆔 : @AlienVPN402 ���\r_27_489"
+      - "🇳🇱_BlueDiamondGroup_tls_grpc_CDN_trojan\r_2_353"
+      - "🇺🇸_15.204.209.50\r_350"
+      - 🇳🇱_🛑  @v2raying_3_280
+  - name: پشتیبان (بهترین پینگ) ➡️
+    type: fallback
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - ⚡️@DeamNet_🔻 🇺🇸United States
+      - ⚡️@DeamNet_🔻 🇨🇦Canada
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 5
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 49
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 10
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 6 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 12
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 13
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 14
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 2
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 89
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 22
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 27
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 28
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 41
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 30
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 32
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 34
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 35
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 76
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39
+      - ⚡️@DeamNet_🔻 🇺🇸United States 6
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 33 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 42
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 46
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 48
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 52
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 53
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 59
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 91
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 61
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 62
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 68
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 71
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 25 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 72
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 86
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 94
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 96
+      - ⚡️@DeamNet_🔻 🇺🇸United States 14
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 65 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 67 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 97
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 100
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 103
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 104
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 105
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 16 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 111
+      - ⚡️@DeamNet_🔻 🇺🇸United States 16
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 114
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 115
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 118
+      - ⚡️@DeamNet_🔻 ...
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 11
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 121
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 126
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 127
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 128
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 135
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 142
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 26
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 26
+      - ⚡️@DeamNet_🔻 🇺🇸United States 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 29
+      - ⚡️@DeamNet_🔻 🇺🇸United States 30
+      - ⚡️@DeamNet_🔻 🇺🇸United States 34
+      - ⚡️@DeamNet_🔻 🇺🇸United States 38
+      - ⚡️@DeamNet_🔻 🇺🇸United States 42
+      - ⚡️@DeamNet_🔻 🇺🇸United States 44
+      - ⚡️@DeamNet_🔻 🇺🇸United States 49
+      - ⚡️@DeamNet_🔻 🇺🇸United States 56
+      - ⚡️@DeamNet_🔻 🇺🇸United States 57
+      - ⚡️@DeamNet_🔻 🇺🇸United States 58
+      - ⚡️@DeamNet_🔻 🇺🇸United States 60
+      - ⚡️@DeamNet_🔻 🇺🇸United States 63
+      - ⚡️@DeamNet_🔻 🇺🇸United States 64
+      - ⚡️@DeamNet_🔻 🇺🇸United States 83
+      - ⚡️@DeamNet_🔻 🇺🇸United States 90
+      - ⚡️@DeamNet_🔻 🇸🇬Singapore 3
+      - ⚡️@DeamNet_🔻 🇰🇷South Korea
+      - ⚡️@DeamNet_🔻 ... 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 119
+      - ⚡️@DeamNet_🔻 🇦🇪United Arab Emirates 2
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 31
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 88 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 129
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 33
+      - ⚡️@DeamNet_🔻 🇹🇼Taiwan
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 35
+      - ⚡️@DeamNet_🔻 🇧🇭Bahrain
+      - ⚡️@DeamNet_🔻 🇺🇸United States 2 2
+      - ⚡️@DeamNet_🔻 🇨🇳China 5
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 15
+      - ⚡️@DeamNet_🔻 🇺🇸United States 182
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _1
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_1
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_2
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _2
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - لهستان 🇵🇱
+      - "🇩🇪_💻 Channel 🆔 : @AlienVPN402 ���\r_27_489"
+      - "🇳🇱_BlueDiamondGroup_tls_grpc_CDN_trojan\r_2_353"
+      - "🇺🇸_15.204.209.50\r_350"
+      - 🇳🇱_🛑  @v2raying_3_280
+  - name: توزیع بار (هش سازگار) ♻️
+    type: load-balance
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - ⚡️@DeamNet_🔻 🇺🇸United States
+      - ⚡️@DeamNet_🔻 🇨🇦Canada
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 5
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 49
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 10
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 6 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 12
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 13
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 14
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 2
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 89
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 22
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 27
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 28
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 41
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 30
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 32
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 34
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 35
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 76
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39
+      - ⚡️@DeamNet_🔻 🇺🇸United States 6
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 33 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 42
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 46
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 48
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 52
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 53
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 59
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 91
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 61
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 62
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 68
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 71
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 25 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 72
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 86
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 94
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 96
+      - ⚡️@DeamNet_🔻 🇺🇸United States 14
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 65 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 67 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 97
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 100
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 103
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 104
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 105
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 16 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 111
+      - ⚡️@DeamNet_🔻 🇺🇸United States 16
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 114
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 115
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 118
+      - ⚡️@DeamNet_🔻 ...
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 11
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 121
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 126
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 127
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 128
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 135
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 142
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 26
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 26
+      - ⚡️@DeamNet_🔻 🇺🇸United States 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 29
+      - ⚡️@DeamNet_🔻 🇺🇸United States 30
+      - ⚡️@DeamNet_🔻 🇺🇸United States 34
+      - ⚡️@DeamNet_🔻 🇺🇸United States 38
+      - ⚡️@DeamNet_🔻 🇺🇸United States 42
+      - ⚡️@DeamNet_🔻 🇺🇸United States 44
+      - ⚡️@DeamNet_🔻 🇺🇸United States 49
+      - ⚡️@DeamNet_🔻 🇺🇸United States 56
+      - ⚡️@DeamNet_🔻 🇺🇸United States 57
+      - ⚡️@DeamNet_🔻 🇺🇸United States 58
+      - ⚡️@DeamNet_🔻 🇺🇸United States 60
+      - ⚡️@DeamNet_🔻 🇺🇸United States 63
+      - ⚡️@DeamNet_🔻 🇺🇸United States 64
+      - ⚡️@DeamNet_🔻 🇺🇸United States 83
+      - ⚡️@DeamNet_🔻 🇺🇸United States 90
+      - ⚡️@DeamNet_🔻 🇸🇬Singapore 3
+      - ⚡️@DeamNet_🔻 🇰🇷South Korea
+      - ⚡️@DeamNet_🔻 ... 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 119
+      - ⚡️@DeamNet_🔻 🇦🇪United Arab Emirates 2
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 31
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 88 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 129
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 33
+      - ⚡️@DeamNet_🔻 🇹🇼Taiwan
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 35
+      - ⚡️@DeamNet_🔻 🇧🇭Bahrain
+      - ⚡️@DeamNet_🔻 🇺🇸United States 2 2
+      - ⚡️@DeamNet_🔻 🇨🇳China 5
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 15
+      - ⚡️@DeamNet_🔻 🇺🇸United States 182
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _1
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_1
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_2
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _2
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - لهستان 🇵🇱
+      - "🇩🇪_💻 Channel 🆔 : @AlienVPN402 ���\r_27_489"
+      - "🇳🇱_BlueDiamondGroup_tls_grpc_CDN_trojan\r_2_353"
+      - "🇺🇸_15.204.209.50\r_350"
+      - 🇳🇱_🛑  @v2raying_3_280
+    strategy: consistent-hashing
+  - name: توزیع بار (یکنواخت) ⏳
+    type: load-balance
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - ⚡️@DeamNet_🔻 🇺🇸United States
+      - ⚡️@DeamNet_🔻 🇨🇦Canada
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 5
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 49
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 10
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 6 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 12
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 13
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 14
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 2
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 89
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 22
+      - ⚡️@DeamNet_🔻 🇩🇪Germany 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 27
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 28
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 41
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 30
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 32
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 34
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 35
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 76
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39
+      - ⚡️@DeamNet_🔻 🇺🇸United States 6
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 33 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 42
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 46
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 48
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 52
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 53
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 59
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 91
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 61
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 4
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 62
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 68
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 71
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 25 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 72
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 81 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 86
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 94
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 96
+      - ⚡️@DeamNet_🔻 🇺🇸United States 14
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 65 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 67 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 97
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 100
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 103
+      - ⚡️@DeamNet_🔻 🇦🇹Austria 3
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 104
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 105
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 8
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 16 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 111
+      - ⚡️@DeamNet_🔻 🇺🇸United States 16
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 114
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 115
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 118
+      - ⚡️@DeamNet_🔻 ...
+      - ⚡️@DeamNet_🔻 🇳🇱Netherlands 11
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 121
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 126
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 127
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 128
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 135
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 142
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 26
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 26
+      - ⚡️@DeamNet_🔻 🇺🇸United States 27
+      - ⚡️@DeamNet_🔻 🇺🇸United States 29
+      - ⚡️@DeamNet_🔻 🇺🇸United States 30
+      - ⚡️@DeamNet_🔻 🇺🇸United States 34
+      - ⚡️@DeamNet_🔻 🇺🇸United States 38
+      - ⚡️@DeamNet_🔻 🇺🇸United States 42
+      - ⚡️@DeamNet_🔻 🇺🇸United States 44
+      - ⚡️@DeamNet_🔻 🇺🇸United States 49
+      - ⚡️@DeamNet_🔻 🇺🇸United States 56
+      - ⚡️@DeamNet_🔻 🇺🇸United States 57
+      - ⚡️@DeamNet_🔻 🇺🇸United States 58
+      - ⚡️@DeamNet_🔻 🇺🇸United States 60
+      - ⚡️@DeamNet_🔻 🇺🇸United States 63
+      - ⚡️@DeamNet_🔻 🇺🇸United States 64
+      - ⚡️@DeamNet_🔻 🇺🇸United States 83
+      - ⚡️@DeamNet_🔻 🇺🇸United States 90
+      - ⚡️@DeamNet_🔻 🇸🇬Singapore 3
+      - ⚡️@DeamNet_🔻 🇰🇷South Korea
+      - ⚡️@DeamNet_🔻 ... 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 119
+      - ⚡️@DeamNet_🔻 🇦🇪United Arab Emirates 2
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 31
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 2 2
+      - ⚡️@DeamNet_🔻 🇨🇦Canada 39 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 88 2
+      - ⚡️@DeamNet_🔻 🇺🇸United States 129
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 33
+      - ⚡️@DeamNet_🔻 🇹🇼Taiwan
+      - ⚡️@DeamNet_🔻 🇬🇧United Kingdom 35
+      - ⚡️@DeamNet_🔻 🇧🇭Bahrain
+      - ⚡️@DeamNet_🔻 🇺🇸United States 2 2
+      - ⚡️@DeamNet_🔻 🇨🇳China 5
+      - ⚡️@DeamNet_🔻 🇯🇵Japan 15
+      - ⚡️@DeamNet_🔻 🇺🇸United States 182
+      - '🇸🇪 سوئد '
+      - '🇷🇸 صربستان '
+      - '🇳🇴 نروژ '
+      - 🇩🇰 دانمارک ۱
+      - '🇱🇺 لوگزامبورگ '
+      - '🇦🇿 آذربایجان '
+      - دانمارک 🇩🇰 ۲
+      - '🇨🇴 کلمبیا '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - 🇵🇪 پرو
+      - '🇲🇰 مقدونیه '
+      - '🇻🇳 ویتنام '
+      - '🇦🇱 آلبانی '
+      - 'کرواسی 🇭🇷 '
+      - 'بلژیک 🇧🇪 '
+      - '🇷🇴 رومانی '
+      - ترکیه 🇹🇷
+      - '🇪🇸 اسپانیا '
+      - لندن 🇬🇧 ۱
+      - '🇮🇪 ایرلند '
+      - اکوادور 🇪🇨
+      - امریکا 🇺🇲
+      - بوسنی 🇧🇦
+      - 🇨🇾 قبرس
+      - '🇵🇱 لهستان '
+      - کنیا 🇰🇪
+      - 🇸🇮 اسلوونی
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲
+      - '🇰🇿 قزاقستان '
+      - 🇯🇵 ژاپن _1
+      - 🇵🇷 پورتوریکو
+      - '🇿🇦 آفریقای جنوبی '
+      - 🇮🇸 ایسلند ۱
+      - '🇵🇦 پاناما '
+      - فرانسه ۱ 🇨🇵
+      - لندن 🇬🇧 ۲
+      - جزیره من 🇮🇲
+      - اوکراین 🇺🇦
+      - 🇫🇷 فرانسه ۲
+      - سوئیس 🇨🇭_1
+      - چک 🇨🇿
+      - سوئیس 🇨🇭_2
+      - سوئد 🇸🇪 ۱
+      - 🇯🇵 ژاپن _2
+      - '🇺🇸 تگزاس '
+      - '🇺🇸 آریزونا '
+      - 'هلند 🇳🇱 '
+      - 🇰🇷 کره جنوبی  ۱
+      - آلمان 🇩🇪 ۴
+      - آلمان 🇩🇪 ۱
+      - فرانسه 🇨🇵 ۱
+      - فرانسه 🇨🇵 ۲
+      - فرانسه 🇨🇵 ۳
+      - لهستان 🇵🇱
+      - "🇩🇪_💻 Channel 🆔 : @AlienVPN402 ���\r_27_489"
+      - "🇳🇱_BlueDiamondGroup_tls_grpc_CDN_trojan\r_2_353"
+      - "🇺🇸_15.204.209.50\r_350"
+      - 🇳🇱_🛑  @v2raying_3_280
+    strategy: round-robin
+  - name: 🇮🇷 سایتای ایرانی
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🏴‍☠️ سایتای تحریمی
+    type: select
+    proxies:
+      - 🔀 نوع انتخاب پروکسی
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+  - name: 🤬 سایتای سانسوری
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🔀 نوع انتخاب پروکسی
+      - 🛡️ بدون فیلترشکن
+  - name: 🆎 تبلیغات
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🍃 تصفیه برنامه
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛑 رهگیری جهانی
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🎮 استیم
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛡️ بدون فیلترشکن
+    type: select
+    proxies:
+      - DIRECT
+  - name: ⛔ قطع اینترنت
+    type: select
+    proxies:
+      - REJECT
+  - name: 🚫 اجازه ندادن
+    type: select
+    proxies:
+      - REJECT
+  - name: 🔐 فقط سایتای فیلتر شده
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🌐 همه سایتا
+    type: select
+    proxies:
+      - 🔀 نوع انتخاب پروکسی
+
+rule-providers:
+  blocked:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/blocked-sites.yml
+    interval: 432000
+    path: ./ruleset/blocked.yaml
+  category_porn:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-porn.yaml
+    interval: 432000
+    path: ./ruleset/category_porn.yaml
+  facebook:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/facebook.yaml
+    interval: 432000
+    path: ./ruleset/facebook.yaml
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 432000
+    path: ./ruleset/youtube.yaml
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/instagram.yaml
+    interval: 432000
+    path: ./ruleset/instagram.yaml
+  spotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/spotify.yaml
+    interval: 432000
+    path: ./ruleset/spotify.yaml
+  twitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/twitter.yaml
+    interval: 432000
+    path: ./ruleset/twitter.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 432000
+    path: ./ruleset/telegram.yaml
+  openai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/openai.yaml
+    interval: 432000
+    path: ./ruleset/openai.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 432000
+    path: ./ruleset/whatsapp.yaml
+  tiktok:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/tiktok.yaml
+    interval: 432000
+    path: ./ruleset/tiktok.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 432000
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/censor.yaml
+    interval: 432000
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 432000
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/private.yaml
+    interval: 432000
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 432000
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/iran.yaml
+    interval: 432000
+    path: ./ruleset/iran.yaml
+  iran_other:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_other.yaml
+    interval: 432000
+    path: ./ruleset/iran_other.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/steam.yaml
+    interval: 432000
+    path: ./ruleset/steam.yaml
+  Purification_ip:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app%20ip.yaml
+    interval: 432000
+    path: ./ruleset/Purificationip.yaml
+  ads_ip:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/ads%20ip.yaml
+    interval: 432000
+    path: ./ruleset/adsip.yaml
+  Purification:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app.yaml
+    interval: 432000
+    path: ./ruleset/Purification.yaml
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 432000
+    path: ./ruleset/category_public_tracker.yaml
+  Global:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Global%20tracking.yaml
+    interval: 432000
+    path: ./ruleset/Global.yaml
+  category_ads_all:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-ads-all.yaml
+    interval: 432000
+    path: ./ruleset/category_ads_all.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 432000
+    path: ./ruleset/iran_ads.yaml
+  add:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/add.yaml
+    interval: 432000
+    path: ./ruleset/add.yaml
+  MoreAd:
+    type: http
+    behavior: domain
+    url: https://howdy.id/download/rules/clash.txt
+    interval: 86400
+    path: ./providers/rule-provider_clash.yaml
+  AntiAd:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    interval: 432000
+    path: ./ruleset/AntiAd.yaml
+  GoodbyeAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/GoodbyeAds.yaml
+    interval: 432000
+    path: ./ruleset/add.yaml
+  tahrim:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/tahrim.yaml
+    interval: 432000
+    path: ./ruleset/tahrim.yaml
+rules:
+  - RULE-SET,blocked,🔀 نوع انتخاب پروکسی
+  - RULE-SET,category_porn,🔀 نوع انتخاب پروکسی
+  - RULE-SET,facebook,🔀 نوع انتخاب پروکسی
+  - RULE-SET,youtube,🔀 نوع انتخاب پروکسی
+  - RULE-SET,instagram,🔀 نوع انتخاب پروکسی
+  - RULE-SET,spotify,🔀 نوع انتخاب پروکسی
+  - RULE-SET,twitter,🔀 نوع انتخاب پروکسی
+  - RULE-SET,telegram,🔀 نوع انتخاب پروکسی
+  - RULE-SET,openai,🔀 نوع انتخاب پروکسی
+  - RULE-SET,whatsapp,🔀 نوع انتخاب پروکسی
+  - RULE-SET,tiktok,🔀 نوع انتخاب پروکسی
+  - RULE-SET,twitch,🔀 نوع انتخاب پروکسی
+  - RULE-SET,censor,🤬 سایتای سانسوری
+  - RULE-SET,local_ips,🛡️ بدون فیلترشکن
+  - RULE-SET,private,🛡️ بدون فیلترشکن
+  - RULE-SET,category_ir,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran_other,🇮🇷 سایتای ایرانی
+  - RULE-SET,steam,🎮 استیم
+  - RULE-SET,Purification_ip,no-resolve
+  - RULE-SET,ads_ip,no-resolve
+  - RULE-SET,Purification,🍃 تصفیه برنامه
+  - RULE-SET,category_public_tracker,🛑 رهگیری جهانی
+  - RULE-SET,Global,🛑 رهگیری جهانی
+  - RULE-SET,category_ads_all,🆎 تبلیغات
+  - RULE-SET,iran_ads,🆎 تبلیغات
+  - RULE-SET,add,🆎 تبلیغات
+  - RULE-SET,MoreAd,🆎 تبلیغات
+  - RULE-SET,AntiAd,🆎 تبلیغات
+  - RULE-SET,GoodbyeAds,🆎 تبلیغات
+  - RULE-SET,tahrim,🏴‍☠️ سایتای تحریمی
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,cff.pw,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,vpnse.org,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,cfmem.com,🔀 نوع انتخاب پروکسی
+  - GEOIP,IR,🇮🇷 سایتای ایرانی
+  - MATCH,📶 انتخاب نوع اتصال
