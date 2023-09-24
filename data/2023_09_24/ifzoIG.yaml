@@ -1,0 +1,537 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash.Meta
+# 创建时间：2023-09-24 06:14:28
+# 使用模版：V2RaySE 默认模版
+# 节点数量：36
+####################################
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"0908-clone","type":"vless","server":"104.243.26.126","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908-clone+443_1","type":"vless","server":"154.23.247.6","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908-clone+443菲律宾","type":"vless","server":"154.92.9.157","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908-clone+443_2","type":"vless","server":"103.160.204.204","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908-clone+443_3","type":"vless","server":"103.184.44.186","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908-clone+443_4","type":"vless","server":"34.96.187.61","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908-clone+443_5","type":"vless","server":"34.92.43.3","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908-clone+443_6","type":"vless","server":"101.52.222.8","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908-clone+443_7","type":"vless","server":"103.184.44.202","port":443,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":true,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_1","type":"vless","server":"132.145.83.147","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_2","type":"vless","server":"146.56.155.190","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_3","type":"vless","server":"146.56.176.255","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_4","type":"vless","server":"131.186.19.111","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_5","type":"vless","server":"129.154.200.117","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_6","type":"vless","server":"146.56.180.92","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_7","type":"vless","server":"103.160.204.171","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_8","type":"vless","server":"193.123.242.146","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_9","type":"vless","server":"146.56.183.44","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_10","type":"vless","server":"129.154.206.175","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_11","type":"vless","server":"130.162.158.81","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_12","type":"vless","server":"152.70.246.202","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_13","type":"vless","server":"132.145.95.76","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_14","type":"vless","server":"154.92.9.2","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_15","type":"vless","server":"146.56.152.6","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_16","type":"vless","server":"132.145.92.176","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_17","type":"vless","server":"146.56.156.50","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_18","type":"vless","server":"152.70.242.147","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_19","type":"vless","server":"152.70.242.51","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_20","type":"vless","server":"146.56.134.249","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_21","type":"vless","server":"130.162.132.163","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_22","type":"vless","server":"146.56.163.104","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_23","type":"vless","server":"130.162.158.109","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_24","type":"vless","server":"146.56.150.64","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_25","type":"vless","server":"146.56.188.71","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"0908_26","type":"vless","server":"152.70.243.94","port":80,"uuid":"93279387-671e-4454-9c2d-accf6b33ed44","tls":false,"servername":"0908.frasier.buzz","network":"ws","ws-opts":{"path":"/a","headers":{"host":"0908.frasier.buzz"}}}
+  - {"name":"defaultName","type":"vless","server":"93279387-671e-445#defaultName","port":93279387,"cipher":"auto","uuid":"93279387-671e-445#defaultName","alterId":0,"tls":false,"skip-cert-verify":true}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 0908-clone
+      - 0908-clone+443_1
+      - 0908-clone+443菲律宾
+      - 0908-clone+443_2
+      - 0908-clone+443_3
+      - 0908-clone+443_4
+      - 0908-clone+443_5
+      - 0908-clone+443_6
+      - 0908-clone+443_7
+      - '0908_1'
+      - '0908_2'
+      - '0908_3'
+      - '0908_4'
+      - '0908_5'
+      - '0908_6'
+      - '0908_7'
+      - '0908_8'
+      - '0908_9'
+      - '0908_10'
+      - '0908_11'
+      - '0908_12'
+      - '0908_13'
+      - '0908_14'
+      - '0908_15'
+      - '0908_16'
+      - '0908_17'
+      - '0908_18'
+      - '0908_19'
+      - '0908_20'
+      - '0908_21'
+      - '0908_22'
+      - '0908_23'
+      - '0908_24'
+      - '0908_25'
+      - '0908_26'
+      - defaultName
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 0908-clone
+      - 0908-clone+443_1
+      - 0908-clone+443菲律宾
+      - 0908-clone+443_2
+      - 0908-clone+443_3
+      - 0908-clone+443_4
+      - 0908-clone+443_5
+      - 0908-clone+443_6
+      - 0908-clone+443_7
+      - '0908_1'
+      - '0908_2'
+      - '0908_3'
+      - '0908_4'
+      - '0908_5'
+      - '0908_6'
+      - '0908_7'
+      - '0908_8'
+      - '0908_9'
+      - '0908_10'
+      - '0908_11'
+      - '0908_12'
+      - '0908_13'
+      - '0908_14'
+      - '0908_15'
+      - '0908_16'
+      - '0908_17'
+      - '0908_18'
+      - '0908_19'
+      - '0908_20'
+      - '0908_21'
+      - '0908_22'
+      - '0908_23'
+      - '0908_24'
+      - '0908_25'
+      - '0908_26'
+      - defaultName
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 0908-clone
+      - 0908-clone+443_1
+      - 0908-clone+443菲律宾
+      - 0908-clone+443_2
+      - 0908-clone+443_3
+      - 0908-clone+443_4
+      - 0908-clone+443_5
+      - 0908-clone+443_6
+      - 0908-clone+443_7
+      - '0908_1'
+      - '0908_2'
+      - '0908_3'
+      - '0908_4'
+      - '0908_5'
+      - '0908_6'
+      - '0908_7'
+      - '0908_8'
+      - '0908_9'
+      - '0908_10'
+      - '0908_11'
+      - '0908_12'
+      - '0908_13'
+      - '0908_14'
+      - '0908_15'
+      - '0908_16'
+      - '0908_17'
+      - '0908_18'
+      - '0908_19'
+      - '0908_20'
+      - '0908_21'
+      - '0908_22'
+      - '0908_23'
+      - '0908_24'
+      - '0908_25'
+      - '0908_26'
+      - defaultName
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 0908-clone
+      - 0908-clone+443_1
+      - 0908-clone+443菲律宾
+      - 0908-clone+443_2
+      - 0908-clone+443_3
+      - 0908-clone+443_4
+      - 0908-clone+443_5
+      - 0908-clone+443_6
+      - 0908-clone+443_7
+      - '0908_1'
+      - '0908_2'
+      - '0908_3'
+      - '0908_4'
+      - '0908_5'
+      - '0908_6'
+      - '0908_7'
+      - '0908_8'
+      - '0908_9'
+      - '0908_10'
+      - '0908_11'
+      - '0908_12'
+      - '0908_13'
+      - '0908_14'
+      - '0908_15'
+      - '0908_16'
+      - '0908_17'
+      - '0908_18'
+      - '0908_19'
+      - '0908_20'
+      - '0908_21'
+      - '0908_22'
+      - '0908_23'
+      - '0908_24'
+      - '0908_25'
+      - '0908_26'
+      - defaultName
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 0908-clone
+      - 0908-clone+443_1
+      - 0908-clone+443菲律宾
+      - 0908-clone+443_2
+      - 0908-clone+443_3
+      - 0908-clone+443_4
+      - 0908-clone+443_5
+      - 0908-clone+443_6
+      - 0908-clone+443_7
+      - '0908_1'
+      - '0908_2'
+      - '0908_3'
+      - '0908_4'
+      - '0908_5'
+      - '0908_6'
+      - '0908_7'
+      - '0908_8'
+      - '0908_9'
+      - '0908_10'
+      - '0908_11'
+      - '0908_12'
+      - '0908_13'
+      - '0908_14'
+      - '0908_15'
+      - '0908_16'
+      - '0908_17'
+      - '0908_18'
+      - '0908_19'
+      - '0908_20'
+      - '0908_21'
+      - '0908_22'
+      - '0908_23'
+      - '0908_24'
+      - '0908_25'
+      - '0908_26'
+      - defaultName
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 0908-clone
+      - 0908-clone+443_1
+      - 0908-clone+443菲律宾
+      - 0908-clone+443_2
+      - 0908-clone+443_3
+      - 0908-clone+443_4
+      - 0908-clone+443_5
+      - 0908-clone+443_6
+      - 0908-clone+443_7
+      - '0908_1'
+      - '0908_2'
+      - '0908_3'
+      - '0908_4'
+      - '0908_5'
+      - '0908_6'
+      - '0908_7'
+      - '0908_8'
+      - '0908_9'
+      - '0908_10'
+      - '0908_11'
+      - '0908_12'
+      - '0908_13'
+      - '0908_14'
+      - '0908_15'
+      - '0908_16'
+      - '0908_17'
+      - '0908_18'
+      - '0908_19'
+      - '0908_20'
+      - '0908_21'
+      - '0908_22'
+      - '0908_23'
+      - '0908_24'
+      - '0908_25'
+      - '0908_26'
+      - defaultName
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 0908-clone
+      - 0908-clone+443_1
+      - 0908-clone+443菲律宾
+      - 0908-clone+443_2
+      - 0908-clone+443_3
+      - 0908-clone+443_4
+      - 0908-clone+443_5
+      - 0908-clone+443_6
+      - 0908-clone+443_7
+      - '0908_1'
+      - '0908_2'
+      - '0908_3'
+      - '0908_4'
+      - '0908_5'
+      - '0908_6'
+      - '0908_7'
+      - '0908_8'
+      - '0908_9'
+      - '0908_10'
+      - '0908_11'
+      - '0908_12'
+      - '0908_13'
+      - '0908_14'
+      - '0908_15'
+      - '0908_16'
+      - '0908_17'
+      - '0908_18'
+      - '0908_19'
+      - '0908_20'
+      - '0908_21'
+      - '0908_22'
+      - '0908_23'
+      - '0908_24'
+      - '0908_25'
+      - '0908_26'
+      - defaultName
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/LocalAreaNetwork.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanProgramAD.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleCN.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/SteamCN.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Microsoft.list
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Apple.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyMedia.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Telegram.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaCompanyIp.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
