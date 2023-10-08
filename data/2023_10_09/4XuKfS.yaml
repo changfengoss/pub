@@ -1,0 +1,1025 @@
+mixed-port: 7890
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
+mode: rule
+log-level: error
+ipv6: true
+external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
+  sniff-tls-sni: true
+  tracing: true
+hosts:
+  "localhost": 127.0.0.1
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    http: { ports: [1-442, 444-8442, 8444-65535], override-destination: true }
+    tls: { ports: [1-79, 81-8079, 8081-65535], override-destination: true }
+  force-domain:
+      - "+.v2ex.com"
+      - www.google.com
+      - google.com
+  skip-domain:
+      - Mijia Cloud
+      - dlg.io.mi.com
+  sniffing:
+    - tls
+    - http
+  port-whitelist:
+    - "80"
+    - "443"
+
+tun:
+  enable: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  stack: gvisor
+  dns-hijack:
+     - "any:53"
+     - "tcp://any:53"
+  auto-redir: true
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver:
+    - '1.1.1.1'
+    - '8.8.8.8'
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - 'stun.*.*'
+    - 'stun.*.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '*.lan'
+    - '+.msftncsi.com'
+    - msftconnecttest.com
+    - 'time?.*.com'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.apple.com'
+    - time-ios.apple.com
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'ntp?.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - 'ntp6.*.com'
+    - 'ntp7.*.com'
+    - '+.pool.ntp.org'
+    - '+.ipv6.microsoft.com'
+    - speedtest.cros.wr.pvp.net
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - cable.auth.com
+    - miwifi.com
+    - routerlogin.com
+    - routerlogin.net
+    - tendawifi.com
+    - tendawifi.net
+    - tplinklogin.net
+    - tplinkwifi.net
+    - '*.xiami.com'
+    - tplinkrepeater.net
+    - router.asus.com
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
+    - '*.openwrt.pool.ntp.org'
+    - resolver1.opendns.com
+    - 'GC._msDCS.*.*'
+    - 'DC._msDCS.*.*'
+    - 'PDC._msDCS.*.*'
+  use-hosts: true
+  nameserver:
+    - '8.8.4.4'
+    - '1.0.0.1'
+    - "https://1.0.0.1/dns-query"
+    - "https://8.8.4.4/dns-query"
+
+proxies:
+  - {"name":"🇷🇺🆃🆅🅲 | 0️⃣4️⃣","type":"ss","server":"185.221.153.52","port":51348,"password":"slGF5satpGFv54MJifOon","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇷🇺🆃🆅🅲 | 0️⃣5️⃣","type":"ss","server":"81.176.239.56","port":51348,"password":"z08jLl546HGfs09JlNnlbNT","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇷🇺🆃🆅🅲 | 0️⃣6️⃣","type":"ss","server":"92.223.109.205","port":51348,"password":"ackkokOi","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇦🆃🆅🅲 | 0️⃣7️⃣","type":"ss","server":"195.28.182.217","port":51348,"password":"shwGFDtBdr55HnoghRia","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇦🆃🆅🅲 | 0️⃣8️⃣","type":"ss","server":"193.0.61.96","port":51348,"password":"ho450MJHBVfdgsjkqw12HGb","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇦🆃🆅🅲 | 0️⃣9️⃣","type":"ss","server":"194.38.23.137","port":51348,"password":"NeVavl43FD6DgFoim7S6HGks","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇰🇿🆃🆅🅲 | 1️⃣0️⃣","type":"ss","server":"93.170.73.104","port":51348,"password":"AGr56G65GFgl7phobMoits","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇰🇿🆃🆅🅲 | 1️⃣1️⃣","type":"ss","server":"93.170.73.59","port":51348,"password":"hoc67HGF68Hesujlid","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇫🇮🆃🆅🅲 | 1️⃣2️⃣","type":"ss","server":"95.217.181.14","port":51348,"password":"yimkuHGFb6Dwpcsid2","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇨🇿🆃🆅🅲 | 1️⃣3️⃣","type":"ss","server":"195.123.246.15","port":51348,"password":"cyi4FDe4FdGfrt5yHNK","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇰🆃🆅🅲 | 1️⃣4️⃣","type":"ss","server":"185.48.248.126","port":51348,"password":"Onshe5GFdBmHypy","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇮🇱🆃🆅🅲 | 1️⃣5️⃣","type":"ss","server":"109.207.79.180","port":51348,"password":"nFDoc43MKOqDiksej","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇭🆃🆅🅲 | 1️⃣6️⃣","type":"ss","server":"45.64.184.192","port":51348,"password":"hsq0X5eG6HyqnujY3hOV","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬🆃🆅🅲 | 1️⃣7️⃣","type":"ss","server":"195.123.238.229","port":51348,"password":"TrikGtY68Jn10BwegTed","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇨🇭🆃🆅🅲 | 1️⃣8️⃣","type":"ss","server":"84.17.53.163","port":110,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇭🆃🆅🅲 | 1️⃣9️⃣","type":"ss","server":"84.17.53.163","port":80,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇭🆃🆅🅲 | 2️⃣0️⃣","type":"ss","server":"84.17.53.163","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇦🆃🆅🅲 | 2️⃣1️⃣","type":"ss","server":"104.129.128.151","port":51348,"password":"AwObceGhTnGcDacA","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇨🇦🆃🆅🅲 | 2️⃣2️⃣","type":"ss","server":"143.244.43.216","port":110,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇦🆃🆅🅲 | 2️⃣3️⃣","type":"ss","server":"143.244.43.216","port":80,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇦🆃🆅🅲 | 2️⃣4️⃣","type":"ss","server":"143.244.43.216","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪🆃🆅🅲 | 2️⃣5️⃣","type":"ss","server":"37.19.222.212","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪🆃🆅🅲 | 2️⃣6️⃣","type":"ss","server":"37.19.222.214","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪🆃🆅🅲 | 2️⃣7️⃣","type":"ss","server":"195.181.166.176","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪🆃🆅🅲 | 2️⃣8️⃣","type":"ss","server":"195.181.166.175","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪🆃🆅🅲 | 2️⃣9️⃣","type":"ss","server":"195.181.166.174","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪🆃🆅🅲 | 3️⃣0️⃣","type":"ss","server":"195.181.166.170","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣1️⃣","type":"ss","server":"162.19.18.107","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣2️⃣","type":"ss","server":"162.19.83.28","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣3️⃣","type":"ss","server":"57.128.75.84","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣4️⃣","type":"ss","server":"162.19.84.198","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣5️⃣","type":"ss","server":"162.19.19.210","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣6️⃣","type":"ss","server":"162.19.18.235","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣7️⃣","type":"ss","server":"57.128.20.106","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣8️⃣","type":"ss","server":"57.128.74.169","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 3️⃣9️⃣","type":"ss","server":"162.19.204.80","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣0️⃣","type":"ss","server":"162.19.204.77","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣1️⃣","type":"ss","server":"162.19.204.76","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣2️⃣","type":"ss","server":"162.19.204.74","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣3️⃣","type":"ss","server":"57.128.32.84","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣4️⃣","type":"ss","server":"57.128.32.81","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣5️⃣","type":"ss","server":"57.128.32.76","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣6️⃣","type":"ss","server":"162.19.83.13","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣7️⃣","type":"ss","server":"162.19.83.12","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣8️⃣","type":"ss","server":"162.19.83.11","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 4️⃣9️⃣","type":"ss","server":"162.19.83.9","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣0️⃣","type":"ss","server":"162.19.18.105","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣1️⃣","type":"ss","server":"162.19.59.166","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣2️⃣","type":"ss","server":"162.19.59.169","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣3️⃣","type":"ss","server":"51.158.37.251","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣4️⃣","type":"ss","server":"51.158.61.69","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣5️⃣","type":"ss","server":"51.158.37.46","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣6️⃣","type":"ss","server":"51.158.37.62","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣7️⃣","type":"ss","server":"51.159.104.104","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣8️⃣","type":"ss","server":"62.210.88.169","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 5️⃣9️⃣","type":"ss","server":"62.210.88.168","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣0️⃣","type":"ss","server":"62.210.88.167","port":80,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣1️⃣","type":"ss","server":"62.210.88.139","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣2️⃣","type":"ss","server":"62.210.88.157","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣3️⃣","type":"ss","server":"51.159.221.203","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣4️⃣","type":"ss","server":"51.159.14.40","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣5️⃣","type":"ss","server":"51.159.222.39","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣6️⃣","type":"ss","server":"51.159.222.38","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣7️⃣","type":"ss","server":"51.159.222.37","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣8️⃣","type":"ss","server":"51.159.222.36","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 6️⃣9️⃣","type":"ss","server":"51.159.222.32","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣0️⃣","type":"ss","server":"51.159.222.34","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣1️⃣","type":"ss","server":"51.159.222.33","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣2️⃣","type":"ss","server":"51.159.222.29","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣3️⃣","type":"ss","server":"51.159.222.22","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣4️⃣","type":"ss","server":"51.159.222.19","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣5️⃣","type":"ss","server":"62.210.88.156","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣6️⃣","type":"ss","server":"62.210.88.155","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣7️⃣","type":"ss","server":"62.210.88.152","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣8️⃣","type":"ss","server":"62.210.88.148","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 7️⃣9️⃣","type":"ss","server":"51.159.221.229","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣0️⃣","type":"ss","server":"51.159.221.231","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣1️⃣","type":"ss","server":"51.159.221.228","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣2️⃣","type":"ss","server":"51.159.221.230","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣3️⃣","type":"ss","server":"51.159.221.224","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣4️⃣","type":"ss","server":"51.159.221.227","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣5️⃣","type":"ss","server":"51.159.221.225","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣6️⃣","type":"ss","server":"51.159.221.223","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣7️⃣","type":"ss","server":"51.159.221.219","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣8️⃣","type":"ss","server":"51.158.54.244","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 8️⃣9️⃣","type":"ss","server":"51.158.54.245","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣0️⃣","type":"ss","server":"51.158.54.243","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣1️⃣","type":"ss","server":"51.158.54.241","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣2️⃣","type":"ss","server":"51.158.54.246","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣3️⃣","type":"ss","server":"51.158.54.239","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣4️⃣","type":"ss","server":"51.159.107.252","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣5️⃣","type":"ss","server":"51.158.54.240","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣6️⃣","type":"ss","server":"51.158.54.237","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣7️⃣","type":"ss","server":"51.158.54.235","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣8️⃣","type":"ss","server":"51.158.54.234","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 9️⃣9️⃣","type":"ss","server":"51.158.54.238","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣0️⃣","type":"ss","server":"51.158.54.233","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣1️⃣","type":"ss","server":"51.158.54.230","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣2️⃣","type":"ss","server":"51.158.54.231","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣3️⃣","type":"ss","server":"51.158.54.232","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣4️⃣","type":"ss","server":"51.158.54.229","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣5️⃣","type":"ss","server":"51.158.54.216","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣6️⃣","type":"ss","server":"51.158.54.214","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣7️⃣","type":"ss","server":"51.158.54.209","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣8️⃣","type":"ss","server":"51.158.54.210","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣0️⃣9️⃣","type":"ss","server":"51.158.54.208","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣0️⃣","type":"ss","server":"51.158.54.211","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣1️⃣","type":"ss","server":"51.158.54.207","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣2️⃣","type":"ss","server":"51.159.211.49","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣3️⃣","type":"ss","server":"51.159.210.173","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣4️⃣","type":"ss","server":"51.158.61.122","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣5️⃣","type":"ss","server":"51.159.210.114","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣6️⃣","type":"ss","server":"51.158.61.155","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣7️⃣","type":"ss","server":"138.199.14.94","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣8️⃣","type":"ss","server":"37.59.21.129","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣1️⃣9️⃣","type":"ss","server":"37.59.21.131","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣2️⃣0️⃣","type":"ss","server":"62.210.88.164","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣2️⃣1️⃣","type":"ss","server":"51.77.200.166","port":51348,"password":"rechSe6GFD4d3kK7F6ag","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣2️⃣2️⃣","type":"ss","server":"51.159.222.35","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪🆃🆅🅲 | 1️⃣2️⃣3️⃣","type":"ss","server":"89.187.169.36","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣2️⃣4️⃣","type":"ss","server":"162.19.170.225","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣2️⃣5️⃣","type":"ss","server":"57.129.1.22","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣2️⃣6️⃣","type":"ss","server":"57.129.1.18","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣2️⃣7️⃣","type":"ss","server":"141.95.125.11","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣2️⃣8️⃣","type":"ss","server":"141.95.125.48","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪🆃🆅🅲 | 1️⃣2️⃣9️⃣","type":"ss","server":"138.199.36.104","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪🆃🆅🅲 | 1️⃣3️⃣0️⃣","type":"ss","server":"169.150.206.155","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪🆃🆅🅲 | 1️⃣3️⃣1️⃣","type":"ss","server":"169.150.206.154","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇧🆃🆅🅲 | 1️⃣3️⃣2️⃣","type":"ss","server":"51.89.8.47","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪🆃🆅🅲 | 1️⃣3️⃣3️⃣","type":"ss","server":"89.187.169.38","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣3️⃣4️⃣","type":"ss","server":"162.19.139.37","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣3️⃣5️⃣","type":"ss","server":"57.128.141.15","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣3️⃣6️⃣","type":"ss","server":"57.128.141.14","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇧🆃🆅🅲 | 1️⃣3️⃣7️⃣","type":"ss","server":"198.244.231.26","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇧🆃🆅🅲 | 1️⃣3️⃣8️⃣","type":"ss","server":"198.244.231.28","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇧🆃🆅🅲 | 1️⃣3️⃣9️⃣","type":"ss","server":"195.181.165.151","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣0️⃣","type":"ss","server":"51.158.195.96","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣1️⃣","type":"ss","server":"51.158.200.149","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣2️⃣","type":"ss","server":"51.158.200.150","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣3️⃣","type":"ss","server":"51.158.200.145","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣4️⃣","type":"ss","server":"51.158.200.138","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣5️⃣","type":"ss","server":"51.158.202.197","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣6️⃣","type":"ss","server":"51.158.202.199","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣7️⃣","type":"ss","server":"51.158.202.198","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣8️⃣","type":"ss","server":"51.158.202.196","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣4️⃣9️⃣","type":"ss","server":"51.158.202.195","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣0️⃣","type":"ss","server":"51.158.202.193","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣1️⃣","type":"ss","server":"51.158.202.192","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣2️⃣","type":"ss","server":"51.158.202.190","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣3️⃣","type":"ss","server":"51.158.202.189","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣4️⃣","type":"ss","server":"51.158.202.186","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣5️⃣","type":"ss","server":"51.158.202.185","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣6️⃣","type":"ss","server":"51.158.200.55","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣7️⃣","type":"ss","server":"51.158.204.20","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣8️⃣","type":"ss","server":"51.158.202.175","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣5️⃣9️⃣","type":"ss","server":"51.158.202.173","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣0️⃣","type":"ss","server":"51.158.202.172","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣1️⃣","type":"ss","server":"51.158.202.171","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣2️⃣","type":"ss","server":"51.158.204.33","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣3️⃣","type":"ss","server":"51.158.204.24","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣4️⃣","type":"ss","server":"51.158.200.161","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣5️⃣","type":"ss","server":"51.158.200.65","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣6️⃣","type":"ss","server":"51.158.200.166","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣7️⃣","type":"ss","server":"51.158.200.164","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣8️⃣","type":"ss","server":"51.158.200.159","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣6️⃣9️⃣","type":"ss","server":"51.158.200.158","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣0️⃣","type":"ss","server":"51.158.200.72","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣1️⃣","type":"ss","server":"51.158.204.59","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣2️⃣","type":"ss","server":"51.158.204.80","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣3️⃣","type":"ss","server":"51.158.204.70","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣4️⃣","type":"ss","server":"51.158.204.63","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣5️⃣","type":"ss","server":"51.158.204.62","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣6️⃣","type":"ss","server":"51.158.204.42","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣7️⃣","type":"ss","server":"51.158.204.68","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣8️⃣","type":"ss","server":"51.158.204.25","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣7️⃣9️⃣","type":"ss","server":"51.158.204.81","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣0️⃣","type":"ss","server":"51.158.204.15","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣1️⃣","type":"ss","server":"51.158.204.82","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣2️⃣","type":"ss","server":"51.158.203.6","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣3️⃣","type":"ss","server":"51.158.203.4","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣4️⃣","type":"ss","server":"51.158.203.5","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣5️⃣","type":"ss","server":"51.158.203.3","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣6️⃣","type":"ss","server":"51.158.203.2","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣7️⃣","type":"ss","server":"51.158.202.254","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣8️⃣","type":"ss","server":"51.158.202.252","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣8️⃣9️⃣","type":"ss","server":"51.158.202.253","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣0️⃣","type":"ss","server":"51.158.202.251","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣1️⃣","type":"ss","server":"51.158.202.250","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣2️⃣","type":"ss","server":"51.158.200.141","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣3️⃣","type":"ss","server":"51.158.200.76","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣4️⃣","type":"ss","server":"51.158.200.119","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣5️⃣","type":"ss","server":"51.158.200.63","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣6️⃣","type":"ss","server":"51.158.200.60","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣7️⃣","type":"ss","server":"51.158.200.95","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣8️⃣","type":"ss","server":"51.158.204.39","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 1️⃣9️⃣9️⃣","type":"ss","server":"51.158.200.45","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 2️⃣0️⃣0️⃣","type":"ss","server":"146.59.55.84","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 2️⃣0️⃣1️⃣","type":"ss","server":"146.59.111.183","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 2️⃣0️⃣2️⃣","type":"ss","server":"146.59.111.184","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 2️⃣0️⃣3️⃣","type":"ss","server":"146.59.111.195","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷🆃🆅🅲 | 2️⃣0️⃣4️⃣","type":"ss","server":"146.59.71.220","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵🆃🆅🅲 | 2️⃣0️⃣5️⃣","type":"ss","server":"84.17.34.112","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵🆃🆅🅲 | 2️⃣0️⃣6️⃣","type":"ss","server":"84.17.34.111","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵🆃🆅🅲 | 2️⃣0️⃣7️⃣","type":"ss","server":"84.17.34.110","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵🆃🆅🅲 | 2️⃣0️⃣8️⃣","type":"ss","server":"84.17.34.109","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵🆃🆅🅲 | 2️⃣0️⃣9️⃣","type":"ss","server":"84.17.34.108","port":110,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵🆃🆅🅲 | 2️⃣1️⃣0️⃣","type":"ss","server":"84.17.34.108","port":80,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵🆃🆅🅲 | 2️⃣1️⃣1️⃣","type":"ss","server":"84.17.34.108","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇲🇾🆃🆅🅲 | 2️⃣1️⃣2️⃣","type":"ss","server":"124.217.248.193","port":51348,"password":"Divghe65GHJ53HgFrdon","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸🆃🆅🅲 | 2️⃣1️⃣3️⃣","type":"ss","server":"89.187.181.179","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸🆃🆅🅲 | 2️⃣1️⃣4️⃣","type":"ss","server":"89.187.179.192","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸🆃🆅🅲 | 2️⃣1️⃣5️⃣","type":"ss","server":"89.187.185.132","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪🆃🆅🅲 | 2️⃣1️⃣6️⃣","type":"ss","server":"138.199.36.73","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱🆃🆅🅲 | 2️⃣1️⃣7️⃣","type":"ss","server":"185.246.153.12","port":51348,"password":"verRi65HGFTh76sGesh","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇩🇪🆃🆅🅲 | 2️⃣1️⃣8️⃣","type":"ss","server":"213.226.68.8","port":51348,"password":"GokOu6gGF40JHlmAb","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇧🇬🆃🆅🅲 | 2️⃣1️⃣9️⃣","type":"ss","server":"213.183.63.58","port":51348,"password":"Fibj4fFDF5ander","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇷🆃🆅🅲 | 2️⃣2️⃣0️⃣","type":"ss","server":"5.188.36.54","port":51348,"password":"U8zmZHm67IUht6LRPd7","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇭🆃🆅🅲 | 2️⃣2️⃣1️⃣","type":"ss","server":"103.76.183.186","port":51348,"password":"DodsHgHNL98Bz2qOnOr","cipher":"chacha20-ietf-poly1305"}
+proxy-groups:
+  - name: MANUAL
+    type: select
+    proxies:
+      - URL-TEST
+      - FALLBACK
+      - '🇷🇺🆃🆅🅲 | 0️⃣4️⃣'
+      - '🇷🇺🆃🆅🅲 | 0️⃣5️⃣'
+      - '🇷🇺🆃🆅🅲 | 0️⃣6️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣7️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣8️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣9️⃣'
+      - '🇰🇿🆃🆅🅲 | 1️⃣0️⃣'
+      - '🇰🇿🆃🆅🅲 | 1️⃣1️⃣'
+      - '🇫🇮🆃🆅🅲 | 1️⃣2️⃣'
+      - '🇨🇿🆃🆅🅲 | 1️⃣3️⃣'
+      - '🇸🇰🆃🆅🅲 | 1️⃣4️⃣'
+      - '🇮🇱🆃🆅🅲 | 1️⃣5️⃣'
+      - '🇹🇭🆃🆅🅲 | 1️⃣6️⃣'
+      - '🇸🇬🆃🆅🅲 | 1️⃣7️⃣'
+      - '🇨🇭🆃🆅🅲 | 1️⃣8️⃣'
+      - '🇨🇭🆃🆅🅲 | 1️⃣9️⃣'
+      - '🇨🇭🆃🆅🅲 | 2️⃣0️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣1️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣2️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣3️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣4️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣5️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣6️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣7️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣8️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣9️⃣'
+      - '🇸🇪🆃🆅🅲 | 3️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣2️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣2️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣8️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣2️⃣9️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣0️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣1️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣2️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣6️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣7️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣8️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣4️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣5️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣6️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣7️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣8️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣9️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣1️⃣0️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣1️⃣1️⃣'
+      - '🇲🇾🆃🆅🅲 | 2️⃣1️⃣2️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣3️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣4️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣5️⃣'
+      - '🇩🇪🆃🆅🅲 | 2️⃣1️⃣6️⃣'
+      - '🇳🇱🆃🆅🅲 | 2️⃣1️⃣7️⃣'
+      - '🇩🇪🆃🆅🅲 | 2️⃣1️⃣8️⃣'
+      - '🇧🇬🆃🆅🅲 | 2️⃣1️⃣9️⃣'
+      - '🇹🇷🆃🆅🅲 | 2️⃣2️⃣0️⃣'
+      - '🇹🇭🆃🆅🅲 | 2️⃣2️⃣1️⃣'
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    proxies:
+      - '🇷🇺🆃🆅🅲 | 0️⃣4️⃣'
+      - '🇷🇺🆃🆅🅲 | 0️⃣5️⃣'
+      - '🇷🇺🆃🆅🅲 | 0️⃣6️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣7️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣8️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣9️⃣'
+      - '🇰🇿🆃🆅🅲 | 1️⃣0️⃣'
+      - '🇰🇿🆃🆅🅲 | 1️⃣1️⃣'
+      - '🇫🇮🆃🆅🅲 | 1️⃣2️⃣'
+      - '🇨🇿🆃🆅🅲 | 1️⃣3️⃣'
+      - '🇸🇰🆃🆅🅲 | 1️⃣4️⃣'
+      - '🇮🇱🆃🆅🅲 | 1️⃣5️⃣'
+      - '🇹🇭🆃🆅🅲 | 1️⃣6️⃣'
+      - '🇸🇬🆃🆅🅲 | 1️⃣7️⃣'
+      - '🇨🇭🆃🆅🅲 | 1️⃣8️⃣'
+      - '🇨🇭🆃🆅🅲 | 1️⃣9️⃣'
+      - '🇨🇭🆃🆅🅲 | 2️⃣0️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣1️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣2️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣3️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣4️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣5️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣6️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣7️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣8️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣9️⃣'
+      - '🇸🇪🆃🆅🅲 | 3️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣2️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣2️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣8️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣2️⃣9️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣0️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣1️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣2️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣6️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣7️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣8️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣4️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣5️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣6️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣7️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣8️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣9️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣1️⃣0️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣1️⃣1️⃣'
+      - '🇲🇾🆃🆅🅲 | 2️⃣1️⃣2️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣3️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣4️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣5️⃣'
+      - '🇩🇪🆃🆅🅲 | 2️⃣1️⃣6️⃣'
+      - '🇳🇱🆃🆅🅲 | 2️⃣1️⃣7️⃣'
+      - '🇩🇪🆃🆅🅲 | 2️⃣1️⃣8️⃣'
+      - '🇧🇬🆃🆅🅲 | 2️⃣1️⃣9️⃣'
+      - '🇹🇷🆃🆅🅲 | 2️⃣2️⃣0️⃣'
+      - '🇹🇭🆃🆅🅲 | 2️⃣2️⃣1️⃣'
+  - name: FALLBACK
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - '🇷🇺🆃🆅🅲 | 0️⃣4️⃣'
+      - '🇷🇺🆃🆅🅲 | 0️⃣5️⃣'
+      - '🇷🇺🆃🆅🅲 | 0️⃣6️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣7️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣8️⃣'
+      - '🇺🇦🆃🆅🅲 | 0️⃣9️⃣'
+      - '🇰🇿🆃🆅🅲 | 1️⃣0️⃣'
+      - '🇰🇿🆃🆅🅲 | 1️⃣1️⃣'
+      - '🇫🇮🆃🆅🅲 | 1️⃣2️⃣'
+      - '🇨🇿🆃🆅🅲 | 1️⃣3️⃣'
+      - '🇸🇰🆃🆅🅲 | 1️⃣4️⃣'
+      - '🇮🇱🆃🆅🅲 | 1️⃣5️⃣'
+      - '🇹🇭🆃🆅🅲 | 1️⃣6️⃣'
+      - '🇸🇬🆃🆅🅲 | 1️⃣7️⃣'
+      - '🇨🇭🆃🆅🅲 | 1️⃣8️⃣'
+      - '🇨🇭🆃🆅🅲 | 1️⃣9️⃣'
+      - '🇨🇭🆃🆅🅲 | 2️⃣0️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣1️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣2️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣3️⃣'
+      - '🇨🇦🆃🆅🅲 | 2️⃣4️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣5️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣6️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣7️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣8️⃣'
+      - '🇸🇪🆃🆅🅲 | 2️⃣9️⃣'
+      - '🇸🇪🆃🆅🅲 | 3️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 3️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 4️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 5️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 6️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 7️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 8️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 9️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣0️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣1️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣2️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣2️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣2️⃣8️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣2️⃣9️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣0️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣1️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣2️⃣'
+      - '🇩🇪🆃🆅🅲 | 1️⃣3️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣3️⃣6️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣7️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣8️⃣'
+      - '🇬🇧🆃🆅🅲 | 1️⃣3️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣4️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣5️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣6️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣7️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣8️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣4️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣5️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣6️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣7️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣8️⃣'
+      - '🇫🇷🆃🆅🅲 | 1️⃣9️⃣9️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣0️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣1️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣2️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣3️⃣'
+      - '🇫🇷🆃🆅🅲 | 2️⃣0️⃣4️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣5️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣6️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣7️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣8️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣0️⃣9️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣1️⃣0️⃣'
+      - '🇯🇵🆃🆅🅲 | 2️⃣1️⃣1️⃣'
+      - '🇲🇾🆃🆅🅲 | 2️⃣1️⃣2️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣3️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣4️⃣'
+      - '🇺🇸🆃🆅🅲 | 2️⃣1️⃣5️⃣'
+      - '🇩🇪🆃🆅🅲 | 2️⃣1️⃣6️⃣'
+      - '🇳🇱🆃🆅🅲 | 2️⃣1️⃣7️⃣'
+      - '🇩🇪🆃🆅🅲 | 2️⃣1️⃣8️⃣'
+      - '🇧🇬🆃🆅🅲 | 2️⃣1️⃣9️⃣'
+      - '🇹🇷🆃🆅🅲 | 2️⃣2️⃣0️⃣'
+      - '🇹🇭🆃🆅🅲 | 2️⃣2️⃣1️⃣'
+rules:
+  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
+  - IP-CIDR,28.0.0.1/8,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
+  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,ir,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,yacd.metacubex.one,DIRECT
+  - DOMAIN,clash.metacubex.one,DIRECT
+  - MATCH,MANUAL
