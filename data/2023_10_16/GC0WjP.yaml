@@ -1,0 +1,730 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：2023-10-16 12:03:45
+# 使用模版：ACL4SSR_Online.ini
+# 节点数量：51
+# 节点类型：ss, trojan
+####################################
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"🇭🇰家宽丨SYQ @200Mbps","type":"ss","server":"hk.shawbrothersstudio.com","port":19921,"password":"r1Rivb0NOPyab8gI828uG7","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x","type":"trojan","server":"183.213.200.208","port":10443,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 香港 I2 | IEPL | 3x","type":"trojan","server":"183.213.200.225","port":10443,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x","type":"trojan","server":"36.158.249.70","port":15601,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 香港 I4 | IEPL、Telegram | 3x","type":"trojan","server":"183.213.200.226","port":29161,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 香港 I5 | IEPL、Telegram | 3x","type":"trojan","server":"183.213.200.205","port":10443,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x","type":"trojan","server":"183.213.200.199","port":32150,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x","type":"trojan","server":"36.158.249.70","port":32150,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇯🇵 日本 I1 | IEPL、ChatGPT | 3x","type":"trojan","server":"36.158.249.70","port":16138,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇯🇵 日本 I2 | IEPL、ChatGPT | 3x","type":"trojan","server":"36.158.205.217","port":16133,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x","type":"trojan","server":"36.158.205.217","port":31006,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x","type":"trojan","server":"36.158.249.70","port":27850,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x","type":"trojan","server":"36.158.205.217","port":27381,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x","type":"trojan","server":"36.158.249.70","port":26324,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x","type":"trojan","server":"36.158.249.70","port":30260,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x","type":"trojan","server":"36.158.249.70","port":24300,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x","type":"trojan","server":"36.158.205.217","port":25334,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x","type":"trojan","server":"36.158.249.70","port":27114,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x","type":"trojan","server":"223.95.40.69","port":30266,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x","type":"trojan","server":"223.95.40.69","port":31002,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x","type":"trojan","server":"36.158.205.217","port":25333,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x","type":"trojan","server":"36.158.249.70","port":26182,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x","type":"trojan","server":"183.232.170.62","port":21103,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x","type":"trojan","server":"36.158.249.70","port":14761,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x","type":"trojan","server":"223.95.40.69","port":35490,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x","type":"trojan","server":"36.158.205.217","port":26723,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x","type":"trojan","server":"183.213.200.207","port":31003,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x","type":"trojan","server":"36.158.249.70","port":16136,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x","type":"trojan","server":"36.158.205.217","port":29388,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x","type":"trojan","server":"36.158.249.70","port":16114,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x","type":"trojan","server":"36.158.249.70","port":14912,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x","type":"trojan","server":"36.158.205.217","port":14912,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x","type":"trojan","server":"183.232.170.62","port":27852,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸 美国 G59 | 直连、Spotify(US) | 2x","type":"trojan","server":"146.190.170.190","port":11116,"udp":true,"password":"o53RruPksU","sni":"v.qq.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸 美国 G97 | 直连、Spotify(US) | 2x","type":"trojan","server":"137.184.185.178","port":11111,"udp":true,"password":"o53RruPksU","sni":"v.qq.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸 美国 G04 | 广东移动 | 3x","type":"trojan","server":"183.232.170.62","port":21117,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸 美国 G29 | 小带宽 | 3x","type":"trojan","server":"223.95.40.69","port":43187,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇭🇰 香港 G17 | 小带宽 | 4x","type":"trojan","server":"183.213.200.199","port":19817,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇹🇭 泰国 B29 | 广东移动 | 2x","type":"trojan","server":"183.213.200.143","port":31008,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x","type":"trojan","server":"36.158.205.217","port":32011,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x","type":"trojan","server":"183.232.170.62","port":12385,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x","type":"trojan","server":"223.95.40.69","port":31010,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇦 乌克兰 B11 | 浙江移动 | 2x","type":"trojan","server":"223.95.40.69","port":30282,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇵🇭 菲律宾 B12 | 广东移动 | 2x","type":"trojan","server":"183.213.200.143","port":31009,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇷🇺 俄罗斯 B75 | 广东移动 | 2x","type":"trojan","server":"183.213.200.143","port":30183,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇦 加拿大 B62 | 直连 | 2x","type":"trojan","server":"146.19.106.162","port":33852,"udp":true,"password":"o53RruPksU","sni":"v.qq.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x","type":"trojan","server":"223.95.40.69","port":21215,"udp":true,"password":"o53RruPksU","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇬🇧 英国 B107 | IEPL中转 | 0x","type":"trojan","server":"183.213.200.225","port":28154,"udp":true,"password":"Mdb811a0","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇫🇷 法国 B102 | IEPL中转 | 0x","type":"trojan","server":"183.213.200.225","port":28155,"udp":true,"password":"M8ec5afa","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x","type":"trojan","server":"183.213.200.208","port":28157,"udp":true,"password":"M83a100a","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇦 TG@kkovokk","type":"trojan","server":"183.213.200.226","port":28152,"udp":true,"password":"Meaca164","sni":"www.icloud.com","skip-cert-verify":true,"network":"tcp"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰家宽丨SYQ @200Mbps
+      - 🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I2 | IEPL | 3x
+      - 🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I4 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I5 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x
+      - 🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x
+      - 🇯🇵 日本 I1 | IEPL、ChatGPT | 3x
+      - 🇯🇵 日本 I2 | IEPL、ChatGPT | 3x
+      - 🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x
+      - 🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x
+      - 🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x
+      - 🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x
+      - 🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x
+      - 🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x
+      - 🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x
+      - 🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x
+      - 🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x
+      - 🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x
+      - 🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x
+      - 🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x
+      - 🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x
+      - 🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x
+      - 🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x
+      - 🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x
+      - 🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x
+      - 🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x
+      - 🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x
+      - 🇺🇸 美国 G59 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G97 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G04 | 广东移动 | 3x
+      - 🇺🇸 美国 G29 | 小带宽 | 3x
+      - 🇭🇰 香港 G17 | 小带宽 | 4x
+      - 🇹🇭 泰国 B29 | 广东移动 | 2x
+      - 🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x
+      - 🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x
+      - 🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x
+      - 🇺🇦 乌克兰 B11 | 浙江移动 | 2x
+      - 🇵🇭 菲律宾 B12 | 广东移动 | 2x
+      - 🇷🇺 俄罗斯 B75 | 广东移动 | 2x
+      - 🇨🇦 加拿大 B62 | 直连 | 2x
+      - 🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x
+      - 🇬🇧 英国 B107 | IEPL中转 | 0x
+      - 🇫🇷 法国 B102 | IEPL中转 | 0x
+      - 🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x
+      - 🇨🇦 TG@kkovokk
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇭🇰家宽丨SYQ @200Mbps
+      - 🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I2 | IEPL | 3x
+      - 🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I4 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I5 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x
+      - 🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x
+      - 🇯🇵 日本 I1 | IEPL、ChatGPT | 3x
+      - 🇯🇵 日本 I2 | IEPL、ChatGPT | 3x
+      - 🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x
+      - 🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x
+      - 🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x
+      - 🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x
+      - 🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x
+      - 🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x
+      - 🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x
+      - 🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x
+      - 🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x
+      - 🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x
+      - 🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x
+      - 🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x
+      - 🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x
+      - 🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x
+      - 🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x
+      - 🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x
+      - 🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x
+      - 🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x
+      - 🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x
+      - 🇺🇸 美国 G59 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G97 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G04 | 广东移动 | 3x
+      - 🇺🇸 美国 G29 | 小带宽 | 3x
+      - 🇭🇰 香港 G17 | 小带宽 | 4x
+      - 🇹🇭 泰国 B29 | 广东移动 | 2x
+      - 🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x
+      - 🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x
+      - 🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x
+      - 🇺🇦 乌克兰 B11 | 浙江移动 | 2x
+      - 🇵🇭 菲律宾 B12 | 广东移动 | 2x
+      - 🇷🇺 俄罗斯 B75 | 广东移动 | 2x
+      - 🇨🇦 加拿大 B62 | 直连 | 2x
+      - 🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x
+      - 🇬🇧 英国 B107 | IEPL中转 | 0x
+      - 🇫🇷 法国 B102 | IEPL中转 | 0x
+      - 🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x
+      - 🇨🇦 TG@kkovokk
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰家宽丨SYQ @200Mbps
+      - 🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I2 | IEPL | 3x
+      - 🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I4 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I5 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x
+      - 🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x
+      - 🇯🇵 日本 I1 | IEPL、ChatGPT | 3x
+      - 🇯🇵 日本 I2 | IEPL、ChatGPT | 3x
+      - 🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x
+      - 🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x
+      - 🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x
+      - 🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x
+      - 🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x
+      - 🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x
+      - 🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x
+      - 🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x
+      - 🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x
+      - 🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x
+      - 🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x
+      - 🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x
+      - 🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x
+      - 🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x
+      - 🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x
+      - 🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x
+      - 🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x
+      - 🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x
+      - 🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x
+      - 🇺🇸 美国 G59 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G97 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G04 | 广东移动 | 3x
+      - 🇺🇸 美国 G29 | 小带宽 | 3x
+      - 🇭🇰 香港 G17 | 小带宽 | 4x
+      - 🇹🇭 泰国 B29 | 广东移动 | 2x
+      - 🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x
+      - 🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x
+      - 🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x
+      - 🇺🇦 乌克兰 B11 | 浙江移动 | 2x
+      - 🇵🇭 菲律宾 B12 | 广东移动 | 2x
+      - 🇷🇺 俄罗斯 B75 | 广东移动 | 2x
+      - 🇨🇦 加拿大 B62 | 直连 | 2x
+      - 🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x
+      - 🇬🇧 英国 B107 | IEPL中转 | 0x
+      - 🇫🇷 法国 B102 | IEPL中转 | 0x
+      - 🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x
+      - 🇨🇦 TG@kkovokk
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇭🇰家宽丨SYQ @200Mbps
+      - 🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I2 | IEPL | 3x
+      - 🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I4 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I5 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x
+      - 🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x
+      - 🇯🇵 日本 I1 | IEPL、ChatGPT | 3x
+      - 🇯🇵 日本 I2 | IEPL、ChatGPT | 3x
+      - 🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x
+      - 🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x
+      - 🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x
+      - 🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x
+      - 🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x
+      - 🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x
+      - 🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x
+      - 🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x
+      - 🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x
+      - 🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x
+      - 🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x
+      - 🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x
+      - 🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x
+      - 🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x
+      - 🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x
+      - 🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x
+      - 🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x
+      - 🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x
+      - 🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x
+      - 🇺🇸 美国 G59 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G97 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G04 | 广东移动 | 3x
+      - 🇺🇸 美国 G29 | 小带宽 | 3x
+      - 🇭🇰 香港 G17 | 小带宽 | 4x
+      - 🇹🇭 泰国 B29 | 广东移动 | 2x
+      - 🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x
+      - 🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x
+      - 🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x
+      - 🇺🇦 乌克兰 B11 | 浙江移动 | 2x
+      - 🇵🇭 菲律宾 B12 | 广东移动 | 2x
+      - 🇷🇺 俄罗斯 B75 | 广东移动 | 2x
+      - 🇨🇦 加拿大 B62 | 直连 | 2x
+      - 🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x
+      - 🇬🇧 英国 B107 | IEPL中转 | 0x
+      - 🇫🇷 法国 B102 | IEPL中转 | 0x
+      - 🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x
+      - 🇨🇦 TG@kkovokk
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇭🇰家宽丨SYQ @200Mbps
+      - 🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I2 | IEPL | 3x
+      - 🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I4 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I5 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x
+      - 🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x
+      - 🇯🇵 日本 I1 | IEPL、ChatGPT | 3x
+      - 🇯🇵 日本 I2 | IEPL、ChatGPT | 3x
+      - 🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x
+      - 🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x
+      - 🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x
+      - 🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x
+      - 🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x
+      - 🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x
+      - 🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x
+      - 🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x
+      - 🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x
+      - 🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x
+      - 🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x
+      - 🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x
+      - 🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x
+      - 🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x
+      - 🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x
+      - 🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x
+      - 🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x
+      - 🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x
+      - 🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x
+      - 🇺🇸 美国 G59 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G97 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G04 | 广东移动 | 3x
+      - 🇺🇸 美国 G29 | 小带宽 | 3x
+      - 🇭🇰 香港 G17 | 小带宽 | 4x
+      - 🇹🇭 泰国 B29 | 广东移动 | 2x
+      - 🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x
+      - 🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x
+      - 🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x
+      - 🇺🇦 乌克兰 B11 | 浙江移动 | 2x
+      - 🇵🇭 菲律宾 B12 | 广东移动 | 2x
+      - 🇷🇺 俄罗斯 B75 | 广东移动 | 2x
+      - 🇨🇦 加拿大 B62 | 直连 | 2x
+      - 🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x
+      - 🇬🇧 英国 B107 | IEPL中转 | 0x
+      - 🇫🇷 法国 B102 | IEPL中转 | 0x
+      - 🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x
+      - 🇨🇦 TG@kkovokk
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇭🇰家宽丨SYQ @200Mbps
+      - 🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I2 | IEPL | 3x
+      - 🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I4 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I5 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x
+      - 🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x
+      - 🇯🇵 日本 I1 | IEPL、ChatGPT | 3x
+      - 🇯🇵 日本 I2 | IEPL、ChatGPT | 3x
+      - 🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x
+      - 🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x
+      - 🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x
+      - 🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x
+      - 🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x
+      - 🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x
+      - 🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x
+      - 🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x
+      - 🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x
+      - 🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x
+      - 🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x
+      - 🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x
+      - 🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x
+      - 🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x
+      - 🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x
+      - 🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x
+      - 🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x
+      - 🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x
+      - 🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x
+      - 🇺🇸 美国 G59 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G97 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G04 | 广东移动 | 3x
+      - 🇺🇸 美国 G29 | 小带宽 | 3x
+      - 🇭🇰 香港 G17 | 小带宽 | 4x
+      - 🇹🇭 泰国 B29 | 广东移动 | 2x
+      - 🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x
+      - 🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x
+      - 🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x
+      - 🇺🇦 乌克兰 B11 | 浙江移动 | 2x
+      - 🇵🇭 菲律宾 B12 | 广东移动 | 2x
+      - 🇷🇺 俄罗斯 B75 | 广东移动 | 2x
+      - 🇨🇦 加拿大 B62 | 直连 | 2x
+      - 🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x
+      - 🇬🇧 英国 B107 | IEPL中转 | 0x
+      - 🇫🇷 法国 B102 | IEPL中转 | 0x
+      - 🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x
+      - 🇨🇦 TG@kkovokk
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇭🇰家宽丨SYQ @200Mbps
+      - 🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I2 | IEPL | 3x
+      - 🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I4 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I5 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x
+      - 🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x
+      - 🇯🇵 日本 I1 | IEPL、ChatGPT | 3x
+      - 🇯🇵 日本 I2 | IEPL、ChatGPT | 3x
+      - 🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x
+      - 🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x
+      - 🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x
+      - 🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x
+      - 🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x
+      - 🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x
+      - 🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x
+      - 🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x
+      - 🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x
+      - 🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x
+      - 🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x
+      - 🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x
+      - 🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x
+      - 🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x
+      - 🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x
+      - 🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x
+      - 🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x
+      - 🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x
+      - 🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x
+      - 🇺🇸 美国 G59 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G97 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G04 | 广东移动 | 3x
+      - 🇺🇸 美国 G29 | 小带宽 | 3x
+      - 🇭🇰 香港 G17 | 小带宽 | 4x
+      - 🇹🇭 泰国 B29 | 广东移动 | 2x
+      - 🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x
+      - 🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x
+      - 🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x
+      - 🇺🇦 乌克兰 B11 | 浙江移动 | 2x
+      - 🇵🇭 菲律宾 B12 | 广东移动 | 2x
+      - 🇷🇺 俄罗斯 B75 | 广东移动 | 2x
+      - 🇨🇦 加拿大 B62 | 直连 | 2x
+      - 🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x
+      - 🇬🇧 英国 B107 | IEPL中转 | 0x
+      - 🇫🇷 法国 B102 | IEPL中转 | 0x
+      - 🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x
+      - 🇨🇦 TG@kkovokk
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇭🇰家宽丨SYQ @200Mbps
+      - 🇭🇰 香港 I1 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I2 | IEPL | 3x
+      - 🇭🇰 香港 I3 | IEPL、Netflix(HK)、SVIP | 3x
+      - 🇭🇰 香港 I4 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I5 | IEPL、Telegram | 3x
+      - 🇭🇰 香港 I6 | IEPL、YouTube免广告、SVIP | 3x
+      - 🇭🇰 香港 I7 | IEPL、YouTube免广告 | 3x
+      - 🇯🇵 日本 I1 | IEPL、ChatGPT | 3x
+      - 🇯🇵 日本 I2 | IEPL、ChatGPT | 3x
+      - 🇸🇬 新加坡 I1 | IEPL、ChatGPT | 2x
+      - 🇺🇸 美国 V1 | 上海联通、ChatGPT | 2x
+      - 🇺🇸 美国 V2 | 华南移动、ChatGPT | 2x
+      - 🇭🇰 美国 V3 | 深港隧道、ChatGPT(原生) | 2x
+      - 🇭🇰 日本 V1 | 深港隧道、ChatGPT、SVIP | 3x
+      - 🇯🇵 日本 V2 | 上海联通、ChatGPT | 3x
+      - 🇯🇵 日本 V3 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 台湾 V1 | 深港隧道、ChatGPT(原生)、SVIP | 3x
+      - 🇨🇳 台湾 V2 | 浙江移动、ChatGPT、YouTube免广告 | 3x
+      - 🇨🇳 台湾 V3 | 华南移动、ChatGPT、YouTube免广告 | 3x
+      - 🇸🇬 新加坡 V1 | 华南移动、ChatGPT | 3x
+      - 🇭🇰 新加坡 V2 | 深港隧道、ChatGPT | 3x
+      - 🇸🇬 新加坡 V3 | 广东移动、ChatGPT | 3x
+      - 🇭🇰 美国 M1 | 广港隧道、Netflix(US) | 3x
+      - 🇺🇸 美国 M2 | 广州电信、Netflix(US) | 3x
+      - 🇯🇵 日本 M1 | 华南移动、Netflix(JP)、ChatGPT | 3x
+      - 🇭🇰 台湾 M1 | 港澳B站、Netflix(TW)、ChatGPT、SVIP | 3x
+      - 🇭🇰 台湾 M2 | 港澳B站、Netflix(TW)、ChatGPT | 3x
+      - 🇭🇰 香港 M1 | 港澳B站、Netflix(HK) | 3x
+      - 🇭🇰 韩国 M1 | 深港隧道、Netflix(KR)、ChatGPT | 3x
+      - 🇭🇰 新加坡 M1 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇭🇰 新加坡 M2 | 广港隧道、Netflix(SG)、ChatGPT | 2x
+      - 🇸🇬 新加坡 M3 | 广东移动、SVIP、YouTube免广告 | 3x
+      - 🇺🇸 美国 G59 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G97 | 直连、Spotify(US) | 2x
+      - 🇺🇸 美国 G04 | 广东移动 | 3x
+      - 🇺🇸 美国 G29 | 小带宽 | 3x
+      - 🇭🇰 香港 G17 | 小带宽 | 4x
+      - 🇹🇭 泰国 B29 | 广东移动 | 2x
+      - 🇻🇳 越南 B60 | 华南移动、ChatGPT(原生) | 3x
+      - 🇮🇳 印度 B46 | 广东移动、ChatGPT | 3x
+      - 🇮🇩 印尼 B46 | 华南移动、ChatGPT(原生) | 3x
+      - 🇺🇦 乌克兰 B11 | 浙江移动 | 2x
+      - 🇵🇭 菲律宾 B12 | 广东移动 | 2x
+      - 🇷🇺 俄罗斯 B75 | 广东移动 | 2x
+      - 🇨🇦 加拿大 B62 | 直连 | 2x
+      - 🇸🇬 马来西亚 B15 | 浙江移动、ChatGPT、Netflix(SG) | 3x
+      - 🇬🇧 英国 B107 | IEPL中转 | 0x
+      - 🇫🇷 法国 B102 | IEPL中转 | 0x
+      - 🇰🇷 韩国 B158 | IEPL中转、游戏 | 0x
+      - 🇨🇦 TG@kkovokk
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/LocalAreaNetwork.list
+  UnBan:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/UnBan.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanProgramAD.list
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleFCM.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleCN.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/SteamCN.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Microsoft.list
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Apple.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Telegram.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyMedia.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaCompanyIp.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,UnBan,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
