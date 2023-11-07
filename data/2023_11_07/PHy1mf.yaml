@@ -1,0 +1,331 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "dns_local",
+        "strategy": "ipv4_only",
+        "detour": "select"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "https://dns.alidns.com/dns-query",
+        "address_resolver": "dns_local",
+        "strategy": "ipv4_only",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_block",
+        "address": "rcode://refused"
+      }
+    ],
+    "rules": [
+      {
+        "server": "dns_local",
+        "outbound": "any"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "dns_block",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn",
+          "private"
+        ],
+        "server": "dns_direct"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "::",
+      "listen_port": 1080,
+      "set_system_proxy": true
+    }
+  ],
+  "outbounds": [
+    {
+      "server": "s4.ghermez.org",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/"
+      },
+      "uuid": "s4.ghermez.org:443?type=grpc&encryption=auto&security=tls&sni=server.ghermez.org#Germany%202%20%F0%9F%87%A9%F0%9F%87%AA",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "Germany 2 🇩🇪",
+      "type": "vmess"
+    },
+    {
+      "server": "45.82.13.47",
+      "server_port": 38385,
+      "password": "UnuIwybd0gnGyrmL6xiXPO",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "SWEDEN+🇸🇪",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "89.187.179.192",
+      "server_port": 443,
+      "password": "asdKkaskJKfnsa",
+      "method": "aes-256-cfb",
+      "tag": "US+🇺🇲_1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "172.67.215.202",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "octavi.cfd"
+      },
+      "transport": {
+        "path": "linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 1,
+      "tag": "UK 🇬🇧",
+      "type": "vmess"
+    },
+    {
+      "server": "45.89.52.66",
+      "server_port": 9040,
+      "password": "p9z5BVADH2YFs3MN",
+      "method": "aes-256-cfb",
+      "tag": "🇹🇷+TURKEY+",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "iran01.biqibao.site",
+      "server_port": 2052,
+      "transport": {
+        "path": "/public",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "iran01.biqibao.site:2052?type=ws&encryption=auto&host=de5.biqibao.site&path=%2Fpublic#Germany%20%F0%9F%87%A9%F0%9F%87%AA",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "Germany 🇩🇪",
+      "type": "vmess"
+    },
+    {
+      "server": "passconf.xyz",
+      "server_port": 8080,
+      "password": "qGjmI8WQlF0tfhDbkLqGdN",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "Sweden 2 🇸🇪",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "51.159.210.114",
+      "server_port": 443,
+      "password": "asdKkaskJKfnsa",
+      "method": "aes-256-cfb",
+      "tag": "Paris+++🇫🇷",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "89.187.179.192",
+      "server_port": 443,
+      "password": "asdKkaskJKfnsa",
+      "method": "aes-256-gcm",
+      "tag": "US+2+🇺🇲",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "138.199.36.104",
+      "server_port": 443,
+      "password": "asdKkaskJKfnsa",
+      "method": "aes-256-cfb",
+      "tag": "+Germany+4++🇩🇪",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "57.129.1.18",
+      "server_port": 443,
+      "password": "asdKkaskJKfnsa",
+      "method": "aes-256-cfb",
+      "tag": "Germany++5+🇩🇪",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "162.19.170.225",
+      "server_port": 443,
+      "password": "asdKkaskJKfnsa",
+      "method": "aes-256-cfb",
+      "tag": "Germany+6+🇩🇪",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "104.16.0.0",
+      "server_port": 2087,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/"
+      },
+      "uuid": "104.16.0.0:2087?type=grpc&encryption=auto&security=tls&sni=my.designlion.buzz#Us%203%20%F0%9F%87%BA%F0%9F%87%B2",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "Us 3 🇺🇲",
+      "type": "vmess"
+    },
+    {
+      "server": "89.187.179.192",
+      "server_port": 443,
+      "password": "asdKkaskJKfnsa",
+      "method": "aes-256-cfb",
+      "tag": "US+🇺🇲_2",
+      "type": "shadowsocks"
+    },
+    {
+      "tag": "select",
+      "type": "selector",
+      "default": "auto",
+      "outbounds": [
+        "Germany 2 🇩🇪",
+        "SWEDEN+🇸🇪",
+        "US+🇺🇲_1",
+        "UK 🇬🇧",
+        "🇹🇷+TURKEY+",
+        "Germany 🇩🇪",
+        "Sweden 2 🇸🇪",
+        "Paris+++🇫🇷",
+        "US+2+🇺🇲",
+        "+Germany+4++🇩🇪",
+        "Germany++5+🇩🇪",
+        "Germany+6+🇩🇪",
+        "Us 3 🇺🇲",
+        "US+🇺🇲_2",
+        "auto"
+      ],
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "Germany 2 🇩🇪",
+        "SWEDEN+🇸🇪",
+        "US+🇺🇲_1",
+        "UK 🇬🇧",
+        "🇹🇷+TURKEY+",
+        "Germany 🇩🇪",
+        "Sweden 2 🇸🇪",
+        "Paris+++🇫🇷",
+        "US+2+🇺🇲",
+        "+Germany+4++🇩🇪",
+        "Germany++5+🇩🇪",
+        "Germany+6+🇩🇪",
+        "Us 3 🇺🇲",
+        "US+🇺🇲_2"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "domain": [
+          "platform-api.sharethis.com",
+          "v2rayse.com",
+          "www.v2rayse.com",
+          "cff.pw",
+          "www.cff.pw",
+          "tt.vg",
+          "www.tt.vg",
+          "cfmem.com",
+          "wwww.cfmem.com",
+          "vpnse.org",
+          "www.vpnse.org"
+        ],
+        "outbound": "select"
+      },
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "block"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "cn",
+          "private"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
