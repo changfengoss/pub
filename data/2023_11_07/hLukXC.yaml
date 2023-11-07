@@ -1,0 +1,306 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "dns_local",
+        "strategy": "ipv4_only",
+        "detour": "select"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "https://dns.alidns.com/dns-query",
+        "address_resolver": "dns_local",
+        "strategy": "ipv4_only",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_block",
+        "address": "rcode://refused"
+      }
+    ],
+    "rules": [
+      {
+        "server": "dns_local",
+        "outbound": "any"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "dns_block",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn",
+          "private"
+        ],
+        "server": "dns_direct"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "::",
+      "listen_port": 1080,
+      "set_system_proxy": true
+    }
+  ],
+  "outbounds": [
+    {
+      "server": "v01.gutingting.com",
+      "server_port": 30048,
+      "transport": {
+        "path": "/aceamedv",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "0259f763-c4f3-4a7b-a028-589d9102f95d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+      "type": "vmess"
+    },
+    {
+      "server": "172.247.148.93",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/path/133527190814",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 64,
+      "tag": "🇺🇸_US_美国_1",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.156.27",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "unmanliest.appreviewcenter.com"
+      },
+      "transport": {
+        "path": "/nimws",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "d6f79630-aa94-4536-b2ef-899b5acb3b49",
+      "tag": "🇺🇸_US_美国->🇫🇷_FR_法国_1",
+      "type": "vless"
+    },
+    {
+      "server": "104.31.16.109",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "singbox.cypherpunks.asia"
+      },
+      "transport": {
+        "path": "/cypherpunks",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "97d26fd0-e2ac-4b1f-a098-f422fc49bd30",
+      "tag": "🇺🇸_US_美国_2",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.178.12",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "marly.toptechnonews.com"
+      },
+      "transport": {
+        "path": "/nimws",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "43e00e4c-2316-4dc9-8262-cef31886dc56",
+      "tag": "🇺🇸_US_美国->🇫🇷_FR_法国_2",
+      "type": "vless"
+    },
+    {
+      "server": "64.68.192.77",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ophelia.mom"
+      },
+      "transport": {
+        "path": "linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 1,
+      "tag": "🇨🇦_CA_加拿大->🇬🇧_GB_英国",
+      "type": "vmess"
+    },
+    {
+      "server": "154.85.1.129",
+      "server_port": 30000,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/path/1698579913173",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 64,
+      "tag": "🇳🇱_NL_荷兰",
+      "type": "vmess"
+    },
+    {
+      "server": "v02.gutingting.com",
+      "server_port": 20225,
+      "tls": {
+        "enabled": true,
+        "server_name": "v2usa01.fuqiangren.com",
+        "insecure": true
+      },
+      "password": "0259f763-c4f3-4a7b-a028-589d9102f95d",
+      "tag": "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+      "type": "trojan"
+    },
+    {
+      "tag": "select",
+      "type": "selector",
+      "default": "auto",
+      "outbounds": [
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_1",
+        "🇺🇸_US_美国_2",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_2",
+        "🇨🇦_CA_加拿大->🇬🇧_GB_英国",
+        "🇳🇱_NL_荷兰",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "auto"
+      ],
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_1",
+        "🇺🇸_US_美国_2",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_2",
+        "🇨🇦_CA_加拿大->🇬🇧_GB_英国",
+        "🇳🇱_NL_荷兰",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "domain": [
+          "platform-api.sharethis.com",
+          "v2rayse.com",
+          "www.v2rayse.com",
+          "cff.pw",
+          "www.cff.pw",
+          "tt.vg",
+          "www.tt.vg",
+          "cfmem.com",
+          "wwww.cfmem.com",
+          "vpnse.org",
+          "www.vpnse.org"
+        ],
+        "outbound": "select"
+      },
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "block"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "cn",
+          "private"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
