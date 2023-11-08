@@ -1,0 +1,590 @@
+# Stash/Clash/Premium/Meta Config Make by Coldvvater
+# TG Channel: https://t.me/Coldvvater_Channel
+# GitHub: https://github.com/Coldvvater
+# Update Date: 2023.11.01
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+ipv6: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 114.114.114.114
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - cable.auth.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - resolver1.opendns.com
+    - '*.srv.nintendo.net'
+    - '*.stun.playstation.net'
+    - xbox.*.microsoft.com
+    - '*.xboxlive.com'
+    - stun.*
+    - global.turn.twilio.com
+    - global.stun.twilio.com
+    - localhost.*.qq.com
+    - localhost.*.weixin.qq.com
+    - '*.logon.battlenet.com.cn'
+    - '*.logon.battle.net'
+    - '*.blzstatic.cn'
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - proxy.golang.org
+    - '*.mcdn.bilivideo.cn'
+    - '*.cmpassport.com'
+    - id6.me
+    - open.e.189.cn
+    - mdn.open.wo.cn
+    - opencloud.wostore.cn
+    - auth.wosms.cn
+    - '*.jegotrip.com.cn'
+    - '*.icitymobile.mobi'
+    - '*.pingan.com.cn'
+    - '*.cmbchina.com'
+    - pool.ntp.org
+    - '*.pool.ntp.org'
+    - ntp.*.com
+    - time.*.com
+    - ntp?.*.com
+    - time?.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - '*.ntp.org.cn'
+    - PDC._msDCS.*.*
+    - DC._msDCS.*.*
+    - GC._msDCS.*.*
+c:
+  type: http
+  behavior: classical
+  interval: 86400
+d:
+  type: http
+  behavior: domain
+  interval: 86400
+p:
+  type: http
+  interval: 42300
+  health-check: &ref_0
+    enable: true
+    url: http://www.apple.com/library/test/success.html
+    interval: 300
+g:
+  type: select
+  proxies:
+    - Proxy
+    - Auto
+    - Fallback
+    - HongKong
+    - TaiWan
+    - Singapore
+    - Japan
+    - America
+    - Others
+    - DIRECT
+m:
+  type: select
+  proxies:
+    - DIRECT
+    - Proxy
+    - Auto
+    - Fallback
+    - HongKong
+    - TaiWan
+    - Singapore
+    - Japan
+    - America
+    - Others
+u:
+  type: select
+  use:
+    - Subscribe
+proxy-providers:
+  Subscribe:
+    type: http
+    interval: 42300
+    health-check: *ref_0
+    path: ./proxy_providers/subscribe.yaml
+    url: ''
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
+
+proxies:
+  - {"name":"香港","type":"vless","server":"hk.bighoo.top","port":43867,"udp":true,"uuid":"2c8fa918-5aab-48e6-9638-2e5f0aeb5c80","tls":true,"servername":"gateway.icloud.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"2sxjfXg6lu2QWZc_L__Ten7vkCaCQTDhwS7-fmreD0c","short-id":"7adad1a9"},"client-fingerprint":"chrome"}
+  - {"name":"东京","type":"vless","server":"soft.bighoo.top","port":24589,"udp":true,"uuid":"ef688102-bbf1-4491-c4ea-35e77165f2e4","tls":true,"servername":"one-piece.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"Dp73l2Qpja5VLGXEXNL954s2qy5k_nKIfZC2nRv7GA4","short-id":"59367b07"},"client-fingerprint":"chrome"}
+  - {"name":"美国","type":"vless","server":"rn.bighoo.top","port":36934,"udp":true,"uuid":"50904dad-944f-44ee-e975-401b1c35b143","tls":true,"servername":"www.yahoo.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"cLMZ_7kXvtUto4vDWcVWJZTOrDkF9ubVDHjTpnH_9iw","short-id":"b6186554"},"client-fingerprint":"chrome"}
+proxy-groups:
+  - name: Final
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+  - name: Proxy
+    type: select
+    proxies:
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+  - name: Auto
+    type: url-test
+    proxies: []
+    lazy: true
+  - name: Fallback
+    type: fallback
+    proxies: []
+  - name: Global
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: Mainland
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - Auto
+  - name: OpenAI
+    type: select
+    proxies:
+      - America
+      - Japan
+      - Singapore
+      - TaiWan
+      - Others
+  - name: YouTube
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: NETFLIX
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: Disney+
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: Emby
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: BiliBili
+    type: select
+    proxies:
+      - DIRECT
+      - HongKong
+      - TaiWan
+  - name: Spotify
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: NetEaseMusic
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+  - name: TikTok
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: Streaming
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: Telegram
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+  - name: Google
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: Microsoft
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+  - name: Games
+    type: select
+    proxies:
+      - Proxy
+      - Auto
+      - Fallback
+      - HongKong
+      - TaiWan
+      - Singapore
+      - Japan
+      - America
+      - Others
+      - DIRECT
+  - name: Speedtest
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+  - name: HongKong
+    type: select
+    proxies: []
+  - name: TaiWan
+    type: select
+    proxies: []
+  - name: Singapore
+    type: select
+    proxies: []
+  - name: Japan
+    type: select
+    proxies: []
+  - name: America
+    type: select
+    proxies: []
+  - name: Others
+    type: select
+    proxies: []
+
+rule-providers:
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontents.com/Loyalsoldier/clash-rules/release/private.txt
+    interval: 86400
+    path: ./rules/private.yaml
+  speedtest:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml
+    interval: 86400
+    path: ./rules/speedtest.yaml
+  HTTPDNS:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.yaml
+    interval: 86400
+    path: ./rules/HTTPDNS.yaml
+  openai:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/Coldvvater/Mononoke/master/Stash/RuleSet/OpenAI.yaml
+    interval: 86400
+    path: ./rules/openai.yaml
+  bing:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml
+    interval: 86400
+    path: ./rules/bing.yaml
+  youtube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml
+    interval: 86400
+    path: ./rules/youtube.yaml
+  netflix:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Netflix.yaml
+    interval: 86400
+    path: ./rules/netflix.yaml
+  disney:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/DisneyPlus.yaml
+    interval: 86400
+    path: ./rules/disney.yaml
+  emby:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml
+    interval: 86400
+    path: ./rules/emby.yaml
+  bahamut:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bahamut.yaml
+    interval: 86400
+    path: ./rules/bahamut.yaml
+  biliintl:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml
+    interval: 86400
+    path: ./rules/biliintl.yaml
+  streamingmedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
+    interval: 86400
+    path: ./rules/streamingmedia.yaml
+  bilibili:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bilibili.yaml
+    interval: 86400
+    path: ./rules/bilibili.yaml
+  spotify:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Spotify.yaml
+    interval: 86400
+    path: ./rules/spotify.yaml
+  neteasemusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/NetEaseMusic.yaml
+    interval: 86400
+    path: ./rules/neteasemusic.yaml
+  tiktok:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/TikTok.yaml
+    interval: 86400
+    path: ./rules/tiktok.yaml
+  telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml
+    interval: 86400
+    path: ./rules/telegram.yaml
+  gitHub:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Github.yaml
+    interval: 86400
+    path: ./rules/gitHub.yaml
+  twitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Twitter.yaml
+    interval: 86400
+    path: ./rules/twitter.yaml
+  testflight:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml
+    interval: 86400
+    path: ./rules/testflight.yaml
+  proxy:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.yaml
+    interval: 86400
+    path: ./rules/proxy.yaml
+  apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml
+    interval: 86400
+    path: ./rules/apple.yaml
+  google:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Google.yaml
+    interval: 86400
+    path: ./rules/google.yaml
+  microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml
+    interval: 86400
+    path: ./rules/microsoft.yaml
+  games:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game_No_Resolve.yaml
+    interval: 86400
+    path: ./rules/games.yaml
+  cn:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Domain.yaml
+    interval: 86400
+    path: ./rules/cn.yaml
+rules:
+  - RULE-SET,private,DIRECT
+  - RULE-SET,speedtest,Speedtest
+  - RULE-SET,HTTPDNS,REJECT
+  - RULE-SET,openai,OpenAI
+  - RULE-SET,bing,OpenAI
+  - RULE-SET,youtube,YouTube
+  - RULE-SET,netflix,NETFLIX
+  - RULE-SET,disney,Disney+
+  - RULE-SET,emby,Emby
+  - RULE-SET,bahamut,TaiWan
+  - RULE-SET,biliintl,Streaming
+  - RULE-SET,streamingmedia,Streaming
+  - RULE-SET,bilibili,BiliBili
+  - RULE-SET,spotify,Spotify
+  - RULE-SET,neteasemusic,NetEaseMusic
+  - RULE-SET,tiktok,TikTok
+  - RULE-SET,telegram,Telegram
+  - RULE-SET,gitHub,Global
+  - RULE-SET,twitter,Global
+  - RULE-SET,testflight,Global
+  - RULE-SET,proxy,Global
+  - RULE-SET,apple,Apple
+  - RULE-SET,google,Google
+  - RULE-SET,microsoft,Microsoft
+  - RULE-SET,games,Games
+  - RULE-SET,cn,Mainland
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.metacubex.one,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,d.metacubex.one,DIRECT
+  - GEOIP,private,DIRECT
+  - DOMAIN-SUFFIX,ziffstatic.com,Speedtest
+  - GEOIP,CN,Mainland
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,Final
+  - DOMAIN-SUFFIX,cff.pw,Final
+  - DOMAIN-SUFFIX,vpnse.org,Final
+  - DOMAIN-SUFFIX,cfmem.com,Final
+  - MATCH,Final
