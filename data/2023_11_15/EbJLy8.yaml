@@ -1,0 +1,907 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "server": "localDns"
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1080
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1080
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🤖 OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "🌌 Google",
+      "type": "selector",
+      "outbounds": [
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "📟 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "🐦 Twitter",
+      "type": "selector",
+      "outbounds": [
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "👤 Facebook",
+      "type": "selector",
+      "outbounds": [
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "🛍️ Amazon",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "🍎 Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "🧩 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "🎮 Game",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "tag": "🎬 MediaVideo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇨🇳_CN_中国->🇩🇪_DE_德国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+        "🇦🇫_AF_阿富汗",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+        "🇺🇸_US_美国_1",
+        "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+        "🇺🇸_US_美国_2",
+        "🇫🇮_FI_芬兰",
+        "🇺🇸_US_美国_3",
+        "🇨🇳_CN_中国->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+        "🇫🇷_FR_法国",
+        "🇺🇸_US_美国_4",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_7"
+      ]
+    },
+    {
+      "tag": "🌏 cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "select"
+      ]
+    },
+    {
+      "tag": "🛑 AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "104.18.203.232",
+      "server_port": 2083,
+      "tls": {
+        "enabled": true,
+        "server_name": "copyaz.kanal-tel-nufilter.store"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "16606231-81f3-4138-af7c-bb4ca00facc7",
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.81.238",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ws.ArV2ray.fun"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e4476b85-4986-4c5b-b29a-44010deb2cfe",
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+      "type": "vless"
+    },
+    {
+      "server": "103.184.45.200",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "server_name": "15.globalnetvpn.site"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e09e5d28-c785-4868-ab26-dcfcef8f557f",
+      "tag": "🇨🇳_CN_中国->🇩🇪_DE_德国",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.217.82",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "interlopers.realbarcafootball.com"
+      },
+      "transport": {
+        "path": "/nimws",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "3480ec71-92aa-4e2a-ae74-efc2e12f0fbf",
+      "tag": "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+      "type": "vless"
+    },
+    {
+      "server": "v6.heduian.online",
+      "server_port": 30866,
+      "transport": {
+        "path": "/oooo",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 2,
+      "tag": "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.139",
+      "server_port": 2083,
+      "tls": {
+        "enabled": true,
+        "server_name": "copyaz.kanal-tel-nufilter.store"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "16606231-81f3-4138-af7c-bb4ca00facc7",
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_3",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.193.36",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "server_name": "felinetest.site"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "acca9938-3695-43df-872a-9c7d2b11f3bd",
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_4",
+      "type": "vless"
+    },
+    {
+      "server": "121.127.46.147",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇦🇫_AF_阿富汗",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "104.21.20.148",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "server_name": "felinetest.site"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "acca9938-3695-43df-872a-9c7d2b11f3bd",
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_5",
+      "type": "vless"
+    },
+    {
+      "server": "89.116.180.179",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "p6us4.pqjc.buzz",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/pq/us4",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "d2698cf9-c47e-455c-8384-12e642cbba15",
+      "tag": "🇺🇸_US_美国_1",
+      "type": "trojan"
+    },
+    {
+      "server": "bjcu.xzyunjiasu.icu",
+      "server_port": 33952,
+      "password": "5c8b210a-2f00-4292-964b-05281c7ad5d1",
+      "method": "aes-256-gcm",
+      "tag": "🇨🇳_CN_中国->🇺🇸_US_美国_2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "80.92.205.112",
+      "server_port": 443,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "4c90ba75-230b-4f8b-bbff-8efa0eb0415f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_2",
+      "type": "vmess"
+    },
+    {
+      "server": "95.217.157.219",
+      "server_port": 8443,
+      "password": "vq7X1S52C6",
+      "method": "aes-256-gcm",
+      "tag": "🇫🇮_FI_芬兰",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "5.161.67.68",
+      "server_port": 3389,
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "9c050a86-d612-48f1-ec32-e573df08a1b7",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_3",
+      "type": "vmess"
+    },
+    {
+      "server": "120.210.205.220",
+      "server_port": 47009,
+      "uuid": "83a424d8-4bcb-4cee-b016-2c8f1db4a921",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 64,
+      "tag": "🇨🇳_CN_中国->🇬🇧_GB_英国",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.4.139",
+      "server_port": 2083,
+      "tls": {
+        "enabled": true,
+        "server_name": "copyaz.kanal-tel-nufilter.store"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "16606231-81f3-4138-af7c-bb4ca00facc7",
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_6",
+      "type": "vless"
+    },
+    {
+      "server": "51.159.221.231",
+      "server_port": 443,
+      "password": "asdKkaskJKfnsa",
+      "method": "aes-256-cfb",
+      "tag": "🇫🇷_FR_法国",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "167.68.5.183",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "6us3.pqjc.buzz",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/pq/us3",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "d2698cf9-c47e-455c-8384-12e642cbba15",
+      "tag": "🇺🇸_US_美国_4",
+      "type": "trojan"
+    },
+    {
+      "server": "172.67.72.83",
+      "server_port": 2083,
+      "tls": {
+        "enabled": true,
+        "server_name": "copyaz.kanal-tel-nufilter.store"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "16606231-81f3-4138-af7c-bb4ca00facc7",
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_7",
+      "type": "vless"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "v2rayse.com",
+          "cfmem.com",
+          "vpnse.org",
+          "cff.pw",
+          "tt.vg"
+        ],
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "openai"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "geoip": [
+          "google"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geosite": [
+          "telegram"
+        ],
+        "geoip": [
+          "telegram"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geosite": [
+          "twitter"
+        ],
+        "geoip": [
+          "twitter"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "geoip": [
+          "facebook"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": [
+          "amazon"
+        ],
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": [
+          "apple-cn",
+          "apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": [
+          "microsoft"
+        ],
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": [
+          "category-games"
+        ],
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": [
+          "bilibili"
+        ],
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "geoip": [
+          "netflix"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "🌏 cn"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "🛑 AdBlock"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "store_selected": true
+    }
+  }
+}
