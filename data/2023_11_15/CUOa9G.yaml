@@ -1,0 +1,288 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：2023-11-04 09:46:30
+# 使用模版：分流-clash
+# 节点数量：10
+# 节点类型：trojan, vmess, ss
+####################################
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - +.msftconnecttest.com
+    - msftconnecttest.com
+    - msftncsi.com
+    - +.msftncsi.com
+    - +.google.com
+    - +.youtube.com
+    - +.githubusercontent.com
+  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://doh.dns.sb/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.twnic.tw/dns-query
+    - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+    domain:
+      - +.msftconnecttest.com
+      - msftconnecttest.com
+      - msftncsi.com
+      - +.msftncsi.com
+
+proxies:
+  - {"name":"v.ps - phone","type":"vmess","server":"cloudflare.cfgo.cc","port":2083,"cipher":"auto","uuid":"665f4b7e-a903-4788-88e7-ddc75f5d49d7","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gc7gdr","headers":{"host":"pan.ipcat.tech"}}}
+  - {"name":"GCP","type":"trojan","server":"34.96.172.182","port":443,"udp":true,"password":"Ngv7QFD1z7YhxNKp","sni":"gcp.ipcat.tech","skip-cert-verify":true}
+  - {"name":"a6-jp-game","type":"trojan","server":"a6-jp.sbsb.me","port":443,"udp":true,"password":"5ba2bc1f-ece8-4732-9d6a-95b9359bbcda","sni":"a6-jp.sbsb.me","skip-cert-verify":true}
+  - {"name":"t10-sg","type":"trojan","server":"catai.me","port":8445,"udp":true,"password":"ad52b5c4-f0bd-415b-8ac4-df745e9ee9a2","sni":"catai.me","skip-cert-verify":true}
+  - {"name":"t10-jp","type":"trojan","server":"t10-jp.fakeip.tech","port":443,"udp":true,"password":"aa7d8704-8a6d-437d-ac8c-20446960a1d2","sni":"t10-jp.fakeip.tech","skip-cert-verify":true}
+  - {"name":"Do1-2-us","type":"trojan","server":"do-2-us.script.gay","port":443,"udp":true,"password":"dd27c5f4-34be-437d-910a-ee0a0ce4e0de","sni":"do-2-us.script.gay","skip-cert-verify":true}
+  - {"name":"Do1-3-us","type":"ss","server":"34.96.172.182","port":36547,"password":"Z3hxcHI5MXFDZDJQa1QxemdIZVBLQUpJZXhnSTFEMDNFMUJCWlNHVG1Cb0JLWW5DQWVjYVB5ek5XZHQyMDl","cipher":"aes-256-gcm"}
+  - {"name":"Do1-3-us-vmess","type":"vmess","server":"cloudflare.cfgo.cc","port":443,"cipher":"auto","uuid":"5d3682d3-74a5-4ef7-96ac-c7e26e3ae805","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/xmiqvws","headers":{"host":"d1-us-3.aassr.me"}}}
+  - {"name":"Do1-3-us-trojan","type":"trojan","server":"3-us2.aassr.me","port":46585,"udp":true,"password":"8SqHBuA1Fg","skip-cert-verify":true}
+  - {"name":"Do1-3-us-ss","type":"ss","server":"183.240.117.12","port":26156,"password":"d1J1UkFIemNUeWRDZ2JST1ZzSHdnMGh1VHc5b0lKR2pNc0diN09LcVc0QWV0dDJLNktmdmN2T0VRZmoxUmdweg==","cipher":"aes-256-gcm"}
+  - {"name":"Do1-3-us-ss2","type":"ss","server":"183.233.187.244","port":26580,"password":"Z3hxcHI5MXFDZDJQa1QxemdIZVBLQUpJZXhnSTFEMDNFMUJCWlNHVG1Cb0JLWW5DQWVjYVB5ek5XZHQyMDl","cipher":"aes-256-gcm"}
+  - {"name":"Do2-sg-1","type":"ss","server":"139.59.236.199","port":36259,"password":"biub98ghF7gbgj","cipher":"aes-256-gcm"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ⛓ 负载均衡
+      - 🚑 故障转移
+      - ♻️ 自动选择
+      - 🎯 直连
+      - v.ps - phone
+      - GCP
+      - a6-jp-game
+      - t10-sg
+      - t10-jp
+      - Do1-2-us
+      - Do1-3-us
+      - Do1-3-us-vmess
+      - Do1-3-us-trojan
+      - Do1-3-us-ss
+      - Do1-3-us-ss2
+      - Do2-sg-1
+  - name: Ⓜ️ Bing
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: 📲 TG
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: 💬 OpenAi
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: Ⓜ️ 微软
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ⛓ 负载均衡
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: 📢 谷歌
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: 📺 YouTube
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: 🌍 Netflix
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: 🎮 游戏
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 直连
+  - name: ⛓ 负载均衡
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🚑 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🎯 直连
+    type: select
+    proxies:
+      - DIRECT
+
+rule-providers:
+  my_direct:
+    type: http
+    behavior: classical
+    url: https://my.uve.cc/three/my_direct.txt
+    interval: 86400
+    path: ./ruleset/my_direct.yaml
+  applications:
+    type: http
+    behavior: classical
+    url: https://js8.nl/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    interval: 86400
+    path: ./ruleset/applications.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://js8.nl/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    interval: 86400
+    path: ./ruleset/private.yaml
+  direct:
+    type: http
+    behavior: domain
+    url: https://js8.nl/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    interval: 86400
+    path: ./ruleset/direct.yaml
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://js8.nl/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    interval: 86400
+    path: ./ruleset/cncidr.yaml
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://js8.nl/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+    interval: 86400
+    path: ./ruleset/lancidr.yaml
+  reject:
+    type: http
+    behavior: domain
+    url: https://js8.nl/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    interval: 86400
+    path: ./ruleset/reject.yaml
+  my_proxy:
+    type: http
+    behavior: classical
+    url: https://my.uve.cc/three/my_proxy.txt
+    interval: 86400
+    path: ./ruleset/my_proxy.yaml
+  proxy:
+    type: http
+    behavior: domain
+    url: https://js8.nl/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    interval: 86400
+    path: ./ruleset/proxy.yaml
+  Bing:
+    type: http
+    behavior: classical
+    url: https://js8.nl/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml
+    interval: 86400
+    path: ./ruleset/bing.yaml
+  google:
+    type: http
+    behavior: classical
+    url: https://js8.nl/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://js8.nl/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml
+    path: ./ruleset/game.yaml
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://js8.nl/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
+    interval: 86400
+    path: ./ruleset/telegramcidr.yaml
+  youtube:
+    type: http
+    behavior: classical
+    url: https://js8.nl/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yml
+  netflix:
+    type: http
+    behavior: classical
+    url: https://js8.nl/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml
+    interval: 86400
+    path: ./ruleset/netflix.yml
+  openai:
+    type: http
+    behavior: classical
+    url: https://js8.nl/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    interval: 86400
+    path: ./ruleset/openai.yaml
+  microsoft:
+    type: http
+    behavior: classical
+    url: https://js8.nl/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    interval: 86400
+    path: ./ruleset/microsoft.yaml
+rules:
+  - RULE-SET,my_direct,🎯 直连
+  - RULE-SET,applications,🎯 直连
+  - RULE-SET,private,🎯 直连
+  - RULE-SET,direct,🎯 直连
+  - RULE-SET,cncidr,🎯 直连
+  - RULE-SET,lancidr,🎯 直连
+  - RULE-SET,reject,REJECT
+  - RULE-SET,my_proxy,🚀 节点选择
+  - RULE-SET,proxy,🚀 节点选择
+  - RULE-SET,Bing,Ⓜ️ Bing
+  - RULE-SET,google,📢 谷歌
+  - RULE-SET,game,🎮 游戏
+  - RULE-SET,telegramcidr,📲 TG
+  - RULE-SET,youtube,📺 YouTube
+  - RULE-SET,netflix,🌍 Netflix
+  - RULE-SET,openai,💬 OpenAi
+  - RULE-SET,microsoft,Ⓜ️ 微软
+  - GEOIP,CN,🎯 直连
+  - GEOIP,LAN,🎯 直连
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - MATCH,🐟 漏网之鱼
