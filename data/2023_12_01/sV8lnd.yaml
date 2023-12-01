@@ -1,0 +1,920 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 10001,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "Traffic: 25.69 GB | 150 GB",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 10001,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "Expire: 2024-11-24",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 10001,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港实验性 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 10002,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本实验性 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 10003,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡实验性 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 10004,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国实验性 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12001,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港高级 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12002,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港高级 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12003,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港高级 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 12011,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本高级 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 12012,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本高级 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 12013,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本高级 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12031,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡高级 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12032,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡高级 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12033,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡高级 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12041,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "台湾高级 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12042,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "台湾高级 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 12043,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "台湾高级 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 12021,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国高级 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 12022,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国高级 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 12023,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国高级 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11001,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11002,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11003,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港标准 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11004,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港标准 IEPL 中继 4",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11005,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港标准 IEPL 中继 5",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11006,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港标准 IEPL 中继 6",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11007,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港标准 IEPL 中继 7",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11008,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "香港标准 IEPL 中继 8",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11011,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11012,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11013,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本标准 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11014,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本标准 IEPL 中继 4",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11015,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本标准 IEPL 中继 5",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11016,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本标准 IEPL 中继 6",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11017,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本标准 IEPL 中继 7",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11018,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "日本标准 IEPL 中继 8",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11031,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11032,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11033,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡标准 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11034,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡标准 IEPL 中继 4",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11035,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡标准 IEPL 中继 5",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11036,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡标准 IEPL 中继 6",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11037,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡标准 IEPL 中继 7",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11038,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新加坡标准 IEPL 中继 8",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11041,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "台湾标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11042,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "台湾标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11043,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "台湾标准 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11021,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11022,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11023,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国标准 IEPL 中继 3",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11024,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国标准 IEPL 中继 4",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11025,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国标准 IEPL 中继 5",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11026,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国标准 IEPL 中继 6",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11027,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国标准 IEPL 中继 7",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11028,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "美国标准 IEPL 中继 8",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11050,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "摩尔多瓦标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11051,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "乌克兰标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11052,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "意大利标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11053,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "匈牙利标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11054,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "西班牙标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11055,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "土耳其标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11056,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "德国标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11057,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "德国标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11058,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "英国标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11059,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "英国标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11060,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "荷兰标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11061,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "荷兰标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11062,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "法国标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11063,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "法国标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11064,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "加拿大标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11065,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "加拿大标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11066,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "阿根廷标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11067,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "巴西标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11068,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "智利标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11069,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "澳大利亚标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11070,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "新西兰标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11071,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "韩国标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "shdata1.fc-server.xyz",
+      "server_port": 11072,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "韩国标准 IEPL 中继 2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11073,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "印尼标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11074,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "泰国标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11075,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "越南标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11080,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "印度标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11081,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "巴基斯坦标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11082,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "以色列标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11083,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "阿联酋标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11084,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "菲律宾标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "gzdata1.fc-server.xyz",
+      "server_port": 11085,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "马来西亚标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "bjdata1.fc-server.xyz",
+      "server_port": 11086,
+      "password": "Sj10bnYDe7w6V29E",
+      "method": "aes-128-gcm",
+      "plugin": "simple-obfs",
+      "tag": "埃及标准 IEPL 中继 1",
+      "type": "shadowsocks"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "block"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "cn"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geoip": [
+          "private"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
