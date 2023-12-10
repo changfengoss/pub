@@ -1,0 +1,587 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "server": "localDns"
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🤖 OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "🌌 Google",
+      "type": "selector",
+      "outbounds": [
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "📟 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "🐦 Twitter",
+      "type": "selector",
+      "outbounds": [
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "👤 Facebook",
+      "type": "selector",
+      "outbounds": [
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "🛍️ Amazon",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "🍎 Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "🧩 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "🎮 Game",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "tag": "🎬 MediaVideo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+        "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+        "hysteria_0",
+        "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3"
+      ]
+    },
+    {
+      "tag": "🌏 cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "select"
+      ]
+    },
+    {
+      "tag": "🛑 AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "51.158.54.46",
+      "server_port": 11926,
+      "up_mbps": 80,
+      "down_mbps": 100,
+      "auth": "Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs",
+      "tag": "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_1",
+      "type": "hysteria"
+    },
+    {
+      "server": "108.181.22.239",
+      "server_port": 61561,
+      "up_mbps": 80,
+      "down_mbps": 100,
+      "auth": "PBhG3zqMKaMO5ZnemDvLrZ6v0Fd7EqCutDvzLNtvWHJ6IpMWJg",
+      "tag": "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520I",
+      "type": "hysteria"
+    },
+    {
+      "server": "173.234.25.52",
+      "server_port": 20164,
+      "up_mbps": 80,
+      "down_mbps": 100,
+      "auth": "Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F",
+      "tag": "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520II",
+      "type": "hysteria"
+    },
+    {
+      "server": "167.160.90.251",
+      "server_port": 48089,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth": "dongtaiwang.com",
+      "tag": "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIIU",
+      "type": "hysteria"
+    },
+    {
+      "server": "62.204.54.81",
+      "server_port": 42691,
+      "up_mbps": 5,
+      "down_mbps": 10,
+      "auth": "dongtaiwang.com",
+      "tag": "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB%2520IIC",
+      "type": "hysteria"
+    },
+    {
+      "server": "51.158.54.46",
+      "server_port": 11926,
+      "up_mbps": 80,
+      "down_mbps": 100,
+      "auth": "Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs",
+      "tag": "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_2",
+      "type": "hysteria"
+    },
+    {
+      "server": "51.158.54.46",
+      "server_port": 11926,
+      "up_mbps": 80,
+      "down_mbps": 100,
+      "auth": "Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs",
+      "tag": "HysTeria1%2528Vpn_Xw%2529%25F0%259F%2592%25AB_3",
+      "type": "hysteria"
+    },
+    {
+      "server": "109.104.152.180",
+      "server_port": 40522,
+      "up_mbps": 80,
+      "down_mbps": 100,
+      "auth": "dongtaiwang.com",
+      "tag": "hysteria_0",
+      "type": "hysteria"
+    },
+    {
+      "server": "195.128.240.251",
+      "server_port": 80,
+      "tls": {
+        "enabled": true
+      },
+      "password": "RhBlRjqD5I97szf87gQR662r6cV5yOK2",
+      "obfs": {
+        "type": "salamander",
+        "password": "8w4jlX268iItraZSsWibq5gW0ZB1N0h2"
+      },
+      "tag": "%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20-%20Stockholm%20%F0%9F%8C%8D%20HY2-UDP-TLS%204%E2%83%A3",
+      "type": "hysteria2"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "v2rayse.com",
+          "cfmem.com",
+          "vpnse.org",
+          "cff.pw",
+          "tt.vg"
+        ],
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "openai"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "geoip": [
+          "google"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geosite": [
+          "telegram"
+        ],
+        "geoip": [
+          "telegram"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geosite": [
+          "twitter"
+        ],
+        "geoip": [
+          "twitter"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "geoip": [
+          "facebook"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": [
+          "amazon"
+        ],
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": [
+          "apple-cn",
+          "apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": [
+          "microsoft"
+        ],
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": [
+          "category-games"
+        ],
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": [
+          "bilibili"
+        ],
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "geoip": [
+          "netflix"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "🌏 cn"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "🛑 AdBlock"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "store_selected": true
+    }
+  }
+}
