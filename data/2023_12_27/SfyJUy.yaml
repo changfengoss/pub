@@ -1,0 +1,523 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+log-level: info
+cfw-latency-timeout: 8000
+cfw-latency-url: https://api.v2fly.org/checkConnection.svgz
+cfw-proxies-order: latency
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - 'https://1.1.1.1/dns-query#en0'
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.nextdns.io
+    - https://doh.opendns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dns.surfshark.com/dns-query
+    - https://8.8.8.8/dns-query
+    - https://9.9.9.9/dns-query
+    - https://doh.cleanbrowsing.org/doh/security-filter/
+    - https://resolver2.dns.watch/dns-query 
+    - https://doh-de.blahdns.com/dns-query
+    - https://freedns.controld.com/p2
+    - https://dns.dnswarden.com/adblock
+    - https://adblock.doh.mullvad.net/dns-query
+    - https://basic.rethinkdns.com/dns-query
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tls://dns.google:853
+    - 162.159.36.1
+    - 162.159.46.1
+    - https://dns.aa.net.uk/dns-query
+    - https://rubyfish.cn/dns-query
+    - https://nsc.torgues.net/dns-query
+    - https://xmission-slc-1.edge.nextdns.io/dns-query
+    - https://Doh1.B-Cdn.net/dns-query
+    - https://dns.melalandia.tk/dns-query
+    - https://jp-kix2.doh.sb/
+    - https://dns.gi.co.id/dns-query
+    - https://dns.controld.com/
+    - https://xtom-osa-1.edge.nextdns.io/dns-query
+    - https://170.176.145.150/
+    - https://ipv4-zepto-mci-1.edge.nextdns.io/dns-query
+    - https://res-acst3.absolight.net/
+    - https://zepto-sto-1.edge.nextdns.io
+    - https://doh.dns.sb/dns-query
+    - tls://dns.rubyfish.cn:853
+    - 'tls://8.8.8.8#en0'
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
+    - +.media.dssott.com
+rule-providers:
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/iran.yaml
+    path: ./ruleset/iran.yaml
+    interval: 432000
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/steam.yaml
+    path: ./ruleset/steam.yaml
+    interval: 432000
+  add:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/add.yaml
+    path: ./ruleset/add.yaml
+    interval: 432000
+  Purification:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app.yaml
+    path: ./ruleset/Purification.yaml
+    interval: 432000
+  Global:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Global%20tracking.yaml
+    path: ./ruleset/Global.yaml
+    interval: 432000
+  AntiAd:
+    type: http
+    behavior: domain
+    url: >-
+      https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    path: ./ruleset/AntiAd.yaml
+    interval: 432000
+  MoreAd:
+    type: http
+    behavior: domain
+    url: https://howdy.id/download/rules/clash.txt
+    path: ./providers/rule-provider_clash.yaml
+    interval: 86400
+  GoodbyeAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/GoodbyeAds.yaml
+    interval: 432000
+    path: ./ruleset/add.yaml
+  iran_other:
+    type: http
+    behavior: domain
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_other.yaml"
+    path: ./ruleset/iran_other.yaml
+    interval: 432000
+  iran_ads:
+    type: http
+    behavior: domain
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    path: ./ruleset/iran_ads.yaml
+    interval: 432000
+  blocked:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/coldwater-10/clash_rules/main/blocked-sites.yml"
+    path: ./ruleset/blocked.yaml
+    interval: 432000
+  tahrim:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/coldwater-10/clash_rules/main/tahrim.yaml"
+    path: ./ruleset/tahrim.yaml
+    interval: 432000
+  censor:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/coldwater-10/clash_rules/main/censor.yaml"
+    path: ./ruleset/tahrim.yaml
+    interval: 432000
+  ads_ip:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/ads%20ip.yaml
+    path: ./ruleset/adsip.yaml
+    interval: 432000
+  Purification_ip:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app%20ip.yaml
+    path: ./ruleset/Purificationip.yaml
+    interval: 432000
+  category_ir:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-ir.yaml
+    path: ./ruleset/category_ir.yaml
+    interval: 432000
+  category_porn:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-porn.yaml
+    path: ./ruleset/category_porn.yaml
+    interval: 432000
+  category_ads_all:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-ads-all.yaml
+    path: ./ruleset/category_ads_all.yaml
+    interval: 432000
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    path: ./ruleset/category_public_tracker.yaml
+    interval: 432000
+  facebook:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/facebook.yaml
+    path: ./ruleset/facebook.yaml
+    interval: 432000
+  youtube:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/youtube.yaml
+    path: ./ruleset/youtube.yaml
+    interval: 432000
+  instagram:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/instagram.yaml
+    path: ./ruleset/instagram.yaml
+    interval: 432000
+  spotify:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/spotify.yaml
+    path: ./ruleset/spotify.yaml
+    interval: 432000
+  twitter:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/twitter.yaml
+    path: ./ruleset/twitter.yaml
+    interval: 432000
+  telegram:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/telegram.yaml
+    path: ./ruleset/telegram.yaml
+    interval: 432000
+  openai:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/openai.yaml
+    path: ./ruleset/openai.yaml
+    interval: 432000
+  whatsapp:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/whatsapp.yaml
+    path: ./ruleset/whatsapp.yaml
+    interval: 432000
+  tiktok:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/tiktok.yaml
+    path: ./ruleset/tiktok.yaml
+    interval: 432000
+  twitch:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/twitch.yaml
+    path: ./ruleset/twitch.yaml
+    interval: 432000
+  private:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/private.yaml
+    path: ./ruleset/private.yaml
+    interval: 432000
+  local_ips:
+    type: http
+    behavior: domain
+    url: >-
+       https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/local-ips.yaml
+    path: ./ruleset/local_ips.yaml
+    interval: 432000
+
+proxies:
+  - name: "CloudFlare Warp"
+    type: wireguard
+    server: zula.ir
+    port: 2408
+    ip: 172.16.0.2
+    private-key: wNnsZ9GRy+xOXAJSmwGnU+gNAdZEpen/4GXijg3xuWo=
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    dns: [8.8.8.8]
+    mtu: 1280
+    udp: true
+
+proxy-groups:
+  - name: 🔀 نوع انتخاب پروکسی
+    type: select
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - بازگشتی (بهترین پینگ) ➡️
+      - تعادل بار (هش ثابت) ♻️
+      - تعادل بار (زمان بندی) ⏳
+      - ⛔ قطع اینترنت
+      - 🛡️ بدون فیلترشکن
+  - name: 📶 انتخاب نوع اتصال
+    type: select
+    proxies:
+      - 🌐 همه سایتا
+      - 🔐 فقط سایتای فیلتر شده
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - CloudFlare Warp
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://connectivity.cloudflareclient.com
+    interval: 300
+    proxies:
+      - CloudFlare Warp
+  - name: بازگشتی (بهترین پینگ) ➡️
+    type: fallback
+    url: http://connectivity.cloudflareclient.com
+    interval: 300
+    proxies:
+      - CloudFlare Warp
+  - name: تعادل بار (هش ثابت) ♻️
+    type: load-balance
+    url: http://connectivity.cloudflareclient.com
+    interval: 300
+    proxies:
+      - CloudFlare Warp
+    strategy: consistent-hashing
+  - name: تعادل بار (زمان بندی) ⏳
+    type: load-balance
+    url: http://connectivity.cloudflareclient.com
+    interval: 300
+    tolerance: 100
+    proxies:
+      - CloudFlare Warp
+    strategy: round-robin
+  - name: 🇮🇷 سایتای ایرانی
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🏴‍☠️ سایتای تحریمی
+    type: select
+    proxies:
+      - 🔀 نوع انتخاب پروکسی
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+  - name: 🤬 سایتای سانسوری
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🔀 نوع انتخاب پروکسی
+      - 🛡️ بدون فیلترشکن
+  - name: 🆎 تبلیغات
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🍃 تصفیه برنامه
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛑 رهگیری جهانی
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🎮 استیم
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛡️ بدون فیلترشکن
+    type: select
+    proxies:
+      - DIRECT
+  - name: ⛔ قطع اینترنت
+    type: select
+    proxies:
+      - REJECT
+  - name: 🚫 اجازه ندادن
+    type: select
+    proxies:
+      - REJECT
+  - name: 🔐 فقط سایتای فیلتر شده
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🌐 همه سایتا
+    type: select
+    proxies:
+      - 🔀 نوع انتخاب پروکسی
+
+rules:
+  - RULE-SET,blocked,🔀 نوع انتخاب پروکسی
+  - RULE-SET,censor,🤬 سایتای سانسوری
+  - RULE-SET,local_ips,🛡️ بدون فیلترشکن
+  - RULE-SET,private,🛡️ بدون فیلترشکن
+  - GEOIP,IR,🇮🇷 سایتای ایرانی
+  - RULE-SET,category_ir,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran_other,🇮🇷 سایتای ایرانی
+  - RULE-SET,steam,🎮 استیم
+  - RULE-SET,Purification_ip,🍃 تصفیه برنامه,no-resolve
+  - RULE-SET,Purification,🍃 تصفیه برنامه
+  - RULE-SET,category_public_tracker,🛑 رهگیری جهانی
+  - RULE-SET,Global,🛑 رهگیری جهانی
+  - RULE-SET,category_ads_all,🆎 تبلیغات
+  - RULE-SET,iran_ads,🆎 تبلیغات
+  - RULE-SET,ads_ip,🆎 تبلیغات,no-resolve
+  - RULE-SET,add,🆎 تبلیغات
+  - RULE-SET,MoreAd,🆎 تبلیغات
+  - RULE-SET,AntiAd,🆎 تبلیغات
+  - RULE-SET,GoodbyeAds,🆎 تبلیغات
+  - RULE-SET,tahrim,🏴‍☠️ سایتای تحریمی
+  - RULE-SET,category_porn,🔀 نوع انتخاب پروکسی
+  - RULE-SET,facebook,🔀 نوع انتخاب پروکسی
+  - RULE-SET,youtube,🔀 نوع انتخاب پروکسی
+  - RULE-SET,instagram,🔀 نوع انتخاب پروکسی
+  - RULE-SET,spotify,🔀 نوع انتخاب پروکسی
+  - RULE-SET,twitter,🔀 نوع انتخاب پروکسی
+  - RULE-SET,telegram,🔀 نوع انتخاب پروکسی
+  - RULE-SET,openai,🔀 نوع انتخاب پروکسی
+  - RULE-SET,whatsapp,🔀 نوع انتخاب پروکسی
+  - RULE-SET,tiktok,🔀 نوع انتخاب پروکسی
+  - RULE-SET,twitch,🔀 نوع انتخاب پروکسی
+  - MATCH,📶 انتخاب نوع اتصال
