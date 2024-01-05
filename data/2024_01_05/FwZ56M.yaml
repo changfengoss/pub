@@ -1,0 +1,40 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：2024-01-05 14:21:04
+# 使用模版：摩羯
+# 节点数量：2
+# 节点类型：vmess
+####################################
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://doh.dns.sb/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.twnic.tw/dns-query
+    - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"_1","type":"vmess","server":"47.236.117.150","port":443,"cipher":"auto","uuid":"5ca5c09b-c886-4bfe-aee6-761c2e1b709d","alterId":73,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"_2","type":"vmess","server":"8.219.150.186","port":443,"cipher":"auto","uuid":"1499c10d-cf13-4c10-9494-e97651fd375e","alterId":66,"tls":false,"skip-cert-verify":true,"network":"tcp"}
