@@ -1,0 +1,1004 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash.Meta
+# 创建时间：2024-01-20 23:42:32
+# 使用模版：ACL4SSR_Mini.ini
+# 节点数量：199
+# 节点类型：trojan, vless, vmess, ss
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+####################################
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"CN_youtube@资源分享师_1","type":"trojan","server":"183.236.51.7","port":10807,"udp":true,"password":"137a11af-a3db-47fc-83fb-59c001e6bbae","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_2","type":"trojan","server":"183.236.51.7","port":10807,"udp":true,"password":"240fa7f6-6c4d-411b-a6a4-bb9aa55980f5","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_3","type":"trojan","server":"183.236.51.6","port":10803,"udp":true,"password":"88f581bf-50bf-409c-b58f-5aaa56239e76","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_4","type":"trojan","server":"183.236.51.6","port":10804,"udp":true,"password":"1669de26-7366-4420-980a-495543716f72","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_5","type":"vless","server":"dvorda.pp.ua","port":2096,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"mgxrayfuck_yes!free_vpn"}}
+  - {"name":"CN_youtube@资源分享师_6","type":"trojan","server":"183.236.51.7","port":10807,"udp":true,"password":"88f581bf-50bf-409c-b58f-5aaa56239e76","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_7","type":"trojan","server":"183.236.51.7","port":10806,"udp":true,"password":"731202ae-db03-4d22-9f25-80687f5ef0de","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_8","type":"trojan","server":"183.236.51.6","port":10804,"udp":true,"password":"f3fd9dad-642e-489a-a6ae-5771a6ed9509","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_9","type":"trojan","server":"183.236.51.6","port":10802,"udp":true,"password":"dd6c28f0-f2dd-4202-b127-d6d2cb8b4a0f","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_10","type":"trojan","server":"183.236.51.6","port":10803,"udp":true,"password":"63817ea4-7062-4ec6-b7c0-61279b48cf73","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_11","type":"trojan","server":"183.236.51.6","port":10804,"udp":true,"password":"62b1ee32-733a-44b7-8393-a3d196f4bfc0","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_12","type":"vless","server":"jp16.vlessx.xyz","port":8443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"CN_youtube@资源分享师_13","type":"trojan","server":"183.236.51.7","port":10806,"udp":true,"password":"63817ea4-7062-4ec6-b7c0-61279b48cf73","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_14","type":"trojan","server":"183.236.51.7","port":10806,"udp":true,"password":"5d5be70f-47c5-4b03-b765-a6b6ac2b45df","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_15","type":"trojan","server":"183.236.51.7","port":10806,"udp":true,"password":"137a11af-a3db-47fc-83fb-59c001e6bbae","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_16","type":"trojan","server":"183.236.51.7","port":10806,"udp":true,"password":"4ca93cad-f753-4571-9e7d-4caf769652d7","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_17","type":"trojan","server":"183.236.51.6","port":10801,"udp":true,"password":"17ac192b-fb3d-4ce1-a783-cadca3a9f4ad","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_18","type":"trojan","server":"183.236.51.6","port":10803,"udp":true,"password":"acefaa97-baa2-4494-b37f-debe36f154a9","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_19","type":"trojan","server":"183.236.51.7","port":10806,"udp":true,"password":"add701d2-3637-4bd4-9004-b94acc731efc","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_20","type":"trojan","server":"183.236.51.6","port":10804,"udp":true,"password":"add701d2-3637-4bd4-9004-b94acc731efc","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_21","type":"trojan","server":"183.236.51.6","port":10804,"udp":true,"password":"240fa7f6-6c4d-411b-a6a4-bb9aa55980f5","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_22","type":"trojan","server":"183.236.51.6","port":10804,"udp":true,"password":"0c69fb79-73aa-460a-a2c1-369abafb2f4d","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_23","type":"trojan","server":"183.236.51.6","port":10805,"udp":true,"password":"dd6c28f0-f2dd-4202-b127-d6d2cb8b4a0f","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_24","type":"vless","server":"090--join.outline-vpn.cloud","port":443,"uuid":"b9ad895b-12ac-40fc-a5ac-a5b2a1285001","tls":true,"servername":"3k.pureboy.eu.org","network":"ws","ws-opts":{"path":"/?ed=2048"}}
+  - {"name":"CN_youtube@资源分享师_25","type":"trojan","server":"183.236.51.6","port":10805,"udp":true,"password":"137a11af-a3db-47fc-83fb-59c001e6bbae","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_26","type":"trojan","server":"183.236.51.6","port":10804,"udp":true,"password":"dd6c28f0-f2dd-4202-b127-d6d2cb8b4a0f","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_27","type":"trojan","server":"183.236.51.7","port":10807,"udp":true,"password":"731202ae-db03-4d22-9f25-80687f5ef0de","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_28","type":"trojan","server":"183.236.51.7","port":10807,"udp":true,"password":"539ecc7a-e4b2-403a-887f-f058e4c6ef43","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_29","type":"trojan","server":"183.236.51.7","port":10806,"udp":true,"password":"8c1258d9-6f3d-46ea-a30d-598a010f1c86","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_30","type":"trojan","server":"183.236.51.6","port":10802,"udp":true,"password":"62b1ee32-733a-44b7-8393-a3d196f4bfc0","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_31","type":"vless","server":"sg1.vlessx.xyz","port":8443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"free_vpn"}}
+  - {"name":"US_youtube@资源分享师_32","type":"vmess","server":"11.namesilo123.top","port":2082,"cipher":"auto","uuid":"597928b4-af97-4d96-8a6a-ee8019ab1ebe","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"freezhang.sanfen002.top"}}}
+  - {"name":"US_youtube@资源分享师_33","type":"vless","server":"cao.pp.ua","port":2087,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"mgxrayfuck_yesfree_vpn"}}
+  - {"name":"DE_youtube@资源分享师_34","type":"vmess","server":"92.223.124.36","port":443,"cipher":"auto","uuid":"29205f25-691a-4c09-87f6-bb917511b434","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"sabziran.serveminecraft.net"}}}
+  - {"name":"CN_youtube@资源分享师_35","type":"trojan","server":"183.236.51.6","port":10802,"udp":true,"password":"8c1258d9-6f3d-46ea-a30d-598a010f1c86","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_36","type":"vless","server":"e2.namesilo123.top","port":2082,"uuid":"597928b4-af97-4d96-8a6a-ee8019ab1ebe","tls":true,"servername":"vlsfr3.sanfen001.top","network":"ws","ws-opts":{"path":"/?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_37","type":"vless","server":"e3.namesilo123.top","port":2082,"uuid":"597928b4-af97-4d96-8a6a-ee8019ab1ebe","tls":true,"servername":"vlsfr3.sanfen001.top","network":"ws","ws-opts":{"path":"/?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_38","type":"vless","server":"e4.namesilo123.top","port":2082,"uuid":"597928b4-af97-4d96-8a6a-ee8019ab1ebe","tls":true,"servername":"vlsfr3.sanfen001.top","network":"ws","ws-opts":{"path":"/?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_39","type":"vless","server":"m.koreant.pp.ua","port":2083,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"free_vpn"}}
+  - {"name":"GB_youtube@资源分享师_40","type":"ss","server":"series-a2-me.samanehha.co","port":443,"password":"Bog0ELmMM9DSxDdQ","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"US_youtube@资源分享师_41","type":"vless","server":"poundcom.pp.ua","port":2096,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"free_vpn"}}
+  - {"name":"US_youtube@资源分享师_42","type":"vless","server":"de5.vlessx.xyz","port":8443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"fuck_yes!"}}
+  - {"name":"CN_youtube@资源分享师_43","type":"trojan","server":"183.236.51.6","port":10801,"udp":true,"password":"4ca93cad-f753-4571-9e7d-4caf769652d7","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_youtube@资源分享师_44","type":"trojan","server":"183.236.51.6","port":10805,"udp":true,"password":"f3fd9dad-642e-489a-a6ae-5771a6ed9509","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_45","type":"vless","server":"104.21.0.28","port":2053,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_46","type":"vmess","server":"104.17.25.1","port":80,"cipher":"auto","uuid":"d6664518-c8e1-42cf-f2c1-d33dcc01a8a6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"sgvpn.catnipballs.gay"}}}
+  - {"name":"US_youtube@资源分享师_47","type":"vless","server":"104.21.0.93","port":2087,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_48","type":"vless","server":"104.21.5.78","port":2096,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_49","type":"vless","server":"104.21.5.149","port":2083,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_50","type":"vless","server":"104.21.5.27","port":2087,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_51","type":"vless","server":"www.microfix.pp.ua","port":2083,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"mgxrayfuck_yes!free_vpn"}}
+  - {"name":"US_youtube@资源分享师_52","type":"vless","server":"104.21.5.29","port":8443,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"free_vpn"}}
+  - {"name":"US_youtube@资源分享师_53","type":"vmess","server":"104.17.25.1","port":80,"cipher":"auto","uuid":"d6664518-c8e1-42cf-f2c1-d33dcc01a8a6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"sgvpn.catnipballs.gay"}}}
+  - {"name":"US_youtube@资源分享师_54","type":"vless","server":"104.21.2.115","port":2087,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_55","type":"vless","server":"104.21.2.150","port":443,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_56","type":"vless","server":"104.21.4.151","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_57","type":"vless","server":"104.21.4.142","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_58","type":"vless","server":"104.21.12.183","port":8443,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"HK_youtube@资源分享师_59","type":"vless","server":"43.154.34.74","port":1935,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_60","type":"vless","server":"104.21.4.112","port":2096,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_61","type":"vless","server":"104.21.4.141","port":2083,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_62","type":"vless","server":"104.21.4.111","port":2087,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"CN_youtube@资源分享师_63","type":"trojan","server":"183.236.51.7","port":10807,"udp":true,"password":"0c69fb79-73aa-460a-a2c1-369abafb2f4d","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_64","type":"vless","server":"104.21.2.65","port":2053,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_65","type":"vless","server":"104.21.12.169","port":8443,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_66","type":"vless","server":"104.21.5.144","port":2083,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"free_vpn"}}
+  - {"name":"US_youtube@资源分享师_67","type":"vless","server":"yakrobitiremont.pp.ua","port":2083,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"fuck_yes!"}}
+  - {"name":"US_youtube@资源分享师_68","type":"vless","server":"104.21.0.115","port":2087,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_69","type":"vless","server":"104.21.4.96","port":2083,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_70","type":"vless","server":"nl35.vlessx.us","port":8443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"free_vpn"}}
+  - {"name":"US_youtube@资源分享师_71","type":"vless","server":"104.21.4.228","port":2096,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_72","type":"vless","server":"104.21.4.127","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"CN_youtube@资源分享师_73","type":"trojan","server":"183.236.51.6","port":10804,"udp":true,"password":"acefaa97-baa2-4494-b37f-debe36f154a9","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"IN_youtube@资源分享师_74","type":"vless","server":"103.110.127.85","port":8443,"uuid":"f2cc5221-acc1-4da5-b4f0-dee53b40ebec","tls":true,"servername":"cric.yourdisha.in","network":"tcp"}
+  - {"name":"US_youtube@资源分享师_75","type":"vless","server":"104.21.4.197","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_76","type":"vless","server":"104.21.4.160","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_77","type":"vless","server":"104.21.4.9","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_78","type":"vless","server":"104.21.4.149","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_79","type":"vless","server":"104.21.0.239","port":443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_80","type":"vless","server":"104.21.4.182","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_81","type":"vless","server":"nl23.vlessx.us","port":8443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"free_vpn"}}
+  - {"name":"US_youtube@资源分享师_82","type":"vless","server":"104.21.2.112","port":443,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_83","type":"vless","server":"104.21.4.36","port":2083,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_84","type":"vless","server":"104.21.0.205","port":2053,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_85","type":"vless","server":"104.21.4.30","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_86","type":"vless","server":"104.21.4.78","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_87","type":"vless","server":"104.21.2.196","port":2053,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_88","type":"vless","server":"104.21.4.252","port":8443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_89","type":"vless","server":"104.21.12.239","port":8443,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_90","type":"vless","server":"104.21.5.155","port":2096,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_91","type":"vless","server":"104.21.4.156","port":2087,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_92","type":"vless","server":"104.19.154.226","port":8443,"uuid":"ffffffff-17ad-45e7-aaa1-f2baaa08e930","tls":true,"servername":"watashi.free.jppublic.moh539.link","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_93","type":"vless","server":"jp13.vlessx.xyz","port":8443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"free_vpn"}}
+  - {"name":"US_youtube@资源分享师_94","type":"vmess","server":"world14.freedomisnear.fun","port":443,"cipher":"auto","uuid":"bc7611d2-9fa8-4fbc-be85-5cd834db9c2b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/53673/@forwardv2ray"}}
+  - {"name":"US_youtube@资源分享师_95","type":"vless","server":"104.21.2.129","port":2096,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_96","type":"vless","server":"104.21.0.154","port":2083,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_97","type":"vless","server":"104.21.4.244","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"GB_youtube@资源分享师_98","type":"ss","server":"fast_2ray_telchannelll.fast2rayy.eu.org","port":443,"password":"Bog0ELmMM9DSxDdQ","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"GB_youtube@资源分享师_99","type":"ss","server":"series-a1.samanehha.co","port":443,"password":"W74XFALLLuw6m5IA","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"TW_youtube@资源分享师_100","type":"vless","server":"118.163.128.81","port":25593,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"baipiao475.stunning-bassoon.pages.dev","network":"ws","ws-opts":{"path":"/blue"}}
+  - {"name":"US_youtube@资源分享师_101","type":"vless","server":"104.21.4.121","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_102","type":"vless","server":"104.21.5.108","port":2087,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_103","type":"vless","server":"104.21.4.164","port":2083,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_104","type":"vless","server":"104.21.4.219","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"CN_youtube@资源分享师_105","type":"trojan","server":"183.236.51.7","port":10808,"udp":true,"password":"acefaa97-baa2-4494-b37f-debe36f154a9","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_106","type":"vless","server":"104.21.0.77","port":2087,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"GB_youtube@资源分享师_107","type":"ss","server":"13.43.56.46","port":443,"password":"Bog0ELmMM9DSxDdQ","cipher":"chacha20-poly1305"}
+  - {"name":"US_youtube@资源分享师_108","type":"vless","server":"104.21.2.155","port":2083,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_109","type":"vless","server":"104.21.2.246","port":2096,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"UA_youtube@资源分享师_110","type":"vmess","server":"79.133.108.14","port":443,"cipher":"auto","uuid":"35944ff5-236b-4433-9bed-313213d564b7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"strong98.zapto.org"}}}
+  - {"name":"US_youtube@资源分享师_111","type":"vless","server":"104.21.4.154","port":2087,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_112","type":"vless","server":"162.159.135.102","port":443,"uuid":"8250d638-45df-41fa-b06f-160d1cb1de0c","tls":true,"servername":"abc.vpneee.top","network":"ws","ws-opts":{"path":"/ynqgmcat/"}}
+  - {"name":"DE_youtube@资源分享师_113","type":"vmess","server":"92.223.124.48","port":80,"cipher":"auto","uuid":"f21bcdb6-5dc6-4c4b-9a34-3b185f6747c4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"tabyan205.serveftp.com"}}}
+  - {"name":"TW_youtube@资源分享师_114","type":"vmess","server":"c12.twtc.dynu.net","port":6122,"cipher":"auto","uuid":"8907aeec-189d-48d9-b557-fb242a4d8127","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"US_youtube@资源分享师_115","type":"vmess","server":"world130.freedomisnear.fun","port":8080,"cipher":"auto","uuid":"e1231bed-920c-420d-b0f0-c1950fe97995","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray"}}
+  - {"name":"US_youtube@资源分享师_116","type":"vmess","server":"world11.freedomisnear.fun","port":443,"cipher":"auto","uuid":"6211bedc-0520-4437-a799-14166f4aeac3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/29083/@forwardv2ray"}}
+  - {"name":"US_youtube@资源分享师_117","type":"vless","server":"clang.pp.ua","port":2096,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"free0vpn"}}
+  - {"name":"US_youtube@资源分享师_118","type":"vless","server":"104.21.4.98","port":2083,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_119","type":"vless","server":"104.21.2.178","port":2096,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"HK_youtube@资源分享师_120","type":"vless","server":"hk09.yscard.gq","port":2087,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"/blue"}}
+  - {"name":"US_youtube@资源分享师_121","type":"vless","server":"104.21.13.133","port":443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"GB_youtube@资源分享师_122","type":"ss","server":"did.xn--sxqu35b.xn--fiqs8s","port":20167,"password":"01bb2bc7-3468-4446-9f50-563486977acf","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"US_youtube@资源分享师_123","type":"vless","server":"104.21.2.15","port":443,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_124","type":"vless","server":"104.21.2.239","port":2087,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"JP_youtube@资源分享师_125","type":"vmess","server":"92.223.63.27","port":443,"cipher":"auto","uuid":"b82493e3-07b4-4cf2-b585-965575cfeb32","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"softiri.serveirc.com"}}}
+  - {"name":"US_youtube@资源分享师_126","type":"vless","server":"104.21.7.83","port":2086,"uuid":"e28bb3f8-e64a-4419-9496-33c46220354b","tls":true,"servername":"sdgf.bdfstt.sbs","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_127","type":"vless","server":"104.16.97.12","port":2053,"uuid":"ffffffff-17ad-45e7-aaa1-f2baaa08e930","tls":true,"servername":"watashi.free.jppublic.moh539.link","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"JP_youtube@资源分享师_128","type":"vmess","server":"92.223.63.24","port":443,"cipher":"auto","uuid":"7682b778-b64b-408b-8fb2-61d7c7fc43e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"soft8989.redirectme.net"}}}
+  - {"name":"US_youtube@资源分享师_129","type":"vless","server":"104.21.6.125","port":8080,"uuid":"29f8ad12-ea84-431b-bf32-9d3fb5cf2aa2","tls":true,"servername":"w1.sylar8.eu.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_130","type":"vless","server":"104.21.6.134","port":2095,"uuid":"29f8ad12-ea84-431b-bf32-9d3fb5cf2aa2","tls":true,"servername":"w1.sylar8.eu.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_131","type":"vless","server":"104.21.0.169","port":443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"HK_youtube@资源分享师_132","type":"vmess","server":"92.223.76.25","port":80,"cipher":"auto","uuid":"f21bcdb6-5dc6-4c4b-9a34-3b185f6747c4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"tabyan205.serveftp.com"}}}
+  - {"name":"US_youtube@资源分享师_133","type":"vless","server":"104.21.7.97","port":80,"uuid":"e28bb3f8-e64a-4419-9496-33c46220354b","tls":true,"servername":"sdgf.bdfstt.sbs","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_134","type":"vless","server":"104.21.3.51","port":8443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_135","type":"vless","server":"104.21.11.220","port":2082,"uuid":"29f8ad12-ea84-431b-bf32-9d3fb5cf2aa2","tls":true,"servername":"w1.sylar8.eu.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_136","type":"vless","server":"104.21.10.135","port":2052,"uuid":"e28bb3f8-e64a-4419-9496-33c46220354b","tls":true,"servername":"sdgf.bdfstt.sbs","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_137","type":"vless","server":"104.21.3.172","port":443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"BR_youtube@资源分享师_138","type":"vmess","server":"170.238.234.217","port":80,"cipher":"auto","uuid":"b82493e3-07b4-4cf2-b585-965575cfeb32","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"softiri.serveirc.com"}}}
+  - {"name":"US_youtube@资源分享师_139","type":"vless","server":"104.21.1.182","port":2087,"uuid":"ffffffff-17ad-45e7-aaa1-f2baaa08e930","tls":true,"servername":"watashi.free.jppublic.moh539.link","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_140","type":"vless","server":"104.21.13.62","port":2087,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"CN_youtube@资源分享师_141","type":"ss","server":"service.ouluyun9803.com","port":21003,"password":"cfa17a0d-5e7d-4871-976e-f116e0818123","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"US_youtube@资源分享师_142","type":"vless","server":"104.21.1.180","port":2096,"uuid":"ffffffff-17ad-45e7-aaa1-f2baaa08e930","tls":true,"servername":"watashi.free.jppublic.moh539.link","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_143","type":"vless","server":"104.21.13.182","port":2096,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_144","type":"vmess","server":"104.17.25.1","port":80,"cipher":"auto","uuid":"551da9f1-d2dd-4c99-9643-fde91028c924","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"fgvpn.catnipballs.gay"}}}
+  - {"name":"US_youtube@资源分享师_145","type":"vless","server":"104.21.7.13","port":2052,"uuid":"e28bb3f8-e64a-4419-9496-33c46220354b","tls":true,"servername":"sdgf.bdfstt.sbs","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_146","type":"vless","server":"104.21.3.179","port":443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"IQ_youtube@资源分享师_147","type":"vmess","server":"185.194.11.74","port":80,"cipher":"auto","uuid":"f5c137d1-ca89-42c0-b604-db39aef60a73","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"tabyan777.sytes.net"}}}
+  - {"name":"US_youtube@资源分享师_148","type":"vless","server":"104.21.12.176","port":8443,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_149","type":"vless","server":"104.21.5.103","port":2096,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"CN_youtube@资源分享师_150","type":"ss","server":"service.ouluyun9803.com","port":26668,"password":"cfa17a0d-5e7d-4871-976e-f116e0818123","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"US_youtube@资源分享师_151","type":"vless","server":"104.21.7.224","port":2086,"uuid":"e28bb3f8-e64a-4419-9496-33c46220354b","tls":true,"servername":"sdgf.bdfstt.sbs","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_152","type":"vmess","server":"cf.openxai.link","port":8080,"cipher":"auto","uuid":"7b6ddff4-8f18-4e27-de82-a33cfeebfa01","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"eu5.openxai.link"}}}
+  - {"name":"GB_youtube@资源分享师_153","type":"vmess","server":"93.123.11.11","port":443,"cipher":"auto","uuid":"b85520c4-e377-4806-bc12-5be674fc4061","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"yasdl900.redirectme.net"}}}
+  - {"name":"US_youtube@资源分享师_154","type":"vless","server":"104.21.13.95","port":2087,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_155","type":"vless","server":"104.21.13.218","port":2096,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_156","type":"vless","server":"104.21.13.117","port":443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_157","type":"vless","server":"104.21.13.66","port":2087,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_158","type":"vless","server":"104.21.0.38","port":2083,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_159","type":"vless","server":"104.21.13.62","port":2087,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_160","type":"vless","server":"104.21.4.21","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"edgood.king361.cf","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"LY_youtube@资源分享师_161","type":"vmess","server":"197.215.140.235","port":80,"cipher":"auto","uuid":"66fef53b-1b57-466d-89a4-bd99b90f6473","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"irisoft.servecounterstrike.com"}}}
+  - {"name":"US_youtube@资源分享师_162","type":"vless","server":"104.21.5.84","port":2083,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_163","type":"vless","server":"104.21.6.52","port":2086,"uuid":"29f8ad12-ea84-431b-bf32-9d3fb5cf2aa2","tls":true,"servername":"w1.sylar8.eu.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_164","type":"vless","server":"104.21.5.236","port":8443,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_165","type":"vless","server":"104.21.11.191","port":8080,"uuid":"29f8ad12-ea84-431b-bf32-9d3fb5cf2aa2","tls":true,"servername":"w1.sylar8.eu.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_166","type":"vless","server":"104.21.13.73","port":2053,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_167","type":"vless","server":"104.21.0.238","port":8443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_168","type":"vless","server":"104.21.2.106","port":2053,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_169","type":"vless","server":"104.21.2.15","port":2087,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_170","type":"vless","server":"104.21.5.248","port":2053,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_171","type":"vless","server":"104.21.5.247","port":2087,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_172","type":"vmess","server":"glaSco.fx-trAder.shop","port":80,"cipher":"auto","uuid":"cdbb0899-7113-4d4e-f868-31339c75ad3c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"vvv2vayo2.everythingisreve.shop"}}}
+  - {"name":"BT_youtube@资源分享师_173","type":"vmess","server":"118.103.136.245","port":80,"cipher":"auto","uuid":"f21bcdb6-5dc6-4c4b-9a34-3b185f6747c4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"tabyan205.serveftp.com"}}}
+  - {"name":"US_youtube@资源分享师_174","type":"vmess","server":"s1c.v2.v001sss.xyz","port":2082,"cipher":"auto","uuid":"112ac36f-3f53-4e26-8371-d25c028e1b9a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"s1c.v2.v001sss.xyz"}}}
+  - {"name":"US_youtube@资源分享师_175","type":"vless","server":"172.67.156.27","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"baipiao1.curly-train.pages.dev","network":"ws","ws-opts":{"path":"fuck_yes!fuck_yes!"}}
+  - {"name":"US_youtube@资源分享师_176","type":"vless","server":"104.21.0.222","port":443,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_177","type":"vless","server":"104.21.2.139","port":2096,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_178","type":"vless","server":"104.21.5.70","port":443,"uuid":"73b6dbd5-a27a-4c76-9ad1-42a82380dddb","tls":true,"servername":"ed.ariesver.online","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_179","type":"vless","server":"104.21.1.55","port":2087,"uuid":"ffffffff-17ad-45e7-aaa1-f2baaa08e930","tls":true,"servername":"watashi.free.jppublic.moh539.link","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"DE_youtube@资源分享师_180","type":"vmess","server":"92.223.124.36","port":443,"cipher":"auto","uuid":"368ee843-d2a3-425c-be57-135b9ec6b81f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"best.servecounterstrike.com"}}}
+  - {"name":"FR_youtube@资源分享师_181","type":"vmess","server":"94.176.183.7","port":80,"cipher":"auto","uuid":"66fef53b-1b57-466d-89a4-bd99b90f6473","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"irisoft.servecounterstrike.com"}}}
+  - {"name":"US_youtube@资源分享师_182","type":"vless","server":"104.21.3.83","port":8443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"NA_youtube@资源分享师_183","type":"vmess","server":"197.188.22.102","port":443,"cipher":"auto","uuid":"7682b778-b64b-408b-8fb2-61d7c7fc43e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"soft8989.redirectme.net"}}}
+  - {"name":"US_youtube@资源分享师_184","type":"vless","server":"104.21.13.0","port":443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"BR_youtube@资源分享师_185","type":"vmess","server":"95.85.92.7","port":80,"cipher":"auto","uuid":"f21bcdb6-5dc6-4c4b-9a34-3b185f6747c4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"tabyan205.serveftp.com"}}}
+  - {"name":"KZ_youtube@资源分享师_186","type":"vmess","server":"92.46.108.106","port":443,"cipher":"auto","uuid":"f5c137d1-ca89-42c0-b604-db39aef60a73","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"tabyan777.sytes.net"}}}
+  - {"name":"US_youtube@资源分享师_187","type":"vless","server":"104.21.2.75","port":443,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_188","type":"vless","server":"104.21.13.21","port":2096,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_189","type":"vless","server":"104.21.13.201","port":443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_190","type":"vless","server":"104.21.13.95","port":2083,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_191","type":"vless","server":"104.21.1.31","port":8443,"uuid":"ffffffff-17ad-45e7-aaa1-f2baaa08e930","tls":true,"servername":"watashi.free.jppublic.moh539.link","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_192","type":"vless","server":"104.21.2.45","port":2096,"uuid":"7fd7c15d-95cd-4f5c-bf59-f21e5eb27580","tls":true,"servername":"3k.dabee.top","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_193","type":"vless","server":"104.21.13.136","port":443,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_194","type":"vless","server":"104.21.1.68","port":8443,"uuid":"ffffffff-17ad-45e7-aaa1-f2baaa08e930","tls":true,"servername":"watashi.free.jppublic.moh539.link","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"SE_youtube@资源分享师_195","type":"vmess","server":"80.240.113.13","port":80,"cipher":"auto","uuid":"66fef53b-1b57-466d-89a4-bd99b90f6473","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"irisoft.servecounterstrike.com"}}}
+  - {"name":"US_youtube@资源分享师_196","type":"vless","server":"104.21.13.240","port":2053,"uuid":"0c1c79ee-e934-453f-b6fc-e67aac205936","tls":true,"servername":"vl.v443.cloudns.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_197","type":"vless","server":"104.21.11.25","port":2086,"uuid":"29f8ad12-ea84-431b-bf32-9d3fb5cf2aa2","tls":true,"servername":"w1.sylar8.eu.org","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_198","type":"vless","server":"104.21.0.165","port":2083,"uuid":"60813b9d-aa0e-4a5c-88b8-ed231058e82a","tls":true,"servername":"pages.20230619.love","network":"ws","ws-opts":{"path":"telegram🇨🇳 @wangcai_8 /?ed=2048"}}
+  - {"name":"US_youtube@资源分享师_199","type":"vmess","server":"world8.star-one.cfd","port":443,"cipher":"auto","uuid":"32f0b2cf-b430-4fd8-ac26-a7a07cd6774b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/24432/@forwardv2ray"}}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - CN_youtube@资源分享师_1
+      - CN_youtube@资源分享师_2
+      - CN_youtube@资源分享师_3
+      - CN_youtube@资源分享师_4
+      - US_youtube@资源分享师_5
+      - CN_youtube@资源分享师_6
+      - CN_youtube@资源分享师_7
+      - CN_youtube@资源分享师_8
+      - CN_youtube@资源分享师_9
+      - CN_youtube@资源分享师_10
+      - CN_youtube@资源分享师_11
+      - US_youtube@资源分享师_12
+      - CN_youtube@资源分享师_13
+      - CN_youtube@资源分享师_14
+      - CN_youtube@资源分享师_15
+      - CN_youtube@资源分享师_16
+      - CN_youtube@资源分享师_17
+      - CN_youtube@资源分享师_18
+      - CN_youtube@资源分享师_19
+      - CN_youtube@资源分享师_20
+      - CN_youtube@资源分享师_21
+      - CN_youtube@资源分享师_22
+      - CN_youtube@资源分享师_23
+      - US_youtube@资源分享师_24
+      - CN_youtube@资源分享师_25
+      - CN_youtube@资源分享师_26
+      - CN_youtube@资源分享师_27
+      - CN_youtube@资源分享师_28
+      - CN_youtube@资源分享师_29
+      - CN_youtube@资源分享师_30
+      - US_youtube@资源分享师_31
+      - US_youtube@资源分享师_32
+      - US_youtube@资源分享师_33
+      - DE_youtube@资源分享师_34
+      - CN_youtube@资源分享师_35
+      - US_youtube@资源分享师_36
+      - US_youtube@资源分享师_37
+      - US_youtube@资源分享师_38
+      - US_youtube@资源分享师_39
+      - GB_youtube@资源分享师_40
+      - US_youtube@资源分享师_41
+      - US_youtube@资源分享师_42
+      - CN_youtube@资源分享师_43
+      - CN_youtube@资源分享师_44
+      - US_youtube@资源分享师_45
+      - US_youtube@资源分享师_46
+      - US_youtube@资源分享师_47
+      - US_youtube@资源分享师_48
+      - US_youtube@资源分享师_49
+      - US_youtube@资源分享师_50
+      - US_youtube@资源分享师_51
+      - US_youtube@资源分享师_52
+      - US_youtube@资源分享师_53
+      - US_youtube@资源分享师_54
+      - US_youtube@资源分享师_55
+      - US_youtube@资源分享师_56
+      - US_youtube@资源分享师_57
+      - US_youtube@资源分享师_58
+      - HK_youtube@资源分享师_59
+      - US_youtube@资源分享师_60
+      - US_youtube@资源分享师_61
+      - US_youtube@资源分享师_62
+      - CN_youtube@资源分享师_63
+      - US_youtube@资源分享师_64
+      - US_youtube@资源分享师_65
+      - US_youtube@资源分享师_66
+      - US_youtube@资源分享师_67
+      - US_youtube@资源分享师_68
+      - US_youtube@资源分享师_69
+      - US_youtube@资源分享师_70
+      - US_youtube@资源分享师_71
+      - US_youtube@资源分享师_72
+      - CN_youtube@资源分享师_73
+      - IN_youtube@资源分享师_74
+      - US_youtube@资源分享师_75
+      - US_youtube@资源分享师_76
+      - US_youtube@资源分享师_77
+      - US_youtube@资源分享师_78
+      - US_youtube@资源分享师_79
+      - US_youtube@资源分享师_80
+      - US_youtube@资源分享师_81
+      - US_youtube@资源分享师_82
+      - US_youtube@资源分享师_83
+      - US_youtube@资源分享师_84
+      - US_youtube@资源分享师_85
+      - US_youtube@资源分享师_86
+      - US_youtube@资源分享师_87
+      - US_youtube@资源分享师_88
+      - US_youtube@资源分享师_89
+      - US_youtube@资源分享师_90
+      - US_youtube@资源分享师_91
+      - US_youtube@资源分享师_92
+      - US_youtube@资源分享师_93
+      - US_youtube@资源分享师_94
+      - US_youtube@资源分享师_95
+      - US_youtube@资源分享师_96
+      - US_youtube@资源分享师_97
+      - GB_youtube@资源分享师_98
+      - GB_youtube@资源分享师_99
+      - TW_youtube@资源分享师_100
+      - US_youtube@资源分享师_101
+      - US_youtube@资源分享师_102
+      - US_youtube@资源分享师_103
+      - US_youtube@资源分享师_104
+      - CN_youtube@资源分享师_105
+      - US_youtube@资源分享师_106
+      - GB_youtube@资源分享师_107
+      - US_youtube@资源分享师_108
+      - US_youtube@资源分享师_109
+      - UA_youtube@资源分享师_110
+      - US_youtube@资源分享师_111
+      - US_youtube@资源分享师_112
+      - DE_youtube@资源分享师_113
+      - TW_youtube@资源分享师_114
+      - US_youtube@资源分享师_115
+      - US_youtube@资源分享师_116
+      - US_youtube@资源分享师_117
+      - US_youtube@资源分享师_118
+      - US_youtube@资源分享师_119
+      - HK_youtube@资源分享师_120
+      - US_youtube@资源分享师_121
+      - GB_youtube@资源分享师_122
+      - US_youtube@资源分享师_123
+      - US_youtube@资源分享师_124
+      - JP_youtube@资源分享师_125
+      - US_youtube@资源分享师_126
+      - US_youtube@资源分享师_127
+      - JP_youtube@资源分享师_128
+      - US_youtube@资源分享师_129
+      - US_youtube@资源分享师_130
+      - US_youtube@资源分享师_131
+      - HK_youtube@资源分享师_132
+      - US_youtube@资源分享师_133
+      - US_youtube@资源分享师_134
+      - US_youtube@资源分享师_135
+      - US_youtube@资源分享师_136
+      - US_youtube@资源分享师_137
+      - BR_youtube@资源分享师_138
+      - US_youtube@资源分享师_139
+      - US_youtube@资源分享师_140
+      - CN_youtube@资源分享师_141
+      - US_youtube@资源分享师_142
+      - US_youtube@资源分享师_143
+      - US_youtube@资源分享师_144
+      - US_youtube@资源分享师_145
+      - US_youtube@资源分享师_146
+      - IQ_youtube@资源分享师_147
+      - US_youtube@资源分享师_148
+      - US_youtube@资源分享师_149
+      - CN_youtube@资源分享师_150
+      - US_youtube@资源分享师_151
+      - US_youtube@资源分享师_152
+      - GB_youtube@资源分享师_153
+      - US_youtube@资源分享师_154
+      - US_youtube@资源分享师_155
+      - US_youtube@资源分享师_156
+      - US_youtube@资源分享师_157
+      - US_youtube@资源分享师_158
+      - US_youtube@资源分享师_159
+      - US_youtube@资源分享师_160
+      - LY_youtube@资源分享师_161
+      - US_youtube@资源分享师_162
+      - US_youtube@资源分享师_163
+      - US_youtube@资源分享师_164
+      - US_youtube@资源分享师_165
+      - US_youtube@资源分享师_166
+      - US_youtube@资源分享师_167
+      - US_youtube@资源分享师_168
+      - US_youtube@资源分享师_169
+      - US_youtube@资源分享师_170
+      - US_youtube@资源分享师_171
+      - US_youtube@资源分享师_172
+      - BT_youtube@资源分享师_173
+      - US_youtube@资源分享师_174
+      - US_youtube@资源分享师_175
+      - US_youtube@资源分享师_176
+      - US_youtube@资源分享师_177
+      - US_youtube@资源分享师_178
+      - US_youtube@资源分享师_179
+      - DE_youtube@资源分享师_180
+      - FR_youtube@资源分享师_181
+      - US_youtube@资源分享师_182
+      - NA_youtube@资源分享师_183
+      - US_youtube@资源分享师_184
+      - BR_youtube@资源分享师_185
+      - KZ_youtube@资源分享师_186
+      - US_youtube@资源分享师_187
+      - US_youtube@资源分享师_188
+      - US_youtube@资源分享师_189
+      - US_youtube@资源分享师_190
+      - US_youtube@资源分享师_191
+      - US_youtube@资源分享师_192
+      - US_youtube@资源分享师_193
+      - US_youtube@资源分享师_194
+      - SE_youtube@资源分享师_195
+      - US_youtube@资源分享师_196
+      - US_youtube@资源分享师_197
+      - US_youtube@资源分享师_198
+      - US_youtube@资源分享师_199
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - CN_youtube@资源分享师_1
+      - CN_youtube@资源分享师_2
+      - CN_youtube@资源分享师_3
+      - CN_youtube@资源分享师_4
+      - US_youtube@资源分享师_5
+      - CN_youtube@资源分享师_6
+      - CN_youtube@资源分享师_7
+      - CN_youtube@资源分享师_8
+      - CN_youtube@资源分享师_9
+      - CN_youtube@资源分享师_10
+      - CN_youtube@资源分享师_11
+      - US_youtube@资源分享师_12
+      - CN_youtube@资源分享师_13
+      - CN_youtube@资源分享师_14
+      - CN_youtube@资源分享师_15
+      - CN_youtube@资源分享师_16
+      - CN_youtube@资源分享师_17
+      - CN_youtube@资源分享师_18
+      - CN_youtube@资源分享师_19
+      - CN_youtube@资源分享师_20
+      - CN_youtube@资源分享师_21
+      - CN_youtube@资源分享师_22
+      - CN_youtube@资源分享师_23
+      - US_youtube@资源分享师_24
+      - CN_youtube@资源分享师_25
+      - CN_youtube@资源分享师_26
+      - CN_youtube@资源分享师_27
+      - CN_youtube@资源分享师_28
+      - CN_youtube@资源分享师_29
+      - CN_youtube@资源分享师_30
+      - US_youtube@资源分享师_31
+      - US_youtube@资源分享师_32
+      - US_youtube@资源分享师_33
+      - DE_youtube@资源分享师_34
+      - CN_youtube@资源分享师_35
+      - US_youtube@资源分享师_36
+      - US_youtube@资源分享师_37
+      - US_youtube@资源分享师_38
+      - US_youtube@资源分享师_39
+      - GB_youtube@资源分享师_40
+      - US_youtube@资源分享师_41
+      - US_youtube@资源分享师_42
+      - CN_youtube@资源分享师_43
+      - CN_youtube@资源分享师_44
+      - US_youtube@资源分享师_45
+      - US_youtube@资源分享师_46
+      - US_youtube@资源分享师_47
+      - US_youtube@资源分享师_48
+      - US_youtube@资源分享师_49
+      - US_youtube@资源分享师_50
+      - US_youtube@资源分享师_51
+      - US_youtube@资源分享师_52
+      - US_youtube@资源分享师_53
+      - US_youtube@资源分享师_54
+      - US_youtube@资源分享师_55
+      - US_youtube@资源分享师_56
+      - US_youtube@资源分享师_57
+      - US_youtube@资源分享师_58
+      - HK_youtube@资源分享师_59
+      - US_youtube@资源分享师_60
+      - US_youtube@资源分享师_61
+      - US_youtube@资源分享师_62
+      - CN_youtube@资源分享师_63
+      - US_youtube@资源分享师_64
+      - US_youtube@资源分享师_65
+      - US_youtube@资源分享师_66
+      - US_youtube@资源分享师_67
+      - US_youtube@资源分享师_68
+      - US_youtube@资源分享师_69
+      - US_youtube@资源分享师_70
+      - US_youtube@资源分享师_71
+      - US_youtube@资源分享师_72
+      - CN_youtube@资源分享师_73
+      - IN_youtube@资源分享师_74
+      - US_youtube@资源分享师_75
+      - US_youtube@资源分享师_76
+      - US_youtube@资源分享师_77
+      - US_youtube@资源分享师_78
+      - US_youtube@资源分享师_79
+      - US_youtube@资源分享师_80
+      - US_youtube@资源分享师_81
+      - US_youtube@资源分享师_82
+      - US_youtube@资源分享师_83
+      - US_youtube@资源分享师_84
+      - US_youtube@资源分享师_85
+      - US_youtube@资源分享师_86
+      - US_youtube@资源分享师_87
+      - US_youtube@资源分享师_88
+      - US_youtube@资源分享师_89
+      - US_youtube@资源分享师_90
+      - US_youtube@资源分享师_91
+      - US_youtube@资源分享师_92
+      - US_youtube@资源分享师_93
+      - US_youtube@资源分享师_94
+      - US_youtube@资源分享师_95
+      - US_youtube@资源分享师_96
+      - US_youtube@资源分享师_97
+      - GB_youtube@资源分享师_98
+      - GB_youtube@资源分享师_99
+      - TW_youtube@资源分享师_100
+      - US_youtube@资源分享师_101
+      - US_youtube@资源分享师_102
+      - US_youtube@资源分享师_103
+      - US_youtube@资源分享师_104
+      - CN_youtube@资源分享师_105
+      - US_youtube@资源分享师_106
+      - GB_youtube@资源分享师_107
+      - US_youtube@资源分享师_108
+      - US_youtube@资源分享师_109
+      - UA_youtube@资源分享师_110
+      - US_youtube@资源分享师_111
+      - US_youtube@资源分享师_112
+      - DE_youtube@资源分享师_113
+      - TW_youtube@资源分享师_114
+      - US_youtube@资源分享师_115
+      - US_youtube@资源分享师_116
+      - US_youtube@资源分享师_117
+      - US_youtube@资源分享师_118
+      - US_youtube@资源分享师_119
+      - HK_youtube@资源分享师_120
+      - US_youtube@资源分享师_121
+      - GB_youtube@资源分享师_122
+      - US_youtube@资源分享师_123
+      - US_youtube@资源分享师_124
+      - JP_youtube@资源分享师_125
+      - US_youtube@资源分享师_126
+      - US_youtube@资源分享师_127
+      - JP_youtube@资源分享师_128
+      - US_youtube@资源分享师_129
+      - US_youtube@资源分享师_130
+      - US_youtube@资源分享师_131
+      - HK_youtube@资源分享师_132
+      - US_youtube@资源分享师_133
+      - US_youtube@资源分享师_134
+      - US_youtube@资源分享师_135
+      - US_youtube@资源分享师_136
+      - US_youtube@资源分享师_137
+      - BR_youtube@资源分享师_138
+      - US_youtube@资源分享师_139
+      - US_youtube@资源分享师_140
+      - CN_youtube@资源分享师_141
+      - US_youtube@资源分享师_142
+      - US_youtube@资源分享师_143
+      - US_youtube@资源分享师_144
+      - US_youtube@资源分享师_145
+      - US_youtube@资源分享师_146
+      - IQ_youtube@资源分享师_147
+      - US_youtube@资源分享师_148
+      - US_youtube@资源分享师_149
+      - CN_youtube@资源分享师_150
+      - US_youtube@资源分享师_151
+      - US_youtube@资源分享师_152
+      - GB_youtube@资源分享师_153
+      - US_youtube@资源分享师_154
+      - US_youtube@资源分享师_155
+      - US_youtube@资源分享师_156
+      - US_youtube@资源分享师_157
+      - US_youtube@资源分享师_158
+      - US_youtube@资源分享师_159
+      - US_youtube@资源分享师_160
+      - LY_youtube@资源分享师_161
+      - US_youtube@资源分享师_162
+      - US_youtube@资源分享师_163
+      - US_youtube@资源分享师_164
+      - US_youtube@资源分享师_165
+      - US_youtube@资源分享师_166
+      - US_youtube@资源分享师_167
+      - US_youtube@资源分享师_168
+      - US_youtube@资源分享师_169
+      - US_youtube@资源分享师_170
+      - US_youtube@资源分享师_171
+      - US_youtube@资源分享师_172
+      - BT_youtube@资源分享师_173
+      - US_youtube@资源分享师_174
+      - US_youtube@资源分享师_175
+      - US_youtube@资源分享师_176
+      - US_youtube@资源分享师_177
+      - US_youtube@资源分享师_178
+      - US_youtube@资源分享师_179
+      - DE_youtube@资源分享师_180
+      - FR_youtube@资源分享师_181
+      - US_youtube@资源分享师_182
+      - NA_youtube@资源分享师_183
+      - US_youtube@资源分享师_184
+      - BR_youtube@资源分享师_185
+      - KZ_youtube@资源分享师_186
+      - US_youtube@资源分享师_187
+      - US_youtube@资源分享师_188
+      - US_youtube@资源分享师_189
+      - US_youtube@资源分享师_190
+      - US_youtube@资源分享师_191
+      - US_youtube@资源分享师_192
+      - US_youtube@资源分享师_193
+      - US_youtube@资源分享师_194
+      - SE_youtube@资源分享师_195
+      - US_youtube@资源分享师_196
+      - US_youtube@资源分享师_197
+      - US_youtube@资源分享师_198
+      - US_youtube@资源分享师_199
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - CN_youtube@资源分享师_1
+      - CN_youtube@资源分享师_2
+      - CN_youtube@资源分享师_3
+      - CN_youtube@资源分享师_4
+      - US_youtube@资源分享师_5
+      - CN_youtube@资源分享师_6
+      - CN_youtube@资源分享师_7
+      - CN_youtube@资源分享师_8
+      - CN_youtube@资源分享师_9
+      - CN_youtube@资源分享师_10
+      - CN_youtube@资源分享师_11
+      - US_youtube@资源分享师_12
+      - CN_youtube@资源分享师_13
+      - CN_youtube@资源分享师_14
+      - CN_youtube@资源分享师_15
+      - CN_youtube@资源分享师_16
+      - CN_youtube@资源分享师_17
+      - CN_youtube@资源分享师_18
+      - CN_youtube@资源分享师_19
+      - CN_youtube@资源分享师_20
+      - CN_youtube@资源分享师_21
+      - CN_youtube@资源分享师_22
+      - CN_youtube@资源分享师_23
+      - US_youtube@资源分享师_24
+      - CN_youtube@资源分享师_25
+      - CN_youtube@资源分享师_26
+      - CN_youtube@资源分享师_27
+      - CN_youtube@资源分享师_28
+      - CN_youtube@资源分享师_29
+      - CN_youtube@资源分享师_30
+      - US_youtube@资源分享师_31
+      - US_youtube@资源分享师_32
+      - US_youtube@资源分享师_33
+      - DE_youtube@资源分享师_34
+      - CN_youtube@资源分享师_35
+      - US_youtube@资源分享师_36
+      - US_youtube@资源分享师_37
+      - US_youtube@资源分享师_38
+      - US_youtube@资源分享师_39
+      - GB_youtube@资源分享师_40
+      - US_youtube@资源分享师_41
+      - US_youtube@资源分享师_42
+      - CN_youtube@资源分享师_43
+      - CN_youtube@资源分享师_44
+      - US_youtube@资源分享师_45
+      - US_youtube@资源分享师_46
+      - US_youtube@资源分享师_47
+      - US_youtube@资源分享师_48
+      - US_youtube@资源分享师_49
+      - US_youtube@资源分享师_50
+      - US_youtube@资源分享师_51
+      - US_youtube@资源分享师_52
+      - US_youtube@资源分享师_53
+      - US_youtube@资源分享师_54
+      - US_youtube@资源分享师_55
+      - US_youtube@资源分享师_56
+      - US_youtube@资源分享师_57
+      - US_youtube@资源分享师_58
+      - HK_youtube@资源分享师_59
+      - US_youtube@资源分享师_60
+      - US_youtube@资源分享师_61
+      - US_youtube@资源分享师_62
+      - CN_youtube@资源分享师_63
+      - US_youtube@资源分享师_64
+      - US_youtube@资源分享师_65
+      - US_youtube@资源分享师_66
+      - US_youtube@资源分享师_67
+      - US_youtube@资源分享师_68
+      - US_youtube@资源分享师_69
+      - US_youtube@资源分享师_70
+      - US_youtube@资源分享师_71
+      - US_youtube@资源分享师_72
+      - CN_youtube@资源分享师_73
+      - IN_youtube@资源分享师_74
+      - US_youtube@资源分享师_75
+      - US_youtube@资源分享师_76
+      - US_youtube@资源分享师_77
+      - US_youtube@资源分享师_78
+      - US_youtube@资源分享师_79
+      - US_youtube@资源分享师_80
+      - US_youtube@资源分享师_81
+      - US_youtube@资源分享师_82
+      - US_youtube@资源分享师_83
+      - US_youtube@资源分享师_84
+      - US_youtube@资源分享师_85
+      - US_youtube@资源分享师_86
+      - US_youtube@资源分享师_87
+      - US_youtube@资源分享师_88
+      - US_youtube@资源分享师_89
+      - US_youtube@资源分享师_90
+      - US_youtube@资源分享师_91
+      - US_youtube@资源分享师_92
+      - US_youtube@资源分享师_93
+      - US_youtube@资源分享师_94
+      - US_youtube@资源分享师_95
+      - US_youtube@资源分享师_96
+      - US_youtube@资源分享师_97
+      - GB_youtube@资源分享师_98
+      - GB_youtube@资源分享师_99
+      - TW_youtube@资源分享师_100
+      - US_youtube@资源分享师_101
+      - US_youtube@资源分享师_102
+      - US_youtube@资源分享师_103
+      - US_youtube@资源分享师_104
+      - CN_youtube@资源分享师_105
+      - US_youtube@资源分享师_106
+      - GB_youtube@资源分享师_107
+      - US_youtube@资源分享师_108
+      - US_youtube@资源分享师_109
+      - UA_youtube@资源分享师_110
+      - US_youtube@资源分享师_111
+      - US_youtube@资源分享师_112
+      - DE_youtube@资源分享师_113
+      - TW_youtube@资源分享师_114
+      - US_youtube@资源分享师_115
+      - US_youtube@资源分享师_116
+      - US_youtube@资源分享师_117
+      - US_youtube@资源分享师_118
+      - US_youtube@资源分享师_119
+      - HK_youtube@资源分享师_120
+      - US_youtube@资源分享师_121
+      - GB_youtube@资源分享师_122
+      - US_youtube@资源分享师_123
+      - US_youtube@资源分享师_124
+      - JP_youtube@资源分享师_125
+      - US_youtube@资源分享师_126
+      - US_youtube@资源分享师_127
+      - JP_youtube@资源分享师_128
+      - US_youtube@资源分享师_129
+      - US_youtube@资源分享师_130
+      - US_youtube@资源分享师_131
+      - HK_youtube@资源分享师_132
+      - US_youtube@资源分享师_133
+      - US_youtube@资源分享师_134
+      - US_youtube@资源分享师_135
+      - US_youtube@资源分享师_136
+      - US_youtube@资源分享师_137
+      - BR_youtube@资源分享师_138
+      - US_youtube@资源分享师_139
+      - US_youtube@资源分享师_140
+      - CN_youtube@资源分享师_141
+      - US_youtube@资源分享师_142
+      - US_youtube@资源分享师_143
+      - US_youtube@资源分享师_144
+      - US_youtube@资源分享师_145
+      - US_youtube@资源分享师_146
+      - IQ_youtube@资源分享师_147
+      - US_youtube@资源分享师_148
+      - US_youtube@资源分享师_149
+      - CN_youtube@资源分享师_150
+      - US_youtube@资源分享师_151
+      - US_youtube@资源分享师_152
+      - GB_youtube@资源分享师_153
+      - US_youtube@资源分享师_154
+      - US_youtube@资源分享师_155
+      - US_youtube@资源分享师_156
+      - US_youtube@资源分享师_157
+      - US_youtube@资源分享师_158
+      - US_youtube@资源分享师_159
+      - US_youtube@资源分享师_160
+      - LY_youtube@资源分享师_161
+      - US_youtube@资源分享师_162
+      - US_youtube@资源分享师_163
+      - US_youtube@资源分享师_164
+      - US_youtube@资源分享师_165
+      - US_youtube@资源分享师_166
+      - US_youtube@资源分享师_167
+      - US_youtube@资源分享师_168
+      - US_youtube@资源分享师_169
+      - US_youtube@资源分享师_170
+      - US_youtube@资源分享师_171
+      - US_youtube@资源分享师_172
+      - BT_youtube@资源分享师_173
+      - US_youtube@资源分享师_174
+      - US_youtube@资源分享师_175
+      - US_youtube@资源分享师_176
+      - US_youtube@资源分享师_177
+      - US_youtube@资源分享师_178
+      - US_youtube@资源分享师_179
+      - DE_youtube@资源分享师_180
+      - FR_youtube@资源分享师_181
+      - US_youtube@资源分享师_182
+      - NA_youtube@资源分享师_183
+      - US_youtube@资源分享师_184
+      - BR_youtube@资源分享师_185
+      - KZ_youtube@资源分享师_186
+      - US_youtube@资源分享师_187
+      - US_youtube@资源分享师_188
+      - US_youtube@资源分享师_189
+      - US_youtube@资源分享师_190
+      - US_youtube@资源分享师_191
+      - US_youtube@资源分享师_192
+      - US_youtube@资源分享师_193
+      - US_youtube@资源分享师_194
+      - SE_youtube@资源分享师_195
+      - US_youtube@资源分享师_196
+      - US_youtube@资源分享师_197
+      - US_youtube@资源分享师_198
+      - US_youtube@资源分享师_199
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/LocalAreaNetwork.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanProgramAD.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleCN.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/SteamCN.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Telegram.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyMedia.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaCompanyIp.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
