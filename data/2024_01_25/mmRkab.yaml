@@ -1,0 +1,587 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "server": "localDns"
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🤖 OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "🌌 Google",
+      "type": "selector",
+      "outbounds": [
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "📟 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "🐦 Twitter",
+      "type": "selector",
+      "outbounds": [
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "👤 Facebook",
+      "type": "selector",
+      "outbounds": [
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "🛍️ Amazon",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "🍎 Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "🧩 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "🎮 Game",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "tag": "🎬 MediaVideo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "Worker+-+www.speedtest.net",
+        "Worker+-+172.67.202.167_1",
+        "Worker+-+172.67.202.167_2",
+        "Worker+-+104.21.22.45",
+        "Worker+-+[2606:4700:3037::ac43:caa7]",
+        "Worker+-+104.21.54.123"
+      ]
+    },
+    {
+      "tag": "🌏 cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "select"
+      ]
+    },
+    {
+      "tag": "🛑 AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "188.114.96.2",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "MIkhAK1.ss4138352.woRkers.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "path": "/sGX0IH5RN5oiu-8v?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29a510a0-ab1b-45d3-be2d-58e57ece42cf",
+      "tag": "Worker+-+www.speedtest.net",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.202.167",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "MIKhaK1.Ss4138352.wOrkERs.DEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "path": "/P0rivJ_od-stS68c?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29a510a0-ab1b-45d3-be2d-58e57ece42cf",
+      "tag": "Worker+-+172.67.202.167_1",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.202.167",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "MIKhaK1.Ss4138352.wOrkERs.DEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "path": "/P0rivJ_od-stS68c?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29a510a0-ab1b-45d3-be2d-58e57ece42cf",
+      "tag": "Worker+-+172.67.202.167_2",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.22.45",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "MikHaK1.SS4138352.woRKErs.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "path": "/4F3voxEd17qJlnvV?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29a510a0-ab1b-45d3-be2d-58e57ece42cf",
+      "tag": "Worker+-+104.21.22.45",
+      "type": "vless"
+    },
+    {
+      "server": "[2606",
+      "server_port": 4700,
+      "tls": {
+        "enabled": true,
+        "server_name": "MiKHAk1.ss4138352.woRKERs.dEV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "path": "/MD4VvtdpE_IE-F1X?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29a510a0-ab1b-45d3-be2d-58e57ece42cf",
+      "tag": "Worker+-+[2606:4700:3037::ac43:caa7]",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.54.123",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "FREev2RaY.saTtARcLaSh100.WORkErs.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "path": "/HZ434t_PJxWaN_jM?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "52f0a9fb-697b-47e0-89b2-461addcfb725",
+      "tag": "Worker+-+104.21.54.123",
+      "type": "vless"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "v2rayse.com",
+          "cfmem.com",
+          "vpnse.org",
+          "cff.pw",
+          "tt.vg"
+        ],
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "openai"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "geoip": [
+          "google"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geosite": [
+          "telegram"
+        ],
+        "geoip": [
+          "telegram"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geosite": [
+          "twitter"
+        ],
+        "geoip": [
+          "twitter"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "geoip": [
+          "facebook"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": [
+          "amazon"
+        ],
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": [
+          "apple-cn",
+          "apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": [
+          "microsoft"
+        ],
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": [
+          "category-games"
+        ],
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": [
+          "bilibili"
+        ],
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "geoip": [
+          "netflix"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "🌏 cn"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "🛑 AdBlock"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
+  }
+}
