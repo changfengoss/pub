@@ -1,0 +1,800 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "debug",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇨🇳TW_e020+@WangCai_1_1",
+        "🇨🇳TW_e020+@WangCai_1_2",
+        "🇨🇳TW_e020+@WangCai_1_3",
+        "🇨🇳TW_e020+@WangCai_1_4",
+        "🇨🇳TW_e020+@WangCai_1_5",
+        "🇨🇳TW_e020+@WangCai_1_6",
+        "🇨🇳TW_e020+@WangCai_1_7",
+        "🇨🇳TW_e020+@WangCai_1_8",
+        "🇨🇳TW_e020+@WangCai_1_9",
+        "🇨🇳TW_e020+@WangCai_1_10",
+        "🇨🇳TW_e020+@WangCai_1_11",
+        "🇨🇳TW_e020+@WangCai_1_12",
+        "🇨🇳TW_e020+@WangCai_1_13",
+        "🇨🇳TW_e020+@WangCai_1_14",
+        "🇨🇳TW_e020+@WangCai_1_15",
+        "🇨🇳TW_e020+@WangCai_1_16",
+        "🇨🇳TW_e020+@WangCai_1_17",
+        "🇨🇳TW_e020+@WangCai_1_18",
+        "🇨🇳TW_e020+@WangCai_1_19",
+        "🇭🇰HK_e020+@WangCai_1_1",
+        "🇭🇰HK_e020+@WangCai_1_2",
+        "🇭🇰HK_e020+@WangCai_1_3",
+        "🇯🇵JP_e020+@WangCai_1_1",
+        "🇯🇵JP_e020+@WangCai_1_2",
+        "🇯🇵JP_e020+@WangCai_1_3",
+        "🇯🇵JP_e020+@WangCai_1_4",
+        "🇸🇬SG_e020+@WangCai_1_1",
+        "🇸🇬SG_e020+@WangCai_1_2",
+        "🇸🇬SG_e020+@WangCai_1_3",
+        "🇸🇬SG_e020+@WangCai_1_4",
+        "🇸🇬SG_e020+@WangCai_1_5",
+        "🇸🇬SG_e020+@WangCai_1_6"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇨🇳TW_e020+@WangCai_1_1",
+        "🇨🇳TW_e020+@WangCai_1_2",
+        "🇨🇳TW_e020+@WangCai_1_3",
+        "🇨🇳TW_e020+@WangCai_1_4",
+        "🇨🇳TW_e020+@WangCai_1_5",
+        "🇨🇳TW_e020+@WangCai_1_6",
+        "🇨🇳TW_e020+@WangCai_1_7",
+        "🇨🇳TW_e020+@WangCai_1_8",
+        "🇨🇳TW_e020+@WangCai_1_9",
+        "🇨🇳TW_e020+@WangCai_1_10",
+        "🇨🇳TW_e020+@WangCai_1_11",
+        "🇨🇳TW_e020+@WangCai_1_12",
+        "🇨🇳TW_e020+@WangCai_1_13",
+        "🇨🇳TW_e020+@WangCai_1_14",
+        "🇨🇳TW_e020+@WangCai_1_15",
+        "🇨🇳TW_e020+@WangCai_1_16",
+        "🇨🇳TW_e020+@WangCai_1_17",
+        "🇨🇳TW_e020+@WangCai_1_18",
+        "🇨🇳TW_e020+@WangCai_1_19",
+        "🇭🇰HK_e020+@WangCai_1_1",
+        "🇭🇰HK_e020+@WangCai_1_2",
+        "🇭🇰HK_e020+@WangCai_1_3",
+        "🇯🇵JP_e020+@WangCai_1_1",
+        "🇯🇵JP_e020+@WangCai_1_2",
+        "🇯🇵JP_e020+@WangCai_1_3",
+        "🇯🇵JP_e020+@WangCai_1_4",
+        "🇸🇬SG_e020+@WangCai_1_1",
+        "🇸🇬SG_e020+@WangCai_1_2",
+        "🇸🇬SG_e020+@WangCai_1_3",
+        "🇸🇬SG_e020+@WangCai_1_4",
+        "🇸🇬SG_e020+@WangCai_1_5",
+        "🇸🇬SG_e020+@WangCai_1_6"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "211.72.35.152",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_1",
+      "type": "trojan"
+    },
+    {
+      "server": "211.72.35.154",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_2",
+      "type": "trojan"
+    },
+    {
+      "server": "211.72.35.155",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_3",
+      "type": "trojan"
+    },
+    {
+      "server": "211.72.35.157",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_4",
+      "type": "trojan"
+    },
+    {
+      "server": "211.72.35.158",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_5",
+      "type": "trojan"
+    },
+    {
+      "server": "60.249.3.125",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_6",
+      "type": "trojan"
+    },
+    {
+      "server": "60.249.3.227",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_7",
+      "type": "trojan"
+    },
+    {
+      "server": "60.249.3.228",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_8",
+      "type": "trojan"
+    },
+    {
+      "server": "60.249.3.229",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_9",
+      "type": "trojan"
+    },
+    {
+      "server": "60.249.3.230",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_10",
+      "type": "trojan"
+    },
+    {
+      "server": "60.249.3.231",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_11",
+      "type": "trojan"
+    },
+    {
+      "server": "125.227.83.21",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_12",
+      "type": "trojan"
+    },
+    {
+      "server": "125.227.83.22",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_13",
+      "type": "trojan"
+    },
+    {
+      "server": "125.227.83.25",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_14",
+      "type": "trojan"
+    },
+    {
+      "server": "125.227.83.26",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_15",
+      "type": "trojan"
+    },
+    {
+      "server": "60.248.114.184",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_16",
+      "type": "trojan"
+    },
+    {
+      "server": "60.248.114.185",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_17",
+      "type": "trojan"
+    },
+    {
+      "server": "60.248.114.186",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_18",
+      "type": "trojan"
+    },
+    {
+      "server": "60.248.114.187",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇨🇳TW_e020+@WangCai_1_19",
+      "type": "trojan"
+    },
+    {
+      "server": "103.152.221.5",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇭🇰HK_e020+@WangCai_1_1",
+      "type": "trojan"
+    },
+    {
+      "server": "103.152.221.48",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇭🇰HK_e020+@WangCai_1_2",
+      "type": "trojan"
+    },
+    {
+      "server": "103.152.221.91",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇭🇰HK_e020+@WangCai_1_3",
+      "type": "trojan"
+    },
+    {
+      "server": "103.168.155.69",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇯🇵JP_e020+@WangCai_1_1",
+      "type": "trojan"
+    },
+    {
+      "server": "103.168.155.73",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇯🇵JP_e020+@WangCai_1_2",
+      "type": "trojan"
+    },
+    {
+      "server": "103.168.155.60",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇯🇵JP_e020+@WangCai_1_3",
+      "type": "trojan"
+    },
+    {
+      "server": "172.105.230.133",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇯🇵JP_e020+@WangCai_1_4",
+      "type": "trojan"
+    },
+    {
+      "server": "5.44.249.42",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇸🇬SG_e020+@WangCai_1_1",
+      "type": "trojan"
+    },
+    {
+      "server": "5.44.249.43",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇸🇬SG_e020+@WangCai_1_2",
+      "type": "trojan"
+    },
+    {
+      "server": "5.44.249.44",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇸🇬SG_e020+@WangCai_1_3",
+      "type": "trojan"
+    },
+    {
+      "server": "5.44.249.50",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇸🇬SG_e020+@WangCai_1_4",
+      "type": "trojan"
+    },
+    {
+      "server": "5.44.249.52",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇸🇬SG_e020+@WangCai_1_5",
+      "type": "trojan"
+    },
+    {
+      "server": "5.44.249.53",
+      "server_port": 3306,
+      "tls": {
+        "enabled": true,
+        "server_name": "n2.gladns.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/gateway/connect",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e0208b1222027607",
+      "tag": "🇸🇬SG_e020+@WangCai_1_6",
+      "type": "trojan"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
