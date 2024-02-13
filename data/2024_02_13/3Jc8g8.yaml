@@ -1,0 +1,1340 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇳🇱NL | ss | @V2rayCollectorDonate | 9",
+        "🇺🇸US | vless | @FalconPolV2rayNG | 1",
+        "🇺🇸US | vless | @polproxy | 1",
+        "🇬🇧GB | ss | @proxy_mtm | 19",
+        "🔒 SS-TCP-NA 🇵🇦 PA-138.186.142.4:989 📡 PING-099.49-MS",
+        "🔒 SS-TCP-NA 🇪🇨 EC-179.49.5.114:989 📡 PING-099.53-MS",
+        "🔒 SS-TCP-NA 🇬🇧 GB-77.72.5.150:989 📡 PING-124.39-MS",
+        "🔒 SS-TCP-NA 🇳🇱 NL-172.233.51.96:8080 📡 PING-127.12-MS",
+        "🔒 SS-TCP-NA 🇬🇧 GB-77.72.5.113:989 📡 PING-130.98-MS",
+        "🔒 SS-TCP-NA 🇳🇱 NL-172.233.57.5:8080 📡 PING-131.95-MS",
+        "🔒 SS-TCP-NA 🇮🇲 IM-37.235.55.21:989 📡 PING-135.00-MS",
+        "🔒 SS-TCP-NA 🇰🇷 KR-218.237.185.230:54345 📡 PING-135.77-MS",
+        "🔒 SS-TCP-NA 🇳🇱 NL-109.201.152.181:443 📡 PING-138.57-MS",
+        "🔒 SS-TCP-NA 🇱🇺 LU-92.38.163.53:989 📡 PING-140.01-MS",
+        "🔒 SS-TCP-NA 🇵🇪 PE-190.120.229.28:989 📡 PING-140.82-MS",
+        "🔒 SS-TCP-NA 🇨🇱 CL-190.120.230.9:989 📡 PING-143.15-MS",
+        "🔒 SS-TCP-NA 🇭🇷 HR-46.183.184.62:989 📡 PING-151.02-MS",
+        "🔒 SS-TCP-NA 🇭🇷 HR-46.183.184.60:989 📡 PING-151.81-MS",
+        "🔒 SS-TCP-NA 🇳🇴 NO-185.90.61.153:989 📡 PING-153.67-MS",
+        "🔒 SS-TCP-NA 🇦🇱 AL-31.171.153.181:989 📡 PING-163.61-MS",
+        "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9040 📡 PING-164.47-MS",
+        "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9037 📡 PING-164.69-MS",
+        "🔒 SS-TCP-NA 🇸🇪 SE-121.127.46.147:989 📡 PING-165.18-MS",
+        "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9043 📡 PING-168.54-MS",
+        "🔒 SS-TCP-NA 🇸🇬 SG-103.172.116.94:9018 📡 PING-183.65-MS",
+        "🔒 TR-WS-TLS 🏴‍☠️ NA-104.16.159.9:443 📡 PING-016.06-MS",
+        "🔒 TR-WS-TLS 🏴‍☠️ NA-198.41.220.83:443 📡 PING-009.79-MS",
+        "Iran500+ID(@Outline_Vpn)",
+        "%F0%9F%87%A8%F0%9F%87%A6%20Canada%20Vmess%20@V2rayStore (7)",
+        "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (2)",
+        "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (4)",
+        "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (5)",
+        "%F0%9F%87%A8%F0%9F%87%A6%20Canada%20Vmess%20@V2rayStore (23)",
+        "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:8080 📡 PING-016.32-MS",
+        "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:2095 📡 PING-016.30-MS",
+        "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.202.232:2086 📡 PING-016.28-MS",
+        "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:8880 📡 PING-016.17-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.47.232:443 📡 PING-009.16-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.178.236:443 📡 PING-009.02-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.61.188:443 📡 PING-008.76-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.213.13:443 📡 PING-008.74-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.223.81:443 📡 PING-008.72-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.193.36:443 📡 PING-008.63-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.31.174:443 📡 PING-008.58-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.78.150:443 📡 PING-008.52-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.207.94:443 📡 PING-008.47-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.61.74:443 📡 PING-008.45-MS",
+        "🔒 VL-WS-NA 🇦🇪 AE-5.44.42.16:10004 📡 PING-000.00-MS",
+        "🔒 VM-TCP-NA 🇹🇼 TW-61.228.144.69:2024 📡 PING-140.03-MS",
+        "🔒 VM-WS-NA 🇺🇸 US-192.151.255.18:41698 📡 PING-163.05-MS",
+        "🇳🇱 The Netherlands",
+        "🇳🇱 The Netherlands 9",
+        "🇺🇲 United States 160",
+        "🇨🇳 Taiwan 6",
+        "🇺🇲 United States 282",
+        "🇺🇲 United States 338",
+        "🇺🇸US-156.146.38.163-0291",
+        "🇫🇷FR-195.154.185.174-0837",
+        "🇫🇷FR-195.154.169.198-0839",
+        "🇺🇸US-45.55.2.232-0873",
+        "🇦🇿AZ-180.149.44.120-0884",
+        "🇧🇦BA-185.164.35.9-0875",
+        "🇸🇬SG-103.172.116.79-0220",
+        "🇸🇬SG-103.172.116.90-0938",
+        "🇸🇬SG-103.172.116.94-0925",
+        "🇿🇦ZA-41.203.4.34-0922",
+        "🇻🇳VN-103.163.218.2-1950",
+        "🇦🇷AR-190.103.176.29-0912",
+        "🇫🇷FR-57.128.173.202-0212",
+        "🇪🇸ES-5.188.181.201-0918",
+        "🇨🇴CO-190.120.231.45-0923",
+        "🇪🇸ES-5.188.181.201-0951",
+        "🇪🇸ES-5.188.181.201-2009",
+        "🇪🇸ES-5.188.181.201-2013",
+        "🇹🇷TR-45.89.52.66-1942",
+        "🇺🇸US-74.121.191.98-0877",
+        "🇨🇾CY-213.169.137.221-0914",
+        "🇲🇽MX-190.103.179.23-0931",
+        "🇫🇮FI-37.143.129.230-0926",
+        "رایگان | VMESS | @DeamNet_Proxy | CA🇨🇦 | 0️⃣1️⃣",
+        "🇫🇷FR | VMESS | MTN | 2",
+        "🔒 VL-WS-NONE 🇺🇸 US-172.67.199.106:80 📡 PING-002.63-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.69.44:8443 📡 PING-002.54-MS",
+        "🔒 VL-WS-TLS 🇺🇸 US-172.67.204.84:443 📡 PING-002.51-MS",
+        "🇬🇧GB | VLESS | MTN | 0",
+        "🇹🇷TR | VLESS | MTN | 6",
+        "🇨🇦CA | VLESS | MTN | 154",
+        "🇨🇦CA | VLESS | MTN | 220",
+        "🇨🇷CR | VLESS | MTN | 268"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇳🇱NL | ss | @V2rayCollectorDonate | 9",
+        "🇺🇸US | vless | @FalconPolV2rayNG | 1",
+        "🇺🇸US | vless | @polproxy | 1",
+        "🇬🇧GB | ss | @proxy_mtm | 19",
+        "🔒 SS-TCP-NA 🇵🇦 PA-138.186.142.4:989 📡 PING-099.49-MS",
+        "🔒 SS-TCP-NA 🇪🇨 EC-179.49.5.114:989 📡 PING-099.53-MS",
+        "🔒 SS-TCP-NA 🇬🇧 GB-77.72.5.150:989 📡 PING-124.39-MS",
+        "🔒 SS-TCP-NA 🇳🇱 NL-172.233.51.96:8080 📡 PING-127.12-MS",
+        "🔒 SS-TCP-NA 🇬🇧 GB-77.72.5.113:989 📡 PING-130.98-MS",
+        "🔒 SS-TCP-NA 🇳🇱 NL-172.233.57.5:8080 📡 PING-131.95-MS",
+        "🔒 SS-TCP-NA 🇮🇲 IM-37.235.55.21:989 📡 PING-135.00-MS",
+        "🔒 SS-TCP-NA 🇰🇷 KR-218.237.185.230:54345 📡 PING-135.77-MS",
+        "🔒 SS-TCP-NA 🇳🇱 NL-109.201.152.181:443 📡 PING-138.57-MS",
+        "🔒 SS-TCP-NA 🇱🇺 LU-92.38.163.53:989 📡 PING-140.01-MS",
+        "🔒 SS-TCP-NA 🇵🇪 PE-190.120.229.28:989 📡 PING-140.82-MS",
+        "🔒 SS-TCP-NA 🇨🇱 CL-190.120.230.9:989 📡 PING-143.15-MS",
+        "🔒 SS-TCP-NA 🇭🇷 HR-46.183.184.62:989 📡 PING-151.02-MS",
+        "🔒 SS-TCP-NA 🇭🇷 HR-46.183.184.60:989 📡 PING-151.81-MS",
+        "🔒 SS-TCP-NA 🇳🇴 NO-185.90.61.153:989 📡 PING-153.67-MS",
+        "🔒 SS-TCP-NA 🇦🇱 AL-31.171.153.181:989 📡 PING-163.61-MS",
+        "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9040 📡 PING-164.47-MS",
+        "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9037 📡 PING-164.69-MS",
+        "🔒 SS-TCP-NA 🇸🇪 SE-121.127.46.147:989 📡 PING-165.18-MS",
+        "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9043 📡 PING-168.54-MS",
+        "🔒 SS-TCP-NA 🇸🇬 SG-103.172.116.94:9018 📡 PING-183.65-MS",
+        "🔒 TR-WS-TLS 🏴‍☠️ NA-104.16.159.9:443 📡 PING-016.06-MS",
+        "🔒 TR-WS-TLS 🏴‍☠️ NA-198.41.220.83:443 📡 PING-009.79-MS",
+        "Iran500+ID(@Outline_Vpn)",
+        "%F0%9F%87%A8%F0%9F%87%A6%20Canada%20Vmess%20@V2rayStore (7)",
+        "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (2)",
+        "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (4)",
+        "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (5)",
+        "%F0%9F%87%A8%F0%9F%87%A6%20Canada%20Vmess%20@V2rayStore (23)",
+        "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:8080 📡 PING-016.32-MS",
+        "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:2095 📡 PING-016.30-MS",
+        "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.202.232:2086 📡 PING-016.28-MS",
+        "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:8880 📡 PING-016.17-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.47.232:443 📡 PING-009.16-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.178.236:443 📡 PING-009.02-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.61.188:443 📡 PING-008.76-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.213.13:443 📡 PING-008.74-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.223.81:443 📡 PING-008.72-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.193.36:443 📡 PING-008.63-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.31.174:443 📡 PING-008.58-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.78.150:443 📡 PING-008.52-MS",
+        "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.207.94:443 📡 PING-008.47-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.61.74:443 📡 PING-008.45-MS",
+        "🔒 VL-WS-NA 🇦🇪 AE-5.44.42.16:10004 📡 PING-000.00-MS",
+        "🔒 VM-TCP-NA 🇹🇼 TW-61.228.144.69:2024 📡 PING-140.03-MS",
+        "🔒 VM-WS-NA 🇺🇸 US-192.151.255.18:41698 📡 PING-163.05-MS",
+        "🇳🇱 The Netherlands",
+        "🇳🇱 The Netherlands 9",
+        "🇺🇲 United States 160",
+        "🇨🇳 Taiwan 6",
+        "🇺🇲 United States 282",
+        "🇺🇲 United States 338",
+        "🇺🇸US-156.146.38.163-0291",
+        "🇫🇷FR-195.154.185.174-0837",
+        "🇫🇷FR-195.154.169.198-0839",
+        "🇺🇸US-45.55.2.232-0873",
+        "🇦🇿AZ-180.149.44.120-0884",
+        "🇧🇦BA-185.164.35.9-0875",
+        "🇸🇬SG-103.172.116.79-0220",
+        "🇸🇬SG-103.172.116.90-0938",
+        "🇸🇬SG-103.172.116.94-0925",
+        "🇿🇦ZA-41.203.4.34-0922",
+        "🇻🇳VN-103.163.218.2-1950",
+        "🇦🇷AR-190.103.176.29-0912",
+        "🇫🇷FR-57.128.173.202-0212",
+        "🇪🇸ES-5.188.181.201-0918",
+        "🇨🇴CO-190.120.231.45-0923",
+        "🇪🇸ES-5.188.181.201-0951",
+        "🇪🇸ES-5.188.181.201-2009",
+        "🇪🇸ES-5.188.181.201-2013",
+        "🇹🇷TR-45.89.52.66-1942",
+        "🇺🇸US-74.121.191.98-0877",
+        "🇨🇾CY-213.169.137.221-0914",
+        "🇲🇽MX-190.103.179.23-0931",
+        "🇫🇮FI-37.143.129.230-0926",
+        "رایگان | VMESS | @DeamNet_Proxy | CA🇨🇦 | 0️⃣1️⃣",
+        "🇫🇷FR | VMESS | MTN | 2",
+        "🔒 VL-WS-NONE 🇺🇸 US-172.67.199.106:80 📡 PING-002.63-MS",
+        "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.69.44:8443 📡 PING-002.54-MS",
+        "🔒 VL-WS-TLS 🇺🇸 US-172.67.204.84:443 📡 PING-002.51-MS",
+        "🇬🇧GB | VLESS | MTN | 0",
+        "🇹🇷TR | VLESS | MTN | 6",
+        "🇨🇦CA | VLESS | MTN | 154",
+        "🇨🇦CA | VLESS | MTN | 220",
+        "🇨🇷CR | VLESS | MTN | 268"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "shadoct.kingarvan.eu.org",
+      "server_port": 8080,
+      "password": "XlUFgoOqDlVqlZFD3Js0YA",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇳🇱NL | ss | @V2rayCollectorDonate | 9",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "iranserver.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "darvish-2.savarkaraan.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "4d532b23-6e34-4fc7-96e0-654ac68d9ab7",
+      "tag": "🇺🇸US | vless | @FalconPolV2rayNG | 1",
+      "type": "vless"
+    },
+    {
+      "server": "check-host.net",
+      "server_port": 2095,
+      "tls": {
+        "enabled": true,
+        "server_name": "moein.savarkaraan.ir"
+      },
+      "transport": {
+        "path": "/Telegram:@POLPROXY-Telegram:@POLPROXY-Telegram:@POLPROXY-Telegram:@POLPROXY",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "--Polproxy--Polproxy--",
+      "tag": "🇺🇸US | vless | @polproxy | 1",
+      "type": "vless"
+    },
+    {
+      "server": "series-a2-me.samanehha.co",
+      "server_port": 443,
+      "password": "Bog0ELmMM9DSxDdQ",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇬🇧GB | ss | @proxy_mtm | 19",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "138.186.142.4",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇵🇦 PA-138.186.142.4:989 📡 PING-099.49-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "179.49.5.114",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇪🇨 EC-179.49.5.114:989 📡 PING-099.53-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "77.72.5.150",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇬🇧 GB-77.72.5.150:989 📡 PING-124.39-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "172.233.51.96",
+      "server_port": 8080,
+      "password": "XlUFgoOqDlVqlZFD3Js0YA",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🔒 SS-TCP-NA 🇳🇱 NL-172.233.51.96:8080 📡 PING-127.12-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "77.72.5.113",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇬🇧 GB-77.72.5.113:989 📡 PING-130.98-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "172.233.57.5",
+      "server_port": 8080,
+      "password": "ezesBXesf3RKBCp1vqKuIx",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🔒 SS-TCP-NA 🇳🇱 NL-172.233.57.5:8080 📡 PING-131.95-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "37.235.55.21",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇮🇲 IM-37.235.55.21:989 📡 PING-135.00-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "218.237.185.230",
+      "server_port": 54345,
+      "password": "qwerREWQ@@",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇰🇷 KR-218.237.185.230:54345 📡 PING-135.77-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "109.201.152.181",
+      "server_port": 443,
+      "password": "shadowsocks",
+      "method": "aes-128-cfb",
+      "tag": "🔒 SS-TCP-NA 🇳🇱 NL-109.201.152.181:443 📡 PING-138.57-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "92.38.163.53",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇱🇺 LU-92.38.163.53:989 📡 PING-140.01-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "190.120.229.28",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇵🇪 PE-190.120.229.28:989 📡 PING-140.82-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "190.120.230.9",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇨🇱 CL-190.120.230.9:989 📡 PING-143.15-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "46.183.184.62",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇭🇷 HR-46.183.184.62:989 📡 PING-151.02-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "46.183.184.60",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇭🇷 HR-46.183.184.60:989 📡 PING-151.81-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "185.90.61.153",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇳🇴 NO-185.90.61.153:989 📡 PING-153.67-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "31.171.153.181",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇦🇱 AL-31.171.153.181:989 📡 PING-163.61-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "45.89.52.66",
+      "server_port": 9040,
+      "password": "p9z5BVADH2YFs3MN",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9040 📡 PING-164.47-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "45.89.52.66",
+      "server_port": 9037,
+      "password": "TN2YqghxeFDKZfLU",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9037 📡 PING-164.69-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "121.127.46.147",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇸🇪 SE-121.127.46.147:989 📡 PING-165.18-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "45.89.52.66",
+      "server_port": 9043,
+      "password": "HSZuyJQcWe8dxNdF",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇹🇷 TR-45.89.52.66:9043 📡 PING-168.54-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "103.172.116.94",
+      "server_port": 9018,
+      "password": "fG2artUmHfNT2cX7",
+      "method": "aes-256-cfb",
+      "tag": "🔒 SS-TCP-NA 🇸🇬 SG-103.172.116.94:9018 📡 PING-183.65-MS",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "104.16.159.9",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "bangladeshipatri.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "6b777a91",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "ce8b8b30ebba45f2a38dd608b85e8628",
+      "tag": "🔒 TR-WS-TLS 🏴‍☠️ NA-104.16.159.9:443 📡 PING-016.06-MS",
+      "type": "trojan"
+    },
+    {
+      "server": "198.41.220.83",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "jobscareertoday.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "6b777a91",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "e8105dfd24414268b6c7652c63731097",
+      "tag": "🔒 TR-WS-TLS 🏴‍☠️ NA-198.41.220.83:443 📡 PING-009.79-MS",
+      "type": "trojan"
+    },
+    {
+      "server": "series-a1.samanehha.co",
+      "server_port": 443,
+      "password": "W74XFALLLuw6m5IA",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "Iran500+ID(@Outline_Vpn)",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "janett.click",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "janett.click"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "%F0%9F%87%A8%F0%9F%87%A6%20Canada%20Vmess%20@V2rayStore (7)",
+      "type": "vmess"
+    },
+    {
+      "server": "118.167.68.3",
+      "server_port": 4443,
+      "uuid": "de9558f3-d11b-410e-ab27-26956dde256d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (2)",
+      "type": "vmess"
+    },
+    {
+      "server": "b23.ntbq.dynu.net",
+      "server_port": 2024,
+      "uuid": "d3f5c39d-610c-4b98-9b01-d5b847033cf9",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (4)",
+      "type": "vmess"
+    },
+    {
+      "server": "nb24.ntbq.dynu.net",
+      "server_port": 4443,
+      "uuid": "de9558f3-d11b-410e-ab27-26956dde256d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Vmess%20@V2rayStore (5)",
+      "type": "vmess"
+    },
+    {
+      "server": "server33.beheshtbaneh.com",
+      "server_port": 8880,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "0873fffc-414f-4140-a155-672129fd9a1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "%F0%9F%87%A8%F0%9F%87%A6%20Canada%20Vmess%20@V2rayStore (23)",
+      "type": "vmess"
+    },
+    {
+      "server": "104.18.203.232",
+      "server_port": 8080,
+      "tls": {
+        "enabled": true,
+        "server_name": "b1.s1s2s3m1n1m3.site"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "4c8fbf5d-d768-4b98-9c38-40a155e493ae",
+      "tag": "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:8080 📡 PING-016.32-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.18.203.232",
+      "server_port": 2095,
+      "tls": {
+        "enabled": true,
+        "server_name": "a4.s1s2s3m1n1m3.site"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "a4818b0a-0bca-4051-87ed-11b382b431ad",
+      "tag": "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:2095 📡 PING-016.30-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.18.202.232",
+      "server_port": 2086,
+      "tls": {
+        "enabled": true,
+        "server_name": "a3.s1s2s3m1n1m3.site"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "8001d6ac-bbb9-4b9a-9225-b4ccaf0175c1",
+      "tag": "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.202.232:2086 📡 PING-016.28-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.18.203.232",
+      "server_port": 8880,
+      "tls": {
+        "enabled": true,
+        "server_name": "a5.s1s2s3m1n1m3.site"
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "436d5573-e775-4cd0-8f14-f73082659e8c",
+      "tag": "🔒 VL-WS-NONE 🏴‍☠️ NA-104.18.203.232:8880 📡 PING-016.17-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.47.232",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.47.232:443 📡 PING-009.16-MS",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.178.236",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.178.236:443 📡 PING-009.02-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.61.188",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.61.188:443 📡 PING-008.76-MS",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.213.13",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.213.13:443 📡 PING-008.74-MS",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.223.81",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.223.81:443 📡 PING-008.72-MS",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.193.36",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "darvish-2.savarkaraan.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "4d532b23-6e34-4fc7-96e0-654ac68d9ab7",
+      "tag": "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.193.36:443 📡 PING-008.63-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.31.174",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.31.174:443 📡 PING-008.58-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.78.150",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.78.150:443 📡 PING-008.52-MS",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.207.94",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🇺🇸 US-172.67.207.94:443 📡 PING-008.47-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.61.74",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "retf4.livingspringonline.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "416339cf-dadd-4831-987b-80f8434d2ebe",
+      "tag": "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.61.74:443 📡 PING-008.45-MS",
+      "type": "vless"
+    },
+    {
+      "server": "5.44.42.16",
+      "server_port": 10004,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/vpnjantit",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "bf7c0d9c-c717-11ee-ae31-0f19f620c87c",
+      "tag": "🔒 VL-WS-NA 🇦🇪 AE-5.44.42.16:10004 📡 PING-000.00-MS",
+      "type": "vless"
+    },
+    {
+      "server": "61.228.144.69",
+      "server_port": 2024,
+      "uuid": "d3f5c39d-610c-4b98-9b01-d5b847033cf9",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒 VM-TCP-NA 🇹🇼 TW-61.228.144.69:2024 📡 PING-140.03-MS",
+      "type": "vmess"
+    },
+    {
+      "server": "192.151.255.18",
+      "server_port": 41698,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "b7174b19-bc8a-4c9d-ac15-341c0e43ccd0",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒 VM-WS-NA 🇺🇸 US-192.151.255.18:41698 📡 PING-163.05-MS",
+      "type": "vmess"
+    },
+    {
+      "server": "beeconf.xyz",
+      "server_port": 8080,
+      "password": "ezesBXesf3RKBCp1vqKuIx",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇳🇱 The Netherlands",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "masting.xyz",
+      "server_port": 8080,
+      "password": "XlUFgoOqDlVqlZFD3Js0YA",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇳🇱 The Netherlands 9",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "passconf.xyz",
+      "server_port": 8080,
+      "password": "qGjmI8WQlF0tfhDbkLqGdN",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇲 United States 160",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "nb22.ntbq.dynu.net",
+      "server_port": 12002,
+      "uuid": "4e488e23-d1e5-40ee-8ffb-22bd95e80d0a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇳 Taiwan 6",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.184.11",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "janett.click"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇲 United States 282",
+      "type": "vmess"
+    },
+    {
+      "server": "104.17.61.2",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "jobscareerforstudent.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "6b777a91",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "dba20dcb635e430fa4d3bfc303a149d2",
+      "tag": "🇺🇲 United States 338",
+      "type": "trojan"
+    },
+    {
+      "server": "156.146.38.163",
+      "server_port": 443,
+      "password": "shadowsocks",
+      "method": "aes-128-cfb",
+      "tag": "🇺🇸US-156.146.38.163-0291",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "195.154.185.174",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇫🇷FR-195.154.185.174-0837",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "195.154.169.198",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇫🇷FR-195.154.169.198-0839",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "45.55.2.232",
+      "server_port": 14293,
+      "password": "2170f8",
+      "method": "aes-256-cfb",
+      "tag": "🇺🇸US-45.55.2.232-0873",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "180.149.44.120",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇦🇿AZ-180.149.44.120-0884",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "185.164.35.9",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇧🇦BA-185.164.35.9-0875",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "103.172.116.79",
+      "server_port": 9057,
+      "password": "wjTugX3ZtHMB9c3Z",
+      "method": "aes-256-cfb",
+      "tag": "🇸🇬SG-103.172.116.79-0220",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "103.172.116.90",
+      "server_port": 9094,
+      "password": "rpgbNnU9rDDU4aWZ",
+      "method": "aes-256-cfb",
+      "tag": "🇸🇬SG-103.172.116.90-0938",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "103.172.116.94",
+      "server_port": 9084,
+      "password": "c3NtHJ5ujV2tGDfj",
+      "method": "aes-256-cfb",
+      "tag": "🇸🇬SG-103.172.116.94-0925",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "41.203.4.34",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇿🇦ZA-41.203.4.34-0922",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "103.163.218.2",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇻🇳VN-103.163.218.2-1950",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "190.103.176.29",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇦🇷AR-190.103.176.29-0912",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "57.128.173.202",
+      "server_port": 8880,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "0d1bf26a-ce97-4707-a270-7f4d2ae37334",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇫🇷FR-57.128.173.202-0212",
+      "type": "vmess"
+    },
+    {
+      "server": "5.188.181.201",
+      "server_port": 9030,
+      "password": "GeregetR8cvQHzYr",
+      "method": "aes-256-cfb",
+      "tag": "🇪🇸ES-5.188.181.201-0918",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "190.120.231.45",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇨🇴CO-190.120.231.45-0923",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "5.188.181.201",
+      "server_port": 9031,
+      "password": "BwcAUZk8hUFAkDGN",
+      "method": "aes-256-cfb",
+      "tag": "🇪🇸ES-5.188.181.201-0951",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "5.188.181.201",
+      "server_port": 9040,
+      "password": "p9z5BVADH2YFs3MN",
+      "method": "aes-256-cfb",
+      "tag": "🇪🇸ES-5.188.181.201-2009",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "5.188.181.201",
+      "server_port": 9037,
+      "password": "TN2YqghxeFDKZfLU",
+      "method": "aes-256-cfb",
+      "tag": "🇪🇸ES-5.188.181.201-2013",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "45.89.52.66",
+      "server_port": 9031,
+      "password": "BwcAUZk8hUFAkDGN",
+      "method": "aes-256-cfb",
+      "tag": "🇹🇷TR-45.89.52.66-1942",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "74.121.191.98",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇺🇸US-74.121.191.98-0877",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "213.169.137.221",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇨🇾CY-213.169.137.221-0914",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "190.103.179.23",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇲🇽MX-190.103.179.23-0931",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "37.143.129.230",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇫🇮FI-37.143.129.230-0926",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "ap-northeast-anycast.lnaspiring.com",
+      "server_port": 80,
+      "transport": {
+        "path": "/geg/45?ed=2048",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c64fa146-e851-4dfa-8f90-59a8fee49bc3",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @DeamNet_Proxy | CA🇨🇦 | 0️⃣1️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "162.19.25.207",
+      "server_port": 44513,
+      "uuid": "4552bdb6-e008-43ac-926d-c6c6c5a6fc76",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇫🇷FR | VMESS | MTN | 2",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.199.106",
+      "server_port": 80,
+      "tls": {
+        "enabled": true,
+        "server_name": "gdshfljlIlllljljljltlv2rayـgodllllllluxjcjfuufyd.V2ray-God.site"
+      },
+      "transport": {
+        "path": "/@V2ray_God :چنل تلگرام/?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6ec52bc7-fcd7-4841-ab69-70d6e03a6eda",
+      "tag": "🔒 VL-WS-NONE 🇺🇸 US-172.67.199.106:80 📡 PING-002.63-MS",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.69.44",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "server_name": "darvish-1.savarkaraan.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "e3547fe9-c38f-4dd8-fddc-aa33acab6941",
+      "tag": "🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.69.44:8443 📡 PING-002.54-MS",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.204.84",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "tjsre.ttvoffi.info",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "path": "/paradise",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d86846c-5a27-43c8-8981-57bb75c82195",
+      "tag": "🔒 VL-WS-TLS 🇺🇸 US-172.67.204.84:443 📡 PING-002.51-MS",
+      "type": "vless"
+    },
+    {
+      "server": "51.195.149.115",
+      "server_port": 26475,
+      "tls": {
+        "enabled": true
+      },
+      "uuid": "4534d7c9-c5dd-490a-9f14-75245f58ae01",
+      "tag": "🇬🇧GB | VLESS | MTN | 0",
+      "type": "vless"
+    },
+    {
+      "server": "91.217.119.47",
+      "server_port": 35795,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "39226058-a5b6-4dc7-ac43-797118cef4f6",
+      "tag": "🇹🇷TR | VLESS | MTN | 6",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.37.251",
+      "server_port": 2053,
+      "tls": {
+        "enabled": true,
+        "server_name": "free.baseri1.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "0b1ddfc4-d343-4b65-fad9-3175d6b8c8ae",
+      "tag": "🇨🇦CA | VLESS | MTN | 154",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.216.173",
+      "server_port": 2053,
+      "tls": {
+        "enabled": true,
+        "server_name": "free.baseri1.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "0b1ddfc4-d343-4b65-fad9-3175d6b8c8ae",
+      "tag": "🇨🇦CA | VLESS | MTN | 220",
+      "type": "vless"
+    },
+    {
+      "server": "190.93.246.137",
+      "server_port": 2095,
+      "tls": {
+        "enabled": true,
+        "server_name": "我的父亲.gamermecfz.ir"
+      },
+      "transport": {
+        "path": "@ExpressVPN_420 \"@ExpressVPN_420",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "b39531d2-40c0-4bae-aaee-0cc2ff2e46c0",
+      "tag": "🇨🇷CR | VLESS | MTN | 268",
+      "type": "vless"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "block"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geoip": [
+          "cn"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geoip": [
+          "private"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
