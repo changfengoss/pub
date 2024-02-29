@@ -1,0 +1,520 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：29-02-2024 17:33:34
+# 使用模版：V2RaySE 默认模版
+# 节点数量：34
+####################################
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"CA|Github搜索TrojanLinks","type":"trojan","server":"15.156.207.175","port":16794,"udp":true,"password":"IzsCtZYpg07e","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"DE|Github搜索TrojanLinks_1","type":"trojan","server":"3.72.39.12","port":16794,"udp":true,"password":"KlL)0ntY4FA2","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"DE|Github搜索TrojanLinks_2","type":"trojan","server":"18.199.81.169","port":16772,"udp":true,"password":"Rcc3HVvuFZ61","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"DE|Github搜索TrojanLinks_3","type":"trojan","server":"3.65.218.93","port":16772,"udp":true,"password":"ByjQA5PJbBBQ","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"FR|Github搜索TrojanLinks_1","type":"trojan","server":"51.44.21.2","port":16801,"udp":true,"password":"mrOCxC7ZfT6T","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"FR|Github搜索TrojanLinks_2","type":"trojan","server":"15.237.174.93","port":16800,"udp":true,"password":"vcSMxV8spaN5","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"FR|Github搜索TrojanLinks_3","type":"trojan","server":"52.47.74.170","port":16784,"udp":true,"password":"ZOZcSbBwXhqW","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"FR|Github搜索TrojanLinks_4","type":"trojan","server":"13.36.170.152","port":16803,"udp":true,"password":"f(LAij(RPemE","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"GB|Github搜索TrojanLinks_1","type":"trojan","server":"35.178.55.96","port":16775,"udp":true,"password":"vgaKU1PYCxCl","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"GB|Github搜索TrojanLinks_2","type":"trojan","server":"18.132.207.45","port":16804,"udp":true,"password":"Ah2qXlV9BKLs","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"GB|Github搜索TrojanLinks_3","type":"trojan","server":"18.134.248.110","port":16795,"udp":true,"password":"hDZYYn0dxbWa","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"GB|Github搜索TrojanLinks_4","type":"trojan","server":"52.56.66.91","port":16796,"udp":true,"password":"CJJTDdSUB3)t","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"KR|Github搜索TrojanLinks_1","type":"trojan","server":"52.79.44.10","port":16791,"udp":true,"password":"JJCHJQSElWZL","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"KR|Github搜索TrojanLinks_2","type":"trojan","server":"43.201.45.10","port":16812,"udp":true,"password":"YMeP0457unyx","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_1","type":"trojan","server":"54.174.146.222","port":16816,"udp":true,"password":"HU34JJWj1oHR","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_2","type":"trojan","server":"18.225.235.136","port":16775,"udp":true,"password":"BJRWq2QH6k3o","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_3","type":"trojan","server":"3.137.174.9","port":16811,"udp":true,"password":"1crmgnSwj5RY","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_4","type":"trojan","server":"52.13.48.44","port":16809,"udp":true,"password":"NfKmA7bqzskg","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"JP|Github搜索TrojanLinks_1","type":"trojan","server":"13.231.41.180","port":16785,"udp":true,"password":"(2qkJg8Ol(fw","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"JP|Github搜索TrojanLinks_2","type":"trojan","server":"54.199.212.229","port":16776,"udp":true,"password":"eGAt3Q6sL45G","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"JP|Github搜索TrojanLinks_3","type":"trojan","server":"35.77.105.189","port":16790,"udp":true,"password":"gEduCBymoKVE","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"JP|Github搜索TrojanLinks_4","type":"trojan","server":"57.180.30.152","port":16806,"udp":true,"password":"tWi47ViS3VrP","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"JP|Github搜索TrojanLinks_5","type":"trojan","server":"54.238.10.132","port":16783,"udp":true,"password":"1l0NpVr6TL(B","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"SG|Github搜索TrojanLinks_1","type":"trojan","server":"13.229.229.40","port":16795,"udp":true,"password":"2((4)WrWxvla","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"SG|Github搜索TrojanLinks_2","type":"trojan","server":"18.142.245.184","port":16778,"udp":true,"password":"Z2Ti3)qyPJCw","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"SG|Github搜索TrojanLinks_3","type":"trojan","server":"3.0.52.254","port":16791,"udp":true,"password":"uYKW5Yfuvwan","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"SG|Github搜索TrojanLinks_4","type":"trojan","server":"3.1.195.164","port":16803,"udp":true,"password":"(W8xLhdp6Z1b","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"SG|Github搜索TrojanLinks_5","type":"trojan","server":"3.1.204.104","port":16810,"udp":true,"password":"ey6W2EC4yha0","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_5","type":"trojan","server":"54.203.159.222","port":16792,"udp":true,"password":"VKKIRq)rxITO","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_6","type":"trojan","server":"54.91.250.27","port":16802,"udp":true,"password":"5ll76JOb01(M","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_7","type":"trojan","server":"52.88.1.156","port":16790,"udp":true,"password":"XEU265CVc1UX","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_8","type":"trojan","server":"18.219.167.137","port":16771,"udp":true,"password":"3fj6gecYp9y4","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_9","type":"trojan","server":"34.218.78.89","port":16785,"udp":true,"password":"BkOlhvkIGiG(","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+  - {"name":"US|Github搜索TrojanLinks_10","type":"trojan","server":"54.202.182.51","port":16777,"udp":true,"password":"U4rOhDB9NsFO","sni":"www.myethblog.com","skip-cert-verify":true,"network":"tcp","alpn":["h2","http/1.1"]}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - CA|Github搜索TrojanLinks
+      - DE|Github搜索TrojanLinks_1
+      - DE|Github搜索TrojanLinks_2
+      - DE|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_1
+      - FR|Github搜索TrojanLinks_2
+      - FR|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_4
+      - GB|Github搜索TrojanLinks_1
+      - GB|Github搜索TrojanLinks_2
+      - GB|Github搜索TrojanLinks_3
+      - GB|Github搜索TrojanLinks_4
+      - KR|Github搜索TrojanLinks_1
+      - KR|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_1
+      - US|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_3
+      - US|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_1
+      - JP|Github搜索TrojanLinks_2
+      - JP|Github搜索TrojanLinks_3
+      - JP|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_5
+      - SG|Github搜索TrojanLinks_1
+      - SG|Github搜索TrojanLinks_2
+      - SG|Github搜索TrojanLinks_3
+      - SG|Github搜索TrojanLinks_4
+      - SG|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_6
+      - US|Github搜索TrojanLinks_7
+      - US|Github搜索TrojanLinks_8
+      - US|Github搜索TrojanLinks_9
+      - US|Github搜索TrojanLinks_10
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - CA|Github搜索TrojanLinks
+      - DE|Github搜索TrojanLinks_1
+      - DE|Github搜索TrojanLinks_2
+      - DE|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_1
+      - FR|Github搜索TrojanLinks_2
+      - FR|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_4
+      - GB|Github搜索TrojanLinks_1
+      - GB|Github搜索TrojanLinks_2
+      - GB|Github搜索TrojanLinks_3
+      - GB|Github搜索TrojanLinks_4
+      - KR|Github搜索TrojanLinks_1
+      - KR|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_1
+      - US|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_3
+      - US|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_1
+      - JP|Github搜索TrojanLinks_2
+      - JP|Github搜索TrojanLinks_3
+      - JP|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_5
+      - SG|Github搜索TrojanLinks_1
+      - SG|Github搜索TrojanLinks_2
+      - SG|Github搜索TrojanLinks_3
+      - SG|Github搜索TrojanLinks_4
+      - SG|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_6
+      - US|Github搜索TrojanLinks_7
+      - US|Github搜索TrojanLinks_8
+      - US|Github搜索TrojanLinks_9
+      - US|Github搜索TrojanLinks_10
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - CA|Github搜索TrojanLinks
+      - DE|Github搜索TrojanLinks_1
+      - DE|Github搜索TrojanLinks_2
+      - DE|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_1
+      - FR|Github搜索TrojanLinks_2
+      - FR|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_4
+      - GB|Github搜索TrojanLinks_1
+      - GB|Github搜索TrojanLinks_2
+      - GB|Github搜索TrojanLinks_3
+      - GB|Github搜索TrojanLinks_4
+      - KR|Github搜索TrojanLinks_1
+      - KR|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_1
+      - US|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_3
+      - US|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_1
+      - JP|Github搜索TrojanLinks_2
+      - JP|Github搜索TrojanLinks_3
+      - JP|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_5
+      - SG|Github搜索TrojanLinks_1
+      - SG|Github搜索TrojanLinks_2
+      - SG|Github搜索TrojanLinks_3
+      - SG|Github搜索TrojanLinks_4
+      - SG|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_6
+      - US|Github搜索TrojanLinks_7
+      - US|Github搜索TrojanLinks_8
+      - US|Github搜索TrojanLinks_9
+      - US|Github搜索TrojanLinks_10
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - CA|Github搜索TrojanLinks
+      - DE|Github搜索TrojanLinks_1
+      - DE|Github搜索TrojanLinks_2
+      - DE|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_1
+      - FR|Github搜索TrojanLinks_2
+      - FR|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_4
+      - GB|Github搜索TrojanLinks_1
+      - GB|Github搜索TrojanLinks_2
+      - GB|Github搜索TrojanLinks_3
+      - GB|Github搜索TrojanLinks_4
+      - KR|Github搜索TrojanLinks_1
+      - KR|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_1
+      - US|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_3
+      - US|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_1
+      - JP|Github搜索TrojanLinks_2
+      - JP|Github搜索TrojanLinks_3
+      - JP|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_5
+      - SG|Github搜索TrojanLinks_1
+      - SG|Github搜索TrojanLinks_2
+      - SG|Github搜索TrojanLinks_3
+      - SG|Github搜索TrojanLinks_4
+      - SG|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_6
+      - US|Github搜索TrojanLinks_7
+      - US|Github搜索TrojanLinks_8
+      - US|Github搜索TrojanLinks_9
+      - US|Github搜索TrojanLinks_10
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - CA|Github搜索TrojanLinks
+      - DE|Github搜索TrojanLinks_1
+      - DE|Github搜索TrojanLinks_2
+      - DE|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_1
+      - FR|Github搜索TrojanLinks_2
+      - FR|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_4
+      - GB|Github搜索TrojanLinks_1
+      - GB|Github搜索TrojanLinks_2
+      - GB|Github搜索TrojanLinks_3
+      - GB|Github搜索TrojanLinks_4
+      - KR|Github搜索TrojanLinks_1
+      - KR|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_1
+      - US|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_3
+      - US|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_1
+      - JP|Github搜索TrojanLinks_2
+      - JP|Github搜索TrojanLinks_3
+      - JP|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_5
+      - SG|Github搜索TrojanLinks_1
+      - SG|Github搜索TrojanLinks_2
+      - SG|Github搜索TrojanLinks_3
+      - SG|Github搜索TrojanLinks_4
+      - SG|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_6
+      - US|Github搜索TrojanLinks_7
+      - US|Github搜索TrojanLinks_8
+      - US|Github搜索TrojanLinks_9
+      - US|Github搜索TrojanLinks_10
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - CA|Github搜索TrojanLinks
+      - DE|Github搜索TrojanLinks_1
+      - DE|Github搜索TrojanLinks_2
+      - DE|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_1
+      - FR|Github搜索TrojanLinks_2
+      - FR|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_4
+      - GB|Github搜索TrojanLinks_1
+      - GB|Github搜索TrojanLinks_2
+      - GB|Github搜索TrojanLinks_3
+      - GB|Github搜索TrojanLinks_4
+      - KR|Github搜索TrojanLinks_1
+      - KR|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_1
+      - US|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_3
+      - US|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_1
+      - JP|Github搜索TrojanLinks_2
+      - JP|Github搜索TrojanLinks_3
+      - JP|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_5
+      - SG|Github搜索TrojanLinks_1
+      - SG|Github搜索TrojanLinks_2
+      - SG|Github搜索TrojanLinks_3
+      - SG|Github搜索TrojanLinks_4
+      - SG|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_6
+      - US|Github搜索TrojanLinks_7
+      - US|Github搜索TrojanLinks_8
+      - US|Github搜索TrojanLinks_9
+      - US|Github搜索TrojanLinks_10
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - CA|Github搜索TrojanLinks
+      - DE|Github搜索TrojanLinks_1
+      - DE|Github搜索TrojanLinks_2
+      - DE|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_1
+      - FR|Github搜索TrojanLinks_2
+      - FR|Github搜索TrojanLinks_3
+      - FR|Github搜索TrojanLinks_4
+      - GB|Github搜索TrojanLinks_1
+      - GB|Github搜索TrojanLinks_2
+      - GB|Github搜索TrojanLinks_3
+      - GB|Github搜索TrojanLinks_4
+      - KR|Github搜索TrojanLinks_1
+      - KR|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_1
+      - US|Github搜索TrojanLinks_2
+      - US|Github搜索TrojanLinks_3
+      - US|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_1
+      - JP|Github搜索TrojanLinks_2
+      - JP|Github搜索TrojanLinks_3
+      - JP|Github搜索TrojanLinks_4
+      - JP|Github搜索TrojanLinks_5
+      - SG|Github搜索TrojanLinks_1
+      - SG|Github搜索TrojanLinks_2
+      - SG|Github搜索TrojanLinks_3
+      - SG|Github搜索TrojanLinks_4
+      - SG|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_5
+      - US|Github搜索TrojanLinks_6
+      - US|Github搜索TrojanLinks_7
+      - US|Github搜索TrojanLinks_8
+      - US|Github搜索TrojanLinks_9
+      - US|Github搜索TrojanLinks_10
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/LocalAreaNetwork.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanProgramAD.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleCN.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/SteamCN.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Microsoft.list
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Apple.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyMedia.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Telegram.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaCompanyIp.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
