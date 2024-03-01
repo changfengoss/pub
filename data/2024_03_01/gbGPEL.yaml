@@ -1,0 +1,71 @@
+#甬哥Github项目  ：github.com/yonggekkk
+#甬哥Blogger博客 ：ygkkk.blogspot.com
+#甬哥YouTube频道 ：www.youtube.com/@ygkkk
+#====Clash-meta精简配置文件模版：更新至15个主流节点（V23.12.19）=====
+#====参考自clash-meta官方文档：wiki.metacubex.one=====
+#（一区）=============================（clash配置）
+#dns可自行修改
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+dns:
+  enable: true
+  listen: ':53'
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 8.8.8.8
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+proxies:
+  - {"name":"东京-singbox_hysteria2","type":"hysteria2","server":"soft.bighoo.top","port":35762,"password":"3c201691-9e19-4fd0-95ca-649c673db434","sni":"soft.bighoo.top","skip-cert-verify":false,"alpn":["h3"]}
+proxy-groups:
+  - name: 负载均衡
+    type: load-balance
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - warp-wireguard节点
+      - vless-ws-tls节点
+      - vless-ws节点
+    strategy: round-robin
+  - name: 自动选择
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - vless-reality-grpc节点
+      - 东京-singbox_hysteria2
+  - name: 🌍选择代理节点
+    type: select
+    proxies:
+      - 负载均衡
+      - 自动选择
+      - DIRECT
+
+rules:
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🌍选择代理节点
+  - DOMAIN-SUFFIX,cff.pw,🌍选择代理节点
+  - DOMAIN-SUFFIX,vpnse.org,🌍选择代理节点
+  - DOMAIN-SUFFIX,cfmem.com,🌍选择代理节点
+  - MATCH,🌍选择代理节点
