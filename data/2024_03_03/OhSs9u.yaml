@@ -1,0 +1,1383 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "error",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "server": "localDns"
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🤖 OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "🌌 Google",
+      "type": "selector",
+      "outbounds": [
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "📟 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "🐦 Twitter",
+      "type": "selector",
+      "outbounds": [
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "👤 Facebook",
+      "type": "selector",
+      "outbounds": [
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "🛍️ Amazon",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "🍎 Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "🧩 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "🎮 Game",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "tag": "🎬 MediaVideo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "CA|google搜索https://t.me/warp_key_1",
+        "CA|google搜索https://t.me/warp_key_2",
+        "DE|google搜索https://t.me/warp_key_1",
+        "DE|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_1",
+        "FR|google搜索https://t.me/warp_key_2",
+        "FR|google搜索https://t.me/warp_key_3",
+        "FR|google搜索https://t.me/warp_key_4",
+        "FR|google搜索https://t.me/warp_key_5",
+        "GB|google搜索https://t.me/warp_key_1",
+        "GB|google搜索https://t.me/warp_key_2",
+        "GB|google搜索https://t.me/warp_key_3",
+        "GB|google搜索https://t.me/warp_key_4",
+        "KR|google搜索https://t.me/warp_key_1",
+        "KR|google搜索https://t.me/warp_key_2",
+        "KR|google搜索https://t.me/warp_key_3",
+        "KR|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_1",
+        "US|google搜索https://t.me/warp_key_2",
+        "US|google搜索https://t.me/warp_key_3",
+        "US|google搜索https://t.me/warp_key_4",
+        "US|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_1",
+        "JP|google搜索https://t.me/warp_key_2",
+        "JP|google搜索https://t.me/warp_key_3",
+        "JP|google搜索https://t.me/warp_key_4",
+        "JP|google搜索https://t.me/warp_key_5",
+        "JP|google搜索https://t.me/warp_key_6",
+        "SG|google搜索https://t.me/warp_key_1",
+        "SG|google搜索https://t.me/warp_key_2",
+        "SG|google搜索https://t.me/warp_key_3",
+        "SG|google搜索https://t.me/warp_key_4",
+        "SG|google搜索https://t.me/warp_key_5",
+        "SG|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_6",
+        "US|google搜索https://t.me/warp_key_7",
+        "US|google搜索https://t.me/warp_key_8",
+        "US|google搜索https://t.me/warp_key_9",
+        "US|google搜索https://t.me/warp_key_10",
+        "US|google搜索https://t.me/warp_key_11"
+      ]
+    },
+    {
+      "tag": "🌏 cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "select"
+      ]
+    },
+    {
+      "tag": "🛑 AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "35.183.69.81",
+      "server_port": 12752,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "1yd3wtMypMLJ",
+      "tag": "CA|google搜索https://t.me/warp_key_1",
+      "type": "trojan"
+    },
+    {
+      "server": "3.96.196.246",
+      "server_port": 12758,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "W1zbdVpcHbbb",
+      "tag": "CA|google搜索https://t.me/warp_key_2",
+      "type": "trojan"
+    },
+    {
+      "server": "18.196.226.104",
+      "server_port": 12760,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "ZqY9p6aPbQ9E",
+      "tag": "DE|google搜索https://t.me/warp_key_1",
+      "type": "trojan"
+    },
+    {
+      "server": "3.79.181.137",
+      "server_port": 12764,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "DOG1cvJyJg06",
+      "tag": "DE|google搜索https://t.me/warp_key_2",
+      "type": "trojan"
+    },
+    {
+      "server": "52.47.74.170",
+      "server_port": 12786,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "O3xMcmq79ayS",
+      "tag": "FR|google搜索https://t.me/warp_key_1",
+      "type": "trojan"
+    },
+    {
+      "server": "51.44.21.2",
+      "server_port": 12757,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "ex5DjjgIOm1(",
+      "tag": "FR|google搜索https://t.me/warp_key_2",
+      "type": "trojan"
+    },
+    {
+      "server": "13.39.104.72",
+      "server_port": 12780,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "cxBOyVmeW3ZV",
+      "tag": "FR|google搜索https://t.me/warp_key_3",
+      "type": "trojan"
+    },
+    {
+      "server": "13.36.170.152",
+      "server_port": 12757,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "7MRMqrnsLJES",
+      "tag": "FR|google搜索https://t.me/warp_key_4",
+      "type": "trojan"
+    },
+    {
+      "server": "15.237.174.93",
+      "server_port": 12751,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "B(EC3MNzoqDC",
+      "tag": "FR|google搜索https://t.me/warp_key_5",
+      "type": "trojan"
+    },
+    {
+      "server": "52.56.66.91",
+      "server_port": 12790,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "qfaR5leJ2IGD",
+      "tag": "GB|google搜索https://t.me/warp_key_1",
+      "type": "trojan"
+    },
+    {
+      "server": "18.132.207.45",
+      "server_port": 12759,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "ppNsg7(6Usjz",
+      "tag": "GB|google搜索https://t.me/warp_key_2",
+      "type": "trojan"
+    },
+    {
+      "server": "35.178.55.96",
+      "server_port": 12776,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "Ee372a850Ero",
+      "tag": "GB|google搜索https://t.me/warp_key_3",
+      "type": "trojan"
+    },
+    {
+      "server": "18.132.43.153",
+      "server_port": 12761,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "Mw5)2n))p8)V",
+      "tag": "GB|google搜索https://t.me/warp_key_4",
+      "type": "trojan"
+    },
+    {
+      "server": "52.79.44.235",
+      "server_port": 12749,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "SW2YCmKkhOeO",
+      "tag": "KR|google搜索https://t.me/warp_key_1",
+      "type": "trojan"
+    },
+    {
+      "server": "52.79.44.10",
+      "server_port": 12751,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "8abeUcNGywlc",
+      "tag": "KR|google搜索https://t.me/warp_key_2",
+      "type": "trojan"
+    },
+    {
+      "server": "15.165.236.5",
+      "server_port": 12775,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "1kmeU8PwU43e",
+      "tag": "KR|google搜索https://t.me/warp_key_3",
+      "type": "trojan"
+    },
+    {
+      "server": "43.201.45.10",
+      "server_port": 12767,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "Pmd1jxhmmlZB",
+      "tag": "KR|google搜索https://t.me/warp_key_4",
+      "type": "trojan"
+    },
+    {
+      "server": "3.15.11.134",
+      "server_port": 12773,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "8Xkf0jGwUuH5",
+      "tag": "US|google搜索https://t.me/warp_key_1",
+      "type": "trojan"
+    },
+    {
+      "server": "3.137.171.110",
+      "server_port": 12767,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "Ml8Pa0ikxqII",
+      "tag": "US|google搜索https://t.me/warp_key_2",
+      "type": "trojan"
+    },
+    {
+      "server": "35.90.36.210",
+      "server_port": 12764,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "pHXyYT(3JEJX",
+      "tag": "US|google搜索https://t.me/warp_key_3",
+      "type": "trojan"
+    },
+    {
+      "server": "54.202.14.200",
+      "server_port": 12764,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "04tu2j)bmcnZ",
+      "tag": "US|google搜索https://t.me/warp_key_4",
+      "type": "trojan"
+    },
+    {
+      "server": "3.137.174.9",
+      "server_port": 12769,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "JP8dB5fFwPuI",
+      "tag": "US|google搜索https://t.me/warp_key_5",
+      "type": "trojan"
+    },
+    {
+      "server": "3.112.4.194",
+      "server_port": 12793,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "vT(SCc5fDvcD",
+      "tag": "JP|google搜索https://t.me/warp_key_1",
+      "type": "trojan"
+    },
+    {
+      "server": "57.181.26.117",
+      "server_port": 12758,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "vdO848guchE3",
+      "tag": "JP|google搜索https://t.me/warp_key_2",
+      "type": "trojan"
+    },
+    {
+      "server": "3.112.250.245",
+      "server_port": 12760,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "4z9v2aUKNv3e",
+      "tag": "JP|google搜索https://t.me/warp_key_3",
+      "type": "trojan"
+    },
+    {
+      "server": "52.195.215.226",
+      "server_port": 12763,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "38F)zI97hGx6",
+      "tag": "JP|google搜索https://t.me/warp_key_4",
+      "type": "trojan"
+    },
+    {
+      "server": "18.183.72.86",
+      "server_port": 12751,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "EUNUxKJq1puf",
+      "tag": "JP|google搜索https://t.me/warp_key_5",
+      "type": "trojan"
+    },
+    {
+      "server": "54.65.19.128",
+      "server_port": 12767,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "wTWrh4g34VX1",
+      "tag": "JP|google搜索https://t.me/warp_key_6",
+      "type": "trojan"
+    },
+    {
+      "server": "3.0.55.15",
+      "server_port": 12789,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "4twc5eLM)pZj",
+      "tag": "SG|google搜索https://t.me/warp_key_1",
+      "type": "trojan"
+    },
+    {
+      "server": "18.141.164.240",
+      "server_port": 12794,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "yODu688M5wCU",
+      "tag": "SG|google搜索https://t.me/warp_key_2",
+      "type": "trojan"
+    },
+    {
+      "server": "13.212.195.95",
+      "server_port": 12757,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "TdlQ4SWyrRlM",
+      "tag": "SG|google搜索https://t.me/warp_key_3",
+      "type": "trojan"
+    },
+    {
+      "server": "13.212.174.178",
+      "server_port": 12749,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "TwAkrHPp2fEs",
+      "tag": "SG|google搜索https://t.me/warp_key_4",
+      "type": "trojan"
+    },
+    {
+      "server": "13.229.236.17",
+      "server_port": 12765,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "zj0L3dOkXSxv",
+      "tag": "SG|google搜索https://t.me/warp_key_5",
+      "type": "trojan"
+    },
+    {
+      "server": "3.1.204.104",
+      "server_port": 12762,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "a9LHMeHzmMoS",
+      "tag": "SG|google搜索https://t.me/warp_key_6",
+      "type": "trojan"
+    },
+    {
+      "server": "54.203.159.222",
+      "server_port": 12794,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "XcVdfsPD2eZ7",
+      "tag": "US|google搜索https://t.me/warp_key_6",
+      "type": "trojan"
+    },
+    {
+      "server": "52.88.1.156",
+      "server_port": 12786,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "8aWnDbhngAwH",
+      "tag": "US|google搜索https://t.me/warp_key_7",
+      "type": "trojan"
+    },
+    {
+      "server": "54.202.182.51",
+      "server_port": 12780,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "xcYph9JEN39J",
+      "tag": "US|google搜索https://t.me/warp_key_8",
+      "type": "trojan"
+    },
+    {
+      "server": "34.221.207.205",
+      "server_port": 12787,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "x8wFlNAXSx)8",
+      "tag": "US|google搜索https://t.me/warp_key_9",
+      "type": "trojan"
+    },
+    {
+      "server": "3.87.211.96",
+      "server_port": 12756,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "(Sn63L01Izk7",
+      "tag": "US|google搜索https://t.me/warp_key_10",
+      "type": "trojan"
+    },
+    {
+      "server": "35.90.67.72",
+      "server_port": 12786,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myethblog.com",
+        "insecure": false
+      },
+      "password": "31dA3W9zhA4r",
+      "tag": "US|google搜索https://t.me/warp_key_11",
+      "type": "trojan"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "v2rayse.com",
+          "cfmem.com",
+          "vpnse.org",
+          "cff.pw",
+          "tt.vg"
+        ],
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "openai"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "geoip": [
+          "google"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geosite": [
+          "telegram"
+        ],
+        "geoip": [
+          "telegram"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geosite": [
+          "twitter"
+        ],
+        "geoip": [
+          "twitter"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "geoip": [
+          "facebook"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": [
+          "amazon"
+        ],
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": [
+          "apple-cn",
+          "apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": [
+          "microsoft"
+        ],
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": [
+          "category-games"
+        ],
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": [
+          "bilibili"
+        ],
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "geoip": [
+          "netflix"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "🌏 cn"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "🛑 AdBlock"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
+  }
+}
