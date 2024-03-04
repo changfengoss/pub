@@ -1,0 +1,461 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "error",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇭🇰HK_108 @WangCai_8",
+        "🇭🇰HK_128 @WangCai_8",
+        "🇭🇰 HK 4",
+        "🇭🇰 HK 5",
+        "🇰🇷 KR 5",
+        "🇰🇷 KR 6",
+        "🇰🇷 KR",
+        "🇰🇷 KR 2",
+        "🇸🇬 SG 2",
+        "🇰🇷 KR 3",
+        "🇸🇬 SG 3",
+        "🇹🇼 TW",
+        "🇭🇰 HK 2",
+        "🇭🇰 香港实验节点 Xvideos",
+        "🇭🇰 香港实验节点 NetflixB 02",
+        "🇭🇰 香港实验节点 NetflixAB 01"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇭🇰HK_108 @WangCai_8",
+        "🇭🇰HK_128 @WangCai_8",
+        "🇭🇰 HK 4",
+        "🇭🇰 HK 5",
+        "🇰🇷 KR 5",
+        "🇰🇷 KR 6",
+        "🇰🇷 KR",
+        "🇰🇷 KR 2",
+        "🇸🇬 SG 2",
+        "🇰🇷 KR 3",
+        "🇸🇬 SG 3",
+        "🇹🇼 TW",
+        "🇭🇰 HK 2",
+        "🇭🇰 香港实验节点 Xvideos",
+        "🇭🇰 香港实验节点 NetflixB 02",
+        "🇭🇰 香港实验节点 NetflixAB 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "47.76.32.108",
+      "server_port": 80,
+      "tls": {
+        "enabled": true,
+        "server_name": "sdgf.bdfstt.sbs"
+      },
+      "transport": {
+        "path": "Telegram🇨🇳 @WangCai_8 /?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e28bb3f8-e64a-4419-9496-33c46220354b",
+      "tag": "🇭🇰HK_108 @WangCai_8",
+      "type": "vless"
+    },
+    {
+      "server": "8.218.204.128",
+      "server_port": 80,
+      "tls": {
+        "enabled": true,
+        "server_name": "sdgf.bdfstt.sbs"
+      },
+      "transport": {
+        "path": "Telegram🇨🇳 @WangCai_8 /?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e28bb3f8-e64a-4419-9496-33c46220354b",
+      "tag": "🇭🇰HK_128 @WangCai_8",
+      "type": "vless"
+    },
+    {
+      "server": "202.81.235.90",
+      "server_port": 50100,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.multacom.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇭🇰 HK 4",
+      "type": "vless"
+    },
+    {
+      "server": "45.78.30.50",
+      "server_port": 80,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.multacom.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇭🇰 HK 5",
+      "type": "vless"
+    },
+    {
+      "server": "152.70.244.254",
+      "server_port": 27644,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.kr.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇰🇷 KR 5",
+      "type": "vless"
+    },
+    {
+      "server": "146.56.136.49",
+      "server_port": 61153,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.kr.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇰🇷 KR 6",
+      "type": "vless"
+    },
+    {
+      "server": "146.56.190.2",
+      "server_port": 2023,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net"
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.kr.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇰🇷 KR",
+      "type": "vless"
+    },
+    {
+      "server": "129.154.212.181",
+      "server_port": 22561,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net"
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.kr.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇰🇷 KR 2",
+      "type": "vless"
+    },
+    {
+      "server": "213.35.97.124",
+      "server_port": 56865,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.sg.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇸🇬 SG 2",
+      "type": "vless"
+    },
+    {
+      "server": "146.56.142.38",
+      "server_port": 51001,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net"
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.kr.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇰🇷 KR 3",
+      "type": "vless"
+    },
+    {
+      "server": "138.2.95.33",
+      "server_port": 17465,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.sg.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇸🇬 SG 3",
+      "type": "vless"
+    },
+    {
+      "server": "125.229.230.180",
+      "server_port": 30722,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net"
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.tw.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇹🇼 TW",
+      "type": "vless"
+    },
+    {
+      "server": "38.55.98.238",
+      "server_port": 48348,
+      "tls": {
+        "enabled": true,
+        "server_name": "tg.cmliussss.casacam.net"
+      },
+      "transport": {
+        "path": "/proxyIP=proxyip.multacom.fxxk.dedyn.io",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "30e9c5c8-ed28-4cd9-b008-dc67277f8b02",
+      "tag": "🇭🇰 HK 2",
+      "type": "vless"
+    },
+    {
+      "server": "netflix.xsus.zj.cn",
+      "server_port": 11013,
+      "password": "1660669d-0e50-41c9-bbb3-cc60062b3bdc",
+      "method": "aes-128-gcm",
+      "tag": "🇭🇰 香港实验节点 Xvideos",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "netflix.xsus.zj.cn",
+      "server_port": 11012,
+      "password": "1660669d-0e50-41c9-bbb3-cc60062b3bdc",
+      "method": "aes-128-gcm",
+      "tag": "🇭🇰 香港实验节点 NetflixB 02",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "netflix.xsus.zj.cn",
+      "server_port": 11009,
+      "password": "1660669d-0e50-41c9-bbb3-cc60062b3bdc",
+      "method": "aes-128-gcm",
+      "tag": "🇭🇰 香港实验节点 NetflixAB 01",
+      "type": "shadowsocks"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
