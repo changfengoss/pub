@@ -1,0 +1,350 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "error",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇷🇺 B-华南高级测试|俄罗斯 01",
+        "🇮🇳 B-华南高级测试|印度 01",
+        "🇨🇳 B-华南高级测试|台湾 01",
+        "🇨🇳 B-华南高级测试|台湾 02",
+        "🇵🇭 B-华南高级测试|土耳其 01",
+        "🇸🇬 B-华南高级测试|新加坡 01",
+        "🇸🇬 B-华南高级测试|新加坡 02",
+        "🇯🇵 B-华南高级测试|日本 01",
+        "🇯🇵 B-华南高级测试|日本 02",
+        "🇺🇸 B-华南高级测试|美国 01",
+        "🇺🇸 B-华南高级测试|美国 02",
+        "🇬🇧 B-华南高级测试|英国 01",
+        "🇦🇷 B-华南高级测试|阿根廷 01",
+        "🇭🇰 B-华南高级测试|香港 01",
+        "🇭🇰 B-华南高级测试|香港 02",
+        "🇭🇰 B-华南高级测试|香港 03",
+        "🇭🇰 B-华南高级测试|香港 04",
+        "🇭🇰 B-华南高级测试|香港 05",
+        "🇭🇰 B-华南高级测试|香港 06"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇷🇺 B-华南高级测试|俄罗斯 01",
+        "🇮🇳 B-华南高级测试|印度 01",
+        "🇨🇳 B-华南高级测试|台湾 01",
+        "🇨🇳 B-华南高级测试|台湾 02",
+        "🇵🇭 B-华南高级测试|土耳其 01",
+        "🇸🇬 B-华南高级测试|新加坡 01",
+        "🇸🇬 B-华南高级测试|新加坡 02",
+        "🇯🇵 B-华南高级测试|日本 01",
+        "🇯🇵 B-华南高级测试|日本 02",
+        "🇺🇸 B-华南高级测试|美国 01",
+        "🇺🇸 B-华南高级测试|美国 02",
+        "🇬🇧 B-华南高级测试|英国 01",
+        "🇦🇷 B-华南高级测试|阿根廷 01",
+        "🇭🇰 B-华南高级测试|香港 01",
+        "🇭🇰 B-华南高级测试|香港 02",
+        "🇭🇰 B-华南高级测试|香港 03",
+        "🇭🇰 B-华南高级测试|香港 04",
+        "🇭🇰 B-华南高级测试|香港 05",
+        "🇭🇰 B-华南高级测试|香港 06"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50501,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇷🇺 B-华南高级测试|俄罗斯 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50502,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇮🇳 B-华南高级测试|印度 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50503,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇨🇳 B-华南高级测试|台湾 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50504,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇨🇳 B-华南高级测试|台湾 02",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50525,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇵🇭 B-华南高级测试|土耳其 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50505,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇸🇬 B-华南高级测试|新加坡 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50506,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇸🇬 B-华南高级测试|新加坡 02",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50507,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇯🇵 B-华南高级测试|日本 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50519,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇯🇵 B-华南高级测试|日本 02",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50509,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇸 B-华南高级测试|美国 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50515,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇸 B-华南高级测试|美国 02",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50523,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇬🇧 B-华南高级测试|英国 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50522,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇦🇷 B-华南高级测试|阿根廷 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50510,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇭🇰 B-华南高级测试|香港 01",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50511,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇭🇰 B-华南高级测试|香港 02",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50512,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇭🇰 B-华南高级测试|香港 03",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50513,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇭🇰 B-华南高级测试|香港 04",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50514,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇭🇰 B-华南高级测试|香港 05",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "cn.hn.premium.01.relay.bilibili-cdn.stream",
+      "server_port": 50521,
+      "password": "A35508464b",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇭🇰 B-华南高级测试|香港 06",
+      "type": "shadowsocks"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
