@@ -1,0 +1,499 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "error",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E01-0.1%E5%80%8D-hy2",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E02-0.1%E5%80%8D-hy2",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E03-0.1%E5%80%8D-hy2",
+        "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A-hy2",
+        "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A2-hy2",
+        "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A3-hy2",
+        "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A4-hy2",
+        "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A-hy2",
+        "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A2-hy2",
+        "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A3-hy2",
+        "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A4-hy2",
+        "%F0%9F%87%AD%F0%9F%87%B0%E9%A6%99%E6%B8%AF%20%7C%20%E9%AB%98%E9%80%9F%E4%B8%93%E7%BA%BF-hy2",
+        "%F0%9F%87%A9%F0%9F%87%AA%E5%BE%B7%E5%9B%BD-hy2",
+        "%F0%9F%87%A9%F0%9F%87%AA%E5%BE%B7%E5%9B%BD2-hy2",
+        "🇺🇸美国凤凰城02-0.1倍",
+        "🇺🇸美国凤凰城03-0.1倍",
+        "🇯🇵日本5 | 高速专线",
+        "🇯🇵日本6 | 高速专线",
+        "🇸🇬新加坡5 | 高速专线",
+        "🇸🇬新加坡6 | 高速专线",
+        "🇹🇼台湾",
+        "🇹🇼台湾2",
+        "🇹🇼台湾3"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E01-0.1%E5%80%8D-hy2",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E02-0.1%E5%80%8D-hy2",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E03-0.1%E5%80%8D-hy2",
+        "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A-hy2",
+        "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A2-hy2",
+        "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A3-hy2",
+        "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A4-hy2",
+        "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A-hy2",
+        "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A2-hy2",
+        "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A3-hy2",
+        "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A4-hy2",
+        "%F0%9F%87%AD%F0%9F%87%B0%E9%A6%99%E6%B8%AF%20%7C%20%E9%AB%98%E9%80%9F%E4%B8%93%E7%BA%BF-hy2",
+        "%F0%9F%87%A9%F0%9F%87%AA%E5%BE%B7%E5%9B%BD-hy2",
+        "%F0%9F%87%A9%F0%9F%87%AA%E5%BE%B7%E5%9B%BD2-hy2",
+        "🇺🇸美国凤凰城02-0.1倍",
+        "🇺🇸美国凤凰城03-0.1倍",
+        "🇯🇵日本5 | 高速专线",
+        "🇯🇵日本6 | 高速专线",
+        "🇸🇬新加坡5 | 高速专线",
+        "🇸🇬新加坡6 | 高速专线",
+        "🇹🇼台湾",
+        "🇹🇼台湾2",
+        "🇹🇼台湾3"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "163.123.192.149",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E01-0.1%E5%80%8D-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "163.123.192.62",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E02-0.1%E5%80%8D-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "163.123.192.151",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E5%87%A4%E5%87%B0%E5%9F%8E03-0.1%E5%80%8D-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "pqjp1.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "pqjp2.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A2-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "pqjp3.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A3-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "pqjp4.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC%E4%BA%9A%E9%A9%AC%E9%80%8A4-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "pqsg1.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "pqsg2.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A2-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "pqsg3.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A3-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "pqsg4.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%B8%F0%9F%87%AC%E6%96%B0%E5%8A%A0%E5%9D%A1%E4%BA%9A%E9%A9%AC%E9%80%8A4-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "178.173.236.227",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%AD%F0%9F%87%B0%E9%A6%99%E6%B8%AF%20%7C%20%E9%AB%98%E9%80%9F%E4%B8%93%E7%BA%BF-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "5.104.108.120",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%A9%F0%9F%87%AA%E5%BE%B7%E5%9B%BD-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "5.104.108.109",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "%F0%9F%87%A9%F0%9F%87%AA%E5%BE%B7%E5%9B%BD2-hy2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "163.123.192.150",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "usp2.hnkkt.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "flow": "xtls-rprx-vision",
+      "tag": "🇺🇸美国凤凰城02-0.1倍",
+      "type": "vless"
+    },
+    {
+      "server": "148.59.74.63",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "usp3.hnkkt.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "flow": "xtls-rprx-vision",
+      "tag": "🇺🇸美国凤凰城03-0.1倍",
+      "type": "vless"
+    },
+    {
+      "server": "18.182.64.15",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "jp1.kbjc.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "🇯🇵日本5 | 高速专线",
+      "type": "vless"
+    },
+    {
+      "server": "18.181.195.110",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "jp2.kbjc.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "music"
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "🇯🇵日本6 | 高速专线",
+      "type": "vless"
+    },
+    {
+      "server": "13.214.214.181",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "sg1.kbjc.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "🇸🇬新加坡5 | 高速专线",
+      "type": "vless"
+    },
+    {
+      "server": "54.169.51.16",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "sg2.kbjc.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "tag": "🇸🇬新加坡6 | 高速专线",
+      "type": "vless"
+    },
+    {
+      "server": "957e32be476a.78ab92.98f0fa.a458.t1.108f4143-d0af-4e42-85a0-b13448ab5917.138503301e7d.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "pqtw1.kbjc.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "flow": "xtls-rprx-vision",
+      "tag": "🇹🇼台湾",
+      "type": "vless"
+    },
+    {
+      "server": "957e32be476a.78ab92.98f0fa.a458.t2.108f4143-d0af-4e42-85a0-b13448ab5917.138503301e7d.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "pqtw2.kbjc.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "flow": "xtls-rprx-vision",
+      "tag": "🇹🇼台湾2",
+      "type": "vless"
+    },
+    {
+      "server": "957e32be476a.78ab92.98f0fa.a458.t3.108f4143-d0af-4e42-85a0-b13448ab5917.138503301e7d.aiopen.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "pqtw3.kbjc.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "fd779383-837d-4593-8d88-4eefe717cc04",
+      "flow": "xtls-rprx-vision",
+      "tag": "🇹🇼台湾3",
+      "type": "vless"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
