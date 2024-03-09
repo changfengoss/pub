@@ -1,0 +1,220 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "error",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇺🇸 V0001-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0002-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0003-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0004-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0005-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0006-US-付费推荐:dlj.tf/ssrsub"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇺🇸 V0001-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0002-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0003-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0004-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0005-US-付费推荐:dlj.tf/ssrsub",
+        "🇺🇸 V0006-US-付费推荐:dlj.tf/ssrsub"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "v1.arvancode.eu.org",
+      "server_port": 443,
+      "password": "mps3FwmDjLrWaOVg",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇸 V0001-US-付费推荐:dlj.tf/ssrsub",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "tw1.indianonlinejob2.com",
+      "server_port": 20005,
+      "password": "a7fe5385-1777-4e29-9e0a-fa59efb2f5c3",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇸 V0002-US-付费推荐:dlj.tf/ssrsub",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "java.ct.arvancode.eu.org",
+      "server_port": 443,
+      "password": "W74XFALLLuw6m5IA",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇸 V0003-US-付费推荐:dlj.tf/ssrsub",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "ddns.olucloud.subapi.cc",
+      "server_port": 20009,
+      "password": "cfa17a0d-5e7d-4871-976e-f116e0818123",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇸 V0004-US-付费推荐:dlj.tf/ssrsub",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "series-a1.samanehha.co",
+      "server_port": 443,
+      "password": "W74XFALLLuw6m5IA",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇸 V0005-US-付费推荐:dlj.tf/ssrsub",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "119.23.104.213",
+      "server_port": 8474,
+      "password": "a501c82c72d790b8",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇺🇸 V0006-US-付费推荐:dlj.tf/ssrsub",
+      "type": "shadowsocks"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
