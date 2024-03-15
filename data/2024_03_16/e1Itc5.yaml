@@ -1,0 +1,679 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇨🇳_CN_中国->🇭🇰_HK_香港_1",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_1",
+        "🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_2",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_1",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_3",
+        "🇨🇳_CN_中国->🇺🇸_US_美国",
+        "🇺🇸_US_美国_2",
+        "🇦🇪_AE_阿联酋->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇭🇰_HK_香港_2",
+        "🇱🇺_LU_卢森堡",
+        "🇨🇦_CA_加拿大->🇺🇸_US_美国_1",
+        "🇨🇦_CA_加拿大_1",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_2",
+        "🇰🇷_KR_韩国->🇭🇰_HK_香港",
+        "🇺🇸_US_美国_3",
+        "🇨🇦_CA_加拿大->🇺🇸_US_美国_2",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇺🇸_US_美国_4",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_4",
+        "🇺🇸_US_美国_5",
+        "🇺🇸_US_美国_6",
+        "🇺🇸_US_美国_7",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_5",
+        "🇨🇦_CA_加拿大_2"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇨🇳_CN_中国->🇭🇰_HK_香港_1",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_1",
+        "🇺🇸_US_美国_1",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_2",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_1",
+        "🇺🇸_US_美国->🇫🇷_FR_法国_3",
+        "🇨🇳_CN_中国->🇺🇸_US_美国",
+        "🇺🇸_US_美国_2",
+        "🇦🇪_AE_阿联酋->🇬🇧_GB_英国",
+        "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+        "🇨🇳_CN_中国->🇭🇰_HK_香港_2",
+        "🇱🇺_LU_卢森堡",
+        "🇨🇦_CA_加拿大->🇺🇸_US_美国_1",
+        "🇨🇦_CA_加拿大_1",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_2",
+        "🇰🇷_KR_韩国->🇭🇰_HK_香港",
+        "🇺🇸_US_美国_3",
+        "🇨🇦_CA_加拿大->🇺🇸_US_美国_2",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_3",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+        "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+        "🇺🇸_US_美国_4",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_4",
+        "🇺🇸_US_美国_5",
+        "🇺🇸_US_美国_6",
+        "🇺🇸_US_美国_7",
+        "🇨🇭_CH_瑞士->🇭🇰_HK_香港_5",
+        "🇨🇦_CA_加拿大_2"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "223.113.130.55",
+      "server_port": 52052,
+      "transport": {
+        "path": "/db00",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c7395784-c77d-390a-9db6-67152462b95b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇳_CN_中国->🇭🇰_HK_香港_1",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.178.12",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "storeships.toptechnonews.com"
+      },
+      "transport": {
+        "path": "/nimws",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "cede337b-9ea5-40e5-a8b1-690bf49ff41d",
+      "tag": "🇺🇸_US_美国->🇫🇷_FR_法国_1",
+      "type": "vless"
+    },
+    {
+      "server": "yh1.freeh1.xyz",
+      "server_port": 8080,
+      "transport": {
+        "path": "ef8c954e-014f-4b36-8273-9b5086afab34-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "ef8c954e-014f-4b36-8273-9b5086afab34",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_1",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.130.140",
+      "server_port": 2082,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "112ac36f-3f53-4e26-8371-d25c028e1b9a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国->🇫🇷_FR_法国_2",
+      "type": "vmess"
+    },
+    {
+      "server": "64.110.78.246",
+      "server_port": 45703,
+      "tls": {
+        "enabled": true,
+        "server_name": "data-hk-1.cn-db.top"
+      },
+      "transport": {
+        "path": "/db00",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "414365d6-12fb-3530-8135-ad14b8ad7726",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇭_CH_瑞士->🇭🇰_HK_香港_1",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.40.63",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "storeships.toptechnonews.com"
+      },
+      "transport": {
+        "path": "/nimws",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "cede337b-9ea5-40e5-a8b1-690bf49ff41d",
+      "tag": "🇺🇸_US_美国->🇫🇷_FR_法国_3",
+      "type": "vless"
+    },
+    {
+      "server": "gtm1.ktmwan.com",
+      "server_port": 27253,
+      "password": "e59a3d9e-201d-4818-823c-c29c3f16841e",
+      "method": "chacha20-ietf-poly1305",
+      "tag": "🇨🇳_CN_中国->🇺🇸_US_美国",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "russia.com",
+      "server_port": 8880,
+      "transport": {
+        "path": "/api/v3/download.getFile",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6658a3a6-225a-4d33-a5d2-82cfde565b4e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_2",
+      "type": "vmess"
+    },
+    {
+      "server": "94.140.0.110",
+      "server_port": 8880,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "0d1bf26a-ce97-4707-a270-7f4d2ae37334",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇦🇪_AE_阿联酋->🇬🇧_GB_英国",
+      "type": "vmess"
+    },
+    {
+      "server": "yh2.freeh1.xyz",
+      "server_port": 8080,
+      "transport": {
+        "path": "028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "028c8131-9e3e-4836-94ac-ea7f24d4d05a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国->🇨🇦_CA_加拿大",
+      "type": "vmess"
+    },
+    {
+      "server": "223.113.130.55",
+      "server_port": 58080,
+      "transport": {
+        "path": "/db00",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "75a68200-4d76-3eb6-b510-39b8e63b7823",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇳_CN_中国->🇭🇰_HK_香港_2",
+      "type": "vmess"
+    },
+    {
+      "server": "78.111.102.232",
+      "server_port": 3389,
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "9c050a86-d612-48f1-ec32-e573df08a1b7",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇱🇺_LU_卢森堡",
+      "type": "vmess"
+    },
+    {
+      "server": "23.227.38.22",
+      "server_port": 8080,
+      "transport": {
+        "path": "9258153a-dc97-4e39-9037-009abfc4fed0-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "9258153a-dc97-4e39-9037-009abfc4fed0",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇦_CA_加拿大->🇺🇸_US_美国_1",
+      "type": "vmess"
+    },
+    {
+      "server": "23.227.38.23",
+      "server_port": 8080,
+      "transport": {
+        "path": "34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "34c0bb5e-c120-432d-9c58-bd7d82c7397b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇦_CA_加拿大_1",
+      "type": "vmess"
+    },
+    {
+      "server": "64.110.78.246",
+      "server_port": 21205,
+      "tls": {
+        "enabled": true,
+        "server_name": "cache-hk-2.cn-db.top"
+      },
+      "transport": {
+        "path": "/db00",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "414365d6-12fb-3530-8135-ad14b8ad7726",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇭_CH_瑞士->🇭🇰_HK_香港_2",
+      "type": "vmess"
+    },
+    {
+      "server": "130.162.151.122",
+      "server_port": 32453,
+      "tls": {
+        "enabled": true,
+        "server_name": "cache-hk-2.cn-db.top"
+      },
+      "transport": {
+        "path": "/db00",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "414365d6-12fb-3530-8135-ad14b8ad7726",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇰🇷_KR_韩国->🇭🇰_HK_香港",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.4.57",
+      "server_port": 2095,
+      "transport": {
+        "path": "/api/v3/download.getFile",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6658a3a6-225a-4d33-a5d2-82cfde565b4e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_3",
+      "type": "vmess"
+    },
+    {
+      "server": "23.227.38.11",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "syndication-statutes-wanted-logo.trycloudflare.com",
+        "insecure": true
+      },
+      "transport": {
+        "path": "/argox-tr",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "password": "b17fa17d-13a0-4e8a-a398-8e549ea8b208",
+      "tag": "🇨🇦_CA_加拿大->🇺🇸_US_美国_2",
+      "type": "trojan"
+    },
+    {
+      "server": "64.110.65.177",
+      "server_port": 25857,
+      "tls": {
+        "enabled": true,
+        "server_name": "data-hk-3.cn-db.top"
+      },
+      "transport": {
+        "path": "/db00",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "414365d6-12fb-3530-8135-ad14b8ad7726",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇭_CH_瑞士->🇭🇰_HK_香港_3",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.20.19",
+      "server_port": 80,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "4be6650b-41be-4878-a28e-553fc4fb73e8",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_1",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.204.84",
+      "server_port": 2053,
+      "tls": {
+        "enabled": true,
+        "server_name": "itcenteriran.blog"
+      },
+      "transport": {
+        "path": "/p=19",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "4045c6b7-1d53-4574-98cd-df21db40b0dc",
+      "tag": "🇺🇸_US_美国->🇩🇪_DE_德国_2",
+      "type": "vless"
+    },
+    {
+      "server": "fbi.gov",
+      "server_port": 8080,
+      "transport": {
+        "path": "ef8c954e-014f-4b36-8273-9b5086afab34-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "ef8c954e-014f-4b36-8273-9b5086afab34",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_4",
+      "type": "vmess"
+    },
+    {
+      "server": "64.110.78.246",
+      "server_port": 21203,
+      "tls": {
+        "enabled": true,
+        "server_name": "data-hk-3.cn-db.top"
+      },
+      "transport": {
+        "path": "/db00",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "414365d6-12fb-3530-8135-ad14b8ad7726",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇭_CH_瑞士->🇭🇰_HK_香港_4",
+      "type": "vmess"
+    },
+    {
+      "server": "s1c.v2.v001sss.xyz",
+      "server_port": 2082,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "112ac36f-3f53-4e26-8371-d25c028e1b9a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_5",
+      "type": "vmess"
+    },
+    {
+      "server": "cloudflare.cfgo.cc",
+      "server_port": 80,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "22a13aa2-4854-44cb-e090-ec71ab84b1ff",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_6",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.137.249",
+      "server_port": 8080,
+      "transport": {
+        "path": "028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "028c8131-9e3e-4836-94ac-ea7f24d4d05a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇺🇸_US_美国_7",
+      "type": "vmess"
+    },
+    {
+      "server": "64.110.65.177",
+      "server_port": 25856,
+      "tls": {
+        "enabled": true,
+        "server_name": "cache-hk-1.cn-db.top"
+      },
+      "transport": {
+        "path": "/db00",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "414365d6-12fb-3530-8135-ad14b8ad7726",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇭_CH_瑞士->🇭🇰_HK_香港_5",
+      "type": "vmess"
+    },
+    {
+      "server": "134.122.41.160",
+      "server_port": 3389,
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "9c050a86-d612-48f1-ec32-e573df08a1b7",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🇨🇦_CA_加拿大_2",
+      "type": "vmess"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
