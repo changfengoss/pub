@@ -1,0 +1,2543 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "server": "localDns"
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🤖 OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "🌌 Google",
+      "type": "selector",
+      "outbounds": [
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "📟 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "🐦 Twitter",
+      "type": "selector",
+      "outbounds": [
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "👤 Facebook",
+      "type": "selector",
+      "outbounds": [
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "🛍️ Amazon",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "🍎 Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "🧩 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "🎮 Game",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "tag": "🎬 MediaVideo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+        "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+        "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+        "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+        "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+        "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+        "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+        "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+        "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+        "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+        "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+        "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+        "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+        "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+        "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+        "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+        "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+        "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+        "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+        "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+        "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+        "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+        "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+        "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+        "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+        "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+        "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+        "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+        "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+        "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+        "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+        "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+        "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+        "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+        "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+        "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+        "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560"
+      ]
+    },
+    {
+      "tag": "🌏 cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "select"
+      ]
+    },
+    {
+      "tag": "🛑 AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "66.228.37.43",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hms02.fxiaomi.sbs"
+      },
+      "transport": {
+        "path": "/link",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 1,
+      "tag": "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e5d13",
+      "type": "vmess"
+    },
+    {
+      "server": "97.107.141.118",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ bd323",
+      "type": "vmess"
+    },
+    {
+      "server": "173.255.229.94",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4188b",
+      "type": "vmess"
+    },
+    {
+      "server": "173.255.229.94",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "aes-128-gcm",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c8a33",
+      "type": "vmess"
+    },
+    {
+      "server": "2606:4700:3036::6815:fd4",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ aed77",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "freevpn878.hamidimorteza680.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 29871",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "7wih-darkness-f0af.jivegoh116.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 45.79.190.100 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ af87b",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "us-full.privateip.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/VLESS",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "tag": "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 32976",
+      "type": "vless"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "us-full.privateip.net"
+      },
+      "transport": {
+        "path": "/RACEVPN",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ b2a95",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "d396-flower-d396.megare7260.workers.dev"
+      },
+      "transport": {
+        "path": "/obdii.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8c3d9",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "free.fnet00.workers.dev"
+      },
+      "transport": {
+        "path": "/obdii.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 66.228.34.65 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ eb11b",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "range-shape-b3fuegu.bananok182.workers.dev"
+      },
+      "transport": {
+        "path": "/hms02.fxiaomi.sbs/link",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 5cff8",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hms02.fxiaomi.sbs"
+      },
+      "transport": {
+        "path": "/link",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 1,
+      "tag": "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 65db5",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hms02.fxiaomi.sbs"
+      },
+      "transport": {
+        "path": "/link",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 1,
+      "tag": "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 71504",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev"
+      },
+      "transport": {
+        "path": "/hms02.fxiaomi.sbs/link",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 66.228.37.43 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d184a",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "7ehhjdelicate-unit-e634.bowik41429.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.sbs/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 69.164.215.23 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ daeca",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "throbbing-shape-90d7.hite-nomade.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.sbs/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 6475b",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "purple-dream-438f.wwwjoecartoonscom-vaalco.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.sbs/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ c85f0",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "snowy-river-f497.turkeys-radford.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.sbs/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 97.107.141.118 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ d6ec4",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "icy-tooth-3d05.plzthsmdnss-7d8ly.workers.dev"
+      },
+      "transport": {
+        "path": "/obdii.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 38ce8",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "xxxxx73cream-073cxxxxxxxx.cogoni7748.workers.dev"
+      },
+      "transport": {
+        "path": "/obdii.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 99bbb",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "7whrapid-river-a083.sisay70779.workers.dev"
+      },
+      "transport": {
+        "path": "/obdii.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 173.255.229.94 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ e8247",
+      "type": "vmess"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "flow": "xtls-rprx-vision",
+      "tag": "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3a4f3",
+      "type": "vless"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+        "insecure": true
+      },
+      "password": "2d2ce807-1584-4601-9716-d0fc2eaf1e64",
+      "tag": "💰💥🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 91902",
+      "type": "trojan"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "50.116.21.188",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/VLESS",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "tag": "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 2a5cf",
+      "type": "vless"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/RACEVPN",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3bc71",
+      "type": "vmess"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "50.116.21.188",
+        "insecure": true
+      },
+      "password": "2d2ce807-1584-4601-9716-d0fc2eaf1e64",
+      "tag": "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 9ebde",
+      "type": "trojan"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "flow": "xtls-rprx-vision",
+      "tag": "🔒🇺🇸 US 50.116.21.188 ◈ tcp:443 ◈ Akamai Technologies, Inc. / Linode ◈ 4319b",
+      "type": "vless"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/VLESS",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "tag": "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 3ec14",
+      "type": "vless"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/RACEVPN",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 50.116.21.188 ◈ ws:443 ◈ Akamai Technologies, Inc. / Linode ◈ 8880c",
+      "type": "vmess"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 2003,
+      "tls": {
+        "enabled": true,
+        "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "tag": "💰💥🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 41ade",
+      "type": "vless"
+    },
+    {
+      "server": "us-full.privateip.net",
+      "server_port": 2003,
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      },
+      "uuid": "c0f6349f-b40d-4320-a75e-550bd81cb0f1",
+      "tag": "🔒🇺🇸 US 50.116.21.188 ◈ grpc:2003 ◈ Akamai Technologies, Inc. / Linode ◈ 6c253",
+      "type": "vless"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "server_name": "withered-disk-c4c0.wwwjoecartoonscom-vaalco.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.sbs/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 69.164.215.23 ◈ ws:8443 ◈ Akamai Technologies, Inc. / Linode ◈ 1af3a",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "4868-poetry-4868.napora7003.workers.dev"
+      },
+      "transport": {
+        "path": "/obdii.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ 78474",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "52aa-super-river-52aa.pobin49599.workers.dev"
+      },
+      "transport": {
+        "path": "/obdii.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 172.104.209.33 ◈ ws:443 ◈ Akamai Technologies / Linode ◈ d81d2",
+      "type": "vmess"
+    },
+    {
+      "server": "3.208.50.197",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "slime-rhinestone-spy.glitch.me"
+      },
+      "transport": {
+        "path": "/83a5c82d-a047-418e-9ad9-6ce8c5aaba59-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "83a5c82d-a047-418e-9ad9-6ce8c5aaba59",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ab45f",
+      "type": "vmess"
+    },
+    {
+      "server": "3.208.50.197",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "best-charm-pediatrician.glitch.me"
+      },
+      "transport": {
+        "path": "/1d5fb496-19fb-48fb-9880-a147326dee62-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d5fb496-19fb-48fb-9880-a147326dee62",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ ceb49",
+      "type": "vmess"
+    },
+    {
+      "server": "3.208.50.197",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "bolder-metal-comma.glitch.me"
+      },
+      "transport": {
+        "path": "/dac61bb8-461c-4a4a-b14b-5a5ff6991fee-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "dac61bb8-461c-4a4a-b14b-5a5ff6991fee",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 54.174.193.145 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d571a",
+      "type": "vmess"
+    },
+    {
+      "server": "54.87.211.83",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "slime-rhinestone-spy.glitch.me"
+      },
+      "transport": {
+        "path": "/83a5c82d-a047-418e-9ad9-6ce8c5aaba59-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "83a5c82d-a047-418e-9ad9-6ce8c5aaba59",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ cb3d8",
+      "type": "vmess"
+    },
+    {
+      "server": "54.87.211.83",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "best-charm-pediatrician.glitch.me"
+      },
+      "transport": {
+        "path": "/1d5fb496-19fb-48fb-9880-a147326dee62-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d5fb496-19fb-48fb-9880-a147326dee62",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ f30ab",
+      "type": "vmess"
+    },
+    {
+      "server": "bolder-metal-comma.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "slime-rhinestone-spy.glitch.me"
+      },
+      "transport": {
+        "path": "/83a5c82d-a047-418e-9ad9-6ce8c5aaba59-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "83a5c82d-a047-418e-9ad9-6ce8c5aaba59",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 62eb9",
+      "type": "vmess"
+    },
+    {
+      "server": "bolder-metal-comma.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "best-charm-pediatrician.glitch.me"
+      },
+      "transport": {
+        "path": "/1d5fb496-19fb-48fb-9880-a147326dee62-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d5fb496-19fb-48fb-9880-a147326dee62",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 1c6f8",
+      "type": "vmess"
+    },
+    {
+      "server": "bolder-metal-comma.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/dac61bb8-461c-4a4a-b14b-5a5ff6991fee-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "dac61bb8-461c-4a4a-b14b-5a5ff6991fee",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 34.239.121.90 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ a5b16",
+      "type": "vmess"
+    },
+    {
+      "server": "bolder-metal-comma.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "slime-rhinestone-spy.glitch.me"
+      },
+      "transport": {
+        "path": "/83a5c82d-a047-418e-9ad9-6ce8c5aaba59-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "83a5c82d-a047-418e-9ad9-6ce8c5aaba59",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 34.200.245.106 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5991f",
+      "type": "vmess"
+    },
+    {
+      "server": "bolder-metal-comma.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "best-charm-pediatrician.glitch.me"
+      },
+      "transport": {
+        "path": "/1d5fb496-19fb-48fb-9880-a147326dee62-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d5fb496-19fb-48fb-9880-a147326dee62",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 61bb6",
+      "type": "vmess"
+    },
+    {
+      "server": "slime-rhinestone-spy.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/83a5c82d-a047-418e-9ad9-6ce8c5aaba59-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "83a5c82d-a047-418e-9ad9-6ce8c5aaba59",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 3e7d3",
+      "type": "vmess"
+    },
+    {
+      "server": "slime-rhinestone-spy.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "best-charm-pediatrician.glitch.me"
+      },
+      "transport": {
+        "path": "/1d5fb496-19fb-48fb-9880-a147326dee62-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d5fb496-19fb-48fb-9880-a147326dee62",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "💰💥🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ d8489",
+      "type": "vmess"
+    },
+    {
+      "server": "slime-rhinestone-spy.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/83a5c82d-a047-418e-9ad9-6ce8c5aaba59-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "83a5c82d-a047-418e-9ad9-6ce8c5aaba59",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 18.208.146.195 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 70c4c",
+      "type": "vmess"
+    },
+    {
+      "server": "slime-rhinestone-spy.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "best-charm-pediatrician.glitch.me"
+      },
+      "transport": {
+        "path": "/1d5fb496-19fb-48fb-9880-a147326dee62-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d5fb496-19fb-48fb-9880-a147326dee62",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 34.227.207.43 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 4868f",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "adyyfgfback4appgood.nihaoaaaa.tk"
+      },
+      "transport": {
+        "path": "/vmess?ed=2048",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "372ef3f8-ab20-429b-b6f5-b2d92464dc15",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5a945",
+      "type": "vmess"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "free.fnet00.workers.dev"
+      },
+      "transport": {
+        "path": "/adyyfgfback4appgood.nihaoaaaa.tk/vmess?ed=2048",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "372ef3f8-ab20-429b-b6f5-b2d92464dc15",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "🔒🇺🇸 US 54.157.212.78 ◈ ws:443 ◈ AWS EC2 (us-east-1) ◈ 5e74d",
+      "type": "vmess"
+    },
+    {
+      "server": "lsa.jarviskit.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "09e02255-eb34-4665-979f-ee448d4446ab",
+      "flow": "xtls-rprx-vision",
+      "tag": "💰💥🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ bf4ac",
+      "type": "vless"
+    },
+    {
+      "server": "lsa.jarviskit.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "09e02255-eb34-4665-979f-ee448d4446ab",
+      "flow": "xtls-rprx-vision",
+      "tag": "🔒🇺🇸 US 45.66.249.114 ◈ tcp:443 ◈ BlueVPS OU ◈ fc0a3",
+      "type": "vless"
+    },
+    {
+      "server": "38.123.109.239",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ahmedquran19.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "💰💥🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ b0226",
+      "type": "vless"
+    },
+    {
+      "server": "38.123.109.249",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ahmedquran3.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "💰💥🇺🇸 US 38.123.109.249 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 5e083",
+      "type": "vless"
+    },
+    {
+      "server": "38.123.110.205",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wikiquran06.world",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "💰💥🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ dc96d",
+      "type": "vless"
+    },
+    {
+      "server": "38.123.110.206",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wikiquran07.world",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "💰💥🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 8d6ca",
+      "type": "vless"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ahmedquran19.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 17753",
+      "type": "vless"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "vless-sub.n7p8ri7j.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/ahmedquran19.xyz/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "🔒🇺🇸 US 38.123.109.239 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ d4761",
+      "type": "vless"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ztv2ray.teyekas893.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/prophetquran20.xyz:443/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "🔒🇺🇸 US 38.123.109.248 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ bd191",
+      "type": "vless"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wikiquran06.world",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "🔒🇺🇸 US 38.123.110.205 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ 7b4fc",
+      "type": "vless"
+    },
+    {
+      "server": "speed.cloudflare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wikiquran07.world",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/current_time",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "962a733d-2614-0b9b-7ffe-9ac92ffea8eb",
+      "tag": "🔒🇺🇸 US 38.123.110.206 ◈ ws:443 ◈ CDS Global Cloud Co., Ltd ◈ f4dc4",
+      "type": "vless"
+    },
+    {
+      "server": "45.32.137.6",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+        "insecure": true
+      },
+      "password": "wkmY1R4EcP",
+      "tag": "💰💥🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 876e2",
+      "type": "trojan"
+    },
+    {
+      "server": "45.32.137.6",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "wkmY1R4EcP",
+      "tag": "🔒🇺🇸 US 45.32.137.6 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 5dc2b",
+      "type": "trojan"
+    },
+    {
+      "server": "104.156.254.61",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+        "insecure": true
+      },
+      "password": "wkmY1R4EcP",
+      "tag": "💰💥🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d3940",
+      "type": "trojan"
+    },
+    {
+      "server": "104.156.254.61",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "wkmY1R4EcP",
+      "tag": "🔒🇺🇸 US 104.156.254.61 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ d490a",
+      "type": "trojan"
+    },
+    {
+      "server": "207.148.1.78",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+        "insecure": true
+      },
+      "password": "wkmY1R4EcP",
+      "tag": "💰💥🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 6f449",
+      "type": "trojan"
+    },
+    {
+      "server": "207.148.1.78",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "wkmY1R4EcP",
+      "tag": "🔒🇺🇸 US 207.148.1.78 ◈ tcp:443 ◈ Choopa / Vultr Holdings ◈ 20560",
+      "type": "trojan"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "v2rayse.com",
+          "cfmem.com",
+          "vpnse.org",
+          "cff.pw",
+          "tt.vg"
+        ],
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "openai"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "geoip": [
+          "google"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geosite": [
+          "telegram"
+        ],
+        "geoip": [
+          "telegram"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geosite": [
+          "twitter"
+        ],
+        "geoip": [
+          "twitter"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "geoip": [
+          "facebook"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": [
+          "amazon"
+        ],
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": [
+          "apple-cn",
+          "apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": [
+          "microsoft"
+        ],
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": [
+          "category-games"
+        ],
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": [
+          "bilibili"
+        ],
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "geoip": [
+          "netflix"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "🌏 cn"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "🛑 AdBlock"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
+  }
+}
