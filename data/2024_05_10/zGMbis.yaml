@@ -1,0 +1,388 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "trace",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081,
+      "set_system_proxy": true
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "[Hy2]🇰🇷韩国-首尔1-2500M",
+        "[Hy2]🇰🇷韩国-首尔2-2500M",
+        "[Hy2]🇰🇷韩国-首尔3-500M",
+        "[Hy2]🇰🇷韩国-首尔4-500M",
+        "[Hy2]🇯🇵日本-东京-2500M",
+        "[Hy2]🇯🇵日本-东京-500M-1",
+        "[Hy2]🇯🇵日本-东京-500M-2",
+        "[Hy2]🇩🇪德国-法兰克福-2500M",
+        "[Hy2]🇩🇪德国-法兰克福-500M 1",
+        "[Hy2]🇩🇪德国-法兰克福-500M 2",
+        "[Hy2]🇸🇬新加坡-2500M",
+        "[Hy2]🇸🇬新加坡-流媒体",
+        "[Hy2]🇸🇬新加坡-2500M x2",
+        "[Hy2]🇭🇰香港1-流媒体",
+        "[Hy2]🇭🇰香港2-流媒体",
+        "[Hy2]🇨🇳台湾-1-流媒体",
+        "[Hy2]🇺🇸美国-旧金山-1",
+        "[Hy2]🇺🇸美国-旧金山-2",
+        "[Hy2]🇺🇸美国-堪萨斯州1 0.5x",
+        "[vless]🇰🇷韩国-首尔-2500M-1",
+        "[vless]🇰🇷韩国-首尔-2500M-2",
+        "[vless]🇸🇬新加坡-2500M",
+        "[vless]🇯🇵日本-东京-2500M"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "[Hy2]🇰🇷韩国-首尔1-2500M",
+        "[Hy2]🇰🇷韩国-首尔2-2500M",
+        "[Hy2]🇰🇷韩国-首尔3-500M",
+        "[Hy2]🇰🇷韩国-首尔4-500M",
+        "[Hy2]🇯🇵日本-东京-2500M",
+        "[Hy2]🇯🇵日本-东京-500M-1",
+        "[Hy2]🇯🇵日本-东京-500M-2",
+        "[Hy2]🇩🇪德国-法兰克福-2500M",
+        "[Hy2]🇩🇪德国-法兰克福-500M 1",
+        "[Hy2]🇩🇪德国-法兰克福-500M 2",
+        "[Hy2]🇸🇬新加坡-2500M",
+        "[Hy2]🇸🇬新加坡-流媒体",
+        "[Hy2]🇸🇬新加坡-2500M x2",
+        "[Hy2]🇭🇰香港1-流媒体",
+        "[Hy2]🇭🇰香港2-流媒体",
+        "[Hy2]🇨🇳台湾-1-流媒体",
+        "[Hy2]🇺🇸美国-旧金山-1",
+        "[Hy2]🇺🇸美国-旧金山-2",
+        "[Hy2]🇺🇸美国-堪萨斯州1 0.5x",
+        "[vless]🇰🇷韩国-首尔-2500M-1",
+        "[vless]🇰🇷韩国-首尔-2500M-2",
+        "[vless]🇸🇬新加坡-2500M",
+        "[vless]🇯🇵日本-东京-2500M"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "server": "seoul1-2500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇰🇷韩国-首尔1-2500M",
+      "type": "hysteria2"
+    },
+    {
+      "server": "seoul2-2500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇰🇷韩国-首尔2-2500M",
+      "type": "hysteria2"
+    },
+    {
+      "server": "seoul3-500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇰🇷韩国-首尔3-500M",
+      "type": "hysteria2"
+    },
+    {
+      "server": "seoul4-500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇰🇷韩国-首尔4-500M",
+      "type": "hysteria2"
+    },
+    {
+      "server": "tokyo1-2500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇯🇵日本-东京-2500M",
+      "type": "hysteria2"
+    },
+    {
+      "server": "tokyo2-500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇯🇵日本-东京-500M-1",
+      "type": "hysteria2"
+    },
+    {
+      "server": "tokyo3-500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇯🇵日本-东京-500M-2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "frankfurt1-2500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇩🇪德国-法兰克福-2500M",
+      "type": "hysteria2"
+    },
+    {
+      "server": "frankfurt2-500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇩🇪德国-法兰克福-500M 1",
+      "type": "hysteria2"
+    },
+    {
+      "server": "frankfurt3-500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇩🇪德国-法兰克福-500M 2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "singapore1-2500m.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇸🇬新加坡-2500M",
+      "type": "hysteria2"
+    },
+    {
+      "server": "seoul2-2500m.yljc.online",
+      "server_port": 30021,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇸🇬新加坡-流媒体",
+      "type": "hysteria2"
+    },
+    {
+      "server": "seoul1-2500m.yljc.online",
+      "server_port": 30018,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇸🇬新加坡-2500M x2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "seoul1-2500m.yljc.online",
+      "server_port": 30019,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇭🇰香港1-流媒体",
+      "type": "hysteria2"
+    },
+    {
+      "server": "akile-hongkong1.yljc.online",
+      "server_port": 30023,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇭🇰香港2-流媒体",
+      "type": "hysteria2"
+    },
+    {
+      "server": "akile-taiwan1.yljc.online",
+      "server_port": 30022,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇨🇳台湾-1-流媒体",
+      "type": "hysteria2"
+    },
+    {
+      "server": "do-sanfrancisco1.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇺🇸美国-旧金山-1",
+      "type": "hysteria2"
+    },
+    {
+      "server": "209.38.173.114",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇺🇸美国-旧金山-2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "xentain-kansas1.yljc.online",
+      "server_port": 30004,
+      "tls": {
+        "enabled": true
+      },
+      "password": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[Hy2]🇺🇸美国-堪萨斯州1 0.5x",
+      "type": "hysteria2"
+    },
+    {
+      "server": "seoul1-2500m.yljc.online",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "kor1.nodes.yljc.online"
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "aabbcc"
+      },
+      "uuid": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[vless]🇰🇷韩国-首尔-2500M-1",
+      "type": "vless"
+    },
+    {
+      "server": "seoul2-2500m.yljc.online",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "kor2.nodes.yljc.online"
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "aabbcc"
+      },
+      "uuid": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[vless]🇰🇷韩国-首尔-2500M-2",
+      "type": "vless"
+    },
+    {
+      "server": "singapore1-2500m.yljc.online",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "sg1.nodes.yljc.online"
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "aabbcc"
+      },
+      "uuid": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[vless]🇸🇬新加坡-2500M",
+      "type": "vless"
+    },
+    {
+      "server": "2500m.tokyo.node.yljc.online",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "tokyo1.nodes.yljc.online"
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "aabbcc"
+      },
+      "uuid": "c43d01ee-f31e-4d3e-a7a0-c440ce5276e6",
+      "tag": "[vless]🇯🇵日本-东京-2500M",
+      "type": "vless"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": false
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
+  }
+}
