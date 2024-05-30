@@ -1,0 +1,1733 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash.Meta
+# 创建时间：2024-05-30 09:36:50
+# 使用模版：ACL4SSR_Online_Full_AdblockPlus.ini
+# 节点数量：218
+# 节点类型：wireguard
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+####################################
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"defaultName_1","type":"wireguard","server":"162.159.195.29","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_2","type":"wireguard","server":"162.159.195.60","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_3","type":"wireguard","server":"162.159.195.103","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_4","type":"wireguard","server":"162.159.195.85","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_5","type":"wireguard","server":"162.159.195.153","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_6","type":"wireguard","server":"162.159.195.60","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_7","type":"wireguard","server":"162.159.195.153","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_8","type":"wireguard","server":"162.159.195.96","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_9","type":"wireguard","server":"162.159.195.246","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_10","type":"wireguard","server":"162.159.195.105","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_11","type":"wireguard","server":"162.159.195.105","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_12","type":"wireguard","server":"162.159.195.246","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_13","type":"wireguard","server":"162.159.195.29","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_14","type":"wireguard","server":"162.159.195.85","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_15","type":"wireguard","server":"162.159.195.96","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_16","type":"wireguard","server":"162.159.195.103","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_17","type":"wireguard","server":"162.159.195.192","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_18","type":"wireguard","server":"162.159.195.219","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_19","type":"wireguard","server":"162.159.195.192","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_20","type":"wireguard","server":"162.159.195.164","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_21","type":"wireguard","server":"162.159.195.184","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_22","type":"wireguard","server":"162.159.195.164","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_23","type":"wireguard","server":"162.159.195.219","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_24","type":"wireguard","server":"162.159.195.184","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_25","type":"wireguard","server":"162.159.195.66","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_26","type":"wireguard","server":"162.159.195.66","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_27","type":"wireguard","server":"188.114.98.98","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_28","type":"wireguard","server":"188.114.98.195","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_29","type":"wireguard","server":"188.114.97.36","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_30","type":"wireguard","server":"188.114.99.84","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_31","type":"wireguard","server":"188.114.98.227","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_32","type":"wireguard","server":"188.114.99.190","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_33","type":"wireguard","server":"188.114.97.209","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_34","type":"wireguard","server":"188.114.97.1","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_35","type":"wireguard","server":"188.114.97.223","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_36","type":"wireguard","server":"188.114.98.170","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_37","type":"wireguard","server":"188.114.96.84","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_38","type":"wireguard","server":"188.114.97.238","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_39","type":"wireguard","server":"188.114.96.188","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_40","type":"wireguard","server":"188.114.96.99","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_41","type":"wireguard","server":"188.114.97.88","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_42","type":"wireguard","server":"188.114.96.217","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_43","type":"wireguard","server":"188.114.96.129","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_44","type":"wireguard","server":"188.114.96.2","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_45","type":"wireguard","server":"188.114.98.243","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_46","type":"wireguard","server":"188.114.99.184","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_47","type":"wireguard","server":"188.114.98.99","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_48","type":"wireguard","server":"188.114.98.142","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_49","type":"wireguard","server":"188.114.98.75","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_50","type":"wireguard","server":"188.114.99.59","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_51","type":"wireguard","server":"188.114.98.21","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_52","type":"wireguard","server":"188.114.96.84","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_53","type":"wireguard","server":"188.114.98.206","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_54","type":"wireguard","server":"188.114.99.63","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_55","type":"wireguard","server":"188.114.96.26","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_56","type":"wireguard","server":"188.114.97.125","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_57","type":"wireguard","server":"188.114.99.23","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_58","type":"wireguard","server":"188.114.99.59","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_59","type":"wireguard","server":"188.114.98.206","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_60","type":"wireguard","server":"188.114.96.26","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_61","type":"wireguard","server":"188.114.96.250","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_62","type":"wireguard","server":"188.114.97.57","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_63","type":"wireguard","server":"188.114.98.45","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_64","type":"wireguard","server":"188.114.98.170","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_65","type":"wireguard","server":"188.114.97.1","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_66","type":"wireguard","server":"188.114.97.36","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_67","type":"wireguard","server":"188.114.96.6","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_68","type":"wireguard","server":"188.114.99.94","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_69","type":"wireguard","server":"188.114.96.123","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_70","type":"wireguard","server":"188.114.97.238","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_71","type":"wireguard","server":"188.114.96.107","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_72","type":"wireguard","server":"188.114.97.125","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_73","type":"wireguard","server":"188.114.99.190","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_74","type":"wireguard","server":"188.114.99.215","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_75","type":"wireguard","server":"188.114.97.147","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_76","type":"wireguard","server":"188.114.97.79","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_77","type":"wireguard","server":"188.114.96.188","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_78","type":"wireguard","server":"188.114.98.124","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_79","type":"wireguard","server":"188.114.98.45","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_80","type":"wireguard","server":"188.114.98.98","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_81","type":"wireguard","server":"188.114.98.36","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_82","type":"wireguard","server":"188.114.98.75","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_83","type":"wireguard","server":"188.114.99.57","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_84","type":"wireguard","server":"188.114.96.107","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_85","type":"wireguard","server":"188.114.97.152","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_86","type":"wireguard","server":"188.114.97.107","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_87","type":"wireguard","server":"188.114.99.94","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_88","type":"wireguard","server":"188.114.99.23","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_89","type":"wireguard","server":"188.114.99.206","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_90","type":"wireguard","server":"188.114.97.71","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_91","type":"wireguard","server":"188.114.99.84","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_92","type":"wireguard","server":"188.114.99.202","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_93","type":"wireguard","server":"188.114.97.7","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_94","type":"wireguard","server":"188.114.96.100","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_95","type":"wireguard","server":"188.114.99.57","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_96","type":"wireguard","server":"188.114.97.209","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_97","type":"wireguard","server":"188.114.98.36","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_98","type":"wireguard","server":"188.114.99.63","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_99","type":"wireguard","server":"188.114.96.185","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_100","type":"wireguard","server":"188.114.97.88","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_101","type":"wireguard","server":"188.114.96.123","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_102","type":"wireguard","server":"188.114.98.243","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_103","type":"wireguard","server":"188.114.99.235","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_104","type":"wireguard","server":"188.114.98.195","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_105","type":"wireguard","server":"188.114.97.223","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_106","type":"wireguard","server":"188.114.97.79","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_107","type":"wireguard","server":"188.114.96.2","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_108","type":"wireguard","server":"188.114.97.71","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_109","type":"wireguard","server":"188.114.96.182","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"sFWe4qKv1MKqO8LXMRfp3+1FVRVUPA691yml4vv4QVo=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_110","type":"wireguard","server":"162.159.195.29","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_111","type":"wireguard","server":"162.159.195.60","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_112","type":"wireguard","server":"162.159.195.103","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_113","type":"wireguard","server":"162.159.195.85","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_114","type":"wireguard","server":"162.159.195.153","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_115","type":"wireguard","server":"162.159.195.60","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_116","type":"wireguard","server":"162.159.195.153","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_117","type":"wireguard","server":"162.159.195.96","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_118","type":"wireguard","server":"162.159.195.246","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_119","type":"wireguard","server":"162.159.195.105","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_120","type":"wireguard","server":"162.159.195.105","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_121","type":"wireguard","server":"162.159.195.246","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_122","type":"wireguard","server":"162.159.195.29","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_123","type":"wireguard","server":"162.159.195.85","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_124","type":"wireguard","server":"162.159.195.96","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_125","type":"wireguard","server":"162.159.195.103","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_126","type":"wireguard","server":"162.159.195.192","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_127","type":"wireguard","server":"162.159.195.219","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_128","type":"wireguard","server":"162.159.195.192","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_129","type":"wireguard","server":"162.159.195.164","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_130","type":"wireguard","server":"162.159.195.184","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_131","type":"wireguard","server":"162.159.195.164","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_132","type":"wireguard","server":"162.159.195.219","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_133","type":"wireguard","server":"162.159.195.184","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_134","type":"wireguard","server":"162.159.195.66","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_135","type":"wireguard","server":"162.159.195.66","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_136","type":"wireguard","server":"188.114.98.98","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_137","type":"wireguard","server":"188.114.98.195","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_138","type":"wireguard","server":"188.114.97.36","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_139","type":"wireguard","server":"188.114.99.84","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_140","type":"wireguard","server":"188.114.98.227","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_141","type":"wireguard","server":"188.114.99.190","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_142","type":"wireguard","server":"188.114.97.209","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_143","type":"wireguard","server":"188.114.97.1","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_144","type":"wireguard","server":"188.114.97.223","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_145","type":"wireguard","server":"188.114.98.170","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_146","type":"wireguard","server":"188.114.96.84","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_147","type":"wireguard","server":"188.114.97.238","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_148","type":"wireguard","server":"188.114.96.188","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_149","type":"wireguard","server":"188.114.96.99","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_150","type":"wireguard","server":"188.114.97.88","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_151","type":"wireguard","server":"188.114.96.217","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_152","type":"wireguard","server":"188.114.96.129","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_153","type":"wireguard","server":"188.114.96.2","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_154","type":"wireguard","server":"188.114.98.243","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_155","type":"wireguard","server":"188.114.99.184","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_156","type":"wireguard","server":"188.114.98.99","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_157","type":"wireguard","server":"188.114.98.142","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_158","type":"wireguard","server":"188.114.98.75","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_159","type":"wireguard","server":"188.114.99.59","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_160","type":"wireguard","server":"188.114.98.21","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_161","type":"wireguard","server":"188.114.96.84","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_162","type":"wireguard","server":"188.114.98.206","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_163","type":"wireguard","server":"188.114.99.63","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_164","type":"wireguard","server":"188.114.96.26","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_165","type":"wireguard","server":"188.114.97.125","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_166","type":"wireguard","server":"188.114.99.23","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_167","type":"wireguard","server":"188.114.99.59","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_168","type":"wireguard","server":"188.114.98.206","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_169","type":"wireguard","server":"188.114.96.26","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_170","type":"wireguard","server":"188.114.96.250","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_171","type":"wireguard","server":"188.114.97.57","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_172","type":"wireguard","server":"188.114.98.45","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_173","type":"wireguard","server":"188.114.98.170","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_174","type":"wireguard","server":"188.114.97.1","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_175","type":"wireguard","server":"188.114.97.36","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_176","type":"wireguard","server":"188.114.96.6","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_177","type":"wireguard","server":"188.114.99.94","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_178","type":"wireguard","server":"188.114.96.123","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_179","type":"wireguard","server":"188.114.97.238","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_180","type":"wireguard","server":"188.114.96.107","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_181","type":"wireguard","server":"188.114.97.125","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_182","type":"wireguard","server":"188.114.99.190","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_183","type":"wireguard","server":"188.114.99.215","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_184","type":"wireguard","server":"188.114.97.147","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_185","type":"wireguard","server":"188.114.97.79","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_186","type":"wireguard","server":"188.114.96.188","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_187","type":"wireguard","server":"188.114.98.124","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_188","type":"wireguard","server":"188.114.98.45","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_189","type":"wireguard","server":"188.114.98.98","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_190","type":"wireguard","server":"188.114.98.36","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_191","type":"wireguard","server":"188.114.98.75","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_192","type":"wireguard","server":"188.114.99.57","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_193","type":"wireguard","server":"188.114.96.107","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_194","type":"wireguard","server":"188.114.97.152","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_195","type":"wireguard","server":"188.114.97.107","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_196","type":"wireguard","server":"188.114.99.94","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_197","type":"wireguard","server":"188.114.99.23","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_198","type":"wireguard","server":"188.114.99.206","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_199","type":"wireguard","server":"188.114.97.71","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_200","type":"wireguard","server":"188.114.99.84","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_201","type":"wireguard","server":"188.114.99.202","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_202","type":"wireguard","server":"188.114.97.7","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_203","type":"wireguard","server":"188.114.96.100","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_204","type":"wireguard","server":"188.114.99.57","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_205","type":"wireguard","server":"188.114.97.209","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_206","type":"wireguard","server":"188.114.98.36","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_207","type":"wireguard","server":"188.114.99.63","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_208","type":"wireguard","server":"188.114.96.185","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_209","type":"wireguard","server":"188.114.97.88","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_210","type":"wireguard","server":"188.114.96.123","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_211","type":"wireguard","server":"188.114.98.243","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_212","type":"wireguard","server":"188.114.99.235","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_213","type":"wireguard","server":"188.114.98.195","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_214","type":"wireguard","server":"188.114.97.223","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_215","type":"wireguard","server":"188.114.97.79","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_216","type":"wireguard","server":"188.114.96.2","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_217","type":"wireguard","server":"188.114.97.71","port":2371,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+  - {"name":"defaultName_218","type":"wireguard","server":"188.114.96.182","port":8854,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:89b6:ffb4:a367:682e:67e9","private-key":"6P868uza2HswOdBsSxMNhSsT5KqRUktjnPq/T2uQfVI=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"mtu":1280,"remote-dns-resolve":true}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🔮 负载均衡
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    proxies:
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
+      - defaultName_9
+      - defaultName_10
+      - defaultName_11
+      - defaultName_12
+      - defaultName_13
+      - defaultName_14
+      - defaultName_15
+      - defaultName_16
+      - defaultName_17
+      - defaultName_18
+      - defaultName_19
+      - defaultName_20
+      - defaultName_21
+      - defaultName_22
+      - defaultName_23
+      - defaultName_24
+      - defaultName_25
+      - defaultName_26
+      - defaultName_27
+      - defaultName_28
+      - defaultName_29
+      - defaultName_30
+      - defaultName_31
+      - defaultName_32
+      - defaultName_33
+      - defaultName_34
+      - defaultName_35
+      - defaultName_36
+      - defaultName_37
+      - defaultName_38
+      - defaultName_39
+      - defaultName_40
+      - defaultName_41
+      - defaultName_42
+      - defaultName_43
+      - defaultName_44
+      - defaultName_45
+      - defaultName_46
+      - defaultName_47
+      - defaultName_48
+      - defaultName_49
+      - defaultName_50
+      - defaultName_51
+      - defaultName_52
+      - defaultName_53
+      - defaultName_54
+      - defaultName_55
+      - defaultName_56
+      - defaultName_57
+      - defaultName_58
+      - defaultName_59
+      - defaultName_60
+      - defaultName_61
+      - defaultName_62
+      - defaultName_63
+      - defaultName_64
+      - defaultName_65
+      - defaultName_66
+      - defaultName_67
+      - defaultName_68
+      - defaultName_69
+      - defaultName_70
+      - defaultName_71
+      - defaultName_72
+      - defaultName_73
+      - defaultName_74
+      - defaultName_75
+      - defaultName_76
+      - defaultName_77
+      - defaultName_78
+      - defaultName_79
+      - defaultName_80
+      - defaultName_81
+      - defaultName_82
+      - defaultName_83
+      - defaultName_84
+      - defaultName_85
+      - defaultName_86
+      - defaultName_87
+      - defaultName_88
+      - defaultName_89
+      - defaultName_90
+      - defaultName_91
+      - defaultName_92
+      - defaultName_93
+      - defaultName_94
+      - defaultName_95
+      - defaultName_96
+      - defaultName_97
+      - defaultName_98
+      - defaultName_99
+      - defaultName_100
+      - defaultName_101
+      - defaultName_102
+      - defaultName_103
+      - defaultName_104
+      - defaultName_105
+      - defaultName_106
+      - defaultName_107
+      - defaultName_108
+      - defaultName_109
+      - defaultName_110
+      - defaultName_111
+      - defaultName_112
+      - defaultName_113
+      - defaultName_114
+      - defaultName_115
+      - defaultName_116
+      - defaultName_117
+      - defaultName_118
+      - defaultName_119
+      - defaultName_120
+      - defaultName_121
+      - defaultName_122
+      - defaultName_123
+      - defaultName_124
+      - defaultName_125
+      - defaultName_126
+      - defaultName_127
+      - defaultName_128
+      - defaultName_129
+      - defaultName_130
+      - defaultName_131
+      - defaultName_132
+      - defaultName_133
+      - defaultName_134
+      - defaultName_135
+      - defaultName_136
+      - defaultName_137
+      - defaultName_138
+      - defaultName_139
+      - defaultName_140
+      - defaultName_141
+      - defaultName_142
+      - defaultName_143
+      - defaultName_144
+      - defaultName_145
+      - defaultName_146
+      - defaultName_147
+      - defaultName_148
+      - defaultName_149
+      - defaultName_150
+      - defaultName_151
+      - defaultName_152
+      - defaultName_153
+      - defaultName_154
+      - defaultName_155
+      - defaultName_156
+      - defaultName_157
+      - defaultName_158
+      - defaultName_159
+      - defaultName_160
+      - defaultName_161
+      - defaultName_162
+      - defaultName_163
+      - defaultName_164
+      - defaultName_165
+      - defaultName_166
+      - defaultName_167
+      - defaultName_168
+      - defaultName_169
+      - defaultName_170
+      - defaultName_171
+      - defaultName_172
+      - defaultName_173
+      - defaultName_174
+      - defaultName_175
+      - defaultName_176
+      - defaultName_177
+      - defaultName_178
+      - defaultName_179
+      - defaultName_180
+      - defaultName_181
+      - defaultName_182
+      - defaultName_183
+      - defaultName_184
+      - defaultName_185
+      - defaultName_186
+      - defaultName_187
+      - defaultName_188
+      - defaultName_189
+      - defaultName_190
+      - defaultName_191
+      - defaultName_192
+      - defaultName_193
+      - defaultName_194
+      - defaultName_195
+      - defaultName_196
+      - defaultName_197
+      - defaultName_198
+      - defaultName_199
+      - defaultName_200
+      - defaultName_201
+      - defaultName_202
+      - defaultName_203
+      - defaultName_204
+      - defaultName_205
+      - defaultName_206
+      - defaultName_207
+      - defaultName_208
+      - defaultName_209
+      - defaultName_210
+      - defaultName_211
+      - defaultName_212
+      - defaultName_213
+      - defaultName_214
+      - defaultName_215
+      - defaultName_216
+      - defaultName_217
+      - defaultName_218
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
+      - defaultName_9
+      - defaultName_10
+      - defaultName_11
+      - defaultName_12
+      - defaultName_13
+      - defaultName_14
+      - defaultName_15
+      - defaultName_16
+      - defaultName_17
+      - defaultName_18
+      - defaultName_19
+      - defaultName_20
+      - defaultName_21
+      - defaultName_22
+      - defaultName_23
+      - defaultName_24
+      - defaultName_25
+      - defaultName_26
+      - defaultName_27
+      - defaultName_28
+      - defaultName_29
+      - defaultName_30
+      - defaultName_31
+      - defaultName_32
+      - defaultName_33
+      - defaultName_34
+      - defaultName_35
+      - defaultName_36
+      - defaultName_37
+      - defaultName_38
+      - defaultName_39
+      - defaultName_40
+      - defaultName_41
+      - defaultName_42
+      - defaultName_43
+      - defaultName_44
+      - defaultName_45
+      - defaultName_46
+      - defaultName_47
+      - defaultName_48
+      - defaultName_49
+      - defaultName_50
+      - defaultName_51
+      - defaultName_52
+      - defaultName_53
+      - defaultName_54
+      - defaultName_55
+      - defaultName_56
+      - defaultName_57
+      - defaultName_58
+      - defaultName_59
+      - defaultName_60
+      - defaultName_61
+      - defaultName_62
+      - defaultName_63
+      - defaultName_64
+      - defaultName_65
+      - defaultName_66
+      - defaultName_67
+      - defaultName_68
+      - defaultName_69
+      - defaultName_70
+      - defaultName_71
+      - defaultName_72
+      - defaultName_73
+      - defaultName_74
+      - defaultName_75
+      - defaultName_76
+      - defaultName_77
+      - defaultName_78
+      - defaultName_79
+      - defaultName_80
+      - defaultName_81
+      - defaultName_82
+      - defaultName_83
+      - defaultName_84
+      - defaultName_85
+      - defaultName_86
+      - defaultName_87
+      - defaultName_88
+      - defaultName_89
+      - defaultName_90
+      - defaultName_91
+      - defaultName_92
+      - defaultName_93
+      - defaultName_94
+      - defaultName_95
+      - defaultName_96
+      - defaultName_97
+      - defaultName_98
+      - defaultName_99
+      - defaultName_100
+      - defaultName_101
+      - defaultName_102
+      - defaultName_103
+      - defaultName_104
+      - defaultName_105
+      - defaultName_106
+      - defaultName_107
+      - defaultName_108
+      - defaultName_109
+      - defaultName_110
+      - defaultName_111
+      - defaultName_112
+      - defaultName_113
+      - defaultName_114
+      - defaultName_115
+      - defaultName_116
+      - defaultName_117
+      - defaultName_118
+      - defaultName_119
+      - defaultName_120
+      - defaultName_121
+      - defaultName_122
+      - defaultName_123
+      - defaultName_124
+      - defaultName_125
+      - defaultName_126
+      - defaultName_127
+      - defaultName_128
+      - defaultName_129
+      - defaultName_130
+      - defaultName_131
+      - defaultName_132
+      - defaultName_133
+      - defaultName_134
+      - defaultName_135
+      - defaultName_136
+      - defaultName_137
+      - defaultName_138
+      - defaultName_139
+      - defaultName_140
+      - defaultName_141
+      - defaultName_142
+      - defaultName_143
+      - defaultName_144
+      - defaultName_145
+      - defaultName_146
+      - defaultName_147
+      - defaultName_148
+      - defaultName_149
+      - defaultName_150
+      - defaultName_151
+      - defaultName_152
+      - defaultName_153
+      - defaultName_154
+      - defaultName_155
+      - defaultName_156
+      - defaultName_157
+      - defaultName_158
+      - defaultName_159
+      - defaultName_160
+      - defaultName_161
+      - defaultName_162
+      - defaultName_163
+      - defaultName_164
+      - defaultName_165
+      - defaultName_166
+      - defaultName_167
+      - defaultName_168
+      - defaultName_169
+      - defaultName_170
+      - defaultName_171
+      - defaultName_172
+      - defaultName_173
+      - defaultName_174
+      - defaultName_175
+      - defaultName_176
+      - defaultName_177
+      - defaultName_178
+      - defaultName_179
+      - defaultName_180
+      - defaultName_181
+      - defaultName_182
+      - defaultName_183
+      - defaultName_184
+      - defaultName_185
+      - defaultName_186
+      - defaultName_187
+      - defaultName_188
+      - defaultName_189
+      - defaultName_190
+      - defaultName_191
+      - defaultName_192
+      - defaultName_193
+      - defaultName_194
+      - defaultName_195
+      - defaultName_196
+      - defaultName_197
+      - defaultName_198
+      - defaultName_199
+      - defaultName_200
+      - defaultName_201
+      - defaultName_202
+      - defaultName_203
+      - defaultName_204
+      - defaultName_205
+      - defaultName_206
+      - defaultName_207
+      - defaultName_208
+      - defaultName_209
+      - defaultName_210
+      - defaultName_211
+      - defaultName_212
+      - defaultName_213
+      - defaultName_214
+      - defaultName_215
+      - defaultName_216
+      - defaultName_217
+      - defaultName_218
+  - name: 🔯 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
+      - defaultName_9
+      - defaultName_10
+      - defaultName_11
+      - defaultName_12
+      - defaultName_13
+      - defaultName_14
+      - defaultName_15
+      - defaultName_16
+      - defaultName_17
+      - defaultName_18
+      - defaultName_19
+      - defaultName_20
+      - defaultName_21
+      - defaultName_22
+      - defaultName_23
+      - defaultName_24
+      - defaultName_25
+      - defaultName_26
+      - defaultName_27
+      - defaultName_28
+      - defaultName_29
+      - defaultName_30
+      - defaultName_31
+      - defaultName_32
+      - defaultName_33
+      - defaultName_34
+      - defaultName_35
+      - defaultName_36
+      - defaultName_37
+      - defaultName_38
+      - defaultName_39
+      - defaultName_40
+      - defaultName_41
+      - defaultName_42
+      - defaultName_43
+      - defaultName_44
+      - defaultName_45
+      - defaultName_46
+      - defaultName_47
+      - defaultName_48
+      - defaultName_49
+      - defaultName_50
+      - defaultName_51
+      - defaultName_52
+      - defaultName_53
+      - defaultName_54
+      - defaultName_55
+      - defaultName_56
+      - defaultName_57
+      - defaultName_58
+      - defaultName_59
+      - defaultName_60
+      - defaultName_61
+      - defaultName_62
+      - defaultName_63
+      - defaultName_64
+      - defaultName_65
+      - defaultName_66
+      - defaultName_67
+      - defaultName_68
+      - defaultName_69
+      - defaultName_70
+      - defaultName_71
+      - defaultName_72
+      - defaultName_73
+      - defaultName_74
+      - defaultName_75
+      - defaultName_76
+      - defaultName_77
+      - defaultName_78
+      - defaultName_79
+      - defaultName_80
+      - defaultName_81
+      - defaultName_82
+      - defaultName_83
+      - defaultName_84
+      - defaultName_85
+      - defaultName_86
+      - defaultName_87
+      - defaultName_88
+      - defaultName_89
+      - defaultName_90
+      - defaultName_91
+      - defaultName_92
+      - defaultName_93
+      - defaultName_94
+      - defaultName_95
+      - defaultName_96
+      - defaultName_97
+      - defaultName_98
+      - defaultName_99
+      - defaultName_100
+      - defaultName_101
+      - defaultName_102
+      - defaultName_103
+      - defaultName_104
+      - defaultName_105
+      - defaultName_106
+      - defaultName_107
+      - defaultName_108
+      - defaultName_109
+      - defaultName_110
+      - defaultName_111
+      - defaultName_112
+      - defaultName_113
+      - defaultName_114
+      - defaultName_115
+      - defaultName_116
+      - defaultName_117
+      - defaultName_118
+      - defaultName_119
+      - defaultName_120
+      - defaultName_121
+      - defaultName_122
+      - defaultName_123
+      - defaultName_124
+      - defaultName_125
+      - defaultName_126
+      - defaultName_127
+      - defaultName_128
+      - defaultName_129
+      - defaultName_130
+      - defaultName_131
+      - defaultName_132
+      - defaultName_133
+      - defaultName_134
+      - defaultName_135
+      - defaultName_136
+      - defaultName_137
+      - defaultName_138
+      - defaultName_139
+      - defaultName_140
+      - defaultName_141
+      - defaultName_142
+      - defaultName_143
+      - defaultName_144
+      - defaultName_145
+      - defaultName_146
+      - defaultName_147
+      - defaultName_148
+      - defaultName_149
+      - defaultName_150
+      - defaultName_151
+      - defaultName_152
+      - defaultName_153
+      - defaultName_154
+      - defaultName_155
+      - defaultName_156
+      - defaultName_157
+      - defaultName_158
+      - defaultName_159
+      - defaultName_160
+      - defaultName_161
+      - defaultName_162
+      - defaultName_163
+      - defaultName_164
+      - defaultName_165
+      - defaultName_166
+      - defaultName_167
+      - defaultName_168
+      - defaultName_169
+      - defaultName_170
+      - defaultName_171
+      - defaultName_172
+      - defaultName_173
+      - defaultName_174
+      - defaultName_175
+      - defaultName_176
+      - defaultName_177
+      - defaultName_178
+      - defaultName_179
+      - defaultName_180
+      - defaultName_181
+      - defaultName_182
+      - defaultName_183
+      - defaultName_184
+      - defaultName_185
+      - defaultName_186
+      - defaultName_187
+      - defaultName_188
+      - defaultName_189
+      - defaultName_190
+      - defaultName_191
+      - defaultName_192
+      - defaultName_193
+      - defaultName_194
+      - defaultName_195
+      - defaultName_196
+      - defaultName_197
+      - defaultName_198
+      - defaultName_199
+      - defaultName_200
+      - defaultName_201
+      - defaultName_202
+      - defaultName_203
+      - defaultName_204
+      - defaultName_205
+      - defaultName_206
+      - defaultName_207
+      - defaultName_208
+      - defaultName_209
+      - defaultName_210
+      - defaultName_211
+      - defaultName_212
+      - defaultName_213
+      - defaultName_214
+      - defaultName_215
+      - defaultName_216
+      - defaultName_217
+      - defaultName_218
+  - name: 🔮 负载均衡
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
+      - defaultName_9
+      - defaultName_10
+      - defaultName_11
+      - defaultName_12
+      - defaultName_13
+      - defaultName_14
+      - defaultName_15
+      - defaultName_16
+      - defaultName_17
+      - defaultName_18
+      - defaultName_19
+      - defaultName_20
+      - defaultName_21
+      - defaultName_22
+      - defaultName_23
+      - defaultName_24
+      - defaultName_25
+      - defaultName_26
+      - defaultName_27
+      - defaultName_28
+      - defaultName_29
+      - defaultName_30
+      - defaultName_31
+      - defaultName_32
+      - defaultName_33
+      - defaultName_34
+      - defaultName_35
+      - defaultName_36
+      - defaultName_37
+      - defaultName_38
+      - defaultName_39
+      - defaultName_40
+      - defaultName_41
+      - defaultName_42
+      - defaultName_43
+      - defaultName_44
+      - defaultName_45
+      - defaultName_46
+      - defaultName_47
+      - defaultName_48
+      - defaultName_49
+      - defaultName_50
+      - defaultName_51
+      - defaultName_52
+      - defaultName_53
+      - defaultName_54
+      - defaultName_55
+      - defaultName_56
+      - defaultName_57
+      - defaultName_58
+      - defaultName_59
+      - defaultName_60
+      - defaultName_61
+      - defaultName_62
+      - defaultName_63
+      - defaultName_64
+      - defaultName_65
+      - defaultName_66
+      - defaultName_67
+      - defaultName_68
+      - defaultName_69
+      - defaultName_70
+      - defaultName_71
+      - defaultName_72
+      - defaultName_73
+      - defaultName_74
+      - defaultName_75
+      - defaultName_76
+      - defaultName_77
+      - defaultName_78
+      - defaultName_79
+      - defaultName_80
+      - defaultName_81
+      - defaultName_82
+      - defaultName_83
+      - defaultName_84
+      - defaultName_85
+      - defaultName_86
+      - defaultName_87
+      - defaultName_88
+      - defaultName_89
+      - defaultName_90
+      - defaultName_91
+      - defaultName_92
+      - defaultName_93
+      - defaultName_94
+      - defaultName_95
+      - defaultName_96
+      - defaultName_97
+      - defaultName_98
+      - defaultName_99
+      - defaultName_100
+      - defaultName_101
+      - defaultName_102
+      - defaultName_103
+      - defaultName_104
+      - defaultName_105
+      - defaultName_106
+      - defaultName_107
+      - defaultName_108
+      - defaultName_109
+      - defaultName_110
+      - defaultName_111
+      - defaultName_112
+      - defaultName_113
+      - defaultName_114
+      - defaultName_115
+      - defaultName_116
+      - defaultName_117
+      - defaultName_118
+      - defaultName_119
+      - defaultName_120
+      - defaultName_121
+      - defaultName_122
+      - defaultName_123
+      - defaultName_124
+      - defaultName_125
+      - defaultName_126
+      - defaultName_127
+      - defaultName_128
+      - defaultName_129
+      - defaultName_130
+      - defaultName_131
+      - defaultName_132
+      - defaultName_133
+      - defaultName_134
+      - defaultName_135
+      - defaultName_136
+      - defaultName_137
+      - defaultName_138
+      - defaultName_139
+      - defaultName_140
+      - defaultName_141
+      - defaultName_142
+      - defaultName_143
+      - defaultName_144
+      - defaultName_145
+      - defaultName_146
+      - defaultName_147
+      - defaultName_148
+      - defaultName_149
+      - defaultName_150
+      - defaultName_151
+      - defaultName_152
+      - defaultName_153
+      - defaultName_154
+      - defaultName_155
+      - defaultName_156
+      - defaultName_157
+      - defaultName_158
+      - defaultName_159
+      - defaultName_160
+      - defaultName_161
+      - defaultName_162
+      - defaultName_163
+      - defaultName_164
+      - defaultName_165
+      - defaultName_166
+      - defaultName_167
+      - defaultName_168
+      - defaultName_169
+      - defaultName_170
+      - defaultName_171
+      - defaultName_172
+      - defaultName_173
+      - defaultName_174
+      - defaultName_175
+      - defaultName_176
+      - defaultName_177
+      - defaultName_178
+      - defaultName_179
+      - defaultName_180
+      - defaultName_181
+      - defaultName_182
+      - defaultName_183
+      - defaultName_184
+      - defaultName_185
+      - defaultName_186
+      - defaultName_187
+      - defaultName_188
+      - defaultName_189
+      - defaultName_190
+      - defaultName_191
+      - defaultName_192
+      - defaultName_193
+      - defaultName_194
+      - defaultName_195
+      - defaultName_196
+      - defaultName_197
+      - defaultName_198
+      - defaultName_199
+      - defaultName_200
+      - defaultName_201
+      - defaultName_202
+      - defaultName_203
+      - defaultName_204
+      - defaultName_205
+      - defaultName_206
+      - defaultName_207
+      - defaultName_208
+      - defaultName_209
+      - defaultName_210
+      - defaultName_211
+      - defaultName_212
+      - defaultName_213
+      - defaultName_214
+      - defaultName_215
+      - defaultName_216
+      - defaultName_217
+      - defaultName_218
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 💬 OpenAi
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🎥 奈飞视频
+    type: select
+    proxies:
+      - 🎥 奈飞节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📺 巴哈姆特
+    type: select
+    proxies:
+      - 🇨🇳 台湾节点
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇨🇳 台湾节点
+      - 🇭🇰 香港节点
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🚀 手动切换
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软Bing
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软云盘
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🎶 网易音乐
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🆎 AdBlock
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🛡️ 隐私防护
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🇺🇲 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150
+    proxies: []
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+  - name: 🎥 奈飞节点
+    type: select
+    proxies: []
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/LocalAreaNetwork.list
+  UnBan:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/UnBan.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanProgramAD.list
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanEasyList.list
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanEasyListChina.list
+  BanEasyPrivacy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanEasyPrivacy.list
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleFCM.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleCN.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/SteamCN.list
+  Bing:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Bing.list
+  OneDrive:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/OneDrive.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Microsoft.list
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Apple.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Telegram.list
+  OpenAi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/OpenAi.list
+  NetEaseMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/NetEaseMusic.list
+  Epic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Epic.list
+  Origin:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Origin.list
+  Sony:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Sony.list
+  Steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Steam.list
+  Nintendo:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Nintendo.list
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/YouTube.list
+  Netflix:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Netflix.list
+  Bahamut:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Bahamut.list
+  BilibiliHMT:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BilibiliHMT.list
+  Bilibili:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Bilibili.list
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaMedia.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyMedia.list
+  ProxyGFWlist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyGFWlist.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaCompanyIp.list
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Download.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,UnBan,🎯 全球直连
+  - RULE-SET,BanAD,🛑 广告拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,BanEasyList,🆎 AdBlock
+  - RULE-SET,BanEasyListChina,🆎 AdBlock
+  - RULE-SET,BanEasyPrivacy,🛡️ 隐私防护
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Bing,Ⓜ️ 微软Bing
+  - RULE-SET,OneDrive,Ⓜ️ 微软云盘
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Telegram,📲 电报消息
+  - RULE-SET,OpenAi,💬 OpenAi
+  - RULE-SET,NetEaseMusic,🎶 网易音乐
+  - RULE-SET,Epic,🎮 游戏平台
+  - RULE-SET,Origin,🎮 游戏平台
+  - RULE-SET,Sony,🎮 游戏平台
+  - RULE-SET,Steam,🎮 游戏平台
+  - RULE-SET,Nintendo,🎮 游戏平台
+  - RULE-SET,YouTube,📹 油管视频
+  - RULE-SET,Netflix,🎥 奈飞视频
+  - RULE-SET,Bahamut,📺 巴哈姆特
+  - RULE-SET,BilibiliHMT,📺 哔哩哔哩
+  - RULE-SET,Bilibili,📺 哔哩哔哩
+  - RULE-SET,ChinaMedia,🌏 国内媒体
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,ProxyGFWlist,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - RULE-SET,Download,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
