@@ -1,0 +1,641 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "server": "localDns"
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🤖 OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "🌌 Google",
+      "type": "selector",
+      "outbounds": [
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "📟 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "🐦 Twitter",
+      "type": "selector",
+      "outbounds": [
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "👤 Facebook",
+      "type": "selector",
+      "outbounds": [
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "🛍️ Amazon",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "🍎 Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "🧩 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "🎮 Game",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "tag": "🎬 MediaVideo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "defaultName_1",
+        "defaultName_2",
+        "defaultName_3",
+        "defaultName_4",
+        "defaultName_5",
+        "defaultName_6",
+        "defaultName_7",
+        "defaultName_8",
+        "defaultName_9",
+        "defaultName_10"
+      ]
+    },
+    {
+      "tag": "🌏 cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "select"
+      ]
+    },
+    {
+      "tag": "🛑 AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "109.104.152.194",
+      "server_port": 58510,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth": "dongtaiwang.com",
+      "tag": "defaultName_1",
+      "type": "hysteria"
+    },
+    {
+      "server": "108.181.5.133",
+      "server_port": 26022,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth": "dongtaiwang.com",
+      "tag": "defaultName_2",
+      "type": "hysteria"
+    },
+    {
+      "server": "173.234.25.52",
+      "server_port": 30072,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth": "dongtaiwang.com",
+      "tag": "defaultName_3",
+      "type": "hysteria"
+    },
+    {
+      "server": "62.210.243.131",
+      "server_port": 18702,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth": "dongtaiwang.com",
+      "tag": "defaultName_4",
+      "type": "hysteria"
+    },
+    {
+      "server": "104.192.224.141",
+      "server_port": 62894,
+      "tls": {
+        "enabled": true
+      },
+      "password": "dongtaiwang.com",
+      "tag": "defaultName_5",
+      "type": "hysteria2"
+    },
+    {
+      "server": "104.192.224.140",
+      "server_port": 62894,
+      "tls": {
+        "enabled": true
+      },
+      "password": "dongtaiwang.com",
+      "tag": "defaultName_6",
+      "type": "hysteria2"
+    },
+    {
+      "server": "yh7.dtku41.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "lg1.freessr2.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/xyakws",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "ebfdccb6-7416-4b6e-860d-98587344d500",
+      "tag": "defaultName_7",
+      "type": "vless"
+    },
+    {
+      "server": "yh6.dtku41.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "lg1.freessr2.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/xyakws",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "ebfdccb6-7416-4b6e-860d-98587344d500",
+      "tag": "defaultName_8",
+      "type": "vless"
+    },
+    {
+      "server": "64.31.55.72",
+      "server_port": 55661,
+      "up_mbps": 5,
+      "down_mbps": 20,
+      "auth": "dongtaiwang.com",
+      "tag": "defaultName_9",
+      "type": "hysteria"
+    },
+    {
+      "server": "yh9.dtku41.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "lg1.freessr2.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/xyakws",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "ebfdccb6-7416-4b6e-860d-98587344d500",
+      "tag": "defaultName_10",
+      "type": "vless"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "v2rayse.com",
+          "cfmem.com",
+          "vpnse.org",
+          "cff.pw",
+          "tt.vg"
+        ],
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "openai"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "geoip": [
+          "google"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geosite": [
+          "telegram"
+        ],
+        "geoip": [
+          "telegram"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geosite": [
+          "twitter"
+        ],
+        "geoip": [
+          "twitter"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "geoip": [
+          "facebook"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": [
+          "amazon"
+        ],
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": [
+          "apple-cn",
+          "apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": [
+          "microsoft"
+        ],
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": [
+          "category-games"
+        ],
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": [
+          "bilibili"
+        ],
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "geoip": [
+          "netflix"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "🌏 cn"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "🛑 AdBlock"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
+  }
+}
