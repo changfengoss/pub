@@ -1,0 +1,509 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "error",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "حجم: 13.83GB از: 60GB مصرف شده",
+        "تاریخ تمدید: 1403/6/21 - @Prexo_network",
+        "TR-FAST-⭐️\r",
+        "FR-FAST-⭐️\r",
+        "TR-CF 🔥\r",
+        "DE-CF 🔥\r",
+        "DE-NEW ⭐️\r",
+        "UK-NEW ⭐️\r",
+        "FR-2 ⭐️\r",
+        "UK-2 ⭐️",
+        "@SmartVPN - Hamrah Aval NL🇳🇱⭐️ 3️⃣",
+        "@SmartVPN - Irancell NL🇳🇱⭐️ 3️⃣",
+        "@SmartVPN - IPv6 NL🇳🇱 3️⃣",
+        "@SmartVPN - Irancell NL🇳🇱 3️⃣_1",
+        "@SmartVPN - Irancell NL🇳🇱 3️⃣_2",
+        "@SmartVPN - Hamrah Aval NL🇳🇱 3️⃣_1",
+        "@SmartVPN - Hamrah Aval NL🇳🇱 3️⃣_2",
+        "defaultName",
+        "Mash_vmess-Alishmash"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "حجم: 13.83GB از: 60GB مصرف شده",
+        "تاریخ تمدید: 1403/6/21 - @Prexo_network",
+        "TR-FAST-⭐️\r",
+        "FR-FAST-⭐️\r",
+        "TR-CF 🔥\r",
+        "DE-CF 🔥\r",
+        "DE-NEW ⭐️\r",
+        "UK-NEW ⭐️\r",
+        "FR-2 ⭐️\r",
+        "UK-2 ⭐️",
+        "@SmartVPN - Hamrah Aval NL🇳🇱⭐️ 3️⃣",
+        "@SmartVPN - Irancell NL🇳🇱⭐️ 3️⃣",
+        "@SmartVPN - IPv6 NL🇳🇱 3️⃣",
+        "@SmartVPN - Irancell NL🇳🇱 3️⃣_1",
+        "@SmartVPN - Irancell NL🇳🇱 3️⃣_2",
+        "@SmartVPN - Hamrah Aval NL🇳🇱 3️⃣_1",
+        "@SmartVPN - Hamrah Aval NL🇳🇱 3️⃣_2",
+        "defaultName",
+        "Mash_vmess-Alishmash"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "google.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "2e6a9e26-b9f7-442b-8b56-8b504e3491d5",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "حجم: 13.83GB از: 60GB مصرف شده",
+      "type": "vmess"
+    },
+    {
+      "server": "google.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "2e6a9e26-b9f7-442b-8b56-8b504e3491d5",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "تاریخ تمدید: 1403/6/21 - @Prexo_network",
+      "type": "vmess"
+    },
+    {
+      "server": "ir.prexonet.com",
+      "server_port": 2083,
+      "tls": {
+        "enabled": true,
+        "server_name": "uptvs.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "c0f8303b-32d7-4c34-88b2-84b0501b02d5",
+      "tag": "TR-FAST-⭐️\r",
+      "type": "vless"
+    },
+    {
+      "server": "ir.prexonet.com",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ir.prexonet.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "c0f8303b-32d7-4c34-88b2-84b0501b02d5",
+      "tag": "FR-FAST-⭐️\r",
+      "type": "vless"
+    },
+    {
+      "server": "cf1.prexo-network.com",
+      "server_port": 80,
+      "tls": {
+        "enabled": true,
+        "server_name": "RubikAv2rayntrr8.8.8.8.ir.com.shop.x--vnq.prexo-network.coM.",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/RubikaV2rayVIPzed?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f8303b-32d7-4c34-88b2-84b0501b02d5",
+      "tag": "TR-CF 🔥\r",
+      "type": "vless"
+    },
+    {
+      "server": "cf1.prexo-network.com",
+      "server_port": 80,
+      "tls": {
+        "enabled": true,
+        "server_name": "RubikAv2rayntrd8.8.8.8.ir.com.shop.x--vnq.prexo-network.coM.",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/RubikaV2rayVIPzed?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f8303b-32d7-4c34-88b2-84b0501b02d5",
+      "tag": "DE-CF 🔥\r",
+      "type": "vless"
+    },
+    {
+      "server": "ir2.prexonet.com",
+      "server_port": 8080,
+      "tls": {
+        "enabled": true,
+        "server_name": "filmnet.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "c0f8303b-32d7-4c34-88b2-84b0501b02d5",
+      "tag": "DE-NEW ⭐️\r",
+      "type": "vless"
+    },
+    {
+      "server": "ir2.prexonet.com",
+      "server_port": 8880,
+      "tls": {
+        "enabled": true,
+        "server_name": "filmnet.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "c0f8303b-32d7-4c34-88b2-84b0501b02d5",
+      "tag": "UK-NEW ⭐️\r",
+      "type": "vless"
+    },
+    {
+      "server": "ir2.prexonet.com",
+      "server_port": 8080,
+      "tls": {
+        "enabled": true,
+        "server_name": "uptvs.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "uuid": "c0f8303b-32d7-4c34-88b2-84b0501b02d5",
+      "tag": "FR-2 ⭐️\r",
+      "type": "vless"
+    },
+    {
+      "server": "ir2.prexonet.com",
+      "server_port": 2053,
+      "tls": {
+        "enabled": true,
+        "server_name": "s9.snapp.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/9714",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c0f8303b-32d7-4c34-88b2-84b0501b02d5",
+      "tag": "UK-2 ⭐️",
+      "type": "vless"
+    },
+    {
+      "server": "fursaw.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "api.drbia.ir"
+      },
+      "transport": {
+        "path": "/connect/de/?ed=1024",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "ce96fc77-115b-4c90-87ba-63a73e9c7d5f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "@SmartVPN - Hamrah Aval NL🇳🇱⭐️ 3️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "libsem.org",
+      "server_port": 80,
+      "transport": {
+        "path": "/connect/de/?ed=1024",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "ce96fc77-115b-4c90-87ba-63a73e9c7d5f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "@SmartVPN - Irancell NL🇳🇱⭐️ 3️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "v6.fursaw.xyz",
+      "server_port": 2096,
+      "tls": {
+        "enabled": true,
+        "server_name": "discordapp.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9CZDj2l2uQzVOL9pYnCsJVZECFJwhys9UWCUaW_rYkM"
+        }
+      },
+      "uuid": "ce96fc77-115b-4c90-87ba-63a73e9c7d5f",
+      "flow": "xtls-rprx-vision",
+      "tag": "@SmartVPN - IPv6 NL🇳🇱 3️⃣",
+      "type": "vless"
+    },
+    {
+      "server": "a1.jeepautocar.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "discordapp.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9CZDj2l2uQzVOL9pYnCsJVZECFJwhys9UWCUaW_rYkM"
+        }
+      },
+      "uuid": "ce96fc77-115b-4c90-87ba-63a73e9c7d5f",
+      "flow": "xtls-rprx-vision",
+      "tag": "@SmartVPN - Irancell NL🇳🇱 3️⃣_1",
+      "type": "vless"
+    },
+    {
+      "server": "a1.jeepautocar.xyz",
+      "server_port": 587,
+      "password": "ce96fc77-115b-4c90-87ba-63a73e9c7d5f",
+      "method": "aes-128-gcm",
+      "tag": "@SmartVPN - Irancell NL🇳🇱 3️⃣_2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "a2.jeepautocar.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "discordapp.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9CZDj2l2uQzVOL9pYnCsJVZECFJwhys9UWCUaW_rYkM"
+        }
+      },
+      "uuid": "ce96fc77-115b-4c90-87ba-63a73e9c7d5f",
+      "flow": "xtls-rprx-vision",
+      "tag": "@SmartVPN - Hamrah Aval NL🇳🇱 3️⃣_1",
+      "type": "vless"
+    },
+    {
+      "server": "a2.jeepautocar.xyz",
+      "server_port": 587,
+      "password": "ce96fc77-115b-4c90-87ba-63a73e9c7d5f",
+      "method": "aes-128-gcm",
+      "tag": "@SmartVPN - Hamrah Aval NL🇳🇱 3️⃣_2",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "167.88.166.27",
+      "server_port": 45848,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "kcp"
+      },
+      "uuid": "8512bbc5-27de-444f-be33-9fefb13fbb77",
+      "tag": "defaultName",
+      "type": "vless"
+    },
+    {
+      "server": "167.88.166.27",
+      "server_port": 55011,
+      "uuid": "fbde89f5-c6ab-40c3-a1ac-0cf79314d1a2",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "Mash_vmess-Alishmash",
+      "type": "vmess"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
