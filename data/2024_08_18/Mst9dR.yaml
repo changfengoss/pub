@@ -1,0 +1,427 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "server": "localDns"
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "proxyDns"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🤖 OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "🌌 Google",
+      "type": "selector",
+      "outbounds": [
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "📟 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "🐦 Twitter",
+      "type": "selector",
+      "outbounds": [
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "👤 Facebook",
+      "type": "selector",
+      "outbounds": [
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "🛍️ Amazon",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "🍎 Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "🧩 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "🎮 Game",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "tag": "🎬 MediaVideo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true"
+      ]
+    },
+    {
+      "tag": "🌏 cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "select"
+      ]
+    },
+    {
+      "tag": "🛑 AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "167.234.219.191",
+      "server_port": 443,
+      "users": [
+        {
+          "username": "sub.id9.cc/sub?target=singbox&url=vless",
+          "password": "//5b9aa863-d90d-4eb0-bac7-28430cdb1cb1"
+        }
+      ],
+      "tag": "%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD1%20%7C%200.1%E5%80%8D|vless://5b9aa863-d90d-4eb0-bac7-28430cdb1cb1@23.227.38.136:443/?type=ws&encryption=none&host=us2-us2.aiopen.sbs&path=%2Fkbjc%2Fus2&security=tls&sni=us2-us2.aiopen.sbs&fp=chrome&packetEnco&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true",
+      "type": "http",
+      "set_system_proxy": true
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "v2rayse.com",
+          "cfmem.com",
+          "vpnse.org",
+          "cff.pw",
+          "tt.vg"
+        ],
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "openai"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "geoip": [
+          "google"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geosite": [
+          "telegram"
+        ],
+        "geoip": [
+          "telegram"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geosite": [
+          "twitter"
+        ],
+        "geoip": [
+          "twitter"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "geoip": [
+          "facebook"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": [
+          "amazon"
+        ],
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": [
+          "apple-cn",
+          "apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": [
+          "microsoft"
+        ],
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": [
+          "category-games"
+        ],
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": [
+          "bilibili"
+        ],
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "geoip": [
+          "netflix"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "🌏 cn"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "🛑 AdBlock"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  }
+}
