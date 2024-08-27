@@ -1,0 +1,243 @@
+#甬哥Github项目  ：github.com/yonggekkk
+#甬哥Blogger博客 ：ygkkk.blogspot.com
+#甬哥YouTube频道 ：www.youtube.com/@ygkkk
+#====clash-meta精简配置文件模版（V23.8.31）=====
+#====参考自clash-meta官方文档：wiki.metacubex.one=====
+#（一区）=============================（clash配置）
+#dns可自行修改
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+dns:
+  enable: true
+  listen: ':53'
+  ipv6: false
+  enhanced-mode: redir-host
+  default-nameserver:
+    - 223.5.5.5
+    - 8.8.8.8
+  nameserver:
+    - 223.5.5.5
+    - 8.8.8.8
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+proxies:
+  - {"name":"v2rayse_test_1","type":"ss","server":"198.57.27.218","port":5004,"password":"g5MeD6Ft3CWlJId","cipher":"aes-256-gcm"}
+  - {"name":"v2rayse_test_2","type":"vmess","server":"154.23.190.162","port":443,"cipher":"auto","uuid":"b9984674-f771-4e67-a198-c7e60720ba2c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
+  - {"name":"v2rayse_test_3","type":"vmess","server":"154.23.190.162","port":443,"cipher":"auto","uuid":"b9984674-f771-4e67-a198-c7e60720ba2c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
+  - {"name":"defaultName_1","type":"ssr","server":"20.239.49.44","port":59814,"password":"3df57276-03ef-45cf-bdd4-4edb6dfaa0ef","cipher":"dummy","obfs":"plain","protocol":"origin","group":"https://v2rayse.com"}
+  - {"name":"v2rayse_test_4","type":"trojan","server":"ca-trojan.bonds.id","port":443,"udp":true,"password":"bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272","skip-cert-verify":true}
+  - {"name":"defaultName_2","type":"http","server":"124.15.12.24","port":251,"username":"username","password":"password"}
+  - {"name":"defaultName_3","type":"socks5","server":"124.15.12.24","port":2312}
+  - {"name":"Hys-1.2.3.4","type":"hysteria","server":"1.2.3.4","port":12854,"sni":"wechat.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"pekopeko","up":50,"down":250}
+  - {"name":"test","type":"vless","server":"1.2.3.4","port":7777,"uuid":"abc-def-ghi-fge-zsx","tls":true,"network":"tcp"}
+  - {"name":"defaultName_4","type":"socks5","server":"1.2.3.4","port":123,"username":"username","password":"password"}
+proxy-groups:
+  - name: 负载均衡
+    type: load-balance
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+    strategy: round-robin
+  - name: 原生IP
+    type: select
+    proxies: []
+  - name: 自动选择
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+  - name: 🌍选择代理节点
+    type: select
+    proxies:
+      - 负载均衡
+      - 自动选择
+      - 原生IP
+      - DIRECT
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - defaultName_1
+      - v2rayse_test_4
+      - defaultName_2
+      - defaultName_3
+      - Hys-1.2.3.4
+      - test
+      - defaultName_4
+  - name: reject
+    type: select
+    proxies:
+      - REJECT
+
+rule-providers:
+  icloud:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    interval: 86400
+    path: ./ruleset/icloud.yaml
+  apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    interval: 86400
+    path: ./ruleset/apple.yaml
+  direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    interval: 86400
+    path: ./ruleset/direct.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    interval: 86400
+    path: ./ruleset/private.yaml
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    interval: 86400
+    path: ./ruleset/cncidr.yaml
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    interval: 86400
+    path: ./ruleset/lancidr.yaml
+  applications:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    interval: 86400
+    path: ./ruleset/applications.yaml
+  reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    interval: 86400
+    path: ./ruleset/reject.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    interval: 86400
+    path: ./ruleset/google.yaml
+  proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    interval: 86400
+    path: ./ruleset/proxy.yaml
+  gfw:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    interval: 86400
+    path: ./ruleset/gfw.yaml
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    interval: 86400
+    path: ./ruleset/tld-not-cn.yaml
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    interval: 86400
+    path: ./ruleset/telegramcidr.yaml
+rules:
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,reject,reject
+  - RULE-SET,google,🌍选择代理节点
+  - RULE-SET,proxy,🌍选择代理节点
+  - RULE-SET,gfw,🌍选择代理节点
+  - RULE-SET,tld-not-cn,🌍选择代理节点
+  - RULE-SET,telegramcidr,🌍选择代理节点
+  - DOMAIN-SUFFIX,chatgpt.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,openai.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,wallet.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,api.wallet.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,blockchain.info,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,coinbase.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,binance.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,kraken.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,bitfinex.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,bittrex.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,bitstamp.net,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,gemini.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,poloniex.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,bitflyer.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,hitbtc.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,gate.io,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,kucoin.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,huobi.pro,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,okex.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,okx.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,coincheck.com,vless-reality-搬瓦工
+  - DOMAIN-SUFFIX,bitmex.com,vless-reality-搬瓦工
+  - IP-CIDR,45.78.63.135/32,vless-reality-搬瓦工
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - DOMAIN-SUFFIX,luxl.vip,DIRECT
+  - DOMAIN-SUFFIX,ai365vip.com,DIRECT
+  - DOMAIN-SUFFIX,openaigpt4.top,DIRECT
+  - DOMAIN-SUFFIX,gptchatai.life,DIRECT
+  - IP-CIDR,192.168.1.0/24,DIRECT
+  - IP-CIDR,192.168.3.0/24,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR6,::1/128,DIRECT
+  - IP-CIDR6,fc00::/7,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - IP-CIDR6,fd00::/8,DIRECT
+  - IP-CIDR,173.254.236.121/32,DIRECT
+  - IP-CIDR,142.171.138.209/32,DIRECT
+  - IP-CIDR,142.171.123.86/32,DIRECT
+  - IP-CIDR,103.79.78.250/32,DIRECT
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🌍选择代理节点
