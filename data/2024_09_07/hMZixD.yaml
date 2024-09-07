@@ -1,0 +1,579 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：2024-09-07 17:25:58
+# 使用模版：2024.9.7最新
+# 节点数量：2
+# 节点类型：vmess, trojan
+####################################
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.8.8
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://doh.dns.sb/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.twnic.tw/dns-query
+    - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"洛杉矶住宅ip_1","type":"vmess","server":"test.stampclub.shop","port":41809,"cipher":"auto","uuid":"8f57b457-8149-4c77-c2fc-2b92d457fa74","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fdgs"}}
+  - {"name":"洛杉矶住宅ip_2","type":"trojan","server":"38.46.3.25","port":13944,"udp":true,"password":"wsVHgdR7oG","skip-cert-verify":true}
+proxy-groups:
+  - name: LEE云 - TotoroCloud
+    type: select
+    proxies:
+      - 自动选择
+      - 故障转移
+      - 洛杉矶住宅ip_1
+      - 洛杉矶住宅ip_2
+  - name: 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+    proxies:
+      - 洛杉矶住宅ip_1
+      - 洛杉矶住宅ip_2
+  - name: 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 7200
+    proxies:
+      - 洛杉矶住宅ip_1
+      - 洛杉矶住宅ip_2
+
+rules:
+  - DOMAIN,lmapi02.lmsub.cc,DIRECT
+  - DOMAIN-SUFFIX,services.googleapis.cn,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,龙猫云 - TotoroCloud
+  - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+  - DOMAIN,safebrowsing.googleapis.com,DIRECT
+  - DOMAIN,developer.apple.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,digicert.com,龙猫云 - TotoroCloud
+  - DOMAIN,ocsp.apple.com,龙猫云 - TotoroCloud
+  - DOMAIN,ocsp.comodoca.com,龙猫云 - TotoroCloud
+  - DOMAIN,ocsp.usertrust.com,龙猫云 - TotoroCloud
+  - DOMAIN,ocsp.sectigo.com,龙猫云 - TotoroCloud
+  - DOMAIN,ocsp.verisign.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,apple-dns.net,龙猫云 - TotoroCloud
+  - DOMAIN,testflight.apple.com,龙猫云 - TotoroCloud
+  - DOMAIN,sandbox.itunes.apple.com,龙猫云 - TotoroCloud
+  - DOMAIN,itunes.apple.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,apps.apple.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,blobstore.apple.com,龙猫云 - TotoroCloud
+  - DOMAIN,cvws.icloud-content.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+  - DOMAIN-SUFFIX,me.com,DIRECT
+  - DOMAIN-SUFFIX,aaplimg.com,DIRECT
+  - DOMAIN-SUFFIX,cdn20.com,DIRECT
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+  - DOMAIN-SUFFIX,akadns.net,DIRECT
+  - DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+  - DOMAIN-SUFFIX,edgekey.net,DIRECT
+  - DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+  - DOMAIN-SUFFIX,mwcname.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+  - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+  - DOMAIN-SUFFIX,126.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
+  - DOMAIN-SUFFIX,127.net,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+  - DOMAIN-SUFFIX,36kr.com,DIRECT
+  - DOMAIN-SUFFIX,acfun.tv,DIRECT
+  - DOMAIN-SUFFIX,air-matters.com,DIRECT
+  - DOMAIN-SUFFIX,aixifan.com,DIRECT
+  - DOMAIN-KEYWORD,alicdn,DIRECT
+  - DOMAIN-KEYWORD,alipay,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-SUFFIX,amap.com,DIRECT
+  - DOMAIN-SUFFIX,autonavi.com,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-SUFFIX,bdimg.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+  - DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+  - DOMAIN-SUFFIX,clouddn.com,DIRECT
+  - DOMAIN-SUFFIX,cnbeta.com,DIRECT
+  - DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+  - DOMAIN-SUFFIX,cootekservice.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,ctrip.com,DIRECT
+  - DOMAIN-SUFFIX,dgtle.com,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,douban.com,DIRECT
+  - DOMAIN-SUFFIX,doubanio.com,DIRECT
+  - DOMAIN-SUFFIX,duokan.com,DIRECT
+  - DOMAIN-SUFFIX,easou.com,DIRECT
+  - DOMAIN-SUFFIX,ele.me,DIRECT
+  - DOMAIN-SUFFIX,feng.com,DIRECT
+  - DOMAIN-SUFFIX,fir.im,DIRECT
+  - DOMAIN-SUFFIX,frdic.com,DIRECT
+  - DOMAIN-SUFFIX,g-cores.com,DIRECT
+  - DOMAIN-SUFFIX,godic.net,DIRECT
+  - DOMAIN-SUFFIX,gtimg.com,DIRECT
+  - DOMAIN,cdn.hockeyapp.net,DIRECT
+  - DOMAIN-SUFFIX,hongxiu.com,DIRECT
+  - DOMAIN-SUFFIX,hxcdn.net,DIRECT
+  - DOMAIN-SUFFIX,iciba.com,DIRECT
+  - DOMAIN-SUFFIX,ifeng.com,DIRECT
+  - DOMAIN-SUFFIX,ifengimg.com,DIRECT
+  - DOMAIN-SUFFIX,ipip.net,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,jianshu.com,DIRECT
+  - DOMAIN-SUFFIX,knewone.com,DIRECT
+  - DOMAIN-SUFFIX,le.com,DIRECT
+  - DOMAIN-SUFFIX,lecloud.com,DIRECT
+  - DOMAIN-SUFFIX,lemicp.com,DIRECT
+  - DOMAIN-SUFFIX,licdn.com,DIRECT
+  - DOMAIN-SUFFIX,luoo.net,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,mi.com,DIRECT
+  - DOMAIN-SUFFIX,miaopai.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+  - DOMAIN-SUFFIX,miui.com,DIRECT
+  - DOMAIN-SUFFIX,miwifi.com,DIRECT
+  - DOMAIN-SUFFIX,mob.com,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,office365.com,DIRECT
+  - DOMAIN-KEYWORD,officecdn,DIRECT
+  - DOMAIN-SUFFIX,oschina.net,DIRECT
+  - DOMAIN-SUFFIX,ppsimg.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,qcloud.com,DIRECT
+  - DOMAIN-SUFFIX,qdaily.com,DIRECT
+  - DOMAIN-SUFFIX,qdmm.com,DIRECT
+  - DOMAIN-SUFFIX,qhimg.com,DIRECT
+  - DOMAIN-SUFFIX,qhres.com,DIRECT
+  - DOMAIN-SUFFIX,qidian.com,DIRECT
+  - DOMAIN-SUFFIX,qihucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiniu.com,DIRECT
+  - DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiyipic.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,qqurl.com,DIRECT
+  - DOMAIN-SUFFIX,rarbg.to,DIRECT
+  - DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+  - DOMAIN-SUFFIX,segmentfault.com,DIRECT
+  - DOMAIN-SUFFIX,sinaapp.com,DIRECT
+  - DOMAIN-SUFFIX,smzdm.com,DIRECT
+  - DOMAIN-SUFFIX,snapdrop.net,DIRECT
+  - DOMAIN-SUFFIX,sogou.com,DIRECT
+  - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,soku.com,DIRECT
+  - DOMAIN-SUFFIX,speedtest.net,DIRECT
+  - DOMAIN-SUFFIX,sspai.com,DIRECT
+  - DOMAIN-SUFFIX,suning.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,tenpay.com,DIRECT
+  - DOMAIN-SUFFIX,tianyancha.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,tudou.com,DIRECT
+  - DOMAIN-SUFFIX,umetrip.com,DIRECT
+  - DOMAIN-SUFFIX,upaiyun.com,DIRECT
+  - DOMAIN-SUFFIX,upyun.com,DIRECT
+  - DOMAIN-SUFFIX,veryzhun.com,DIRECT
+  - DOMAIN-SUFFIX,weather.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.net,DIRECT
+  - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+  - DOMAIN-SUFFIX,ximalaya.com,DIRECT
+  - DOMAIN-SUFFIX,xmcdn.com,DIRECT
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - DOMAIN-SUFFIX,yhd.com,DIRECT
+  - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+  - DOMAIN-SUFFIX,yinxiang.com,DIRECT
+  - DOMAIN-SUFFIX,ykimg.com,DIRECT
+  - DOMAIN-SUFFIX,youdao.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,zealer.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,zhimg.com,DIRECT
+  - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+  - DOMAIN-SUFFIX,zoho.com,DIRECT
+  - DOMAIN-KEYWORD,amazon,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,google,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,gmail,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,youtube,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,facebook,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,fb.me,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,fbcdn.net,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,twitter,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,instagram,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,dropbox,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,twimg.com,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,blogspot,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,youtu.be,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,whatsapp,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,admarvel,REJECT
+  - DOMAIN-KEYWORD,admaster,REJECT
+  - DOMAIN-KEYWORD,adsage,REJECT
+  - DOMAIN-KEYWORD,adsmogo,REJECT
+  - DOMAIN-KEYWORD,adsrvmedia,REJECT
+  - DOMAIN-KEYWORD,adwords,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,appsflyer.com,REJECT
+  - DOMAIN-KEYWORD,domob,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-KEYWORD,duomeng,REJECT
+  - DOMAIN-KEYWORD,dwtrack,REJECT
+  - DOMAIN-KEYWORD,guanggao,REJECT
+  - DOMAIN-KEYWORD,lianmeng,REJECT
+  - DOMAIN-SUFFIX,mmstat.com,REJECT
+  - DOMAIN-KEYWORD,mopub,REJECT
+  - DOMAIN-KEYWORD,omgmta,REJECT
+  - DOMAIN-KEYWORD,openx,REJECT
+  - DOMAIN-KEYWORD,partnerad,REJECT
+  - DOMAIN-KEYWORD,pingfore,REJECT
+  - DOMAIN-KEYWORD,supersonicads,REJECT
+  - DOMAIN-KEYWORD,uedas,REJECT
+  - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-KEYWORD,usage,REJECT
+  - DOMAIN-SUFFIX,vungle.com,REJECT
+  - DOMAIN-KEYWORD,wlmonitor,REJECT
+  - DOMAIN-KEYWORD,zjtoolbar,REJECT
+  - DOMAIN-SUFFIX,9to5mac.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,abpchina.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,adblockplus.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,adobe.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,akamaized.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,alfredapp.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,amplitude.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ampproject.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,android.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,angularjs.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,aolcdn.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,apkpure.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,appledaily.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,appshopper.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,appspot.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,arcgis.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,archive.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,armorgames.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,aspnetcdn.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,att.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,awsstatic.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,azureedge.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,azurewebsites.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,bing.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,bintray.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,bit.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,bit.ly,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,bitbucket.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,bjango.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,bkrtx.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,blog.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,blogcdn.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,blogger.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,blogsmithmedia.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,blogspot.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,blogspot.hk,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,bloomberg.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,box.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,box.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,cachefly.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,chromium.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,cl.ly,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,cloudflare.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,cloudfront.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,cloudmagic.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,cmail19.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,cnet.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,cocoapods.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,comodoca.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,crashlytics.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,culturedcode.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,d.pr,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,danilo.to,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,dayone.me,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,db.tt,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,deskconnect.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,disq.us,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,disqus.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,disquscdn.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,dnsimple.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,docker.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,dribbble.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,droplr.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,duckduckgo.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,dueapp.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,dytt8.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,edgecastcdn.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,edgekey.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,edgesuite.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,engadget.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,entrust.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,eurekavpt.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,evernote.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,fabric.io,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,fast.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,fastly.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,fc2.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,feedburner.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,feedly.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,feedsportal.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,fiftythree.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,firebaseio.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,flexibits.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,flickr.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,flipboard.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,g.co,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,gabia.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,geni.us,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,gfx.ms,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ggpht.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ghostnoteapp.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,git.io,龙猫云 - TotoroCloud
+  - DOMAIN-KEYWORD,github,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,globalsign.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,gmodules.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,godaddy.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,golang.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,gongm.in,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,goo.gl,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,goodreaders.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,goodreads.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,gravatar.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,gstatic.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,gvt0.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,hockeyapp.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,hotmail.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,icons8.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ifixit.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ift.tt,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ifttt.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,iherb.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,imageshack.us,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,img.ly,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,imgur.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,imore.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,instapaper.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ipn.li,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,is.gd,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,issuu.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,itgonglun.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,itun.es,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ixquick.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,j.mp,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,js.revsci.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,jshint.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,jtvnw.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,justgetflux.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,kat.cr,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,klip.me,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,libsyn.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,linkedin.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,line-apps.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,linode.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,lithium.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,littlehj.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,live.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,live.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,livefilestore.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,llnwd.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,macid.co,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,macromedia.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,macrumors.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,mashable.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,mathjax.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,medium.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,mega.co.nz,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,mega.nz,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,megaupload.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,microsofttranslator.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,mindnode.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,mobile01.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,modmyi.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,msedge.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,myfontastic.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,name.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,nextmedia.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,nsstatic.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,nssurge.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,nyt.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,nytimes.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,omnigroup.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,onedrive.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,onenote.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ooyala.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,openvpn.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,openwrt.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,orkut.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,osxdaily.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,outlook.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ow.ly,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,paddleapi.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,parallels.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,parse.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,pdfexpert.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,periscope.tv,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,pinboard.in,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,pinterest.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,pixelmator.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,pixiv.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,playpcesor.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,playstation.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,playstation.com.hk,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,playstation.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,playstationnetwork.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,pushwoosh.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,rime.im,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,servebom.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,sfx.ms,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,shadowsocks.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,sharethis.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,shazam.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,skype.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,smartdns龙猫云 - TotoroCloud.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,smartmailcloud.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,sndcdn.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,sony.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,soundcloud.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,sourceforge.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,spotify.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,squarespace.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,sstatic.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,st.luluku.pw,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,stackoverflow.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,startpage.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,staticflickr.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,steamcommunity.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,symauth.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,symcb.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,symcd.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tapbots.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tapbots.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tdesktop.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,techcrunch.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,techsmith.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,thepiratebay.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,theverge.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,time.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,timeinc.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tiny.cc,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tinypic.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tmblr.co,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,todoist.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,trello.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,trustasiassl.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tumblr.co,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tumblr.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tweetdeck.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,tweetmarker.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,twitch.tv,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,txmblr.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,typekit.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ubertags.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ublock.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ubnt.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ulyssesapp.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,urchin.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,usertrust.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,v.gd,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,v2ex.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,vimeo.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,vimeocdn.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,vine.co,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,vivaldi.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,vox-cdn.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,vsco.co,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,vultr.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,w.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,w3schools.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,webtype.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wikiwand.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wikileaks.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wikimedia.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wikipedia.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wikipedia.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,windows.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,windows.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wire.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wordpress.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,workflowy.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wp.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wsj.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,wsj.net,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,xda-developers.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,xeeno.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,xiti.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,yahoo.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,yimg.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ying.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,yoyo.org,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,ytimg.com,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,telegra.ph,龙猫云 - TotoroCloud
+  - DOMAIN-SUFFIX,telegram.org,龙猫云 - TotoroCloud
+  - IP-CIDR,91.108.4.0/22,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,91.108.8.0/21,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,91.108.16.0/22,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,91.108.56.0/22,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,149.154.160.0/20,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR6,2001:67c:4e8::/48,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR6,2001:b28:f23d::/48,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR6,2001:b28:f23f::/48,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,120.232.181.162/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,120.241.147.226/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,120.253.253.226/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,120.253.255.162/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,120.253.255.34/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,120.253.255.98/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,180.163.150.162/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,180.163.150.34/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,180.163.151.162/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,180.163.151.34/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,203.208.39.0/24,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,203.208.40.0/24,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,203.208.41.0/24,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,203.208.43.0/24,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,203.208.50.0/24,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,220.181.174.162/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,220.181.174.226/32,龙猫云 - TotoroCloud,no-resolve
+  - IP-CIDR,220.181.174.34/32,龙猫云 - TotoroCloud,no-resolve
+  - DOMAIN,injections.adguard.org,DIRECT
+  - DOMAIN,local.adguard.org,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,龙猫云 - TotoroCloud
