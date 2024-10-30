@@ -1,0 +1,559 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：2024-10-30 10:02:44
+# 使用模版：ACL4SSR_Online_Mini_Ai.ini
+# 节点数量：66
+# 节点类型：vmess
+####################################
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"剩余流量：-648064.08 GB","type":"vmess","server":"256.256.256.256","port":80,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"套餐到期：长期有效","type":"vmess","server":"256.256.256.256","port":80,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"【请经常更新订阅】8.16","type":"vmess","server":"256.256.256.256","port":80,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"网址发布站【ssr.mom】","type":"vmess","server":"z3.fragranceninja.com","port":12907,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"郁垒「香港|传说」「专线X」","type":"vmess","server":"z3.fragranceninja.com","port":12960,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"九龙「香港|传说」「解锁」","type":"vmess","server":"z3.fragranceninja.com","port":13001,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"白虎「香港|传说」「原生」","type":"vmess","server":"z3.fragranceninja.com","port":12952,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"狮子「香港|传说」「解锁」","type":"vmess","server":"z3.fragranceninja.com","port":12901,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"神荼「香港|传说」「解锁」","type":"vmess","server":"z3.fragranceninja.com","port":12959,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"女娲「香港|传说」「原生」","type":"vmess","server":"z2.fragranceninja.com","port":12939,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"烛照「香港|传说」「解锁」","type":"vmess","server":"z8.fragranceninja.com","port":12909,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"炎帝「美国|传说」「专线Y」","type":"vmess","server":"z8.fragranceninja.com","port":12947,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"夸父「美国|传说」「解锁」","type":"vmess","server":"z8.fragranceninja.com","port":12934,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"帝喾「美国|传说」「解锁」","type":"vmess","server":"z8.fragranceninja.com","port":12956,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"盘古「美国|传说」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12942,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"泰逢「美国|传说」「专线Z」","type":"vmess","server":"z8.fragranceninja.com","port":12961,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"轩辕「美国|传说」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12935,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"蚩尤「美国|传说」「解锁」","type":"vmess","server":"z6.fragranceninja.com","port":12920,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"幽莹「美国|传说」IP属地","type":"vmess","server":"z8.fragranceninja.com","port":12908,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"歌姬「美国|史诗」「测试」","type":"vmess","server":"z8.fragranceninja.com","port":12930,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"白宫「美国|传说」「专线Y」","type":"vmess","server":"z6.fragranceninja.com","port":12946,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"伏羲「美国|传说」「专线Y」","type":"vmess","server":"z6.fragranceninja.com","port":12933,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"鲲「日本|传说」「解锁」","type":"vmess","server":"z8.fragranceninja.com","port":12929,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"青衣「日本|传说」「专线Z」","type":"vmess","server":"z6.fragranceninja.com","port":12940,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"瑶「日本|传说」「解锁」","type":"vmess","server":"z2.fragranceninja.com","port":12955,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"姬「日本|传说」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12931,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"女妭「日本|传说」「专线X」","type":"vmess","server":"z6.fragranceninja.com","port":12974,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"巫女「日本|传说」「解锁」","type":"vmess","server":"z6.fragranceninja.com","port":12928,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"黑森林「新加坡|传说」","type":"vmess","server":"z2.fragranceninja.com","port":12926,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"狮城「新加坡|传说」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12954,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"青龙「新加坡|传说」「专线Z」","type":"vmess","server":"z2.fragranceninja.com","port":12938,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"南洋「新加坡|传说」「解锁」","type":"vmess","server":"z2.fragranceninja.com","port":12953,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"担仔面「台湾|传说」「原生」","type":"vmess","server":"z6.fragranceninja.com","port":12943,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"日月潭「台湾|解锁」","type":"vmess","server":"z2.fragranceninja.com","port":12945,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"射手「韩国|史诗」","type":"vmess","server":"z8.fragranceninja.com","port":13007,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"刑天「韩国|传说」「专线X」","type":"vmess","server":"z6.fragranceninja.com","port":12951,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"梼杌「俄罗斯|传说」","type":"vmess","server":"z8.fragranceninja.com","port":12910,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"共工「菲律宾｜传说」「专线Z」","type":"vmess","server":"z3.fragranceninja.com","port":12962,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"力牧「菲律宾|传说」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12971,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"穷奇「马来西亚|传说」","type":"vmess","server":"z2.fragranceninja.com","port":12912,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"神农「马来西亚|传说」「专线X」","type":"vmess","server":"z3.fragranceninja.com","port":12958,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"常先「印尼|史诗」「专线Z」","type":"vmess","server":"z2.fragranceninja.com","port":12968,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"胡志明「越南|史诗」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12949,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"毕星「泰国|传说」「专线X」","type":"vmess","server":"z3.fragranceninja.com","port":12970,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"夸娥氏「印度|史诗」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12975,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"深田「澳洲|史诗」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12925,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"大鸿「英国|史诗」「专线X」","type":"vmess","server":"z6.fragranceninja.com","port":12972,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"风后「英国|史诗」「专线Y」","type":"vmess","server":"z8.fragranceninja.com","port":12973,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"白羊「英国|史诗」","type":"vmess","server":"z2.fragranceninja.com","port":12900,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"天蝎「德国|传说」「专线X」","type":"vmess","server":"z8.fragranceninja.com","port":13006,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"卢浮宫「法国|史诗」IP属地","type":"vmess","server":"z6.fragranceninja.com","port":12950,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"赤松子「荷兰|史诗」「专线Z」","type":"vmess","server":"z2.fragranceninja.com","port":12969,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"水瓶「比利时|史诗」","type":"vmess","server":"z2.fragranceninja.com","port":13004,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"天秤「西班牙|史诗」「专线Z」","type":"vmess","server":"z6.fragranceninja.com","port":12903,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"新垣「土耳其|史诗」「专线Z」","type":"vmess","server":"z2.fragranceninja.com","port":12941,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"侍女「迪拜|史诗」「专线X」","type":"vmess","server":"z2.fragranceninja.com","port":12936,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"瑶姬「阿根廷|史诗」「专线Z」","type":"vmess","server":"z8.fragranceninja.com","port":12967,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"黄帝「巴西|史诗」「专线Y」","type":"vmess","server":"z8.fragranceninja.com","port":12922,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"饕餮「墨西哥|传说」「专线Y」","type":"vmess","server":"z8.fragranceninja.com","port":12937,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"处女「加拿大|史诗」IP属地","type":"vmess","server":"z8.fragranceninja.com","port":12902,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"玄武「美国」「海外专用」","type":"vmess","server":"44.lwdh.us","port":12934,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"巨蟹「日本」「海外专用」","type":"vmess","server":"41.lwdh.us","port":12931,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"祝融「香港」「海外专用」","type":"vmess","server":"19.lwdh.us","port":12909,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"箕伯「台湾」「海外专用」","type":"vmess","server":"55.lwdh.us","port":12945,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+  - {"name":"摩羯「新加坡」「海外专用」","type":"vmess","server":"63.lwdh.us","port":12953,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"双子「俄罗斯」「海外专用」","type":"vmess","server":"22.lwdh.us","port":12910,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 剩余流量：-648064.08 GB
+      - 套餐到期：长期有效
+      - 【请经常更新订阅】8.16
+      - 网址发布站【ssr.mom】
+      - 郁垒「香港|传说」「专线X」
+      - 九龙「香港|传说」「解锁」
+      - 白虎「香港|传说」「原生」
+      - 狮子「香港|传说」「解锁」
+      - 神荼「香港|传说」「解锁」
+      - 女娲「香港|传说」「原生」
+      - 烛照「香港|传说」「解锁」
+      - 炎帝「美国|传说」「专线Y」
+      - 夸父「美国|传说」「解锁」
+      - 帝喾「美国|传说」「解锁」
+      - 盘古「美国|传说」「专线X」
+      - 泰逢「美国|传说」「专线Z」
+      - 轩辕「美国|传说」「专线X」
+      - 蚩尤「美国|传说」「解锁」
+      - 幽莹「美国|传说」IP属地
+      - 歌姬「美国|史诗」「测试」
+      - 白宫「美国|传说」「专线Y」
+      - 伏羲「美国|传说」「专线Y」
+      - 鲲「日本|传说」「解锁」
+      - 青衣「日本|传说」「专线Z」
+      - 瑶「日本|传说」「解锁」
+      - 姬「日本|传说」「专线X」
+      - 女妭「日本|传说」「专线X」
+      - 巫女「日本|传说」「解锁」
+      - 黑森林「新加坡|传说」
+      - 狮城「新加坡|传说」「专线X」
+      - 青龙「新加坡|传说」「专线Z」
+      - 南洋「新加坡|传说」「解锁」
+      - 担仔面「台湾|传说」「原生」
+      - 日月潭「台湾|解锁」
+      - 射手「韩国|史诗」
+      - 刑天「韩国|传说」「专线X」
+      - 梼杌「俄罗斯|传说」
+      - 共工「菲律宾｜传说」「专线Z」
+      - 力牧「菲律宾|传说」「专线X」
+      - 穷奇「马来西亚|传说」
+      - 神农「马来西亚|传说」「专线X」
+      - 常先「印尼|史诗」「专线Z」
+      - 胡志明「越南|史诗」「专线X」
+      - 毕星「泰国|传说」「专线X」
+      - 夸娥氏「印度|史诗」「专线X」
+      - 深田「澳洲|史诗」「专线X」
+      - 大鸿「英国|史诗」「专线X」
+      - 风后「英国|史诗」「专线Y」
+      - 白羊「英国|史诗」
+      - 天蝎「德国|传说」「专线X」
+      - 卢浮宫「法国|史诗」IP属地
+      - 赤松子「荷兰|史诗」「专线Z」
+      - 水瓶「比利时|史诗」
+      - 天秤「西班牙|史诗」「专线Z」
+      - 新垣「土耳其|史诗」「专线Z」
+      - 侍女「迪拜|史诗」「专线X」
+      - 瑶姬「阿根廷|史诗」「专线Z」
+      - 黄帝「巴西|史诗」「专线Y」
+      - 饕餮「墨西哥|传说」「专线Y」
+      - 处女「加拿大|史诗」IP属地
+      - 玄武「美国」「海外专用」
+      - 巨蟹「日本」「海外专用」
+      - 祝融「香港」「海外专用」
+      - 箕伯「台湾」「海外专用」
+      - 摩羯「新加坡」「海外专用」
+      - 双子「俄罗斯」「海外专用」
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 剩余流量：-648064.08 GB
+      - 套餐到期：长期有效
+      - 【请经常更新订阅】8.16
+      - 网址发布站【ssr.mom】
+      - 郁垒「香港|传说」「专线X」
+      - 九龙「香港|传说」「解锁」
+      - 白虎「香港|传说」「原生」
+      - 狮子「香港|传说」「解锁」
+      - 神荼「香港|传说」「解锁」
+      - 女娲「香港|传说」「原生」
+      - 烛照「香港|传说」「解锁」
+      - 炎帝「美国|传说」「专线Y」
+      - 夸父「美国|传说」「解锁」
+      - 帝喾「美国|传说」「解锁」
+      - 盘古「美国|传说」「专线X」
+      - 泰逢「美国|传说」「专线Z」
+      - 轩辕「美国|传说」「专线X」
+      - 蚩尤「美国|传说」「解锁」
+      - 幽莹「美国|传说」IP属地
+      - 歌姬「美国|史诗」「测试」
+      - 白宫「美国|传说」「专线Y」
+      - 伏羲「美国|传说」「专线Y」
+      - 鲲「日本|传说」「解锁」
+      - 青衣「日本|传说」「专线Z」
+      - 瑶「日本|传说」「解锁」
+      - 姬「日本|传说」「专线X」
+      - 女妭「日本|传说」「专线X」
+      - 巫女「日本|传说」「解锁」
+      - 黑森林「新加坡|传说」
+      - 狮城「新加坡|传说」「专线X」
+      - 青龙「新加坡|传说」「专线Z」
+      - 南洋「新加坡|传说」「解锁」
+      - 担仔面「台湾|传说」「原生」
+      - 日月潭「台湾|解锁」
+      - 射手「韩国|史诗」
+      - 刑天「韩国|传说」「专线X」
+      - 梼杌「俄罗斯|传说」
+      - 共工「菲律宾｜传说」「专线Z」
+      - 力牧「菲律宾|传说」「专线X」
+      - 穷奇「马来西亚|传说」
+      - 神农「马来西亚|传说」「专线X」
+      - 常先「印尼|史诗」「专线Z」
+      - 胡志明「越南|史诗」「专线X」
+      - 毕星「泰国|传说」「专线X」
+      - 夸娥氏「印度|史诗」「专线X」
+      - 深田「澳洲|史诗」「专线X」
+      - 大鸿「英国|史诗」「专线X」
+      - 风后「英国|史诗」「专线Y」
+      - 白羊「英国|史诗」
+      - 天蝎「德国|传说」「专线X」
+      - 卢浮宫「法国|史诗」IP属地
+      - 赤松子「荷兰|史诗」「专线Z」
+      - 水瓶「比利时|史诗」
+      - 天秤「西班牙|史诗」「专线Z」
+      - 新垣「土耳其|史诗」「专线Z」
+      - 侍女「迪拜|史诗」「专线X」
+      - 瑶姬「阿根廷|史诗」「专线Z」
+      - 黄帝「巴西|史诗」「专线Y」
+      - 饕餮「墨西哥|传说」「专线Y」
+      - 处女「加拿大|史诗」IP属地
+      - 玄武「美国」「海外专用」
+      - 巨蟹「日本」「海外专用」
+      - 祝融「香港」「海外专用」
+      - 箕伯「台湾」「海外专用」
+      - 摩羯「新加坡」「海外专用」
+      - 双子「俄罗斯」「海外专用」
+  - name: 💬 OpenAi
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 剩余流量：-648064.08 GB
+      - 套餐到期：长期有效
+      - 【请经常更新订阅】8.16
+      - 网址发布站【ssr.mom】
+      - 郁垒「香港|传说」「专线X」
+      - 九龙「香港|传说」「解锁」
+      - 白虎「香港|传说」「原生」
+      - 狮子「香港|传说」「解锁」
+      - 神荼「香港|传说」「解锁」
+      - 女娲「香港|传说」「原生」
+      - 烛照「香港|传说」「解锁」
+      - 炎帝「美国|传说」「专线Y」
+      - 夸父「美国|传说」「解锁」
+      - 帝喾「美国|传说」「解锁」
+      - 盘古「美国|传说」「专线X」
+      - 泰逢「美国|传说」「专线Z」
+      - 轩辕「美国|传说」「专线X」
+      - 蚩尤「美国|传说」「解锁」
+      - 幽莹「美国|传说」IP属地
+      - 歌姬「美国|史诗」「测试」
+      - 白宫「美国|传说」「专线Y」
+      - 伏羲「美国|传说」「专线Y」
+      - 鲲「日本|传说」「解锁」
+      - 青衣「日本|传说」「专线Z」
+      - 瑶「日本|传说」「解锁」
+      - 姬「日本|传说」「专线X」
+      - 女妭「日本|传说」「专线X」
+      - 巫女「日本|传说」「解锁」
+      - 黑森林「新加坡|传说」
+      - 狮城「新加坡|传说」「专线X」
+      - 青龙「新加坡|传说」「专线Z」
+      - 南洋「新加坡|传说」「解锁」
+      - 担仔面「台湾|传说」「原生」
+      - 日月潭「台湾|解锁」
+      - 射手「韩国|史诗」
+      - 刑天「韩国|传说」「专线X」
+      - 梼杌「俄罗斯|传说」
+      - 共工「菲律宾｜传说」「专线Z」
+      - 力牧「菲律宾|传说」「专线X」
+      - 穷奇「马来西亚|传说」
+      - 神农「马来西亚|传说」「专线X」
+      - 常先「印尼|史诗」「专线Z」
+      - 胡志明「越南|史诗」「专线X」
+      - 毕星「泰国|传说」「专线X」
+      - 夸娥氏「印度|史诗」「专线X」
+      - 深田「澳洲|史诗」「专线X」
+      - 大鸿「英国|史诗」「专线X」
+      - 风后「英国|史诗」「专线Y」
+      - 白羊「英国|史诗」
+      - 天蝎「德国|传说」「专线X」
+      - 卢浮宫「法国|史诗」IP属地
+      - 赤松子「荷兰|史诗」「专线Z」
+      - 水瓶「比利时|史诗」
+      - 天秤「西班牙|史诗」「专线Z」
+      - 新垣「土耳其|史诗」「专线Z」
+      - 侍女「迪拜|史诗」「专线X」
+      - 瑶姬「阿根廷|史诗」「专线Z」
+      - 黄帝「巴西|史诗」「专线Y」
+      - 饕餮「墨西哥|传说」「专线Y」
+      - 处女「加拿大|史诗」IP属地
+      - 玄武「美国」「海外专用」
+      - 巨蟹「日本」「海外专用」
+      - 祝融「香港」「海外专用」
+      - 箕伯「台湾」「海外专用」
+      - 摩羯「新加坡」「海外专用」
+      - 双子「俄罗斯」「海外专用」
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 剩余流量：-648064.08 GB
+      - 套餐到期：长期有效
+      - 【请经常更新订阅】8.16
+      - 网址发布站【ssr.mom】
+      - 郁垒「香港|传说」「专线X」
+      - 九龙「香港|传说」「解锁」
+      - 白虎「香港|传说」「原生」
+      - 狮子「香港|传说」「解锁」
+      - 神荼「香港|传说」「解锁」
+      - 女娲「香港|传说」「原生」
+      - 烛照「香港|传说」「解锁」
+      - 炎帝「美国|传说」「专线Y」
+      - 夸父「美国|传说」「解锁」
+      - 帝喾「美国|传说」「解锁」
+      - 盘古「美国|传说」「专线X」
+      - 泰逢「美国|传说」「专线Z」
+      - 轩辕「美国|传说」「专线X」
+      - 蚩尤「美国|传说」「解锁」
+      - 幽莹「美国|传说」IP属地
+      - 歌姬「美国|史诗」「测试」
+      - 白宫「美国|传说」「专线Y」
+      - 伏羲「美国|传说」「专线Y」
+      - 鲲「日本|传说」「解锁」
+      - 青衣「日本|传说」「专线Z」
+      - 瑶「日本|传说」「解锁」
+      - 姬「日本|传说」「专线X」
+      - 女妭「日本|传说」「专线X」
+      - 巫女「日本|传说」「解锁」
+      - 黑森林「新加坡|传说」
+      - 狮城「新加坡|传说」「专线X」
+      - 青龙「新加坡|传说」「专线Z」
+      - 南洋「新加坡|传说」「解锁」
+      - 担仔面「台湾|传说」「原生」
+      - 日月潭「台湾|解锁」
+      - 射手「韩国|史诗」
+      - 刑天「韩国|传说」「专线X」
+      - 梼杌「俄罗斯|传说」
+      - 共工「菲律宾｜传说」「专线Z」
+      - 力牧「菲律宾|传说」「专线X」
+      - 穷奇「马来西亚|传说」
+      - 神农「马来西亚|传说」「专线X」
+      - 常先「印尼|史诗」「专线Z」
+      - 胡志明「越南|史诗」「专线X」
+      - 毕星「泰国|传说」「专线X」
+      - 夸娥氏「印度|史诗」「专线X」
+      - 深田「澳洲|史诗」「专线X」
+      - 大鸿「英国|史诗」「专线X」
+      - 风后「英国|史诗」「专线Y」
+      - 白羊「英国|史诗」
+      - 天蝎「德国|传说」「专线X」
+      - 卢浮宫「法国|史诗」IP属地
+      - 赤松子「荷兰|史诗」「专线Z」
+      - 水瓶「比利时|史诗」
+      - 天秤「西班牙|史诗」「专线Z」
+      - 新垣「土耳其|史诗」「专线Z」
+      - 侍女「迪拜|史诗」「专线X」
+      - 瑶姬「阿根廷|史诗」「专线Z」
+      - 黄帝「巴西|史诗」「专线Y」
+      - 饕餮「墨西哥|传说」「专线Y」
+      - 处女「加拿大|史诗」IP属地
+      - 玄武「美国」「海外专用」
+      - 巨蟹「日本」「海外专用」
+      - 祝融「香港」「海外专用」
+      - 箕伯「台湾」「海外专用」
+      - 摩羯「新加坡」「海外专用」
+      - 双子「俄罗斯」「海外专用」
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/LocalAreaNetwork.list
+  UnBan:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/UnBan.list
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanAD.list
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/BanProgramAD.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/GoogleCN.list
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/SteamCN.list
+  OpenAi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/OpenAi.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/Telegram.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyMedia.list
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ProxyLite.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    format: text
+    interval: 3600
+    path: ./ACL4SSR/ACL4SSR/ChinaCompanyIp.list
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,UnBan,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,OpenAi,💬 OpenAi
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
