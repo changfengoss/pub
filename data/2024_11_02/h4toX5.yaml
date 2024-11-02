@@ -1,0 +1,3924 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: silent
+proxies:
+  - name: "@DeamNet_1_1"
+    type: vmess
+    server: 188.114.97.3
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms16v.bestxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+
+  - name: "@DeamNet_1002_6"
+    type: trojan
+    server: 104.21.50.5
+    port: 443
+    password: 9yu6m5okr
+    udp: true
+    servername: production.tj.ojan.workers.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: production.tj.ojan.workers.dev
+
+  - name: "@DeamNet_101_14"
+    type: vmess
+    server: us3e-mmnnfr9dop0.v2freevpn.com
+    port: 80
+    uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /v118-fccxmxm35
+      headers:
+        Host: us3e-mmnnfr9dop0.v2freevpn.com
+
+  - name: "@DeamNet_1020_26"
+    type: trojan
+    server: 162.159.135.232
+    port: 8443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_1022_28"
+    type: vmess
+    server: 188.114.96.6
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms16v.bestxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+
+  - name: "@DeamNet_1038_45"
+    type: vmess
+    server: 104.16.60.8
+    port: 2086
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: r-wispy-meadow-9221.fosoka9932.workers.dev
+
+  - name: "@DeamNet_104_47"
+    type: vmess
+    server: 104.21.55.234
+    port: 443
+    uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: gwdef.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: gwdef.sbs
+
+  - name: "@DeamNet_1045_53"
+    type: vmess
+    server: 104.16.60.8
+    port: 8443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: late-wave-1d0a.lesijo3430.workers.dev
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: late-wave-1d0a.lesijo3430.workers.dev
+
+  - name: "@DeamNet_105_58"
+    type: vmess
+    server: s1c.v2.v001sss.xyz
+    port: 2082
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+
+  - name: "@DeamNet_1050_59"
+    type: vmess
+    server: 104.21.31.62
+    port: 443
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: obdii.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: obdii.cfd
+
+  - name: "@DeamNet_1059_68"
+    type: vmess
+    server: 104.21.24.170
+    port: 443
+    uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: adenc36v.xtooltech.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: adenc36v.xtooltech.cfd
+
+  - name: "@DeamNet_1067_77"
+    type: vmess
+    server: 104.17.27.198
+    port: 443
+    uuid: 4804f14b-c1f8-452d-a6ec-eff1490aeac9
+    alterId: 0
+    cipher: chacha20-poly1305
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hdfy6c5.cpionline.co
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "lRkGCkYS9X5GFzoZoavn2kmJ"
+
+  - name: "@DeamNet_1072_83"
+    type: vmess
+    server: 104.16.61.8
+    port: 2086
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: y-old-mode-9c0diab.wiriy73548.workers.dev
+
+  - name: "@DeamNet_1074_85"
+    type: ss
+    server: mynode.work.gd
+    port: 20088
+    cipher: chacha20-ietf-poly1305
+    password: ڦʺl٬TJ1q8DFgǪǥ
+    udp: true
+
+  - name: "@DeamNet_1094_105"
+    type: vmess
+    server: 185.146.173.95
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_1096_107"
+    type: trojan
+    server: 104.19.159.12
+    port: 443
+    password: 242a3d8eee5e4ed1a6bfa4141d549a25
+    udp: true
+    servername: jobscareertoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareertoday.com
+
+  - name: "@DeamNet_11_111"
+    type: vmess
+    server: afrhms16v.bestxray.buzz
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms16v.bestxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+
+  - name: "@DeamNet_1102_115"
+    type: vmess
+    server: denc36.xtooltech.cfd
+    port: 443
+    uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: adenc36v.xtooltech.cfd
+
+  - name: "@DeamNet_1106_119"
+    type: vmess
+    server: 185.146.173.158
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_1107_120"
+    type: vmess
+    server: 172.66.213.38
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: green-morning-ce19.mehdipost667.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: green-morning-ce19.mehdipost667.workers.dev
+
+  - name: "@DeamNet_1128_143"
+    type: vmess
+    server: lin0502.hwcar.sbs
+    port: 443
+    uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linja05.hwcar.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linja05.hwcar.sbs
+
+  - name: "@DeamNet_1139_155"
+    type: vmess
+    server: 104.16.60.8
+    port: 8880
+    uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /ivideos.sbs/linkws
+      headers:
+        Host: nd-truth-210a8hwjhs.bonar11011.workers.dev
+
+  - name: "@DeamNet_1142_159"
+    type: vmess
+    server: 104.16.67.38
+    port: 2096
+    uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: wormay18khodayatainlahzehshokret.abza.workers.dev
+    network: ws
+    ws-opts:
+      path: /1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top/azumase.ren
+      headers:
+        Host: wormay18khodayatainlahzehshokret.abza.workers.dev
+
+  - name: "@DeamNet_1155_173"
+    type: vmess
+    server: 104.21.48.84
+    port: 443
+    uuid: 4804f14b-c1f8-452d-a6ec-eff1490aeac9
+    alterId: 0
+    cipher: chacha20-poly1305
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hdfy6c5.cpionline.co
+    network: ws
+    ws-opts:
+      path: /lRkGCkYS9X5GDNJYMWXN7kCm3lL
+      headers:
+        Host: hdfy6c5.cpionline.co
+
+  - name: "@DeamNet_1159_177"
+    type: vmess
+    server: beyonddbc.sbs
+    port: 443
+    uuid: 8d90c129-4156-4d6c-9115-24df25f26a02
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: beyonddbc.sbs
+
+  - name: "@DeamNet_1172_192"
+    type: vmess
+    server: 172.67.138.140
+    port: 443
+    uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: ivideos.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: ivideos.sbs
+
+  - name: "@DeamNet_118_200"
+    type: vmess
+    server: 104.16.60.8
+    port: 8080
+    uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /afrhms07.xfixedfloat.cfd/linkws
+      headers:
+        Host: vpnsupportfast.vpnsuortfast.workers.dev
+
+  - name: "@DeamNet_1194_215"
+    type: vmess
+    server: 104.16.67.38
+    port: 2082
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: r-wispy-meadow-9221.fosoka9932.workers.dev
+
+  - name: "@DeamNet_1197_218"
+    type: ss
+    server: 81.19.141.45
+    port: 52873
+    cipher: chacha20-ietf-poly1305
+    password: Qvt8qes1q1OwmTuFzrBc7I
+    udp: true
+
+  - name: "@DeamNet_1199_220"
+    type: vmess
+    server: 104.16.61.8
+    port: 2083
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: ury-unit-c030ehei8.poget71138.workers.dev
+    network: ws
+    ws-opts:
+      path: /obdii.cfd/linkws
+      headers:
+        Host: ury-unit-c030ehei8.poget71138.workers.dev
+
+  - name: "@DeamNet_12_221"
+    type: vmess
+    server: 104.16.61.8
+    port: 2052
+    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /glweidf.sbs/linkws
+      headers:
+        Host: free.fnet00.workers.dev
+
+  - name: "@DeamNet_120_222"
+    type: trojan
+    server: 198.41.220.20
+    port: 443
+    password: e8105dfd24414268b6c7652c63731097
+    udp: true
+    servername: avianrecruit.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: avianrecruit.com
+
+  - name: "@DeamNet_1202_225"
+    type: trojan
+    server: 172.67.174.252
+    port: 443
+    password: auto
+    udp: true
+    servername: esetsecuritylicense1.vowexa5791.workers.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: esetsecuritylicense1.vowexa5791.workers.dev
+
+  - name: "@DeamNet_1203_226"
+    type: vmess
+    server: 104.16.61.8
+    port: 2086
+    uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /ivideos.sbs/linkws
+      headers:
+        Host: vmess.taxar71054.workers.dev
+
+  - name: "@DeamNet_1212_236"
+    type: ss
+    server: 81.19.141.45
+    port: 52873
+    cipher: chacha20-ietf-poly1305
+    password: AqKTKaZ0yjR4NLQE8Y17Zu
+    udp: true
+
+  - name: "@DeamNet_1214_238"
+    type: trojan
+    server: zula.ir
+    port: 2096
+    password: b12f4be0-e874-568e-954f-942dcc3a67e9
+    udp: true
+    servername: trojan.trojan0.woRkeRS.deV
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /trojan-ws/?ed=2048
+      headers:
+        Host: trojan.trojan0.woRkeRS.deV
+
+  - name: "@DeamNet_1229_254"
+    type: vmess
+    server: 188.114.96.3
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_123_255"
+    type: vmess
+    server: onea.flha.ru
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+
+  - name: "@DeamNet_1248_275"
+    type: ss
+    server: 64.227.144.190
+    port: 50690
+    cipher: chacha20-ietf-poly1305
+    password: o0aIoQx9HZoWGHlhfAc37X
+    udp: true
+
+  - name: "@DeamNet_125_277"
+    type: trojan
+    server: 104.19.171.7
+    port: 443
+    password: 984e400bf5d541b7b0815913fe0c432a
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_1250_278"
+    type: vmess
+    server: 38.75.137.27
+    port: 22324
+    uuid: 04621bae-ab36-11ec-b909-0242ac120002
+    alterId: 0
+    cipher: auto
+    udp: true
+
+  - name: "@DeamNet_1251_279"
+    type: trojan
+    server: 94.131.122.157
+    port: 2053
+    password: 6d25dd28-80a4-4f63-80c6-f36d6ce1d25f
+    udp: true
+    servername: 
+    skip-cert-verify: true
+
+  - name: "@DeamNet_1253_281"
+    type: vmess
+    server: gcore-bwg.1929585.xyz
+    port: 443
+    uuid: 4ffb2fa9-d321-4a73-8d5f-1d6c37b4a683
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /ab
+
+  - name: "@DeamNet_1254_282"
+    type: vmess
+    server: 147.78.140.30
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 4868-poetry-4868.napora7003.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: 4868-poetry-4868.napora7003.workers.dev
+
+  - name: "@DeamNet_126_288"
+    type: vmess
+    server: zula.ir
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_1261_290"
+    type: vmess
+    server: 104.21.74.239
+    port: 443
+    uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms07.xfixedfloat.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms07.xfixedfloat.cfd
+
+  - name: "@DeamNet_1265_294"
+    type: vmess
+    server: 104.16.61.8
+    port: 2052
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: r-wispy-meadow-9221.fosoka9932.workers.dev
+
+  - name: "@DeamNet_127_299"
+    type: vmess
+    server: upload.ir
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms16v.bestxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+
+  - name: "@DeamNet_1275_305"
+    type: vmess
+    server: 104.16.61.8
+    port: 2086
+    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /glweidf.sbs/linkws
+      headers:
+        Host: 6ba6-sound-6ba6.siliy37818.workers.dev
+
+  - name: "@DeamNet_1277_306"
+    type: trojan
+    server: 188.114.99.222
+    port: 443
+    password: auto
+    udp: true
+    servername: migekehcode27.kiwaja6458.workers.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: migekehcode27.kiwaja6458.workers.dev
+
+  - name: "@DeamNet_1279_308"
+    type: ss
+    server: 77.83.246.74
+    port: 33320
+    cipher: chacha20-ietf-poly1305
+    password: SQj0SiArKuBiIzcrPCvr5j
+    udp: true
+
+  - name: "@DeamNet_1283_313"
+    type: vmess
+    server: 50.114.243.61
+    port: 43834
+    uuid: b246e34d-bbd1-4016-8f74-ea461c37e411
+    alterId: 0
+    cipher: auto
+    udp: true
+
+  - name: "@DeamNet_1288_318"
+    type: ss
+    server: 81.19.141.45
+    port: 52873
+    cipher: chacha20-ietf-poly1305
+    password: Zx3PtvlHKWXwBpifHwpqW0
+    udp: true
+
+  - name: "@DeamNet_129_320"
+    type: vmess
+    server: 104.19.45.202
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_1293_324"
+    type: vmess
+    server: 104.17.245.1
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worgold21yagranghadeyaakbarshokretbozorg.abza.workers.dev
+    network: ws
+    ws-opts:
+      path: /linde06.indiavideo.sbs/linkws
+      headers:
+        Host: worgold21yagranghadeyaakbarshokretbozorg.abza.workers.dev
+
+  - name: "@DeamNet_1303_336"
+    type: ss
+    server: exchange.gameaurela.click
+    port: 52952
+    cipher: chacha20-ietf-poly1305
+    password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
+    udp: true
+
+  - name: "@DeamNet_1316_350"
+    type: vmess
+    server: 188.114.96.5
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+
+  - name: "@DeamNet_1318_352"
+    type: vmess
+    server: 104.16.67.38
+    port: 2095
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: r-wispy-meadow-9221.fosoka9932.workers.dev
+
+  - name: "@DeamNet_132_354"
+    type: vmess
+    server: 195.85.59.22
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 8shhebsj78wjisnbhsjvess-pond-6cc6.cerog91216.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: 8shhebsj78wjisnbhsjvess-pond-6cc6.cerog91216.workers.dev
+
+  - name: "@DeamNet_1345_382"
+    type: vmess
+    server: 50.114.243.61
+    port: 43834
+    uuid: b246e34d-bbd1-4016-8f74-ea461c37e411
+    alterId: 0
+    cipher: auto
+    udp: true
+
+  - name: "@DeamNet_1347_384"
+    type: vmess
+    server: Back.MsV2ray.online
+    port: 80
+    uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /hms02.fxiaomi.sbs/link
+      headers:
+        Host: range-shape-b3fuegu.bananok182.workers.dev
+
+  - name: "@DeamNet_1348_385"
+    type: vmess
+    server: 162.159.153.2
+    port: 443
+    uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: xmivideo.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: xmivideo.cfd
+
+  - name: "@DeamNet_1359_397"
+    type: ss
+    server: exchange.gameaurela.click
+    port: 52952
+    cipher: chacha20-ietf-poly1305
+    password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
+    udp: true
+
+  - name: "@DeamNet_136_398"
+    type: trojan
+    server: w3.org
+    port: 443
+    password: 2cba4104747d49d18319e5ade1b93ab5
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_14_406"
+    type: vmess
+    server: hms02opi.fxiaomi.sbs
+    port: 443
+    uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hms02.fxiaomi.sbs
+    network: ws
+    ws-opts:
+      path: /link
+      headers:
+        Host: hms02.fxiaomi.sbs
+
+  - name: "@DeamNet_144_411"
+    type: trojan
+    server: 104.17.147.8
+    port: 443
+    password: 4aec4e7f8cf8454ea4613659822e1a61
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_147_414"
+    type: vmess
+    server: afrhms16v.bestxray.buzz
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+
+  - name: "@DeamNet_150_417"
+    type: vmess
+    server: 104.16.60.8
+    port: 2053
+    uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: vpnsupportfast.vpnsuortfast.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms07.xfixedfloat.cfd/linkws
+      headers:
+        Host: vpnsupportfast.vpnsuortfast.workers.dev
+
+  - name: "@DeamNet_152_419"
+    type: trojan
+    server: 104.16.192.155
+    port: 443
+    password: e8105dfd24414268b6c7652c63731097
+    udp: true
+    servername: jobscareerfortoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerfortoday.com
+
+  - name: "@DeamNet_155_422"
+    type: trojan
+    server: 198.41.220.14
+    port: 443
+    password: b4e8771997c94732acbc9ec4d19c2589
+    udp: true
+    servername: avianrecruit.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: avianrecruit.com
+
+  - name: "@DeamNet_157_424"
+    type: vmess
+    server: 104.19.45.137
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_158_425"
+    type: vmess
+    server: 104.16.60.8
+    port: 2053
+    uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: vpnsupportfast.vpnsuortfast.workers.dev
+    network: ws
+    ws-opts:
+      path: /ivideos.sbs/linkws
+      headers:
+        Host: vpnsupportfast.vpnsuortfast.workers.dev
+
+  - name: "@DeamNet_16_427"
+    type: vmess
+    server: jahfkjha.cfd
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_161_429"
+    type: trojan
+    server: 172.67.2.238
+    port: 2083
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_172_441"
+    type: vmess
+    server: 108.181.200.220
+    port: 50613
+    uuid: 09e81eaa-d298-432c-e7b6-17add32d14fc
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+
+  - name: "@DeamNet_175_444"
+    type: vmess
+    server: hms02opi.fxiaomi.sbs
+    port: 443
+    uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /link
+      headers:
+        Host: hms02.fxiaomi.sbs
+
+  - name: "@DeamNet_177_446"
+    type: vmess
+    server: 172.67.196.112
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+
+  - name: "@DeamNet_178_447"
+    type: vmess
+    server: us3e-mmnnfr9dop0.v2freevpn.com
+    port: 80
+    uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /v118-fccxmxm35
+
+  - name: "@DeamNet_179_448"
+    type: trojan
+    server: 198.41.220.83
+    port: 443
+    password: e8105dfd24414268b6c7652c63731097
+    udp: true
+    servername: jobscareertoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareertoday.com
+
+  - name: "@DeamNet_18_449"
+    type: ss
+    server: series-a2.varzesh360.co
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: mps3FwmDjLrWaOVg
+    udp: true
+
+  - name: "@DeamNet_184_454"
+    type: vmess
+    server: 95.179.128.114
+    port: 80
+    uuid: a6292090-afe1-4640-97a7-4f1d1d877cf1
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /Av8czorIlYicU6D349brWUw6a
+      headers:
+        Host: 95.179.128.114
+
+  - name: "@DeamNet_19_460"
+    type: vmess
+    server: 104.16.60.8
+    port: 2095
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /obdii.cfd/linkws
+      headers:
+        Host: xxxxx73cream-073cxxxxxxxx.cogoni7748.workers.dev
+
+  - name: "@DeamNet_197_468"
+    type: trojan
+    server: 198.41.220.8
+    port: 443
+    password: b4e8771997c94732acbc9ec4d19c2589
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_198_469"
+    type: vmess
+    server: 172.67.170.103
+    port: 2095
+    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /glweidf.sbs/linkws
+      headers:
+        Host: yaghoob55freenodes.repaco69437403.workers.dev
+
+  - name: "@DeamNet_2_471"
+    type: ss
+    server: 77.83.246.74
+    port: 33320
+    cipher: chacha20-ietf-poly1305
+    password: 4Zwn5rmrUddm1PcGThN114
+    udp: true
+
+  - name: "@DeamNet_203_476"
+    type: vmess
+    server: 188.114.97.2
+    port: 443
+    uuid: 4804f14b-c1f8-452d-a6ec-eff1490aeac9
+    alterId: 0
+    cipher: chacha20-poly1305
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hdfy6c5.cpionline.co
+    network: ws
+    ws-opts:
+      path: /lRkGCkYS9X5GDNJYMWXN7kCm3lL
+      headers:
+        Host: hdfy6c5.cpionline.co
+
+  - name: "@DeamNet_204_477"
+    type: trojan
+    server: 190.93.246.247
+    port: 443
+    password: dba20dcb635e430fa4d3bfc303a149d2
+    udp: true
+    servername: jobscareerforlawyers.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforlawyers.com
+
+  - name: "@DeamNet_205_478"
+    type: vmess
+    server: 104.16.60.8
+    port: 2095
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /obdii.cfd/linkws
+      headers:
+        Host: icy-tooth-3d05.plzthsmdnss-7d8ly.workers.dev
+
+  - name: "@DeamNet_206_479"
+    type: vmess
+    server: denc36.xtooltech.cfd
+    port: 443
+    uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: adenc36v.xtooltech.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: adenc36v.xtooltech.cfd
+
+  - name: "@DeamNet_21_483"
+    type: vmess
+    server: 104.16.61.8
+    port: 80
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /obdii.cfd/linkws
+      headers:
+        Host: d396-flower-d396.megare7260.workers.dev
+
+  - name: "@DeamNet_211_485"
+    type: vmess
+    server: 104.21.24.170
+    port: 443
+    uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: denc36.xtooltech.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: adenc36v.xtooltech.cfd
+
+  - name: "@DeamNet_216_490"
+    type: vmess
+    server: 104.16.67.38
+    port: 8880
+    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /glweidf.cfd/linkws
+      headers:
+        Host: worker-divine-hat-02d6.savofir317.workers.dev
+
+  - name: "@DeamNet_22_494"
+    type: vmess
+    server: 172.67.164.164
+    port: 443
+    uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms07.xfixedfloat.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms07.xfixedfloat.cfd
+
+  - name: "@DeamNet_224_499"
+    type: vmess
+    server: 104.16.67.38
+    port: 2087
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hyfhhg.jadovah977.workers.dev
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: hyfhhg.jadovah977.workers.dev
+
+  - name: "@DeamNet_225_500"
+    type: vmess
+    server: hms08.gwdef.sbs
+    port: 443
+    uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: gwdef.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: gwdef.sbs
+
+  - name: "@DeamNet_229_504"
+    type: vmess
+    server: 104.19.45.240
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_23_505"
+    type: trojan
+    server: 198.41.220.2
+    port: 443
+    password: 242a3d8eee5e4ed1a6bfa4141d549a25
+    udp: true
+    servername: jobscareerfortoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerfortoday.com
+
+  - name: "@DeamNet_233_509"
+    type: trojan
+    server: 162.159.152.2
+    port: 443
+    password: 242a3d8eee5e4ed1a6bfa4141d549a25
+    udp: true
+    servername: jobscareerforlawyers.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforlawyers.com
+
+  - name: "@DeamNet_238_514"
+    type: vmess
+    server: 104.16.61.8
+    port: 8880
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /linde06.indiavideo.sbs/linkws
+      headers:
+        Host: worgold21yagranghadeyaakbarshokretbozorg.abza.workers.dev
+
+  - name: "@DeamNet_24_516"
+    type: ss
+    server: series-a2-mec.varzesh360.co
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: u17T3BvpYaaiuW2c
+    udp: true
+
+  - name: "@DeamNet_245_522"
+    type: trojan
+    server: 104.17.215.2
+    port: 443
+    password: 669d0ac7b5b64ebbb1abb75d5d540a5c
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_246_523"
+    type: vmess
+    server: 104.16.60.8
+    port: 2083
+    uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 7hss-butterfly-d4c3.fijetem432.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms07.xfixedfloat.cfd/linkws
+      headers:
+        Host: 7hss-butterfly-d4c3.fijetem432.workers.dev
+
+  - name: "@DeamNet_251_529"
+    type: trojan
+    server: 104.18.34.21
+    port: 443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_256_534"
+    type: vmess
+    server: 104.16.60.8
+    port: 2096
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: r-wispy-meadow-9221.fosoka9932.workers.dev
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: r-wispy-meadow-9221.fosoka9932.workers.dev
+
+  - name: "@DeamNet_258_536"
+    type: trojan
+    server: 104.16.192.1
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    servername: sherasheba.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: sherasheba.com
+
+  - name: "@DeamNet_260_539"
+    type: vmess
+    server: 104.16.67.38
+    port: 443
+    uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: us3e-mmnnfr9dop0.v2freevpn.com
+    network: ws
+    ws-opts:
+      path: /v118-fccxmxm35
+      headers:
+        Host: us3e-mmnnfr9dop0.v2freevpn.com
+
+  - name: "@DeamNet_262_541"
+    type: vmess
+    server: linde06.indiavideo.sbs
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+
+  - name: "@DeamNet_264_543"
+    type: vmess
+    server: jahfkjha.cfd
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_265_544"
+    type: vmess
+    server: 104.16.67.38
+    port: 80
+    uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /v118-fccxmxm35
+      headers:
+        Host: us3e-mmnnfr9dop0.v2freevpn.com
+
+  - name: "@DeamNet_27_549"
+    type: vmess
+    server: 103.85.25.134
+    port: 55218
+    uuid: 3827a5c8-c031-46cf-848d-e890d0ead803
+    alterId: 0
+    cipher: auto
+    udp: true
+
+  - name: "@DeamNet_273_553"
+    type: vmess
+    server: 23.162.200.227
+    port: 443
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkvws
+
+  - name: "@DeamNet_28_559"
+    type: vmess
+    server: 172.67.138.140
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_283_563"
+    type: trojan
+    server: 194.53.53.4
+    port: 443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_288_568"
+    type: vmess
+    server: 23.134.91.119
+    port: 443
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkvws
+      headers:
+        Host: 23.134.91.119
+
+  - name: "@DeamNet_289_569"
+    type: vmess
+    server: 188.114.97.3
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+
+  - name: "@DeamNet_29_570"
+    type: vmess
+    server: 104.19.45.235
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_293_574"
+    type: vmess
+    server: 104.19.45.75
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_297_577"
+    type: vmess
+    server: 104.18.220.84
+    port: 443
+    uuid: a6292090-afe1-4640-97a7-4f1d1d877cf1
+    alterId: 0
+    cipher: chacha20-poly1305
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hdfy8c1.cpionline.co
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "Av8czorIlYC5KffvrsN6rqb"
+
+  - name: "@DeamNet_298_578"
+    type: vmess
+    server: 108.181.200.220
+    port: 17163
+    uuid: d54814a1-7a93-45f8-9117-db317a25d100
+    alterId: 0
+    cipher: auto
+    udp: true
+
+  - name: "@DeamNet_3_580"
+    type: ss
+    server: series-a2.samanehha.co
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: mps3FwmDjLrWaOVg
+    udp: true
+
+  - name: "@DeamNet_300_582"
+    type: vmess
+    server: 172.67.170.13
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+
+  - name: "@DeamNet_302_584"
+    type: trojan
+    server: 198.41.220.16
+    port: 443
+    password: b0b861c2c85346a389b9e95769c3cba4
+    udp: true
+    servername: avianrecruit.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: avianrecruit.com
+
+  - name: "@DeamNet_305_587"
+    type: trojan
+    server: 104.17.147.5
+    port: 443
+    password: 2e3562a819634de686ade78e434c0963
+    udp: true
+    servername: jobscareertoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareertoday.com
+
+  - name: "@DeamNet_309_591"
+    type: vmess
+    server: jahfkjha.cfd
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkws
+
+  - name: "@DeamNet_317_600"
+    type: trojan
+    server: 104.17.147.11
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    servername: jobscareerfortoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerfortoday.com
+
+  - name: "@DeamNet_320_604"
+    type: vmess
+    server: 172.67.170.75
+    port: 80
+    uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /v118-fccxmxm35
+      headers:
+        Host: us3e-mmnnfr9dop0.v2freevpn.com
+
+  - name: "@DeamNet_329_613"
+    type: trojan
+    server: 188.114.99.222
+    port: 443
+    password: auto
+    udp: true
+    servername: migekehcode27.kiwaja6458.workers.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: migekehcode27.kiwaja6458.workers.dev
+
+  - name: "@DeamNet_33_614"
+    type: trojan
+    server: 104.19.159.144
+    port: 443
+    password: 4aec4e7f8cf8454ea4613659822e1a61
+    udp: true
+    servername: avianrecruit.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: avianrecruit.com
+
+  - name: "@DeamNet_330_615"
+    type: vmess
+    server: 104.21.69.44
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_334_619"
+    type: vmess
+    server: 104.16.67.38
+    port: 2087
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worker-bitter-math-2af8.waxoha3621.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: worker-bitter-math-2af8.waxoha3621.workers.dev
+
+  - name: "@DeamNet_338_623"
+    type: ss
+    server: 142.4.216.225
+    port: 80
+    cipher: chacha20-ietf-poly1305
+    password: JIhN6rBKkaEboLNXVSv5rq
+    udp: true
+
+  - name: "@DeamNet_339_624"
+    type: trojan
+    server: lol.ps
+    port: 443
+    password: e8105dfd24414268b6c7652c63731097
+    udp: true
+    servername: avianrecruit.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: avianrecruit.com
+
+  - name: "@DeamNet_344_630"
+    type: trojan
+    server: 104.21.47.176
+    port: 443
+    password: 52701795-3c3b-46b4-b7cf-c5978b3a4cf2
+    udp: true
+    servername: hdfyc1.achaemenidempireofpersia.uk
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "xw7uebRG4KlUXGGYTVEagC5V7fI"
+
+  - name: "@DeamNet_347_633"
+    type: vmess
+    server: cold-dawn-9246.fly.dev
+    port: 443
+    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: cold-dawn-9246.fly.dev
+    network: ws
+    ws-opts:
+      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+      headers:
+        Host: cold-dawn-9246.fly.dev
+
+  - name: "@DeamNet_36_647"
+    type: vmess
+    server: 50.114.243.61
+    port: 43834
+    uuid: b246e34d-bbd1-4016-8f74-ea461c37e411
+    alterId: 0
+    cipher: auto
+    udp: true
+
+  - name: "@DeamNet_361_649"
+    type: ss
+    server: shadowsocks.ctsubvpn.ggff.net
+    port: 2927
+    cipher: chacha20-ietf-poly1305
+    password: ug4Fu79SEREdFGlt2sUyT4
+    udp: true
+
+  - name: "@DeamNet_363_651"
+    type: trojan
+    server: 172.67.213.48
+    port: 443
+    password: auto
+    udp: true
+    servername: esetsecuritylicense2.wawafec355.workers.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: esetsecuritylicense2.wawafec355.workers.dev
+
+  - name: "@DeamNet_365_653"
+    type: vmess
+    server: cold-dawn-9246.fly.dev
+    port: 443
+    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+
+  - name: "@DeamNet_367_655"
+    type: vmess
+    server: 104.16.60.8
+    port: 8880
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: d396-flower-d396.megare7260.workers.dev
+
+  - name: "@DeamNet_368_656"
+    type: vmess
+    server: 104.17.88.212
+    port: 443
+    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worker-bitter-math-2af8.waxoha3621.workers.dev
+    network: ws
+    ws-opts:
+      path: /glweidf.sbs/linkws
+      headers:
+        Host: worker-bitter-math-2af8.waxoha3621.workers.dev
+
+  - name: "@DeamNet_37_658"
+    type: vmess
+    server: 103.159.206.35
+    port: 31945
+    uuid: e2e511b0-7def-4e1b-d238-6cb5391b2e3f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+
+  - name: "@DeamNet_371_660"
+    type: trojan
+    server: 104.17.61.7
+    port: 443
+    password: 4732adfa16c6450bbef87264e41332db
+    udp: true
+    servername: jobscareerfortoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerfortoday.com
+
+  - name: "@DeamNet_379_668"
+    type: vmess
+    server: 104.16.61.8
+    port: 2053
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worgold21yagranghadeyaakbarshokretbozorg.abza.workers.dev
+    network: ws
+    ws-opts:
+      path: /linde06.indiavideo.sbs/linkws
+      headers:
+        Host: worgold21yagranghadeyaakbarshokretbozorg.abza.workers.dev
+
+  - name: "@DeamNet_38_669"
+    type: ss
+    server: 205.134.180.145
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: hgLCgfLRgB6d
+    udp: true
+
+  - name: "@DeamNet_382_672"
+    type: vmess
+    server: 188.114.97.6
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+
+  - name: "@DeamNet_385_675"
+    type: vmess
+    server: 104.21.83.115
+    port: 443
+    uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hms02.fxiaomi.sbs
+    network: ws
+    ws-opts:
+      path: /link
+      headers:
+        Host: hms02.fxiaomi.sbs
+
+  - name: "@DeamNet_386_676"
+    type: trojan
+    server: 198.41.220.4
+    port: 443
+    password: 71409d3e488548e8bb076d229778f008
+    udp: true
+    servername: jobscareerforlawyers.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforlawyers.com
+
+  - name: "@DeamNet_39_680"
+    type: trojan
+    server: 104.16.159.6
+    port: 443
+    password: 669d0ac7b5b64ebbb1abb75d5d540a5c
+    udp: true
+    servername: bangladeshipatri.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: bangladeshipatri.com
+
+  - name: "@DeamNet_391_682"
+    type: vmess
+    server: astrovpn-official.astrovpn-official.workers.dev
+    port: 443
+    uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: gwdef.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: gwdef.sbs
+
+  - name: "@DeamNet_392_683"
+    type: vmess
+    server: 188.114.97.1
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+
+  - name: "@DeamNet_393_684"
+    type: vmess
+    server: 188.114.96.3
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+
+  - name: "@DeamNet_396_687"
+    type: trojan
+    server: 198.41.220.5
+    port: 443
+    password: cb1f26aa437d4bfa9b841d28503ce8cc
+    udp: true
+    servername: jobscareertoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareertoday.com
+
+  - name: "@DeamNet_40_692"
+    type: vmess
+    server: 172.67.130.140
+    port: 2082
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: s1c.v2.v001sss.xyz
+
+  - name: "@DeamNet_414_708"
+    type: vmess
+    server: 104.16.61.8
+    port: 2096
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: late-wave-1d0a.lesijo3430.workers.dev
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: late-wave-1d0a.lesijo3430.workers.dev
+
+  - name: "@DeamNet_422_717"
+    type: vmess
+    server: 104.21.23.231
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_43_725"
+    type: vmess
+    server: hms082.gwdef.sbs
+    port: 443
+    uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: gwdef.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: gwdef.sbs
+
+  - name: "@DeamNet_432_728"
+    type: vmess
+    server: 188.114.96.1
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms16v.bestxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+
+  - name: "@DeamNet_434_730"
+    type: vmess
+    server: 104.16.60.8
+    port: 2086
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /linde06.indiavideo.sbs/linkws
+      headers:
+        Host: worker-lingering-fog-c021.gesofog870.workers.dev
+
+  - name: "@DeamNet_44_736"
+    type: ss
+    server: 205.134.180.147
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: 9Bvkw5aupNy8
+    udp: true
+
+  - name: "@DeamNet_45_747"
+    type: trojan
+    server: 104.17.147.77
+    port: 443
+    password: 71409d3e488548e8bb076d229778f008
+    udp: true
+    servername: bangladeshipatri.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: bangladeshipatri.com
+
+  - name: "@DeamNet_457_755"
+    type: vmess
+    server: 195.123.240.45
+    port: 12947
+    uuid: 8259cb1c-dd6c-4739-9c88-af550d977525
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /
+
+  - name: "@DeamNet_465_764"
+    type: vmess
+    server: 185.146.173.59
+    port: 443
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: obdii.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: obdii.cfd
+
+  - name: "@DeamNet_468_767"
+    type: vmess
+    server: 104.18.25.92
+    port: 2052
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: mysan2.jaquay22.workers.dev
+
+  - name: "@DeamNet_471_771"
+    type: vmess
+    server: 104.16.61.8
+    port: 2096
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 4868-poetry-4868.napora7003.workers.dev
+    network: ws
+    ws-opts:
+      path: /obdii.cfd/linkws
+      headers:
+        Host: 4868-poetry-4868.napora7003.workers.dev
+
+  - name: "@DeamNet_480_780"
+    type: vmess
+    server: 104.16.60.8
+    port: 2053
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worker-lingering-fog-c021.gesofog870.workers.dev
+    network: ws
+    ws-opts:
+      path: /linde06.indiavideo.sbs/linkws
+      headers:
+        Host: worker-lingering-fog-c021.gesofog870.workers.dev
+
+  - name: "@DeamNet_49_790"
+    type: trojan
+    server: 104.17.215.18
+    port: 443
+    password: 4732adfa16c6450bbef87264e41332db
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_499_800"
+    type: vmess
+    server: obdii.cfd
+    port: 443
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkws
+
+  - name: "@DeamNet_5_801"
+    type: ss
+    server: series-a2-me.samanehha.co
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: Bog0ELmMM9DSxDdQ
+    udp: true
+
+  - name: "@DeamNet_511_815"
+    type: vmess
+    server: 66.241.124.229
+    port: 443
+    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: cold-dawn-9246.fly.dev
+    network: ws
+    ws-opts:
+      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+      headers:
+        Host: cold-dawn-9246.fly.dev
+
+  - name: "@DeamNet_518_822"
+    type: vmess
+    server: 104.21.94.64
+    port: 443
+    uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linja05.hwcar.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linja05.hwcar.sbs
+
+  - name: "@DeamNet_520_825"
+    type: vmess
+    server: 188.114.97.1
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms16v.bestxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+
+  - name: "@DeamNet_522_827"
+    type: trojan
+    server: 172.67.149.124
+    port: 443
+    password: 52701795-3c3b-46b4-b7cf-c5978b3a4cf2
+    udp: true
+    servername: hdfyc1.achaemenidempireofpersia.uk
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "xw7uebRG4KlUXGGYTVEagC5V7fI"
+
+  - name: "@DeamNet_524_829"
+    type: vmess
+    server: 172.67.219.194
+    port: 443
+    uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: denc36.xtooltech.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: adenc36v.xtooltech.cfd
+
+  - name: "@DeamNet_53_835"
+    type: vmess
+    server: onea.flha.ru
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_535_841"
+    type: trojan
+    server: 104.18.13.229
+    port: 2053
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_541_848"
+    type: vmess
+    server: lol.ps
+    port: 2052
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: mysan2.jaquay22.workers.dev
+
+  - name: "@DeamNet_547_854"
+    type: vmess
+    server: 104.16.61.8
+    port: 8880
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: 8shhebsj78wjisnbhsjvess-pond-6cc6.cerog91216.workers.dev
+
+  - name: "@DeamNet_55_857"
+    type: ss
+    server: series-a2-me.varzesh360.co
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: Bog0ELmMM9DSxDdQ
+    udp: true
+
+  - name: "@DeamNet_555_863"
+    type: trojan
+    server: 162.159.136.232
+    port: 8443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_567_876"
+    type: vmess
+    server: 104.18.24.92
+    port: 2052
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: mysan2.jaquay22.workers.dev
+
+  - name: "@DeamNet_568_877"
+    type: trojan
+    server: 172.67.139.4
+    port: 2053
+    password: 16ecb6dd-f6ca-57c6-928c-9634d3171f8e
+    udp: true
+    servername: ip-cf.hukinghumans-655.WorkeRs.dEv
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /trojan-ws/?ed
+      headers:
+        Host: ip-cf.hukinghumans-655.WorkeRs.dEv
+
+  - name: "@DeamNet_57_879"
+    type: trojan
+    server: 104.16.159.7
+    port: 443
+    password: 4732adfa16c6450bbef87264e41332db
+    udp: true
+    servername: bangladeshipatri.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: bangladeshipatri.com
+
+  - name: "@DeamNet_579_889"
+    type: vmess
+    server: 104.16.67.38
+    port: 2096
+    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worker-damp-duadwans.jevesoj131.workers.dev
+    network: ws
+    ws-opts:
+      path: /glweidf.cfd/linkws
+      headers:
+        Host: worker-damp-duadwans.jevesoj131.workers.dev
+
+  - name: "@DeamNet_580_891"
+    type: vmess
+    server: 104.19.45.85
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_582_893"
+    type: vmess
+    server: 104.16.60.8
+    port: 2053
+    uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: square-snowflake-486a.beshir-beisel.workers.dev
+    network: ws
+    ws-opts:
+      path: /1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top/azumase.ren
+      headers:
+        Host: square-snowflake-486a.beshir-beisel.workers.dev
+
+  - name: "@DeamNet_584_895"
+    type: vmess
+    server: 104.16.61.8
+    port: 2083
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 6ba6-sound-6ba6.siliy37818.workers.dev
+    network: ws
+    ws-opts:
+      path: /obdii.cfd/linkws
+      headers:
+        Host: 6ba6-sound-6ba6.siliy37818.workers.dev
+
+  - name: "@DeamNet_589_899"
+    type: vmess
+    server: 104.16.60.8
+    port: 80
+    uuid: 4804f14b-c1f8-452d-a6ec-eff1490aeac9
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /lRkGCkYS9X5GDNJYMWXN7kCm3lL
+      headers:
+        Host: hdfy6c1.freelines.net
+
+  - name: "@DeamNet_59_900"
+    type: vmess
+    server: 172.67.131.108
+    port: 443
+    uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hms02.fxiaomi.sbs
+    network: ws
+    ws-opts:
+      path: /link
+      headers:
+        Host: hms02.fxiaomi.sbs
+
+  - name: "@DeamNet_595_906"
+    type: ss
+    server: 64.227.144.190
+    port: 50690
+    cipher: chacha20-ietf-poly1305
+    password: 3PiNbHH0gSHsiXw7Qh4VYV
+    udp: true
+
+  - name: "@DeamNet_6_911"
+    type: trojan
+    server: 104.18.22.19
+    port: 443
+    password: 2cba4104747d49d18319e5ade1b93ab5
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_606_919"
+    type: vmess
+    server: 188.114.97.16
+    port: 443
+    uuid: 4804f14b-c1f8-452d-a6ec-eff1490aeac9
+    alterId: 0
+    cipher: chacha20-poly1305
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hdfy6c5.cpionline.co
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "lRkGCkYS9X5GFzoZoavn2kmJ"
+
+  - name: "@DeamNet_61_923"
+    type: vmess
+    server: 172.67.174.42
+    port: 443
+    uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: gwdef.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: gwdef.sbs
+
+  - name: "@DeamNet_618_932"
+    type: trojan
+    server: flixeon.me
+    port: 443
+    password: 52701795-3c3b-46b4-b7cf-c5978b3a4cf2
+    udp: true
+    servername: hdfyc1.achaemenidempireofpersia.uk
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "xw7uebRG4KlUXGGYTVEagC5V7fI"
+
+  - name: "@DeamNet_619_933"
+    type: vmess
+    server: 104.16.61.8
+    port: 8443
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: xxxxx73cream-073cxxxxxxxx.cogoni7748.workers.dev
+    network: ws
+    ws-opts:
+      path: /obdii.cfd/linkws
+      headers:
+        Host: xxxxx73cream-073cxxxxxxxx.cogoni7748.workers.dev
+
+  - name: "@DeamNet_626_941"
+    type: vmess
+    server: 104.16.61.8
+    port: 80
+    uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /hms02.fxiaomi.sbs/link
+      headers:
+        Host: erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev
+
+  - name: "@DeamNet_627_942"
+    type: vmess
+    server: 173.245.58.5
+    port: 443
+    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worker-bitter-math-2af8.waxoha3621.workers.dev
+    network: ws
+    ws-opts:
+      path: /glweidf.cfd/linkws
+      headers:
+        Host: worker-bitter-math-2af8.waxoha3621.workers.dev
+
+  - name: "@DeamNet_628_943"
+    type: vmess
+    server: 104.16.60.8
+    port: 2086
+    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /glweidf.sbs/linkws
+      headers:
+        Host: 1c11-muddy-rice-1c11.vetanex501.workers.dev
+
+  - name: "@DeamNet_63_945"
+    type: trojan
+    server: 198.41.220.12
+    port: 443
+    password: 242a3d8eee5e4ed1a6bfa4141d549a25
+    udp: true
+    servername: jobscareerforlawyers.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforlawyers.com
+
+  - name: "@DeamNet_637_953"
+    type: vmess
+    server: 172.67.204.84
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_645_962"
+    type: vmess
+    server: 104.16.67.38
+    port: 2082
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: late-wave-1d0a.lesijo3430.workers.dev
+
+  - name: "@DeamNet_653_971"
+    type: vmess
+    server: 185.146.173.59
+    port: 443
+    uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hms02.fxiaomi.sbs
+    network: ws
+    ws-opts:
+      path: /link
+      headers:
+        Host: hms02.fxiaomi.sbs
+
+  - name: "@DeamNet_660_978"
+    type: vmess
+    server: 104.16.60.8
+    port: 2095
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /obdii.cfd/linkws
+      headers:
+        Host: ury-unit-c030ehei8.poget71138.workers.dev
+
+  - name: "@DeamNet_667_985"
+    type: trojan
+    server: 162.159.128.233
+    port: 8443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_67_988"
+    type: vmess
+    server: npmjs.com
+    port: 443
+    uuid: 6b880b07-e952-4c0b-b4a3-6c9ac4cf9d3f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hdfy1c2.freeairlaines.com
+    network: ws
+    ws-opts:
+      path: /QvtvPdDXXIlSdZMqnuxG
+      headers:
+        Host: hdfy1c2.freeairlaines.com
+
+  - name: "@DeamNet_672_991"
+    type: vmess
+    server: 104.16.60.8
+    port: 8443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: y-old-mode-9c0diab.wiriy73548.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: y-old-mode-9c0diab.wiriy73548.workers.dev
+
+  - name: "@DeamNet_679_998"
+    type: trojan
+    server: 104.21.44.210
+    port: 443
+    password: auto
+    udp: true
+    servername: esetsecuritylicense1.bwnsmv.workers.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: esetsecuritylicense1.bwnsmv.workers.dev
+
+  - name: "@DeamNet_68_999"
+    type: vmess
+    server: 172.67.175.56
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms16v.bestxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+
+  - name: "@DeamNet_681_1001"
+    type: vmess
+    server: codepen.io
+    port: 443
+    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: cool-darkness-e663.mehdipost667.workers.dev
+    network: ws
+    ws-opts:
+      path: /cold-dawn-9246.fly.dev:443/ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+      headers:
+        Host: cool-darkness-e663.mehdipost667.workers.dev
+
+  - name: "@DeamNet_682_1002"
+    type: ss
+    server: 64.227.144.190
+    port: 50690
+    cipher: chacha20-ietf-poly1305
+    password: CEA6CczvgBW0Spg3Vib4LS
+    udp: true
+
+  - name: "@DeamNet_684_1004"
+    type: vmess
+    server: linde06.indiavideo.sbs
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+
+  - name: "@DeamNet_69_1010"
+    type: trojan
+    server: 198.41.220.10
+    port: 443
+    password: 2cba4104747d49d18319e5ade1b93ab5
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_692_1013"
+    type: vmess
+    server: 104.16.60.8
+    port: 2083
+    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worker-damp-duadwans.jevesoj131.workers.dev
+    network: ws
+    ws-opts:
+      path: /glweidf.cfd/linkws
+      headers:
+        Host: worker-damp-duadwans.jevesoj131.workers.dev
+
+  - name: "@DeamNet_693_1014"
+    type: vmess
+    server: fake.id.workers.dev
+    port: 443
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: mysan2.jaquay22.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: mysan2.jaquay22.workers.dev
+
+  - name: "@DeamNet_7_1021"
+    type: ss
+    server: 205.134.180.139
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: lWaGPVFjmnag
+    udp: true
+
+  - name: "@DeamNet_70_1022"
+    type: vmess
+    server: 104.21.8.157
+    port: 2082
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: s1c.v2.v001sss.xyz
+
+  - name: "@DeamNet_701_1024"
+    type: vmess
+    server: 23.162.200.227
+    port: 443
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkvws
+      headers:
+        Host: 23.162.200.227
+
+  - name: "@DeamNet_705_1028"
+    type: vmess
+    server: 104.16.61.8
+    port: 2083
+    uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 7whrapid-river-a083.sisay70779.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms07.xfixedfloat.cfd/linkws
+      headers:
+        Host: 7whrapid-river-a083.sisay70779.workers.dev
+
+  - name: "@DeamNet_712_1036"
+    type: vmess
+    server: 104.16.60.8
+    port: 2087
+    uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 7hss-butterfly-d4c3.fijetem432.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms07.xfixedfloat.cfd/linkws
+      headers:
+        Host: 7hss-butterfly-d4c3.fijetem432.workers.dev
+
+  - name: "@DeamNet_72_1044"
+    type: vmess
+    server: 104.16.68.38
+    port: 2082
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: r-wispy-meadow-9221.fosoka9932.workers.dev
+
+  - name: "@DeamNet_733_1059"
+    type: trojan
+    server: 172.66.44.131
+    port: 443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_741_1068"
+    type: vmess
+    server: 104.16.60.8
+    port: 2053
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: y-old-mode-9c0diab.wiriy73548.workers.dev
+    network: ws
+    ws-opts:
+      path: /afrhms16v.bestxray.buzz/linkws
+      headers:
+        Host: y-old-mode-9c0diab.wiriy73548.workers.dev
+
+  - name: "@DeamNet_743_1070"
+    type: vmess
+    server: 104.16.67.38
+    port: 2082
+    uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /ivideos.sbs/linkws
+      headers:
+        Host: late-wave-1d0a.lesijo3430.workers.dev
+
+  - name: "@DeamNet_75_1077"
+    type: ss
+    server: 205.134.180.137
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: g13S7doXar0A
+    udp: true
+
+  - name: "@DeamNet_750_1078"
+    type: vmess
+    server: 172.67.214.33
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_752_1080"
+    type: trojan
+    server: 104.26.12.54
+    port: 443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_76_1088"
+    type: trojan
+    server: 104.19.171.3
+    port: 443
+    password: f0eb8c92ce8946aaba856569cff1a16b
+    udp: true
+    servername: sherasheba.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: sherasheba.com
+
+  - name: "@DeamNet_77_1099"
+    type: ss
+    server: 81.19.141.45
+    port: 52873
+    cipher: chacha20-ietf-poly1305
+    password: CIZAAhQMKlkmW60Isq82PG
+    udp: true
+
+  - name: "@DeamNet_775_1105"
+    type: vmess
+    server: 104.16.61.8
+    port: 8880
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: yaghoob55freenodes.repaco69437403.workers.dev
+
+  - name: "@DeamNet_803_1136"
+    type: vmess
+    server: gt021.bestforxray.buzz
+    port: 443
+    uuid: c1fd780a-3408-4f48-a932-5832a28ce9f6
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: ausgt02.bestforxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: ausgt02.bestforxray.buzz
+
+  - name: "@DeamNet_805_1138"
+    type: vmess
+    server: 104.16.61.8
+    port: 2083
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worker-lingering-fog-c021.gesofog870.workers.dev
+    network: ws
+    ws-opts:
+      path: /linde06.indiavideo.sbs/linkws
+      headers:
+        Host: worker-lingering-fog-c021.gesofog870.workers.dev
+
+  - name: "@DeamNet_82_1154"
+    type: ss
+    server: 81.19.141.45
+    port: 52873
+    cipher: chacha20-ietf-poly1305
+    password: BXkeUSabwj1rRTj4cLT3O5
+    udp: true
+
+  - name: "@DeamNet_821_1156"
+    type: trojan
+    server: 104.21.50.74
+    port: 443
+    password: auto
+    udp: true
+    servername: esetsecuritylicense.tobavo5084.workers.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: esetsecuritylicense.tobavo5084.workers.dev
+
+  - name: "@DeamNet_825_1160"
+    type: trojan
+    server: 65.20.115.19
+    port: 443
+    password: wkmY1R4EcP
+    udp: true
+    servername: myket.ir
+    skip-cert-verify: true
+
+  - name: "@DeamNet_84_1176"
+    type: trojan
+    server: 104.19.171.9
+    port: 443
+    password: 984e400bf5d541b7b0815913fe0c432a
+    udp: true
+    servername: jobscareerfortoday.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerfortoday.com
+
+  - name: "@DeamNet_844_1181"
+    type: vmess
+    server: 104.19.45.2
+    port: 2095
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: onea.flha.ru
+
+  - name: "@DeamNet_845_1182"
+    type: vmess
+    server: 104.16.60.8
+    port: 2052
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /jahfkjha.cfd/linkws
+      headers:
+        Host: late-wave-1d0a.lesijo3430.workers.dev
+
+  - name: "@DeamNet_85_1187"
+    type: trojan
+    server: 104.19.171.5
+    port: 443
+    password: cb1f26aa437d4bfa9b841d28503ce8cc
+    udp: true
+    servername: jobscareerforlawyers.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforlawyers.com
+
+  - name: "@DeamNet_850_1188"
+    type: trojan
+    server: 104.18.23.19
+    port: 443
+    password: 2cba4104747d49d18319e5ade1b93ab5
+    udp: true
+    servername: jobscareerforstudent.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforstudent.com
+
+  - name: "@DeamNet_86_1198"
+    type: vmess
+    server: hms19.best-tizi.top
+    port: 443
+    uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hms19.best-tizi.top
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: hms19.best-tizi.top
+
+  - name: "@DeamNet_88_1219"
+    type: trojan
+    server: 104.20.6.134
+    port: 443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_880_1220"
+    type: vmess
+    server: 173.245.58.11
+    port: 443
+    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: worker-late28ygwuhw.motonob768.workers.dev
+    network: ws
+    ws-opts:
+      path: /glweidf.cfd/linkws
+      headers:
+        Host: worker-late28ygwuhw.motonob768.workers.dev
+
+  - name: "@DeamNet_883_1223"
+    type: trojan
+    server: 162.159.153.2
+    port: 443
+    password: 242a3d8eee5e4ed1a6bfa4141d549a25
+    udp: true
+    servername: jobscareerforlawyers.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /6b777a91
+      headers:
+        Host: jobscareerforlawyers.com
+
+  - name: "@DeamNet_89_1230"
+    type: ss
+    server: bgroup.node5.s.nodelist-airport.com
+    port: 50001
+    cipher: chacha20-ietf-poly1305
+    password: 2155145a-b1b5-443a-8977-670f6bd10f02
+    udp: true
+
+  - name: "@DeamNet_9_1241"
+    type: ss
+    server: 95.164.9.144
+    port: 2927
+    cipher: chacha20-ietf-poly1305
+    password: ug4Fu79SEREdFGlt2sUyT4
+    udp: true
+
+  - name: "@DeamNet_904_1247"
+    type: vmess
+    server: linde06.indiavideo.sbs
+    port: 443
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: 
+    network: ws
+    ws-opts:
+      path: /linkws
+
+  - name: "@DeamNet_919_1263"
+    type: ss
+    server: series-a2.samanehha.co
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: W74XFALLLuw6m5IA
+    udp: true
+
+  - name: "@DeamNet_92_1264"
+    type: ss
+    server: 81.19.141.45
+    port: 52873
+    cipher: chacha20-ietf-poly1305
+    password: I1onhFIawC9IpNB2ZE73CK
+    udp: true
+
+  - name: "@DeamNet_93_1275"
+    type: vmess
+    server: 95.179.128.114
+    port: 80
+    uuid: a6292090-afe1-4640-97a7-4f1d1d877cf1
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /Av8czorIlYicU6D349brWUw6a
+
+  - name: "@DeamNet_931_1277"
+    type: vmess
+    server: 104.16.60.8
+    port: 2095
+    uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /ivideos.sbs/linkws
+      headers:
+        Host: ury-unit-c030ehei8.poget71138.workers.dev
+
+  - name: "@DeamNet_943_1290"
+    type: trojan
+    server: 172.67.68.157
+    port: 443
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_948_1295"
+    type: vmess
+    server: 104.21.32.238
+    port: 443
+    uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: obdii.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: obdii.cfd
+
+  - name: "@DeamNet_960_1309"
+    type: vmess
+    server: 104.16.61.8
+    port: 8080
+    uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /ivideos.sbs/linkws
+      headers:
+        Host: ury-unit-c030ehei8.poget71138.workers.dev
+
+  - name: "@DeamNet_975_1325"
+    type: vmess
+    server: 172.67.183.220
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: jahfkjha.cfd
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: jahfkjha.cfd
+
+  - name: "@DeamNet_98_1330"
+    type: trojan
+    server: 104.21.90.210
+    port: 2053
+    password: auto
+    udp: true
+    servername: e9464f45.trauma-2r4.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: e9464f45.trauma-2r4.pages.dev
+
+  - name: "@DeamNet_995_1347"
+    type: vmess
+    server: 104.16.60.8
+    port: 2087
+    uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: ury-unit-c030ehei8.poget71138.workers.dev
+    network: ws
+    ws-opts:
+      path: /ivideos.sbs/linkws
+      headers:
+        Host: ury-unit-c030ehei8.poget71138.workers.dev
+
+  - name: "@DeamNet_996_1348"
+    type: vmess
+    server: 185.146.173.129
+    port: 443
+    uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: nt-haze-7dad.rogap16875.workers.dev
+    network: ws
+    ws-opts:
+      path: /hms02.fxiaomi.sbs/link
+      headers:
+        Host: nt-haze-7dad.rogap16875.workers.dev
+
+proxy-groups:
+  - name: ♻️ auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - "@DeamNet_1_1"
+      - "@DeamNet_1002_6"
+      - "@DeamNet_101_14"
+      - "@DeamNet_1020_26"
+      - "@DeamNet_1022_28"
+      - "@DeamNet_1038_45"
+      - "@DeamNet_104_47"
+      - "@DeamNet_1045_53"
+      - "@DeamNet_105_58"
+      - "@DeamNet_1050_59"
+      - "@DeamNet_1059_68"
+      - "@DeamNet_1067_77"
+      - "@DeamNet_1072_83"
+      - "@DeamNet_1074_85"
+      - "@DeamNet_1094_105"
+      - "@DeamNet_1096_107"
+      - "@DeamNet_11_111"
+      - "@DeamNet_1102_115"
+      - "@DeamNet_1106_119"
+      - "@DeamNet_1107_120"
+      - "@DeamNet_1128_143"
+      - "@DeamNet_1139_155"
+      - "@DeamNet_1142_159"
+      - "@DeamNet_1155_173"
+      - "@DeamNet_1159_177"
+      - "@DeamNet_1172_192"
+      - "@DeamNet_118_200"
+      - "@DeamNet_1194_215"
+      - "@DeamNet_1197_218"
+      - "@DeamNet_1199_220"
+      - "@DeamNet_12_221"
+      - "@DeamNet_120_222"
+      - "@DeamNet_1202_225"
+      - "@DeamNet_1203_226"
+      - "@DeamNet_1212_236"
+      - "@DeamNet_1214_238"
+      - "@DeamNet_1229_254"
+      - "@DeamNet_123_255"
+      - "@DeamNet_1248_275"
+      - "@DeamNet_125_277"
+      - "@DeamNet_1250_278"
+      - "@DeamNet_1251_279"
+      - "@DeamNet_1253_281"
+      - "@DeamNet_1254_282"
+      - "@DeamNet_126_288"
+      - "@DeamNet_1261_290"
+      - "@DeamNet_1265_294"
+      - "@DeamNet_127_299"
+      - "@DeamNet_1275_305"
+      - "@DeamNet_1277_306"
+      - "@DeamNet_1279_308"
+      - "@DeamNet_1283_313"
+      - "@DeamNet_1288_318"
+      - "@DeamNet_129_320"
+      - "@DeamNet_1293_324"
+      - "@DeamNet_1303_336"
+      - "@DeamNet_1316_350"
+      - "@DeamNet_1318_352"
+      - "@DeamNet_132_354"
+      - "@DeamNet_1345_382"
+      - "@DeamNet_1347_384"
+      - "@DeamNet_1348_385"
+      - "@DeamNet_1359_397"
+      - "@DeamNet_136_398"
+      - "@DeamNet_14_406"
+      - "@DeamNet_144_411"
+      - "@DeamNet_147_414"
+      - "@DeamNet_150_417"
+      - "@DeamNet_152_419"
+      - "@DeamNet_155_422"
+      - "@DeamNet_157_424"
+      - "@DeamNet_158_425"
+      - "@DeamNet_16_427"
+      - "@DeamNet_161_429"
+      - "@DeamNet_172_441"
+      - "@DeamNet_175_444"
+      - "@DeamNet_177_446"
+      - "@DeamNet_178_447"
+      - "@DeamNet_179_448"
+      - "@DeamNet_18_449"
+      - "@DeamNet_184_454"
+      - "@DeamNet_19_460"
+      - "@DeamNet_197_468"
+      - "@DeamNet_198_469"
+      - "@DeamNet_2_471"
+      - "@DeamNet_203_476"
+      - "@DeamNet_204_477"
+      - "@DeamNet_205_478"
+      - "@DeamNet_206_479"
+      - "@DeamNet_21_483"
+      - "@DeamNet_211_485"
+      - "@DeamNet_216_490"
+      - "@DeamNet_22_494"
+      - "@DeamNet_224_499"
+      - "@DeamNet_225_500"
+      - "@DeamNet_229_504"
+      - "@DeamNet_23_505"
+      - "@DeamNet_233_509"
+      - "@DeamNet_238_514"
+      - "@DeamNet_24_516"
+      - "@DeamNet_245_522"
+      - "@DeamNet_246_523"
+      - "@DeamNet_251_529"
+      - "@DeamNet_256_534"
+      - "@DeamNet_258_536"
+      - "@DeamNet_260_539"
+      - "@DeamNet_262_541"
+      - "@DeamNet_264_543"
+      - "@DeamNet_265_544"
+      - "@DeamNet_27_549"
+      - "@DeamNet_273_553"
+      - "@DeamNet_28_559"
+      - "@DeamNet_283_563"
+      - "@DeamNet_288_568"
+      - "@DeamNet_289_569"
+      - "@DeamNet_29_570"
+      - "@DeamNet_293_574"
+      - "@DeamNet_297_577"
+      - "@DeamNet_298_578"
+      - "@DeamNet_3_580"
+      - "@DeamNet_300_582"
+      - "@DeamNet_302_584"
+      - "@DeamNet_305_587"
+      - "@DeamNet_309_591"
+      - "@DeamNet_317_600"
+      - "@DeamNet_320_604"
+      - "@DeamNet_329_613"
+      - "@DeamNet_33_614"
+      - "@DeamNet_330_615"
+      - "@DeamNet_334_619"
+      - "@DeamNet_338_623"
+      - "@DeamNet_339_624"
+      - "@DeamNet_344_630"
+      - "@DeamNet_347_633"
+      - "@DeamNet_36_647"
+      - "@DeamNet_361_649"
+      - "@DeamNet_363_651"
+      - "@DeamNet_365_653"
+      - "@DeamNet_367_655"
+      - "@DeamNet_368_656"
+      - "@DeamNet_37_658"
+      - "@DeamNet_371_660"
+      - "@DeamNet_379_668"
+      - "@DeamNet_38_669"
+      - "@DeamNet_382_672"
+      - "@DeamNet_385_675"
+      - "@DeamNet_386_676"
+      - "@DeamNet_39_680"
+      - "@DeamNet_391_682"
+      - "@DeamNet_392_683"
+      - "@DeamNet_393_684"
+      - "@DeamNet_396_687"
+      - "@DeamNet_40_692"
+      - "@DeamNet_414_708"
+      - "@DeamNet_422_717"
+      - "@DeamNet_43_725"
+      - "@DeamNet_432_728"
+      - "@DeamNet_434_730"
+      - "@DeamNet_44_736"
+      - "@DeamNet_45_747"
+      - "@DeamNet_457_755"
+      - "@DeamNet_465_764"
+      - "@DeamNet_468_767"
+      - "@DeamNet_471_771"
+      - "@DeamNet_480_780"
+      - "@DeamNet_49_790"
+      - "@DeamNet_499_800"
+      - "@DeamNet_5_801"
+      - "@DeamNet_511_815"
+      - "@DeamNet_518_822"
+      - "@DeamNet_520_825"
+      - "@DeamNet_522_827"
+      - "@DeamNet_524_829"
+      - "@DeamNet_53_835"
+      - "@DeamNet_535_841"
+      - "@DeamNet_541_848"
+      - "@DeamNet_547_854"
+      - "@DeamNet_55_857"
+      - "@DeamNet_555_863"
+      - "@DeamNet_567_876"
+      - "@DeamNet_568_877"
+      - "@DeamNet_57_879"
+      - "@DeamNet_579_889"
+      - "@DeamNet_580_891"
+      - "@DeamNet_582_893"
+      - "@DeamNet_584_895"
+      - "@DeamNet_589_899"
+      - "@DeamNet_59_900"
+      - "@DeamNet_595_906"
+      - "@DeamNet_6_911"
+      - "@DeamNet_606_919"
+      - "@DeamNet_61_923"
+      - "@DeamNet_618_932"
+      - "@DeamNet_619_933"
+      - "@DeamNet_626_941"
+      - "@DeamNet_627_942"
+      - "@DeamNet_628_943"
+      - "@DeamNet_63_945"
+      - "@DeamNet_637_953"
+      - "@DeamNet_645_962"
+      - "@DeamNet_653_971"
+      - "@DeamNet_660_978"
+      - "@DeamNet_667_985"
+      - "@DeamNet_67_988"
+      - "@DeamNet_672_991"
+      - "@DeamNet_679_998"
+      - "@DeamNet_68_999"
+      - "@DeamNet_681_1001"
+      - "@DeamNet_682_1002"
+      - "@DeamNet_684_1004"
+      - "@DeamNet_69_1010"
+      - "@DeamNet_692_1013"
+      - "@DeamNet_693_1014"
+      - "@DeamNet_7_1021"
+      - "@DeamNet_70_1022"
+      - "@DeamNet_701_1024"
+      - "@DeamNet_705_1028"
+      - "@DeamNet_712_1036"
+      - "@DeamNet_72_1044"
+      - "@DeamNet_733_1059"
+      - "@DeamNet_741_1068"
+      - "@DeamNet_743_1070"
+      - "@DeamNet_75_1077"
+      - "@DeamNet_750_1078"
+      - "@DeamNet_752_1080"
+      - "@DeamNet_76_1088"
+      - "@DeamNet_77_1099"
+      - "@DeamNet_775_1105"
+      - "@DeamNet_803_1136"
+      - "@DeamNet_805_1138"
+      - "@DeamNet_82_1154"
+      - "@DeamNet_821_1156"
+      - "@DeamNet_825_1160"
+      - "@DeamNet_84_1176"
+      - "@DeamNet_844_1181"
+      - "@DeamNet_845_1182"
+      - "@DeamNet_85_1187"
+      - "@DeamNet_850_1188"
+      - "@DeamNet_86_1198"
+      - "@DeamNet_88_1219"
+      - "@DeamNet_880_1220"
+      - "@DeamNet_883_1223"
+      - "@DeamNet_89_1230"
+      - "@DeamNet_9_1241"
+      - "@DeamNet_904_1247"
+      - "@DeamNet_919_1263"
+      - "@DeamNet_92_1264"
+      - "@DeamNet_93_1275"
+      - "@DeamNet_931_1277"
+      - "@DeamNet_943_1290"
+      - "@DeamNet_948_1295"
+      - "@DeamNet_960_1309"
+      - "@DeamNet_975_1325"
+      - "@DeamNet_98_1330"
+      - "@DeamNet_995_1347"
+      - "@DeamNet_996_1348"
+rules:
+ - MATCH,♻️ auto
+
