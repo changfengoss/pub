@@ -1,0 +1,205 @@
+
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: ':9090'
+
+proxies:
+  - {"name":"剩余流量：195.13 GB","type":"ss","server":"node-hk.dlg365.com","port":49901,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"距离下次重置剩余：29 天","type":"ss","server":"node-hk.dlg365.com","port":49901,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"套餐到期：2024-12-12","type":"ss","server":"node-hk.dlg365.com","port":49901,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 01","type":"ss","server":"node-hk.dlg365.com","port":49901,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 02","type":"ss","server":"node-hk.dlg365.com","port":49902,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 03","type":"ss","server":"node-hk.dlg365.com","port":49903,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 04","type":"ss","server":"node-hk.dlg365.com","port":49904,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 05","type":"ss","server":"node-hk.dlg365.com","port":49905,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 06","type":"ss","server":"node-hk.dlg365.com","port":49906,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 07","type":"ss","server":"node-hk.dlg365.com","port":49907,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 08","type":"ss","server":"node-hk.dlg365.com","port":49908,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 09","type":"ss","server":"node-hk.dlg365.com","port":49909,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 10","type":"ss","server":"node-hk.dlg365.com","port":49910,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 11","type":"ss","server":"node-hk.dlg365.com","port":49911,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 12","type":"ss","server":"node-hk.dlg365.com","port":49912,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 13","type":"ss","server":"node-hk.dlg365.com","port":49913,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 14","type":"ss","server":"node-hk.dlg365.com","port":49914,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 15","type":"ss","server":"node-hk.dlg365.com","port":49915,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 16","type":"ss","server":"node-hk.dlg365.com","port":49916,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 17","type":"ss","server":"node-hk.dlg365.com","port":49917,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 18","type":"ss","server":"node-hk.dlg365.com","port":49918,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 19","type":"ss","server":"node-hk.dlg365.com","port":49919,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇭🇰 HK 20","type":"ss","server":"node-hk.dlg365.com","port":49920,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 01","type":"ss","server":"node-sg.dlg365.com","port":49921,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 02","type":"ss","server":"node-sg.dlg365.com","port":49922,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 03","type":"ss","server":"node-sg.dlg365.com","port":49923,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 04","type":"ss","server":"node-sg.dlg365.com","port":49924,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 05","type":"ss","server":"node-sg.dlg365.com","port":49925,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 06","type":"ss","server":"node-sg.dlg365.com","port":49926,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 07","type":"ss","server":"node-sg.dlg365.com","port":49927,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 08","type":"ss","server":"node-sg.dlg365.com","port":49928,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 09","type":"ss","server":"node-sg.dlg365.com","port":49929,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 10","type":"ss","server":"node-sg.dlg365.com","port":49930,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 11","type":"ss","server":"node-sg.dlg365.com","port":49931,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 12","type":"ss","server":"node-sg.dlg365.com","port":49932,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 13","type":"ss","server":"node-sg.dlg365.com","port":49933,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 14","type":"ss","server":"node-sg.dlg365.com","port":49934,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬 SG 15","type":"ss","server":"node-sg.dlg365.com","port":49935,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 01","type":"ss","server":"node-jp.dlg365.com","port":49936,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 02","type":"ss","server":"node-jp.dlg365.com","port":49937,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 03","type":"ss","server":"node-jp.dlg365.com","port":49938,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 04","type":"ss","server":"node-jp.dlg365.com","port":49939,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 05","type":"ss","server":"node-jp.dlg365.com","port":49940,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 06","type":"ss","server":"node-jp.dlg365.com","port":49941,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 07","type":"ss","server":"node-jp.dlg365.com","port":49942,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 08","type":"ss","server":"node-jp.dlg365.com","port":49943,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 09","type":"ss","server":"node-jp.dlg365.com","port":49944,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 10","type":"ss","server":"node-jp.dlg365.com","port":49945,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 11","type":"ss","server":"node-jp.dlg365.com","port":49946,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 12","type":"ss","server":"node-jp.dlg365.com","port":49947,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 13","type":"ss","server":"node-jp.dlg365.com","port":49948,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 14","type":"ss","server":"node-jp.dlg365.com","port":49949,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵 JP 15","type":"ss","server":"node-jp.dlg365.com","port":49950,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 01","type":"ss","server":"node-us.dlg365.com","port":49951,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 02","type":"ss","server":"node-us.dlg365.com","port":49952,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 03","type":"ss","server":"node-us.dlg365.com","port":49953,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 04","type":"ss","server":"node-us.dlg365.com","port":49954,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 05","type":"ss","server":"node-us.dlg365.com","port":49955,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 06","type":"ss","server":"node-us.dlg365.com","port":49956,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 07","type":"ss","server":"node-us.dlg365.com","port":49957,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 08","type":"ss","server":"node-us.dlg365.com","port":49958,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 09","type":"ss","server":"node-us.dlg365.com","port":49959,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US 10","type":"ss","server":"node-us.dlg365.com","port":49960,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇼 TW 01","type":"ss","server":"node-tw.dlg365.com","port":49961,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇼 TW 02","type":"ss","server":"node-tw.dlg365.com","port":49962,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇼 TW 03","type":"ss","server":"node-tw.dlg365.com","port":49963,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇼 TW 04","type":"ss","server":"node-tw.dlg365.com","port":49964,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇼 TW 05","type":"ss","server":"node-tw.dlg365.com","port":49965,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇬🇧 UK 01 英国","type":"ss","server":"node-a.dlg365.com","port":59966,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇬🇧 UK 02 英国","type":"ss","server":"node-a.dlg365.com","port":49967,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇹🇷 TR 土耳其","type":"ss","server":"node-a.dlg365.com","port":49971,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇨🇭 CH 瑞士","type":"ss","server":"node-a.dlg365.com","port":49969,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇳🇱 NL 荷兰","type":"ss","server":"node-a.dlg365.com","port":49970,"password":"1f3013d9-e9f9-4d16-81c2-d436e6866928","cipher":"chacha20-ietf-poly1305"}
+proxy-groups:
+  - name: Proxies
+    type: select
+    proxies:
+      - 剩余流量：195.13 GB
+      - 距离下次重置剩余：29 天
+      - 套餐到期：2024-12-12
+      - 🇭🇰 HK 01
+      - 🇭🇰 HK 02
+      - 🇭🇰 HK 03
+      - 🇭🇰 HK 04
+      - 🇭🇰 HK 05
+      - 🇭🇰 HK 06
+      - 🇭🇰 HK 07
+      - 🇭🇰 HK 08
+      - 🇭🇰 HK 09
+      - 🇭🇰 HK 10
+      - 🇭🇰 HK 11
+      - 🇭🇰 HK 12
+      - 🇭🇰 HK 13
+      - 🇭🇰 HK 14
+      - 🇭🇰 HK 15
+      - 🇭🇰 HK 16
+      - 🇭🇰 HK 17
+      - 🇭🇰 HK 18
+      - 🇭🇰 HK 19
+      - 🇭🇰 HK 20
+      - 🇸🇬 SG 01
+      - 🇸🇬 SG 02
+      - 🇸🇬 SG 03
+      - 🇸🇬 SG 04
+      - 🇸🇬 SG 05
+      - 🇸🇬 SG 06
+      - 🇸🇬 SG 07
+      - 🇸🇬 SG 08
+      - 🇸🇬 SG 09
+      - 🇸🇬 SG 10
+      - 🇸🇬 SG 11
+      - 🇸🇬 SG 12
+      - 🇸🇬 SG 13
+      - 🇸🇬 SG 14
+      - 🇸🇬 SG 15
+      - 🇯🇵 JP 01
+      - 🇯🇵 JP 02
+      - 🇯🇵 JP 03
+      - 🇯🇵 JP 04
+      - 🇯🇵 JP 05
+      - 🇯🇵 JP 06
+      - 🇯🇵 JP 07
+      - 🇯🇵 JP 08
+      - 🇯🇵 JP 09
+      - 🇯🇵 JP 10
+      - 🇯🇵 JP 11
+      - 🇯🇵 JP 12
+      - 🇯🇵 JP 13
+      - 🇯🇵 JP 14
+      - 🇯🇵 JP 15
+      - 🇺🇸 US 01
+      - 🇺🇸 US 02
+      - 🇺🇸 US 03
+      - 🇺🇸 US 04
+      - 🇺🇸 US 05
+      - 🇺🇸 US 06
+      - 🇺🇸 US 07
+      - 🇺🇸 US 08
+      - 🇺🇸 US 09
+      - 🇺🇸 US 10
+      - 🇹🇼 TW 01
+      - 🇹🇼 TW 02
+      - 🇹🇼 TW 03
+      - 🇹🇼 TW 04
+      - 🇹🇼 TW 05
+      - 🇬🇧 UK 01 英国
+      - 🇬🇧 UK 02 英国
+      - 🇹🇷 TR 土耳其
+      - 🇨🇭 CH 瑞士
+      - 🇳🇱 NL 荷兰
+
+rules:
+  - DOMAIN-SUFFIX,1password.com,DIRECT
+  - DOMAIN-SUFFIX,vultr.com,DIRECT
+  - DOMAIN-SUFFIX,mb3admin.com,DIRECT
+  - DOMAIN-SUFFIX,rixcloud.io,DIRECT
+  - DOMAIN-SUFFIX,tempestapp.io,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,baidu-int.com,DIRECT
+  - DOMAIN-SUFFIX,erebor.douban.com,DIRECT
+  - DOMAIN,mtalk.google.com,DIRECT
+  - DOMAIN,alt1-mtalk.google.com,DIRECT
+  - DOMAIN,alt2-mtalk.google.com,DIRECT
+  - DOMAIN,alt3-mtalk.google.com,DIRECT
+  - DOMAIN,alt4-mtalk.google.com,DIRECT
+  - DOMAIN,alt5-mtalk.google.com,DIRECT
+  - DOMAIN,alt6-mtalk.google.com,DIRECT
+  - DOMAIN,alt7-mtalk.google.com,DIRECT
+  - DOMAIN,alt8-mtalk.google.com,DIRECT
+  - DOMAIN,alt9-mtalk.google.com,DIRECT
+  - DOMAIN,captive.apple.com,DIRECT
+  - DOMAIN,time-ios.apple.com,DIRECT
+  - DOMAIN-SUFFIX,gateway.push-apple.com.akadns.net,DIRECT
+  - DOMAIN-SUFFIX,push.apple.com,DIRECT
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,Proxies
+  - DOMAIN-SUFFIX,cff.pw,Proxies
+  - DOMAIN-SUFFIX,vpnse.org,Proxies
+  - DOMAIN-SUFFIX,cfmem.com,Proxies
+  - DOMAIN-KEYWORD,github,Proxies
+  - DOMAIN-SUFFIX,github.com,Proxies
+  - DOMAIN-SUFFIX,github.io,Proxies
+  - DOMAIN-SUFFIX,githubapp.com,Proxies
+  - DOMAIN-SUFFIX,githubassets.com,Proxies
+  - DOMAIN-SUFFIX,githubusercontent.com,Proxies
+  - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Proxies
+  - DOMAIN,ip.skk.moe,Proxies
+  - DOMAIN,ip.sb,Proxies
+  - DOMAIN-SUFFIX,googleapis.cn,Proxies
+  - DOMAIN-SUFFIX,maying.co,Proxies
+  - DOMAIN-SUFFIX,flowercloud.net,Proxies
+  - DOMAIN-SUFFIX,socloud.me,Proxies
+  - DOMAIN-SUFFIX,ytoo.asia,Proxies
+  - DOMAIN-SUFFIX,ytoo.co.uk,Proxies
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxies
