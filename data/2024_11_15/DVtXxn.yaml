@@ -1,0 +1,4415 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "error",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "outbound": "any"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "二爷免费翻墙 https://1808.free.hr 节点_1",
+        "二爷免费翻墙 https://1808.free.hr 节点_2",
+        "二爷免费翻墙 https://1808.free.hr 节点_3",
+        "二爷免费翻墙 https://1808.free.hr 节点_4",
+        "二爷免费翻墙 https://1808.free.hr 节点_6",
+        "二爷免费翻墙 https://1808.free.hr 节点_7",
+        "二爷免费翻墙 https://1808.free.hr 节点_8",
+        "二爷免费翻墙 https://1808.free.hr 节点_9",
+        "二爷免费翻墙 https://1808.free.hr 节点_11",
+        "二爷免费翻墙 https://1808.free.hr 节点_12",
+        "二爷免费翻墙 https://1808.free.hr 节点_14",
+        "二爷免费翻墙 https://1808.free.hr 节点_16",
+        "二爷免费翻墙 https://1808.free.hr 节点_17",
+        "二爷免费翻墙 https://1808.free.hr 节点_18",
+        "二爷免费翻墙 https://1808.free.hr 节点_19",
+        "二爷免费翻墙 https://1808.free.hr 节点_20",
+        "二爷免费翻墙 https://1808.free.hr 节点_23",
+        "二爷免费翻墙 https://1808.free.hr 节点_25",
+        "二爷免费翻墙 https://1808.free.hr 节点_26",
+        "二爷免费翻墙 https://1808.free.hr 节点_27",
+        "二爷免费翻墙 https://1808.free.hr 节点_28",
+        "二爷免费翻墙 https://1808.free.hr 节点_29",
+        "二爷免费翻墙 https://1808.free.hr 节点_30",
+        "二爷免费翻墙 https://1808.free.hr 节点_31",
+        "二爷免费翻墙 https://1808.free.hr 节点_32",
+        "二爷免费翻墙 https://1808.free.hr 节点_33",
+        "二爷免费翻墙 https://1808.free.hr 节点_34",
+        "二爷免费翻墙 https://1808.free.hr 节点_35",
+        "二爷免费翻墙 https://1808.free.hr 节点_36",
+        "二爷免费翻墙 https://1808.free.hr 节点_37",
+        "二爷免费翻墙 https://1808.free.hr 节点_38",
+        "二爷免费翻墙 https://1808.free.hr 节点_39",
+        "二爷免费翻墙 https://1808.free.hr 节点_40",
+        "二爷免费翻墙 https://1808.free.hr 节点_41",
+        "二爷免费翻墙 https://1808.free.hr 节点_42",
+        "二爷免费翻墙 https://1808.free.hr 节点_43",
+        "二爷免费翻墙 https://1808.free.hr 节点_44",
+        "二爷免费翻墙 https://1808.free.hr 节点_45",
+        "二爷免费翻墙 https://1808.free.hr 节点_46",
+        "二爷免费翻墙 https://1808.free.hr 节点_47",
+        "二爷免费翻墙 https://1808.free.hr 节点_48",
+        "二爷免费翻墙 https://1808.free.hr 节点_49",
+        "二爷免费翻墙 https://1808.free.hr 节点_50",
+        "二爷免费翻墙 https://1808.free.hr 节点_51",
+        "二爷免费翻墙 https://1808.free.hr 节点_52",
+        "二爷免费翻墙 https://1808.free.hr 节点_53",
+        "二爷免费翻墙 https://1808.free.hr 节点_54",
+        "二爷免费翻墙 https://1808.free.hr 节点_55",
+        "二爷免费翻墙 https://1808.free.hr 节点_56",
+        "二爷免费翻墙 https://1808.free.hr 节点_57",
+        "二爷免费翻墙 https://1808.free.hr 节点_58",
+        "二爷免费翻墙 https://1808.free.hr 节点_59",
+        "二爷免费翻墙 https://1808.free.hr 节点_60",
+        "二爷免费翻墙 https://1808.free.hr 节点_61",
+        "二爷免费翻墙 https://1808.free.hr 节点_62",
+        "二爷免费翻墙 https://1808.free.hr 节点_63",
+        "二爷免费翻墙 https://1808.free.hr 节点_64",
+        "二爷免费翻墙 https://1808.free.hr 节点_65",
+        "二爷免费翻墙 https://1808.free.hr 节点_66",
+        "二爷免费翻墙 https://1808.free.hr 节点_67",
+        "二爷免费翻墙 https://1808.free.hr 节点_68",
+        "二爷免费翻墙 https://1808.free.hr 节点_69",
+        "二爷免费翻墙 https://1808.free.hr 节点_70",
+        "二爷免费翻墙 https://1808.free.hr 节点_71",
+        "二爷免费翻墙 https://1808.free.hr 节点_72",
+        "二爷免费翻墙 https://1808.free.hr 节点_73",
+        "二爷免费翻墙 https://1808.free.hr 节点_74",
+        "二爷免费翻墙 https://1808.free.hr 节点_75",
+        "二爷免费翻墙 https://1808.free.hr 节点_76",
+        "二爷免费翻墙 https://1808.free.hr 节点_77",
+        "二爷免费翻墙 https://1808.free.hr 节点_78",
+        "二爷免费翻墙 https://1808.free.hr 节点_79",
+        "二爷免费翻墙 https://1808.free.hr 节点_80",
+        "二爷免费翻墙 https://1808.free.hr 节点_81",
+        "二爷免费翻墙 https://1808.free.hr 节点_82",
+        "二爷免费翻墙 https://1808.free.hr 节点_83",
+        "二爷免费翻墙 https://1808.free.hr 节点_84",
+        "二爷免费翻墙 https://1808.free.hr 节点_85",
+        "二爷免费翻墙 https://1808.free.hr 节点_86",
+        "二爷免费翻墙 https://1808.free.hr 节点_87",
+        "二爷免费翻墙 https://1808.free.hr 节点_88",
+        "二爷免费翻墙 https://1808.free.hr 节点_89",
+        "二爷免费翻墙 https://1808.free.hr 节点_90",
+        "二爷免费翻墙 https://1808.free.hr 节点_91",
+        "二爷免费翻墙 https://1808.free.hr 节点_92",
+        "二爷免费翻墙 https://1808.free.hr 节点_95",
+        "二爷免费翻墙 https://1808.free.hr 节点_106",
+        "二爷免费翻墙 https://1808.free.hr 节点_107",
+        "二爷免费翻墙 https://1808.free.hr 节点_108",
+        "二爷免费翻墙 https://1808.free.hr 节点_109",
+        "二爷免费翻墙 https://1808.free.hr 节点_110",
+        "二爷免费翻墙 https://1808.free.hr 节点_111",
+        "二爷免费翻墙 https://1808.free.hr 节点_112",
+        "二爷免费翻墙 https://1808.free.hr 节点_113",
+        "二爷免费翻墙 https://1808.free.hr 节点_114",
+        "二爷免费翻墙 https://1808.free.hr 节点_115",
+        "二爷免费翻墙 https://1808.free.hr 节点_116",
+        "二爷免费翻墙 https://1808.free.hr 节点_117",
+        "二爷免费翻墙 https://1808.free.hr 节点_118",
+        "二爷免费翻墙 https://1808.free.hr 节点_119",
+        "二爷免费翻墙 https://1808.free.hr 节点_120",
+        "二爷免费翻墙 https://1808.free.hr 节点_121",
+        "二爷免费翻墙 https://1808.free.hr 节点_122",
+        "二爷免费翻墙 https://1808.free.hr 节点_123",
+        "二爷免费翻墙 https://1808.free.hr 节点_124",
+        "二爷免费翻墙 https://1808.free.hr 节点_125",
+        "二爷免费翻墙 https://1808.free.hr 节点_126",
+        "二爷免费翻墙 https://1808.free.hr 节点_127",
+        "二爷免费翻墙 https://1808.free.hr 节点_128",
+        "二爷免费翻墙 https://1808.free.hr 节点_129",
+        "二爷免费翻墙 https://1808.free.hr 节点_130",
+        "二爷免费翻墙 https://1808.free.hr 节点_131",
+        "二爷免费翻墙 https://1808.free.hr 节点_132",
+        "二爷免费翻墙 https://1808.free.hr 节点_133",
+        "二爷免费翻墙 https://1808.free.hr 节点_134",
+        "二爷免费翻墙 https://1808.free.hr 节点_135",
+        "二爷免费翻墙 https://1808.free.hr 节点_136",
+        "二爷免费翻墙 https://1808.free.hr 节点_137",
+        "二爷免费翻墙 https://1808.free.hr 节点_138",
+        "二爷免费翻墙 https://1808.free.hr 节点_139",
+        "二爷免费翻墙 https://1808.free.hr 节点_140",
+        "二爷免费翻墙 https://1808.free.hr 节点_141",
+        "二爷免费翻墙 https://1808.free.hr 节点_142",
+        "二爷免费翻墙 https://1808.free.hr 节点_143",
+        "二爷免费翻墙 https://1808.free.hr 节点_144",
+        "二爷免费翻墙 https://1808.free.hr 节点_145",
+        "二爷免费翻墙 https://1808.free.hr 节点_146",
+        "二爷免费翻墙 https://1808.free.hr 节点_147",
+        "二爷免费翻墙 https://1808.free.hr 节点_148",
+        "二爷免费翻墙 https://1808.free.hr 节点_149",
+        "二爷免费翻墙 https://1808.free.hr 节点_150",
+        "二爷免费翻墙 https://1808.free.hr 节点_151",
+        "二爷免费翻墙 https://1808.free.hr 节点_152",
+        "二爷免费翻墙 https://1808.free.hr 节点_153",
+        "二爷免费翻墙 https://1808.free.hr 节点_154",
+        "二爷免费翻墙 https://1808.free.hr 节点_155",
+        "二爷免费翻墙 https://1808.free.hr 节点_156",
+        "二爷免费翻墙 https://1808.free.hr 节点_157",
+        "二爷免费翻墙 https://1808.free.hr 节点_158",
+        "二爷免费翻墙 https://1808.free.hr 节点_159",
+        "二爷免费翻墙 https://1808.free.hr 节点_160",
+        "二爷免费翻墙 https://1808.free.hr 节点_161",
+        "二爷免费翻墙 https://1808.free.hr 节点_162",
+        "二爷免费翻墙 https://1808.free.hr 节点_163",
+        "二爷免费翻墙 https://1808.free.hr 节点_164",
+        "二爷免费翻墙 https://1808.free.hr 节点_165",
+        "二爷免费翻墙 https://1808.free.hr 节点_166",
+        "二爷免费翻墙 https://1808.free.hr 节点_167",
+        "二爷免费翻墙 https://1808.free.hr 节点_168",
+        "二爷免费翻墙 https://1808.free.hr 节点_169",
+        "二爷免费翻墙 https://1808.free.hr 节点_170",
+        "二爷免费翻墙 https://1808.free.hr 节点_171",
+        "二爷免费翻墙 https://1808.free.hr 节点_172",
+        "二爷免费翻墙 https://1808.free.hr 节点_173",
+        "二爷免费翻墙 https://1808.free.hr 节点_174",
+        "二爷免费翻墙 https://1808.free.hr 节点_175",
+        "二爷免费翻墙 https://1808.free.hr 节点_176",
+        "二爷免费翻墙 https://1808.free.hr 节点_177",
+        "二爷免费翻墙 https://1808.free.hr 节点_178",
+        "二爷免费翻墙 https://1808.free.hr 节点_179",
+        "二爷免费翻墙 https://1808.free.hr 节点_180",
+        "二爷免费翻墙 https://1808.free.hr 节点_181",
+        "二爷免费翻墙 https://1808.free.hr 节点_182",
+        "二爷免费翻墙 https://1808.free.hr 节点_183",
+        "二爷免费翻墙 https://1808.free.hr 节点_184",
+        "二爷免费翻墙 https://1808.free.hr 节点_185",
+        "二爷免费翻墙 https://1808.free.hr 节点_186",
+        "二爷免费翻墙 https://1808.free.hr 节点_187",
+        "二爷免费翻墙 https://1808.free.hr 节点_188",
+        "二爷免费翻墙 https://1808.free.hr 节点_189",
+        "二爷免费翻墙 https://1808.free.hr 节点_190",
+        "二爷免费翻墙 https://1808.free.hr 节点_191",
+        "二爷免费翻墙 https://1808.free.hr 节点_192",
+        "二爷免费翻墙 https://1808.free.hr 节点_193",
+        "二爷免费翻墙 https://1808.free.hr 节点_194",
+        "二爷免费翻墙 https://1808.free.hr 节点_195",
+        "二爷免费翻墙 https://1808.free.hr 节点_196",
+        "二爷免费翻墙 https://1808.free.hr 节点_197",
+        "二爷免费翻墙 https://1808.free.hr 节点_198",
+        "二爷免费翻墙 https://1808.free.hr 节点_199",
+        "二爷免费翻墙 https://1808.free.hr 节点_200",
+        "二爷免费翻墙 https://1808.free.hr 节点_201",
+        "二爷免费翻墙 https://1808.free.hr 节点_202",
+        "二爷免费翻墙 https://1808.free.hr 节点_203",
+        "二爷免费翻墙 https://1808.free.hr 节点_204",
+        "二爷免费翻墙 https://1808.free.hr 节点_205",
+        "二爷免费翻墙 https://1808.free.hr 节点_206",
+        "二爷免费翻墙 https://1808.free.hr 节点_207",
+        "二爷免费翻墙 https://1808.free.hr 节点_208",
+        "二爷免费翻墙 https://1808.free.hr 节点_209",
+        "二爷免费翻墙 https://1808.free.hr 节点_210",
+        "二爷免费翻墙 https://1808.free.hr 节点_211",
+        "二爷免费翻墙 https://1808.free.hr 节点_212",
+        "二爷免费翻墙 https://1808.free.hr 节点_213",
+        "二爷免费翻墙 https://1808.free.hr 节点_214",
+        "二爷免费翻墙 https://1808.free.hr 节点_215",
+        "二爷免费翻墙 https://1808.free.hr 节点_216",
+        "二爷免费翻墙 https://1808.free.hr 节点_217",
+        "二爷免费翻墙 https://1808.free.hr 节点_218",
+        "二爷免费翻墙 https://1808.free.hr 节点_219",
+        "二爷免费翻墙 https://1808.free.hr 节点_220",
+        "二爷免费翻墙 https://1808.free.hr 节点_221",
+        "二爷免费翻墙 https://1808.free.hr 节点_222",
+        "二爷免费翻墙 https://1808.free.hr 节点_223",
+        "二爷免费翻墙 https://1808.free.hr 节点_224",
+        "二爷免费翻墙 https://1808.free.hr 节点_225",
+        "二爷免费翻墙 https://1808.free.hr 节点_226",
+        "二爷免费翻墙 https://1808.free.hr 节点_227",
+        "二爷免费翻墙 https://1808.free.hr 节点_228",
+        "二爷免费翻墙 https://1808.free.hr 节点_229",
+        "二爷免费翻墙 https://1808.free.hr 节点_230",
+        "二爷免费翻墙 https://1808.free.hr 节点_231",
+        "二爷免费翻墙 https://1808.free.hr 节点_232",
+        "二爷免费翻墙 https://1808.free.hr 节点_233",
+        "二爷免费翻墙 https://1808.free.hr 节点_234",
+        "二爷免费翻墙 https://1808.free.hr 节点_235",
+        "二爷免费翻墙 https://1808.free.hr 节点_236",
+        "二爷免费翻墙 https://1808.free.hr 节点_237",
+        "二爷免费翻墙 https://1808.free.hr 节点_238",
+        "二爷免费翻墙 https://1808.free.hr 节点_239",
+        "二爷免费翻墙 https://1808.free.hr 节点_240",
+        "二爷免费翻墙 https://1808.free.hr 节点_241",
+        "二爷免费翻墙 https://1808.free.hr 节点_242",
+        "二爷免费翻墙 https://1808.free.hr 节点_243",
+        "二爷免费翻墙 https://1808.free.hr 节点_244",
+        "二爷免费翻墙 https://1808.free.hr 节点_245"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "二爷免费翻墙 https://1808.free.hr 节点_1",
+        "二爷免费翻墙 https://1808.free.hr 节点_2",
+        "二爷免费翻墙 https://1808.free.hr 节点_3",
+        "二爷免费翻墙 https://1808.free.hr 节点_4",
+        "二爷免费翻墙 https://1808.free.hr 节点_6",
+        "二爷免费翻墙 https://1808.free.hr 节点_7",
+        "二爷免费翻墙 https://1808.free.hr 节点_8",
+        "二爷免费翻墙 https://1808.free.hr 节点_9",
+        "二爷免费翻墙 https://1808.free.hr 节点_11",
+        "二爷免费翻墙 https://1808.free.hr 节点_12",
+        "二爷免费翻墙 https://1808.free.hr 节点_14",
+        "二爷免费翻墙 https://1808.free.hr 节点_16",
+        "二爷免费翻墙 https://1808.free.hr 节点_17",
+        "二爷免费翻墙 https://1808.free.hr 节点_18",
+        "二爷免费翻墙 https://1808.free.hr 节点_19",
+        "二爷免费翻墙 https://1808.free.hr 节点_20",
+        "二爷免费翻墙 https://1808.free.hr 节点_23",
+        "二爷免费翻墙 https://1808.free.hr 节点_25",
+        "二爷免费翻墙 https://1808.free.hr 节点_26",
+        "二爷免费翻墙 https://1808.free.hr 节点_27",
+        "二爷免费翻墙 https://1808.free.hr 节点_28",
+        "二爷免费翻墙 https://1808.free.hr 节点_29",
+        "二爷免费翻墙 https://1808.free.hr 节点_30",
+        "二爷免费翻墙 https://1808.free.hr 节点_31",
+        "二爷免费翻墙 https://1808.free.hr 节点_32",
+        "二爷免费翻墙 https://1808.free.hr 节点_33",
+        "二爷免费翻墙 https://1808.free.hr 节点_34",
+        "二爷免费翻墙 https://1808.free.hr 节点_35",
+        "二爷免费翻墙 https://1808.free.hr 节点_36",
+        "二爷免费翻墙 https://1808.free.hr 节点_37",
+        "二爷免费翻墙 https://1808.free.hr 节点_38",
+        "二爷免费翻墙 https://1808.free.hr 节点_39",
+        "二爷免费翻墙 https://1808.free.hr 节点_40",
+        "二爷免费翻墙 https://1808.free.hr 节点_41",
+        "二爷免费翻墙 https://1808.free.hr 节点_42",
+        "二爷免费翻墙 https://1808.free.hr 节点_43",
+        "二爷免费翻墙 https://1808.free.hr 节点_44",
+        "二爷免费翻墙 https://1808.free.hr 节点_45",
+        "二爷免费翻墙 https://1808.free.hr 节点_46",
+        "二爷免费翻墙 https://1808.free.hr 节点_47",
+        "二爷免费翻墙 https://1808.free.hr 节点_48",
+        "二爷免费翻墙 https://1808.free.hr 节点_49",
+        "二爷免费翻墙 https://1808.free.hr 节点_50",
+        "二爷免费翻墙 https://1808.free.hr 节点_51",
+        "二爷免费翻墙 https://1808.free.hr 节点_52",
+        "二爷免费翻墙 https://1808.free.hr 节点_53",
+        "二爷免费翻墙 https://1808.free.hr 节点_54",
+        "二爷免费翻墙 https://1808.free.hr 节点_55",
+        "二爷免费翻墙 https://1808.free.hr 节点_56",
+        "二爷免费翻墙 https://1808.free.hr 节点_57",
+        "二爷免费翻墙 https://1808.free.hr 节点_58",
+        "二爷免费翻墙 https://1808.free.hr 节点_59",
+        "二爷免费翻墙 https://1808.free.hr 节点_60",
+        "二爷免费翻墙 https://1808.free.hr 节点_61",
+        "二爷免费翻墙 https://1808.free.hr 节点_62",
+        "二爷免费翻墙 https://1808.free.hr 节点_63",
+        "二爷免费翻墙 https://1808.free.hr 节点_64",
+        "二爷免费翻墙 https://1808.free.hr 节点_65",
+        "二爷免费翻墙 https://1808.free.hr 节点_66",
+        "二爷免费翻墙 https://1808.free.hr 节点_67",
+        "二爷免费翻墙 https://1808.free.hr 节点_68",
+        "二爷免费翻墙 https://1808.free.hr 节点_69",
+        "二爷免费翻墙 https://1808.free.hr 节点_70",
+        "二爷免费翻墙 https://1808.free.hr 节点_71",
+        "二爷免费翻墙 https://1808.free.hr 节点_72",
+        "二爷免费翻墙 https://1808.free.hr 节点_73",
+        "二爷免费翻墙 https://1808.free.hr 节点_74",
+        "二爷免费翻墙 https://1808.free.hr 节点_75",
+        "二爷免费翻墙 https://1808.free.hr 节点_76",
+        "二爷免费翻墙 https://1808.free.hr 节点_77",
+        "二爷免费翻墙 https://1808.free.hr 节点_78",
+        "二爷免费翻墙 https://1808.free.hr 节点_79",
+        "二爷免费翻墙 https://1808.free.hr 节点_80",
+        "二爷免费翻墙 https://1808.free.hr 节点_81",
+        "二爷免费翻墙 https://1808.free.hr 节点_82",
+        "二爷免费翻墙 https://1808.free.hr 节点_83",
+        "二爷免费翻墙 https://1808.free.hr 节点_84",
+        "二爷免费翻墙 https://1808.free.hr 节点_85",
+        "二爷免费翻墙 https://1808.free.hr 节点_86",
+        "二爷免费翻墙 https://1808.free.hr 节点_87",
+        "二爷免费翻墙 https://1808.free.hr 节点_88",
+        "二爷免费翻墙 https://1808.free.hr 节点_89",
+        "二爷免费翻墙 https://1808.free.hr 节点_90",
+        "二爷免费翻墙 https://1808.free.hr 节点_91",
+        "二爷免费翻墙 https://1808.free.hr 节点_92",
+        "二爷免费翻墙 https://1808.free.hr 节点_95",
+        "二爷免费翻墙 https://1808.free.hr 节点_106",
+        "二爷免费翻墙 https://1808.free.hr 节点_107",
+        "二爷免费翻墙 https://1808.free.hr 节点_108",
+        "二爷免费翻墙 https://1808.free.hr 节点_109",
+        "二爷免费翻墙 https://1808.free.hr 节点_110",
+        "二爷免费翻墙 https://1808.free.hr 节点_111",
+        "二爷免费翻墙 https://1808.free.hr 节点_112",
+        "二爷免费翻墙 https://1808.free.hr 节点_113",
+        "二爷免费翻墙 https://1808.free.hr 节点_114",
+        "二爷免费翻墙 https://1808.free.hr 节点_115",
+        "二爷免费翻墙 https://1808.free.hr 节点_116",
+        "二爷免费翻墙 https://1808.free.hr 节点_117",
+        "二爷免费翻墙 https://1808.free.hr 节点_118",
+        "二爷免费翻墙 https://1808.free.hr 节点_119",
+        "二爷免费翻墙 https://1808.free.hr 节点_120",
+        "二爷免费翻墙 https://1808.free.hr 节点_121",
+        "二爷免费翻墙 https://1808.free.hr 节点_122",
+        "二爷免费翻墙 https://1808.free.hr 节点_123",
+        "二爷免费翻墙 https://1808.free.hr 节点_124",
+        "二爷免费翻墙 https://1808.free.hr 节点_125",
+        "二爷免费翻墙 https://1808.free.hr 节点_126",
+        "二爷免费翻墙 https://1808.free.hr 节点_127",
+        "二爷免费翻墙 https://1808.free.hr 节点_128",
+        "二爷免费翻墙 https://1808.free.hr 节点_129",
+        "二爷免费翻墙 https://1808.free.hr 节点_130",
+        "二爷免费翻墙 https://1808.free.hr 节点_131",
+        "二爷免费翻墙 https://1808.free.hr 节点_132",
+        "二爷免费翻墙 https://1808.free.hr 节点_133",
+        "二爷免费翻墙 https://1808.free.hr 节点_134",
+        "二爷免费翻墙 https://1808.free.hr 节点_135",
+        "二爷免费翻墙 https://1808.free.hr 节点_136",
+        "二爷免费翻墙 https://1808.free.hr 节点_137",
+        "二爷免费翻墙 https://1808.free.hr 节点_138",
+        "二爷免费翻墙 https://1808.free.hr 节点_139",
+        "二爷免费翻墙 https://1808.free.hr 节点_140",
+        "二爷免费翻墙 https://1808.free.hr 节点_141",
+        "二爷免费翻墙 https://1808.free.hr 节点_142",
+        "二爷免费翻墙 https://1808.free.hr 节点_143",
+        "二爷免费翻墙 https://1808.free.hr 节点_144",
+        "二爷免费翻墙 https://1808.free.hr 节点_145",
+        "二爷免费翻墙 https://1808.free.hr 节点_146",
+        "二爷免费翻墙 https://1808.free.hr 节点_147",
+        "二爷免费翻墙 https://1808.free.hr 节点_148",
+        "二爷免费翻墙 https://1808.free.hr 节点_149",
+        "二爷免费翻墙 https://1808.free.hr 节点_150",
+        "二爷免费翻墙 https://1808.free.hr 节点_151",
+        "二爷免费翻墙 https://1808.free.hr 节点_152",
+        "二爷免费翻墙 https://1808.free.hr 节点_153",
+        "二爷免费翻墙 https://1808.free.hr 节点_154",
+        "二爷免费翻墙 https://1808.free.hr 节点_155",
+        "二爷免费翻墙 https://1808.free.hr 节点_156",
+        "二爷免费翻墙 https://1808.free.hr 节点_157",
+        "二爷免费翻墙 https://1808.free.hr 节点_158",
+        "二爷免费翻墙 https://1808.free.hr 节点_159",
+        "二爷免费翻墙 https://1808.free.hr 节点_160",
+        "二爷免费翻墙 https://1808.free.hr 节点_161",
+        "二爷免费翻墙 https://1808.free.hr 节点_162",
+        "二爷免费翻墙 https://1808.free.hr 节点_163",
+        "二爷免费翻墙 https://1808.free.hr 节点_164",
+        "二爷免费翻墙 https://1808.free.hr 节点_165",
+        "二爷免费翻墙 https://1808.free.hr 节点_166",
+        "二爷免费翻墙 https://1808.free.hr 节点_167",
+        "二爷免费翻墙 https://1808.free.hr 节点_168",
+        "二爷免费翻墙 https://1808.free.hr 节点_169",
+        "二爷免费翻墙 https://1808.free.hr 节点_170",
+        "二爷免费翻墙 https://1808.free.hr 节点_171",
+        "二爷免费翻墙 https://1808.free.hr 节点_172",
+        "二爷免费翻墙 https://1808.free.hr 节点_173",
+        "二爷免费翻墙 https://1808.free.hr 节点_174",
+        "二爷免费翻墙 https://1808.free.hr 节点_175",
+        "二爷免费翻墙 https://1808.free.hr 节点_176",
+        "二爷免费翻墙 https://1808.free.hr 节点_177",
+        "二爷免费翻墙 https://1808.free.hr 节点_178",
+        "二爷免费翻墙 https://1808.free.hr 节点_179",
+        "二爷免费翻墙 https://1808.free.hr 节点_180",
+        "二爷免费翻墙 https://1808.free.hr 节点_181",
+        "二爷免费翻墙 https://1808.free.hr 节点_182",
+        "二爷免费翻墙 https://1808.free.hr 节点_183",
+        "二爷免费翻墙 https://1808.free.hr 节点_184",
+        "二爷免费翻墙 https://1808.free.hr 节点_185",
+        "二爷免费翻墙 https://1808.free.hr 节点_186",
+        "二爷免费翻墙 https://1808.free.hr 节点_187",
+        "二爷免费翻墙 https://1808.free.hr 节点_188",
+        "二爷免费翻墙 https://1808.free.hr 节点_189",
+        "二爷免费翻墙 https://1808.free.hr 节点_190",
+        "二爷免费翻墙 https://1808.free.hr 节点_191",
+        "二爷免费翻墙 https://1808.free.hr 节点_192",
+        "二爷免费翻墙 https://1808.free.hr 节点_193",
+        "二爷免费翻墙 https://1808.free.hr 节点_194",
+        "二爷免费翻墙 https://1808.free.hr 节点_195",
+        "二爷免费翻墙 https://1808.free.hr 节点_196",
+        "二爷免费翻墙 https://1808.free.hr 节点_197",
+        "二爷免费翻墙 https://1808.free.hr 节点_198",
+        "二爷免费翻墙 https://1808.free.hr 节点_199",
+        "二爷免费翻墙 https://1808.free.hr 节点_200",
+        "二爷免费翻墙 https://1808.free.hr 节点_201",
+        "二爷免费翻墙 https://1808.free.hr 节点_202",
+        "二爷免费翻墙 https://1808.free.hr 节点_203",
+        "二爷免费翻墙 https://1808.free.hr 节点_204",
+        "二爷免费翻墙 https://1808.free.hr 节点_205",
+        "二爷免费翻墙 https://1808.free.hr 节点_206",
+        "二爷免费翻墙 https://1808.free.hr 节点_207",
+        "二爷免费翻墙 https://1808.free.hr 节点_208",
+        "二爷免费翻墙 https://1808.free.hr 节点_209",
+        "二爷免费翻墙 https://1808.free.hr 节点_210",
+        "二爷免费翻墙 https://1808.free.hr 节点_211",
+        "二爷免费翻墙 https://1808.free.hr 节点_212",
+        "二爷免费翻墙 https://1808.free.hr 节点_213",
+        "二爷免费翻墙 https://1808.free.hr 节点_214",
+        "二爷免费翻墙 https://1808.free.hr 节点_215",
+        "二爷免费翻墙 https://1808.free.hr 节点_216",
+        "二爷免费翻墙 https://1808.free.hr 节点_217",
+        "二爷免费翻墙 https://1808.free.hr 节点_218",
+        "二爷免费翻墙 https://1808.free.hr 节点_219",
+        "二爷免费翻墙 https://1808.free.hr 节点_220",
+        "二爷免费翻墙 https://1808.free.hr 节点_221",
+        "二爷免费翻墙 https://1808.free.hr 节点_222",
+        "二爷免费翻墙 https://1808.free.hr 节点_223",
+        "二爷免费翻墙 https://1808.free.hr 节点_224",
+        "二爷免费翻墙 https://1808.free.hr 节点_225",
+        "二爷免费翻墙 https://1808.free.hr 节点_226",
+        "二爷免费翻墙 https://1808.free.hr 节点_227",
+        "二爷免费翻墙 https://1808.free.hr 节点_228",
+        "二爷免费翻墙 https://1808.free.hr 节点_229",
+        "二爷免费翻墙 https://1808.free.hr 节点_230",
+        "二爷免费翻墙 https://1808.free.hr 节点_231",
+        "二爷免费翻墙 https://1808.free.hr 节点_232",
+        "二爷免费翻墙 https://1808.free.hr 节点_233",
+        "二爷免费翻墙 https://1808.free.hr 节点_234",
+        "二爷免费翻墙 https://1808.free.hr 节点_235",
+        "二爷免费翻墙 https://1808.free.hr 节点_236",
+        "二爷免费翻墙 https://1808.free.hr 节点_237",
+        "二爷免费翻墙 https://1808.free.hr 节点_238",
+        "二爷免费翻墙 https://1808.free.hr 节点_239",
+        "二爷免费翻墙 https://1808.free.hr 节点_240",
+        "二爷免费翻墙 https://1808.free.hr 节点_241",
+        "二爷免费翻墙 https://1808.free.hr 节点_242",
+        "二爷免费翻墙 https://1808.free.hr 节点_243",
+        "二爷免费翻墙 https://1808.free.hr 节点_244",
+        "二爷免费翻墙 https://1808.free.hr 节点_245"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "104.19.38.62",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29eebb60-b27b-4a9d-bba5-947763d9205e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_1",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.47.122",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_2",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.57.4",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_3",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.47.79",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_4",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.46.36",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_6",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.46.39",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_7",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.21.240",
+      "server_port": 2052,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "d6b6d982-d52f-465a-b988-85670b23f64a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_8",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.47.32",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_9",
+      "type": "vmess"
+    },
+    {
+      "server": "cfcdn2.sanfencdn9.com",
+      "server_port": 2052,
+      "transport": {
+        "path": "/video/orbHPhkP",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "de8a6fd5-9b7f-4f5c-9800-b3ff59bc0d44",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_11",
+      "type": "vmess"
+    },
+    {
+      "server": "104.20.25.146",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_12",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.198.249",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_14",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.21.230",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_16",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.45.47",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_17",
+      "type": "vmess"
+    },
+    {
+      "server": "104.18.57.111",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_18",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.47.126",
+      "server_port": 8080,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "b551aa22-22af-11ee-b8d8-f23c932eb68d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_19",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.46.123",
+      "server_port": 2052,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "d6b6d982-d52f-465a-b988-85670b23f64a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_20",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.51.232",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29eebb60-b27b-4a9d-bba5-947763d9205e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_23",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.46.233",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29eebb60-b27b-4a9d-bba5-947763d9205e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_25",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.46.59",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_26",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.46.27",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_27",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.45.15",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_28",
+      "type": "vmess"
+    },
+    {
+      "server": "de-frankfurt-oracle-b26cf5.ip1.shop",
+      "server_port": 45103,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "6d3404ef-27c6-48de-a83a-8ac6488760b4",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_29",
+      "type": "vmess"
+    },
+    {
+      "server": "104.16.38.71",
+      "server_port": 2052,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c286daa2-59de-455c-8de8-ec032b6ce2e8",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_30",
+      "type": "vmess"
+    },
+    {
+      "server": "45.147.200.170",
+      "server_port": 35972,
+      "uuid": "6a2afda8-8798-434c-8964-1deb4e7655a5",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_31",
+      "type": "vmess"
+    },
+    {
+      "server": "45.136.245.240",
+      "server_port": 12910,
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "8259cb1c-dd6c-4739-9c88-af550d977525",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_32",
+      "type": "vmess"
+    },
+    {
+      "server": "hk.wish.ml",
+      "server_port": 2052,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c286daa2-59de-455c-8de8-ec032b6ce2e8",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_33",
+      "type": "vmess"
+    },
+    {
+      "server": "us-sanfrancisco-02.t3csyun.buzz",
+      "server_port": 34053,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "6d3404ef-27c6-48de-a83a-8ac6488760b4",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_34",
+      "type": "vmess"
+    },
+    {
+      "server": "104.17.156.224",
+      "server_port": 2052,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c286daa2-59de-455c-8de8-ec032b6ce2e8",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_35",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.164.78",
+      "server_port": 2052,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c286daa2-59de-455c-8de8-ec032b6ce2e8",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_36",
+      "type": "vmess"
+    },
+    {
+      "server": "vip3.niuniupremium.xyz",
+      "server_port": 16928,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "2ab54438-8af9-3711-bf1a-676fcc144586",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_37",
+      "type": "vmess"
+    },
+    {
+      "server": "148.135.40.190",
+      "server_port": 8080,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "f6c4905b-0308-4164-b1ad-4157531a8378",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_38",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.8.157",
+      "server_port": 2082,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "112ac36f-3f53-4e26-8371-d25c028e1b9a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_39",
+      "type": "vmess"
+    },
+    {
+      "server": "cfcdn1.sanfencdn9.com",
+      "server_port": 2082,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "cd0eb936-9e1e-4730-989e-be43e7fcaf3e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_40",
+      "type": "vmess"
+    },
+    {
+      "server": "104.18.37.248",
+      "server_port": 2052,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "60bcbd52-0c88-4da3-aee2-cc1f9d5ca224",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_41",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.47.16",
+      "server_port": 8080,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "b551aa22-22af-11ee-b8d8-f23c932eb68d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_42",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.47.65",
+      "server_port": 2086,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_43",
+      "type": "vmess"
+    },
+    {
+      "server": "120.232.240.56",
+      "server_port": 16928,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "5f6b3c3f-b0a8-33f5-95c6-371f8c6af973",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_44",
+      "type": "vmess"
+    },
+    {
+      "server": "183.240.235.162",
+      "server_port": 54002,
+      "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 64,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_45",
+      "type": "vmess"
+    },
+    {
+      "server": "p3.v2raybrasil.cloud",
+      "server_port": 2052,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "60bcbd52-0c88-4da3-aee2-cc1f9d5ca224",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_46",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.32.46",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29eebb60-b27b-4a9d-bba5-947763d9205e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_47",
+      "type": "vmess"
+    },
+    {
+      "server": "183.240.235.162",
+      "server_port": 54882,
+      "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 64,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_48",
+      "type": "vmess"
+    },
+    {
+      "server": "russia.com",
+      "server_port": 8080,
+      "transport": {
+        "type": "ws"
+      },
+      "uuid": "b7c56170-edb4-4c4a-bb64-ed5ef40b8739",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_49",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.130.140",
+      "server_port": 2082,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "112ac36f-3f53-4e26-8371-d25c028e1b9a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_50",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.175.213",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_51",
+      "type": "vmess"
+    },
+    {
+      "server": "45.82.31.164",
+      "server_port": 3389,
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "9c050a86-d612-48f1-ec32-e573df08a1b7",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_52",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.116.48",
+      "server_port": 80,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "22a13aa2-4854-44cb-e090-ec71ab84b1ff",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_53",
+      "type": "vmess"
+    },
+    {
+      "server": "94.140.0.110",
+      "server_port": 8880,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "0d1bf26a-ce97-4707-a270-7f4d2ae37334",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_54",
+      "type": "vmess"
+    },
+    {
+      "server": "78.111.102.232",
+      "server_port": 3389,
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "9c050a86-d612-48f1-ec32-e573df08a1b7",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_55",
+      "type": "vmess"
+    },
+    {
+      "server": "yh3.freeh1.xyz",
+      "server_port": 8080,
+      "transport": {
+        "path": "82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "82cb93a3-65a9-4dac-a2a7-d997b6c26d6a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_56",
+      "type": "vmess"
+    },
+    {
+      "server": "23.227.38.23",
+      "server_port": 8080,
+      "transport": {
+        "path": "34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "34c0bb5e-c120-432d-9c58-bd7d82c7397b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_57",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.152.170",
+      "server_port": 2052,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "7a737f41-b792-4260-94ff-3d864da67b80",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_58",
+      "type": "vmess"
+    },
+    {
+      "server": "yh1.dtku41.xyz",
+      "server_port": 8080,
+      "transport": {
+        "path": "34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "34c0bb5e-c120-432d-9c58-bd7d82c7397b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_59",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.5.6",
+      "server_port": 8080,
+      "transport": {
+        "path": "d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "d9c5ec6a-a8d8-4732-8447-56fbd2f93e96",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_60",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.134.23",
+      "server_port": 8080,
+      "transport": {
+        "path": "9b196b50-37f2-4f4b-b175-06273adc6207-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "9b196b50-37f2-4f4b-b175-06273adc6207",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_61",
+      "type": "vmess"
+    },
+    {
+      "server": "yh2.dtku41.xyz",
+      "server_port": 8080,
+      "transport": {
+        "path": "9258153a-dc97-4e39-9037-009abfc4fed0-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "9258153a-dc97-4e39-9037-009abfc4fed0",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_62",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.82.39",
+      "server_port": 2052,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "7a737f41-b792-4260-94ff-3d864da67b80",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_63",
+      "type": "vmess"
+    },
+    {
+      "server": "mahilu.site",
+      "server_port": 2052,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "7a737f41-b792-4260-94ff-3d864da67b80",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_64",
+      "type": "vmess"
+    },
+    {
+      "server": "134.122.41.160",
+      "server_port": 3389,
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "9c050a86-d612-48f1-ec32-e573df08a1b7",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_65",
+      "type": "vmess"
+    },
+    {
+      "server": "russia.com",
+      "server_port": 8880,
+      "transport": {
+        "path": "/api/v3/download.getFile",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6658a3a6-225a-4d33-a5d2-82cfde565b4e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_66",
+      "type": "vmess"
+    },
+    {
+      "server": "fbi.gov",
+      "server_port": 8080,
+      "transport": {
+        "path": "ef8c954e-014f-4b36-8273-9b5086afab34-vm",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "ef8c954e-014f-4b36-8273-9b5086afab34",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_67",
+      "type": "vmess"
+    },
+    {
+      "server": "hms082.gwdef.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "gwdef.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "bc864078-dcf3-4bf4-8dbf-ca9f200b56be",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_68",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.234.52",
+      "server_port": 80,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "7022982f-da4c-48c9-c660-b2315abdcf7e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_69",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.28",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_70",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.22",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_71",
+      "type": "vmess"
+    },
+    {
+      "server": "23.227.38.3",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_72",
+      "type": "vmess"
+    },
+    {
+      "server": "malaysia.com",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_73",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.5",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_74",
+      "type": "vmess"
+    },
+    {
+      "server": "icook.tw",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_75",
+      "type": "vmess"
+    },
+    {
+      "server": "ip.sb",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_76",
+      "type": "vmess"
+    },
+    {
+      "server": "japan.com",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_77",
+      "type": "vmess"
+    },
+    {
+      "server": "23.227.38.5",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29eebb60-b27b-4a9d-bba5-947763d9205e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_78",
+      "type": "vmess"
+    },
+    {
+      "server": "104.16.148.244",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29eebb60-b27b-4a9d-bba5-947763d9205e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_79",
+      "type": "vmess"
+    },
+    {
+      "server": "23.227.38.6",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "29eebb60-b27b-4a9d-bba5-947763d9205e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_80",
+      "type": "vmess"
+    },
+    {
+      "server": "cfcdn3.sanfencdn9.com",
+      "server_port": 80,
+      "transport": {
+        "path": "/video/qTjvEqix",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "de8a6fd5-9b7f-4f5c-9800-b3ff59bc0d44",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_81",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.0.56",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_82",
+      "type": "vmess"
+    },
+    {
+      "server": "104.16.164.228",
+      "server_port": 80,
+      "transport": {
+        "path": "/api/v3/download.getFile",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e6d76927-edd1-442b-92a4-fa031f522c42",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_83",
+      "type": "vmess"
+    },
+    {
+      "server": "cfcdn1.sanfencdn9.com",
+      "server_port": 8880,
+      "transport": {
+        "path": "/video/bcxQresd",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "de8a6fd5-9b7f-4f5c-9800-b3ff59bc0d44",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_84",
+      "type": "vmess"
+    },
+    {
+      "server": "42.236.73.72",
+      "server_port": 443,
+      "uuid": "044f0177-0675-4dcf-89d4-804b6788e518",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_85",
+      "type": "vmess"
+    },
+    {
+      "server": "202.78.162.5",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "pendar.onthewifi.com"
+      },
+      "transport": {
+        "path": "/@forwardv2ray",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "716eded6-2201-4dbd-9d63-1638c9e8e677",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_86",
+      "type": "vmess"
+    },
+    {
+      "server": "www.darkroom.lol",
+      "server_port": 8080,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_87",
+      "type": "vmess"
+    },
+    {
+      "server": "server31.beheshtbaneh.com",
+      "server_port": 8880,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "4154143c-bbba-47a4-9f79-c2ed087cbcc9",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_88",
+      "type": "vmess"
+    },
+    {
+      "server": "data-us-v1.shwjfkw.cn",
+      "server_port": 20401,
+      "transport": {
+        "path": "/debian",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "b1478e24-4916-3abe-8f17-15931012ecbe",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_89",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.82.183",
+      "server_port": 8880,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "5a7021e0-26b4-45d6-b175-fe551601ca97",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_90",
+      "type": "vmess"
+    },
+    {
+      "server": "gov.uk",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "zheshiscp.com"
+      },
+      "transport": {
+        "path": "/77848824",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "77848824-93b7-4b89-ffd0-e91afff406ce",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_91",
+      "type": "vmess"
+    },
+    {
+      "server": "server32.beheshtbaneh.com",
+      "server_port": 8880,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "044ba8ed-7285-472a-bc14-fb91dc6be4c9",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_92",
+      "type": "vmess"
+    },
+    {
+      "server": "36.151.195.83",
+      "server_port": 444,
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.node-ssl.cdn-alibaba.com",
+        "insecure": true
+      },
+      "password": "lNOcIAxy",
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_95",
+      "type": "trojan"
+    },
+    {
+      "server": "188.114.97.2",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_106",
+      "type": "vmess"
+    },
+    {
+      "server": "188.114.96.2",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "afrhms16v.bestxray.buzz"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_107",
+      "type": "vmess"
+    },
+    {
+      "server": "110.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "110.724064.xyz"
+      },
+      "transport": {
+        "path": "/nlpivws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "b11208a0-d0b1-486d-95bb-7e88ed6012b9",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_108",
+      "type": "vmess"
+    },
+    {
+      "server": "172.99.190.50",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "172.99.190.50"
+      },
+      "transport": {
+        "path": "linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_109",
+      "type": "vmess"
+    },
+    {
+      "server": "68.168.31.242",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "68.168.31.242"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_110",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.12.31",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_111",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.175.56",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_112",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.10.11",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_113",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.194.76",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_114",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.13.31",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_115",
+      "type": "vmess"
+    },
+    {
+      "server": "107.175.37.186",
+      "server_port": 80,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "dccb5580-de8d-4aca-a9a5-f986da33faa6",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_116",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.181.241",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "afrhms16v.bestxray.buzz"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_117",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.8.156",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_118",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.9.156",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_119",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.71.187",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_120",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.0.50",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_121",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.35",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_122",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.22",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_123",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.9",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_124",
+      "type": "vmess"
+    },
+    {
+      "server": "capellare.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "capellare.com"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_125",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.123",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_126",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.113",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_127",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.67",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_128",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.74.112",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_129",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.112",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_130",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.103",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_131",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.145",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_132",
+      "type": "vmess"
+    },
+    {
+      "server": "69.50.93.90",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "69.50.93.90"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_133",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.90",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_134",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.66",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_135",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.56",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_136",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.88",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_137",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.7.132",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_138",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.25",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_139",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.99.22",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_140",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.2",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_141",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.15",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_142",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.20",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_143",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.10",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_144",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.12",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_145",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.8",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_146",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.16",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_147",
+      "type": "vmess"
+    },
+    {
+      "server": "russia.com",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_148",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.44",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_149",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.19",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_150",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.32",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_151",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.167.8",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_152",
+      "type": "vmess"
+    },
+    {
+      "server": "singapore.com",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_153",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.166.33",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_154",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.123.11",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_155",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.69.44",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "f.khilei.com"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_156",
+      "type": "vmess"
+    },
+    {
+      "server": "23.154.136.2",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "23.154.136.2"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_157",
+      "type": "vmess"
+    },
+    {
+      "server": "www.visa.com",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_158",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.21.71",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_159",
+      "type": "vmess"
+    },
+    {
+      "server": "104.19.21.63",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_160",
+      "type": "vmess"
+    },
+    {
+      "server": "104.20.17.186",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_161",
+      "type": "vmess"
+    },
+    {
+      "server": "104.22.37.243",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_162",
+      "type": "vmess"
+    },
+    {
+      "server": "104.22.36.243",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_163",
+      "type": "vmess"
+    },
+    {
+      "server": "141.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "141.724064.xyz"
+      },
+      "transport": {
+        "path": "/gmvfvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f3878e79-8166-4140-8dbe-e1f35b650e1c",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_164",
+      "type": "vmess"
+    },
+    {
+      "server": "188.114.97.21",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "afrhms16v.bestxray.buzz"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_165",
+      "type": "vmess"
+    },
+    {
+      "server": "188.114.96.3",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_166",
+      "type": "vmess"
+    },
+    {
+      "server": "sareikela.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "sareikela.com"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_167",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.174.42",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "gwdef.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "bc864078-dcf3-4bf4-8dbf-ca9f200b56be",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_168",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.140.33",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_169",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.46.121",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ivideos.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "441da342-ce90-441e-bff9-d2ceb55e68ca",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_170",
+      "type": "vmess"
+    },
+    {
+      "server": "hms24.ivideos.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ivideos.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "441da342-ce90-441e-bff9-d2ceb55e68ca",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_171",
+      "type": "vmess"
+    },
+    {
+      "server": "104.18.15.19",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_172",
+      "type": "vmess"
+    },
+    {
+      "server": "104.18.14.19",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_173",
+      "type": "vmess"
+    },
+    {
+      "server": "188.114.97.8",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "afrhms16v.bestxray.buzz"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_174",
+      "type": "vmess"
+    },
+    {
+      "server": "172.99.190.209",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "172.99.190.209"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_175",
+      "type": "vmess"
+    },
+    {
+      "server": "156.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "156.724064.xyz"
+      },
+      "transport": {
+        "path": "/rjtnvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "8c7c927a-ab08-40e7-8b00-f479435934dd",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_176",
+      "type": "vmess"
+    },
+    {
+      "server": "101.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "101.724064.xyz"
+      },
+      "transport": {
+        "path": "/tokzvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "23f4c17c-b38c-46f2-bd49-7f52cd129bce",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_177",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.131.108",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_178",
+      "type": "vmess"
+    },
+    {
+      "server": "68.168.31.196",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "68.168.31.196"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_179",
+      "type": "vmess"
+    },
+    {
+      "server": "104.18.206.97",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "7whrapid-river-a083.sisay70779.workers.dev"
+      },
+      "transport": {
+        "path": "/afrhms07.xfixedfloat.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "a1655f51-1e20-4a92-8a11-b7ca30a7a353",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_180",
+      "type": "vmess"
+    },
+    {
+      "server": "6.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "6.724064.xyz"
+      },
+      "transport": {
+        "path": "/xglsvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e7290e7b-8650-423a-8701-f718850620b0",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_181",
+      "type": "vmess"
+    },
+    {
+      "server": "23.227.38.8",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_182",
+      "type": "vmess"
+    },
+    {
+      "server": "188.114.96.1",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "afrhms16v.bestxray.buzz"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_183",
+      "type": "vmess"
+    },
+    {
+      "server": "51.77.20.132",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "a.baradiha.com"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_184",
+      "type": "vmess"
+    },
+    {
+      "server": "102.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "102.724064.xyz"
+      },
+      "transport": {
+        "path": "/oqpsvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "8f33df9e-0255-4341-bea5-93ccc9f62fa7",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_185",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.0.95",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_186",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.15.148",
+      "server_port": 80,
+      "transport": {
+        "path": "/V2LINE-TELEGRAM-CHANNEL-VMESS-WS",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "2c4d6f66-2966-49c1-93aa-a7192ba8f8fc",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_187",
+      "type": "vmess"
+    },
+    {
+      "server": "denc36.xtooltech.cfd",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "adenc36v.xtooltech.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "b321fd5d-e6ec-4293-a644-164e3885f52e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_188",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.196.112",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "linde06.indiavideo.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_189",
+      "type": "vmess"
+    },
+    {
+      "server": "173.245.58.5",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "worker-bitter-math-2af8.waxoha3621.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.sbs/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_190",
+      "type": "vmess"
+    },
+    {
+      "server": "172.64.103.211",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_191",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.5.57",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_192",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.216.29",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_193",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.131.17",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hms19.best-tizi.top"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "62aa5f80-0328-4004-a375-7f5a59df4022",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_194",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.170.13",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "linde06.indiavideo.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_195",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.170.11",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "linde06.indiavideo.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_196",
+      "type": "vmess"
+    },
+    {
+      "server": "173.245.58.37",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "7wih-darkness-f0af.jivegoh116.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_197",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.156.210",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_198",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.28.62",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_199",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.24.170",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "adenc36v.xtooltech.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "b321fd5d-e6ec-4293-a644-164e3885f52e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_200",
+      "type": "vmess"
+    },
+    {
+      "server": "linde06.indiavideo.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "linde06.indiavideo.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_201",
+      "type": "vmess"
+    },
+    {
+      "server": "glweidf.cfd",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_202",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.53.183",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_203",
+      "type": "vmess"
+    },
+    {
+      "server": "104.16.68.38",
+      "server_port": 8880,
+      "transport": {
+        "path": "/linde06.indiavideo.sbs/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_204",
+      "type": "vmess"
+    },
+    {
+      "server": "parsvds.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "telegram----cassiusvpn----11.timive8509.workers.dev"
+      },
+      "transport": {
+        "path": "/aveiror.com/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_205",
+      "type": "vmess"
+    },
+    {
+      "server": "158.51.121.36",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "158.51.121.36"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_206",
+      "type": "vmess"
+    },
+    {
+      "server": "145.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "145.724064.xyz"
+      },
+      "transport": {
+        "path": "/zrqrvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "5de1ff44-aaf8-4790-b0fb-e55aab062622",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_207",
+      "type": "vmess"
+    },
+    {
+      "server": "109.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "109.724064.xyz"
+      },
+      "transport": {
+        "path": "/qqsvvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "c08e9991-27c8-4aa8-b994-b2aa87c64801",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_208",
+      "type": "vmess"
+    },
+    {
+      "server": "149.7.16.248",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "149.7.16.248"
+      },
+      "transport": {
+        "path": "linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_209",
+      "type": "vmess"
+    },
+    {
+      "server": "149.7.16.188",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "149.7.16.188"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_210",
+      "type": "vmess"
+    },
+    {
+      "server": "beyonddsz.cfd",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "beyonddsz.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "9b456c2a-f2c1-45e1-87a9-b7628b04bb24",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_211",
+      "type": "vmess"
+    },
+    {
+      "server": "irtr1.ngiftcard.com",
+      "server_port": 80,
+      "transport": {
+        "path": "/34L4qODA1XwJYopk6e398A",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "7c7af2de-bb97-429f-ac3c-8ef849717491",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_212",
+      "type": "vmess"
+    },
+    {
+      "server": "155.724064.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "155.724064.xyz"
+      },
+      "transport": {
+        "path": "/sbudvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "64917049-d265-477f-a4cf-b5076e746270",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_213",
+      "type": "vmess"
+    },
+    {
+      "server": "gc-romania1.09vpn.com",
+      "server_port": 80,
+      "transport": {
+        "path": "/vmess/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "a49dea92-a8e0-4b99-9d7f-931b6108b2ea",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_214",
+      "type": "vmess"
+    },
+    {
+      "server": "45.130.147.178",
+      "server_port": 40045,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "58b557ae-fe5f-4aaa-916e-8c862996c7cd",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_215",
+      "type": "vmess"
+    },
+    {
+      "server": "185.247.184.115",
+      "server_port": 2098,
+      "transport": {
+        "type": "http"
+      },
+      "uuid": "83876222-64a4-4912-aa18-b7d9d34959de",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_216",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.223.119",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hms02.fxiaomi.sbs"
+      },
+      "transport": {
+        "path": "/link",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_217",
+      "type": "vmess"
+    },
+    {
+      "server": "cdnjs.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hdfy1c3.iraniancpi.uk"
+      },
+      "transport": {
+        "path": "/QvtvPdDXXIlSdZMqnuxG",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6b880b07-e952-4c0b-b4a3-6c9ac4cf9d3f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_218",
+      "type": "vmess"
+    },
+    {
+      "server": "skk.moe",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_219",
+      "type": "vmess"
+    },
+    {
+      "server": "hms182.glweidf.sbs",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.sbs"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_220",
+      "type": "vmess"
+    },
+    {
+      "server": "slime-rhinestone-spy.glitch.me",
+      "server_port": 80,
+      "transport": {
+        "path": "/1d5fb496-19fb-48fb-9880-a147326dee62-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d5fb496-19fb-48fb-9880-a147326dee62",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_221",
+      "type": "vmess"
+    },
+    {
+      "server": "172.66.213.38",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "green-morning-ce19.mehdipost667.workers.dev"
+      },
+      "transport": {
+        "path": "/afrhms16v.bestxray.buzz/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_222",
+      "type": "vmess"
+    },
+    {
+      "server": "bolder-metal-comma.glitch.me",
+      "server_port": 80,
+      "transport": {
+        "path": "/dac61bb8-461c-4a4a-b14b-5a5ff6991fee-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "dac61bb8-461c-4a4a-b14b-5a5ff6991fee",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_223",
+      "type": "vmess"
+    },
+    {
+      "server": "173.245.59.8",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "77h2quiet-dream-5c34.foratay741.workers.dev"
+      },
+      "transport": {
+        "path": "/glweidf.cfd/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_224",
+      "type": "vmess"
+    },
+    {
+      "server": "185.148.104.118",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "ab-test-frosty-flower-e7fb.tariroc864.workers.dev"
+      },
+      "transport": {
+        "path": "/hms02.fxiaomi.sbs/link",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_225",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.136.233",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "az05.beyondy.cfd"
+      },
+      "transport": {
+        "path": "/link",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "3f638f34-8dba-4186-bc43-2716a7ddd4be",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_226",
+      "type": "vmess"
+    },
+    {
+      "server": "best-charm-pediatrician.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "best-charm-pediatrician.glitch.me"
+      },
+      "transport": {
+        "path": "/1d5fb496-19fb-48fb-9880-a147326dee62-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1d5fb496-19fb-48fb-9880-a147326dee62",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_227",
+      "type": "vmess"
+    },
+    {
+      "server": "54.87.134.111",
+      "server_port": 80,
+      "transport": {
+        "path": "/syjsq/data",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "2d9a81f6-e86e-48e6-9646-b3b1325f8d61",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_228",
+      "type": "vmess"
+    },
+    {
+      "server": "irvideo.cfd",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "irvideo.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e537f2f5-2a0c-4f59-92c9-832ca6433bf3",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_229",
+      "type": "vmess"
+    },
+    {
+      "server": "104.26.12.140",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_230",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.219.194",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "adenc36v.xtooltech.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "b321fd5d-e6ec-4293-a644-164e3885f52e",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_231",
+      "type": "vmess"
+    },
+    {
+      "server": "bolder-metal-comma.glitch.me",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "bolder-metal-comma.glitch.me"
+      },
+      "transport": {
+        "path": "/dac61bb8-461c-4a4a-b14b-5a5ff6991fee-vmess",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "dac61bb8-461c-4a4a-b14b-5a5ff6991fee",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_232",
+      "type": "vmess"
+    },
+    {
+      "server": "ParsVds.ir",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hms19.best-tizi.top"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "62aa5f80-0328-4004-a375-7f5a59df4022",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_233",
+      "type": "vmess"
+    },
+    {
+      "server": "discord.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "cool-darkness-e663.mehdipost667.workers.dev"
+      },
+      "transport": {
+        "path": "/gwdef.sbs:443/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "bc864078-dcf3-4bf4-8dbf-ca9f200b56be",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_234",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.1.94",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "green-morning-ce19.mehdipost667.workers.dev"
+      },
+      "transport": {
+        "path": "/linde06.indiavideo.sbs/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_235",
+      "type": "vmess"
+    },
+    {
+      "server": "sdhdffjblkgfh_cdn.hfhfb.homes",
+      "server_port": 2095,
+      "transport": {
+        "path": "/",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "3b8e69d8-1f1b-4b96-8754-2a8ec38e716f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_236",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.8.120",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hms19.best-tizi.top"
+      },
+      "transport": {
+        "path": "/LINKWS",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "62aa5f80-0328-4004-a375-7f5a59df4022",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_237",
+      "type": "vmess"
+    },
+    {
+      "server": "hms19.best-tizi.top",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "hms19.best-tizi.top"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "62aa5f80-0328-4004-a375-7f5a59df4022",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_238",
+      "type": "vmess"
+    },
+    {
+      "server": "a.baradiha.com",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "a.baradiha.com"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_239",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.140.66",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_240",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.140.91",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_241",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.140.19",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_242",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.140.93",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_243",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.83.208",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "afrhms16v.bestxray.buzz"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_244",
+      "type": "vmess"
+    },
+    {
+      "server": "fbi.gov",
+      "server_port": 2086,
+      "transport": {
+        "path": "github.com/Alvin9999",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "e9e3cc13-db48-4cc1-8c24-7626439a5339",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "二爷免费翻墙 https://1808.free.hr 节点_245",
+      "type": "vmess"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "select"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "select"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
