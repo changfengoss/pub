@@ -1,0 +1,62 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash.Meta
+# 创建时间：2024-12-30 23:31:57
+# 使用模版：goldbridge01
+# 节点数量：5
+# 节点类型：hysteria2
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+####################################
+mixed-port: 7890
+allow-lan: true
+ipv6: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+hosts:
+  localhost: 127.0.0.1
+dns:
+  enabled: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - 1.2.4.8
+    - 223.5.5.5
+    - 223.6.6.6
+    - 119.29.29.29
+    - 180.76.76.76
+    - 183.60.83.19
+    - 183.60.82.98
+    - 114.114.114.114
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - tls://13800000000.rubyfish.cn:853
+    - https://13800000000.rubyfish.cn/
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://8.8.4.4:853
+    - tls://dns.google:853
+    - tls://13800000000.rubyfish.cn:853
+    - https://doh.dns.sb/dns-query
+    - https://dns.twnic.tw/dns-query
+    - https://dns.cloudflare.com/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"🇭🇰香港｜03-6.0","type":"hysteria2","server":"tw2.akebi.cc","port":2002,"password":"338b9800-fb4d-4934-8425-388f6d4342f5","sni":"hk03.akebi.cc","skip-cert-verify":false}
+  - {"name":"🇰🇭柬埔寨｜01-7.0","type":"hysteria2","server":"tw2.akebi.cc","port":2013,"password":"338b9800-fb4d-4934-8425-388f6d4342f5","sni":"kh01.akebi.cc","skip-cert-verify":false}
+  - {"name":"🇭🇰香港｜05-5.0","type":"hysteria2","server":"tw2.akebi.cc","port":3003,"password":"338b9800-fb4d-4934-8425-388f6d4342f5","sni":"hk02.akebi.cc","skip-cert-verify":false}
+  - {"name":"🇰🇷韩国丨02-6.5","type":"hysteria2","server":"tw2.akebi.cc","port":3010,"password":"338b9800-fb4d-4934-8425-388f6d4342f5","sni":"kr02.akebi.cc","skip-cert-verify":false}
+  - {"name":"🇹🇼台湾｜05｜原生IP-2.0","type":"hysteria2","server":"tw4.akebi.cc","port":33751,"password":"338b9800-fb4d-4934-8425-388f6d4342f5","sni":"tw04.akebi.cc","skip-cert-verify":false}
+proxy-groups: []
+
+rules:
