@@ -8,7 +8,7 @@ mixed-port: 7890
 allow-lan: true
 log-level: info
 proxies:
-  - {"name":"VMessTCPNaked","port":31415,"server":"qv2ray.net","type":"vmess","cipher":"none","uuid":"99c80931-f3f1-4f84-bffd-6eed6030f53d"}
+  - {"name":"VMessTCPNaked","port":3415,"server":"qv2ray.net","type":"vmess","cipher":"none","uuid":"99c80931-f3f1-4f84-bffd-6eed6030f53d"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
