@@ -3,7 +3,7 @@
 # 微软分流：支持
 # 苹果分流：支持
 # 增强中国IP段：不支持
-# 增强国外GFW：不支持
+# 增强国外GFW：不支持eee
 mixed-port: 7890
 allow-lan: true
 log-level: info
