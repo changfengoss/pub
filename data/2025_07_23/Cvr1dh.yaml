@@ -1,0 +1,204 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash.Meta
+# 创建时间：23-07-2025 15:47:16
+# 使用模版：V2RaySE 默认模版
+# 节点数量：5
+####################################
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+proxies:
+  - {"name":"🇸🇨 SC-01 (u1019106s3683599p69)","type":"vless","server":"146.19.90.2","port":443,"udp":true,"uuid":"dafe7de1-bddb-ad8a-4f07-fd0ae7e59d9b","tls":true,"servername":"speed.cloudflare.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"oE7ZEghzkaOUiw1q3PqBtpllP1NlPHLY8ydJRuICtko"},"client-fingerprint":"chrome"}
+  - {"name":"🇫🇷 FR-01 (u1019106s3683599p69)","type":"vless","server":"178.20.215.2","port":443,"udp":true,"uuid":"dafe7de1-bddb-ad8a-4f07-fd0ae7e59d9b","tls":true,"servername":"speed.cloudflare.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"GfTzhy59k9CXlAdF819OUVeBdrqIILaDIWa1bddjGnA"},"client-fingerprint":"chrome"}
+  - {"name":"🇹🇷 TR-01 (u1019106s3683599p69) [vless - tcp]","type":"vless","server":"213.232.120.2","port":443,"udp":true,"uuid":"dafe7de1-bddb-ad8a-4f07-fd0ae7e59d9b","tls":true,"servername":"speed.cloudflare.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"6h7z2IG6_BopO2tGTRAytfMOWbcXxRWghb2c9IILJkA"},"client-fingerprint":"chrome"}
+  - {"name":"🇮🇳 IN-01 (u1019106s3683599p69) [vless - tcp]","type":"vless","server":"5.181.171.2","port":443,"udp":true,"uuid":"dafe7de1-bddb-ad8a-4f07-fd0ae7e59d9b","tls":true,"servername":"speed.cloudflare.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"YNGotlyAx3ELUmi4lxOUjiEDmibqf1pPUTE9o3YYT2Y"},"client-fingerprint":"chrome"}
+  - {"name":"🇵🇰 PK-01 (u1019106s3683599p69)\t","type":"vless","server":"103.175.79.2","port":443,"udp":true,"uuid":"dafe7de1-bddb-ad8a-4f07-fd0ae7e59d9b","tls":true,"servername":"speed.cloudflare.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"4e-unF1RO2v--E7-X3aqxnCSPaK9QaTfJ7LawAr2bRI"},"client-fingerprint":"chrome"}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇸🇨 SC-01 (u1019106s3683599p69)
+      - 🇫🇷 FR-01 (u1019106s3683599p69)
+      - 🇹🇷 TR-01 (u1019106s3683599p69) [vless - tcp]
+      - 🇮🇳 IN-01 (u1019106s3683599p69) [vless - tcp]
+      - "🇵🇰 PK-01 (u1019106s3683599p69)\t"
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇸🇨 SC-01 (u1019106s3683599p69)
+      - 🇫🇷 FR-01 (u1019106s3683599p69)
+      - 🇹🇷 TR-01 (u1019106s3683599p69) [vless - tcp]
+      - 🇮🇳 IN-01 (u1019106s3683599p69) [vless - tcp]
+      - "🇵🇰 PK-01 (u1019106s3683599p69)\t"
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇨 SC-01 (u1019106s3683599p69)
+      - 🇫🇷 FR-01 (u1019106s3683599p69)
+      - 🇹🇷 TR-01 (u1019106s3683599p69) [vless - tcp]
+      - 🇮🇳 IN-01 (u1019106s3683599p69) [vless - tcp]
+      - "🇵🇰 PK-01 (u1019106s3683599p69)\t"
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇸🇨 SC-01 (u1019106s3683599p69)
+      - 🇫🇷 FR-01 (u1019106s3683599p69)
+      - 🇹🇷 TR-01 (u1019106s3683599p69) [vless - tcp]
+      - 🇮🇳 IN-01 (u1019106s3683599p69) [vless - tcp]
+      - "🇵🇰 PK-01 (u1019106s3683599p69)\t"
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇸🇨 SC-01 (u1019106s3683599p69)
+      - 🇫🇷 FR-01 (u1019106s3683599p69)
+      - 🇹🇷 TR-01 (u1019106s3683599p69) [vless - tcp]
+      - 🇮🇳 IN-01 (u1019106s3683599p69) [vless - tcp]
+      - "🇵🇰 PK-01 (u1019106s3683599p69)\t"
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇸🇨 SC-01 (u1019106s3683599p69)
+      - 🇫🇷 FR-01 (u1019106s3683599p69)
+      - 🇹🇷 TR-01 (u1019106s3683599p69) [vless - tcp]
+      - 🇮🇳 IN-01 (u1019106s3683599p69) [vless - tcp]
+      - "🇵🇰 PK-01 (u1019106s3683599p69)\t"
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇸🇨 SC-01 (u1019106s3683599p69)
+      - 🇫🇷 FR-01 (u1019106s3683599p69)
+      - 🇹🇷 TR-01 (u1019106s3683599p69) [vless - tcp]
+      - 🇮🇳 IN-01 (u1019106s3683599p69) [vless - tcp]
+      - "🇵🇰 PK-01 (u1019106s3683599p69)\t"
+
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
